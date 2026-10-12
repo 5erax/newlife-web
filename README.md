@@ -1,37 +1,49 @@
 # NewLife Web
 
-Kế hoạch remake game mô phỏng cuộc đời bằng tiếng Việt, ưu tiên điện thoại, chơi cá nhân và offline. Repository riêng tư này hiện chứa tài liệu và backlog; **chưa có ứng dụng chơi được**.
+Game mô phỏng cuộc đời bằng tiếng Việt. Có học/nghề, tiền/tài sản, hoạt động, bệnh, gia đình, thú cưng, tù, di chúc, nhiều đời và truyện. Giao diện ưu tiên điện thoại; tự lưu cục bộ và offline sau lần tải đủ đầu tiên.
+
+Bản chơi riêng tư: https://newlife-5erax.dha260803.chatgpt.site (tài khoản chủ sở hữu). GitHub private và audience Site là hai cơ chế riêng.
+
+Nội dung tự viết: 150 sự kiện thường + 144 tình huống nghề, 48 nghề/12 ngành, 10 chương trình học, 108 hoạt động, 24 tài sản, 40 thành tích, 3 huy chương, 10 danh hiệu và 5 truyện/60 node/15 kết thúc. [Manifest](src/content/manifest.json), [đồ thị](docs/content/graph.md). Chưa phục hồi đủ dataset Android; không xác nhận tái tạo mọi nội dung gốc.
+
+## Chạy trên máy
+
+Node.js 24+, npm, dùng lockfile:
+
+```sh
+npm ci
+npm run dev
+```
+
+Production/PWA:
+
+```sh
+npm run build
+npm run preview -- --port 4173
+```
+
+Mở http://127.0.0.1:4173. PWA cần HTTPS hoặc localhost; file:// không phải cách cài game. Không cần backend/tài khoản game; login hosted chỉ bảo vệ truy cập Site.
+
+## Kiểm tra
+
+```sh
+npm test
+npm run build
+npm run simulate -- 10000
+npm run content:graph
+npx tsx src/tools/benchmark.ts
+npm run test:e2e
+```
+
+E2E dùng Chrome đã cài trên Windows; CI cài Chromium của Playwright. Engine TypeScript thuần, RNG có seed, dữ liệu JSON, IndexedDB so revision trong transaction. File nhập tạo ô mới và không xoá ô cũ khi lỗi.
 
 ## Tài liệu
 
-- [Kế hoạch ban đầu do người dùng cung cấp](docs/original-plan.txt).
-- [Đặc tả bổ sung, mục 13–24](docs/web-spec-supplement.md).
-- [Kết quả kiểm tra tĩnh APK](docs/apk-research.md).
-- [Lộ trình, milestone và index issue](tasks/plan.md).
-- [Cách dùng nhãn và cập nhật trạng thái backlog](docs/backlog-guide.md).
+- [Chơi và sao lưu](docs/player-guide.md), [xử lý sự cố](docs/troubleshooting.md).
+- [Contract](docs/engine-contract.md), [quyết định](docs/decisions.md), [viết nội dung](docs/content-authoring.md).
+- [QA](docs/qa/verification.md), [phát hành](docs/release-v1.md), [changelog](CHANGELOG.md).
+- [Đặc tả](docs/web-spec-supplement.md), [nghiên cứu APK](docs/apk-research.md), [index Issues](tasks/plan.md).
 
-GitHub Issues là nơi theo dõi công việc chính. Tài liệu kế hoạch chỉ giữ index và các quyết định; không duy trì một checklist task thứ hai ngoài Issues.
+Code/nội dung web đã triển khai. Candidate giữ gate kiểm điện thoại vật lý, screen reader và hiệu năng điện thoại mở; không gọi là đã vượt mọi gate. GitHub Issues là nơi theo dõi task chính.
 
-## Phạm vi
-
-- Cuộc đời từ 0 tuổi tới khi kết thúc; sự kiện có lựa chọn, bốn chỉ số và nhật ký.
-- Học tập, nghề, tiền, tài sản, hoạt động, bệnh, quan hệ, gia đình, nhiều đời.
-- Thành tích, huy chương, danh hiệu cuối đời, truyện có nhánh.
-- Lưu cục bộ, xuất/nhập, chơi offline, hỗ trợ điện thoại.
-- Nội dung bản web được tự thiết kế và có danh mục đối chiếu. Chưa có dataset để bảo đảm đủ mọi sự kiện gốc.
-
-Không có backend game, xếp hạng mạng, quảng cáo, mua hàng hoặc bản dịch tiếng Anh trong phạm vi hiện tại. Giữ toàn bộ các hệ đã yêu cầu; các bản chơi thử nhỏ chỉ là mốc triển khai.
-
-## Quy tắc triển khai
-
-Engine TypeScript thuần tách khỏi React; nội dung là dữ liệu có ID; ngẫu nhiên có seed và trạng thái lưu; mọi thay đổi tiền hoặc lựa chọn chỉ được áp dụng một lần. Chuỗi sự kiện đang chờ phải khôi phục được sau khi tải lại.
-
-Mỗi issue task có phạm vi, tiêu chí chấp nhận, cách xác minh, đường dẫn dự kiến và phụ thuộc. Issue phase là checkpoint: chỉ đóng khi các task của phase và kiểm tra nghiệm thu thực sự hoàn tất.
-
-## Tài nguyên và quyền sử dụng
-
-Không đưa APK, thư viện đã biên dịch, kho chuỗi trích xuất, token hoặc dữ liệu nghiên cứu thô vào Git. Tài nguyên chưa rõ quyền sử dụng được thay bằng nội dung/hình tự tạo cho tới khi có bằng chứng phù hợp. Các điểm mâu thuẫn của kế hoạch cũ được theo dõi bằng issue Phase 0; không xem riêng tư là bằng chứng quyền sử dụng.
-
-## Trạng thái công nghệ
-
-Hướng dự kiến: TypeScript strict, React, Vite, schema nội dung, IndexedDB, RNG có seed và kiểm thử mô phỏng. Chưa pin phiên bản thư viện hoặc đưa cấu hình ứng dụng vào repo; việc đó thuộc task bootstrap. Các lệnh được ghi trong issue là hợp đồng cần tạo, chưa phải lệnh đang chạy được tại thời điểm khởi tạo repo.
+SVG/icon và văn bản tự tạo. Không đóng gói APK, binary trích xuất, quảng cáo/thanh toán/xếp hạng trực tuyến. [Sổ nguồn](docs/asset-sources.md) phân biệt tên tham chiếu với tài nguyên tự tạo.

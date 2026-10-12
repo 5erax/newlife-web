@@ -1,0 +1,922 @@
+[
+  {
+    "id": "story_market_clock",
+    "name": "Chiếc đồng hồ ở chợ cũ",
+    "description": "Một lần quay kim giờ có thể sửa một ngày. Nhưng mỗi ngày hoàn hảo cần trả bằng một ký ức.",
+    "icon": "◷",
+    "start": "start",
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Bạn tìm thấy chiếc đồng hồ không có kim phút giữa chợ cũ. Người bán bảo nó không đếm giờ mà đếm những lần muốn làm lại. Đêm ấy, nó chạy đúng khi bạn nhớ một điều mình tiếc.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Tìm người biết về đồng hồ",
+            "next": "n1"
+          },
+          {
+            "id": "b",
+            "label": "Thử quay kim một lần",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n1",
+        "text": "Người thợ già chỉ một vết xước trên mặt đồng hồ: mỗi lần quay là một ký ức rời đi. Ông không nói nên giữ hay bỏ, chỉ hỏi bạn muốn sửa điều gì.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Hỏi về ký ức đã mất",
+            "next": "n3"
+          },
+          {
+            "id": "b",
+            "label": "Mang đồng hồ về và ghi nhật ký",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "text": "Bạn trở lại buổi sáng hôm qua. Câu trả lời vụng về với người thân được nói lại dễ nghe hơn. Nhưng bạn không nhớ mùi món ăn người ấy từng nấu.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Dừng để tìm điều vừa quên",
+            "next": "n4"
+          },
+          {
+            "id": "b",
+            "label": "Quay thêm để sửa chuyện khác",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "text": "Trong sổ của người thợ có tên những người từng quay đồng hồ. Một người đã có ngày hoàn hảo nhưng quên ai làm mình muốn có ngày ấy. Bạn bắt đầu ghi những điều không muốn mất.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Giữ câu chuyện của gia đình",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Tìm cách trả chiếc đồng hồ",
+            "next": "n7"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "text": "Nhật ký ghi đủ ngày giờ mà thiếu cảm giác. Bạn đọc một trang về người rất thân nhưng thấy như đọc chuyện người lạ. Đồng hồ lại sáng khi bạn chạm vết xước.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Gặp người thân để nghe họ kể",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Tìm chủ đầu tiên của đồng hồ",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "text": "Ngày mới gần hoàn hảo: việc đúng hẹn, mọi người vui, không điều gì sai. Tới tối, bạn không nhớ vì sao một tấm ảnh trên bàn từng quan trọng. Kim giờ mời bạn quay thêm.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Dừng ở điều còn giữ được",
+            "next": "n7"
+          },
+          {
+            "id": "b",
+            "label": "Thử sửa nốt lần cuối",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "text": "Người thân kể một chuyện bạn không nhớ và không giận khi bạn nói thật. Bạn nhận ra ký ức không chỉ nằm trong đầu một người. Hai người viết lại câu chuyện cùng nhau.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Giữ những ký ức còn lại và rời đồng hồ",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Trả đồng hồ sau khi gửi lại câu chuyện",
+            "next": "end_b"
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "text": "Người thợ tìm được hộp cũ của chiếc đồng hồ. Nó có một vị trí trống dành cho thứ người dùng sẵn lòng trả. Bạn có thể trả quyền làm lại thay vì trả thêm ký ức.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Đặt đồng hồ vào hộp",
+            "next": "end_b"
+          },
+          {
+            "id": "b",
+            "label": "Giữ quyền làm lại thêm một ngày",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "n8",
+        "text": "Bạn có thể khiến ngày cuối không còn thiếu sót. Nhưng những người trong ngày ấy đã trở thành các vai diễn không có lịch sử chung. Chiếc đồng hồ chờ câu trả lời thật cuối.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Chọn đời còn những ký ức không hoàn hảo",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Ở lại ngày hoàn hảo",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "end_a",
+        "text": "Bạn giữ những câu chuyện còn lại và để một vài điều chưa hoàn hảo được ở yên. Ngày mới không sáng hơn mọi ngày, nhưng bạn biết vì sao mình muốn sống nó.",
+        "choices": [],
+        "ending": {
+          "id": "ending_a",
+          "name": "Những ngày còn nhớ",
+          "text": "Bạn giữ những câu chuyện còn lại và để một vài điều chưa hoàn hảo được ở yên. Ngày mới không sáng hơn mọi ngày, nhưng bạn biết vì sao mình muốn sống nó."
+        }
+      },
+      {
+        "id": "end_b",
+        "text": "Chiếc đồng hồ trở về hộp ở chợ cũ. Bạn mất quyền quay lại, nhưng giữ được những người đã cùng kể chuyện với mình. Người thợ tháo bảng bán đồng hồ xuống.",
+        "choices": [],
+        "ending": {
+          "id": "ending_b",
+          "name": "Trả lại thời gian",
+          "text": "Chiếc đồng hồ trở về hộp ở chợ cũ. Bạn mất quyền quay lại, nhưng giữ được những người đã cùng kể chuyện với mình. Người thợ tháo bảng bán đồng hồ xuống."
+        }
+      },
+      {
+        "id": "end_c",
+        "text": "Bạn ở lại trong ngày không có lỗi. Mọi câu đều đúng và mọi cuộc gặp đều êm. Chỉ có bạn không còn biết điều gì làm chúng đáng quý. Đồng hồ ngừng chạy.",
+        "choices": [],
+        "ending": {
+          "id": "ending_c",
+          "name": "Ngày hoàn hảo",
+          "text": "Bạn ở lại trong ngày không có lỗi. Mọi câu đều đúng và mọi cuộc gặp đều êm. Chỉ có bạn không còn biết điều gì làm chúng đáng quý. Đồng hồ ngừng chạy."
+        }
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "story_rooftop_garden",
+    "name": "Khu vườn trên mái",
+    "description": "Một khu vườn chung sắp biến mất. Giữ được cây đã khó; giữ được những người cùng chăm còn khó hơn.",
+    "icon": "❀",
+    "start": "start",
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Tờ thông báo trên thang máy nói khu vườn trên mái sẽ được dọn trong tháng. Bạn lên mái và thấy một bác đang tưới chậu húng. Bác hỏi: còn muốn làm gì trước ngày cuối?",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Rủ hàng xóm bàn cách giữ",
+            "next": "n1"
+          },
+          {
+            "id": "b",
+            "label": "Tìm chỗ mới cho cây",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n1",
+        "text": "Buổi gặp đầu có người yêu cây, người lo thấm nước, người sợ thêm việc. Bạn nhận ra mọi người không phản đối cùng một điều. Một bản kế hoạch cần nghe đủ các nỗi lo.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Lập kế hoạch chăm và kiểm mái",
+            "next": "n3"
+          },
+          {
+            "id": "b",
+            "label": "Chia nhóm thử việc nhỏ trước",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "text": "Một sân dưới tầng có chỗ đặt cây, nhưng ít nắng. Chuyển cây có thể cứu phần lớn khu vườn mà làm mất nơi mọi người gặp nhau. Bạn gọi vài người lên xem.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Thử chuyển một nhóm cây",
+            "next": "n4"
+          },
+          {
+            "id": "b",
+            "label": "Tìm nơi giữ được cả chỗ gặp",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "text": "Nhóm đã ghi lịch tưới và phát hiện có người chỉ rảnh tối. Một người muốn làm thật nhiều rồi mệt, người khác ngại không đóng góp đủ. Bạn cần chia việc vừa sức.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Chia lịch theo thời gian mỗi người",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Giữ một nhóm nhỏ tự quản",
+            "next": "n7"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "text": "Mưa lớn làm buổi kiểm mái phải đổi. Một hàng xóm vốn phản đối mang tới tấm bạt. Người ấy vẫn lo việc chung, nhưng không muốn nhìn cây chết.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Mời người ấy góp vào kế hoạch",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Đề nghị tạm chuyển cây khỏi mái",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "text": "Nhóm cây chuyển thử sống tốt, còn một cây lớn cần chỗ riêng. Bạn có cơ hội giữ vài chậu cho mình hoặc tiếp tục tìm nơi chung. Hàng xóm hỏi có nên dừng ở mức vừa đạt.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Tìm một chỗ chung nhỏ hơn",
+            "next": "n7"
+          },
+          {
+            "id": "b",
+            "label": "Giữ một góc nhỏ tự chăm",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "text": "Kế hoạch cuối có lịch chăm, giới hạn tải mái và buổi kiểm định kỳ. Mọi người biết ai làm gì và khi nào nghỉ. Ban quản lý muốn nghe cách xử lý nếu người chăm chuyển đi.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Để lịch và người thay có thể bàn giao",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Đề nghị chuyển vườn xuống nơi dễ quản",
+            "next": "end_b"
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "text": "Nơi mới đủ chỗ cho phần lớn cây và một bàn ngồi. Nó không có gió trên mái nhưng gần nhiều người hơn. Bạn nhìn thấy hai người trước chưa từng chào nhau đang cùng kê chậu.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Chọn nơi mới làm khu vườn chung",
+            "next": "end_b"
+          },
+          {
+            "id": "b",
+            "label": "Giữ lại vài chậu riêng, thôi tổ chức",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "n8",
+        "text": "Góc vườn riêng đã xanh, bạn có thể dừng ở đó. Một đứa trẻ hàng xóm lại hỏi được học trồng không. Giữ niềm vui cho mình hay mở cửa vừa sức là câu hỏi lần này.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Mở lại một nhóm chăm nhỏ trên mái",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Giữ khu vườn nhỏ riêng",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "end_a",
+        "text": "Khu vườn trên mái được giữ với lịch chăm rõ và những lần nghỉ có người thay. Điều được giữ không chỉ là cây, mà là cách những người khác nhau cùng chịu trách nhiệm.",
+        "choices": [],
+        "ending": {
+          "id": "ending_a",
+          "name": "Vườn chung còn xanh",
+          "text": "Khu vườn trên mái được giữ với lịch chăm rõ và những lần nghỉ có người thay. Điều được giữ không chỉ là cây, mà là cách những người khác nhau cùng chịu trách nhiệm."
+        }
+      },
+      {
+        "id": "end_b",
+        "text": "Cây chuyển xuống một góc chung dễ tới hơn. Mọi người vẫn gặp, chỉ đổi quãng đường lên vườn. Một khu vườn có thể thay địa chỉ mà vẫn giữ người.",
+        "choices": [],
+        "ending": {
+          "id": "ending_b",
+          "name": "Rễ mới",
+          "text": "Cây chuyển xuống một góc chung dễ tới hơn. Mọi người vẫn gặp, chỉ đổi quãng đường lên vườn. Một khu vườn có thể thay địa chỉ mà vẫn giữ người."
+        }
+      },
+      {
+        "id": "end_c",
+        "text": "Bạn giữ vài chậu và dừng vai trò tổ chức. Không phải cuộc vận động nào cũng phải kéo dài mãi. Mỗi sáng, khu vườn nhỏ vẫn cho bạn một việc dễ vui.",
+        "choices": [],
+        "ending": {
+          "id": "ending_c",
+          "name": "Một góc vừa sức",
+          "text": "Bạn giữ vài chậu và dừng vai trò tổ chức. Không phải cuộc vận động nào cũng phải kéo dài mãi. Mỗi sáng, khu vườn nhỏ vẫn cho bạn một việc dễ vui."
+        }
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "story_midnight_bus",
+    "name": "Chuyến xe lúc nửa đêm",
+    "description": "Một chuyến xe dừng ở những tuổi khác nhau. Bạn phải chọn bến mình muốn sống tiếp.",
+    "icon": "☾",
+    "start": "start",
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Bạn lỡ chuyến cuối nhưng một xe không có số tuyến dừng lại. Tài xế hỏi năm nào, không hỏi bến nào. Trong xe, một người giống bạn hồi nhỏ đang nhìn ra cửa.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Ngồi cạnh người hồi nhỏ",
+            "next": "n1"
+          },
+          {
+            "id": "b",
+            "label": "Hỏi tài xế về đường về",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n1",
+        "text": "Người nhỏ tuổi hỏi có lớn lên đúng điều mình muốn không. Bạn không biết nên hứa một đời đẹp hay kể thật cả các lần đổi ý. Xe đi qua trường cũ đã khác.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Kể thật một điều đã học",
+            "next": "n3"
+          },
+          {
+            "id": "b",
+            "label": "Hỏi người ấy điều đang lo",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "text": "Tài xế nói mỗi bến là một lời hẹn chưa hoàn thành. Muốn về hiện tại, bạn cần nhớ điều vẫn muốn giữ ở đó. Một hành khách khác nghe và nắm chặt phong thư.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Hỏi về phong thư",
+            "next": "n4"
+          },
+          {
+            "id": "b",
+            "label": "Nhìn các bến đời khác",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "text": "Người nhỏ tuổi không thất vọng khi bạn kể một lần sai. Người ấy vui vì còn có thể đổi đường. Bạn nhớ lại một lời xin lỗi mình chưa nói và bến tiếp theo đã hiện ra.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Xuống ở cuộc gặp chưa xong",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Tìm lại bến hiện tại",
+            "next": "n7"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "text": "Một hành khách mang bức thư cho người không còn chờ ở bến cũ. Xe có thể tới năm họ còn gặp nhau, nhưng người ấy sợ nghe điều khác mình mong.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Cùng người ấy đi tới cuộc gặp",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Giúp viết lời muốn nói thật",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "text": "Qua cửa kính, bạn thấy một đời khác với nghề và chỗ ở từng mơ. Mọi thứ đẹp nhưng người đang sống đời đó có câu chuyện bạn chưa biết. Tài xế hỏi có muốn đổi vé không.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Tìm điều đời ấy phải đổi lấy",
+            "next": "n7"
+          },
+          {
+            "id": "b",
+            "label": "Đổi vé để thử con đường khác",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "text": "Cuộc gặp không sửa hết chuyện cũ. Hai người nói được điều trước kia né tránh, rồi chọn sống phần tiếp theo. Bạn nghe tên bến hiện tại được gọi lần đầu.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Về hiện tại với câu chuyện mới",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Ở lại thêm để giúp người khác",
+            "next": "end_b"
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "text": "Bạn cùng hành khách viết xong lá thư, không phải để ép một câu trả lời. Người ấy xuống xe nhẹ hơn. Tài xế cho bạn hai vé: về hôm nay hoặc tới đời chưa từng chọn.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Về hôm nay sau khi giúp hoà giải",
+            "next": "end_b"
+          },
+          {
+            "id": "b",
+            "label": "Chọn vé cuộc đời khác",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "n8",
+        "text": "Đời khác có một điều bạn thích và một điều bạn không muốn mất. Người ở đó cũng từng nhìn qua cửa một chuyến xe khác. Bạn nhận ra mọi đời đều có phần chưa biết.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Quay về với đời mình đang có",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Xuống bến để sống một đời khác",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "end_a",
+        "text": "Bạn xuống gần nhà khi trời sắp sáng. Ngày hôm nay không đổi lịch sử, nhưng có một cuộc gọi bạn muốn thực hiện. Bạn đã nhớ điều mình muốn giữ.",
+        "choices": [],
+        "ending": {
+          "id": "ending_a",
+          "name": "Bến hiện tại",
+          "text": "Bạn xuống gần nhà khi trời sắp sáng. Ngày hôm nay không đổi lịch sử, nhưng có một cuộc gọi bạn muốn thực hiện. Bạn đã nhớ điều mình muốn giữ."
+        }
+      },
+      {
+        "id": "end_b",
+        "text": "Bạn về sau khi giúp một người nói điều còn dang dở. Không phải mọi cuộc gặp đều mang lại điều mong, nhưng một lời thật đã có người nhận.",
+        "choices": [],
+        "ending": {
+          "id": "ending_b",
+          "name": "Một lời hẹn được nói",
+          "text": "Bạn về sau khi giúp một người nói điều còn dang dở. Không phải mọi cuộc gặp đều mang lại điều mong, nhưng một lời thật đã có người nhận."
+        }
+      },
+      {
+        "id": "end_c",
+        "text": "Bạn chọn bến một cuộc đời khác. Bạn sẽ phải học những người, những việc và những đánh đổi ở đó từ đầu. Xe rời đi trước khi bạn muốn hỏi lại.",
+        "choices": [],
+        "ending": {
+          "id": "ending_c",
+          "name": "Vé một chiều",
+          "text": "Bạn chọn bến một cuộc đời khác. Bạn sẽ phải học những người, những việc và những đánh đổi ở đó từ đầu. Xe rời đi trước khi bạn muốn hỏi lại."
+        }
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "story_letter_shop",
+    "name": "Tiệm thư chưa gửi",
+    "description": "Bạn nhận làm ở tiệm giữ những lá thư bị bỏ lại. Giao thư là một việc; biết khi nào nên trao lại quyền chọn là việc khác.",
+    "icon": "✉",
+    "start": "start",
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Tiệm nhỏ ở cuối phố tuyển người phân loại thư. Chủ tiệm nói thư không thất lạc địa chỉ mà thất lạc thời điểm. Bạn được đưa ba lá thư và không có hạn giao.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Bắt đầu từ thư có người nhận gần nhất",
+            "next": "n1"
+          },
+          {
+            "id": "b",
+            "label": "Hỏi vì sao thư chưa được gửi",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n1",
+        "text": "Người nhận gần nhất nhận ra nét chữ rồi im lặng. Họ chưa muốn đọc và đề nghị bạn giữ lại. Bạn không biết sự im lặng là từ chối hay cần thời gian.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Trao quyền chọn cho người nhận",
+            "next": "n3"
+          },
+          {
+            "id": "b",
+            "label": "Xin kể lý do người gửi viết",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "text": "Chủ tiệm kể có người muốn gửi nhưng sợ câu trả lời. Tiệm giữ thư mà không tự gửi thay ý người viết. Một lá thư của người đã chuyển đi cần bạn tìm thêm thông tin.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Tìm người gửi để xác nhận",
+            "next": "n4"
+          },
+          {
+            "id": "b",
+            "label": "Tìm người nhận trước",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "text": "Người nhận quay lại tiệm, hỏi được mang thư về chưa đọc không. Bạn có thể đưa lá thư hoặc ngồi nghe chuyện hai người trước khi họ đi.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Đưa thư và không giục đọc",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Mời họ kể điều muốn giữ kín",
+            "next": "n7"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "text": "Người gửi nói đã đổi ý về một câu trong thư. Họ muốn viết lại nhưng cũng không muốn xoá điều từng thật. Một bản mới và bản cũ nằm cạnh nhau.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Giúp viết lại, để họ tự chọn bản gửi",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Giữ cả hai với lời giải thích",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "text": "Bạn tìm được địa chỉ mới nhưng người nhận không còn muốn liên hệ. Họ đề nghị đừng chuyển thông tin về. Công việc lần này cần bạn tôn trọng ranh giới hơn hoàn thành chuyến giao.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Trả lời người gửi rằng thư chưa được nhận",
+            "next": "n7"
+          },
+          {
+            "id": "b",
+            "label": "Giữ thư trong tiệm, không tiết lộ địa chỉ",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "text": "Hai lá thư đã đến đúng người sẵn lòng nhận. Lá cuối có nét chữ giống của bạn. Trong đó là một điều bạn từng nghĩ sẽ nói vào một ngày thuận tiện hơn.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Hoàn thành việc giao rồi viết thư mình",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Đặt thư mình vào lượt tiếp theo",
+            "next": "end_b"
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "text": "Có một lá thư bạn quyết định giữ vì người nhận chưa đồng ý. Chủ tiệm không gọi đó là công việc thất bại. Ông hỏi bạn đã giữ quyền chọn cho ai.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Giữ bí mật có lý do và ghi rõ quyền chọn",
+            "next": "end_b"
+          },
+          {
+            "id": "b",
+            "label": "Viết lá thư của riêng mình",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "n8",
+        "text": "Bạn ngồi trước giấy trắng. Lần này không có người thuê, không có địa chỉ đã ghi sẵn. Bạn chỉ cần chọn một điều muốn nói mà không bắt người kia phải trả lời.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Gửi điều muốn nói rồi trở lại việc tiệm",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Giữ lại và đọc trước cho chính mình",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "end_a",
+        "text": "Bạn giao đủ những lá thư có người sẵn lòng nhận, trả lại phần còn lại cho người có quyền quyết định. Tiệm vẫn còn thư, nhưng không còn lẫn giữa chậm trễ và ép buộc.",
+        "choices": [],
+        "ending": {
+          "id": "ending_a",
+          "name": "Những lá thư đã đến",
+          "text": "Bạn giao đủ những lá thư có người sẵn lòng nhận, trả lại phần còn lại cho người có quyền quyết định. Tiệm vẫn còn thư, nhưng không còn lẫn giữa chậm trễ và ép buộc."
+        }
+      },
+      {
+        "id": "end_b",
+        "text": "Bạn giữ một lá thư với lý do rõ và không tiết lộ điều không thuộc quyền mình. Có công việc hoàn tất bằng việc không làm thêm một bước.",
+        "choices": [],
+        "ending": {
+          "id": "ending_b",
+          "name": "Bí mật được giữ đúng",
+          "text": "Bạn giữ một lá thư với lý do rõ và không tiết lộ điều không thuộc quyền mình. Có công việc hoàn tất bằng việc không làm thêm một bước."
+        }
+      },
+      {
+        "id": "end_c",
+        "text": "Bạn viết điều còn dang dở và trước hết đọc nó cho mình. Khi chọn gửi, bạn đã biết một câu trả lời không phải thứ có thể đòi như tiền công.",
+        "choices": [],
+        "ending": {
+          "id": "ending_c",
+          "name": "Lá thư của mình",
+          "text": "Bạn viết điều còn dang dở và trước hết đọc nó cho mình. Khi chọn gửi, bạn đã biết một câu trả lời không phải thứ có thể đòi như tiền công."
+        }
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "story_festival_team",
+    "name": "Đội hội làng bất đắc dĩ",
+    "description": "Bạn nhận việc tổ chức lễ hội và phát hiện bảng phân công dài hơn sân khấu. Chia công cũng là một lựa chọn.",
+    "icon": "⚑",
+    "start": "start",
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Bạn giơ tay hỏi giờ diễn và được hiểu thành xung phong tổ chức. Bảng phân công mới có tên bạn ở đầu. Một người mang tới nồi lớn, người khác mang ý tưởng rất lớn.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Họp đội để chia việc",
+            "next": "n1"
+          },
+          {
+            "id": "b",
+            "label": "Làm phiên bản lễ hội nhỏ trước",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n1",
+        "text": "Buổi họp có ba ý tưởng sân khấu, hai ý tưởng đồ ăn và chưa ai nhận dọn cuối. Bạn cần chọn việc cần có trước việc trông đẹp.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Ghi cả việc diễn lẫn việc dọn",
+            "next": "n3"
+          },
+          {
+            "id": "b",
+            "label": "Tập trung một tiết mục nổi bật",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "text": "Phiên bản nhỏ vừa ngân sách nhưng một người lo không ai tới. Bạn có thể quảng bá nhiều hơn hoặc mời từng nhóm góp một phần dễ làm.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Mời mọi người góp việc vừa sức",
+            "next": "n4"
+          },
+          {
+            "id": "b",
+            "label": "Tăng quảng bá để đông người",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "text": "Danh sách việc rõ hơn làm một người thở phào. Người ấy chỉ rảnh trước buổi diễn nhưng trước đó ngại nói. Đội bắt đầu hiểu việc ít giờ không có nghĩa ít quan trọng.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Giữ lịch theo sức mỗi người",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Rút bớt việc để đội không quá tải",
+            "next": "n7"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "text": "Tiết mục nổi bật cần âm thanh tốt hơn tiền đang có. Bạn có thể sửa kế hoạch hoặc lấy công sức đội bù mọi thứ. Một người đã mệt nhưng chưa dám nghỉ.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Đổi tiết mục theo nguồn lực",
+            "next": "n6"
+          },
+          {
+            "id": "b",
+            "label": "Giữ sân khấu lớn bằng thêm giờ",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "text": "Lời mời được chia sẻ, người tới đông hơn dự đoán. Quầy đồ ăn cần thêm người và sân khấu phải chậm lịch. Mọi người nhìn bạn chờ quyết định.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Chia người theo việc quan trọng nhất",
+            "next": "n7"
+          },
+          {
+            "id": "b",
+            "label": "Tự xử lý rồi giữ tên mình trên chương trình",
+            "next": "n8"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "text": "Mưa nhẹ làm giờ diễn đổi, nhưng đội đã có chỗ nghỉ và kế hoạch thu dọn. Một đứa trẻ hỏi được hát cùng không. Cả đội chờ xem bạn sẽ giữ lịch hay giữ không khí.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Cho mọi người cùng tham gia vừa sức",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Giữ chương trình nhỏ và kết thúc sớm",
+            "next": "end_b"
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "text": "Bài đăng về hội được nhiều người xem. Người viết hỏi ai là người làm nên ngày ấy. Bạn có thể kể tên cả đội hoặc nhận vai trò tổ chức nổi bật nhất.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Kể công sức cả đội",
+            "next": "end_b"
+          },
+          {
+            "id": "b",
+            "label": "Nhận phần nổi bật về mình",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "n8",
+        "text": "Bạn nhìn người đang dọn cuối buổi. Hội nhỏ hơn dự định nhưng tiếng cười vẫn còn. Có thể giúp dọn rồi cùng ăn, hoặc rời đi để giữ hình ảnh người tổ chức bận rộn.",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Ở lại với mọi người tới cuối",
+            "next": "end_a"
+          },
+          {
+            "id": "b",
+            "label": "Chọn một lần tổ chức nhỏ mà vui",
+            "next": "end_c"
+          }
+        ]
+      },
+      {
+        "id": "end_a",
+        "text": "Mọi người nhớ một ngày được góp sức đúng khả năng. Chương trình không hoàn hảo, nhưng sau buổi diễn vẫn có một bữa ăn chung và lời hẹn năm sau.",
+        "choices": [],
+        "ending": {
+          "id": "ending_a",
+          "name": "Lễ hội ấm áp",
+          "text": "Mọi người nhớ một ngày được góp sức đúng khả năng. Chương trình không hoàn hảo, nhưng sau buổi diễn vẫn có một bữa ăn chung và lời hẹn năm sau."
+        }
+      },
+      {
+        "id": "end_b",
+        "text": "Bạn được biết đến vì lễ hội, nhưng vài người không còn muốn nhận việc cùng bạn. Bài đăng giữ được tên, còn công sức người phía sau đã rời khỏi đội.",
+        "choices": [],
+        "ending": {
+          "id": "ending_b",
+          "name": "Tên trên sân khấu",
+          "text": "Bạn được biết đến vì lễ hội, nhưng vài người không còn muốn nhận việc cùng bạn. Bài đăng giữ được tên, còn công sức người phía sau đã rời khỏi đội."
+        }
+      },
+      {
+        "id": "end_c",
+        "text": "Bạn giữ một lễ hội vừa nguồn lực. Ít tiết mục hơn, ít giờ làm hơn, nhiều người còn muốn quay lại hơn. Bảng phân công năm sau có cả dòng nghỉ.",
+        "choices": [],
+        "ending": {
+          "id": "ending_c",
+          "name": "Nhỏ mà vui",
+          "text": "Bạn giữ một lễ hội vừa nguồn lực. Ít tiết mục hơn, ít giờ làm hơn, nhiều người còn muốn quay lại hơn. Bảng phân công năm sau có cả dòng nghỉ."
+        }
+      }
+    ],
+    "sourceKind": "original_web"
+  }
+]

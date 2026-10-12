@@ -1,0 +1,4396 @@
+{
+  "contentVersion": "1.0.0",
+  "sourceKind": "original_web",
+  "counts": {
+    "lifeEvents": 150,
+    "careerEvents": 144,
+    "activities": 108,
+    "assets": 24,
+    "education": 10,
+    "jobs": 48,
+    "achievements": 40,
+    "stories": 5,
+    "nodes": 60,
+    "endings": 15
+  },
+  "status": "verified",
+  "note": "Nội dung tự viết; verified là schema, tham chiếu và fixture, không xác nhận dữ liệu Android hoặc QA điện thoại vật lý.",
+  "entries": [
+    {
+      "id": "infancy_01",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_02",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_03",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_04",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_05",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_06",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_07",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_08",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_09",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_10",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_11",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_12",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_13",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_14",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "infancy_15",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_01",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_02",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_03",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_04",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_05",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_06",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_07",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_08",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_09",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_10",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_11",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_12",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_13",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_14",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_15",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_16",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_17",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_18",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_19",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_20",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_21",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_22",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_23",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_24",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_25",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_26",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_27",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_28",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_29",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_30",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_31",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_32",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_33",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_34",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_35",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_36",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_37",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_38",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_39",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "school_40",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_01",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_02",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_03",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_04",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_05",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_06",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_07",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_08",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_09",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_10",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_11",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_12",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_13",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_14",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_15",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_16",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_17",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_18",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_19",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_20",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_21",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_22",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_23",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_24",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_25",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_26",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_27",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_28",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_29",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_30",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_31",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_32",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_33",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_34",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_35",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_36",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_37",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_38",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_39",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "youth_40",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_01",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_02",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_03",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_04",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_05",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_06",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_07",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_08",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_09",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_10",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_11",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_12",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_13",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_14",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_15",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_16",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_17",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_18",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_19",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_20",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_21",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_22",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_23",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_24",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_25",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_26",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_27",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_28",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_29",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_30",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_31",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_32",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_33",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_34",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "midlife_35",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_01",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_02",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_03",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_04",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_05",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_06",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_07",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_08",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_09",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_10",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_11",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_12",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_13",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_14",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_15",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_16",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_17",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_18",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_19",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "elder_20",
+      "kind": "lifeEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_yte_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_giaoduc_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_congnghe_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_kinhdoanh_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nghethuat_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_thethao_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_phapluat_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nongnghiep_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_xaydung_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_dichvu_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_nhanuoc_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_01_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_01_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_01_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_02_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_02_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_02_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_03_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_03_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_03_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_04_1",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_04_2",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "event_job_quandoi_04_3",
+      "kind": "careerEvents",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "fallback_0",
+      "kind": "fallbacks",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "fallback_1",
+      "kind": "fallbacks",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "fallback_2",
+      "kind": "fallbacks",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "fallback_3",
+      "kind": "fallbacks",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "fallback_4",
+      "kind": "fallbacks",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thechat_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_suckhoe_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_hoctap_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_xahoi_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giadinh_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_tinhcam_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_giaitri_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_dulich_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_taichinh_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_nhacua_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_thucung_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_01",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_02",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_03",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_04",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_05",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_06",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_07",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_08",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "act_ruiro_09",
+      "kind": "activities",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "job_yte_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_yte_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_yte_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_yte_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_giaoduc_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_giaoduc_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_giaoduc_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_giaoduc_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_congnghe_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_congnghe_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_congnghe_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_congnghe_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_kinhdoanh_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_kinhdoanh_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_kinhdoanh_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_kinhdoanh_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nghethuat_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nghethuat_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nghethuat_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nghethuat_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_thethao_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_thethao_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_thethao_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_thethao_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_phapluat_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_phapluat_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_phapluat_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_phapluat_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nongnghiep_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nongnghiep_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nongnghiep_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nongnghiep_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_xaydung_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_xaydung_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_xaydung_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_xaydung_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_dichvu_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_dichvu_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_dichvu_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_dichvu_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nhanuoc_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nhanuoc_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nhanuoc_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_nhanuoc_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_quandoi_01",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_quandoi_02",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_quandoi_03",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "job_quandoi_04",
+      "kind": "jobs",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "edu_primary",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_lower_secondary",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_upper_secondary",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_vocational",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_college",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_university",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_medical",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_postgraduate",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_return_school",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "edu_short_course",
+      "kind": "education",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_nha_01",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_nha_02",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_nha_03",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_nha_04",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xe_01",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xe_02",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xe_03",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xe_04",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dautu_01",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dautu_02",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dautu_03",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dautu_04",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dodung_01",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dodung_02",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dodung_03",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_dodung_04",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xaxi_01",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xaxi_02",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xaxi_03",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_xaxi_04",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_thucung_01",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_thucung_02",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_thucung_03",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "asset_thucung_04",
+      "kind": "assets",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tuoi_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tuoi_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tuoi_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tuoi_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tuoi_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_hoc_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_hoc_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_hoc_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_hoc_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_hoc_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_nghe_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_nghe_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_nghe_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_nghe_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_nghe_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tien_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tien_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tien_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tien_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_tien_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_giadinh_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_giadinh_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_giadinh_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_giadinh_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_giadinh_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_congdong_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_congdong_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_congdong_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_congdong_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_congdong_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_khampha_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_khampha_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_khampha_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_khampha_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_khampha_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_truyen_01",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_truyen_02",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_truyen_03",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_truyen_04",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "ach_truyen_05",
+      "kind": "achievements",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "story_market_clock",
+      "kind": "stories",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "story_rooftop_garden",
+      "kind": "stories",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "story_midnight_bus",
+      "kind": "stories",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "story_letter_shop",
+      "kind": "stories",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "story_festival_team",
+      "kind": "stories",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/systems.test.ts"
+    },
+    {
+      "id": "academic",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "career",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "family",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "generous",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "explorer",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "long_life",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "comeback",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "wealthy",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "risk",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "ordinary",
+      "kind": "titles",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/content.test.ts"
+    },
+    {
+      "id": "medal_service",
+      "kind": "medals",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "medal_sport",
+      "kind": "medals",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    },
+    {
+      "id": "medal_community",
+      "kind": "medals",
+      "sourceKind": "original_web",
+      "version": "1.0.0",
+      "status": "verified",
+      "verification": "tests/catalog-flows.test.ts"
+    }
+  ]
+}

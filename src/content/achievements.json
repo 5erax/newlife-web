@@ -1,0 +1,540 @@
+[
+  {
+    "id": "ach_tuoi_01",
+    "name": "Qua tuổi trưởng thành",
+    "description": "Đạt mốc 18 cho hành trình qua tuổi trưởng thành.",
+    "group": "tuoi",
+    "conditions": [
+      {
+        "field": "age",
+        "op": ">=",
+        "value": 18
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tuoi_02",
+    "name": "Sáu mươi mùa xuân",
+    "description": "Đạt mốc 60 cho hành trình sáu mươi mùa xuân.",
+    "group": "tuoi",
+    "conditions": [
+      {
+        "field": "age",
+        "op": ">=",
+        "value": 60
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tuoi_03",
+    "name": "Trăm năm chuyện kể",
+    "description": "Đạt mốc 100 cho hành trình trăm năm chuyện kể.",
+    "group": "tuoi",
+    "conditions": [
+      {
+        "field": "age",
+        "op": ">=",
+        "value": 100
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tuoi_04",
+    "name": "Vượt qua bệnh nặng",
+    "description": "Đạt mốc 1 cho hành trình vượt qua bệnh nặng.",
+    "group": "tuoi",
+    "conditions": [
+      {
+        "field": "recoveries",
+        "op": ">=",
+        "value": 1
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tuoi_05",
+    "name": "Chăm mình đều đặn",
+    "description": "Đạt mốc 20 cho hành trình chăm mình đều đặn.",
+    "group": "tuoi",
+    "conditions": [
+      {
+        "flag": "milestone_healthy_activities_20",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_hoc_01",
+    "name": "Tốt nghiệp phổ thông",
+    "description": "Hoàn thành chương trình Trung học phổ thông.",
+    "group": "hoc",
+    "conditions": [
+      {
+        "has": "education",
+        "id": "edu_upper_secondary"
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_hoc_02",
+    "name": "Bằng đại học đầu tiên",
+    "description": "Hoàn thành chương trình Đại học.",
+    "group": "hoc",
+    "conditions": [
+      {
+        "has": "education",
+        "id": "edu_university"
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_hoc_03",
+    "name": "Học tiếp sau đại học",
+    "description": "Hoàn thành chương trình Sau đại học.",
+    "group": "hoc",
+    "conditions": [
+      {
+        "has": "education",
+        "id": "edu_postgraduate"
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_hoc_04",
+    "name": "Học bổng đáng nhớ",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "hoc",
+    "conditions": [
+      {
+        "flag": "scholarship",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_hoc_05",
+    "name": "Quay lại lớp",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "hoc",
+    "conditions": [
+      {
+        "flag": "returned_school",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_nghe_01",
+    "name": "Việc đầu tiên",
+    "description": "Đạt mốc 1 cho hành trình việc đầu tiên.",
+    "group": "nghe",
+    "conditions": [
+      {
+        "field": "jobs",
+        "op": ">=",
+        "value": 1
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_nghe_02",
+    "name": "Thăng chức đầu tiên",
+    "description": "Đạt mốc 1 cho hành trình thăng chức đầu tiên.",
+    "group": "nghe",
+    "conditions": [
+      {
+        "flag": "milestone_promotions_1",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_nghe_03",
+    "name": "Mười năm một nghề",
+    "description": "Đạt mốc 10 cho hành trình mười năm một nghề.",
+    "group": "nghe",
+    "conditions": [
+      {
+        "field": "workYears",
+        "op": ">=",
+        "value": 10
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_nghe_04",
+    "name": "Đổi nghề thành công",
+    "description": "Đạt mốc 2 cho hành trình đổi nghề thành công.",
+    "group": "nghe",
+    "conditions": [
+      {
+        "field": "jobs",
+        "op": ">=",
+        "value": 2
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_nghe_05",
+    "name": "Nghỉ hưu đủ đầy",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "nghe",
+    "conditions": [
+      {
+        "flag": "retired",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tien_01",
+    "name": "Khoản tiết kiệm đầu",
+    "description": "Đạt mốc 10000000 cho hành trình khoản tiết kiệm đầu.",
+    "group": "tien",
+    "conditions": [
+      {
+        "field": "saved",
+        "op": ">=",
+        "value": 10000000
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tien_02",
+    "name": "Căn nhà đầu tiên",
+    "description": "Đạt mốc house cho hành trình căn nhà đầu tiên.",
+    "group": "tien",
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "house"
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tien_03",
+    "name": "Hết nợ",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "tien",
+    "conditions": [
+      {
+        "flag": "debt_paid",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tien_04",
+    "name": "Một khối tài sản",
+    "description": "Đạt mốc 5000000000 cho hành trình một khối tài sản.",
+    "group": "tien",
+    "conditions": [
+      {
+        "field": "netWorth",
+        "op": ">=",
+        "value": 5000000000
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_tien_05",
+    "name": "Cho đi để nhận lại",
+    "description": "Đạt mốc 20000000 cho hành trình cho đi để nhận lại.",
+    "group": "tien",
+    "conditions": [
+      {
+        "field": "donations",
+        "op": ">=",
+        "value": 20000000
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_giadinh_01",
+    "name": "Ngày cưới đầu tiên",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "giadinh",
+    "conditions": [
+      {
+        "flag": "married_once",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_giadinh_02",
+    "name": "Lần đầu làm cha mẹ",
+    "description": "Đạt mốc 1 cho hành trình lần đầu làm cha mẹ.",
+    "group": "giadinh",
+    "conditions": [
+      {
+        "field": "children",
+        "op": ">=",
+        "value": 1
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_giadinh_03",
+    "name": "Con đã lớn",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "giadinh",
+    "conditions": [
+      {
+        "flag": "adult_child",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_giadinh_04",
+    "name": "Đoàn tụ sau mâu thuẫn",
+    "description": "Đạt mốc 1 cho hành trình đoàn tụ sau mâu thuẫn.",
+    "group": "giadinh",
+    "conditions": [
+      {
+        "flag": "milestone_reconciliations_1",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_giadinh_05",
+    "name": "Tiếp nối một đời",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "giadinh",
+    "conditions": [
+      {
+        "flag": "continued_child",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_congdong_01",
+    "name": "Người bạn lâu năm",
+    "description": "Đạt mốc 15 cho hành trình người bạn lâu năm.",
+    "group": "congdong",
+    "conditions": [
+      {
+        "flag": "milestone_friend_years_15",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_congdong_02",
+    "name": "Lời xin lỗi được nhận",
+    "description": "Đạt mốc 2 cho hành trình lời xin lỗi được nhận.",
+    "group": "congdong",
+    "conditions": [
+      {
+        "flag": "milestone_reconciliations_2",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_congdong_03",
+    "name": "Việc tốt đầu tiên",
+    "description": "Đạt mốc 1 cho hành trình việc tốt đầu tiên.",
+    "group": "congdong",
+    "conditions": [
+      {
+        "field": "volunteer",
+        "op": ">=",
+        "value": 1
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_congdong_04",
+    "name": "Một buổi gặp mặt",
+    "description": "Đạt mốc 3 cho hành trình một buổi gặp mặt.",
+    "group": "congdong",
+    "conditions": [
+      {
+        "flag": "milestone_meetups_3",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_congdong_05",
+    "name": "Lúc gia đình cần",
+    "description": "Đạt mốc 5 cho hành trình lúc gia đình cần.",
+    "group": "congdong",
+    "conditions": [
+      {
+        "flag": "milestone_support_given_5",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_khampha_01",
+    "name": "Chuyến đi đầu tiên",
+    "description": "Đạt mốc 1 cho hành trình chuyến đi đầu tiên.",
+    "group": "khampha",
+    "conditions": [
+      {
+        "field": "travel",
+        "op": ">=",
+        "value": 1
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_khampha_02",
+    "name": "Có một sở thích",
+    "description": "Đạt mốc 10 cho hành trình có một sở thích.",
+    "group": "khampha",
+    "conditions": [
+      {
+        "field": "hobbies",
+        "op": ">=",
+        "value": 10
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_khampha_03",
+    "name": "Giải phong trào",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "khampha",
+    "conditions": [
+      {
+        "flag": "sports_medal",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_khampha_04",
+    "name": "Bạn nhỏ tới tuổi già",
+    "description": "Đạt mốc 10 cho hành trình bạn nhỏ tới tuổi già.",
+    "group": "khampha",
+    "conditions": [
+      {
+        "field": "petYears",
+        "op": ">=",
+        "value": 10
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_khampha_05",
+    "name": "Thử đủ nhóm hoạt động",
+    "description": "Đạt mốc 12 cho hành trình thử đủ nhóm hoạt động.",
+    "group": "khampha",
+    "conditions": [
+      {
+        "field": "activityGroups",
+        "op": ">=",
+        "value": 12
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_truyen_01",
+    "name": "Kết thúc truyện đầu",
+    "description": "Đạt mốc 1 cho hành trình kết thúc truyện đầu.",
+    "group": "truyen",
+    "conditions": [
+      {
+        "field": "stories",
+        "op": ">=",
+        "value": 1
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_truyen_02",
+    "name": "Ba cách kết thúc",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "truyen",
+    "conditions": [
+      {
+        "flag": "story_all_endings",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_truyen_03",
+    "name": "Năm câu chuyện",
+    "description": "Đạt mốc 5 cho hành trình năm câu chuyện.",
+    "group": "truyen",
+    "conditions": [
+      {
+        "field": "stories",
+        "op": ">=",
+        "value": 5
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_truyen_04",
+    "name": "Tránh một rủi ro lớn",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "truyen",
+    "conditions": [
+      {
+        "flag": "avoided_risk",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_truyen_05",
+    "name": "Làm lại sau sai lầm",
+    "description": "Đạt mốc đáng nhớ này trong một cuộc đời.",
+    "group": "truyen",
+    "conditions": [
+      {
+        "flag": "recovered_record",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  }
+]

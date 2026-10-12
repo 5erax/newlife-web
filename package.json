@@ -1,0 +1,41 @@
+{
+  "name": "newlife-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate-content": "tsx src/tools/content.ts",
+    "content:stats": "tsx src/tools/content.ts",
+    "simulate": "tsx src/tools/simulate.ts",
+    "build": "npm run typecheck && npm run validate-content && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:e2e": "playwright test",
+    "content:graph": "tsx src/tools/graph.ts"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.6",
+    "idb": "8.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "26.6.5",
+    "@vitejs/plugin-react": "6.1.2",
+    "vite": "8.3.4",
+    "typescript": "7.0.2",
+    "vitest": "5.0.4",
+    "tsx": "4.23.15",
+    "vite-plugin-pwa": "2.0.0",
+    "fake-indexeddb": "6.2.5",
+    "@playwright/test": "1.64.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

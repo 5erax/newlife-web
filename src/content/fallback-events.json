@@ -1,0 +1,157 @@
+[
+  {
+    "id": "fallback_0",
+    "group": "fallback",
+    "minAge": 0,
+    "maxAge": 5,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 0,
+    "maxOccurrences": 150,
+    "conditions": [],
+    "text": "Một năm lớn thêm một chút.",
+    "choices": [
+      {
+        "id": "continue",
+        "label": "Tiếp tục câu chuyện",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn giữ lại một ngày dễ chịu giữa những việc thường ngày.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "fallback_1",
+    "group": "fallback",
+    "minAge": 6,
+    "maxAge": 17,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 0,
+    "maxOccurrences": 150,
+    "conditions": [],
+    "text": "Một năm có những ngày bình thường mà dễ nhớ.",
+    "choices": [
+      {
+        "id": "continue",
+        "label": "Tiếp tục câu chuyện",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn giữ lại một ngày dễ chịu giữa những việc thường ngày.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "fallback_2",
+    "group": "fallback",
+    "minAge": 18,
+    "maxAge": 30,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 0,
+    "maxOccurrences": 150,
+    "conditions": [],
+    "text": "Một năm để thử và hiểu điều mình muốn.",
+    "choices": [
+      {
+        "id": "continue",
+        "label": "Tiếp tục câu chuyện",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn giữ lại một ngày dễ chịu giữa những việc thường ngày.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "fallback_3",
+    "group": "fallback",
+    "minAge": 31,
+    "maxAge": 59,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 0,
+    "maxOccurrences": 150,
+    "conditions": [],
+    "text": "Một năm giữ nhịp những điều quan trọng.",
+    "choices": [
+      {
+        "id": "continue",
+        "label": "Tiếp tục câu chuyện",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn giữ lại một ngày dễ chịu giữa những việc thường ngày.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "fallback_4",
+    "group": "fallback",
+    "minAge": 60,
+    "maxAge": 150,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 0,
+    "maxOccurrences": 150,
+    "conditions": [],
+    "text": "Một năm chậm lại để nhìn những gì đã có.",
+    "choices": [
+      {
+        "id": "continue",
+        "label": "Tiếp tục câu chuyện",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn giữ lại một ngày dễ chịu giữa những việc thường ngày.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  }
+]
