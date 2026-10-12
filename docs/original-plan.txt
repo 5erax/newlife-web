@@ -1,0 +1,1013 @@
+Kế hoạch remake NewLife bản web
+Oct 12, 2026 · @Eve
+1. Tổng quan, mục tiêu, phạm vi và nguyên tắc
+Mục tiêu: dựng một bản NewLife chạy trên trình duyệt, bằng tiếng Việt, chơi cá nhân, giữ đúng tên và cách chơi "mô phỏng cuộc đời" của bản Android, với toàn bộ nội dung gốc, không cần máy chủ.
+1.1. Hướng tiếp cận: cùng cơ chế, nội dung tự viết
+Kiểm tra tĩnh APK 2.0 cho thấy sự kiện, truyện, hoạt động và xếp hạng của game gốc nằm ở máy chủ, và máy chủ đó hiện không còn phục vụ game. Vì vậy không có cách nào sao chép đầy đủ nội dung gốc, và văn bản, hình ảnh gốc cũng có bản quyền. Kế hoạch này dựng lại cơ chế (tăng tuổi, sự kiện có lựa chọn, bốn chỉ số, nghề, tài sản, quan hệ, thành tích, kết thúc đời) và để bạn tự viết nội dung. Bản web nhờ vậy không phụ thuộc vào dịch vụ nào đã chết.
+1.2. Quyết định đã chốt
+Hạng mục
+Quyết định
+Tên
+Giữ đúng tên NewLife
+Ngôn ngữ
+Tiếng Việt 
+Mục đích
+Chơi cá nhân, không phát hành công khai
+Nền tảng
+Web, ưu tiên điện thoại, cài được dạng PWA
+Nội dung
+Tự viết; kết hợp với dùng hình, phông, văn bản trích từ APK
+Máy chủ
+Không có; lưu game trong trình duyệt
+1.3. Trong phạm vi
+• Tạo nhân vật (tên, giới tính, quê quán, ngày sinh) và bắt đầu cuộc đời mới.
+• Tăng tuổi từng năm, sự kiện có lựa chọn, nhật ký cuộc đời.
+• Bốn chỉ số( sức khoẻ, hạnh phúc, trí tuệ và ngoại hình ), số dư tiền, tử vong và màn tổng kết.
+• Học tập, nghề nghiệp, quân đội, nghỉ hưu.
+• Hoạt động, tài sản, quan hệ và gia đình.
+• Thành tích và huy chương.
+• Truyện (chuỗi sự kiện có nhánh) và di chúc.
+• tự động sao lưu và chơi offline.
+  -tải và dùng lại toàn bộ tài nguyên nào của game gốc.
+  -Bảo đảm giống 100% từng sự kiện của game gốc: không khả thi vì không có nguồn dữ liệu đó.
+1.4. Ngoài phạm vi
+• Xếp hạng trực tuyến và dữ liệu người chơi khác.
+• Mua hàng trong ứng dụng và quảng cáo; nội dung "gói mua" trở thành nội dung mở sẵn.
+1.5. Nguyên tắc thiết kế
+1. Engine tách khỏi giao diện. Logic game là TypeScript thuần, không biết gì về React.
+2. Nội dung là dữ liệu. Thêm một sự kiện là thêm một khối JSON, không sửa code.
+3. Xác định được. Mọi ngẫu nhiên đi qua một bộ sinh số có seed, nên tái hiện được lỗi và test được.
+4. Kiểm tra dữ liệu lúc build. Sai ID, nhánh cụt, điều kiện bất khả thi bị bắt trước khi chơi.
+5. Lưu được và phục hồi được. Trạng thái game là JSON thuần, có phiên bản và có hàm nâng cấp.
+6. Làm nhỏ, chơi sớm. Có vòng đời chơi được ở cuối Giai đoạn 2, rồi mới mở rộng.
+1.6. Tiêu chí thành công
+• Chơi trọn một đời từ 0 đến lúc chết trên điện thoại mà không lỗi và không kẹt.
+• Mô phỏng 10.000 đời không có đời nào crash hoặc hết sự kiện hợp lệ.
+• Không có hai đời liên tiếp giống hệt nhau về chuỗi sự kiện trong điều kiện bình thường.
+• Thêm sự kiện mới chỉ cần sửa file nội dung và chạy lệnh kiểm tra.
+2. Hiện trạng: kết quả kiểm tra APK và hệ quả cho kế hoạch
+Ngày 12/10/2026, bản Android NewLife 2.0 được kiểm tra tĩnh: đủ để biết game có những phần nào, chưa đủ để biết từng sự kiện, công thức hay nhánh truyện. Phần này tóm tắt những gì kế hoạch dựa vào.
+2.1. Bản đã kiểm tra
+Thuộc tính
+Kết quả
+Tên
+NewLife - Game New Life Simulator
+Nhà phát hành
+Ylinkee Game
+Package
+com.app_life_simulator
+Phiên bản
+2.0 (mã 1040)
+Công nghệ
+Flutter, thư viện đã biên dịch cho ba kiến trúc
+Dữ liệu đóng gói
+1.079 mục; hai manifest, bản dịch tiếng Việt (126 khoá) và tiếng Anh (128 khoá)
+Chưa làm
+Chưa cài hay chạy APK, chưa giải mã logic native, chưa chơi xuyên nhánh
+2.2. Các phần game có dấu vết trong ứng dụng
+Các phần dưới đây là danh sách chức năng cần dựng lại. Cột bên phải là những gì không biết được từ APK, nên phải tự thiết kế.
+Phần
+Cần tự thiết kế
+Tạo nhân vật, cuộc đời mới
+Phân bố ngẫu nhiên, thuộc tính khởi tạo, gia đình
+Tăng tuổi, nhật ký, lựa chọn
+Toàn bộ sự kiện, điều kiện, xác suất, hậu quả
+Bốn chỉ số, số dư
+Công thức thay đổi và giới hạn
+Học tập, công việc, quân đội, nghỉ hưu
+Danh mục, yêu cầu, lương, thăng chức
+Hoạt động
+Danh mục, chi phí, tác động
+Tài sản
+Danh mục, giá mua/bán, chi phí duy trì
+Quan hệ, gia đình
+Nhân vật phụ, tương tác, hôn nhân, con cái
+Truyện
+Nội dung, lựa chọn, nhánh, kết thúc
+Thành tích, huy chương
+Danh mục và điều kiện
+Kết thúc cuộc đời
+Công thức tử vong, tổng kết, kết thúc đặc biệt
+Xếp hạng
+Bỏ trong bản web
+Cài đặt, ngôn ngữ, mua hàng
+Giữ cài đặt và ngôn ngữ; bỏ mua hàng
+2.3. Hệ quả cho kế hoạch
+• Máy chủ không dùng được. Tên miền chính hiện chuyển sang một trang không liên quan, tên miền tiếng Anh không phân giải. Bản web phải tự chứa mọi dữ liệu.
+• Không có nguồn nội dung để đối chiếu. Không thể kiểm kê "đủ mọi sự kiện gốc". Thay vào đó, kế hoạch đo độ đầy đủ bằng chính danh mục tính năng ở bảng 2.2 và bằng số lượng nội dung tự đặt ra (xem phần 8).
+• Số liệu quảng bá chỉ là gợi ý quy mô. Mô tả cửa hàng nêu 12 nhóm ngành, 48 công việc, hơn 100 hoạt động và 5 hình thức sống ẩu. Kế hoạch dùng các số này làm mục tiêu khung, không phải yêu cầu cứng.
+• Quyền sử dụng. Hình ảnh, phông chữ, văn bản truyện của game gốc không được tái sử dụng. Mọi tài nguyên trong bản web là tự tạo hoặc có giấy phép rõ ràng.
+Nguồn: báo cáo kiểm tra tĩnh NewLife 2.0 ngày 12/10/2026 (do bạn cung cấp), trong đó dẫn trang lưu trữ Aptoide.
+3. Công nghệ và cấu trúc dự án
+Bản web dùng TypeScript, React và Vite, không có backend; mọi dữ liệu nằm trong trình duyệt. Lựa chọn này ưu tiên build nhanh, kiểu dữ liệu chặt cho hệ sự kiện, và triển khai tĩnh.
+3.1. Bộ công nghệ
+Lớp
+Lựa chọn
+Lý do
+Ngôn ngữ
+TypeScript (strict)
+Bắt lỗi dữ liệu sự kiện ngay lúc biên dịch
+UI
+React 18 + Vite
+Nhẹ, khởi động nhanh, hệ sinh thái lớn
+State
+Zustand
+Đơn giản, dễ tuần tự hoá để lưu game
+Style
+Tailwind CSS
+Dựng giao diện mobile nhanh, nhất quán
+Lưu trữ
+IndexedDB qua thư viện idb
+Nhiều ô lưu, dung lượng lớn
+Kiểm tra dữ liệu
+Zod
+Xác thực file nội dung lúc build và lúc nạp
+Test
+Vitest
+Test engine và mô phỏng hàng loạt
+Đa ngôn ngữ
+i18next
+Tiếng Việt trước, tiếng Anh sau
+Offline
+vite-plugin-pwa
+Cài như app, chơi không cần mạng
+Chất lượng mã
+ESLint + Prettier
+Giữ mã đồng đều
+Quản lý gói
+pnpm
+Nhanh, tiết kiệm đĩa
+Svelte là phương án thay thế nhẹ hơn; kế hoạch chọn React vì dễ tìm ví dụ và thư viện. Vì engine tách riêng, đổi UI sau này không làm mất logic.
+3.2. Cấu trúc thư mục
+newlife/
+  package.json
+  vite.config.ts
+  tsconfig.json
+  src/
+    engine/            # logic game, không import React
+      rng.ts           # bộ sinh số ngẫu nhiên có seed
+      state.ts         # kiểu Character, GameState
+      actions.ts       # newLife, ageUp, chooseOption, ...
+      events.ts        # chọn sự kiện theo điều kiện, trọng số
+      conditions.ts    # đánh giá biểu thức điều kiện
+      effects.ts       # áp dụng hậu quả
+      death.ts         # công thức tử vong
+      economy.ts       # lương, chi phí, giá tài sản
+      achievements.ts
+      save.ts          # tuần tự hoá, phiên bản, nâng cấp
+    content/           # dữ liệu nội dung (JSON)
+      events/
+        infancy.json   # 0-5 tuổi
+        school.json    # 6-17
+        youth.json     # 18-30
+        midlife.json   # 31-59
+        elder.json     # 60+
+        chains/        # chuỗi sự kiện nhiều bước
+      jobs.json
+      education.json
+      assets.json
+      activities.json
+      relationships.json
+      achievements.json
+      stories/
+      names.json       # họ, tên, quê quán
+    schema/            # schema Zod cho từng loại nội dung
+    ui/
+      screens/         # Start, Create, Main, Activities, Assets, ...
+      components/
+      store.ts         # Zustand, cầu nối engine <-> UI
+    i18n/
+      vi.json
+      en.json
+    tools/             # script kiểm tra và thống kê nội dung
+      validate-content.ts
+      stats.ts
+      simulate.ts
+  tests/
+  public/              # icon PWA, phông tự do giấy phép
+3.3. Quy ước mã
+• Engine chỉ nhận và trả dữ liệu thuần (object, mảng, số, chuỗi); không dùng Date.now() hoặc Math.random() trực tiếp.
+• Mỗi hàm engine có dạng (state, ...args) => { state, log }, không sửa state tại chỗ.
+• ID nội dung viết thường, dấu gạch dưới, có tiền tố nhóm (ví dụ school_bully_01).
+• Văn bản hiển thị nằm trong file nội dung hoặc i18n, không viết cứng trong mã.
+3.4. Triển khai và chạy
+• Phát triển: pnpm dev chạy tại localhost.
+• Build: pnpm build ra thư mục tĩnh.
+• Chơi hằng ngày: mở bản đã build trên điện thoại và "Thêm vào màn hình chính" để dùng như app. Có thể đặt trên Vercel hoặc GitHub Pages ở chế độ riêng tư, hoặc chỉ chạy trong mạng nhà.
+4. Kiến trúc engine, mô hình dữ liệu, schema sự kiện
+Engine là một máy trạng thái thuần: nhận trạng thái và một hành động, trả về trạng thái mới cùng các dòng nhật ký. Giao diện chỉ hiển thị trạng thái và gửi hành động.
+4.1. Ba tầng
+1. Engine (TypeScript thuần): quy tắc game, chọn sự kiện, áp dụng hậu quả, tử vong, kinh tế.
+2. Content (JSON): sự kiện, nghề, tài sản, hoạt động, thành tích, truyện.
+3. UI (React): màn hình và nút bấm; không chứa quy tắc game.
+4.2. Hành động của engine
+Hành động
+Việc làm
+Kết quả
+newLife(seed, options)
+Tạo nhân vật, gia đình, trạng thái đầu
+GameState mới
+ageUp()
+Tăng 1 tuổi, tính thay đổi tự động, chọn sự kiện
+Có thể trả sự kiện đang chờ chọn
+chooseOption(eventId, optionId)
+Áp dụng lựa chọn, đặt cờ, nối nhánh
+Trạng thái mới + nhật ký
+doActivity(id)
+Thực hiện hoạt động trong năm
+Trạng thái mới + nhật ký
+buyAsset(id) / sellAsset(id)
+Mua hoặc bán tài sản
+Cập nhật tiền, tài sản
+enroll(id) / dropOut()
+Học tập
+Cập nhật học vấn
+applyJob(id) / quit() / retire()
+Nghề nghiệp
+Cập nhật nghề, lương
+interact(relationId, action)
+Tương tác quan hệ
+Cập nhật độ thân thiết
+save(slot) / load(slot)
+Lưu và tải
+JSON có phiên bản
+4.3. Trạng thái nhân vật (Character)
+Trường
+Kiểu
+Ghi chú
+name, gender, hometown
+chuỗi
+Chọn lúc tạo
+birthYear, age
+số
+Năm sinh theo lịch trong game
+stats
+{ health, happiness, intelligence, looks }
+Mỗi chỉ số 0–100 (xem 5.2)
+money
+số nguyên
+Đơn vị đồng; có thể âm (nợ)
+education
+{ level, inProgress, gpa }
+Cấp học hiện tại và điểm
+job
+{ id, rank, yearsAt, salary } hoặc rỗng
+Nghề hiện tại
+assets
+mảng { id, boughtAt, value }
+Tài sản đang sở hữu
+relations
+mảng Relationship
+Cha mẹ, bạn, người yêu, vợ chồng, con
+flags
+tập chuỗi
+Ví dụ dropout, married, criminal_record
+counters
+bản đồ chuỗi → số
+Ví dụ years_in_job, crimes
+history
+mảng { age, eventId, optionId }
+Chống lặp, dùng cho điều kiện
+achievements
+tập ID
+Đã mở khoá
+alive, deathAge, deathCause
+
+Chỉ đặt khi kết thúc
+Relationship gồm: id, role (cha, mẹ, anh chị em, bạn, người yêu, vợ/chồng, con), name, age, closeness (0–100), alive, traits.
+4.4. Schema sự kiện
+Mỗi sự kiện là một đối tượng JSON, được Zod kiểm tra lúc build:
+{
+  "id": "school_exam_cheat_01",
+  "group": "school",
+  "minAge": 12,
+  "maxAge": 17,
+  "weight": 3,
+  "once": false,
+  "cooldownYears": 2,
+  "conditions": [
+    { "stat": "intelligence", "op": "<", "value": 50 },
+    { "flag": "in_school", "is": true }
+  ],
+  "text": "Bài kiểm tra ngày mai rất khó. Bạn bè rủ bạn chép bài.",
+  "choices": [
+    {
+      "id": "cheat",
+      "label": "Chép bài",
+      "outcomes": [
+        {
+          "chance": 0.6,
+          "text": "Bạn qua mặt được giám thị và đạt điểm cao.",
+          "effects": [{ "stat": "intelligence", "delta": 1 }],
+          "setFlags": ["cheated_once"]
+        },
+        {
+          "chance": 0.4,
+          "text": "Giám thị phát hiện. Bạn bị ghi tên.",
+          "effects": [{ "stat": "happiness", "delta": -8 }],
+          "nextEvent": "school_called_parents_01"
+        }
+      ]
+    },
+    {
+      "id": "study",
+      "label": "Thức khuya ôn bài",
+      "outcomes": [
+        {
+          "chance": 1,
+          "text": "Bạn mệt nhưng làm bài tốt.",
+          "effects": [
+            { "stat": "intelligence", "delta": 2 },
+            { "stat": "health", "delta": -2 }
+          ]
+        }
+      ]
+    }
+  ]
+}
+Ý nghĩa các trường:
+• minAge, maxAge: khoảng tuổi được phép xuất hiện.
+• weight: trọng số khi bốc ngẫu nhiên giữa các sự kiện hợp lệ.
+• once: chỉ xuất hiện một lần trong đời; cooldownYears: số năm chờ trước khi lặp lại.
+• conditions: danh sách điều kiện, tất cả phải đúng. Hỗ trợ so sánh chỉ số, tiền, cờ, bộ đếm, nghề, học vấn, quan hệ, tài sản, sự kiện đã xảy ra.
+• choices[].outcomes[]: các kết quả có thể xảy ra của một lựa chọn; tổng chance phải bằng 1 (build báo lỗi nếu không).
+• effects: thay đổi chỉ số, tiền, bộ đếm, quan hệ, tài sản.
+• setFlags / clearFlags: đặt hoặc xoá cờ.
+• nextEvent: nối sang sự kiện kế tiếp, tạo chuỗi và nhánh.
+• Sự kiện không cần lựa chọn dùng một lựa chọn duy nhất "Tiếp tục".
+4.5. Các loại điều kiện
+Loại
+Ví dụ
+Chỉ số
+intelligence < 50
+Tiền
+money >= 10000000
+Cờ
+married đang bật
+Bộ đếm
+crimes >= 2
+Nghề
+đang làm nghề thuộc ngành health
+Học vấn
+cấp học tối thiểu là đại học
+Quan hệ
+còn mẹ, độ thân thiết > 60
+Tài sản
+sở hữu loại house
+Lịch sử
+đã gặp sự kiện X, hoặc chưa gặp
+Hợp
+all, any, not lồng nhau
+4.6. Quy tắc xử lý khi dữ liệu lỗi
+• Điều kiện tham chiếu ID không tồn tại: báo lỗi lúc build, không để tới lúc chơi.
+• Không có sự kiện hợp lệ trong một năm: dùng sự kiện dự phòng "một năm bình lặng" theo nhóm tuổi, không bao giờ kẹt.
+• File lưu có phiên bản cũ: chạy hàm nâng cấp theo từng bước; nếu thất bại, giữ nguyên file cũ và báo lỗi thay vì ghi đè.
+5. Vòng chơi, công thức chỉ số, tử vong, kinh tế
+Mỗi lần bấm "Tăng tuổi" chạy đúng một quy trình sáu bước. Mọi con số dưới đây là giá trị khởi đầu để cân bằng, không phải số của game gốc (chưa có nguồn); chúng được chỉnh bằng mô phỏng hàng loạt ở phần 9.
+5.1. Vòng một năm
+1. Tăng tuổi và áp dụng thay đổi tự động: lương vào, chi phí duy trì ra, lão hoá nhẹ, tuổi của người thân.
+2. Chọn sự kiện: lọc các sự kiện đủ điều kiện, ưu tiên sự kiện bắt buộc và nhánh đang dang dở, rồi bốc ngẫu nhiên theo trọng số cho số sự kiện của năm đó (thường 1–3).
+3. Hiển thị sự kiện, chờ người chơi chọn; áp dụng kết quả, đặt cờ, nối nhánh.
+4. Kiểm tra tử vong theo tuổi, sức khỏe và sự kiện nguy hiểm.
+5. Kiểm tra thành tích.
+6. Ghi nhật ký và tự động lưu.
+5.2. Bốn chỉ số
+Chỉ số
+Khoảng
+Khởi tạo
+Tác dụng chính
+Sức khỏe
+0–100
+50–100 ngẫu nhiên
+Tăng nguy cơ chết khi thấp; mở khoá nghề và hoạt động thể lực
+Hạnh phúc
+0–100
+10–100 ngẫu nhiên
+Ảnh hưởng quan hệ và sự kiện tâm lý; rất thấp gây sự kiện tiêu cực
+Trí tuệ
+0–100
+10–100 ngẫu nhiên
+Điểm học, cơ hội học tiếp, nghề cần chất xám
+Ngoại hình
+0–100
+10–100 ngẫu nhiên
+Quan hệ, tình cảm, một số nghề
+Quy tắc chung: sau mọi thay đổi, giá trị bị kẹp trong khoảng 0–100. Mỗi sự kiện hoặc hoạt động nên thay đổi một chỉ số trong khoảng ±1 đến ±15; thay đổi lớn hơn chỉ dành cho sự kiện hiếm.
+5.3. Lão hoá tự nhiên
+Từ 30 tuổi, mỗi năm sức khỏe giảm một lượng nhỏ, tăng dần theo tuổi:
+Độ tuổi
+Sức khỏe mỗi năm (trung bình)
+Ngoại hình mỗi năm
+0–29
+0
+0
+30–49
+−0,3
+−0,2
+50–69
+−0,8
+−0,4
+70+
+−1,5
+−0,6
+Phần thập phân được xử lý bằng bốc ngẫu nhiên (ví dụ −0,3 nghĩa là 30% cơ hội mất 1 điểm), để số nguyên vẫn giữ được phân bố đúng.
+5.4. Tử vong
+Xác suất chết trong năm là xác suất nền theo tuổi nhân với hệ số sức khỏe:
+P_{chet} = \min\left(1,\; P_{nen}(tuoi) \times (1 + k \cdot \frac{50 - suc\_khoe}{50})\right)
+Với k = 1 khởi đầu, sức khỏe 100 giảm gần một nửa xác suất nền, sức khỏe 0 nhân đôi.
+Độ tuổi
+Xác suất nền mỗi năm (gợi ý ban đầu)
+0
+0,5%
+1–14
+0,05%
+15–39
+0,1%
+40–59
+0,5%
+60–69
+1,5%
+70–79
+4%
+80–89
+12%
+90–99
+28%
+100+
+50%
+Các nguyên nhân chết được gán theo bối cảnh: bệnh tật (tuổi cao hoặc sức khỏe thấp), tai nạn, hậu quả của sự kiện (ví dụ lối sống nguy hiểm). Sự kiện có thể gây chết trực tiếp qua một kết quả có death: true, kèm nguyên nhân.
+Tuổi thọ trung bình mục tiêu của mô phỏng: khoảng 70–80, có đuôi dài tới trên 100 nhưng hiếm.
+5.5. Kinh tế
+• Đơn vị: đồng Việt Nam, hiển thị rút gọn (triệu, tỉ).
+• Thu nhập: lương năm của nghề, cộng thưởng thăng chức; trợ cấp hưu khi nghỉ hưu.
+• Chi tiêu tự động: chi phí sinh hoạt hằng năm tăng theo tuổi và theo tài sản đang sở hữu; chi phí duy trì từng tài sản.
+• Nợ: tiền được phép âm tới một hạn mức nhỏ; vượt hạn mức kích hoạt sự kiện nợ nần và phạt hạnh phúc.
+• Giá tài sản: giá mua cố định theo danh mục; giá bán dao động ±10–25% quanh giá trị hiện tại, và giá trị có thể tăng hoặc giảm theo năm (xem 6.3).
+• Trẻ em: tiền tiêu vặt và quà là nguồn tiền duy nhất đến khi đủ tuổi làm việc.
+5.6. Số ngẫu nhiên có seed
+Mọi bốc ngẫu nhiên đi qua một bộ sinh số có seed (ví dụ mulberry32). Seed và số lần đã bốc được lưu trong trạng thái game. Nhờ đó một đời có thể phát lại y hệt, và lỗi tìm được bằng mô phỏng có thể tái hiện bằng đúng seed đó.
+6. Các hệ thống chức năng
+Mỗi hệ thống có file dữ liệu riêng, schema riêng và test riêng. Con số mục tiêu lấy quy mô quảng bá của game gốc làm tham chiếu (12 ngành, 48 công việc, trên 100 hoạt động), nhưng bản đầu có thể nhỏ hơn rồi mở rộng.
+6.1. Học tập
+Cấp
+Tuổi vào (gợi ý)
+Điều kiện
+Kết quả
+Mầm non
+3
+Tự động
+Nền tảng trí tuệ nhỏ
+Tiểu học
+6
+Tự động
+Điểm trung bình, bạn học
+Trung học cơ sở
+11
+Tự động
+Điểm, sự kiện tuổi dậy thì
+Trung học phổ thông
+15
+Tự động hoặc bỏ học
+Điểm quyết định cơ hội đại học
+Cao đẳng / dạy nghề
+18
+Chọn
+Mở nghề kỹ thuật
+Đại học
+18
+Điểm đủ, đủ tiền
+Mở nghề chuyên môn, có chọn ngành
+Sau đại học
+22+
+Đã tốt nghiệp đại học
+Mở nghề cấp cao
+• Mỗi năm học có điểm (gpa) tính từ trí tuệ, nỗ lực (lựa chọn học hay chơi) và sự kiện.
+• Có thể bỏ học (đặt cờ dropout), học lại, học bổng, vay học phí.
+• Học vấn là điều kiện của nghề và của nhiều sự kiện.
+6.2. Nghề nghiệp
+Mục tiêu 12 ngành, mỗi ngành vài việc, tổng khoảng 48 nghề. Mỗi nghề có cấp bậc để thăng tiến.
+Trường
+Ý nghĩa
+industry
+Ngành (y tế, giáo dục, công nghệ, kinh doanh, nghệ thuật, thể thao, pháp luật, nông nghiệp, xây dựng, dịch vụ, nhà nước, quân đội)
+ranks[]
+Danh sách cấp bậc: tên, lương năm, số năm tối thiểu
+requires
+Học vấn, tuổi, chỉ số, cờ cần có
+promoteChance
+Xác suất thăng chức mỗi năm, phụ thuộc chỉ số
+fireChance
+Rủi ro mất việc, tăng khi hạnh phúc hoặc kỷ luật thấp
+events
+Nhóm sự kiện riêng của nghề
+retireAge
+Tuổi nghỉ hưu và mức trợ cấp
+Quân đội là một ngành đặc biệt: nhập ngũ theo tuổi, có sự kiện chiến đấu và huy chương (liên kết với thành tích), có thể ra quân hoặc theo binh nghiệp. Nghề phi pháp (sống ẩu, phạm tội) làm riêng ở mục 6.5.
+6.3. Tài sản
+Nhóm
+Ví dụ
+Tác dụng
+Nhà ở
+Phòng trọ, căn hộ, nhà phố, biệt thự
+Hạnh phúc; giá trị thường tăng theo thời gian
+Phương tiện
+Xe máy, ô tô
+Tiện lợi, chi phí duy trì, giá trị giảm dần
+Đầu tư
+Vàng, cổ phiếu, đất
+Biến động giá mỗi năm, rủi ro
+Xa xỉ
+Đồng hồ, trang sức, du thuyền
+Ngoại hình, hạnh phúc, thể hiện địa vị
+Thú cưng
+Chó, mèo
+Hạnh phúc, chi phí nhỏ, có tuổi thọ
+Mỗi tài sản có: giá mua, chi phí duy trì năm, tác dụng lên chỉ số mỗi năm, quy tắc đổi giá trị (tăng, giảm hoặc dao động) và điều kiện mua (tiền, tuổi). Bán tài sản trả về giá trị hiện tại.
+6.4. Hoạt động
+Hoạt động là hành động người chơi chủ động làm trong năm, có chi phí và giới hạn số lần mỗi năm. Mục tiêu trên 100 hoạt động, chia nhóm:
+• Thể chất: tập gym, chạy bộ, đi khám, ăn kiêng.
+• Trí tuệ: đọc sách, học thêm, khoá học trực tuyến.
+• Xã hội: gặp bạn, tiệc tùng, tình nguyện, hẹn hò.
+• Giải trí: du lịch, chơi game, xem phim, câu cá.
+• Tài chính: làm thêm, kinh doanh nhỏ, đầu tư.
+• Rủi ro: cờ bạc, đua xe, những việc có thể phạm pháp.
+Mỗi hoạt động khai báo: chi phí, điều kiện (tuổi, tiền, chỉ số), giới hạn mỗi năm, và danh sách kết quả có xác suất giống cấu trúc outcomes của sự kiện, để dùng chung engine.
+6.5. Sống ẩu và phạm tội
+Nhóm "sống ẩu" (mục tiêu 5 hình thức, ví dụ trộm cắp, cờ bạc, đua xe, buôn bán chui, bạo lực) dùng chung cơ chế hoạt động nhưng thêm:
+• Bộ đếm crimes và cờ criminal_record.
+• Xác suất bị bắt phụ thuộc loại hành vi và số lần tái phạm.
+• Hậu quả: phạt tiền, ngồi tù (nhiều năm bị bỏ qua nghề, hạnh phúc giảm), mất việc, ảnh hưởng quan hệ.
+Nội dung này là hư cấu trong game; hậu quả luôn được thể hiện để người chơi thấy cái giá.
+6.6. Quan hệ và gia đình
+• Gia đình lúc sinh: cha mẹ, có thể có anh chị em; độ giàu và tính cách ảnh hưởng chỉ số khởi đầu.
+• Bạn bè: làm quen qua trường học, nghề, hoạt động.
+• Tình cảm: hẹn hò, chia tay, kết hôn, ly hôn.
+• Con cái: sinh con, nuôi dạy, con lớn lên và có sự kiện riêng.
+• Tương tác: gọi điện, tặng quà, đi chơi, cãi vã; thay đổi closeness.
+• Mất người thân: cha mẹ và người thân qua đời theo tuổi, kích hoạt sự kiện đau buồn và thừa kế.
+Mỗi người thân là một đối tượng Relationship với tên sinh ngẫu nhiên từ names.json, tính cách (traits) ảnh hưởng đến sự kiện liên quan.
+6.7. Thành tích và huy chương
+• Thành tích mở khoá khi điều kiện đúng trên trạng thái hoặc lịch sử (ví dụ sống qua 100 tuổi, giàu đến một mức, kết hôn năm lần).
+• Huy chương là phần thưởng trong sự kiện hoặc nghề (quân đội, thể thao).
+• Danh sách thành tích lưu theo cấp tài khoản cục bộ, không mất khi chơi đời mới.
+• Mục tiêu ban đầu 40–60 thành tích.
+6.8. Truyện
+Truyện là chuỗi sự kiện có nhánh, đóng khung theo chủ đề (cổ tích, phiêu lưu, kỳ ảo). Trong bản web:
+• Mỗi truyện là một chuỗi sự kiện nối bằng nextEvent, có nhiều kết thúc.
+• Truyện mở sẵn, không cần mua.
+• Có trang danh sách truyện, đánh dấu truyện đã chơi và kết thúc đã đạt.
+• Làm sau cùng, khi engine sự kiện đã ổn định.
+Vì không có nội dung truyện gốc, mỗi truyện bạn tự viết hoặc nhờ tôi soạn theo schema rồi bạn duyệt.
+6.9. Kết thúc cuộc đời, di chúc, tổng kết
+• Màn tổng kết: tuổi chết, nguyên nhân, nghề nghiệp, tài sản, người thân, thành tích mở khoá.
+• Di chúc: chia tài sản cho người thân còn sống; ảnh hưởng đến cuộc đời kế tiếp (ví dụ khởi đầu giàu hơn).
+• Kết thúc đặc biệt: một số điều kiện hiếm (sống thọ phi thường, chết ở vị trí đặc biệt) cho màn tổng kết riêng.
+• Nút "Bắt đầu cuộc đời mới" quay về màn tạo nhân vật.
+6.10. Cài đặt và dữ liệu
+• Ngôn ngữ, âm thanh, cỡ chữ, chế độ sáng tối.
+• Quản lý ô lưu: đặt tên, xoá, xuất/nhập file JSON.
+• Xoá toàn bộ dữ liệu có xác nhận.
+7. Thiết kế giao diện và màn hình
+Giao diện ưu tiên điện thoại, một tay bấm được, chữ đọc rõ, thao tác chính là một nút lớn "Tăng tuổi". Hình ảnh và biểu tượng là tự tạo hoặc từ nguồn có giấy phép tự do; không dùng tài nguyên của game gốc.
+7.1. Danh sách màn hình
+Màn hình
+Nội dung
+Hành động chính
+Bắt đầu
+Logo NewLife, "Cuộc đời mới", "Tiếp tục", cài đặt
+Chọn ô lưu hoặc bắt đầu
+Tạo nhân vật
+Tên, giới tính, quê quán, ngày sinh; nút "Ngẫu nhiên"
+Xác nhận để bắt đầu
+Chính
+Nhật ký cuộc đời, thanh bốn chỉ số, tiền, tuổi, hình đại diện
+"Tăng tuổi"
+Hộp thoại sự kiện
+Văn bản sự kiện, các lựa chọn
+Chọn một lựa chọn
+Học tập
+Cấp học, điểm, ghi danh/bỏ học
+Chọn hành động
+Nghề nghiệp
+Nghề hiện tại, danh sách nghề đủ điều kiện
+Nộp đơn, nghỉ việc, nghỉ hưu
+Hoạt động
+Danh sách theo nhóm, chi phí, tác động
+Thực hiện hoạt động
+Tài sản
+Tài sản đang có, cửa hàng
+Mua, bán
+Quan hệ
+Danh sách người thân, bạn, người yêu
+Tương tác
+Thành tích
+Lưới thành tích, tiến độ
+Xem chi tiết
+Truyện
+Danh sách truyện, trạng thái
+Chơi truyện
+Kết thúc đời
+Tổng kết, thành tích mới, di chúc
+Cuộc đời mới
+Cài đặt
+Ngôn ngữ, âm thanh, cỡ chữ, ô lưu, xuất/nhập
+Thay đổi
+7.2. Bố cục màn Chính (điện thoại)
+• Đầu màn hình: hình đại diện theo tuổi, tên, tuổi, tiền.
+• Giữa: bốn thanh chỉ số, bên dưới là nhật ký cuộn (năm mới nhất ở trên hoặc dưới, tuỳ cài đặt).
+• Cuối: nút "Tăng tuổi" cỡ lớn, hàng biểu tượng chuyển nhanh sang Học tập, Nghề, Hoạt động, Tài sản, Quan hệ.
+• Hộp thoại sự kiện hiện dạng tấm trượt từ dưới lên, có lựa chọn là các nút rộng.
+7.3. Hình đại diện và minh hoạ
+Game gốc có hình đại diện theo tuổi và biểu cảm. Bản web làm theo hướng đơn giản, tự tạo:
+• Hình đại diện vẽ bằng SVG, ghép từ các lớp (đầu, tóc, mặt, quần áo) và đổi theo nhóm tuổi (em bé, thiếu nhi, thanh niên, trung niên, người già).
+• Biểu cảm đổi theo hạnh phúc (vui, bình thường, buồn).
+• Biểu tượng chức năng lấy từ bộ icon mã nguồn mở có giấy phép cho phép dùng; ghi nguồn trong file LICENSES.
+• Phông chữ hỗ trợ tiếng Việt đầy đủ dấu, giấy phép tự do (ví dụ họ Be Vietnam Pro hoặc Nunito); kiểm tra giấy phép khi chọn.
+7.4. Phong cách
+• Giữ tên và bố cục "nhật ký cuộc đời" quen thuộc nhưng màu sắc, hình khối làm riêng.
+• Hai chế độ sáng và tối; màu chỉ số cố định (sức khỏe đỏ, hạnh phúc vàng, trí tuệ xanh dương, ngoại hình hồng) và không dựa vào màu đơn độc: mỗi thanh có nhãn chữ.
+• Hoạt hình ngắn (dưới 300 ms) khi chỉ số đổi; có tuỳ chọn tắt chuyển động.
+7.5. Khả năng tiếp cận và hiệu năng
+• Vùng bấm tối thiểu 44 px; tương phản chữ đạt mức dễ đọc.
+• Điều khiển được bằng bàn phím trên máy tính (Enter để tăng tuổi, số 1–4 để chọn lựa chọn).
+• Bundle ban đầu dưới 300 KB sau nén; nội dung nạp theo nhóm tuổi khi cần.
+• Nhật ký dài dùng danh sách ảo hoá để cuộn mượt sau hàng trăm dòng.
+8. Kế hoạch nội dung và quy trình viết sự kiện
+Nội dung quyết định game có đáng chơi hay không. Mục tiêu bản đầu là khoảng 150 sự kiện, mở rộng dần lên vài trăm; độ đa dạng quan trọng hơn số lượng thô, vì người chơi gặp lại cùng sự kiện sẽ nhanh chán.
+8.1. Mục tiêu số lượng theo giai đoạn nội dung
+Nhóm tuổi
+Bản đầu (sự kiện)
+Mục tiêu mở rộng
+Chủ đề chính
+0–5
+15
+30
+Gia đình, sức khỏe nhỏ, tính cách
+6–17
+40
+90
+Trường học, bạn bè, thi cử, dậy thì, gia đình
+18–30
+40
+100
+Đại học, đi làm, tình yêu, tiền bạc, rủi ro
+31–59
+35
+100
+Sự nghiệp, hôn nhân, con cái, sức khỏe, khủng hoảng
+60+
+20
+60
+Nghỉ hưu, bệnh tật, mất mát, di sản
+Tổng
+150
+380
+
+Ngoài ra: nghề (mỗi nghề 3–5 sự kiện riêng), tài sản, quan hệ, truyện (5 truyện mở đầu, mỗi truyện 10–25 nút).
+8.2. Quy tắc viết một sự kiện tốt
+1. Một tình huống rõ ràng, 1–3 câu, văn phong nhật ký ngôi thứ hai ("Bạn…").
+2. Lựa chọn có đánh đổi thật: không có đáp án luôn đúng; mỗi lựa chọn được cái này, mất cái kia.
+3. Hậu quả hiển thị: kết quả có một câu văn bản, không chỉ con số.
+4. Biến thể theo trạng thái: cùng sự kiện nhưng văn bản và lựa chọn khác theo cờ, nghề, tiền.
+5. Cân bằng cảm xúc: xen lẫn sự kiện vui, buồn, hài hước, bất ngờ.
+6. Tránh lặp: dùng once và cooldownYears cho sự kiện đặc trưng.
+7. Chuỗi có đầu có cuối: mọi nextEvent phải dẫn tới một kết thúc.
+8.3. Quy trình sản xuất
+1. Lập danh sách ý tưởng theo nhóm tuổi (bảng chủ đề, 2–3 dòng mỗi ý).
+2. Viết thành khối JSON theo schema ở mục 4.4; có thể nhờ tôi soạn hàng loạt từng nhóm 10–20 sự kiện.
+3. Duyệt: đọc, sửa giọng văn, chỉnh số; đây là bước của bạn vì nội dung là của bạn.
+4. Chạy validate-content: bắt ID trùng, nextEvent hỏng, tổng chance khác 1, sự kiện không bao giờ đủ điều kiện, nhánh cụt.
+5. Chạy stats: xem phủ theo tuổi, tìm khoảng tuổi thiếu.
+6. Chơi thử và ghi chú sự kiện nhàm hoặc lệch.
+8.4. Công cụ hỗ trợ nội dung
+Công cụ
+Việc làm
+validate-content
+Kiểm tra schema, tham chiếu chéo, nhánh cụt, tổng xác suất
+stats
+Số sự kiện mỗi nhóm tuổi và mỗi nhóm chủ đề; khoảng tuổi trống
+coverage
+Với 10.000 đời mô phỏng, sự kiện nào chưa từng được bốc
+graph
+Xuất sơ đồ chuỗi sự kiện để rà nhánh
+8.5. Tài sản nội dung khác
+• names.json: họ, tên đệm, tên theo giới, quê quán theo tỉnh thành; đủ lớn để tên người thân ít trùng.
+• jobs.json, education.json, assets.json, activities.json: danh mục theo mục 6.
+• achievements.json: 40–60 thành tích, mỗi cái có tên, mô tả, điều kiện.
+8.6. Bản quyền nội dung
+Mọi văn bản và tình huống đều tự sáng tác. Không dán lại câu chữ hay chuỗi truyện từ game gốc hay từ nguồn khác; dùng ý tưởng chung của đời sống (đi học, đi làm, yêu đương) thì không vấn đề.
+9. Kiểm thử, cân bằng, công cụ debug
+Vì không có số liệu gốc để so, cân bằng game dựa vào mô phỏng hàng loạt và chơi thử. Engine thuần và RNG có seed cho phép chạy hàng nghìn đời trong vài giây.
+9.1. Các lớp kiểm thử
+Lớp
+Nội dung kiểm
+Công cụ
+Đơn vị
+Công thức chỉ số, đánh giá điều kiện, áp dụng hậu quả, tử vong
+Vitest
+Dữ liệu
+Schema, ID trùng, tham chiếu hỏng, tổng xác suất, nhánh cụt
+Zod + validate-content
+Mô phỏng
+10.000 đời tự chơi: crash, kẹt, tuổi thọ, tiền, phủ sự kiện
+simulate.ts
+Lưu/tải
+Lưu rồi tải cho trạng thái giống hệt; nâng cấp file cũ
+Vitest
+Giao diện
+Vòng đời cơ bản, các màn hình
+Playwright (tuỳ chọn)
+Thủ công
+Chơi trên điện thoại thật
+Bạn
+9.2. Mô phỏng hàng loạt
+Bot chơi chọn lựa chọn ngẫu nhiên hoặc theo vài chiến lược (cẩn thận, liều, tập trung tiền, tập trung học). Mỗi lần chạy 10.000 đời với seed khác nhau và báo cáo:
+• Số đời crash hoặc kẹt: phải bằng 0.
+• Phân bố tuổi thọ: trung bình 70–80, có đuôi dài; cảnh báo nếu hơn 5% chết trước 20 tuổi do công thức, không do sự kiện.
+• Phân bố tiền cuối đời: không cho phép một chiến lược đơn lẻ luôn thắng áp đảo.
+• Tỉ lệ nghề: mỗi nghề được ít nhất một số đời chạm tới.
+• Phủ sự kiện: sự kiện nào hiếm quá hoặc không bao giờ xuất hiện.
+• Độ lặp: số sự kiện lặp trong một đời; cảnh báo khi vượt ngưỡng.
+9.3. Chỉ tiêu chấp nhận
+Chỉ tiêu
+Ngưỡng
+Đời crash hoặc kẹt trong 10.000 đời
+0
+Tuổi thọ trung bình
+70–80
+Tỉ lệ chết trước 20 tuổi do công thức nền
+Dưới 2%
+Sự kiện không bao giờ xuất hiện trong 10.000 đời
+Dưới 5% (trừ sự kiện đánh dấu hiếm)
+Một sự kiện không once lặp quá 2 lần trong một đời
+Có
+Thời gian chạy 1 năm game trên điện thoại tầm trung
+Dưới 50 ms
+9.4. Chế độ debug
+Bật bằng cờ ?debug=1 hoặc tổ hợp phím trong cài đặt; không hiện với người chơi bình thường:
+• Nhảy tới tuổi bất kỳ (chạy ngầm các năm trước).
+• Ép một sự kiện theo ID.
+• Sửa chỉ số, tiền, cờ, bộ đếm.
+• Xem seed, danh sách sự kiện đủ điều kiện năm đó và trọng số.
+• Xuất toàn bộ trạng thái ra JSON để dán vào báo lỗi.
+9.5. Quy trình cân bằng
+1. Chạy mô phỏng, lưu báo cáo.
+2. Chỉnh một nhóm tham số (ví dụ xác suất nền tử vong).
+3. Chạy lại và so báo cáo; chỉ giữ thay đổi cải thiện chỉ tiêu.
+4. Chơi thử vài đời để cảm nhận; số liệu tốt chưa chắc vui.
+5. Ghi các giá trị đã chốt vào file balance.json thay vì rải trong mã.
+10. Lộ trình theo giai đoạn, đầu việc, tiêu chí hoàn thành
+Khung game chơi được đầy đủ mất khoảng 6–7 tuần cho một người làm việc đều (giai đoạn 0, 1, 2, 3, 5, 6 cộng lại), chưa kể phần viết nội dung chạy song song và kéo dài. Đây là ước lượng ban đầu, nên chỉnh sau giai đoạn 1 khi biết tốc độ thực tế.
+Một cổng chỉ mở khi đạt tiêu chí của nó; chưa đạt thì không sang giai đoạn sau. Giai đoạn 2 là mốc đầu tiên có thể chơi, nên được đánh dấu riêng.
+10.1. Giai đoạn 0 · Thiết kế (2–3 ngày)
+[ ] Chốt danh sách tính năng theo mục 6 và đánh dấu bản đầu / bản sau.
+[ ] Vẽ luồng màn hình theo mục 7.1.
+[ ] Viết schema Zod cho sự kiện, nghề, học vấn, tài sản, hoạt động, quan hệ, thành tích.
+[ ] Khởi tạo dự án Vite + TypeScript, ESLint, Prettier, Vitest.
+[ ] Viết 5 sự kiện mẫu bằng tay để thử schema.
+Cổng: schema biểu diễn được mọi loại nội dung ở mục 6 mà không cần ngoại lệ.
+10.2. Giai đoạn 1 · Engine lõi (1 tuần)
+[ ] rng.ts: bộ sinh số có seed, lưu và khôi phục trạng thái.
+[ ] state.ts: kiểu Character, GameState.
+[ ] newLife: tạo nhân vật, gia đình, chỉ số khởi đầu.
+[ ] conditions.ts và effects.ts: đánh giá điều kiện, áp dụng hậu quả.
+[ ] events.ts: chọn sự kiện theo điều kiện, trọng số, once, cooldownYears, nextEvent.
+[ ] ageUp: quy trình sáu bước ở mục 5.1, kèm sự kiện dự phòng.
+[ ] death.ts: công thức và nguyên nhân tử vong.
+[ ] save.ts: tuần tự hoá, phiên bản, nâng cấp.
+[ ] simulate.ts: bot chơi 10.000 đời, báo cáo theo mục 9.2.
+Cổng: 10.000 đời mô phỏng không crash, không kẹt; test đơn vị của engine qua hết.
+10.3. Giai đoạn 2 · UI cơ bản (1 tuần)
+[ ] Màn Bắt đầu và Tạo nhân vật.
+[ ] Màn Chính: thanh chỉ số, tiền, nhật ký, nút "Tăng tuổi".
+[ ] Hộp thoại sự kiện dạng tấm trượt.
+[ ] Màn Kết thúc đời và nút cuộc đời mới.
+[ ] Lưu tự động vào IndexedDB, một ô lưu.
+[ ] Hình đại diện SVG đơn giản theo nhóm tuổi.
+Cổng: chơi trọn một đời từ 0 tuổi đến lúc chết trên điện thoại, không lỗi.
+10.4. Giai đoạn 3 · Hệ thống chức năng (2–3 tuần)
+Làm lần lượt, mỗi hệ thống xong thì có dữ liệu mẫu, màn hình và test riêng:
+[ ] Học tập (mục 6.1) và màn Học tập.
+[ ] Nghề nghiệp (mục 6.2), thăng chức, nghỉ hưu, quân đội.
+[ ] Tài sản (mục 6.3) và màn Tài sản.
+[ ] Hoạt động (mục 6.4) và nhóm sống ẩu (mục 6.5).
+[ ] Quan hệ và gia đình (mục 6.6): hôn nhân, con cái, mất người thân.
+[ ] Thành tích và huy chương (mục 6.7).
+[ ] Di chúc và tổng kết nâng cao (mục 6.9).
+[ ] Nhiều ô lưu, xuất/nhập file (mục 6.10).
+Cổng: mỗi hệ thống có test riêng và qua hết; mô phỏng lại 10.000 đời vẫn không crash.
+10.5. Giai đoạn 4 · Nội dung (liên tục, song song từ giai đoạn 2)
+[ ] Viết 150 sự kiện đầu theo bảng 8.1.
+[ ] Viết names.json, danh mục nghề, tài sản, hoạt động, thành tích.
+[ ] Chạy validate-content và stats sau mỗi đợt viết.
+[ ] Viết 5 truyện mở đầu sau khi engine sự kiện ổn định.
+[ ] Mở rộng dần tới mục tiêu cột "Mục tiêu mở rộng" ở bảng 8.1.
+Cổng (bản đầu): 150 sự kiện qua validate-content, mỗi nhóm tuổi có đủ số lượng tối thiểu.
+10.6. Giai đoạn 5 · Hoàn thiện (1 tuần)
+[ ] PWA: manifest, service worker, chơi offline.
+[ ] Cân bằng theo mục 9.5 cho đến khi đạt bảng 9.3.
+[ ] Âm thanh nhẹ và tuỳ chọn tắt.
+[ ] i18next: tách toàn bộ chuỗi giao diện; thêm tiếng Anh sau nếu muốn.
+[ ] Tối ưu cho điện thoại và kiểm tra khả năng tiếp cận (mục 7.5).
+[ ] Chế độ debug (mục 9.4).
+Cổng: đạt toàn bộ chỉ tiêu ở bảng 9.3.
+10.7. Giai đoạn 6 · Triển khai
+[ ] pnpm build ra thư mục tĩnh.
+[ ] Đặt lên Vercel hoặc GitHub Pages ở chế độ riêng tư, hoặc chỉ chạy trong mạng nhà.
+[ ] Thêm vào màn hình chính điện thoại và thử chơi offline.
+[ ] Thử xuất file lưu rồi nhập lại trên thiết bị khác.
+Cổng: chơi được từ ô lưu trên điện thoại sau khi tắt mạng.
+10.8. Nếu thiếu thời gian, cắt theo thứ tự này
+Thứ tự cắt
+Hạng mục
+Ảnh hưởng
+1
+Truyện
+Game vẫn đầy đủ vòng đời
+2
+Tiếng Anh, âm thanh
+Chỉ là tiện ích
+3
+Hình đại diện nhiều lớp
+Dùng hình đơn giản
+4
+Nhóm sống ẩu và phạm tội
+Giảm độ đa dạng
+5
+Di chúc và kết thúc đặc biệt
+Giữ màn tổng kết cơ bản
+Không cắt: engine, lưu/tải, mô phỏng, học tập, nghề, tài sản, quan hệ, vì đây là xương sống của cách chơi.
+11. Rủi ro, giấy phép, câu hỏi mở
+Rủi ro lớn nhất không phải kỹ thuật mà là khối lượng nội dung phải viết. Phần kỹ thuật được thiết kế để giảm chi phí viết và kiểm nội dung.
+11.1. Bảng rủi ro
+Rủi ro
+Mức
+Cách xử lý
+Nội dung ít, nhanh chán
+Cao
+Ưu tiên độ đa dạng; biến thể theo cờ; nhờ soạn hàng loạt theo schema rồi duyệt
+Cân bằng chỉ số lệch
+Trung bình
+Mô phỏng 10.000 đời và chỉnh theo báo cáo (mục 9)
+Nhánh sự kiện hỏng hoặc cụt
+Trung bình
+validate-content chặn lúc build
+Mất dữ liệu lưu
+Trung bình
+Nhiều ô lưu, xuất file JSON, nâng cấp phiên bản có lưu bản cũ
+Dùng nhầm tài nguyên gốc
+Thấp nếu giữ kỷ luật
+Chỉ dùng hình, phông, văn bản tự tạo hoặc có giấy phép rõ ràng; ghi nguồn trong LICENSES
+Làm lan man, không có bản chơi được
+Trung bình
+Cổng ở Giai đoạn 2 buộc có vòng đời chơi được sớm
+Trình duyệt xoá dữ liệu
+Thấp
+Xin quyền lưu trữ bền (navigator.storage.persist), nhắc xuất file định kỳ
+Hiệu năng trên máy cũ
+Thấp
+Nạp nội dung theo nhóm tuổi, danh sách ảo hoá nhật ký
+11.2. Giấy phép và quyền sử dụng
+• Tên NewLife: theo yêu cầu của bạn, giữ nguyên. Với bản chơi cá nhân không chia sẻ, không phát sinh vấn đề thực tế. Nếu sau này công khai hoặc chia sẻ cho người khác, nên đổi tên và nhận diện để tránh nhầm với sản phẩm gốc của nhà phát hành Ylinkee Game.
+• Nội dung và hình ảnh:  tái sử dụng tài nguyên, văn bản hay truyện của game gốc; không tự tạo mọi thứ .
+• Thư viện: dùng thư viện mã nguồn mở (React, Vite, Zustand, Zod, i18next, idb, Tailwind) có giấy phép cho phép dùng cá nhân; kiểm tra giấy phép từng gói khi cài.
+• Phông và biểu tượng: chọn bộ có giấy phép tự do và ghi nguồn.
+• Đây là ghi chú kỹ thuật, không phải tư vấn pháp lý; nếu định phát hành, nên hỏi luật sư về nhãn hiệu.
+11.3. Các quyết định đã chốt
+[x] Số sự kiện bản đầu: giữ 150.
+[x] Hoạt động rủi ro (cờ bạc, phạm tội): giữ đầy đủ như mục 6.5, luôn kèm hậu quả trong game.
+[x] Hệ quan hệ: giữ đầy đủ (hôn nhân, ly hôn, con cái nhiều đời).
+[x] Đồng bộ điện thoại và máy tính: không cần; chỉ cần một bản web chơi được, dùng xuất/nhập file khi cần.
+[x] Tiếng Anh: không làm. Chỉ tiếng Việt; vẫn tách chuỗi giao diện ra file riêng cho gọn, nhưng bỏ en.json và việc dịch.
+[x] Hình đại diện: SVG tự vẽ đơn giản (mục 7.3).
+11.4. Bước tiếp theo đề xuất
+1. Bạn trả lời các câu hỏi mở ở 11.3 (có thể chỉ trả lời vài câu quan trọng).
+2. Tôi dựng khung dự án Vite + TypeScript, schema Zod, engine khung và 20 sự kiện mẫu (Giai đoạn 0–1) để bạn chơi thử sớm.
+3. Cùng rà bộ sự kiện mẫu rồi nhân rộng theo từng nhóm tuổi.
+12. Danh mục nội dung tham chiếu (tổng hợp từ nguồn công khai về BitLife)
+Ngày 12/10/2026, tôi tra các trang công khai về BitLife (bản tiếng Anh bạn nhận định là tương ứng với NewLife) để lập danh mục cấu trúc nội dung: nghề, cơ chế việc làm, thành tích. Đây là khung tham chiếu để thiết kế, viết lại bằng lời của tôi; không phải bản sao nội dung game, và không thay được việc bạn tự viết câu chữ sự kiện. Chưa lấy được danh mục hoạt động, tài sản, trường học và các sự kiện (trang wiki cho hai mục đầu trả lỗi 402), nên các mục đó còn trống ở 12.5.
+12.1. Cấu trúc nghề nghiệp
+Các nguồn mô tả hàng chục nhóm ngành; mỗi ngành là một chuỗi thăng tiến có thứ tự. Mẫu phổ biến: ba bậc "Junior / thường / Senior" cho nghề chuyên môn; nghề phổ thông thường chỉ một bậc. Yêu cầu là cấp học (không cần, phổ thông, cao đẳng, đại học, trường chuyên ngành) và/hoặc số năm kinh nghiệm ở bậc trước.
+Nhóm ngành
+Cấu trúc chuỗi (tóm tắt)
+Yêu cầu điển hình
+Doanh nghiệp
+Nhiều nghề chuyên môn (kiểm toán, tài chính, lập trình, kế toán, quản trị CSDL, kiến trúc sư...) mỗi nghề 3 bậc; cộng chuỗi quản lý lên tới chủ tịch
+Phổ thông đến đại học; quản lý cấp cao cần trường kinh doanh và nhiều năm
+Hàng không
+Tiếp viên (3 bậc) rồi phi công học việc, phó lái, cơ trưởng; bốc xếp hành lý
+Phổ thông đến đại học + bằng lái
+Y tế
+Bác sĩ, tâm thần học, dược sĩ, điều dưỡng, thú y, phẫu thuật thần kinh
+Trường y, dược, điều dưỡng, thú y
+Pháp lý
+Thư ký luật lên thợ cả, nhân viên luật, luật sư các bậc tới đối tác; ngành thẩm phán từ thẩm phán sơ cấp tới chánh án
+Cao đẳng (hỗ trợ) hoặc trường luật
+Giáo dục
+Giáo viên, giáo viên trưởng bộ môn, hiệu phó, hiệu trưởng, giám đốc sở; đại học: giáo sư, trưởng khoa
+Đại học, sau đại học, nhiều năm
+Công an
+8 cấp bậc từ học viên tới trưởng công an
+Phổ thông + thăng cấp tuần tự
+Cứu hoả
+8 cấp bậc từ tập sự tới chỉ huy trưởng
+Phổ thông + thăng cấp tuần tự
+Quân đội
+Binh sĩ và hạ sĩ quan khoảng 11 cấp; sĩ quan khoảng 11 cấp, lương tăng theo bậc
+Không cần bằng để nhập ngũ; sĩ quan cần đại học
+Nhà hàng
+Rửa bát, phục vụ, quản lý; chuỗi bếp từ phụ bếp tới bếp trưởng; chuỗi rượu vang; pha chế
+Không cần đến cao đẳng nấu ăn
+Người mẫu
+5 bậc từ mẫu chân, mẫu tay, mẫu catalog tới mẫu sàn diễn
+Ngoại hình; một lối dẫn tới nổi tiếng
+Âm nhạc, giải trí
+Ca sĩ nền tới ca sĩ chính, DJ, soạn nhạc, vũ công, diễn viên đóng thế, nghệ sĩ múa rối, trang điểm
+Từ không cần đến đại học
+Dịch vụ nhỏ
+Thợ điện, thợ ống nước, thợ mộc, thợ xây, thợ sơn, thợ may, làm vườn, bảo vệ, thám tử tư, thiết kế đồ hoạ, huấn luyện viên cá nhân...
+Phần lớn không cần bằng; có thể học việc
+Ngân hàng, thư viện
+Chuỗi nhân viên → quản lý
+Đại học hoặc sau đại học
+Vận tải
+Tài xế xe tải, tài xế ứng dụng gọi xe
+Bằng lái
+Bán lẻ, tạp hoá, thức ăn nhanh
+Thu ngân, bán hàng, thợ thịt, quản lý ca → quản lý cửa hàng
+Không cần đến phổ thông
+Ngành đặc thù khác
+Báo chí, ngư nghiệp (thuyền viên lên thuyền trưởng), bảo tàng, du lịch, xiếc, tiệm làm đẹp, bất động sản, mai táng
+Khác nhau
+Việc làm thêm mở từ 13 tuổi, khoảng 50 loại (phụ quán cà phê, gia sư trợ giảng, nhân viên bể bơi, trực quầy...), mỗi loại có mức giờ và số giờ tuần riêng, một số chỉ dành cho sinh viên. Việc tự do (khoảng 7 loại: trông trẻ, dắt chó, trông thú cưng, cắt cỏ, dạy kèm, chăm sóc người, thợ vặt) có độ tuổi tối thiểu khác nhau và cho phép đòi giá cao với rủi ro không ai thuê.
+12.2. Cơ chế việc làm
+• Thăng chức và tăng lương theo hiệu suất; một số nghề còn tính ngoại hình hoặc trí tuệ. Tăng quá nhiều lần yêu cầu có thể làm hiệu suất xấu đi.
+• Nghề đột phá: diễn xuất và soạn nhạc có thể bùng nổ thu nhập và người theo dõi; bác sĩ, giám đốc tăng đều.
+• Nghỉ hưu: có lương hưu tính theo mức lương trước đó; làm thêm một thời gian rồi nghỉ thì hưu cao hơn.
+• Bị sa thải vì: ngồi tù, hiệu suất kém, thử ma tuý dương tính, quá tuổi, bệnh, vi phạm lối sống đặc thù của nghề (ví dụ tu sĩ), mất xe khi nghề cần xe, hành vi xấu với đồng nghiệp bị khiếu nại nhiều lần, hoặc đổi quốc gia.
+• Xin lại việc: van xin thường thất bại; hiếm hoi mới được nhận lại. Kiện đòi lại cũng khiến nơi đó từ chối phỏng vấn về sau.
+• Tiền án loại một số nghề (nghề liên quan pháp luật, y tế, giáo dục, công an...), cho phép nghề lao động tay chân.
+• Sự kiện công sở: đồng nghiệp hoặc sếp tán tỉnh, bị quấy rối, đồng nghiệp gây phiền, hoạt động gắn kết đội nhóm; người chơi chọn từ chối, tố cáo, hoặc phản ứng, mỗi cách có rủi ro riêng.
+• Giữ chỗ trống: mục "Resume vàng" trong game gốc là vật phẩm trả phí; bản web bỏ.
+12.3. Thành tích ("ribbon") của bản gốc
+Các nguồn nêu khoảng 40 thành tích. Nguyên tắc quan trọng: mỗi đời chỉ nhận một thành tích, chọn theo kiểu sống nổi trội nhất; nếu đủ điều kiện nhiều cái thì chỉ có một. Nhiều thành tích có điều kiện loại trừ nhau (ví dụ muốn giàu vừa phải nhưng không tới mức nhận thành tích "quá giàu").
+Nhóm
+Thành tích (tên gốc)
+Gợi ý điều kiện (tóm tắt)
+Tiền bạc
+Rich, Loaded, Big Boss, High Roller, Monopoly, Gold Digger, Mooch, Generous
+Tài sản ròng theo ngưỡng; làm giám đốc; thắng cờ bạc lớn; mua bán nhà có lãi; cưới người giàu rồi thừa kế; xin tiền người thân liên tục; cho đi nhiều
+Gia đình
+Family Guy, Fertile, Cat Lady, Tarzan
+Gia đình hạnh phúc, nhiều con, nhiều mèo, nhiều thú lạ
+Học vấn, tuổi, may rủi
+Academic, Stupid, Geriatric, Unlucky
+Học cao và ít tiền; bỏ học và trí tuệ rất thấp; sống trên 100 tuổi; chết rất sớm do ngẫu nhiên
+Danh tiếng
+Famous, Influencer
+Nổi tiếng qua nghề hoặc mạng xã hội
+Nghề
+Hero, Veteran, Teammate
+Bác sĩ, y tá hoặc lính sống mẫu mực; hoàn tất binh nghiệp; làm cho một công ty đặc biệt
+Gương mẫu
+Model Bitizen, Successful
+Sống đúng mực, quan hệ tốt, không phạm pháp; sống tốt nhưng không quá giàu
+Tội phạm, bạo lực
+Deadly, Thief, Bandit, Houdini, Jailbird, Cunning, Scandalous, Rowdy
+Giết nhiều lần; trộm nhiều; cướp tàu; vượt ngục nhiều lần; chết trong tù; vượt ngục rồi trốn thoát; gây gổ, hay vào tù
+Tình dục, lối sống
+Lustful, Wicked, Addict, Barbie Girl
+Nhiều bạn tình; hành vi xấu về tình dục và bỏ rơi con thú; nghiện lâu dài; phẫu thuật thẩm mỹ nhiều lần
+Lười, bỏ cuộc
+Lazy, Mediocre, Wasteful, Movie Buff, Globetrotter
+Chỉ bấm tăng tuổi; không làm gì nổi bật; bỏ ngay từ đầu; xem nhiều phim; đi nhiều nước
+Lưu ý: các nguồn không thống nhất về ngưỡng (ví dụ "Loaded" được ghi là 10 triệu ở một bài và 20 triệu ở bài khác, "Rich" 2,5 triệu ở một bài và 5 triệu ở bài khác). Vì vậy kế hoạch không chép ngưỡng nào; ngưỡng sẽ do bạn tự đặt và cân bằng bằng mô phỏng.
+12.4. Điều rút ra cho kế hoạch
+1. Thành tích kiểu một-đời-một-cái: thay vì kiểm tra từng điều kiện độc lập (mục 6.7), nên tính điểm nổi trội cho mỗi nhóm lối sống suốt đời rồi chọn nhóm cao nhất lúc chết. Cần thêm trường điểm lối sống trong Character.
+2. Chuỗi nghề dùng dữ liệu: mỗi nghề là một chuỗi bậc có requires, promotesTo; mẫu ba bậc Junior/thường/Senior phủ phần lớn nghề chuyên môn. Đủ để đạt mục tiêu 48 nghề ở mục 6.2.
+3. Việc làm thêm và việc tự do từ 13 tuổi: thêm vào hệ nghề, có giờ làm và mức giờ.
+4. Danh sách lý do bị sa thải ở 12.2 dùng trực tiếp cho hệ nghề nghiệp.
+5. Việt hoá: thay nghề, tiền tệ, trường học, địa danh theo bối cảnh Việt Nam; các nghề bản gốc theo bối cảnh Mỹ (ví dụ cảnh sát tuần tra, trường dạy nghề kiểu Mỹ) cần đổi tên tương đương.
+12.5. Phần chưa thu thập được
+Hạng mục
+Tình trạng
+Cách bổ sung
+Danh mục hoạt động (nhà thuốc, phòng gym, tiệc, hẹn hò, du lịch...)
+Trang wiki trả lỗi 402
+Tra nguồn khác hoặc bạn tự lập theo nhóm ở mục 6.4
+Danh mục tài sản (nhà, xe, đầu tư, thú cưng)
+Trang wiki trả lỗi 402
+Tương tự
+Danh sách trường và cách vào
+Chưa tra
+Tra tiếp nếu cần
+Sự kiện ngẫu nhiên theo tuổi
+Không có danh mục công khai đầy đủ
+Bạn tự viết theo mục 8; tôi hỗ trợ soạn
+Truyện, lời thoại gốc
+Không tái hiện; có bản quyền
+Tự sáng tác
+Nội dung riêng của NewLife (bản của Ylinkee Game)
+Không tra được ngoài báo cáo kiểm tra APK
+Không có nguồn công khai
+Nguồn đã dùng: Fandom wiki, danh sách nghề, Pro Game Guides, danh sách ribbon, Prima Games, ribbon, Cổng thông tin Hwb Wales. Số liệu và ngưỡng trong các trang này có thể đã thay đổi theo bản cập nhật.

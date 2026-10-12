@@ -1,0 +1,2311 @@
+{
+  "repository": "5erax/newlife-web",
+  "createdAt": "2026-10-12",
+  "phases": [
+    {
+      "id": 0,
+      "name": "Phase 0 — Thiết kế và nền dự án",
+      "label": "phase:0-design",
+      "color": "5319E7",
+      "goal": "Chốt phạm vi, nguồn tài nguyên, contract engine/content, công cụ dữ liệu và môi trường kiểm tra; chưa coi nội dung tự viết là dữ liệu gốc."
+    },
+    {
+      "id": 1,
+      "name": "Phase 1 — Engine cuộc đời",
+      "label": "phase:1-engine",
+      "color": "0052CC",
+      "goal": "RNG có seed, sự kiện/điều kiện/hậu quả, năm chơi, tử vong, file lưu và mô phỏng lõi có thể tái hiện."
+    },
+    {
+      "id": 2,
+      "name": "Phase 2 — Bản chơi được đầu tiên",
+      "label": "phase:2-playable",
+      "color": "1D76DB",
+      "goal": "Chơi trọn một đời trên UI tiếng Việt; lựa chọn và tự lưu khôi phục đúng; đây là bản thử, chưa phải remake hoàn chỉnh."
+    },
+    {
+      "id": 3,
+      "name": "Phase 3 — Các hệ thống chức năng",
+      "label": "phase:3-systems",
+      "color": "0E8A16",
+      "goal": "Học/nghề, tiền/tài sản, hoạt động, quan hệ, bệnh/tù, di sản/nhiều đời, thành tích, truyện và quản lý dữ liệu chạy bằng các lát cắt có kiểm tra."
+    },
+    {
+      "id": 4,
+      "name": "Phase 4 — Sản xuất và kiểm kê nội dung",
+      "label": "phase:4-content",
+      "color": "D4C5F9",
+      "goal": "150 sự kiện thường, 48 nghề, 108 hoạt động, 24 tài sản, 40 thành tích, 5 truyện và nội dung bổ sung có manifest. Viết song song sau khi schema ổn định; số lượng không thay kiểm chất lượng."
+    },
+    {
+      "id": 5,
+      "name": "Phase 5 — Cân bằng, offline và chất lượng",
+      "label": "phase:5-quality",
+      "color": "FBCA04",
+      "goal": "10.000 đời không crash/kẹt; chống khai thác tiền, an toàn lưu, nội dung/nhánh, accessibility, hiệu năng, cache và cập nhật được kiểm chứng."
+    },
+    {
+      "id": 6,
+      "name": "Phase 6 — Hoàn thiện và phát hành cá nhân",
+      "label": "phase:6-release",
+      "color": "B60205",
+      "goal": "Bản phát hành tái tạo được, truy cập phù hợp mục đích cá nhân, chạy offline trên thiết bị và có hướng dẫn khôi phục dữ liệu."
+    }
+  ],
+  "labels": [
+    {
+      "name": "phase:0-design",
+      "color": "5319E7",
+      "description": "Phase 0 — Thiết kế và nền dự án"
+    },
+    {
+      "name": "phase:1-engine",
+      "color": "0052CC",
+      "description": "Phase 1 — Engine cuộc đời"
+    },
+    {
+      "name": "phase:2-playable",
+      "color": "1D76DB",
+      "description": "Phase 2 — Bản chơi được đầu tiên"
+    },
+    {
+      "name": "phase:3-systems",
+      "color": "0E8A16",
+      "description": "Phase 3 — Các hệ thống chức năng"
+    },
+    {
+      "name": "phase:4-content",
+      "color": "D4C5F9",
+      "description": "Phase 4 — Sản xuất và kiểm kê nội dung"
+    },
+    {
+      "name": "phase:5-quality",
+      "color": "FBCA04",
+      "description": "Phase 5 — Cân bằng, offline và chất lượng"
+    },
+    {
+      "name": "phase:6-release",
+      "color": "B60205",
+      "description": "Phase 6 — Hoàn thiện và phát hành cá nhân"
+    },
+    {
+      "name": "area:decisions",
+      "color": "D876E3",
+      "description": "Phạm vi chính: decisions"
+    },
+    {
+      "name": "area:content",
+      "color": "C5DEF5",
+      "description": "Phạm vi chính: content"
+    },
+    {
+      "name": "area:tooling",
+      "color": "BFD4F2",
+      "description": "Phạm vi chính: tooling"
+    },
+    {
+      "name": "area:engine",
+      "color": "0052CC",
+      "description": "Phạm vi chính: engine"
+    },
+    {
+      "name": "area:persistence",
+      "color": "B60205",
+      "description": "Phạm vi chính: persistence"
+    },
+    {
+      "name": "area:quality",
+      "color": "FBCA04",
+      "description": "Phạm vi chính: quality"
+    },
+    {
+      "name": "area:ui",
+      "color": "0E8A16",
+      "description": "Phạm vi chính: ui"
+    },
+    {
+      "name": "area:economy",
+      "color": "D93F0B",
+      "description": "Phạm vi chính: economy"
+    },
+    {
+      "name": "area:education",
+      "color": "1D76DB",
+      "description": "Phạm vi chính: education"
+    },
+    {
+      "name": "area:careers",
+      "color": "006B75",
+      "description": "Phạm vi chính: careers"
+    },
+    {
+      "name": "area:assets",
+      "color": "C2E0C6",
+      "description": "Phạm vi chính: assets"
+    },
+    {
+      "name": "area:relationships",
+      "color": "E99695",
+      "description": "Phạm vi chính: relationships"
+    },
+    {
+      "name": "area:stories",
+      "color": "D4C5F9",
+      "description": "Phạm vi chính: stories"
+    },
+    {
+      "name": "area:release",
+      "color": "5319E7",
+      "description": "Phạm vi chính: release"
+    },
+    {
+      "name": "area:docs",
+      "color": "BFDADC",
+      "description": "Phạm vi chính: docs"
+    },
+    {
+      "name": "type:feature",
+      "color": "BFD4F2",
+      "description": "Loại công việc: feature"
+    },
+    {
+      "name": "type:content",
+      "color": "BFD4F2",
+      "description": "Loại công việc: content"
+    },
+    {
+      "name": "type:docs",
+      "color": "BFD4F2",
+      "description": "Loại công việc: docs"
+    },
+    {
+      "name": "type:chore",
+      "color": "BFD4F2",
+      "description": "Loại công việc: chore"
+    },
+    {
+      "name": "type:test",
+      "color": "BFD4F2",
+      "description": "Loại công việc: test"
+    },
+    {
+      "name": "type:bug",
+      "color": "D73A4A",
+      "description": "Loại công việc: bug"
+    },
+    {
+      "name": "priority:P0",
+      "color": "B60205",
+      "description": "Nền tảng, mất dữ liệu hoặc gate bắt buộc"
+    },
+    {
+      "name": "priority:P1",
+      "color": "D93F0B",
+      "description": "Chức năng/nội dung cần hoàn tất"
+    },
+    {
+      "name": "priority:P2",
+      "color": "FBCA04",
+      "description": "Polish trong phạm vi; không tự bỏ"
+    },
+    {
+      "name": "kind:task",
+      "color": "C2E0C6",
+      "description": "Một task có phạm vi và cách xác minh"
+    },
+    {
+      "name": "kind:epic",
+      "color": "5319E7",
+      "description": "Index hoặc gate phase; không thay task con"
+    },
+    {
+      "name": "status:ready",
+      "color": "0E8A16",
+      "description": "Không còn dependency mở; cần cập nhật thủ công"
+    },
+    {
+      "name": "status:blocked",
+      "color": "B60205",
+      "description": "Có dependency chưa đóng; không phải yêu cầu cấp quyền"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "P0-01",
+      "phase": 0,
+      "title": "Hợp nhất phạm vi và các quyết định còn mâu thuẫn",
+      "area": "decisions",
+      "type": "docs",
+      "priority": "P0",
+      "deps": [],
+      "goal": "Đưa kế hoạch ban đầu và phần bổ sung thành một nguồn quyết định có thể triển khai.",
+      "ac": [
+        "Ghi riêng nội dung gốc chưa phục hồi và nội dung mới của bản web; không hứa đối chiếu 100% khi thiếu dataset.",
+        "Resolve tiếng Việt duy nhất, ba hệ thành tích/huy chương/danh hiệu, công thức sức khoẻ và hai cách bắt đầu đời tiếp theo.",
+        "Giữ đủ các hệ đã yêu cầu; ghi rõ quyết định còn thiếu bằng trạng thái proposed thay vì tự coi đã chốt."
+      ],
+      "verify": "Rà mục 13, 18–19 và 23 với kế hoạch gốc; mọi xung đột có quyết định hoặc issue theo dõi.",
+      "files": [
+        "docs/decisions.md",
+        "docs/web-spec-supplement.md",
+        "tasks/plan.md"
+      ]
+    },
+    {
+      "id": "P0-02",
+      "phase": 0,
+      "title": "Lập sổ nguồn và quyền dùng tài nguyên",
+      "area": "content",
+      "type": "docs",
+      "priority": "P0",
+      "deps": [],
+      "goal": "Có đường triển khai hình/phông/văn bản mà không phụ thuộc tài nguyên chưa rõ quyền sử dụng.",
+      "ac": [
+        "Mỗi tài nguyên có nguồn, giấy phép/bằng chứng, yêu cầu ghi công và trạng thái được phép đóng gói.",
+        "Không đưa APK/binary/chuỗi trích xuất thô vào repo; tài nguyên chưa rõ quyền dùng có phương án tự tạo.",
+        "Tên game, hình gốc và văn bản gốc được theo dõi riêng; riêng tư không được ghi là chứng cứ quyền dùng."
+      ],
+      "verify": "Kiểm manifest tài nguyên, .gitignore và danh mục file được commit; không tự kết luận pháp lý.",
+      "files": [
+        "docs/asset-sources.md",
+        "public/LICENSES.md",
+        ".gitignore"
+      ]
+    },
+    {
+      "id": "P0-03",
+      "phase": 0,
+      "title": "Khởi tạo ứng dụng TypeScript, React và Vite",
+      "area": "tooling",
+      "type": "chore",
+      "priority": "P0",
+      "deps": [],
+      "goal": "Tạo scaffold tối thiểu để các lát cắt sau có nơi chạy và kiểm tra.",
+      "ac": [
+        "TypeScript strict; engine không import React; có thư mục engine/content/schema/ui theo đặc tả.",
+        "Chọn phiên bản hiện hành phù hợp khi triển khai, lockfile được commit; chỉ cài thư viện thực sự cần.",
+        "Màn chờ tiếng Việt chạy được; có lệnh dev, typecheck, test và build; không thêm backend hoặc tiếng Anh."
+      ],
+      "verify": "Cài từ lockfile ở checkout sạch; typecheck, test smoke và build thành công.",
+      "files": [
+        "package.json",
+        "pnpm-lock.yaml",
+        "vite.config.ts",
+        "tsconfig.json",
+        "src/main.tsx"
+      ]
+    },
+    {
+      "id": "P0-04",
+      "phase": 0,
+      "title": "Định nghĩa schema điều kiện, hiệu ứng và nội dung",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P0-03"
+      ],
+      "goal": "Dùng chung một contract để engine và dữ liệu không diễn giải khác nhau.",
+      "ac": [
+        "Schema phân biệt điều kiện all/any/not và effect chỉ số/tiền/cờ/bộ đếm/đối tượng; từ chối giá trị không hữu hạn.",
+        "Schema sự kiện/hoạt động có ID, điều kiện, lựa chọn, kết quả và tổng chance bằng 1 với sai số được định nghĩa.",
+        "Có mẫu hợp lệ và mẫu sai chứng minh lỗi ID, xác suất, kiểu trường và effect không hỗ trợ."
+      ],
+      "verify": "Kiểm schema bằng fixture hợp lệ/sai; mẫu JSON ở mục 20.3 phải parse và validate.",
+      "files": [
+        "src/schema/conditions.ts",
+        "src/schema/effects.ts",
+        "src/schema/content.ts",
+        "tests/schema.test.ts"
+      ]
+    },
+    {
+      "id": "P0-05",
+      "phase": 0,
+      "title": "Chốt GameState và contract hành động một năm",
+      "area": "engine",
+      "type": "docs",
+      "priority": "P0",
+      "deps": [
+        "P0-01",
+        "P0-04"
+      ],
+      "goal": "Loại mơ hồ về thứ tự năm, trạng thái chờ, RNG và giao dịch trước khi viết reducer.",
+      "ac": [
+        "Định nghĩa ready/resolving_year/awaiting_choice/dead, revision, instanceId, queues và trạng thái RNG.",
+        "Ghi newLife/ageUp/chooseOption/activity và các hành động hệ thống; hợp đồng lỗi không làm thay đổi state.",
+        "Phân biệt nextEvent cùng năm và scheduleEvent năm sau; mô hình lưu hoàn toàn JSON, không có Set/Map trực tiếp."
+      ],
+      "verify": "Rà kịch bản reload giữa lựa chọn, double click và chết giữa năm bằng bảng chuyển trạng thái.",
+      "files": [
+        "src/engine/state.ts",
+        "src/engine/actions.ts",
+        "docs/engine-contract.md"
+      ]
+    },
+    {
+      "id": "P0-06",
+      "phase": 0,
+      "title": "Tạo validator, manifest và báo cáo dữ liệu",
+      "area": "content",
+      "type": "chore",
+      "priority": "P0",
+      "deps": [
+        "P0-04"
+      ],
+      "goal": "Bắt dữ liệu sai trước khi người chơi chạm nhánh hỏng và có cách đếm nội dung thật.",
+      "ac": [
+        "Bắt ID trùng, tham chiếu mất, xác suất sai, tuổi mâu thuẫn và kết thúc/nhánh thiếu đích.",
+        "Manifest có sourceKind, version, draft/reviewed/implemented/verified; phân biệt các loại nội dung trong số đếm.",
+        "Lệnh validate-content và content:stats báo đường dẫn/ID cụ thể; không tuyên bố chứng minh mọi điều kiện tổng quát."
+      ],
+      "verify": "Dữ liệu lỗi cố ý làm command thất bại; mẫu đúng có báo cáo theo tuổi/chủ đề và tổng ID.",
+      "files": [
+        "src/tools/validate-content.ts",
+        "src/tools/stats.ts",
+        "src/content/manifest.json",
+        "tests/content-validation.test.ts"
+      ]
+    },
+    {
+      "id": "P0-07",
+      "phase": 0,
+      "title": "Thiết lập kiểm tra tự động cho PR",
+      "area": "tooling",
+      "type": "chore",
+      "priority": "P0",
+      "deps": [
+        "P0-03",
+        "P0-06"
+      ],
+      "goal": "Giữ main có thể build và ngăn dữ liệu sai được merge.",
+      "ac": [
+        "Workflow chạy cài lockfile, typecheck, test, validate-content và build.",
+        "Không có secret trong workflow; quyền GitHub tối thiểu, không tự deploy hoặc mở truy cập public.",
+        "README ghi đúng các lệnh có thật; workflow hoạt động với checkout mới."
+      ],
+      "verify": "Chạy các lệnh tương đương CI từ checkout sạch; một fixture sai có kiểm tra phát hiện.",
+      "files": [
+        ".github/workflows/check.yml",
+        "package.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "P1-01",
+      "phase": 1,
+      "title": "RNG có seed và khôi phục chính xác",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P0-03",
+        "P0-05"
+      ],
+      "goal": "Mỗi lựa chọn có thể tái hiện để sửa lỗi và không bốc lại sau tải game.",
+      "ac": [
+        "RNG chỉ dùng state/seed được truyền vào; không Math.random/Date.now quyết định kết quả game.",
+        "Lưu/restoring state tiếp tục đúng chuỗi số; định nghĩa biên seed và khoảng đầu ra.",
+        "Cùng seed và thứ tự hành động cho cùng kết quả; các UI render không tiêu RNG."
+      ],
+      "verify": "Test chuỗi trước/sau serialize; thử nhiều seed và kiểm biên đầu ra.",
+      "files": [
+        "src/engine/rng.ts",
+        "tests/rng.test.ts"
+      ]
+    },
+    {
+      "id": "P1-02",
+      "phase": 1,
+      "title": "Tạo nhân vật và gia đình ban đầu",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-01",
+        "P0-05"
+      ],
+      "goal": "Tạo được đời tuổi 0 nhất quán từ tuỳ chọn người chơi hoặc dữ liệu ngẫu nhiên.",
+      "ac": [
+        "Tên/giới tính/quê/ngày sinh và bốn chỉ số được validate; số tuổi người thân phù hợp dữ liệu hư cấu.",
+        "Sinh lifeId/entity IDs duy nhất; tuổi 0 có log riêng và không mang dữ liệu đời cũ.",
+        "Bộ names mẫu đủ để test; mốc tuổi 0 được xử lý đúng một lần."
+      ],
+      "verify": "Test cùng seed/options, tên dài, field thiếu và cuộc đời mới sau một đời chết.",
+      "files": [
+        "src/engine/new-life.ts",
+        "src/content/names.json",
+        "tests/new-life.test.ts"
+      ]
+    },
+    {
+      "id": "P1-03",
+      "phase": 1,
+      "title": "Đánh giá điều kiện và lựa chọn kết quả",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P0-04",
+        "P1-01"
+      ],
+      "goal": "Một bộ đánh giá dùng cho sự kiện, hoạt động và yêu cầu các hệ chức năng.",
+      "ac": [
+        "Hỗ trợ all/any/not, tuổi/chỉ số/tiền/cờ/bộ đếm và tham chiếu có kiểu.",
+        "Kết quả được chọn theo chance bằng RNG; xử lý biên 0/1 và tổng sai.",
+        "Thiếu đối tượng hoặc ID không hợp lệ trả lỗi rõ; không tự coi điều kiện là true."
+      ],
+      "verify": "Test các tổ hợp phủ định, biên giá trị và chọn kết quả đầu/cuối bằng RNG kiểm soát.",
+      "files": [
+        "src/engine/conditions.ts",
+        "src/engine/outcomes.ts",
+        "tests/conditions.test.ts"
+      ]
+    },
+    {
+      "id": "P1-04",
+      "phase": 1,
+      "title": "Áp dụng hậu quả nguyên khối và giới hạn dữ liệu",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-03",
+        "P0-05"
+      ],
+      "goal": "Tiền, chỉ số và nhật ký thay đổi cùng một kết quả, tránh trạng thái nửa chừng.",
+      "ac": [
+        "Kẹp bốn chỉ số 0–100; tiền là đồng nguyên trong giới hạn an toàn; cờ/achievement IDs không trùng.",
+        "Tất cả effect được kiểm trước; lỗi không áp dụng một phần hoặc tiêu RNG ngoài contract.",
+        "Cập nhật đúng entity instance; log ghi outcome và delta để có thể đối chiếu."
+      ],
+      "verify": "Test effect lỗi ở giữa danh sách, tiền overflow, đối tượng mất và state đầu vào không bị sửa.",
+      "files": [
+        "src/engine/effects.ts",
+        "src/engine/transactions.ts",
+        "tests/effects.test.ts"
+      ]
+    },
+    {
+      "id": "P1-05",
+      "phase": 1,
+      "title": "Pool sự kiện, cooldown và lịch hẹn",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-03",
+        "P1-04"
+      ],
+      "goal": "Chọn sự kiện đúng tuổi và trạng thái, không làm các nhánh truyện xuất hiện như ngẫu nhiên.",
+      "ac": [
+        "Lọc tuổi/điều kiện/once/cooldown/maxOccurrences; chọn trọng số trong các ứng viên hợp lệ.",
+        "Phân biệt pool thường, nhánh nối và sự kiện đến hạn; event instance có đối tượng liên quan.",
+        "Có fallback theo 5 nhóm tuổi; chain loop có giới hạn và kết thúc thay thế khi mất điều kiện."
+      ],
+      "verify": "Test không ứng viên, đúng năm cooldown, người liên quan mất và vòng nextEvent quá giới hạn.",
+      "files": [
+        "src/engine/events.ts",
+        "src/engine/scheduler.ts",
+        "tests/events.test.ts"
+      ]
+    },
+    {
+      "id": "P1-06",
+      "phase": 1,
+      "title": "Reducer lựa chọn và chặn xử lý trùng",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-04",
+        "P1-05"
+      ],
+      "goal": "Một instance chỉ nhận một lựa chọn hợp lệ, ngay cả khi người chơi bấm lại.",
+      "ac": [
+        "Kiểm phase, eventId/instanceId/optionId và revision trước khi chọn.",
+        "Ghi RNG/outcome/state/log/queue trong cùng thay đổi; lựa chọn lặp không cho tiền hoặc hiệu ứng lần hai.",
+        "Tải snapshot awaiting_choice tiếp tục đúng instance; không bốc lại khi xem màn khác."
+      ],
+      "verify": "Test double submit, option bị khoá, revision cũ và round-trip giữa lựa chọn.",
+      "files": [
+        "src/engine/reducer.ts",
+        "src/engine/choices.ts",
+        "tests/choices.test.ts"
+      ]
+    },
+    {
+      "id": "P1-07",
+      "phase": 1,
+      "title": "Vòng năm, lão hoá và thứ tự mốc bắt buộc",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-02",
+        "P1-06"
+      ],
+      "goal": "Tăng tuổi đúng một lần và cho các hệ sau móc vào một quy trình năm duy nhất.",
+      "ac": [
+        "Reset thời gian/lượt hoạt động; cập nhật tuổi người thân/lão hoá một lần; ghi annual ledger nền.",
+        "Mốc bắt buộc trước pool ngẫu nhiên; chọn sự kiện kế tiếp theo state sau hậu quả trước.",
+        "Dừng đúng ở awaiting_choice; ageUp trong pha sai bị từ chối mà không tăng tuổi."
+      ],
+      "verify": "Test tuổi 0→1, mốc học, reload giữa năm và bấm ageUp khi còn queue.",
+      "files": [
+        "src/engine/year.ts",
+        "src/engine/aging.ts",
+        "tests/year.test.ts"
+      ]
+    },
+    {
+      "id": "P1-08",
+      "phase": 1,
+      "title": "Tử vong nền và kết thúc trực tiếp",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-07",
+        "P0-01"
+      ],
+      "goal": "Giữ tử vong nhất quán với năm chơi và không có nhân vật bất tử do công thức sai.",
+      "ac": [
+        "Công thức healthFactor tại mục 14.5 hoặc quyết định thay thế đã resolve; biên xác suất được chặn.",
+        "Bốc tử vong nền một lần cuối năm; death trực tiếp chấm dứt phần còn lại của queue.",
+        "deathAge/cause/log chỉ gán một lần; nhân vật chết không tiếp tục nghề hoặc hoạt động."
+      ],
+      "verify": "Test health 0/50/100, tử vong tuổi 0, chết giữa nhánh và gọi lại kết thúc.",
+      "files": [
+        "src/engine/death.ts",
+        "src/content/balance.json",
+        "tests/death.test.ts"
+      ]
+    },
+    {
+      "id": "P1-09",
+      "phase": 1,
+      "title": "Snapshot, phiên bản và nâng cấp file lưu",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-06",
+        "P1-08"
+      ],
+      "goal": "Giữ đủ trạng thái để khôi phục mọi pha và không ghi đè file lỗi.",
+      "ac": [
+        "Serialize/parse JSON giữ phase, RNG, queue, history và entity IDs; schema/contentVersion được lưu.",
+        "Migration chạy trên bản sao theo từng phiên bản; schema tương lai hoặc ID mất không bị đổi ngẫu nhiên.",
+        "Snapshot lỗi giữ nguyên nguồn và trả thông báo; round-trip không thay trạng thái game."
+      ],
+      "verify": "Test ready/awaiting_choice/dead, version cũ/mới, ID sai và migration thất bại.",
+      "files": [
+        "src/engine/save.ts",
+        "src/engine/migrations.ts",
+        "tests/save.test.ts"
+      ]
+    },
+    {
+      "id": "P1-10",
+      "phase": 1,
+      "title": "Bot mô phỏng lõi và báo cáo seed lỗi",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P1-08",
+        "P1-09",
+        "P0-06"
+      ],
+      "goal": "Có bằng chứng engine lõi chạy trọn đời trước khi thêm nhiều hệ.",
+      "ac": [
+        "Command simulate chạy nhiều seed với chiến lược cẩn thận/liều/ngẫu nhiên; timeout/kẹt có giới hạn bước.",
+        "Báo crash, tuổi thọ, fallback và độ phủ; lưu seed/action trace tái hiện lỗi.",
+        "10.000 đời trên bộ mẫu không crash/kẹt; chưa dùng kết quả bộ mẫu để tuyên bố cân bằng bản đầy đủ."
+      ],
+      "verify": "Chạy simulate 10.000 đời; tái hiện một seed và fixture cố ý kẹt.",
+      "files": [
+        "src/tools/simulate.ts",
+        "src/tools/bots.ts",
+        "tests/simulation.test.ts"
+      ]
+    },
+    {
+      "id": "P2-01",
+      "phase": 2,
+      "title": "Khung UI điện thoại và điều hướng",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P0-03",
+        "P0-01"
+      ],
+      "goal": "Tạo khung màn hình đọc được và thao tác được, không nhét quy tắc engine vào UI.",
+      "ac": [
+        "Responsive ở màn hẹp; vùng bấm 44px, nhãn chữ, focus rõ và không dùng màu làm tín hiệu duy nhất.",
+        "Router/tab và store chỉ gọi engine; UI có thể hiển thị ready/awaiting_choice/dead.",
+        "Chuỗi giao diện tiếng Việt tách file; không dựng menu tiếng Anh hoặc backend."
+      ],
+      "verify": "Kiểm viewport hẹp/rộng, bàn phím và dữ liệu tên dài.",
+      "files": [
+        "src/ui/App.tsx",
+        "src/ui/store.ts",
+        "src/ui/styles.css",
+        "src/i18n/vi.json"
+      ]
+    },
+    {
+      "id": "P2-02",
+      "phase": 2,
+      "title": "Màn bắt đầu và tạo nhân vật",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P2-01",
+        "P1-02"
+      ],
+      "goal": "Người chơi bắt đầu đời hoặc tiếp tục ô lưu mà không mất đời đang có.",
+      "ac": [
+        "Có tạo tuỳ chỉnh/ngẫu nhiên, validate field và tóm tắt trước bắt đầu.",
+        "Tiếp tục chỉ hiện khi snapshot hợp lệ; tạo mới không âm thầm ghi đè ô cũ.",
+        "Tên và quê hiển thị như text, không render HTML từ dữ liệu người nhập."
+      ],
+      "verify": "Tạo các đời bằng bàn phím/điện thoại; thử tên dài, ký tự đặc biệt và dữ liệu lỗi.",
+      "files": [
+        "src/ui/screens/Start.tsx",
+        "src/ui/screens/Create.tsx",
+        "tests/create-flow.test.tsx"
+      ]
+    },
+    {
+      "id": "P2-03",
+      "phase": 2,
+      "title": "Màn chính: tuổi, tiền, chỉ số và nhật ký",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P2-01",
+        "P1-07"
+      ],
+      "goal": "Hiển thị được cuộc đời và hành động tăng tuổi theo phase đúng.",
+      "ac": [
+        "Bốn chỉ số có nhãn/số; số tiền rút gọn vẫn xem được số đồng; nhật ký theo năm và kết quả.",
+        "Tăng tuổi bị khoá khi chờ/lưu/chết; render không tiêu RNG.",
+        "Nhật ký dài không làm mất vị trí đọc hoặc che nút; trống có trạng thái rõ."
+      ],
+      "verify": "Chơi qua nhiều năm, kiểm log với state và thử 500 dòng/tên rất dài.",
+      "files": [
+        "src/ui/screens/Main.tsx",
+        "src/ui/components/Stats.tsx",
+        "src/ui/components/LifeLog.tsx"
+      ]
+    },
+    {
+      "id": "P2-04",
+      "phase": 2,
+      "title": "Hộp thoại lựa chọn có thể khôi phục",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P2-03",
+        "P1-06"
+      ],
+      "goal": "Lựa chọn trên UI chỉ gửi đúng instance và không cho bấm trùng.",
+      "ac": [
+        "Hiển thị văn bản, lựa chọn hợp lệ và lý do lựa chọn khoá; chỉ một submit đang xử lý.",
+        "Dialog quản lý focus/keyboard; không đóng để bỏ qua lựa chọn bắt buộc.",
+        "Reload/mở lại phản ánh pendingEvent từ snapshot, không tạo outcome khác."
+      ],
+      "verify": "Test focus, double click, option khoá và khôi phục pendingEvent.",
+      "files": [
+        "src/ui/components/EventDialog.tsx",
+        "src/ui/store.ts",
+        "tests/event-dialog.test.tsx"
+      ]
+    },
+    {
+      "id": "P2-05",
+      "phase": 2,
+      "title": "Tự lưu IndexedDB và cảnh báo chưa lưu",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-09",
+        "P2-04"
+      ],
+      "goal": "Tiếp tục được sau đóng trang và không báo đã lưu khi ghi thất bại.",
+      "ac": [
+        "Lưu sau mỗi action hoàn tất, kể cả giữa năm; chờ transaction commit rồi mới xác nhận.",
+        "Có bản gần nhất để phục hồi; quota/permission/error được bắt và giữ state trong bộ nhớ.",
+        "Mở lại khôi phục đúng ô, phase, RNG, lựa chọn và history."
+      ],
+      "verify": "Test transaction lỗi và reload giữa lựa chọn; đối chiếu snapshot trước/sau.",
+      "files": [
+        "src/ui/storage.ts",
+        "src/ui/store.ts",
+        "tests/storage.test.ts"
+      ]
+    },
+    {
+      "id": "P2-06",
+      "phase": 2,
+      "title": "Tổng kết đời và tạo đời độc lập mới",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P2-05",
+        "P1-08"
+      ],
+      "goal": "Người chơi kết thúc đời rõ ràng và quay lại chơi không mang state cũ.",
+      "ac": [
+        "Có tuổi/nguyên nhân/log và thông số cuối đời; hiển thị death một lần.",
+        "Bắt đầu đời độc lập reset tiền/cờ/nghề nhưng giữ hồ sơ toàn cục theo contract.",
+        "Không xử lý hoạt động hoặc nhận lương khi màn kết thúc đã mở."
+      ],
+      "verify": "Test chết do nền/sự kiện, tải snapshot dead và bắt đầu một đời mới.",
+      "files": [
+        "src/ui/screens/End.tsx",
+        "src/ui/screens/Start.tsx",
+        "tests/end-flow.test.tsx"
+      ]
+    },
+    {
+      "id": "P2-07",
+      "phase": 2,
+      "title": "Avatar SVG và tuỳ chọn hiển thị cơ bản",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P2",
+      "deps": [
+        "P2-01",
+        "P0-02"
+      ],
+      "goal": "Có hình đại diện ít đồ hoạ, đọc được ở các nhóm tuổi và biểu cảm.",
+      "ac": [
+        "SVG tự tạo cho em bé/trẻ/thanh niên/trung niên/người già; vui/bình thường/buồn theo state.",
+        "Có cỡ chữ, sáng/tối và reduced motion; avatar trang trí không làm screen reader đọc dư.",
+        "Tài nguyên/phông ghi nguồn; không copy ảnh APK chưa rõ quyền dùng."
+      ],
+      "verify": "Kiểm đủ nhóm tuổi, biểu cảm và zoom/cỡ chữ trên màn hẹp.",
+      "files": [
+        "src/ui/components/Avatar.tsx",
+        "src/ui/theme.ts",
+        "public/LICENSES.md"
+      ]
+    },
+    {
+      "id": "P2-08",
+      "phase": 2,
+      "title": "Kiểm vòng đời đầu tiên từ UI tới snapshot",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P2-02",
+        "P2-03",
+        "P2-04",
+        "P2-05",
+        "P2-06",
+        "P2-07",
+        "P1-10"
+      ],
+      "goal": "Xác minh bản chơi đầu thực sự đi hết vòng đời thay vì chỉ màn hình hoạt động.",
+      "ac": [
+        "Kịch bản tạo→tăng tuổi→chọn→reload→chết→đời mới chạy hết.",
+        "Cùng seed/actions sau reload có kết quả và log đúng; double click không trùng năm/outcome.",
+        "Ghi lỗi còn lại và giới hạn bộ mẫu; chưa đánh dấu hoàn thiện các hệ Phase 3/4."
+      ],
+      "verify": "Test luồng trong browser; lưu trace/screenshot cần thiết; build và test engine qua.",
+      "files": [
+        "tests/e2e/core-life.spec.ts",
+        "docs/qa/core-life.md"
+      ]
+    },
+    {
+      "id": "P3-01",
+      "phase": 3,
+      "title": "Sổ thu chi năm và khoản nợ có định danh",
+      "area": "economy",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-07",
+        "P1-04"
+      ],
+      "goal": "Có nguồn tính tiền chung cho lương, sinh hoạt, học phí và tài sản.",
+      "ac": [
+        "Mỗi khoản có ID/nguồn/năm; lương/phí đã ghi không áp dụng lại sau reload.",
+        "Trẻ dưới 18 không chịu chi phí người lớn mặc định; nợ học/sinh hoạt có số dư và hạn mức riêng.",
+        "Tài sản ròng trừ nợ, không cộng nhà thuê/tài sản người thân/lương tương lai."
+      ],
+      "verify": "Test sổ năm, money overflow, thiếu tiền, phí trùng và tính tài sản ròng.",
+      "files": [
+        "src/engine/economy.ts",
+        "src/engine/debt.ts",
+        "tests/economy.test.ts"
+      ]
+    },
+    {
+      "id": "P3-02",
+      "phase": 3,
+      "title": "Học tập: ghi danh, điểm, học phí và tốt nghiệp",
+      "area": "education",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-01",
+        "P1-03",
+        "P2-01"
+      ],
+      "goal": "Người chơi đi học, bỏ/học lại và mở nghề từ bằng đạt thật.",
+      "ac": [
+        "Một chương trình chính; short course không thay bằng; tốt nghiệp theo tiến độ/điểm không chỉ tuổi.",
+        "Thu học phí đúng một lần mỗi năm sau học bổng; thiếu tiền có lựa chọn hợp lệ.",
+        "UI học tập có yêu cầu, điểm 0–100, tiến độ và log; bỏ học không xoá bằng cũ."
+      ],
+      "verify": "Test vào/trượt/hoàn thành, nghỉ một năm, học lại và reload sau thu học phí.",
+      "files": [
+        "src/engine/education.ts",
+        "src/ui/screens/Education.tsx",
+        "src/content/education.json",
+        "tests/education.test.ts"
+      ]
+    },
+    {
+      "id": "P3-03",
+      "phase": 3,
+      "title": "Nghề toàn thời gian: tuyển, bậc, mất việc và hưu",
+      "area": "careers",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-02",
+        "P3-01"
+      ],
+      "goal": "Chuỗi nghề có điều kiện và thu nhập rõ, đủ để chơi sự nghiệp.",
+      "ac": [
+        "Một nghề toàn thời gian; xin việc thất bại giữ nghề cũ; nhận nghề không trả ngược lương năm.",
+        "Hiệu suất/bậc/kinh nghiệm; thăng chức xét một lần/năm; lý do mất việc ghi log.",
+        "Nghỉ hưu đóng lương nghề, trợ cấp từ năm sau dùng mức lương đã lưu khi nghỉ."
+      ],
+      "verify": "Test yêu cầu bằng/chỉ số/tiền án, đổi nghề, thăng chức trùng và hưu sau reload.",
+      "files": [
+        "src/engine/careers.ts",
+        "src/ui/screens/Work.tsx",
+        "src/content/jobs.json",
+        "tests/careers.test.ts"
+      ]
+    },
+    {
+      "id": "P3-04",
+      "phase": 3,
+      "title": "Làm thêm và dự án tự do theo điểm thời gian",
+      "area": "careers",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-03",
+        "P1-04"
+      ],
+      "goal": "Cho thu nhập phụ mà không tính hai lần cùng công việc.",
+      "ac": [
+        "Tối đa một việc làm thêm; tuổi/tư cách theo từng việc, không mở nghề người lớn đồng loạt ở 13.",
+        "Thu nhập gắn action/thời gian; không tự trả thêm lương năm cho khoản đã nhận qua hoạt động.",
+        "Có UI việc ngắn hạn, điều kiện và rủi ro dự án; chưa thêm quản trị doanh nghiệp ngoài kế hoạch."
+      ],
+      "verify": "Test tuổi chưa đủ, hết thời gian, thu nhập trùng và nghề chính chạy song song.",
+      "files": [
+        "src/engine/side-jobs.ts",
+        "src/ui/components/SideJobs.tsx",
+        "tests/side-jobs.test.ts"
+      ]
+    },
+    {
+      "id": "P3-05",
+      "phase": 3,
+      "title": "Sở hữu tài sản, thuê nhà và mua bán",
+      "area": "assets",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-01",
+        "P1-04",
+        "P2-01"
+      ],
+      "goal": "Mua/bán đúng từng instance và không biến hợp đồng thuê thành tài sản sở hữu.",
+      "ac": [
+        "InstanceId riêng, hỗ trợ hai vật cùng catalog ID; một chỗ ở chính.",
+        "Mua/bán kiểm tuổi/tiền/số lượng; giá đã hiển thị không bốc lại khi xem; giao dịch có ID.",
+        "UI cửa hàng/sở hữu/thuê và log rõ; phí mua/bán không lặp khi submit lại."
+      ],
+      "verify": "Test hai xe cùng loại, bán sai instance, double submit và nhà thuê không tính tài sản ròng.",
+      "files": [
+        "src/engine/assets.ts",
+        "src/ui/screens/Assets.tsx",
+        "tests/assets.test.ts"
+      ]
+    },
+    {
+      "id": "P3-06",
+      "phase": 3,
+      "title": "Định giá năm, đầu tư và phí duy trì",
+      "area": "economy",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-05"
+      ],
+      "goal": "Một bảng giá theo năm chống vòng mua/bán sinh tiền vô hạn.",
+      "ac": [
+        "Giá thị trường chỉ đổi đầu năm; vàng/quỹ/cổ phiếu hư cấu dùng số đơn vị và giá nhất quán.",
+        "Độ bền/khấu hao/phí duy trì theo loại; nơi ở chỉ cho hiệu ứng một lần.",
+        "Mua bán cùng năm có phí/giá cố định; không kiếm lời chắc chắn do mở menu hoặc reload."
+      ],
+      "verify": "Test mua→bán→reload nhiều lần, phí duy trì một lần và lượng đầu tư/rounding.",
+      "files": [
+        "src/engine/market.ts",
+        "src/engine/assets.ts",
+        "tests/market.test.ts"
+      ]
+    },
+    {
+      "id": "P3-07",
+      "phase": 3,
+      "title": "Thú cưng là thực thể có tuổi và sức khoẻ",
+      "area": "assets",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-05",
+        "P1-07"
+      ],
+      "goal": "Nuôi thú cưng có hành vi và tuổi thay vì chỉ cộng hạnh phúc vô hạn.",
+      "ac": [
+        "Sở hữu và quan hệ dùng cùng entity; tuổi/sức khoẻ/gắn bó/trạng thái sống nhất quán.",
+        "Chăm sóc, thất lạc, tìm lại, chết và phí năm có điều kiện; không tương tác thú đã mất.",
+        "UI chọn đúng thú cưng khi có nhiều con; nhận nuôi không mở thêm bản trùng."
+      ],
+      "verify": "Test năm mới, thú mất/đã chết và reload khi đang tìm; đối chiếu entity IDs.",
+      "files": [
+        "src/engine/pets.ts",
+        "src/ui/components/Pets.tsx",
+        "tests/pets.test.ts"
+      ]
+    },
+    {
+      "id": "P3-08",
+      "phase": 3,
+      "title": "Hoạt động: chi phí, ngân sách năm và đối tượng",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-01",
+        "P1-06",
+        "P3-05"
+      ],
+      "goal": "Chủ động làm hoạt động nhưng không spam để tăng chỉ số/tiền không giới hạn.",
+      "ac": [
+        "12 điểm/năm theo đề xuất đã chốt; min cost/time và maxUsesPerYear kiểm trong engine.",
+        "Target dùng entity instance; thiếu tiền/điểm/đối tượng không trừ gì hoặc tiêu RNG.",
+        "UI theo nhóm có yêu cầu/chi phí/kết quả; activity không tự ageUp và dùng effect/outcome chung."
+      ],
+      "verify": "Test free activity vẫn tiêu thời gian, target mất, hết lượt và submit lại.",
+      "files": [
+        "src/engine/activities.ts",
+        "src/ui/screens/Activities.tsx",
+        "tests/activities.test.ts"
+      ]
+    },
+    {
+      "id": "P3-09",
+      "phase": 3,
+      "title": "Bệnh, khám và điều trị có trạng thái",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-08"
+      ],
+      "goal": "Sức khoẻ có tình huống và điều trị đúng bệnh mà không xóa mọi bệnh một lần.",
+      "ac": [
+        "Bệnh có instance/type/severity/năm phát hiện/progress; khám có thể không phát hiện.",
+        "Điều trị kiểm bệnh/tiền; kết quả xác suất không bảo đảm khỏi; chỉ xóa instance đã chữa.",
+        "UI và log thể hiện tiến độ, hậu quả và lựa chọn nghỉ/điều trị phù hợp."
+      ],
+      "verify": "Test nhiều bệnh, thiếu tiền, reload sau điều trị và tuổi/health effects.",
+      "files": [
+        "src/engine/illness.ts",
+        "src/ui/components/HealthActivities.tsx",
+        "tests/illness.test.ts"
+      ]
+    },
+    {
+      "id": "P3-10",
+      "phase": 3,
+      "title": "Gia đình và bạn bè: tương tác theo đúng người",
+      "area": "relationships",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-08",
+        "P1-02"
+      ],
+      "goal": "Quan hệ có tên/tuổi/traits và tương tác cụ thể thay vì cộng điểm chung.",
+      "ac": [
+        "Cha mẹ/bạn/anh chị em có instance ID; closeness 0–100; tuổi tăng một lần/năm.",
+        "Trò chuyện/quà/xin hỗ trợ/mâu thuẫn kiểm alive và limit; không xin tiền người đã mất.",
+        "UI danh sách/chi tiết quan hệ và log; mất người thân tạo sự kiện thay thế có nguồn."
+      ],
+      "verify": "Test hai người cùng role, giới hạn xin hỗ trợ, tử vong và target mất.",
+      "files": [
+        "src/engine/relations.ts",
+        "src/ui/screens/Relations.tsx",
+        "tests/relations.test.ts"
+      ]
+    },
+    {
+      "id": "P3-11",
+      "phase": 3,
+      "title": "Tình cảm, hôn nhân và ly hôn",
+      "area": "relationships",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-10",
+        "P3-01"
+      ],
+      "goal": "Trạng thái tình cảm chuyển có điều kiện và không tạo nhiều vợ/chồng đang hoạt động.",
+      "ac": [
+        "Điều kiện tuổi/trạng thái kiểm ở engine; một người yêu hoặc bạn đời đang hoạt động theo contract.",
+        "Hẹn hò/cầu hôn/chia tay/ly hôn có kết quả và lịch sử; thất bại không xóa người đang yêu.",
+        "Chia tài sản hư cấu chỉ từ ownership chung được lưu, giải thích trước khi xác nhận."
+      ],
+      "verify": "Test tuổi chưa đủ, cầu hôn lặp, quan hệ cũ và phân chia tiền không trùng.",
+      "files": [
+        "src/engine/romance.ts",
+        "src/ui/components/RomanceActions.tsx",
+        "tests/romance.test.ts"
+      ]
+    },
+    {
+      "id": "P3-12",
+      "phase": 3,
+      "title": "Sinh/nhận nuôi con và người phụ thuộc",
+      "area": "relationships",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-11",
+        "P3-01"
+      ],
+      "goal": "Con có tiến trình và chi phí đúng độ tuổi, làm nền cho nhiều đời.",
+      "ac": [
+        "Sinh/nhận nuôi từ lựa chọn có điều kiện; cha/mẹ IDs hợp lệ và tuổi không âm.",
+        "Tăng tuổi/chi phí phụ thuộc một lần; con trưởng thành không chịu phí trẻ nhỏ.",
+        "Có tương tác/sự kiện theo tuổi con; nhiều con không cùng một entity hoặc lịch hẹn."
+      ],
+      "verify": "Test hai con, năm sinh, nhận nuôi, trưởng thành và reload mốc tuổi.",
+      "files": [
+        "src/engine/children.ts",
+        "src/ui/components/Children.tsx",
+        "tests/children.test.ts"
+      ]
+    },
+    {
+      "id": "P3-13",
+      "phase": 3,
+      "title": "Rủi ro, tiền án và năm ngồi tù",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-08",
+        "P3-03",
+        "P3-10"
+      ],
+      "goal": "Giữ nhóm sống ẩu đã yêu cầu với hậu quả và hạn chế hoạt động thực sự.",
+      "ac": [
+        "Năm nhóm tội có counter/risk/record; cờ bạc hoặc tiệc không tự thành tiền án.",
+        "Tù xử lý từng năm, lưu giữa năm; chặn hoạt động ngoài, mất việc có lý do, ra tù không tự nhận lại nghề.",
+        "Tình huống chỉ mô tả hành động/kết quả hư cấu, không viết hướng dẫn phạm tội ngoài đời."
+      ],
+      "verify": "Test phạt/bắt/thụ án/ra tù, tuổi người thân và giữ snapshot trong tù.",
+      "files": [
+        "src/engine/crime.ts",
+        "src/engine/prison.ts",
+        "src/ui/components/Prison.tsx",
+        "tests/prison.test.ts"
+      ]
+    },
+    {
+      "id": "P3-14",
+      "phase": 3,
+      "title": "Di chúc và kết toán di sản một lần",
+      "area": "economy",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-12",
+        "P3-06",
+        "P1-08"
+      ],
+      "goal": "Chia đúng tiền ròng còn lại cho người nhận mà không nhận trùng tài sản.",
+      "ac": [
+        "Người nhận còn sống, tỉ lệ tổng 100%; có fallback khi không còn người hợp lệ.",
+        "Thanh toán nợ/chi phí trước phân chia; không vừa chia tiền bán nhà vừa chia căn nhà đó.",
+        "Estate ID kết toán một lần; reload tổng kết không phát thêm tiền."
+      ],
+      "verify": "Test nợ lớn, người nhận chết, làm tròn và mở tổng kết nhiều lần.",
+      "files": [
+        "src/engine/estate.ts",
+        "src/ui/components/Will.tsx",
+        "tests/estate.test.ts"
+      ]
+    },
+    {
+      "id": "P3-15",
+      "phase": 3,
+      "title": "Tiếp tục cuộc đời làm người con",
+      "area": "relationships",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-14",
+        "P1-09",
+        "P2-06"
+      ],
+      "goal": "Chơi nhiều đời như yêu cầu nhưng không reset tuổi sai hoặc cộng di sản lần hai.",
+      "ac": [
+        "Chọn con đang sống, bắt đầu ở tuổi hiện tại, giữ quan hệ đã biết và phần di sản đúng.",
+        "Dữ liệu nghề/học chưa mô phỏng có quy tắc khởi tạo và ghi nguồn; không bịa lịch sử đã xảy ra.",
+        "Đời độc lập ở tuổi 0 vẫn riêng; hồ sơ toàn cục giữ, lifeId/revision và di sản nhất quán."
+      ],
+      "verify": "Test nhiều người con, không có con, chọn con có snapshot và reload sau chuyển đời.",
+      "files": [
+        "src/engine/next-life.ts",
+        "src/ui/screens/NextLife.tsx",
+        "tests/next-life.test.ts"
+      ]
+    },
+    {
+      "id": "P3-16",
+      "phase": 3,
+      "title": "Thành tích vĩnh viễn và bộ sưu tập toàn cục",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-10",
+        "P2-05"
+      ],
+      "goal": "Mở nhiều thành tích mà không lẫn với danh hiệu cuối đời.",
+      "ac": [
+        "Đánh giá điều kiện chung sau action; lưu unlock toàn cục và đời đạt đầu tiên.",
+        "Reload/đời mới không tăng số achievement đã mở; progress có tiêu chí giải thích được.",
+        "UI lưới/chi tiết; khóa và mở đều có tên, không phụ thuộc màu."
+      ],
+      "verify": "Test đủ/thiếu ngưỡng, mở lại và lưu hồ sơ cùng snapshot trong transaction.",
+      "files": [
+        "src/engine/achievements.ts",
+        "src/ui/screens/Achievements.tsx",
+        "tests/achievements.test.ts"
+      ]
+    },
+    {
+      "id": "P3-17",
+      "phase": 3,
+      "title": "Huy chương và danh hiệu cuối đời",
+      "area": "engine",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-16",
+        "P1-08"
+      ],
+      "goal": "Phần thưởng nghề/sự kiện và một danh hiệu sống nổi trội có luật riêng.",
+      "ac": [
+        "Huy chương gắn award ID/nguồn, không nhận hai lần cùng event instance.",
+        "Danh hiệu tính điểm chuẩn hóa và tie-break cố định; xem lại không bốc lại.",
+        "Tổng kết phân biệt achievement/medal/title và giọng văn không coi ít tiền/chết sớm là vô giá trị."
+      ],
+      "verify": "Test nhiều điều kiện cùng đạt, bằng điểm, ngưỡng và reload tổng kết.",
+      "files": [
+        "src/engine/medals.ts",
+        "src/engine/titles.ts",
+        "src/ui/screens/End.tsx",
+        "tests/titles.test.ts"
+      ]
+    },
+    {
+      "id": "P3-18",
+      "phase": 3,
+      "title": "Engine truyện có nhánh và trạng thái riêng",
+      "area": "stories",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P1-06",
+        "P1-09",
+        "P0-04"
+      ],
+      "goal": "Chạy truyện mà không làm tăng tuổi hoặc tiêu RNG của cuộc đời đang chơi.",
+      "ac": [
+        "Truyện có storyId/nodeId/flags/RNG/turn/endings riêng; schema phân biệt với pool đời thường.",
+        "Mọi lựa chọn/nhánh/loop có đích và limit; node mở luôn có lựa chọn hợp lệ.",
+        "Chỉ phần thưởng khai báo mới chuyển về hồ sơ; save giữa node không đổi kết quả."
+      ],
+      "verify": "Test ba kết thúc, loop limit, ID hỏng và so RNG/tiền cuộc đời trước/sau chơi truyện.",
+      "files": [
+        "src/engine/story.ts",
+        "src/schema/story.ts",
+        "tests/story.test.ts"
+      ]
+    },
+    {
+      "id": "P3-19",
+      "phase": 3,
+      "title": "UI truyện, chơi lại và bộ sưu tập kết thúc",
+      "area": "stories",
+      "type": "feature",
+      "priority": "P1",
+      "deps": [
+        "P3-18",
+        "P2-01",
+        "P2-05"
+      ],
+      "goal": "Người chơi chọn truyện, tiếp tục, đạt kết thúc và chơi lại mà không xóa tiến độ.",
+      "ac": [
+        "Danh sách 5 truyện có trạng thái mới/đang chơi/đã kết thúc; không có nút mua hàng.",
+        "Lựa chọn node có focus và chặn submit trùng; tiếp tục phục hồi đúng node.",
+        "Chơi lại tạo lượt mới, giữ ending collection và achievement toàn cục."
+      ],
+      "verify": "Test vào/thoát/reload/chơi lại và mở hai kết thúc khác nhau.",
+      "files": [
+        "src/ui/screens/Stories.tsx",
+        "src/ui/screens/StoryPlay.tsx",
+        "tests/story-ui.test.tsx"
+      ]
+    },
+    {
+      "id": "P3-20",
+      "phase": 3,
+      "title": "Nhiều ô lưu, bản trước và xuất file",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P2-05",
+        "P1-09"
+      ],
+      "goal": "Người chơi giữ nhiều đời và có bản sao ra ngoài trình duyệt.",
+      "ac": [
+        "Tạo/đặt tên/chọn/xoá ô có xác nhận khi mất dữ liệu; không dùng tên nhân vật làm storage key.",
+        "Xuất JSON gồm format/schema/contentVersion/RNG/pending; có tùy chọn hồ sơ/ô được chọn.",
+        "Tự lưu và backup file được gọi đúng; lỗi lưu cho xuất state trong bộ nhớ."
+      ],
+      "verify": "Test tên trùng, xóa ô hiện tại, export khi storage lỗi và round-trip đủ state.",
+      "files": [
+        "src/ui/screens/Saves.tsx",
+        "src/ui/storage.ts",
+        "src/ui/export.ts",
+        "tests/save-slots.test.ts"
+      ]
+    },
+    {
+      "id": "P3-21",
+      "phase": 3,
+      "title": "Nhập file an toàn và phục hồi migration lỗi",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-20"
+      ],
+      "goal": "Nhập dữ liệu không làm mất ô đang chơi hoặc chạy code trong file.",
+      "ac": [
+        "Giới hạn 10 MB theo đề xuất; parse/schema/ID/money/relations/RNG/version trước ghi.",
+        "Migrate trên bản sao; schema tương lai/ID mất báo lỗi, giữ file và ô gốc.",
+        "Preview tuổi/tên/version/đích; mặc định ô mới, ghi đè cần xác nhận; chỉ báo thành công sau commit."
+      ],
+      "verify": "Test file rỗng/quá lớn/HTML/NaN/null/version mới, migration lỗi và IndexedDB commit lỗi.",
+      "files": [
+        "src/ui/import.ts",
+        "src/ui/screens/Saves.tsx",
+        "tests/import.test.ts"
+      ]
+    },
+    {
+      "id": "P3-22",
+      "phase": 3,
+      "title": "Chống ghi đè từ hai tab bằng revision",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P3-20",
+        "P2-05"
+      ],
+      "goal": "Hai tab cùng mở không được thay nhau ghi mất các năm chơi.",
+      "ac": [
+        "Lưu so expected revision trong cùng transaction; tab cũ không ghi nếu revision đã đổi.",
+        "Tab lỗi chuyển chỉ đọc/cho tải bản mới; timestamp chỉ dùng hiển thị không phân xử.",
+        "Thông báo rõ đời/ô liên quan; export trạng thái chưa lưu để người chơi chọn phục hồi."
+      ],
+      "verify": "Mở hai tab cùng lifeId, đổi tuổi ở tab A rồi submit ở B; kiểm không mất state A.",
+      "files": [
+        "src/ui/storage.ts",
+        "src/ui/tab-sync.ts",
+        "tests/e2e/multi-tab.spec.ts"
+      ]
+    },
+    {
+      "id": "P3-23",
+      "phase": 3,
+      "title": "Cài đặt cá nhân và thông báo game",
+      "area": "ui",
+      "type": "feature",
+      "priority": "P2",
+      "deps": [
+        "P2-07",
+        "P3-20"
+      ],
+      "goal": "Có cỡ chữ, sáng/tối, chuyển động và âm thanh nhẹ theo kế hoạch, lưu qua lần mở.",
+      "ac": [
+        "Preferences lưu riêng không reset mỗi đời; âm thanh có toggle và không autoplay trước tương tác.",
+        "Thông báo thành tích/kết quả không che lựa chọn và có văn bản cho screen reader.",
+        "Xoá toàn bộ dữ liệu tách khỏi dọn cache; có xác nhận cụ thể, không có menu tiếng Anh."
+      ],
+      "verify": "Test reload settings, reduced motion, muted audio và thao tác xóa/dọn khác nhau.",
+      "files": [
+        "src/ui/screens/Settings.tsx",
+        "src/ui/preferences.ts",
+        "tests/settings.test.tsx"
+      ]
+    },
+    {
+      "id": "P4-01",
+      "phase": 4,
+      "title": "Bộ tên, quê quán và gia đình hư cấu",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P0-06",
+        "P1-02"
+      ],
+      "goal": "Tạo nhiều nhân vật đọc tự nhiên và không trùng tên/tuổi gây khó phân biệt.",
+      "ac": [
+        "Có họ/tên đệm/tên và quê có ID; ghi đây là danh mục game không bắt buộc theo địa giới mới.",
+        "Phân bố gia đình/traits và giới hạn tuổi được validate; names cùng chuỗi vẫn khác entity IDs.",
+        "Tự viết dữ liệu, sourceKind/version đầy đủ; thử tên ngắn/dài và nhiều dấu."
+      ],
+      "verify": "Validate, thống kê phân bố 10.000 nhân vật và rà đọc một mẫu tên theo seed.",
+      "files": [
+        "src/content/names.json",
+        "src/content/family.json",
+        "tests/content/names.test.ts"
+      ]
+    },
+    {
+      "id": "P4-02",
+      "phase": 4,
+      "title": "Hoàn thiện dữ liệu 10 chương trình và 48 nghề",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-02",
+        "P3-03",
+        "P0-06"
+      ],
+      "goal": "Chuyển mục 15 thành catalog thực tế thay vì chỉ danh sách tên nghề.",
+      "ac": [
+        "48 job IDs độc lập trong 12 ngành; ranks không được đếm thành nghề mới; 10 education IDs có contract rõ.",
+        "Mỗi nghề có yêu cầu/bậc/lương/hiệu suất/hưu/sự kiện; mọi cấp/bằng được tham chiếu hợp lệ.",
+        "Fixture mở từng nghề/chương trình; thông số là hư cấu, không tuyên bố thu nhập/quy định thực tế."
+      ],
+      "verify": "Validate/stats; dựng trạng thái đạt/trượt yêu cầu cho từng ID và xét thăng chức/hưu.",
+      "files": [
+        "src/content/jobs.json",
+        "src/content/education.json",
+        "tests/content/careers.test.ts"
+      ]
+    },
+    {
+      "id": "P4-03",
+      "phase": 4,
+      "title": "Viết 27 hoạt động thể chất, sức khoẻ và học tập",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-08",
+        "P3-09",
+        "P3-02",
+        "P0-06"
+      ],
+      "goal": "Mỗi nhóm 9 hoạt động có hành vi khác nhau và dữ liệu có thể chạy.",
+      "ac": [
+        "Đủ act_thechat/suckhoe/hoctap_01..09 theo mục 16; mỗi ID có text, cost/time, limits và outcomes.",
+        "Chữa bệnh kiểm đúng instance; học/tập có tuổi và điều kiện hợp lệ, không tăng vô hạn miễn phí.",
+        "Có fixture mọi lựa chọn/kết quả; nguồn tự viết và status verified chỉ sau kiểm."
+      ],
+      "verify": "Validate/stats và fixture đạt/trượt/thiếu tiền/hết thời gian của 27 ID.",
+      "files": [
+        "src/content/activities/health-study.json",
+        "tests/content/health-study.test.ts"
+      ]
+    },
+    {
+      "id": "P4-04",
+      "phase": 4,
+      "title": "Viết 27 hoạt động xã hội, gia đình và tình cảm",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-08",
+        "P3-10",
+        "P3-11",
+        "P3-12",
+        "P0-06"
+      ],
+      "goal": "Hoạt động đúng người và vai trò, đa dạng kết quả theo quan hệ.",
+      "ac": [
+        "Đủ act_xahoi/giadinh/tinhcam_01..09; target role/instance, cost/time/limits/outcomes rõ.",
+        "Không dùng người đã mất hoặc tình cảm người trưởng thành với nhân vật chưa đủ tuổi.",
+        "Nhật ký ghi lý do/kết quả; khác tên đồng nghĩa phải có biến thể thực sự mới tính độc lập."
+      ],
+      "verify": "Fixture target còn sống/mất/role sai, trạng thái độc thân/kết hôn và phí mỗi hoạt động.",
+      "files": [
+        "src/content/activities/relations.json",
+        "tests/content/relation-activities.test.ts"
+      ]
+    },
+    {
+      "id": "P4-05",
+      "phase": 4,
+      "title": "Viết 27 hoạt động giải trí, du lịch và nhà cửa",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-08",
+        "P3-05",
+        "P0-06"
+      ],
+      "goal": "Các hoạt động thư giãn/chỗ ở có điều kiện tài sản và kết quả riêng.",
+      "ac": [
+        "Đủ act_giaitri/dulich/nhacua_01..09 với toàn bộ chi phí/lượt/thời gian/outcomes.",
+        "Sửa xe/nhà chọn instance hợp lệ; chuyến gia đình cần người đồng hành, tù chặn du lịch.",
+        "Không gọi dịch vụ ngoài hoặc cần hình từ CDN; text có chủ đề và hậu quả rõ."
+      ],
+      "verify": "Validate/stats; test tài sản không có, thiếu người đồng hành, chi phí và năm lặp.",
+      "files": [
+        "src/content/activities/leisure-home.json",
+        "tests/content/leisure-home.test.ts"
+      ]
+    },
+    {
+      "id": "P4-06",
+      "phase": 4,
+      "title": "Viết 27 hoạt động tài chính, thú cưng và rủi ro",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-08",
+        "P3-04",
+        "P3-07",
+        "P3-13",
+        "P0-06"
+      ],
+      "goal": "Có thu nhập phụ và rủi ro đầy đủ trong phạm vi hư cấu, không mở exploit.",
+      "ac": [
+        "Đủ act_taichinh/thucung/ruiro_01..09; vốn/target/age/limits/outcomes và crimeCategory rõ.",
+        "Thu nhập không lặp với lương; thú chết/thất lạc đúng điều kiện; may rủi không tự thành tiền án.",
+        "Mọi biến cố có hậu quả; không viết kỹ thuật phạm tội, nội dung giữ giọng game vui."
+      ],
+      "verify": "Validate/stats, fixture điều kiện và các nhánh lợi/lỗ/bắt/thất bại của 27 ID.",
+      "files": [
+        "src/content/activities/money-pets-risk.json",
+        "tests/content/risk-activities.test.ts"
+      ]
+    },
+    {
+      "id": "P4-07",
+      "phase": 4,
+      "title": "Hoàn thiện 24 tài sản và hợp đồng thuê",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-05",
+        "P3-06",
+        "P3-07",
+        "P0-06"
+      ],
+      "goal": "Catalog sở hữu và phí đủ để chơi kinh tế mà không phải đoán từ tên.",
+      "ac": [
+        "Đủ 6 nhóm×4 ID ở mục 17; giá/độ bền/phí/tác dụng/điều kiện mỗi loại được ghi.",
+        "Nhà thuê là hợp đồng riêng; thú cưng có vòng đời; đầu tư có unit và thị trường hư cấu.",
+        "Fixture mua/bán/upkeep/thiếu tiền; không tính tài sản thuê vào số đếm 24 hoặc tài sản ròng."
+      ],
+      "verify": "Validate, đối chiếu 24 IDs với spec; chạy round-trip mua/bán/năm cho từng loại.",
+      "files": [
+        "src/content/assets.json",
+        "src/content/housing.json",
+        "tests/content/assets.test.ts"
+      ]
+    },
+    {
+      "id": "P4-08",
+      "phase": 4,
+      "title": "Viết 15 sự kiện tuổi 0–5",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P1-06",
+        "P0-06",
+        "P3-10"
+      ],
+      "goal": "Pool trẻ nhỏ đủ chủ đề gia đình, khám phá và sức khoẻ, phù hợp tuổi.",
+      "ac": [
+        "15 ID: gia đình 6, thói quen/khám phá 5, sức khoẻ nhỏ 4; không tính fallback/nút truyện.",
+        "Mỗi event có text/options/outcomes/conditions/effects/cooldown/once và sourceKind.",
+        "Giọng nhật ký vui nhẹ; không giao hành vi người trưởng thành cho trẻ; 4 bản nháp mục 20 được xem xét."
+      ],
+      "verify": "Validate/stats theo nhóm tuổi; fixture mỗi choice/outcome và rà giọng văn.",
+      "files": [
+        "src/content/events/infancy.json",
+        "tests/content/infancy.test.ts"
+      ]
+    },
+    {
+      "id": "P4-09",
+      "phase": 4,
+      "title": "Viết 40 sự kiện tuổi 6–17",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-02",
+        "P3-10",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "Trường học, bạn và gia đình có lựa chọn đánh đổi thật, không chỉ cộng chỉ số.",
+      "ac": [
+        "40 ID: trường 15, bạn 10, gia đình 8, sở thích/lớn lên 7; tuổi/cấp học đúng.",
+        "Mọi lựa chọn có văn bản kết quả và điều kiện; once/cooldown tránh lặp; mẫu JSON mục 20.3 được review.",
+        "Nhánh liên quan bạn/cha mẹ xử lý đối tượng mất; không tính một biến thể text thành nhiều ID vô nghĩa."
+      ],
+      "verify": "Validate/stats, choice fixtures và kịch bản học/bỏ học/không còn người thân.",
+      "files": [
+        "src/content/events/school.json",
+        "tests/content/school.test.ts"
+      ]
+    },
+    {
+      "id": "P4-10",
+      "phase": 4,
+      "title": "Viết 40 sự kiện tuổi 18–30",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-03",
+        "P3-11",
+        "P3-01",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "Tuổi trẻ có cơ hội học, nghề, tình yêu và tiền chỗ ở.",
+      "ac": [
+        "40 ID: học/nghề 14, tình cảm 10, tiền/chỗ ở 9, xã hội/rủi ro 7.",
+        "Outcome đầy đủ; điều kiện nghề/học/độc thân/tiền/target và lịch hẹn tương lai hợp lệ.",
+        "Mỗi lựa chọn có đánh đổi; không có một đáp án luôn tốt hơn toàn bộ phần còn lại."
+      ],
+      "verify": "Validate/stats, fixture giàu/nghèo/học/làm việc/độc thân và nhánh kết quả.",
+      "files": [
+        "src/content/events/youth.json",
+        "tests/content/youth.test.ts"
+      ]
+    },
+    {
+      "id": "P4-11",
+      "phase": 4,
+      "title": "Viết 35 sự kiện tuổi 31–59",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-03",
+        "P3-12",
+        "P3-09",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "Trung niên có nghề, con cái, sức khoẻ và biến cố, dùng đúng state đã tích luỹ.",
+      "ac": [
+        "35 ID: nghề 10, gia đình 10, sức khoẻ 8, cộng đồng/biến cố 7.",
+        "Đối tượng con/bạn đời/tài sản có instance đúng; không giả định ai cũng có con hoặc nhà.",
+        "Nhánh lịch hẹn và hậu quả tiền/bệnh có đường kết thúc; giọng hài không xoá hậu quả thực trong game."
+      ],
+      "verify": "Validate/stats, fixture không con/ly hôn/mất việc/bệnh và mọi branch outcome.",
+      "files": [
+        "src/content/events/midlife.json",
+        "tests/content/midlife.test.ts"
+      ]
+    },
+    {
+      "id": "P4-12",
+      "phase": 4,
+      "title": "Viết 20 sự kiện tuổi 60+",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-03",
+        "P3-14",
+        "P3-09",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "Cuối đời vẫn có lựa chọn tích cực và di sản, không chỉ chờ chết.",
+      "ac": [
+        "20 ID: nghỉ hưu 5, gia đình 5, sức khoẻ 5, di sản/sở thích 5.",
+        "Có fixture người sống trên 100 và không người thân; điều kiện nghề/hưu/bệnh nhất quán.",
+        "Tử vong và di sản không bị event tự kết toán lần hai; văn bản không kỳ thị tuổi/hoàn cảnh."
+      ],
+      "verify": "Validate/stats và play trace người nghỉ hưu, độc thân, sống thọ với mọi outcome.",
+      "files": [
+        "src/content/events/elder.json",
+        "tests/content/elder.test.ts"
+      ]
+    },
+    {
+      "id": "P4-13",
+      "phase": 4,
+      "title": "40 thành tích, 10 danh hiệu và huy chương có nguồn",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-16",
+        "P3-17",
+        "P0-06"
+      ],
+      "goal": "Biến danh mục mục 19 thành các điều kiện có thể kiểm chứng.",
+      "ac": [
+        "40 achievement IDs ở 8 nhóm×5; ngưỡng/rule/progress không mâu thuẫn và có fixture đạt/chưa đạt.",
+        "10 danh hiệu có eligibility/score/tie-break; huy chương chỉ được tạo khi có nguồn award thực tế.",
+        "Tên/nhãn/mô tả riêng cho ba hệ; cập nhật global profile không tính trùng khi load."
+      ],
+      "verify": "Validate, test biên mọi ngưỡng và ties; thống kê số ID từng loại riêng.",
+      "files": [
+        "src/content/achievements.json",
+        "src/content/titles.json",
+        "src/content/medals.json",
+        "tests/content/rewards.test.ts"
+      ]
+    },
+    {
+      "id": "P4-14",
+      "phase": 4,
+      "title": "Truyện 1: Chiếc đồng hồ ở chợ cũ",
+      "area": "stories",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-18",
+        "P3-19",
+        "P0-06"
+      ],
+      "goal": "Viết toàn văn một truyện mới với các lựa chọn ký ức và vòng quay.",
+      "ac": [
+        "10–25 node có text/choices/outcomes; bắt đầu từ nhặt đồng hồ, có đánh đổi ký ức.",
+        "Ít nhất 3 endings ở mục 21; loop có giới hạn/exit; mọi node có choice hợp lệ.",
+        "Không copy truyện gốc; graph, ending fixtures và source metadata đầy đủ."
+      ],
+      "verify": "Duyệt toàn văn; validate graph; đi hết mọi ending và reload giữa node.",
+      "files": [
+        "src/content/stories/market-clock.json",
+        "tests/content/market-clock.test.ts"
+      ]
+    },
+    {
+      "id": "P4-15",
+      "phase": 4,
+      "title": "Truyện 2: Khu vườn trên mái",
+      "area": "stories",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-18",
+        "P3-19",
+        "P0-06"
+      ],
+      "goal": "Viết truyện cộng đồng với lựa chọn giữ vườn, thoả thuận và quan hệ hàng xóm.",
+      "ac": [
+        "10–25 node, text/choices/outcomes đủ; conflicts đội nhóm có hậu quả lưu trong storyState.",
+        "Ít nhất 3 endings giữ vườn/chuyển cây/vườn riêng; từng ending có trace.",
+        "Mỗi node có lựa chọn hợp lệ, không mua hàng/gọi máy chủ hoặc tác động đời thường ngầm."
+      ],
+      "verify": "Duyệt văn và validate graph; fixtures các ending và save round-trip.",
+      "files": [
+        "src/content/stories/rooftop-garden.json",
+        "tests/content/rooftop-garden.test.ts"
+      ]
+    },
+    {
+      "id": "P4-16",
+      "phase": 4,
+      "title": "Truyện 3: Chuyến xe lúc nửa đêm",
+      "area": "stories",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-18",
+        "P3-19",
+        "P0-06"
+      ],
+      "goal": "Viết truyện thời gian có luật lựa chọn rõ và các cuộc gặp theo tuổi khác.",
+      "ac": [
+        "10–25 node hoàn chỉnh; luật đổi hành trình/nhớ ký ức thể hiện bằng flags, không tùy tiện đổi logic.",
+        "Ít nhất 3 endings về hiện tại/hoà giải/cuộc đời khác đều reachable.",
+        "Không đổi tuổi/seed của đời thường; loop giới hạn và điều kiện đóng nhánh được kiểm."
+      ],
+      "verify": "Rà continuity, graph và toàn bộ endings; reload tại các nút chuyển thời gian.",
+      "files": [
+        "src/content/stories/midnight-bus.json",
+        "tests/content/midnight-bus.test.ts"
+      ]
+    },
+    {
+      "id": "P4-17",
+      "phase": 4,
+      "title": "Truyện 4: Tiệm thư chưa gửi",
+      "area": "stories",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-18",
+        "P3-19",
+        "P0-06"
+      ],
+      "goal": "Viết truyện thư và lựa chọn giao/giữ/viết thư riêng, tôn trọng mạch nhân vật.",
+      "ac": [
+        "10–25 node có văn bản/lựa chọn; trạng thái từng thư và người nhận không mâu thuẫn.",
+        "Ít nhất 3 endings trao thư/giữ bí mật có lý do/viết thư của mình.",
+        "Mọi nhánh/choice hợp lệ, nguồn tự viết; không coi tên node là nội dung đã xong."
+      ],
+      "verify": "Duyệt toàn văn, kiểm flags và fixtures mọi ending, khôi phục giữa lựa chọn.",
+      "files": [
+        "src/content/stories/letter-shop.json",
+        "tests/content/letter-shop.test.ts"
+      ]
+    },
+    {
+      "id": "P4-18",
+      "phase": 4,
+      "title": "Truyện 5: Đội hội làng bất đắc dĩ",
+      "area": "stories",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P3-18",
+        "P3-19",
+        "P0-06"
+      ],
+      "goal": "Viết truyện hài tổ chức lễ hội với nguồn lực và công sức cả đội.",
+      "ac": [
+        "10–25 node đủ text/choices/outcomes; tuyển đội→sự cố→chia công có flags liên kết.",
+        "Ít nhất 3 endings ấm áp/nổi tiếng mất bạn/nhỏ mà vui, không có một tuyến luôn tối ưu.",
+        "Mọi ending có trace và save giữa node; không phụ thuộc nội dung server."
+      ],
+      "verify": "Duyệt văn, graph, fixtures ba endings và kiểm mỗi lựa chọn bị khóa có lối còn lại.",
+      "files": [
+        "src/content/stories/festival-team.json",
+        "tests/content/festival-team.test.ts"
+      ]
+    },
+    {
+      "id": "P4-19",
+      "phase": 4,
+      "title": "Sự kiện nghề riêng: y tế, giáo dục, công nghệ, kinh doanh",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P4-02",
+        "P3-03",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "Thêm nét riêng cho 16 nghề đầu thay vì chỉ đổi mức lương.",
+      "ac": [
+        "Đề xuất tối thiểu 3 sự kiện tự viết cho mỗi 16 nghề; đếm riêng khỏi 150 sự kiện thường.",
+        "Mỗi sự kiện có yêu cầu nghề/bậc và choices/outcomes thực, không trùng văn bản giữa ngành.",
+        "Fixture trên từng nghề/bậc và xử lý khi đổi/mất việc giữa chuỗi."
+      ],
+      "verify": "Validate/stats ít nhất 48 ID nghề bổ sung; review theo ngành và kiểm branch.",
+      "files": [
+        "src/content/events/careers/professional.json",
+        "tests/content/professional-events.test.ts"
+      ]
+    },
+    {
+      "id": "P4-20",
+      "phase": 4,
+      "title": "Sự kiện nghề riêng: nghệ thuật, thể thao, pháp luật, nông nghiệp",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P4-02",
+        "P3-03",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "16 nghề tiếp có tình huống nghề, lựa chọn đạo đức và nỗ lực khác nhau.",
+      "ac": [
+        "Tối thiểu 3 sự kiện cho mỗi nghề, đếm riêng 48 ID bổ sung; không tăng số đếm pool thường.",
+        "Điều kiện bậc/kỹ năng/nghề đúng; các tình huống pháp lý là hư cấu, không tư vấn luật.",
+        "Choices/outcomes và fallback khi mất điều kiện có test; medals chỉ khi award khai báo."
+      ],
+      "verify": "Validate/stats và fixtures 16 nghề; rà văn và hậu quả nghề/tiền/quan hệ.",
+      "files": [
+        "src/content/events/careers/creative-rural.json",
+        "tests/content/creative-rural-events.test.ts"
+      ]
+    },
+    {
+      "id": "P4-21",
+      "phase": 4,
+      "title": "Sự kiện nghề riêng: xây dựng, dịch vụ, nhà nước, quân đội",
+      "area": "content",
+      "type": "content",
+      "priority": "P1",
+      "deps": [
+        "P4-02",
+        "P3-03",
+        "P3-17",
+        "P1-06",
+        "P0-06"
+      ],
+      "goal": "Hoàn tất độ riêng của 16 nghề cuối và nguồn nhận huy chương phù hợp.",
+      "ac": [
+        "Tối thiểu 3 event/16 nghề = 48 ID bổ sung; chỉ tiêu 144 sự kiện nghề toàn bộ được đo riêng.",
+        "Nghề/quân đội có lựa chọn hiệu suất, quan hệ, nguy cơ; không cung cấp hướng dẫn gây hại thực tế.",
+        "Mọi award/nhánh references đúng và fixture khi đã ra quân/đổi nghề."
+      ],
+      "verify": "Validate/stats, test award không lặp, branch cancellation và review văn theo ngành.",
+      "files": [
+        "src/content/events/careers/service-public.json",
+        "tests/content/service-public-events.test.ts"
+      ]
+    },
+    {
+      "id": "P4-22",
+      "phase": 4,
+      "title": "Graph nội dung và fixture cho các nhánh khó đạt",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P4-08",
+        "P4-09",
+        "P4-10",
+        "P4-11",
+        "P4-12",
+        "P4-14",
+        "P4-15",
+        "P4-16",
+        "P4-17",
+        "P4-18"
+      ],
+      "goal": "Độ phủ dựa trên chứng cứ, không chỉ ngẫu nhiên 10.000 đời.",
+      "ac": [
+        "Mỗi event/choice/outcome/story ending có trạng thái hoặc trace kích hoạt; rare có lý do.",
+        "Graph báo tham chiếu hỏng, nút không tới được theo phân tích hỗ trợ và loop không thoát.",
+        "Tách chưa gặp trong mô phỏng khỏi bất khả thi; validator không hứa chứng minh mọi predicate."
+      ],
+      "verify": "Chạy fixtures bắt buộc, xuất graph/report; cố ý thêm node mất đích phải thất bại.",
+      "files": [
+        "src/tools/coverage.ts",
+        "src/tools/graph.ts",
+        "tests/content/branch-coverage.test.ts"
+      ]
+    },
+    {
+      "id": "P4-23",
+      "phase": 4,
+      "title": "Rà biên tập và đóng băng manifest nội dung v1",
+      "area": "content",
+      "type": "docs",
+      "priority": "P0",
+      "deps": [
+        "P4-01",
+        "P4-02",
+        "P4-03",
+        "P4-04",
+        "P4-05",
+        "P4-06",
+        "P4-07",
+        "P4-13",
+        "P4-19",
+        "P4-20",
+        "P4-21",
+        "P4-22"
+      ],
+      "goal": "Nghiệm thu một bộ nội dung đủ chữ, đủ hậu quả và số đếm đúng trước cân bằng.",
+      "ac": [
+        "Đối chiếu 150 thường/48 nghề/108 hoạt động/24 tài sản/40 achievements/5 truyện; nghề bổ sung đếm riêng.",
+        "Rà giọng Việt, tuổi, đánh đổi, lặp ý, asset sources; các mục chưa verified được liệt kê, không giấu trong tổng.",
+        "contentVersion và báo cáo manifest/graph được lưu; không tự ghi là mọi nội dung gốc phục hồi."
+      ],
+      "verify": "Rà thủ công từng nhóm và chạy toàn bộ validator/stats/fixtures; xuất báo cáo số lượng.",
+      "files": [
+        "src/content/manifest.json",
+        "docs/content-v1-review.md",
+        "src/tools/stats.ts"
+      ]
+    },
+    {
+      "id": "P5-01",
+      "phase": 5,
+      "title": "Cân bằng tuổi thọ và chạy 10.000 đời đủ hệ",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P4-23",
+        "P3-15",
+        "P3-17",
+        "P1-10"
+      ],
+      "goal": "Xác minh engine với toàn bộ hệ và dữ liệu, không dùng báo cáo mẫu làm nghiệm thu.",
+      "ac": [
+        "10.000 seed nhiều chiến lược: crash/kẹt 0; lỗi có trace tái hiện.",
+        "Mục tiêu tuổi thọ 70–80, chết nền trước 20 dưới 2%; báo riêng chết do lựa chọn/rủi ro.",
+        "Báo nghề/tài sản/sự kiện/fallback/lặp; chỉnh balance theo nhóm, ghi version và so baseline."
+      ],
+      "verify": "Chạy command simulate full; lưu báo cáo, seed và diff tham số; test focused còn qua.",
+      "files": [
+        "src/content/balance.json",
+        "src/tools/simulate.ts",
+        "docs/qa/simulation-v1.md"
+      ]
+    },
+    {
+      "id": "P5-02",
+      "phase": 5,
+      "title": "Kiểm exploit tiền, lương, nợ và di sản",
+      "area": "economy",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P4-23",
+        "P3-14",
+        "P3-15",
+        "P3-06"
+      ],
+      "goal": "Không có chuỗi thao tác chắc chắn sinh tiền do lỗi ghi lại hoặc bốc lại.",
+      "ac": [
+        "Kiểm mua/bán cùng năm, mở menu/reload, lương/phí/học phí, nhận award và chuyển đời.",
+        "Kiểm safe integer/rounding/nợ lớn và thiếu tiền; không có khoản áp dụng lại sau migration.",
+        "Mỗi lỗi có test tái hiện được; chiến lược chơi mạnh hợp lý không tự bị coi là exploit."
+      ],
+      "verify": "Chạy sequences đối kháng/repeat submit/restore snapshot; đối chiếu ledger từng transaction.",
+      "files": [
+        "tests/economy-abuse.test.ts",
+        "tests/estate-abuse.test.ts",
+        "docs/qa/economy.md"
+      ]
+    },
+    {
+      "id": "P5-03",
+      "phase": 5,
+      "title": "Luồng đủ hệ, gia đình nhiều đời và mọi kết thúc truyện",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P4-23",
+        "P3-19",
+        "P3-15"
+      ],
+      "goal": "Kiểm UI→engine→snapshot→khôi phục cho những mạch dài.",
+      "ac": [
+        "Học→nghề→tài sản→hôn nhân→con→di sản→đời con có trace và không trùng tiền/tuổi.",
+        "Tù, bệnh, ly hôn và người thân mất giữa nhánh có luồng thay thế hợp lệ.",
+        "Mọi ending của 5 truyện được đi qua; reload/story exit không đổi state đời thường."
+      ],
+      "verify": "Chạy browser E2E và fixtures; lưu bằng chứng khôi phục tại những điểm chuyển hệ.",
+      "files": [
+        "tests/e2e/full-life.spec.ts",
+        "tests/e2e/stories.spec.ts",
+        "docs/qa/full-flows.md"
+      ]
+    },
+    {
+      "id": "P5-04",
+      "phase": 5,
+      "title": "Rà khả năng tiếp cận và dữ liệu UI cực đoan",
+      "area": "ui",
+      "type": "test",
+      "priority": "P1",
+      "deps": [
+        "P4-23",
+        "P3-23"
+      ],
+      "goal": "Game đọc và chơi được khi chữ dài, nhiều quan hệ, bàn phím hoặc giảm chuyển động.",
+      "ac": [
+        "Vùng bấm/focus/keyboard/dialog/screen reader labels được rà; màu không là tín hiệu duy nhất.",
+        "Tên dài/ký tự đặc biệt, tiền lớn, 500+ log, nhiều con/tài sản và cỡ chữ lớn không vỡ layout.",
+        "Enter/number shortcuts không kích hoạt khi đang nhập text hoặc pha không phù hợp."
+      ],
+      "verify": "Rà bằng browser và công cụ accessibility sẵn có; kiểm bàn phím và ít nhất một screen reader.",
+      "files": [
+        "src/ui/",
+        "tests/e2e/accessibility.spec.ts",
+        "docs/qa/accessibility.md"
+      ]
+    },
+    {
+      "id": "P5-05",
+      "phase": 5,
+      "title": "Đo hiệu năng và tối ưu đường chơi năm",
+      "area": "quality",
+      "type": "test",
+      "priority": "P1",
+      "deps": [
+        "P4-23",
+        "P5-03"
+      ],
+      "goal": "Đo các chỉ tiêu trên build thực thay vì thêm tối ưu chưa cần.",
+      "ac": [
+        "Báo bundle khởi động nén với mục tiêu dưới 300 KB; tách tổng bộ offline.",
+        "Đo xử lý năm dưới 50 ms trên thiết bị tầm trung được ghi tên; log dài/quan hệ lớn vẫn phản hồi.",
+        "Chỉ sửa bottleneck có đo; virtualize nhật ký khi cần và không mất khả năng đọc/focus."
+      ],
+      "verify": "Profile build sản xuất; ghi thiết bị/dữ liệu/lần đo p50/p95 và trước/sau tối ưu.",
+      "files": [
+        "src/ui/components/LifeLog.tsx",
+        "src/engine/year.ts",
+        "docs/qa/performance.md"
+      ]
+    },
+    {
+      "id": "P5-06",
+      "phase": 5,
+      "title": "PWA và tải đủ bộ nội dung offline",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P4-23",
+        "P3-19",
+        "P3-23"
+      ],
+      "goal": "Tắt mạng vẫn tới được mọi tuổi/truyện, không chỉ màn đầu đã mở.",
+      "ac": [
+        "Manifest/icon/service worker ở HTTPS hoặc localhost; không mặc định file:// hoặc LAN HTTP hỗ trợ PWA.",
+        "Cache app/fonts/assets và tất cả content packages; chỉ hiện ready offline khi tệp đầy đủ.",
+        "Không CDN bắt buộc, không backend nội dung; bản cá nhân giữ phạm vi truy cập đã chọn."
+      ],
+      "verify": "Cài/tải đủ, tắt mạng và thử tuổi/truyện chưa mở trước đó; ghi file bị thiếu nếu có.",
+      "files": [
+        "vite.config.ts",
+        "public/manifest.webmanifest",
+        "src/ui/offline.ts",
+        "tests/e2e/offline.spec.ts"
+      ]
+    },
+    {
+      "id": "P5-07",
+      "phase": 5,
+      "title": "Cập nhật cache và content version không mất ô lưu",
+      "area": "persistence",
+      "type": "feature",
+      "priority": "P0",
+      "deps": [
+        "P5-06",
+        "P3-21",
+        "P3-22"
+      ],
+      "goal": "Bản mới không trộn engine/content hoặc reload giữa lựa chọn.",
+      "ac": [
+        "App/cache/content cùng version; kích hoạt bản mới sau tải đầy đủ và qua kiểm tương thích.",
+        "Giữ pendingEvent/snapshot hoặc migration rõ; không auto reload giữa choice.",
+        "Dọn cache không xoá IndexedDB; ID bỏ có mapping hoặc chế độ xem/xuất thay vì sửa ngẫu nhiên."
+      ],
+      "verify": "Test update từ bản cũ đang awaiting_choice, thiếu tệp, ID bị bỏ và rollback cache.",
+      "files": [
+        "src/ui/updates.ts",
+        "src/engine/migrations.ts",
+        "tests/e2e/update.spec.ts"
+      ]
+    },
+    {
+      "id": "P5-08",
+      "phase": 5,
+      "title": "Kiểm phục hồi dữ liệu và sự cố lưu trữ",
+      "area": "persistence",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P3-20",
+        "P3-21",
+        "P3-22",
+        "P5-07"
+      ],
+      "goal": "Người chơi có đường lấy lại dữ liệu ngay cả khi trình duyệt lưu lỗi.",
+      "ac": [
+        "Quota/transaction failure và tab cũ không ghi đè; UI báo chưa lưu được và export được memory state.",
+        "Backup xuất rồi nhập trên một trình duyệt/thiết bị khác giữ đủ state và hồ sơ được chọn.",
+        "Xoá ô/xoá toàn bộ/dọn cache có tác động tách bạch; không hứa persist là bảo đảm không mất dữ liệu."
+      ],
+      "verify": "Fault injection storage, two-tab E2E, migration lỗi và round-trip giữa môi trường.",
+      "files": [
+        "tests/e2e/storage-recovery.spec.ts",
+        "docs/qa/storage-recovery.md"
+      ]
+    },
+    {
+      "id": "P5-09",
+      "phase": 5,
+      "title": "Chơi thử thiết bị thật và sửa lỗi chặn chơi",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P5-01",
+        "P5-02",
+        "P5-03",
+        "P5-04",
+        "P5-05",
+        "P5-06",
+        "P5-07",
+        "P5-08"
+      ],
+      "goal": "Kiểm cảm giác vui/đọc/bấm và các khác biệt trình duyệt trước phát hành.",
+      "ac": [
+        "Có bằng chứng thiết bị/trình duyệt/mobile OS, chơi một đời và truyện cả online/offline.",
+        "Đổi ứng dụng/khóa màn/đóng mở vẫn phục hồi; thao tác một tay và chữ không bị che.",
+        "Mọi blocker có issue liên kết và đã sửa/kiểm lại; phần không có thiết bị kiểm được ghi rõ, không đánh dấu đạt giả."
+      ],
+      "verify": "Playtest điện thoại thật và desktop; ghi seed, lựa chọn, mức lặp và lỗi UX với ảnh cần thiết.",
+      "files": [
+        "docs/qa/device-playtest.md",
+        "tests/e2e/"
+      ]
+    },
+    {
+      "id": "P6-01",
+      "phase": 6,
+      "title": "Chọn và cấu hình nơi chạy cá nhân",
+      "area": "release",
+      "type": "chore",
+      "priority": "P0",
+      "deps": [
+        "G5",
+        "P0-02"
+      ],
+      "goal": "Có bản web truy cập phù hợp chơi cá nhân, không công khai ngoài ý muốn.",
+      "ac": [
+        "So phương án localhost/HTTPS cá nhân/hosting có bảo vệ; ghi quyết định và audience thực.",
+        "Repo riêng tư/URL khó đoán không được dùng làm bằng chứng website private; kiểm truy cập theo phương án chọn.",
+        "Không thêm backend game hoặc đồng bộ; chưa rõ quyền asset thì không đưa asset đó vào bản đóng gói."
+      ],
+      "verify": "Kiểm HTTPS/PWA và truy cập trong/ngoài phiên chủ sở hữu; ghi giới hạn truy cập của phương án.",
+      "files": [
+        "docs/deployment.md",
+        "vite.config.ts",
+        "README.md"
+      ]
+    },
+    {
+      "id": "P6-02",
+      "phase": 6,
+      "title": "Đóng bản v1 có tag, changelog và artifact",
+      "area": "release",
+      "type": "chore",
+      "priority": "P0",
+      "deps": [
+        "P6-01",
+        "G5"
+      ],
+      "goal": "Bản phát hành tái tạo được từ source và contentVersion xác định.",
+      "ac": [
+        "Build từ lockfile/source sạch sau test/validate; app/content/schema versions được ghi.",
+        "Có changelog theo hành vi người chơi, tag version và artifact tương ứng; không chứa APK/secret/dữ liệu cá nhân.",
+        "Ghi giới hạn còn lại và đường phục hồi bản trước; không phát hành với blocker QA chưa đóng."
+      ],
+      "verify": "Rebuild từ tag ở checkout sạch và đối chiếu manifest/artifact; rà nội dung đóng gói.",
+      "files": [
+        "CHANGELOG.md",
+        "docs/release-v1.md",
+        "package.json"
+      ]
+    },
+    {
+      "id": "P6-03",
+      "phase": 6,
+      "title": "Hướng dẫn chơi, cài và sao lưu/phục hồi",
+      "area": "docs",
+      "type": "docs",
+      "priority": "P1",
+      "deps": [
+        "P6-01",
+        "P3-21",
+        "P5-08"
+      ],
+      "goal": "Người chơi dùng bản web và bảo vệ ô lưu mà không cần biết implementation.",
+      "ac": [
+        "Hướng dẫn tạo đời/chọn/tăng tuổi, hệ nghề/quan hệ/truyện và tiếp tục làm con.",
+        "Phân biệt tự lưu/export; có hướng dẫn nhập/khôi phục, đổi thiết bị và trạng thái chưa lưu được.",
+        "Hướng dẫn cài/offline/update theo phương án thực, tiếng Việt rõ; không hứa chơi offline từ lần mở đầu chưa tải."
+      ],
+      "verify": "Làm theo guide trên một môi trường sạch, xuất/nhập file và tắt mạng; rà thuật ngữ UI.",
+      "files": [
+        "docs/player-guide.md",
+        "docs/troubleshooting.md",
+        "README.md"
+      ]
+    },
+    {
+      "id": "P6-04",
+      "phase": 6,
+      "title": "Nghiệm thu bản phát hành trên môi trường đã chọn",
+      "area": "quality",
+      "type": "test",
+      "priority": "P0",
+      "deps": [
+        "P6-02",
+        "P6-03"
+      ],
+      "goal": "Xác nhận bản đóng gói chạy đúng, không chỉ dev server và mô phỏng.",
+      "ac": [
+        "Chơi/khôi phục một đời, đi một trace nhiều đời, mở mọi gói tuổi/truyện offline trên release.",
+        "Kiểm audience, bản update, export/import và đường phục hồi; ghi version/thiết bị/URL cụ thể.",
+        "Checklist tất cả phase đạt bằng chứng, known issues không che blocker; ghi rõ không xác nhận đủ dataset gốc."
+      ],
+      "verify": "Smoke trên artifact/tag phát hành và thiết bị thật; liên kết báo cáo QA, release và issue đã đóng.",
+      "files": [
+        "docs/qa/release-acceptance.md",
+        "docs/release-v1.md"
+      ]
+    }
+  ]
+}
