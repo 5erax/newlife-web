@@ -1,4 +1,4 @@
-# Xác minh candidate — 12/10/2026
+# Xác minh candidate — 12–13/10/2026
 
 App/content1.0.0, schema1. Những kết quả dưới đây là kiểm trên phần mềm và Windows/Chrome; không được diễn giải thành đã kiểm điện thoại vật lý hoặc phục hồi đủ nội dung Android.
 
@@ -6,7 +6,7 @@ App/content1.0.0, schema1. Những kết quả dưới đây là kiểm trên ph
 | --- | --- |
 | Tên/gia đình |Họ/tên đệm/tên,16quê cóID;10.000birthfixture kiểm tuổi/ID, phân bố anh chị em60–70% |
 | TypeScript strict + production build | Đạt |
-| Unit/schema/content/lifecycle/storage | 42 tests, 8 files, đạt |
+| Unit/schema/content/lifecycle/storage | 43 tests, 8 files, đạt |
 | Browser E2E | 7 luồng, Chrome thật trên Windows, đạt |
 | 150 thường +144 nghề +5fallback | 593 choice/outcome được ép seed đúng và thực thi; kiểm log đúng outcome, serialize/reload |
 | Hoạt động |108 ID, mọi outcome/target được thực thi |
@@ -20,9 +20,9 @@ App/content1.0.0, schema1. Những kết quả dưới đây là kiểm trên ph
 
 ## Mô phỏng cuối
 
-10.000 seed `(i*7919+42)>>>0`,4 chiến lược (thể chất/học/công việc+gia đình/rủi ro). Crash0, kẹt0; tuổi trung bình79.36, median82, chết trước20 là1.13%; chết trực tiếp do effect0. Báo cáo đầu khoảng696.44s trên máy hiện tại. ReportJSON ở simulation-10000.json.
+10.000 seed `(i*7919+42)>>>0`,4 chiến lược (thể chất/học/công việc+gia đình/rủi ro). Crash0, kẹt0; tuổi trung bình79.36, median82, chết trước20 là1.13%; chết trực tiếp do effect0. Windows ban đầu696.44s; CI bổ sung289.73s trên máy hiện tại. ReportJSON ở simulation-10000.json.
 
-Bot gặp159/294event,3 nghề và3 tài sản,2 fallback. Đây là độ phủ chiến lược bot, không phải xác nhận294event xuất hiện tự nhiên. Fixture riêng đi qua toàn bộ294event/choices/outcomes,48nghề,24tài sản. Các nhánh chuyển đời được kiểm riêng bằng lifecycle/storage; bot dừng ở tổng kết.
+Bot gặp159/294event,3 nghề và3 tài sản,2 fallback;1.372.613 lượt mở,502.351 lượt lặp(36.6%),record lặp cao nhất76bao gồm fallback. Đây là độ phủ chiến lược bot, không phải xác nhận294event xuất hiện tự nhiên. Fixture riêng đi qua toàn bộ294event/choices/outcomes,48nghề,24tài sản. Các nhánh chuyển đời được kiểm riêng bằng lifecycle/storage; bot dừng ở tổng kết.
 
 So baseline đầu: mean81.08 ngoài mục tiêu70–80; chỉnh mortality ở60+ và kiểm sức khoẻ0/50/100 hệ số2/1/0.5. Bản cân bằng cuối đạt mục tiêu; chưa dùng số này như mô hình tuổi thọ thực.
 

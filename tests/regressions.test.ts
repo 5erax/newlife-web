@@ -35,6 +35,28 @@ const fixture = (seed = 42) => {
 };
 describe("release regressions", () => {
   beforeEach(clearData);
+  it("keeps a living biological parent after their divorce from the previous character", () => {
+    const s = fixture(),
+      child = s.relations.find((r) => r.id === "child_test")!;
+    s.relations.push({
+      id: "other_parent",
+      name: "Minh",
+      gender: "male",
+      role: "friend",
+      age: 48,
+      closeness: 50,
+      alive: true,
+      trait: "vui",
+      resources: 0,
+      parents: [],
+    });
+    child.parents.push("other_parent");
+    finishLife(s, "Thử");
+    const next = reduce(s, { type: "continueChild", id: child.id });
+    expect(next.relations.find((r) => r.id === "other_parent")?.role).toBe(
+      "father",
+    );
+  });
   it("does not carry newborn death settlement into a living child", () => {
     const s = fixture(182);
     finishLife(s, "Thử");

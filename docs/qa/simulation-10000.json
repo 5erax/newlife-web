@@ -11,5 +11,9 @@
   "fallbacksSeen": 2,
   "eventsSeen": 159,
   "eventCount": 294,
-  "durationSeconds": 696.44
+  "eventOccurrences": 1372613,
+  "repeatedOccurrences": 502351,
+  "repeatedPercent": 36.6,
+  "maxEventOccurrences": 76,
+  "durationSeconds": 289.73
 }
