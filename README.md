@@ -8,6 +8,7 @@ Kế hoạch remake game mô phỏng cuộc đời bằng tiếng Việt, ưu ti
 - [Đặc tả bổ sung, mục 13–24](docs/web-spec-supplement.md).
 - [Kết quả kiểm tra tĩnh APK](docs/apk-research.md).
 - [Lộ trình, milestone và index issue](tasks/plan.md).
+- [Cách dùng nhãn và cập nhật trạng thái backlog](docs/backlog-guide.md).
 
 GitHub Issues là nơi theo dõi công việc chính. Tài liệu kế hoạch chỉ giữ index và các quyết định; không duy trì một checklist task thứ hai ngoài Issues.
 
