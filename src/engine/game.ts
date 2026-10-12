@@ -309,7 +309,11 @@ function childLife(s: GameState, id: string) {
     (x) => x.lifeId !== next.id,
   );
   next.relations = s.relations
-    .filter((r) => r.id !== id && r.role !== "lover" && r.role !== "friend")
+    .filter(
+      (r) =>
+        r.id !== id &&
+        (child.parents.includes(r.id) || !["lover", "friend"].includes(r.role)),
+    )
     .map((r) => ({
       ...r,
       role: child.parents.includes(r.id)
