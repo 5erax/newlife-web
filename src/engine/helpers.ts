@@ -92,7 +92,9 @@ export function money(
   if (s.money > (s.counters.saved ?? 0)) s.counters.saved = s.money;
 }
 export function personName(s: GameState, gender: "male" | "female" = "female") {
-  return `${pick(s, names.surnames)} ${pick(s, gender === "male" ? names.male : names.female)}`;
+  const surname = pick(s, names.surnames),
+    given = pick(s, gender === "male" ? names.male : names.female);
+  return `${surname} ${names.middles[gender][s.rng % names.middles[gender].length]} ${given}`;
 }
 export function makePerson(s: GameState, role: Role, age: number): Relation {
   requireGame(

@@ -16,4 +16,8 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
-      - run: npm run simulate -- 10000
+      - run: npm run simulate -- 10000 | tee simulation-report.txt
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: simulation-report
+          path: simulation-report.txt

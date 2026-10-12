@@ -81,5 +81,77 @@
     "sáng tạo",
     "cẩn thận"
   ],
-  "sourceKind": "original_web"
+  "sourceKind": "original_web",
+  "version": "1.0.0",
+  "middles": {
+    "male": ["Văn", "Minh", "Gia", "Hoàng"],
+    "female": ["Thị", "Ngọc", "Minh", "Khánh"]
+  },
+  "hometownCatalog": [
+    {
+      "id": "home_01",
+      "name": "Hà Nội"
+    },
+    {
+      "id": "home_02",
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": "home_03",
+      "name": "Huế"
+    },
+    {
+      "id": "home_04",
+      "name": "Hội An"
+    },
+    {
+      "id": "home_05",
+      "name": "Hải Phòng"
+    },
+    {
+      "id": "home_06",
+      "name": "Cần Thơ"
+    },
+    {
+      "id": "home_07",
+      "name": "Đà Lạt"
+    },
+    {
+      "id": "home_08",
+      "name": "Nha Trang"
+    },
+    {
+      "id": "home_09",
+      "name": "Vũng Tàu"
+    },
+    {
+      "id": "home_10",
+      "name": "Thành phố Hồ Chí Minh"
+    },
+    {
+      "id": "home_11",
+      "name": "Buôn Ma Thuột"
+    },
+    {
+      "id": "home_12",
+      "name": "Quy Nhơn"
+    },
+    {
+      "id": "home_13",
+      "name": "Sa Pa"
+    },
+    {
+      "id": "home_14",
+      "name": "Mỹ Tho"
+    },
+    {
+      "id": "home_15",
+      "name": "Phan Thiết"
+    },
+    {
+      "id": "home_16",
+      "name": "Long Xuyên"
+    }
+  ],
+  "note": "Danh mục quê hư cấu của game; không dùng để xác nhận địa giới hành chính."
 }

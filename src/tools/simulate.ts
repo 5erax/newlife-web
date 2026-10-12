@@ -143,6 +143,9 @@ export function runSimulation(total: number) {
   const careers = new Set<string>(),
     owned = new Set<string>();
   const seen = new Set<string>();
+  let eventOccurrences = 0,
+    repeatedOccurrences = 0,
+    maxEventOccurrences = 0;
   const started = performance.now();
   for (let i = 0; i < total; i++) {
     const seed = (i * 7919 + 42) >>> 0;
@@ -163,6 +166,11 @@ export function runSimulation(total: number) {
       if (s.job) careers.add(s.job.id);
       if (s.age < 20) early++;
       Object.keys(s.history).forEach((id) => seen.add(id));
+      for (const h of Object.values(s.history)) {
+        eventOccurrences += h.count;
+        repeatedOccurrences += Math.max(0, h.count - 1);
+        maxEventOccurrences = Math.max(maxEventOccurrences, h.count);
+      }
       assert(s.phase === "dead");
       assert(s.stats.health >= 0 && s.stats.health <= 100);
       assert(Number.isSafeInteger(s.money));
@@ -188,6 +196,12 @@ export function runSimulation(total: number) {
     fallbacksSeen: [...seen].filter((id) => id.startsWith("fallback_")).length,
     eventsSeen: events.filter((e) => seen.has(e.id)).length,
     eventCount: events.length,
+    eventOccurrences,
+    repeatedOccurrences,
+    repeatedPercent: Number(
+      ((100 * repeatedOccurrences) / Math.max(1, eventOccurrences)).toFixed(2),
+    ),
+    maxEventOccurrences,
     durationSeconds: Number(((performance.now() - started) / 1000).toFixed(2)),
   };
   return report;

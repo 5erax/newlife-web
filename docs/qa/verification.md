@@ -4,8 +4,9 @@ App/content1.0.0, schema1. Những kết quả dưới đây là kiểm trên ph
 
 | Kiểm tra | Kết quả |
 | --- | --- |
+| Tên/gia đình |Họ/tên đệm/tên,16quê cóID;10.000birthfixture kiểm tuổi/ID, phân bố anh chị em60–70% |
 | TypeScript strict + production build | Đạt |
-| Unit/schema/content/lifecycle/storage | 40 tests, 7 files, đạt |
+| Unit/schema/content/lifecycle/storage | 42 tests, 8 files, đạt |
 | Browser E2E | 7 luồng, Chrome thật trên Windows, đạt |
 | 150 thường +144 nghề +5fallback | 593 choice/outcome được ép seed đúng và thực thi; kiểm log đúng outcome, serialize/reload |
 | Hoạt động |108 ID, mọi outcome/target được thực thi |
@@ -19,7 +20,7 @@ App/content1.0.0, schema1. Những kết quả dưới đây là kiểm trên ph
 
 ## Mô phỏng cuối
 
-10.000 seed `(i*7919+42)>>>0`,4 chiến lược (thể chất/học/công việc+gia đình/rủi ro). Crash0, kẹt0; tuổi trung bình79.36, median82, chết trước20 là1.13%; chết trực tiếp do effect0. Khoảng chạy696.44s trên máy hiện tại. ReportJSON ở simulation-10000.json.
+10.000 seed `(i*7919+42)>>>0`,4 chiến lược (thể chất/học/công việc+gia đình/rủi ro). Crash0, kẹt0; tuổi trung bình79.36, median82, chết trước20 là1.13%; chết trực tiếp do effect0. Báo cáo đầu khoảng696.44s trên máy hiện tại. ReportJSON ở simulation-10000.json.
 
 Bot gặp159/294event,3 nghề và3 tài sản,2 fallback. Đây là độ phủ chiến lược bot, không phải xác nhận294event xuất hiện tự nhiên. Fixture riêng đi qua toàn bộ294event/choices/outcomes,48nghề,24tài sản. Các nhánh chuyển đời được kiểm riêng bằng lifecycle/storage; bot dừng ở tổng kết.
 
@@ -27,7 +28,7 @@ So baseline đầu: mean81.08 ngoài mục tiêu70–80; chỉnh mortality ở60
 
 ## Hiệu năng
 
-Bundle khởi động: JS177.51KB gzip +workbox2.25KB +CSS6.49KB ≈186KB, dưới mục tiêu300KB. Tổng precache khoảng815KiB,11entry; toàn bộ JSON nội dung được bundle. Vite vẫn cảnh báo chunk minified>500KB; chưa tách vì số nén/đo hiện tại đạt, không ẩn cảnh báo.
+Bundle khởi động: JS177.76KB gzip +workbox2.25KB +CSS6.49KB ≈186.5KB, dưới mục tiêu300KB. Tổng precache khoảng815KiB,11entry; toàn bộ JSON nội dung được bundle. Vite vẫn cảnh báo chunk minified>500KB; chưa tách vì số nén/đo hiện tại đạt, không ẩn cảnh báo.
 
 Windows, Intel i5-12500H, Node24.19.0:300 lần xử lý năm với1.001log,102người,40tài sản; p50=0.1955ms,p95=0.4216ms,max=1.8973ms. Đo này trong Node, không thay phép đo tương tác trên điện thoại. Source benchmark có thể chạy lại.
 

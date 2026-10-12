@@ -15,7 +15,33 @@ import {
 import type { Condition } from "../engine/types";
 import { conditionSchema } from "../schema/content";
 import assert from "node:assert/strict";
+import names from "../content/names.json" with { type: "json" };
 export function validateContent() {
+  assert.equal(names.sourceKind, "original_web");
+  assert.equal(names.version, "1.0.0");
+  for (const list of [
+    names.surnames,
+    names.male,
+    names.female,
+    names.middles.male,
+    names.middles.female,
+    names.traits,
+  ])
+    assert(
+      list.length &&
+        list.every((n) => typeof n === "string" && n.trim() && n.length <= 60),
+      "Invalid name/trait catalog",
+    );
+  assert.equal(
+    new Set(names.hometownCatalog.map((h) => h.id)).size,
+    names.hometowns.length,
+  );
+  assert(
+    names.hometownCatalog.every(
+      (h) => /^home_\d+$/.test(h.id) && names.hometowns.includes(h.name),
+    ),
+    "Invalid hometown ID",
+  );
   for (const [name, list] of Object.entries({
     activities,
     assets,

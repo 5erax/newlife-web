@@ -142,8 +142,8 @@ export function Start({
                 maxLength={100}
               />
               <datalist id="hometowns">
-                {names.hometowns.map((n) => (
-                  <option key={n} value={n} />
+                {names.hometownCatalog.map((n) => (
+                  <option key={n.id} value={n.name} />
                 ))}
               </datalist>
             </label>
