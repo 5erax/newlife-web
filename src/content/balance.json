@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "mortality": [
+    {
+      "maxAge": 0,
+      "base": 0.005
+    },
+    {
+      "maxAge": 14,
+      "base": 0.0005
+    },
+    {
+      "maxAge": 39,
+      "base": 0.001
+    },
+    {
+      "maxAge": 59,
+      "base": 0.005
+    },
+    {
+      "maxAge": 69,
+      "base": 0.02
+    },
+    {
+      "maxAge": 79,
+      "base": 0.055
+    },
+    {
+      "maxAge": 89,
+      "base": 0.14
+    },
+    {
+      "maxAge": 99,
+      "base": 0.28
+    },
+    {
+      "maxAge": 120,
+      "base": 0.5
+    }
+  ],
+  "healthMidpoint": 50,
+  "healthScale": 50
+}

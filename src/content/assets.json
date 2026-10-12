@@ -1,0 +1,306 @@
+[
+  {
+    "id": "asset_nha_01",
+    "name": "Căn hộ nhỏ",
+    "category": "house",
+    "price": 700000000,
+    "upkeep": 7000000,
+    "minAge": 18,
+    "yearlyChange": 0.02,
+    "bonus": {
+      "happiness": 2
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_nha_02",
+    "name": "Căn hộ rộng",
+    "category": "house",
+    "price": 1500000000,
+    "upkeep": 15000000,
+    "minAge": 18,
+    "yearlyChange": 0.02,
+    "bonus": {
+      "happiness": 2
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_nha_03",
+    "name": "Nhà phố",
+    "category": "house",
+    "price": 3000000000,
+    "upkeep": 30000000,
+    "minAge": 18,
+    "yearlyChange": 0.02,
+    "bonus": {
+      "happiness": 2
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_nha_04",
+    "name": "Biệt thự",
+    "category": "house",
+    "price": 8000000000,
+    "upkeep": 80000000,
+    "minAge": 18,
+    "yearlyChange": 0.02,
+    "bonus": {
+      "happiness": 2
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xe_01",
+    "name": "Xe đạp",
+    "category": "vehicle",
+    "price": 3000000,
+    "upkeep": 90000,
+    "minAge": 13,
+    "yearlyChange": -0.1,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xe_02",
+    "name": "Xe máy",
+    "category": "vehicle",
+    "price": 30000000,
+    "upkeep": 900000,
+    "minAge": 18,
+    "yearlyChange": -0.1,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xe_03",
+    "name": "Ô tô phổ thông",
+    "category": "vehicle",
+    "price": 500000000,
+    "upkeep": 15000000,
+    "minAge": 18,
+    "yearlyChange": -0.1,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xe_04",
+    "name": "Ô tô cao cấp",
+    "category": "vehicle",
+    "price": 2000000000,
+    "upkeep": 60000000,
+    "minAge": 18,
+    "yearlyChange": -0.1,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dautu_01",
+    "name": "Gói vàng",
+    "category": "investment",
+    "price": 10000000,
+    "upkeep": 0,
+    "minAge": 18,
+    "yearlyChange": 0,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dautu_02",
+    "name": "Cổ phiếu hư cấu",
+    "category": "investment",
+    "price": 10000000,
+    "upkeep": 0,
+    "minAge": 18,
+    "yearlyChange": 0,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dautu_03",
+    "name": "Quỹ hư cấu",
+    "category": "investment",
+    "price": 10000000,
+    "upkeep": 0,
+    "minAge": 18,
+    "yearlyChange": 0,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dautu_04",
+    "name": "Đất",
+    "category": "investment",
+    "price": 500000000,
+    "upkeep": 0,
+    "minAge": 18,
+    "yearlyChange": 0,
+    "bonus": {},
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dodung_01",
+    "name": "Laptop",
+    "category": "equipment",
+    "price": 15000000,
+    "upkeep": 300000,
+    "minAge": 13,
+    "yearlyChange": -0.15,
+    "bonus": {
+      "intelligence": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dodung_02",
+    "name": "Máy ảnh",
+    "category": "equipment",
+    "price": 20000000,
+    "upkeep": 400000,
+    "minAge": 13,
+    "yearlyChange": -0.15,
+    "bonus": {
+      "intelligence": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dodung_03",
+    "name": "Nhạc cụ",
+    "category": "equipment",
+    "price": 8000000,
+    "upkeep": 160000,
+    "minAge": 13,
+    "yearlyChange": -0.15,
+    "bonus": {
+      "intelligence": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_dodung_04",
+    "name": "Thiết bị tập",
+    "category": "equipment",
+    "price": 10000000,
+    "upkeep": 200000,
+    "minAge": 13,
+    "yearlyChange": -0.15,
+    "bonus": {
+      "intelligence": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xaxi_01",
+    "name": "Đồng hồ",
+    "category": "luxury",
+    "price": 50000000,
+    "upkeep": 2000000,
+    "minAge": 18,
+    "yearlyChange": -0.03,
+    "bonus": {
+      "looks": 1,
+      "happiness": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xaxi_02",
+    "name": "Trang sức",
+    "category": "luxury",
+    "price": 80000000,
+    "upkeep": 3200000,
+    "minAge": 18,
+    "yearlyChange": -0.03,
+    "bonus": {
+      "looks": 1,
+      "happiness": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xaxi_03",
+    "name": "Nghệ thuật sưu tập",
+    "category": "luxury",
+    "price": 200000000,
+    "upkeep": 8000000,
+    "minAge": 18,
+    "yearlyChange": -0.03,
+    "bonus": {
+      "looks": 1,
+      "happiness": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_xaxi_04",
+    "name": "Du thuyền",
+    "category": "luxury",
+    "price": 3000000000,
+    "upkeep": 120000000,
+    "minAge": 18,
+    "yearlyChange": -0.03,
+    "bonus": {
+      "looks": 1,
+      "happiness": 1
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_thucung_01",
+    "name": "Mèo",
+    "category": "pet",
+    "price": 2000000,
+    "upkeep": 1200000,
+    "minAge": 6,
+    "yearlyChange": 0,
+    "bonus": {
+      "happiness": 2
+    },
+    "lifespan": 16,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_thucung_02",
+    "name": "Chó",
+    "category": "pet",
+    "price": 3000000,
+    "upkeep": 1200000,
+    "minAge": 6,
+    "yearlyChange": 0,
+    "bonus": {
+      "happiness": 2
+    },
+    "lifespan": 14,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_thucung_03",
+    "name": "Thỏ",
+    "category": "pet",
+    "price": 1000000,
+    "upkeep": 1200000,
+    "minAge": 6,
+    "yearlyChange": 0,
+    "bonus": {
+      "happiness": 2
+    },
+    "lifespan": 10,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "asset_thucung_04",
+    "name": "Chim cảnh",
+    "category": "pet",
+    "price": 1000000,
+    "upkeep": 1200000,
+    "minAge": 6,
+    "yearlyChange": 0,
+    "bonus": {
+      "happiness": 2
+    },
+    "lifespan": 18,
+    "sourceKind": "original_web"
+  }
+]

@@ -1,0 +1,29 @@
+import type { GameState, Effect } from "./types";
+import { stat, money, count, flag, relation, requireGame } from "./helpers";
+import { operate } from "./relations";
+export function applyEffects(s: GameState, list: Effect[], targetId?: string) {
+  for (const e of list) {
+    if ("stat" in e) stat(s, e.stat, e.delta);
+    else if ("money" in e) money(s, e.money, "Hậu quả lựa chọn", true);
+    else if ("counter" in e) count(s, e.counter, e.delta);
+    else if ("flag" in e) flag(s, e.flag, e.set);
+    else if ("relation" in e) {
+      const target =
+        e.relation.role === "target"
+          ? relation(s, targetId)
+          : relation(s, undefined, [e.relation.role]);
+      requireGame(target, "Người liên quan không còn phù hợp.");
+      target.closeness = Math.max(
+        0,
+        Math.min(100, target.closeness + e.relation.delta),
+      );
+    } else if ("operation" in e) operate(s, e.operation, e.value, targetId);
+    else if ("award" in e) {
+      if (!s.medals.includes(e.award)) s.medals.push(e.award);
+    } else if ("death" in e) {
+      s.deathCause = e.death;
+      s.phase = "dead";
+      break;
+    }
+  }
+}

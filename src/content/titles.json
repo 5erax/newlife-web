@@ -1,0 +1,61 @@
+[
+  {
+    "id": "academic",
+    "name": "Chăm học",
+    "metric": "intelligence",
+    "min": 80
+  },
+  {
+    "id": "career",
+    "name": "Tận tâm với nghề",
+    "metric": "workYears",
+    "min": 25
+  },
+  {
+    "id": "family",
+    "name": "Vì gia đình",
+    "metric": "marriageYears",
+    "min": 20
+  },
+  {
+    "id": "generous",
+    "name": "Rộng lượng",
+    "metric": "donations",
+    "min": 100000000
+  },
+  {
+    "id": "explorer",
+    "name": "Thích khám phá",
+    "metric": "travel",
+    "min": 15
+  },
+  {
+    "id": "long_life",
+    "name": "Một thế kỷ chuyện kể",
+    "metric": "age",
+    "min": 100
+  },
+  {
+    "id": "comeback",
+    "name": "Dựng lại từ khó khăn",
+    "flag": "recovered_record"
+  },
+  {
+    "id": "wealthy",
+    "name": "Xây dựng cơ nghiệp",
+    "metric": "netWorth",
+    "min": 5000000000
+  },
+  {
+    "id": "risk",
+    "name": "Một đời liều lĩnh",
+    "metric": "crimes",
+    "min": 10
+  },
+  {
+    "id": "ordinary",
+    "name": "Bình dị mà đáng nhớ",
+    "metric": "age",
+    "min": 0
+  }
+]

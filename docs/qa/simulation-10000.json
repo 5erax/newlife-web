@@ -1,0 +1,15 @@
+{
+  "lives": 10000,
+  "crashes": 0,
+  "stuck": 0,
+  "meanAge": 79.36,
+  "medianAge": 82,
+  "earlyDeathPercent": 1.13,
+  "choiceDeaths": 0,
+  "careersSeen": 3,
+  "assetsSeen": 3,
+  "fallbacksSeen": 2,
+  "eventsSeen": 159,
+  "eventCount": 294,
+  "durationSeconds": 696.44
+}

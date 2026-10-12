@@ -1,0 +1,50 @@
+[
+  {
+    "id": "yte",
+    "name": "Y tế"
+  },
+  {
+    "id": "giaoduc",
+    "name": "Giáo dục"
+  },
+  {
+    "id": "congnghe",
+    "name": "Công nghệ"
+  },
+  {
+    "id": "kinhdoanh",
+    "name": "Kinh doanh"
+  },
+  {
+    "id": "nghethuat",
+    "name": "Nghệ thuật"
+  },
+  {
+    "id": "thethao",
+    "name": "Thể thao"
+  },
+  {
+    "id": "phapluat",
+    "name": "Pháp luật"
+  },
+  {
+    "id": "nongnghiep",
+    "name": "Nông nghiệp"
+  },
+  {
+    "id": "xaydung",
+    "name": "Xây dựng"
+  },
+  {
+    "id": "dichvu",
+    "name": "Dịch vụ"
+  },
+  {
+    "id": "nhanuoc",
+    "name": "Nhà nước"
+  },
+  {
+    "id": "quandoi",
+    "name": "Quân đội"
+  }
+]

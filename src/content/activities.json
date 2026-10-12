@@ -1,0 +1,3932 @@
+[
+  {
+    "id": "act_thechat_01",
+    "group": "thechat",
+    "name": "Đi bộ",
+    "description": "Một vòng quanh khu phố, để đầu óc chậm lại.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn tìm được một con đường yên tĩnh và ngủ ngon hơn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_02",
+    "group": "thechat",
+    "name": "Chạy bộ",
+    "description": "Thử nhịp chạy hợp với mình, không cần đua với ai.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành quãng chạy và còn sức để mỉm cười.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_03",
+    "group": "thechat",
+    "name": "Đạp xe",
+    "description": "Đi một quãng vừa đủ để cảm nhận gió.",
+    "minAge": 6,
+    "cost": 20000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn trở về với chiếc áo hơi bụi và tâm trạng nhẹ hơn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_04",
+    "group": "thechat",
+    "name": "Bơi",
+    "description": "Đổi không gian tập luyện sang làn nước.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn luyện nhịp thở và bơi xa hơn buổi trước.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 5
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_05",
+    "group": "thechat",
+    "name": "Tập gym",
+    "description": "Một buổi tập theo sức hiện tại.",
+    "minAge": 6,
+    "cost": 150000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Cơ bắp hơi mỏi, nhưng bạn thấy mình đang tiến bộ.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 5
+          },
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_06",
+    "group": "thechat",
+    "name": "Yoga",
+    "description": "Tập thở và giãn người sau những giờ bận rộn.",
+    "minAge": 6,
+    "cost": 80000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhận ra việc thả lỏng vai cũng là một kỹ năng.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_07",
+    "group": "thechat",
+    "name": "Đá bóng",
+    "description": "Ra sân với một đội chơi vì vui.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một pha chuyền đẹp giúp bạn quen thêm người mới.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "operation": "friend"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_08",
+    "group": "thechat",
+    "name": "Cầu lông",
+    "description": "Một trận đôi, vài pha hụt và nhiều tiếng cười.",
+    "minAge": 6,
+    "cost": 60000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn thắng một hiệp và thua trận đấu đếm tiếng cười.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thechat_09",
+    "group": "thechat",
+    "name": "Giải phong trào",
+    "description": "Tham gia một giải nhỏ, thắng thua đều có trải nghiệm.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "field": "health",
+        "op": ">=",
+        "value": 50
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 0.35,
+        "text": "Bạn giành huy chương và cảm ơn đội đã cổ vũ.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 8
+          },
+          {
+            "award": "medal_sport"
+          },
+          {
+            "flag": "sports_medal",
+            "set": true
+          }
+        ]
+      },
+      {
+        "chance": 0.65,
+        "text": "Bạn chưa lên bục, nhưng hoàn thành giải với một thành tích mới.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_01",
+    "group": "suckhoe",
+    "name": "Khám tổng quát",
+    "description": "Dành thời gian biết mình đang khoẻ ở đâu, cần chăm ở đâu.",
+    "minAge": 6,
+    "cost": 500000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhận được kết quả khám và một kế hoạch chăm sóc phù hợp.",
+        "effects": [
+          {
+            "operation": "illness",
+            "value": 0
+          },
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_02",
+    "group": "suckhoe",
+    "name": "Khám răng",
+    "description": "Một lịch hẹn nhỏ thay vì chờ tới lúc đau.",
+    "minAge": 6,
+    "cost": 300000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn thấy nụ cười thoải mái hơn sau buổi khám.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "looks",
+            "delta": 1
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_03",
+    "group": "suckhoe",
+    "name": "Điều trị bệnh",
+    "description": "Chọn đúng bệnh đang có để theo chương trình điều trị.",
+    "minAge": 6,
+    "cost": 800000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "illness",
+        "id": "any"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 0.75,
+        "text": "Điều trị có tác dụng rõ. Bạn bắt đầu hồi phục.",
+        "effects": [
+          {
+            "operation": "treat",
+            "value": 45
+          },
+          {
+            "stat": "health",
+            "delta": 5
+          }
+        ]
+      },
+      {
+        "chance": 0.25,
+        "text": "Tiến triển chậm hơn mong đợi. Bạn cần theo dõi tiếp.",
+        "effects": [
+          {
+            "operation": "treat",
+            "value": 15
+          },
+          {
+            "stat": "happiness",
+            "delta": -2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "illness"
+  },
+  {
+    "id": "act_suckhoe_04",
+    "group": "suckhoe",
+    "name": "Nghỉ dưỡng",
+    "description": "Đổi lịch bận thành những ngày nghỉ có kế hoạch.",
+    "minAge": 6,
+    "cost": 1500000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn trở về với cảm giác cơ thể được lắng nghe.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 7
+          },
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_05",
+    "group": "suckhoe",
+    "name": "Chỉnh giờ ngủ",
+    "description": "Đặt lịch ngủ đều hơn trong vài tuần.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn bớt bấm báo thức lần thứ năm vào buổi sáng.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_06",
+    "group": "suckhoe",
+    "name": "Ăn uống lành mạnh",
+    "description": "Thử những bữa ăn dễ duy trì, không quá cầu kỳ.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một món mới ngon hơn dự đoán và hợp với nếp sống của bạn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 4
+          },
+          {
+            "stat": "looks",
+            "delta": 1
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_07",
+    "group": "suckhoe",
+    "name": "Tập phục hồi",
+    "description": "Một buổi tập nhẹ để lấy lại nhịp sau thời gian mệt.",
+    "minAge": 6,
+    "cost": 150000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn làm được thêm một động tác mà buổi trước còn khó.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 5
+          },
+          {
+            "counter": "healthy_activities",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_08",
+    "group": "suckhoe",
+    "name": "Tư vấn tâm lý",
+    "description": "Có người lắng nghe câu chuyện bạn đang giữ trong đầu.",
+    "minAge": 6,
+    "cost": 400000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn chưa giải quyết hết mọi việc, nhưng đã có cách nhìn rõ hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 7
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_suckhoe_09",
+    "group": "suckhoe",
+    "name": "Chăm sóc ngoại hình",
+    "description": "Chọn một thay đổi nhỏ khiến mình dễ chịu.",
+    "minAge": 6,
+    "cost": 250000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn soi gương và nhận ra mình thích sự gọn gàng mới này.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 5
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_01",
+    "group": "hoctap",
+    "name": "Đọc sách",
+    "description": "Một chương sách và một góc ngồi không bị giục.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn đánh dấu một câu muốn nhớ và tìm được câu hỏi mới.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_02",
+    "group": "hoctap",
+    "name": "Học nhóm",
+    "description": "Cùng hiểu bài, không chỉ cùng ngồi một bàn.",
+    "minAge": 6,
+    "cost": 30000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "flag": "in_school",
+        "is": true
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn giải thích một phần và được bạn giải thích phần còn lại.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "operation": "schoolScore",
+            "value": 5
+          },
+          {
+            "operation": "friend"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_03",
+    "group": "hoctap",
+    "name": "Học ngoại ngữ",
+    "description": "Thực hành một cuộc hội thoại ngắn.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dùng được một câu mới mà không cần nhìn giấy.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 4
+          },
+          {
+            "operation": "skill",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_04",
+    "group": "hoctap",
+    "name": "Học lập trình",
+    "description": "Làm một công cụ nhỏ phục vụ việc của mình.",
+    "minAge": 6,
+    "cost": 300000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Chương trình chạy được sau khi bạn phát hiện một dấu thiếu.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 4
+          },
+          {
+            "operation": "skill",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_05",
+    "group": "hoctap",
+    "name": "Học nhạc cụ",
+    "description": "Lặp lại một giai điệu cho tới lúc nghe ra nhạc.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn chơi trọn một đoạn và cho phép mình vui vì điều đó.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 4
+          },
+          {
+            "operation": "skill",
+            "value": 2
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_06",
+    "group": "hoctap",
+    "name": "Luyện thi",
+    "description": "Ôn phần khó bằng một kế hoạch vừa sức.",
+    "minAge": 6,
+    "cost": 150000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "flag": "in_school",
+        "is": true
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhận ra mình làm tốt hơn khi chia việc thành từng phần.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "operation": "schoolScore",
+            "value": 8
+          },
+          {
+            "stat": "health",
+            "delta": -1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_07",
+    "group": "hoctap",
+    "name": "Thuyết trình",
+    "description": "Tập kể một ý tưởng để người khác hiểu.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nói trôi chảy hơn sau vài lần thử trước gương.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "operation": "skill",
+            "value": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_08",
+    "group": "hoctap",
+    "name": "Dự án cá nhân",
+    "description": "Tạo một thứ chưa cần ai chấm điểm.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Sản phẩm còn chưa hoàn hảo, nhưng nó đã là của bạn.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 5
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "operation": "skill",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hoctap_09",
+    "group": "hoctap",
+    "name": "Thi kiến thức",
+    "description": "Đem điều mình học ra thử trong một cuộc thi.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.4,
+        "text": "Bạn đạt giải nhỏ và được tặng sách.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 4
+          },
+          {
+            "stat": "happiness",
+            "delta": 6
+          },
+          {
+            "money": 300000
+          }
+        ]
+      },
+      {
+        "chance": 0.6,
+        "text": "Bạn chưa đạt giải, nhưng biết mình muốn học tiếp phần nào.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_xahoi_01",
+    "group": "xahoi",
+    "name": "Gặp bạn",
+    "description": "Một cuộc gặp không cần lý do đặc biệt.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "friend"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn thấy câu chuyện quen thuộc vẫn có điều mới.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["friend"]
+  },
+  {
+    "id": "act_xahoi_02",
+    "group": "xahoi",
+    "name": "Gọi bạn cũ",
+    "description": "Nối lại một cuộc trò chuyện từng dang dở.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "friend"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Hai người cười vì vẫn nhớ cùng một chuyện nhỏ.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["friend"]
+  },
+  {
+    "id": "act_xahoi_03",
+    "group": "xahoi",
+    "name": "Đi sinh nhật",
+    "description": "Đến để chúc mừng, không chỉ để chụp ảnh.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "friend"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Món quà nhỏ làm người bạn bất ngờ.",
+        "effects": [
+          {
+            "operation": "gift"
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "counter": "meetups",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["friend"]
+  },
+  {
+    "id": "act_xahoi_04",
+    "group": "xahoi",
+    "name": "Câu lạc bộ",
+    "description": "Tìm một nhóm cùng quan tâm điều bạn thích.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn có thêm một người để trao đổi sở thích.",
+        "effects": [
+          {
+            "operation": "friend"
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "operation": "skill",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_xahoi_05",
+    "group": "xahoi",
+    "name": "Làm tình nguyện",
+    "description": "Góp sức vào một việc cộng đồng vừa khả năng.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một công việc nhỏ được hoàn thành nhờ cả nhóm.",
+        "effects": [
+          {
+            "operation": "volunteer"
+          },
+          {
+            "stat": "happiness",
+            "delta": 4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_xahoi_06",
+    "group": "xahoi",
+    "name": "Tổ chức gặp mặt",
+    "description": "Chủ động mời vài người ngồi lại với nhau.",
+    "minAge": 6,
+    "cost": 300000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Cuộc gặp vui hơn nhờ mọi người đều có chuyện để kể.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "counter": "meetups",
+            "delta": 1
+          },
+          {
+            "operation": "friend"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_xahoi_07",
+    "group": "xahoi",
+    "name": "Sự kiện cộng đồng",
+    "description": "Đến nghe và góp một ý tưởng.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hiểu thêm về khu phố và được nhớ tên.",
+        "effects": [
+          {
+            "operation": "volunteer"
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_xahoi_08",
+    "group": "xahoi",
+    "name": "Kết bạn mới",
+    "description": "Bắt đầu bằng một lời chào.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một câu hỏi đơn giản mở ra cuộc trò chuyện.",
+        "effects": [
+          {
+            "operation": "friend"
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_xahoi_09",
+    "group": "xahoi",
+    "name": "Xin lỗi sau mâu thuẫn",
+    "description": "Thừa nhận phần việc của mình trong chuyện vừa qua.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "friend"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nói rõ điều muốn sửa thay vì chỉ nói cho xong.",
+        "effects": [
+          {
+            "operation": "apologize"
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["friend"]
+  },
+  {
+    "id": "act_giadinh_01",
+    "group": "giadinh",
+    "name": "Thăm cha mẹ",
+    "description": "Một buổi ghé nhà với thời gian để ngồi lại.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn biết thêm một điều nhỏ về cuộc sống của người thân.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 4
+          },
+          {
+            "counter": "support_given",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father"]
+  },
+  {
+    "id": "act_giadinh_02",
+    "group": "giadinh",
+    "name": "Gọi người thân",
+    "description": "Một cuộc gọi không chỉ hỏi đã ăn cơm chưa.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "sibling"
+          },
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nghe được một câu chuyện chưa từng kể.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "sibling", "child"]
+  },
+  {
+    "id": "act_giadinh_03",
+    "group": "giadinh",
+    "name": "Ăn tối gia đình",
+    "description": "Để mọi người cùng góp một chuyện của ngày.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          },
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Cả bàn dành thời gian nghe nhau, kể cả chuyện rất nhỏ.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "counter": "meetups",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "spouse", "child"]
+  },
+  {
+    "id": "act_giadinh_04",
+    "group": "giadinh",
+    "name": "Tặng quà người thân",
+    "description": "Chọn món hợp người nhận hơn hợp ảnh quảng cáo.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "sibling"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          },
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Người thân nhớ ra vì sao món quà này đặc biệt.",
+        "effects": [
+          {
+            "operation": "gift"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "sibling", "spouse", "child"]
+  },
+  {
+    "id": "act_giadinh_05",
+    "group": "giadinh",
+    "name": "Chăm người thân",
+    "description": "Góp thời gian để người thân bớt phải xoay sở.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          },
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn làm vài việc thường ngày để người thân được nghỉ.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "counter": "support_given",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "spouse", "child"]
+  },
+  {
+    "id": "act_giadinh_06",
+    "group": "giadinh",
+    "name": "Hỗ trợ học phí con",
+    "description": "Đồng hành với kế hoạch học của con.",
+    "minAge": 6,
+    "cost": 2000000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Con biết khoản hỗ trợ này đi cùng sự tin tưởng.",
+        "effects": [
+          {
+            "operation": "gift"
+          },
+          {
+            "counter": "support_given",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["child"]
+  },
+  {
+    "id": "act_giadinh_07",
+    "group": "giadinh",
+    "name": "Đi chơi với con",
+    "description": "Một buổi đi chơi theo ý tưởng của con.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn bất ngờ vì con nhìn một nơi quen bằng mắt khác.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 5
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["child"]
+  },
+  {
+    "id": "act_giadinh_08",
+    "group": "giadinh",
+    "name": "Họp gia đình",
+    "description": "Nói về việc chung trước khi mỗi người tự đoán.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          },
+          {
+            "has": "role",
+            "id": "sibling"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Các ý kiến chưa hoàn toàn giống nhau, nhưng ai cũng được nghe.",
+        "effects": [
+          {
+            "operation": "apologize"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "counter": "meetups",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "spouse", "sibling"]
+  },
+  {
+    "id": "act_giadinh_09",
+    "group": "giadinh",
+    "name": "Giúp anh chị em",
+    "description": "Dành một buổi cùng xử lý việc khó.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "sibling"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Hai người làm xong một việc mà một người sẽ mất rất lâu.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "counter": "support_given",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["sibling"]
+  },
+  {
+    "id": "act_tinhcam_01",
+    "group": "tinhcam",
+    "name": "Làm quen",
+    "description": "Mở một cuộc trò chuyện với người mới.",
+    "minAge": 18,
+    "cost": 100000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "not": {
+          "has": "role",
+          "id": "spouse"
+        }
+      },
+      {
+        "not": {
+          "has": "role",
+          "id": "lover"
+        }
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một cuộc gặp bắt đầu bằng câu chuyện rất bình thường.",
+        "effects": [
+          {
+            "operation": "date"
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_tinhcam_02",
+    "group": "tinhcam",
+    "name": "Hẹn cà phê",
+    "description": "Một nơi yên tĩnh để nói chuyện.",
+    "minAge": 18,
+    "cost": 150000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn thấy mình được lắng nghe.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_03",
+    "group": "tinhcam",
+    "name": "Hẹn xem phim",
+    "description": "Cùng xem rồi nói về hai cách hiểu khác nhau.",
+    "minAge": 18,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Câu chuyện sau phim kéo dài hơn phần quảng cáo.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_04",
+    "group": "tinhcam",
+    "name": "Nấu ăn cùng nhau",
+    "description": "Chọn một món cả hai đều muốn thử.",
+    "minAge": 18,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Món ăn chưa giống ảnh, nhưng bữa tối rất vui.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 5
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_05",
+    "group": "tinhcam",
+    "name": "Quà cho người yêu",
+    "description": "Nhớ điều người ấy từng nhắc.",
+    "minAge": 18,
+    "cost": 250000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Người ấy nhận ra bạn đã để ý một câu nói nhỏ.",
+        "effects": [
+          {
+            "operation": "gift"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_06",
+    "group": "tinhcam",
+    "name": "Trò chuyện nghiêm túc",
+    "description": "Dành thời gian cho điều hai người đang tránh nói.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Hai người thống nhất một việc có thể làm khác từ hôm nay.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_07",
+    "group": "tinhcam",
+    "name": "Ngày kỷ niệm",
+    "description": "Nhắc lại một điều khiến hai người chọn nhau.",
+    "minAge": 18,
+    "cost": 400000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một bức ảnh cũ dẫn tới nhiều câu chuyện mới.",
+        "effects": [
+          {
+            "operation": "gift"
+          },
+          {
+            "stat": "happiness",
+            "delta": 6
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_08",
+    "group": "tinhcam",
+    "name": "Làm hoà",
+    "description": "Thử hiểu nhau trước khi giành phần đúng.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Lời xin lỗi có điều cụ thể cần sửa, nên dễ được nhận hơn.",
+        "effects": [
+          {
+            "operation": "apologize"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_tinhcam_09",
+    "group": "tinhcam",
+    "name": "Chuyến đi hai người",
+    "description": "Một lịch trình có cả thời gian nghỉ.",
+    "minAge": 18,
+    "cost": 2000000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "lover"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Chuyến đi để lại một kỷ niệm cả hai cùng muốn giữ.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "operation": "travel"
+          },
+          {
+            "stat": "happiness",
+            "delta": 7
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["lover", "spouse"]
+  },
+  {
+    "id": "act_giaitri_01",
+    "group": "giaitri",
+    "name": "Chơi game",
+    "description": "Một buổi chơi có hẹn giờ dừng.",
+    "minAge": 6,
+    "cost": 30000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn thắng một màn khó và dừng đúng lúc đã định.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 4
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_02",
+    "group": "giaitri",
+    "name": "Xem phim",
+    "description": "Thử một câu chuyện ngoài thể loại quen.",
+    "minAge": 6,
+    "cost": 80000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn ra rạp với một cảnh vẫn còn nhớ.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 4
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_03",
+    "group": "giaitri",
+    "name": "Nghe nhạc",
+    "description": "Cho bài hát một khoảng thời gian riêng.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một giai điệu làm bạn thấy buổi chiều dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_04",
+    "group": "giaitri",
+    "name": "Câu cá",
+    "description": "Không có cá vẫn có một buổi ngồi nhìn nước.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhớ buổi trò chuyện bên bờ hơn số cá mang về.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_05",
+    "group": "giaitri",
+    "name": "Làm vườn",
+    "description": "Chăm một chậu cây theo nhịp của nó.",
+    "minAge": 6,
+    "cost": 60000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một chiếc lá mới khiến bạn vui hơi quá mức.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_06",
+    "group": "giaitri",
+    "name": "Nấu món mới",
+    "description": "Thử công thức bằng nguyên liệu đang có.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn biết thêm một mẹo sau khi món đầu hơi mặn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_07",
+    "group": "giaitri",
+    "name": "Vẽ",
+    "description": "Cho ý tưởng ra giấy trước khi đánh giá nó.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bức vẽ có một chi tiết chỉ bạn biết vì sao có mặt.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "operation": "skill",
+            "value": 1
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_08",
+    "group": "giaitri",
+    "name": "Chụp ảnh dạo",
+    "description": "Tìm một góc nhìn mới ở chỗ quen.",
+    "minAge": 6,
+    "cost": 20000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một vệt nắng làm con đường thường ngày trông khác hẳn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "looks",
+            "delta": 1
+          },
+          {
+            "counter": "hobbies",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_giaitri_09",
+    "group": "giaitri",
+    "name": "Đi bảo tàng",
+    "description": "Đi chậm hơn và đọc một câu chuyện phía sau hiện vật.",
+    "minAge": 6,
+    "cost": 80000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hiểu vì sao một vật nhỏ lại được giữ lâu đến vậy.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_01",
+    "group": "dulich",
+    "name": "Dã ngoại",
+    "description": "Một ngày đi khỏi những việc thường ngày.",
+    "minAge": 13,
+    "cost": 200000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn đem về một tấm ảnh và cảm giác được nghỉ.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_02",
+    "group": "dulich",
+    "name": "Về quê",
+    "description": "Đi qua nơi giữ nhiều ký ức.",
+    "minAge": 13,
+    "cost": 400000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn gặp lại một con đường tưởng mình đã quên.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_03",
+    "group": "dulich",
+    "name": "Đi biển",
+    "description": "Một buổi nghe sóng thay tiếng thông báo.",
+    "minAge": 13,
+    "cost": 1000000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn trở về với cát còn trong giày và đầu óc nhẹ hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 7
+          },
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_04",
+    "group": "dulich",
+    "name": "Lên núi",
+    "description": "Chọn đường đi vừa sức và đủ thời gian nghỉ.",
+    "minAge": 13,
+    "cost": 1200000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Từ điểm cao, bạn thấy việc đi chậm cũng đáng.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 6
+          },
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_05",
+    "group": "dulich",
+    "name": "Cắm trại",
+    "description": "Một đêm đủ tối để nhìn bầu trời.",
+    "minAge": 13,
+    "cost": 500000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nghe được những âm thanh thường bị thành phố che đi.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 6
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_06",
+    "group": "dulich",
+    "name": "Thành phố khác",
+    "description": "Đi tìm một góc sống khác với nơi mình quen.",
+    "minAge": 13,
+    "cost": 1800000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn đem về một món ăn mới muốn thử nấu.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 6
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_07",
+    "group": "dulich",
+    "name": "Tham quan di tích",
+    "description": "Để lịch sử có địa điểm và câu chuyện.",
+    "minAge": 13,
+    "cost": 500000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một chi tiết trong chuyến đi làm bài học cũ trở nên dễ nhớ.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 4
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_08",
+    "group": "dulich",
+    "name": "Đi nước ngoài",
+    "description": "Chuẩn bị một hành trình xa trong thế giới game.",
+    "minAge": 18,
+    "cost": 12000000,
+    "timeCost": 4,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn học cách hỏi đường và thấy mình tự tin hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 8
+          },
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_09",
+    "group": "dulich",
+    "name": "Chuyến đi gia đình",
+    "description": "Một kế hoạch tính cả sức và ý thích của người thân.",
+    "minAge": 13,
+    "cost": 3000000,
+    "timeCost": 4,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "spouse"
+          },
+          {
+            "has": "role",
+            "id": "child"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một người thân chọn điểm đến khiến cả nhà ngạc nhiên.",
+        "effects": [
+          {
+            "operation": "talk"
+          },
+          {
+            "stat": "happiness",
+            "delta": 8
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "spouse", "child"]
+  },
+  {
+    "id": "act_taichinh_01",
+    "group": "taichinh",
+    "name": "Việc ngắn hạn",
+    "description": "Nhận một việc trong khả năng và giờ rảnh.",
+    "minAge": 13,
+    "cost": 0,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành công việc và được trả khoản đã thoả thuận.",
+        "effects": [
+          {
+            "money": 250000
+          },
+          {
+            "operation": "skill",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_02",
+    "group": "taichinh",
+    "name": "Bán đồ không dùng",
+    "description": "Dọn một món đồ nhỏ, không bán tài sản đang sở hữu.",
+    "minAge": 13,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dọn được một góc nhà và có thêm chút tiền.",
+        "effects": [
+          {
+            "money": 100000
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_03",
+    "group": "taichinh",
+    "name": "Gian hàng nhỏ",
+    "description": "Thử bán với một số vốn vừa phải.",
+    "minAge": 18,
+    "cost": 500000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.55,
+        "text": "Khách quay lại vì bạn nhớ điều họ cần.",
+        "effects": [
+          {
+            "money": 1000000
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          }
+        ]
+      },
+      {
+        "chance": 0.45,
+        "text": "Đợt bán chưa thuận lợi. Bạn giữ lại bài học về chi phí.",
+        "effects": [
+          {
+            "money": 150000
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": -2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_04",
+    "group": "taichinh",
+    "name": "Tham gia hội chợ",
+    "description": "Mang sản phẩm tới gặp khách trực tiếp.",
+    "minAge": 18,
+    "cost": 300000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.5,
+        "text": "Một đơn hàng nhỏ mở thêm cơ hội.",
+        "effects": [
+          {
+            "money": 800000
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "operation": "friend"
+          }
+        ]
+      },
+      {
+        "chance": 0.5,
+        "text": "Bạn bán được ít nhưng nghe nhiều góp ý hữu ích.",
+        "effects": [
+          {
+            "money": 200000
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_05",
+    "group": "taichinh",
+    "name": "Thương lượng lương",
+    "description": "Chuẩn bị bằng chứng đóng góp thay vì chỉ đòi hỏi.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "job",
+        "id": "any"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 0.35,
+        "text": "Bạn được nhận thưởng và sự ghi nhận của đội.",
+        "effects": [
+          {
+            "money": 1000000
+          },
+          {
+            "operation": "skill",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "chance": 0.65,
+        "text": "Chưa có khoản tăng, nhưng bạn biết mục tiêu lần đánh giá tới.",
+        "effects": [
+          {
+            "operation": "skill",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_06",
+    "group": "taichinh",
+    "name": "Học quản lý chi tiêu",
+    "description": "Nhìn lại dòng tiền và một khoản có thể tiết kiệm.",
+    "minAge": 13,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn tìm ra một khoản chi nhỏ mình không còn cần.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "counter": "saved",
+            "delta": 100000
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_07",
+    "group": "taichinh",
+    "name": "Dự án tự do",
+    "description": "Nhận một sản phẩm với đầu việc rõ ràng.",
+    "minAge": 16,
+    "cost": 50000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.8,
+        "text": "Dự án được nghiệm thu và khách trả đúng hẹn.",
+        "effects": [
+          {
+            "money": 600000
+          },
+          {
+            "operation": "skill",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "chance": 0.2,
+        "text": "Bạn cần làm lại một phần trước khi được nhận tiền.",
+        "effects": [
+          {
+            "money": 200000
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          },
+          {
+            "stat": "health",
+            "delta": -1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_08",
+    "group": "taichinh",
+    "name": "Bán sản phẩm tự làm",
+    "description": "Đưa một thứ do bạn làm tới người thích nó.",
+    "minAge": 13,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một người mua kể điều họ thích ở sản phẩm của bạn.",
+        "effects": [
+          {
+            "money": 300000
+          },
+          {
+            "operation": "skill",
+            "value": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_taichinh_09",
+    "group": "taichinh",
+    "name": "Xin hỗ trợ gia đình",
+    "description": "Trao đổi rõ điều cần giúp và khả năng của người thân.",
+    "minAge": 13,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [
+      {
+        "any": [
+          {
+            "has": "role",
+            "id": "mother"
+          },
+          {
+            "has": "role",
+            "id": "father"
+          },
+          {
+            "has": "role",
+            "id": "sibling"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nói rõ lý do cần hỗ trợ thay vì chỉ xin tiền.",
+        "effects": [
+          {
+            "operation": "support"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "relation",
+    "targetRoles": ["mother", "father", "sibling"]
+  },
+  {
+    "id": "act_nhacua_01",
+    "group": "nhacua",
+    "name": "Dọn nhà",
+    "description": "Sắp lại nơi ở để đỡ phải tìm đồ.",
+    "minAge": 13,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn phát hiện món đồ tưởng đã mất ở nơi rất hợp lý.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_nhacua_02",
+    "group": "nhacua",
+    "name": "Sửa chữa nhỏ",
+    "description": "Xử lý một chỗ hỏng trước khi nó thành việc lớn.",
+    "minAge": 13,
+    "cost": 200000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "any"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một tiếng kêu khó chịu cuối cùng biến mất.",
+        "effects": [
+          {
+            "operation": "repair",
+            "value": 15
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "asset"
+  },
+  {
+    "id": "act_nhacua_03",
+    "group": "nhacua",
+    "name": "Đồ trang trí",
+    "description": "Thêm một chi tiết nhỏ có ý nghĩa với mình.",
+    "minAge": 13,
+    "cost": 100000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Căn phòng trông giống chỗ của bạn hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "looks",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_nhacua_04",
+    "group": "nhacua",
+    "name": "Tiệc tại nhà",
+    "description": "Mời vài người với một thực đơn vừa sức.",
+    "minAge": 13,
+    "cost": 500000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bữa tiệc kết thúc bằng việc mọi người cùng dọn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 6
+          },
+          {
+            "counter": "meetups",
+            "delta": 1
+          },
+          {
+            "operation": "friend"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_nhacua_05",
+    "group": "nhacua",
+    "name": "Chống dột",
+    "description": "Chăm chỗ ở trước mùa mưa trong game.",
+    "minAge": 13,
+    "cost": 500000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "house"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nghe tiếng mưa mà không phải tìm chậu.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "operation": "repair",
+            "value": 20
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "asset"
+  },
+  {
+    "id": "act_nhacua_06",
+    "group": "nhacua",
+    "name": "Kiểm tra phương tiện",
+    "description": "Rà độ bền để yên tâm đi lại.",
+    "minAge": 13,
+    "cost": 200000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "vehicle"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một hạng mục cần chăm được phát hiện sớm.",
+        "effects": [
+          {
+            "operation": "repair",
+            "value": 20
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "asset"
+  },
+  {
+    "id": "act_nhacua_07",
+    "group": "nhacua",
+    "name": "Tự rửa xe",
+    "description": "Chăm món đồ đưa mình đi mỗi ngày.",
+    "minAge": 13,
+    "cost": 30000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "vehicle"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Chiếc xe sạch và bạn cũng vui vì đã chăm nó.",
+        "effects": [
+          {
+            "operation": "repair",
+            "value": 5
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "asset"
+  },
+  {
+    "id": "act_nhacua_08",
+    "group": "nhacua",
+    "name": "Góc làm việc",
+    "description": "Sắp lại ánh sáng, ghế và đồ dùng.",
+    "minAge": 13,
+    "cost": 300000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn bớt mất thời gian tìm thứ cần dùng.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "stat": "health",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_nhacua_09",
+    "group": "nhacua",
+    "name": "Nâng cấp nội thất",
+    "description": "Đổi một phần không gian sống cho dễ chịu.",
+    "minAge": 13,
+    "cost": 1000000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "house"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một góc nhà trở thành nơi bạn thích ngồi nhất.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 5
+          },
+          {
+            "operation": "repair",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "asset"
+  },
+  {
+    "id": "act_thucung_01",
+    "group": "thucung",
+    "name": "Nhận nuôi",
+    "description": "Đón một chú mèo và chuẩn bị chăm lâu dài.",
+    "minAge": 6,
+    "cost": 2000000,
+    "timeCost": 2,
+    "maxUsesPerYear": 1,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn có thêm một bạn nhỏ và một trách nhiệm mới.",
+        "effects": [
+          {
+            "operation": "petAdopt"
+          },
+          {
+            "stat": "happiness",
+            "delta": 4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_thucung_02",
+    "group": "thucung",
+    "name": "Chơi với thú cưng",
+    "description": "Một buổi chơi theo sức của bạn nhỏ.",
+    "minAge": 6,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhỏ nhớ trò chơi và nhớ cả thời gian bạn dành cho nó.",
+        "effects": [
+          {
+            "operation": "petPlay"
+          },
+          {
+            "stat": "happiness",
+            "delta": 4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_03",
+    "group": "thucung",
+    "name": "Dắt đi dạo",
+    "description": "Một quãng đi để cùng khám phá.",
+    "minAge": 6,
+    "cost": 20000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn trở về chậm hơn vì có nhiều chỗ cần ngửi.",
+        "effects": [
+          {
+            "operation": "petPlay"
+          },
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_04",
+    "group": "thucung",
+    "name": "Khám thú y",
+    "description": "Chăm sức khoẻ bạn nhỏ trước khi lo lắng kéo dài.",
+    "minAge": 6,
+    "cost": 300000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn được biết cách chăm phù hợp với tuổi của bạn nhỏ.",
+        "effects": [
+          {
+            "operation": "petVet",
+            "value": 30
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_05",
+    "group": "thucung",
+    "name": "Đồ chơi thú cưng",
+    "description": "Một món vừa sức và đủ an toàn.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhỏ có vẻ thích hộp đựng không kém món bên trong.",
+        "effects": [
+          {
+            "operation": "petPlay"
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_06",
+    "group": "thucung",
+    "name": "Huấn luyện cơ bản",
+    "description": "Tập thói quen nhỏ bằng sự kiên nhẫn.",
+    "minAge": 6,
+    "cost": 50000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn học được rằng nói rõ và chờ cũng là kỹ năng.",
+        "effects": [
+          {
+            "operation": "petPlay"
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_07",
+    "group": "thucung",
+    "name": "Chăm thú cưng già",
+    "description": "Đổi nhịp chăm sóc theo tuổi bạn nhỏ.",
+    "minAge": 6,
+    "cost": 150000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Một buổi yên tĩnh làm cả hai dễ chịu hơn.",
+        "effects": [
+          {
+            "operation": "petVet",
+            "value": 20
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_08",
+    "group": "thucung",
+    "name": "Tìm thú cưng thất lạc",
+    "description": "Dành thời gian tìm bạn nhỏ đang vắng nhà.",
+    "minAge": 6,
+    "cost": 100000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "flag": "pet_lost",
+        "is": true
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 0.8,
+        "text": "Bạn tìm thấy bạn nhỏ ở một góc gần nhà.",
+        "effects": [
+          {
+            "operation": "petFind"
+          },
+          {
+            "stat": "happiness",
+            "delta": 6
+          }
+        ]
+      },
+      {
+        "chance": 0.2,
+        "text": "Bạn chưa tìm thấy, nhưng có thêm manh mối để thử tiếp.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": -2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_thucung_09",
+    "group": "thucung",
+    "name": "Gửi chăm sóc",
+    "description": "Chọn chỗ chăm khi bạn phải đi xa.",
+    "minAge": 6,
+    "cost": 200000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "pet"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn nhỏ được chăm và bạn bớt lo khi có việc riêng.",
+        "effects": [
+          {
+            "operation": "petVet",
+            "value": 10
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "target": "pet"
+  },
+  {
+    "id": "act_ruiro_01",
+    "group": "ruiro",
+    "name": "Trò may rủi",
+    "description": "Một khoản cược cố định; có thể mất toàn bộ khoản này.",
+    "minAge": 18,
+    "cost": 200000,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.35,
+        "text": "Lần này bạn trúng một phần thưởng nhỏ.",
+        "effects": [
+          {
+            "money": 350000
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      },
+      {
+        "chance": 0.65,
+        "text": "Bạn không trúng. Khoản đã đặt không quay lại.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": -2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_ruiro_02",
+    "group": "ruiro",
+    "name": "Đua xe trái phép",
+    "description": "Một quyết định hư cấu có nguy cơ bị phạt và chấn thương.",
+    "minAge": 18,
+    "cost": 100000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "has": "asset",
+        "id": "vehicle"
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 0.4,
+        "text": "Bạn kịp dừng cuộc đua, nhận ra mình đã quá liều.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": -2
+          },
+          {
+            "flag": "avoided_risk",
+            "set": true
+          }
+        ]
+      },
+      {
+        "chance": 0.6,
+        "text": "Bạn bị phạt và phải nghỉ vì chấn thương.",
+        "effects": [
+          {
+            "money": -1000000
+          },
+          {
+            "stat": "health",
+            "delta": -12
+          },
+          {
+            "operation": "illness",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_ruiro_03",
+    "group": "ruiro",
+    "name": "Tiệc quá đà",
+    "description": "Một buổi vui quá giới hạn không phải lúc nào cũng vui về sau.",
+    "minAge": 18,
+    "cost": 300000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.5,
+        "text": "Bạn rời tiệc đúng lúc và sáng sau vẫn ổn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 4
+          },
+          {
+            "flag": "avoided_risk",
+            "set": true
+          }
+        ]
+      },
+      {
+        "chance": 0.5,
+        "text": "Bạn mệt cả ngày sau và bỏ lỡ kế hoạch.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": -7
+          },
+          {
+            "stat": "happiness",
+            "delta": -3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_ruiro_04",
+    "group": "ruiro",
+    "name": "Trộm đồ",
+    "description": "Tình huống hư cấu: lợi ích nhỏ, hậu quả lớn.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.5,
+        "text": "Bạn lấy được đồ, nhưng phải sống với quyết định ấy.",
+        "effects": [
+          {
+            "money": 400000
+          },
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": -3
+          }
+        ]
+      },
+      {
+        "chance": 0.5,
+        "text": "Bạn bị phát hiện và chịu án trong game.",
+        "effects": [
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "operation": "prison",
+            "value": 2
+          },
+          {
+            "money": -300000
+          },
+          {
+            "stat": "happiness",
+            "delta": -8
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "crimeCategory": "theft"
+  },
+  {
+    "id": "act_ruiro_05",
+    "group": "ruiro",
+    "name": "Lừa người mua",
+    "description": "Tình huống hư cấu về lòng tin và tiền.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.35,
+        "text": "Bạn nhận tiền nhưng đánh mất lòng tin.",
+        "effects": [
+          {
+            "money": 600000
+          },
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": -4
+          }
+        ]
+      },
+      {
+        "chance": 0.65,
+        "text": "Người mua tố cáo. Bạn bị phạt và thụ án.",
+        "effects": [
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "operation": "prison",
+            "value": 3
+          },
+          {
+            "money": -1000000
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "crimeCategory": "fraud"
+  },
+  {
+    "id": "act_ruiro_06",
+    "group": "ruiro",
+    "name": "Buôn bán hàng cấm hư cấu",
+    "description": "Một quyết định chỉ trong game với rủi ro pháp lý nặng.",
+    "minAge": 18,
+    "cost": 200000,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.25,
+        "text": "Bạn có tiền, nhưng cuộc sống trở nên bất an.",
+        "effects": [
+          {
+            "money": 1800000
+          },
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": -6
+          }
+        ]
+      },
+      {
+        "chance": 0.75,
+        "text": "Bạn bị bắt và mất nhiều năm tự do.",
+        "effects": [
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "operation": "prison",
+            "value": 5
+          },
+          {
+            "money": -2000000
+          },
+          {
+            "stat": "happiness",
+            "delta": -12
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "crimeCategory": "illegal_trade"
+  },
+  {
+    "id": "act_ruiro_07",
+    "group": "ruiro",
+    "name": "Gây gổ",
+    "description": "Một cơn nóng giận có thể tạo hậu quả lâu dài.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.5,
+        "text": "Bạn dừng lại trước khi gây thương tích.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": -2
+          },
+          {
+            "flag": "avoided_risk",
+            "set": true
+          }
+        ]
+      },
+      {
+        "chance": 0.5,
+        "text": "Cuộc gây gổ làm bạn bị thương và chịu án.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": -15
+          },
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "operation": "prison",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "crimeCategory": "violence"
+  },
+  {
+    "id": "act_ruiro_08",
+    "group": "ruiro",
+    "name": "Vụ cướp hư cấu",
+    "description": "Một lựa chọn nguy hiểm trong thế giới trò chơi.",
+    "minAge": 18,
+    "cost": 0,
+    "timeCost": 3,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.2,
+        "text": "Bạn có được tiền nhưng thấy bất an.",
+        "effects": [
+          {
+            "money": 2500000
+          },
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": -10
+          }
+        ]
+      },
+      {
+        "chance": 0.8,
+        "text": "Bạn bị bắt, phải bồi thường và thụ án.",
+        "effects": [
+          {
+            "operation": "crime",
+            "value": 1
+          },
+          {
+            "operation": "prison",
+            "value": 7
+          },
+          {
+            "money": -3000000
+          },
+          {
+            "stat": "health",
+            "delta": -5
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web",
+    "crimeCategory": "robbery"
+  },
+  {
+    "id": "act_ruiro_09",
+    "group": "ruiro",
+    "name": "Thương vụ thiếu thông tin",
+    "description": "Đặt vốn trước khi hiểu hết kế hoạch.",
+    "minAge": 18,
+    "cost": 1000000,
+    "timeCost": 2,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 0.35,
+        "text": "Một lần may mắn đem lại lợi nhuận.",
+        "effects": [
+          {
+            "money": 1600000
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      },
+      {
+        "chance": 0.65,
+        "text": "Bạn nhận ra vì sao cần xem kỹ thông tin trước khi góp vốn.",
+        "effects": [
+          {
+            "money": 100000
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": -4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  }
+]

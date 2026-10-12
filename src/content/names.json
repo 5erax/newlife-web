@@ -1,0 +1,157 @@
+{
+  "surnames": [
+    "Nguyễn",
+    "Trần",
+    "Lê",
+    "Phạm",
+    "Hoàng",
+    "Vũ",
+    "Đặng",
+    "Đỗ",
+    "Bùi",
+    "Phan",
+    "Võ",
+    "Dương",
+    "Lý",
+    "Hồ",
+    "Mai",
+    "Ngô"
+  ],
+  "male": [
+    "Minh",
+    "Khang",
+    "Nam",
+    "Huy",
+    "An",
+    "Phong",
+    "Khải",
+    "Đức",
+    "Bảo",
+    "Sơn",
+    "Quân",
+    "Lâm",
+    "Duy",
+    "Hải",
+    "Bình",
+    "Kiên"
+  ],
+  "female": [
+    "An",
+    "Linh",
+    "Mai",
+    "Vy",
+    "Ngọc",
+    "Hà",
+    "Lan",
+    "Thảo",
+    "Châu",
+    "Nhi",
+    "Yến",
+    "Hương",
+    "Quỳnh",
+    "Trang",
+    "My",
+    "Thu"
+  ],
+  "hometowns": [
+    "Hà Nội",
+    "Đà Nẵng",
+    "Huế",
+    "Hội An",
+    "Hải Phòng",
+    "Cần Thơ",
+    "Đà Lạt",
+    "Nha Trang",
+    "Vũng Tàu",
+    "Thành phố Hồ Chí Minh",
+    "Buôn Ma Thuột",
+    "Quy Nhơn",
+    "Sa Pa",
+    "Mỹ Tho",
+    "Phan Thiết",
+    "Long Xuyên"
+  ],
+  "traits": [
+    "ấm áp",
+    "thẳng thắn",
+    "hài hước",
+    "kiên nhẫn",
+    "hiếu kỳ",
+    "ít nói",
+    "sáng tạo",
+    "cẩn thận"
+  ],
+  "sourceKind": "original_web",
+  "version": "1.0.0",
+  "middles": {
+    "male": ["Văn", "Minh", "Gia", "Hoàng"],
+    "female": ["Thị", "Ngọc", "Minh", "Khánh"]
+  },
+  "hometownCatalog": [
+    {
+      "id": "home_01",
+      "name": "Hà Nội"
+    },
+    {
+      "id": "home_02",
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": "home_03",
+      "name": "Huế"
+    },
+    {
+      "id": "home_04",
+      "name": "Hội An"
+    },
+    {
+      "id": "home_05",
+      "name": "Hải Phòng"
+    },
+    {
+      "id": "home_06",
+      "name": "Cần Thơ"
+    },
+    {
+      "id": "home_07",
+      "name": "Đà Lạt"
+    },
+    {
+      "id": "home_08",
+      "name": "Nha Trang"
+    },
+    {
+      "id": "home_09",
+      "name": "Vũng Tàu"
+    },
+    {
+      "id": "home_10",
+      "name": "Thành phố Hồ Chí Minh"
+    },
+    {
+      "id": "home_11",
+      "name": "Buôn Ma Thuột"
+    },
+    {
+      "id": "home_12",
+      "name": "Quy Nhơn"
+    },
+    {
+      "id": "home_13",
+      "name": "Sa Pa"
+    },
+    {
+      "id": "home_14",
+      "name": "Mỹ Tho"
+    },
+    {
+      "id": "home_15",
+      "name": "Phan Thiết"
+    },
+    {
+      "id": "home_16",
+      "name": "Long Xuyên"
+    }
+  ],
+  "note": "Danh mục quê hư cấu của game; không dùng để xác nhận địa giới hành chính."
+}

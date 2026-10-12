@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "job_yte_01",
+    "name": "Điều dưỡng",
+    "industry": "yte",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 65,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tập sự chuyên môn",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên chính",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên gia",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một bệnh nhân lớn tuổi không muốn dùng bữa.",
+      "Ca trực mới đông hơn dự kiến.",
+      "Gia đình bệnh nhân gửi một lá thư cảm ơn."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_yte_02",
+    "name": "Bác sĩ",
+    "industry": "yte",
+    "minAge": 18,
+    "degree": "edu_medical",
+    "minIntelligence": 65,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tập sự chuyên môn",
+        "salary": 240000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên chính",
+        "salary": 360000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên gia",
+        "salary": 552000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một ca khám cần bạn giải thích lại kết quả thật dễ hiểu.",
+      "Đồng nghiệp nhờ bạn cùng rà một chẩn đoán khó.",
+      "Bạn được mời trình bày một nghiên cứu nhỏ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_yte_03",
+    "name": "Dược sĩ",
+    "industry": "yte",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 65,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tập sự chuyên môn",
+        "salary": 144000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên chính",
+        "salary": 216000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên gia",
+        "salary": 331200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách cầm hai đơn thuốc và lo lắng về cách dùng.",
+      "Nhà cung cấp giao một lô hàng thiếu hồ sơ.",
+      "Một sinh viên xin được theo bạn thực tập."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_yte_04",
+    "name": "Kỹ thuật viên xét nghiệm",
+    "industry": "yte",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 65,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tập sự chuyên môn",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên chính",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên gia",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một mẫu xét nghiệm có nhãn khó đọc.",
+      "Thiết bị báo lỗi đúng đầu ca.",
+      "Phòng xét nghiệm được giao đào tạo người mới."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_giaoduc_01",
+    "name": "Giáo viên mầm non",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 55,
+    "minHealth": 25,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo viên mới",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Giáo viên chính",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng chuyên môn",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Cả lớp quyết định chiếc gối là một đám mây.",
+      "Một em chưa muốn rời cha mẹ vào buổi sáng.",
+      "Phụ huynh đề nghị đổi giờ sinh hoạt."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_giaoduc_02",
+    "name": "Giáo viên phổ thông",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 55,
+    "minHealth": 25,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo viên mới",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Giáo viên chính",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng chuyên môn",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Học sinh hỏi một câu khiến bạn phải suy nghĩ.",
+      "Hai nhóm học sinh bất đồng khi làm dự án.",
+      "Bạn được mời chuẩn bị tiết học mở."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_giaoduc_03",
+    "name": "Giảng viên",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 55,
+    "minHealth": 25,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo viên mới",
+        "salary": 168000000,
+        "minYears": 0
+      },
+      {
+        "name": "Giáo viên chính",
+        "salary": 252000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng chuyên môn",
+        "salary": 386400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Lớp muốn làm dự án thay bài thi cuối kỳ.",
+      "Một sinh viên gửi bản thảo đầy ý tưởng nhưng thiếu số liệu.",
+      "Bạn có cơ hội tham gia nhóm nghiên cứu khác ngành."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_giaoduc_04",
+    "name": "Gia sư toàn thời gian",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 55,
+    "minHealth": 25,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo viên mới",
+        "salary": 84000000,
+        "minYears": 0
+      },
+      {
+        "name": "Giáo viên chính",
+        "salary": 126000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng chuyên môn",
+        "salary": 193200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Học viên cần lấy lại tự tin trước khi luyện đề.",
+      "Lịch học của hai gia đình vô tình trùng nhau.",
+      "Một học viên cũ báo tin đạt mục tiêu."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_congnghe_01",
+    "name": "Lập trình viên",
+    "industry": "congnghe",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 60,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Junior",
+        "salary": 168000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 252000000,
+        "minYears": 3
+      },
+      {
+        "name": "Senior",
+        "salary": 386400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một lỗi chỉ xuất hiện khi khách bấm nút rất nhanh.",
+      "Đội muốn viết lại tính năng trong khi bản cũ vẫn chạy.",
+      "Bạn được nhờ hướng dẫn một lập trình viên mới."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_congnghe_02",
+    "name": "Kiểm thử viên",
+    "industry": "congnghe",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 60,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Junior",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Senior",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Bạn phát hiện lỗi sát giờ phát hành.",
+      "Nhóm tranh luận một trường hợp biên ít người gặp.",
+      "Một lỗi cũ xuất hiện lại sau cập nhật."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_congnghe_03",
+    "name": "Kỹ thuật viên IT",
+    "industry": "congnghe",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 60,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Junior",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Senior",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Máy in im lặng và cả văn phòng nhìn về phía bạn.",
+      "Một phòng họp mất mạng ngay trước buổi trình bày.",
+      "Đồng nghiệp muốn bạn dạy cách sao lưu dữ liệu."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_congnghe_04",
+    "name": "Phân tích dữ liệu",
+    "industry": "congnghe",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 60,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Junior",
+        "salary": 216000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 324000000,
+        "minYears": 3
+      },
+      {
+        "name": "Senior",
+        "salary": 496800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hai báo cáo đưa ra những con số không khớp.",
+      "Người xem muốn có kết luận khi dữ liệu còn thiếu.",
+      "Bạn tìm được một cách trình bày dễ hiểu hơn."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_kinhdoanh_01",
+    "name": "Kế toán",
+    "industry": "kinhdoanh",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 45,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một hoá đơn thiếu thông tin đối chiếu.",
+      "Cuối tháng có khoản chi được ghi hai lần.",
+      "Bạn được giao cải thiện quy trình tổng hợp."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_kinhdoanh_02",
+    "name": "Bán hàng doanh nghiệp",
+    "industry": "kinhdoanh",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 45,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách hỏi một nhu cầu ngoài gói đang bán.",
+      "Một hợp đồng tốt cần nhiều tuần theo dõi.",
+      "Đội muốn hứa thời hạn nhanh hơn khả năng giao."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_kinhdoanh_03",
+    "name": "Chuyên viên marketing",
+    "industry": "kinhdoanh",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 45,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên",
+        "salary": 144000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 216000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 331200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một chiến dịch vui bị người xem hiểu khác ý.",
+      "Ngân sách bị giảm trong khi lịch phát vẫn giữ.",
+      "Khách chia sẻ phản hồi trái với dự đoán của đội."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_kinhdoanh_04",
+    "name": "Chuyên viên nhân sự",
+    "industry": "kinhdoanh",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 45,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hai ứng viên có thế mạnh rất khác nhau.",
+      "Một đồng nghiệp muốn góp ý nhưng sợ bị đánh giá.",
+      "Đội đề nghị bạn tổ chức buổi gắn kết."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nghethuat_01",
+    "name": "Diễn viên",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 30,
+    "minHealth": 20,
+    "minLooks": 35,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Mới vào nghề",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nghệ sĩ chính",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Nghệ sĩ kỳ cựu",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Đạo diễn muốn bạn thử một vai khác sở trường.",
+      "Bạn quên một câu thoại nhưng bạn diễn vẫn theo nhịp.",
+      "Một vai nhỏ được khán giả chú ý bất ngờ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nghethuat_02",
+    "name": "Ca sĩ",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 30,
+    "minHealth": 20,
+    "minLooks": 35,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Mới vào nghề",
+        "salary": 84000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nghệ sĩ chính",
+        "salary": 126000000,
+        "minYears": 3
+      },
+      {
+        "name": "Nghệ sĩ kỳ cựu",
+        "salary": 193200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Bài hát mới có đoạn vượt ngoài quãng giọng quen thuộc.",
+      "Bạn phải chọn giữa buổi diễn và thời gian nghỉ giọng.",
+      "Khán giả muốn nghe lại bài đầu tiên của bạn."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nghethuat_03",
+    "name": "Thiết kế đồ hoạ",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 30,
+    "minHealth": 20,
+    "minLooks": 35,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Mới vào nghề",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nghệ sĩ chính",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Nghệ sĩ kỳ cựu",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách nói màu này chưa đủ vui mà không biết màu nào vui.",
+      "Bạn nhận phản hồi trái ngược từ hai người duyệt.",
+      "Một dự án cho phép bạn thử phong cách mới."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nghethuat_04",
+    "name": "Nhiếp ảnh gia",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 30,
+    "minHealth": 20,
+    "minLooks": 35,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Mới vào nghề",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nghệ sĩ chính",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Nghệ sĩ kỳ cựu",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Trời đổ mưa trước buổi chụp ngoài trời.",
+      "Một người không thoải mái trước ống kính.",
+      "Khách muốn bạn chọn một ảnh kể được câu chuyện."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_thethao_01",
+    "name": "Vận động viên",
+    "industry": "thethao",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 25,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Tập sự",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên nghiệp",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt đội",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Bạn phải chọn giữa thêm một buổi tập và hồi phục.",
+      "Đồng đội mất tự tin trước trận quyết định.",
+      "Một giải đấu nhỏ mời bạn thi đấu giao lưu."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_thethao_02",
+    "name": "Huấn luyện viên",
+    "industry": "thethao",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 25,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Tập sự",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên nghiệp",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt đội",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một học viên muốn tăng cường độ quá nhanh.",
+      "Đội có hai người cùng muốn vị trí dẫn đầu.",
+      "Bạn được nhờ thiết kế buổi tập cho người mới."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_thethao_03",
+    "name": "Trọng tài",
+    "industry": "thethao",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 25,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Tập sự",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên nghiệp",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt đội",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một quyết định khó làm cả hai đội cùng phản ứng.",
+      "Bạn nhìn lại một pha bóng còn nhiều tranh luận.",
+      "Người mới hỏi cách giữ bình tĩnh giữa trận."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_thethao_04",
+    "name": "Hướng dẫn viên thể hình",
+    "industry": "thethao",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 25,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Tập sự",
+        "salary": 84000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên nghiệp",
+        "salary": 126000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt đội",
+        "salary": 193200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách muốn kết quả nhanh hơn chương trình phù hợp.",
+      "Một người ngại tập trước nhiều người.",
+      "Bạn được giao lớp tập đầu giờ sáng."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_phapluat_01",
+    "name": "Trợ lý pháp lý",
+    "industry": "phapluat",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 65,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Trợ lý",
+        "salary": 84000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 126000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên viên cao cấp",
+        "salary": 193200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Bộ hồ sơ cần rà lại các mốc thời gian.",
+      "Khách gửi thêm tài liệu sát thời hạn nội bộ.",
+      "Bạn phát hiện hai bản sao có thông tin khác nhau."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_phapluat_02",
+    "name": "Luật sư",
+    "industry": "phapluat",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 65,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Trợ lý",
+        "salary": 180000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 270000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên viên cao cấp",
+        "salary": 414000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách mong bạn bảo đảm một kết quả chưa thể biết.",
+      "Một hồ sơ cần nhiều thời gian lắng nghe hơn đọc giấy.",
+      "Đồng nghiệp đề nghị cùng phân tích tình huống mới."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_phapluat_03",
+    "name": "Công chứng viên",
+    "industry": "phapluat",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 65,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Trợ lý",
+        "salary": 144000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 216000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên viên cao cấp",
+        "salary": 331200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một khách không hiểu điều đang chuẩn bị ký.",
+      "Giấy tờ có tên viết khác giữa hai trang.",
+      "Phòng làm việc nhận lượng hồ sơ lớn hơn thường ngày."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_phapluat_04",
+    "name": "Chuyên viên pháp chế",
+    "industry": "phapluat",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 65,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Trợ lý",
+        "salary": 156000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 234000000,
+        "minYears": 3
+      },
+      {
+        "name": "Chuyên viên cao cấp",
+        "salary": 358800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một bộ phận muốn bỏ qua bước rà soát nội bộ.",
+      "Hợp đồng có điều khoản cần giải thích bằng lời đơn giản.",
+      "Bạn được mời xây tài liệu hướng dẫn cho đồng nghiệp."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nongnghiep_01",
+    "name": "Trồng trọt",
+    "industry": "nongnghiep",
+    "minAge": 18,
+    "degree": "edu_lower_secondary",
+    "minIntelligence": 20,
+    "minHealth": 45,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 60000000,
+        "minYears": 0
+      },
+      {
+        "name": "Có kinh nghiệm",
+        "salary": 90000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt nhóm",
+        "salary": 138000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một đợt nắng kéo dài khiến lịch chăm cây phải đổi.",
+      "Bạn cân nhắc thử giống mới trên một khoảnh nhỏ.",
+      "Nhóm cần thống nhất thời điểm thu hoạch."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nongnghiep_02",
+    "name": "Chăn nuôi",
+    "industry": "nongnghiep",
+    "minAge": 18,
+    "degree": "edu_lower_secondary",
+    "minIntelligence": 20,
+    "minHealth": 45,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Có kinh nghiệm",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt nhóm",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một con vật ăn ít hơn thường ngày.",
+      "Thời tiết thay đổi làm chuồng cần sửa lại.",
+      "Người mới muốn học cách ghi nhật ký chăm sóc."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nongnghiep_03",
+    "name": "Kỹ thuật nông nghiệp",
+    "industry": "nongnghiep",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 20,
+    "minHealth": 45,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Có kinh nghiệm",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt nhóm",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một hộ muốn nghe cách cải thiện đất bằng ngôn ngữ dễ hiểu.",
+      "Số liệu hai đợt khảo sát lệch nhau.",
+      "Bạn có cơ hội thử nghiệm trên một vùng nhỏ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nongnghiep_04",
+    "name": "Quản lý trang trại thuê",
+    "industry": "nongnghiep",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 20,
+    "minHealth": 45,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Có kinh nghiệm",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Dẫn dắt nhóm",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Chi phí vật tư tăng trước vụ mới.",
+      "Lịch của hai đội làm việc đang chồng nhau.",
+      "Một người đề xuất thay cách phân công để đỡ mệt."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_xaydung_01",
+    "name": "Thợ xây",
+    "industry": "xaydung",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 30,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ chính",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một hạng mục cần làm lại trước khi tiếp tục.",
+      "Nắng gắt khiến đội cần đổi giờ làm.",
+      "Bạn được giao hướng dẫn người mới cách đọc bản vẽ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_xaydung_02",
+    "name": "Thợ điện",
+    "industry": "xaydung",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 30,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ chính",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách muốn sửa nhanh nhưng kiểm tra cần thêm thời gian.",
+      "Thiết bị cũ có biểu hiện khác mô tả của chủ nhà.",
+      "Bạn nhận một công việc phối hợp với đội khác."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_xaydung_03",
+    "name": "Kỹ sư xây dựng",
+    "industry": "xaydung",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 168000000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ chính",
+        "salary": 252000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 386400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Tiến độ muốn rút ngắn trong khi kiểm tra chưa xong.",
+      "Hai bản vẽ cần đối chiếu trước khi thi công.",
+      "Đội đề nghị bạn giải thích kế hoạch theo từng bước."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_xaydung_04",
+    "name": "Kiến trúc sư",
+    "industry": "xaydung",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Học việc",
+        "salary": 180000000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ chính",
+        "salary": 270000000,
+        "minYears": 3
+      },
+      {
+        "name": "Trưởng nhóm",
+        "salary": 414000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách muốn căn nhà sáng hơn mà vẫn giữ riêng tư.",
+      "Ngân sách giảm sau khi bản vẽ gần hoàn tất.",
+      "Bạn được mời thiết kế không gian cộng đồng nhỏ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_dichvu_01",
+    "name": "Đầu bếp",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 25,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 96000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên chính",
+        "salary": 144000000,
+        "minYears": 3
+      },
+      {
+        "name": "Quản lý nhóm",
+        "salary": 220800000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một nguyên liệu quen thuộc hết đúng lúc đông khách.",
+      "Khách có yêu cầu ăn riêng cần cả bếp phối hợp.",
+      "Bạn được thử một món mới trong thực đơn nhỏ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_dichvu_02",
+    "name": "Nhân viên khách sạn",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 25,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên chính",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Quản lý nhóm",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hai khách cùng tưởng mình đã đặt một phòng.",
+      "Một vị khách vừa tới đang rất mệt và cáu.",
+      "Đội muốn đổi cách bàn giao ca cho dễ theo dõi."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_dichvu_03",
+    "name": "Hướng dẫn viên du lịch",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 25,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên chính",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Quản lý nhóm",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Mưa làm lịch tham quan ngoài trời không còn phù hợp.",
+      "Một người trong đoàn muốn tìm hiểu kỹ hơn về địa phương.",
+      "Bạn được giao đoàn có nhiều độ tuổi khác nhau."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_dichvu_04",
+    "name": "Thợ làm tóc",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 25,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 84000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên chính",
+        "salary": 126000000,
+        "minYears": 3
+      },
+      {
+        "name": "Quản lý nhóm",
+        "salary": 193200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Khách mang ảnh mẫu nhưng muốn thay một chi tiết lớn.",
+      "Một khách lo lắng vì lần cắt trước không như ý.",
+      "Bạn có cơ hội học thêm một kỹ thuật tạo kiểu."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nhanuoc_01",
+    "name": "Nhân viên hành chính",
+    "industry": "nhanuoc",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 45,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 84000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 126000000,
+        "minYears": 3
+      },
+      {
+        "name": "Phụ trách nhóm",
+        "salary": 193200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một người không biết bắt đầu từ biểu mẫu nào.",
+      "Hai lịch hẹn bị đặt vào cùng một giờ.",
+      "Bạn đề xuất bảng hướng dẫn dễ đọc hơn."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nhanuoc_02",
+    "name": "Nhân viên thư viện",
+    "industry": "nhanuoc",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 45,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Phụ trách nhóm",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Một bạn đọc tìm cuốn sách chỉ nhớ màu bìa.",
+      "Nhóm học sinh muốn có góc đọc chung.",
+      "Thư viện nhận sách tặng cần phân loại."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nhanuoc_03",
+    "name": "Lính cứu hoả",
+    "industry": "nhanuoc",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 45,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Phụ trách nhóm",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Buổi diễn tập cho thấy đội cần phối hợp nhịp hơn.",
+      "Một khu dân cư mời đội nói về an toàn.",
+      "Bạn cần lựa chọn giữa nhận thêm ca và hồi phục."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_nhanuoc_04",
+    "name": "Cảnh sát",
+    "industry": "nhanuoc",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 45,
+    "minHealth": 35,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên mới",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Phụ trách nhóm",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hai người kể khác nhau về một cuộc tranh cãi.",
+      "Một ca trực dài đòi hỏi đội chia việc rõ.",
+      "Bạn được mời hỗ trợ hoạt động cộng đồng."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_quandoi_01",
+    "name": "Binh sĩ chuyên nghiệp",
+    "industry": "quandoi",
+    "minAge": 18,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 35,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Cấp đầu",
+        "salary": 72000000,
+        "minYears": 0
+      },
+      {
+        "name": "Cấp trung",
+        "salary": 108000000,
+        "minYears": 3
+      },
+      {
+        "name": "Cấp cao",
+        "salary": 165600000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Đồng đội mới chưa theo kịp nhịp sinh hoạt.",
+      "Lịch huấn luyện cần đổi vì thời tiết.",
+      "Bạn được giao nhiệm vụ tổ chức hậu cần nhỏ."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_quandoi_02",
+    "name": "Sĩ quan chỉ huy",
+    "industry": "quandoi",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 35,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Cấp đầu",
+        "salary": 144000000,
+        "minYears": 0
+      },
+      {
+        "name": "Cấp trung",
+        "salary": 216000000,
+        "minYears": 3
+      },
+      {
+        "name": "Cấp cao",
+        "salary": 331200000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Hai nhóm có đề xuất trái ngược về phân công.",
+      "Một đồng đội muốn trao đổi khó khăn riêng.",
+      "Buổi tổng kết cần ghi nhận công sức của cả đội."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_quandoi_03",
+    "name": "Kỹ thuật viên quân đội",
+    "industry": "quandoi",
+    "minAge": 18,
+    "degree": "edu_vocational",
+    "minIntelligence": 35,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Cấp đầu",
+        "salary": 108000000,
+        "minYears": 0
+      },
+      {
+        "name": "Cấp trung",
+        "salary": 162000000,
+        "minYears": 3
+      },
+      {
+        "name": "Cấp cao",
+        "salary": 248400000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Một thiết bị cần rà lại trước khi đưa vào dùng.",
+      "Kho vật tư có số lượng không khớp sổ.",
+      "Bạn được nhờ hướng dẫn bảo quản thiết bị."
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "job_quandoi_04",
+    "name": "Nhân viên quân y",
+    "industry": "quandoi",
+    "minAge": 18,
+    "degree": "edu_college",
+    "minIntelligence": 35,
+    "minHealth": 65,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Cấp đầu",
+        "salary": 120000000,
+        "minYears": 0
+      },
+      {
+        "name": "Cấp trung",
+        "salary": 180000000,
+        "minYears": 3
+      },
+      {
+        "name": "Cấp cao",
+        "salary": 276000000,
+        "minYears": 7
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Một người cố giấu việc đang mệt.",
+      "Buổi khám cần sắp lịch để không ai bị bỏ sót.",
+      "Đội muốn học thêm cách chăm sóc sức khoẻ hằng ngày."
+    ],
+    "sourceKind": "original_web"
+  }
+]

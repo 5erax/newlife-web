@@ -1,0 +1,17 @@
+[
+  {
+    "id": "medal_service",
+    "name": "Huy chương tận tâm",
+    "source": "Hoàn thành 20 năm làm việc trong ngành quân đội"
+  },
+  {
+    "id": "medal_sport",
+    "name": "Huy chương phong trào",
+    "source": "Kết quả giải thể thao ở act_thechat_09"
+  },
+  {
+    "id": "medal_community",
+    "name": "Huy chương cộng đồng",
+    "source": "Hoàn thành 20 hoạt động tình nguyện"
+  }
+]

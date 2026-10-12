@@ -1,0 +1,112 @@
+[
+  {
+    "id": "edu_primary",
+    "name": "Tiểu học",
+    "minAge": 6,
+    "years": 5,
+    "cost": 0,
+    "requires": [],
+    "minScore": 0,
+    "specialty": false,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_lower_secondary",
+    "name": "Trung học cơ sở",
+    "minAge": 11,
+    "years": 4,
+    "cost": 0,
+    "requires": ["edu_primary"],
+    "minScore": 0,
+    "specialty": false,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_upper_secondary",
+    "name": "Trung học phổ thông",
+    "minAge": 15,
+    "years": 3,
+    "cost": 3000000,
+    "requires": ["edu_lower_secondary"],
+    "minScore": 35,
+    "specialty": false,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_vocational",
+    "name": "Học nghề",
+    "minAge": 18,
+    "years": 2,
+    "cost": 8000000,
+    "requires": ["edu_lower_secondary"],
+    "minScore": 0,
+    "specialty": true,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_college",
+    "name": "Cao đẳng",
+    "minAge": 18,
+    "years": 3,
+    "cost": 12000000,
+    "requires": ["edu_upper_secondary"],
+    "minScore": 40,
+    "specialty": true,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_university",
+    "name": "Đại học",
+    "minAge": 18,
+    "years": 4,
+    "cost": 20000000,
+    "requires": ["edu_upper_secondary"],
+    "minScore": 55,
+    "specialty": true,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_medical",
+    "name": "Y khoa",
+    "minAge": 18,
+    "years": 6,
+    "cost": 28000000,
+    "requires": ["edu_upper_secondary"],
+    "minScore": 75,
+    "specialty": true,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_postgraduate",
+    "name": "Sau đại học",
+    "minAge": 22,
+    "years": 2,
+    "cost": 24000000,
+    "requires": ["edu_university"],
+    "minScore": 65,
+    "specialty": true,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_return_school",
+    "name": "Hoàn thành phổ thông muộn",
+    "minAge": 18,
+    "years": 3,
+    "cost": 6000000,
+    "requires": ["edu_lower_secondary"],
+    "minScore": 0,
+    "specialty": false,
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "edu_short_course",
+    "name": "Khoá học ngắn hạn",
+    "minAge": 13,
+    "years": 1,
+    "cost": 2000000,
+    "requires": [],
+    "minScore": 0,
+    "specialty": false,
+    "sourceKind": "original_web"
+  }
+]
