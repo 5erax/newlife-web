@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRegisterSW } from "virtual:pwa-register/react";
 import type { Action, GameState, NewLifeOptions } from "../engine/types";
-import { STAT_LABELS } from "../engine/types";
+import { StatBars, ThisYear } from "./components/StatChanges";
 import { newLife, reduce } from "../engine/game";
 import { serialize } from "../engine/save";
 import { netWorth } from "../engine/helpers";
@@ -493,21 +493,7 @@ export default function App() {
             </nav>
             <main className="game-main">
               <div className="mobile-stats">
-                {Object.entries(game.stats).map(([key, value]) => (
-                  <div className={"stat stat-" + key} key={key}>
-                    <div>
-                      <span>
-                        {STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                      </span>
-                      <strong>{value}</strong>
-                    </div>
-                    <progress
-                      value={value}
-                      max={100}
-                      aria-label={STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                    />
-                  </div>
-                ))}
+                <StatBars s={game} /><ThisYear s={game} />
               </div>
               {readOnly && (
                 <div className="banner">
@@ -549,24 +535,7 @@ export default function App() {
                 <small>{game.hometown}</small>
               </div>
               <div className="stats-list">
-                {Object.entries(game.stats).map(([key, value]) => (
-                  <div className={"stat stat-" + key} key={key}>
-                    <div>
-                      <span>
-                        {STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                      </span>
-                      <strong>
-                        {value}
-                        <small>/100</small>
-                      </strong>
-                    </div>
-                    <progress
-                      value={value}
-                      max={100}
-                      aria-label={STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                    />
-                  </div>
-                ))}
+                <StatBars s={game} /><ThisYear s={game} />
               </div>
               <div className="balance-panel">
                 <span>{ui.balance}</span>
@@ -596,7 +565,7 @@ export default function App() {
           </div>
           <footer className="age-dock">
             <div className="dock-profile">
-              <Avatar small age={game.age} happiness={game.stats.happiness} />
+              <Avatar small age={game.age} happiness={game.stats.happiness} gender={game.gender} />
               <span>
                 <strong>{game.name}</strong>
                 <small>
@@ -651,3 +620,4 @@ export default function App() {
     </>
   );
 }
+

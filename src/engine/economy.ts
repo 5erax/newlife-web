@@ -18,6 +18,7 @@ import {
 } from "./helpers";
 import industries from "../content/industries.json" with { type: "json" };
 import { random } from "./rng";
+import { changeContext } from "./changes";
 export const sideJobs = [
   { name: "Phụ quán", minAge: 13 },
   { name: "Gia sư nhỏ", minAge: 16 },
@@ -29,6 +30,7 @@ export const sideJobs = [
   { name: "Chăm thú cưng", minAge: 16 },
 ];
 export function economicYear(s: GameState) {
+  changeContext(s, "economy", "Công việc, sinh hoạt và tài sản trong năm.");
   if (s.age < 18) {
     if (s.age >= 6) money(s, 240000, "Tiền tiêu vặt trong năm");
   } else {

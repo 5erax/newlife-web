@@ -2,6 +2,7 @@ import type { GameState, Stat, Role, Relation, Metric } from "./types";
 import { assets, assetById } from "../content/catalog";
 import names from "../content/names.json" with { type: "json" };
 import { pick, random } from "./rng";
+import { recordChange } from "./changes";
 export function identityDigest(text: string) {
   return Array.from({ length: 4 }, (_, lane) => {
     let h = (2166136261 ^ Math.imul(lane + 1, 2654435761)) >>> 0;
@@ -28,10 +29,14 @@ export function addLog(
     age: s.age,
     text,
     kind,
+    deltas: [],
+    source: kind,
   });
 }
 export function stat(s: GameState, key: Stat, delta: number) {
+  const before = s.stats[key];
   s.stats[key] = clamp(s.stats[key] + delta);
+  recordChange(s, key, before, s.stats[key]);
 }
 export function flag(s: GameState, key: string, value = true) {
   s.flags = s.flags.filter((x) => x !== key);
@@ -55,6 +60,7 @@ export function money(
   mandatory = false,
 ) {
   if (amount === 0) return;
+  const before = s.money;
   requireGame(
     Number.isSafeInteger(amount) && Math.abs(amount) <= MAX_MONEY,
     "Số tiền không hợp lệ.",
@@ -82,6 +88,7 @@ export function money(
     }
     s.money = 0;
   } else s.money = after;
+  recordChange(s, "money", before, s.money, label);
   s.ledger.push({
     id: `${s.id}_${s.actionSerial}_${s.ledger.length}`,
     age: s.age,

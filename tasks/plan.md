@@ -140,3 +140,20 @@ Các nhãn: phase, area, type, priority, kind và status. P0 là nền tảng/m�
 Dependency cụ thể nằm trong từng issue. Graph của backlog được kiểm không có chu trình trước khi tạo. Nội dung Phase 4 viết song song theo task; nghiệm thu đủ hệ trước cân bằng và phát hành.
 
 Rủi ro lớn: chưa có dataset gốc; nhiều nội dung tự viết; sai tiền/lưu ở nhánh dài; offline thiếu gói tuổi; truy cập public ngoài dự kiến. Các task và gate có kiểm tra riêng cho mỗi rủi ro. Quyền tài nguyên và các quyết định chưa rõ được giữ ở Phase 0, không âm thầm bỏ qua.
+
+## Mở rộng theo yêu cầu 13.1–13.13
+
+[Gate #95](https://github.com/5erax/newlife-web/issues/95)
+
+- [#96 — 13.1–13.2: Deltas engine, nhật ký có nguyên nhân và migration save](https://github.com/5erax/newlife-web/issues/96)
+- [#97 — 13.1–13.2: Chip nhảy, bóng chỉ số, Năm nay và bộ lọc nhật ký](https://github.com/5erax/newlife-web/issues/97)
+- [#98 — 13.3–13.4: Lão hoá và cân bằng bốn chỉ số](https://github.com/5erax/newlife-web/issues/98)
+- [#99 — 13.5: Gia cảnh và trợ cấp học phí cha mẹ](https://github.com/5erax/newlife-web/issues/99)
+- [#100 — 13.6–13.7: Xuất thân toàn cầu, tên theo giới, SVG và tiền địa phương](https://github.com/5erax/newlife-web/issues/100)
+- [#101 — 13.8: Hiệu ứng sự kiện và hiệu chỉnh thống kê](https://github.com/5erax/newlife-web/issues/101)
+- [#102 — 13.9: Hoạt động miễn phí, bậc giá và giảm hiệu quả lặp](https://github.com/5erax/newlife-web/issues/102)
+- [#103 — 13.10: Casino seeded blackjack và ba cào](https://github.com/5erax/newlife-web/issues/103)
+- [#104 — 13.11: Modifier, lịch chuỗi và 20 câu chuyện dài](https://github.com/5erax/newlife-web/issues/104)
+- [#105 — 13.12: Weighted cases lồng nhau, pools và text variants](https://github.com/5erax/newlife-web/issues/105)
+- [#106 — 13.12–13.13: Graph, branch coverage và mô phỏng 10k](https://github.com/5erax/newlife-web/issues/106)
+- [#107 — 13.13: Nghiệm thu browser, hướng dẫn, PR và phát hành riêng tư](https://github.com/5erax/newlife-web/issues/107)

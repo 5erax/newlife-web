@@ -16,6 +16,7 @@ const integer = z.number().int().min(0).max(MAX_MONEY);
 const score = z.number().int().min(0).max(100);
 const ids = z.array(idSchema).max(2000);
 const record = z.record(z.string().min(1).max(150), integer);
+const deltaSchema = z.object({key:z.enum(["health","happiness","intelligence","looks","money"]),before:z.number().int().min(-MAX_MONEY).max(MAX_MONEY),after:z.number().int().min(-MAX_MONEY).max(MAX_MONEY),reasons:z.array(z.string().min(1).max(5000)).max(1000)});
 const relationSchema = z.object({
   gender: z.enum(["male", "female", "other"]).optional(),
   id: idSchema,
@@ -47,6 +48,10 @@ const gameSchema = z.object({
     looks: score,
   }),
   money: integer,
+  lastDeltas: z.array(deltaSchema).max(5).default([]),
+  lastYearDeltas: z.array(deltaSchema).max(5).default([]),
+  happinessBaseline: score.default(55),
+  modifiers: z.array(z.object({id:idSchema,label:z.string().min(1).max(300),remaining:integer.min(1).max(120),stats:z.object({health:z.number().int().min(-25).max(25).optional(),happiness:z.number().int().min(-25).max(25).optional(),intelligence:z.number().int().min(-25).max(25).optional(),looks:z.number().int().min(-25).max(25).optional()}),happinessBaseline:z.number().int().min(-50).max(50).optional()})).max(40).default([]),
   education: z.object({
     completed: ids,
     current: z
@@ -124,7 +129,7 @@ const gameSchema = z.object({
         label: z.string().max(300),
       }),
     )
-    .max(10000),
+    .max(30000),
   debts: z
     .array(
       z.object({
@@ -150,6 +155,8 @@ const gameSchema = z.object({
           "death",
         ]),
         text: z.string().min(1).max(5000),
+        deltas: z.array(deltaSchema).max(5).default([]),
+        source: z.string().min(1).max(100).default("legacy"),
       }),
     )
     .max(10000),

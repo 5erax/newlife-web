@@ -11,6 +11,8 @@ import titleData from "../content/titles.json" with { type: "json" };
 import { eligible } from "./conditions";
 import { economicYear, studyYear } from "./economy";
 import { random } from "./rng";
+import { closeYear, changeContext } from "./changes";
+import { annualStats } from "./aging";
 import {
   addLog,
   count,
@@ -172,7 +174,11 @@ export function startYear(s: GameState) {
     s.phase === "ready",
     "Hãy giải quyết lựa chọn đang chờ trước khi tăng tuổi.",
   );
+  closeYear(s);
+  s.counters.looks_streak = s.counters.previous_looks === s.stats.looks ? (s.counters.looks_streak ?? 0) + 1 : 0;
+  s.counters.previous_looks = s.stats.looks;
   s.age++;
+  changeContext(s, "aging", "Lớn lên, sức khoẻ và nhịp sống trong năm mới.");
   s.time = 12;
   s.activityUses = {};
   s.sideJob = null;
@@ -199,17 +205,13 @@ export function startYear(s: GameState) {
     count(s, "marriageYears");
   if (s.relations.some((r) => r.alive && r.role === "friend"))
     count(s, "friend_years");
-  if (s.age >= 30) {
-    if (random(s) < (s.age < 50 ? 0.3 : s.age < 70 ? 0.8 : 1))
-      stat(s, "health", -(s.age >= 70 ? 2 : 1));
-    if (random(s) < (s.age < 50 ? 0.2 : s.age < 70 ? 0.4 : 0.6))
-      stat(s, "looks", -1);
-  }
+  annualStats(s);
   for (const disease of s.illnesses) {
     stat(s, "health", -Math.max(1, Math.round(disease.severity / 12)));
     disease.severity = Math.min(100, disease.severity + 2);
   }
   economicYear(s);
+  changeContext(s, "education", "Học tập trong năm.");
   if (!wasPrison) studyYear(s);
   if (wasPrison) {
     s.prisonYears--;

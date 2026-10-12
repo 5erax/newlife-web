@@ -1,5 +1,11 @@
 export type Stat = "health" | "happiness" | "intelligence" | "looks";
 export type Stats = Record<Stat, number>;
+export interface Delta {
+  key: Stat | "money";
+  before: number;
+  after: number;
+  reasons: string[];
+}
 export type Role =
   | "mother"
   | "father"
@@ -227,6 +233,8 @@ export interface Log {
   age: number;
   kind: "life" | "event" | "money" | "relationship" | "achievement" | "death";
   text: string;
+  deltas: Delta[];
+  source: string;
 }
 export interface Summary {
   lifeId: string;
@@ -259,6 +267,10 @@ export interface GameState {
   hometown: string;
   birthDate: string;
   stats: Stats;
+  lastDeltas: Delta[];
+  lastYearDeltas: Delta[];
+  happinessBaseline: number;
+  modifiers: {id:string; label:string; remaining:number; stats:Partial<Stats>; happinessBaseline?:number}[];
   money: number;
   education: {
     completed: string[];

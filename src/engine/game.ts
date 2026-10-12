@@ -15,6 +15,7 @@ import {
 import { applyEffects } from "./effects";
 import { chooseOutcome, eligible } from "./conditions";
 import { random } from "./rng";
+import { changeContext } from "./changes";
 import { economyAction } from "./economy";
 import {
   achievementCheck,
@@ -98,6 +99,10 @@ export function newLife(
     hometown: options.hometown,
     birthDate: options.birthDate,
     stats: { health: 80, happiness: 50, intelligence: 50, looks: 50 },
+    lastDeltas: [],
+    lastYearDeltas: [],
+    happinessBaseline: 40 + options.seed % 36,
+    modifiers: [],
     money: 0,
     education: { completed: [], current: null, score: 50, specialty: "" },
     job: null,
@@ -395,6 +400,8 @@ export function reduce(input: GameState, a: Action): GameState {
   s.profile.summaries = [...input.profile.summaries];
   s.revision++;
   s.actionSerial++;
+  s.lastDeltas = [];
+  changeContext(s, a.type, `Thay đổi từ ${{age:"năm mới", activity:"hoạt động", choose:"lựa chọn", relation:"quan hệ", workHard:"làm thêm giờ"}[a.type as string] ?? "quyết định của bạn"}.`);
   if (storyAction(s, a)) return s;
   if (a.type === "continueChild") return childLife(s, a.id);
   requireGame(
@@ -415,6 +422,7 @@ export function reduce(input: GameState, a: Action): GameState {
     const result = chooseOutcome(s, choice.outcomes);
     addLog(s, event.text, "event");
     addLog(s, `${choice.label}: ${result.text}`, "event");
+    changeContext(s, "event", `${choice.label}: ${result.text}`);
     applyEffects(s, result.effects);
     s.pending = null;
     count(s, "chainSteps");
@@ -461,6 +469,7 @@ export function reduce(input: GameState, a: Action): GameState {
       count(s, "healthy_activities");
     if (activity.crimeCategory) count(s, `crime_${activity.crimeCategory}`);
     const result = chooseOutcome(s, activity.outcomes);
+    changeContext(s, "activity", `${activity.name}: ${result.text}`);
     applyEffects(s, result.effects, a.targetId);
     addLog(s, `${activity.name}: ${result.text}`, "event");
     if (s.deathCause) finishLife(s, s.deathCause);
