@@ -20,7 +20,12 @@ import { changeContext } from "./changes";
 import { drawOrigin, originById, localPrice } from "./world";
 import { activityCost } from "./activity-pricing";
 import { pendingChoices, pendingText, chooseCase } from "./branches";
-import { apkPresentation, apkFriend } from "./apk";
+import {
+  apkPresentation,
+  apkFriend,
+  APK_TRIPS,
+  apkTripCompanions,
+} from "./apk";
 import { emptyCasino, casinoAction } from "./casino";
 import { migrate } from "./migration";
 import { emptyAppearance, specialActivity, resolveLove } from "./lifestyle";
@@ -32,6 +37,7 @@ import {
   deathChance,
   finishLife,
   startYear,
+  startApkTrip,
 } from "./year";
 import {
   addLog,
@@ -636,6 +642,13 @@ export function reduce(input: GameState, a: Action): GameState {
     requireGame(activity, "Không tìm thấy hoạt động.");
     const reason = activityReason(s, activity);
     requireGame(!reason, reason ?? "Chưa đủ điều kiện.");
+    if (a.companionId !== undefined)
+      requireGame(
+        s.flags.includes("apk_mode") &&
+          !!APK_TRIPS[a.id] &&
+          apkTripCompanions(s).some((p) => p.id === a.companionId),
+        "Người đồng hành không còn phù hợp.",
+      );
     if (activity.target)
       requireGame(
         activityTargets(s, activity).some((t) => t.id === a.targetId),
@@ -666,6 +679,7 @@ export function reduce(input: GameState, a: Action): GameState {
     specialActivity(s, activity, a);
     addLog(s, `${activity.name}: ${result.text}`, "event");
     if (s.deathCause) finishLife(s, s.deathCause);
+    else if (APK_TRIPS[a.id]) startApkTrip(s, a.id, a.companionId);
   } else if (a.type === "relation") {
     requireGame(
       s.time >= 1 && !s.prisonYears,

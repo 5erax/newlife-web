@@ -7,6 +7,14 @@ repo=Path(__file__).resolve().parents[1]
 tables=json.loads((p/'normalized-tables.json').read_text(encoding='utf8'))
 tr=dict(json.loads(x) for x in (p/'translations.jsonl').read_text(encoding='utf8').splitlines())
 missing=set()
+anomalies=[]
+
+def impact(table,record,field,raw):
+ if not re.fullmatch(r'[+-]?\d+',raw.strip()):
+  # shortcut: malformed source impacts stay neutral and are recorded; replace only with verified native evidence.
+  anomalies.append({'table':table,'record':record,'field':field,'raw':raw,'webValue':0,'status':'unverified_native_neutral_web_override'})
+  return 0
+ return int(raw)
 overrides={'Turkey Sexer':'Nhân viên phân loại giới tính gà tây','Junior Sexer, Mid-Level Sexer, Chief Sexer':'Nhân viên mới, Nhân viên chính, Trưởng bộ phận','The family fallouts':'Những bất hòa trong gia đình','The cunning comb over':'Kiểu chải tóc khéo che chỗ hói','Go to the gym more':'Tập thể dục thường xuyên hơn','Read more books':'Đọc nhiều sách hơn','Commit more crimes':'Phạm tội nhiều hơn','Resolutions are silly':'Đặt mục tiêu đầu năm thật ngớ ngẩn','The fluffer at work has failed to show up for her fluffing shift.':'Một nhân viên hỗ trợ tại phim trường người lớn đã vắng mặt trong ca làm.'}
 def translate(s):
  if not s:return ''
@@ -109,16 +117,23 @@ for i,(j,r) in enumerate(zip(jobs,get('a16_careers-enc')['rows']),1):
 save('jobs.vi.json',jobs)
 save('education.vi.json',[{'id':'apk_edu_'+k,'name':v,'minAge':18,'years':years,'cost':cost,'requires':['edu_upper_secondary'],'minScore':score,'specialty':True,'sourceKind':'apk_translation'} for k,v,years,cost,score in [('dental','Nha khoa',6,28000000,75),('law','Luật',4,20000000,60),('nursing','Điều dưỡng',4,18000000,60),('pharmacy','Dược',5,24000000,70),('veterinary','Thú y',5,24000000,65)]])
 core=['universal','calendar','career','friend','holiday','orphan','prison'];events=[];deferred=[];source_rows=[];seen_ids=set()
-for group in core:
- t=get('a16_dumb-scenarios-'+group+'-enc')
+trips={'vacation':'a16_dumb-scenarios-vacation-enc','camp':'a16_outdoor-camping-dumb-scenario-enc','hike':'a16_outdoor-hiking-dumb-scenario-enc'}
+for group in core+list(trips):
+ t=get(trips[group] if group in trips else 'a16_dumb-scenarios-'+group+'-enc')
  for row,r in enumerate(t['rows']):
-  index=r['Index'] or str(row+1);eid='apk_'+group+'_'+index
+  index=r.get('Index') or str(row+1);eid='apk_'+group+'_'+index
   if eid in seen_ids:eid+='_record_'+str(row+1)
   seen_ids.add(eid)
-  alltext=' '.join(v for k,v in r.items() if k in ['Body','Title','CTA'] or re.match(r'^(Choice|Narrative) \d+$',k))
+  alltext=' '.join(v for k,v in r.items() if k in ['Body','Scenario','Title','CTA'] or re.match(r'^(Choice|Narrative) \d+$',k))
   tags=set(re.findall(r'<([^<>/]+)>',alltext))
   req={'gender':r.get('Hero Gender','') or 'any','student':bool(r.get('Student')) or bool(tags&{'teacher','classmate'}),'job':bool(r.get('Job')) or bool(tags&{'coworker','co-worker'}),'parents':bool(r.get('Both Parents Alive')),'lover':bool(r.get('Hero Has Lover')) or any(x.startswith('lover') for x in tags),'noLover':bool(r.get("Hero Doesn't Have Lover")),'loverGender':r.get('Lover Gender','') or 'any','parent':any(x.startswith('parent') for x in tags),'friend':group=='friend' or any(x.startswith('friend') for x in tags),'orphan':group=='orphan','prison':group=='prison','careerId':jobIds.get(r.get('Type',''),'') if group=='career' else ''}
   blocked=[]
+  if group in trips:
+   req['trip']='cruise' if r.get('Type')=='Cruise' else group
+   if r.get('Requires Companion'):
+    companion_types={'Friend':'friend','Family Member':'family','Lover':'lover','Dog':'dog','Pet':'pet'}
+    req['companions']=[companion_types[x.strip()] for x in r['Companion Type'].split(',')]
+   if tags & {'pet',' pet'} and not r.get('Requires Companion'):req['companions']=['pet']
   if r.get('Vampire') or r.get('Royal'):blocked.append('Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc')
   if group=='career' and not req['careerId']:blocked.append('Nghề đặc biệt chưa có trong engine web')
   if group=='friend' and any(r.get(k) for k in ['Friend Min Craziness','Friend Has Job','Friend Is Student','Friend Has Child','Friend Is Married','Friend Is Enemy']):blocked.append('Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện')
@@ -128,14 +143,14 @@ for group in core:
   for n in range(1,7):
    if not r.get('Choice '+str(n)):continue
    effects=[]
-   for native,dest in [('Appearance','looks'),('Happiness','happiness'),('Intelligence','intelligence')]:
-    if r.get(native+' Impact '+str(n)):effects.append({'stat':dest,'delta':num(r[native+' Impact '+str(n)])})
+   for native,dest in [('Appearance','looks'),('Happiness','happiness'),('Intelligence','intelligence'),('Health','health'),('Smarts','intelligence'),('Enjoyment','happiness')]:
+    if r.get(native+' Impact '+str(n)):effects.append({'stat':dest,'delta':impact(t['name'],row+1,native+' Impact '+str(n),r[native+' Impact '+str(n)])})
    for native in ['Karma','Discipline','Behavior','Respect','Job','Friend']:
-    if r.get(native+' Impact '+str(n)):effects.append({'apkAttribute':native.lower(),'delta':num(r[native+' Impact '+str(n)])})
+    if r.get(native+' Impact '+str(n)):effects.append({'apkAttribute':native.lower(),'delta':impact(t['name'],row+1,native+' Impact '+str(n),r[native+' Impact '+str(n)])})
    narrative=translate(r.get('Narrative '+str(n),'')).strip() or 'Bạn đã ghi lại lựa chọn của mình.'
    choices.append({'id':eid+'_c'+str(n),'label':translate(r['Choice '+str(n)]),'outcomes':[{'chance':1,'text':narrative,'effects':effects}]})
   assert choices,(eid,'no choices')
-  events.append({'id':eid,'group':'apk_'+group,'minAge':num(r.get('Hero Min Age'),18 if group=='career' else 0),'maxAge':num(r.get('Hero Max Age'),120),'weight':1,'once':False,'cooldownYears':5,'maxOccurrences':24,'conditions':[],'text':'\n\n'.join(translate(r.get(k,'')) for k in ['Title','Body','CTA'] if r.get(k)), 'choices':choices,'sourceKind':'apk_translation','apkRequirements':req})
+  events.append({'id':eid,'group':'manual' if group in trips else 'apk_'+group,'minAge':num(r.get('Hero Min Age'),18 if group in ['career','vacation'] else 0),'maxAge':num(r.get('Hero Max Age'),120),'weight':1,'once':False,'cooldownYears':5,'maxOccurrences':24,'conditions':[],'text':'\n\n'.join(translate(r.get(k,'')) for k in ['Title','Body','Scenario','CTA'] if r.get(k)), 'choices':choices,'sourceKind':'apk_translation','apkRequirements':req})
   source_rows.append({'id':eid,'table':t['name'],'index':index,'record':row+1})
 for e in events:
  r=e['apkRequirements']
@@ -146,10 +161,13 @@ coins=[{'id':'apk_coin_'+r['Symbol'].lower(),'name':r['Name'],'ticker':r['Symbol
 save('coins.json',coins)
 coverage={'apkSha256':'8c1248cb94a7e8cfb4fa8cc6ca2f7886e7cbe8dd318d7ef2abc6b428ab469234','package':'com.candywriter.bitlife','version':'3.25','decodedTables':len(tables),'rawRows':sum(len(t['rows']) for t in tables),'choiceTables':len([t for t in tables if 'Choice 1' in t['fields']]),'choiceRows':sum(len(t['rows']) for t in tables if 'Choice 1' in t['fields']),'coreRows':sum(len(get('a16_dumb-scenarios-'+g+'-enc')['rows']) for g in core),'playableEvents':len(events),'careerRows':len(jobs),'cryptoRows':len(coins),'deferredCore':deferred,'otherChoiceTables':[{'table':t['name'],'rows':len(t['rows']),'status':'native_logic_pending'} for t in tables if 'Choice 1' in t['fields'] and t['name'] not in ['a16_dumb-scenarios-'+g+'-enc' for g in core]]}
 save('coverage.json',coverage)
+coverage['tripRows']=sum(len(get(n)['rows']) for n in trips.values())
+coverage['unverifiedEffects']=anomalies
+coverage['otherChoiceTables']=[row for row in coverage['otherChoiceTables'] if row['table'] not in trips.values()]
 save('event-sources.json',source_rows)
-assert len(events)+len(deferred)==1254
+assert len(events)+len(deferred)==1254+coverage['tripRows']
 print({'events':len(events),'deferred':len(deferred),'jobs':len(jobs),'coins':len(coins),'missingTranslations':len(missing)})
-if missing:print('Missing prose segments:',json.dumps(sorted(missing),ensure_ascii=False))
+if missing:(p/'missing-port-translations.json').write_text(json.dumps(sorted(missing),ensure_ascii=False),encoding='utf8')
 if missing:raise SystemExit('Translation checkpoint not complete for the port. Do not publish these files yet.')
 for file,data in staged.items():
  dest=repo/'src/content/apk'/file;dest.parent.mkdir(parents=True,exist_ok=True)

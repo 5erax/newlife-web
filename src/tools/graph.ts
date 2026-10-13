@@ -53,7 +53,9 @@ const manifest = {
       version: CONTENT_VERSION,
       status: "verified",
       verification: kind.startsWith("apk")
-        ? "tests/apk-port.test.ts"
+        ? kind === "apkEvents" && "group" in item && item.group === "manual"
+          ? "tests/apk-trips.test.ts"
+          : "tests/apk-port.test.ts"
         : kind === "stories"
           ? "tests/systems.test.ts"
           : kind === "jobs"

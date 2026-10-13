@@ -248,6 +248,8 @@ export interface Job {
   sourceKind: "original_web" | "apk_translation";
 }
 export interface ApkEventRequirements {
+  trip?: "vacation" | "cruise" | "camp" | "hike";
+  companions?: ("friend" | "family" | "lover" | "dog" | "pet")[];
   gender: "any" | "male" | "female" | "other";
   student: boolean;
   job: boolean;
@@ -469,6 +471,7 @@ export interface GameState {
     bannedUntil: number;
   };
   pending: {
+    trip?: { activityId: string; companionId?: string };
     templateSeed?: number;
     instanceId: string;
     event: LifeEvent;
@@ -520,6 +523,7 @@ export type Action =
       type: "activity";
       id: string;
       targetId?: string;
+      companionId?: string;
       optionId?: string;
       genderPreference?: "male" | "female" | "any";
     }
@@ -566,7 +570,7 @@ export interface NewLifeOptions {
   birthDate: string;
   seed: number;
 }
-export const CONTENT_VERSION = "1.2.0";
+export const CONTENT_VERSION = "1.3.0";
 export const STAT_LABELS: Record<Stat, string> = {
   health: "Sức khoẻ",
   happiness: "Hạnh phúc",

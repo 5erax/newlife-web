@@ -10,6 +10,10 @@ Bản 1.1 thêm Danh vọng, Tình yêu, Tâm trí và thể chất, Salon và s
 
 Bản 1.2 có bộ Việt hóa từ APK người dùng cung cấp: 1.074 tình huống/3.948 lựa chọn, danh mục 168 nghề, 28 chuyên ngành và 21 coin. Chọn bộ nội dung khi tạo đời mới; các đời cũ vẫn giữ bộ web. [Phạm vi và giới hạn chuyển đổi](docs/bitlife-apk-port.md) ghi rõ 180 dòng lõi và 48 bảng tình huống còn cần logic native. Chưa coi đây là BitLife 1:1 hoặc đủ toàn bộ nội dung gốc.
 
+Bản 1.3 bổ sung đủ 124 dòng của ba bảng du lịch/cắm trại/leo núi: tổng 1.198 tình huống APK và 4.416 lựa chọn. Chọn người đồng hành khi Lên núi, Cắm trại, Đi nước ngoài hoặc Du lịch tàu biển; tình huống hiện trong chuyến đi và giữ nguyên qua tải lại. Còn 180 dòng lõi và 45 bảng khác chưa chuyển; một hiệu ứng nguồn lỗi định dạng được ghi trong coverage, dùng tác động trung tính có công bố.
+
+Vercel: https://newlife-web-gray.vercel.app. Project đã kết nối GitHub; nhánh chính triển khai production, nhánh tính năng tạo preview. Bản lưu thuộc từng địa chỉ web: xuất JSON trên địa chỉ cũ rồi nhập tại địa chỉ mới.
+
 ## Chạy trên máy
 
 Node.js 24+, npm, dùng lockfile:

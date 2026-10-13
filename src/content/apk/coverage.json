@@ -7,7 +7,7 @@
   "choiceTables": 55,
   "choiceRows": 3497,
   "coreRows": 1254,
-  "playableEvents": 1074,
+  "playableEvents": 1198,
   "careerRows": 168,
   "cryptoRows": 21,
   "deferredCore": [
@@ -1474,11 +1474,6 @@
       "status": "native_logic_pending"
     },
     {
-      "table": "a16_dumb-scenarios-vacation-enc",
-      "rows": 59,
-      "status": "native_logic_pending"
-    },
-    {
       "table": "a16_dumb-scenarios-business-enc",
       "rows": 168,
       "status": "native_logic_pending"
@@ -1629,18 +1624,8 @@
       "status": "native_logic_pending"
     },
     {
-      "table": "a16_outdoor-camping-dumb-scenario-enc",
-      "rows": 36,
-      "status": "native_logic_pending"
-    },
-    {
       "table": "a16_dumb-scenarios-landlord-enc",
       "rows": 43,
-      "status": "native_logic_pending"
-    },
-    {
-      "table": "a16_outdoor-hiking-dumb-scenario-enc",
-      "rows": 29,
       "status": "native_logic_pending"
     },
     {
@@ -1692,6 +1677,17 @@
       "table": "a16_astronaut-mission-dumb-scenarios-enc",
       "rows": 25,
       "status": "native_logic_pending"
+    }
+  ],
+  "tripRows": 124,
+  "unverifiedEffects": [
+    {
+      "table": "a16_outdoor-hiking-dumb-scenario-enc",
+      "record": 27,
+      "field": "Enjoyment Impact 1",
+      "raw": "1-",
+      "webValue": 0,
+      "status": "unverified_native_neutral_web_override"
     }
   ]
 }

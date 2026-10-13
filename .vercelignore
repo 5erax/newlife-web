@@ -1,0 +1,12 @@
+.env*
+.openai/
+node_modules/
+dist/
+work/
+outputs/
+test-results/
+playwright-report/
+*.apk
+*.dll
+*.so
+*.bin

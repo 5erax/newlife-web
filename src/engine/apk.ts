@@ -2,6 +2,45 @@ import type { GameState, LifeEvent, ApkEventRequirements } from "./types";
 import { random, pick } from "./rng";
 import { originById, origins, regionalName, localPrice } from "./world";
 import { requireGame } from "./helpers";
+import { assetById } from "../content/catalog";
+
+export const APK_TRIPS: Record<
+  string,
+  NonNullable<ApkEventRequirements["trip"]>
+> = {
+  act_dulich_04: "hike",
+  act_dulich_05: "camp",
+  act_dulich_08: "vacation",
+  act_dulich_10: "cruise",
+};
+export function apkTripCompanions(s: GameState) {
+  return [
+    ...s.relations
+      .filter((p) => p.alive)
+      .map((p) => ({
+        id: p.id,
+        name: p.name,
+        kind:
+          p.role === "friend"
+            ? "friend"
+            : ["lover", "spouse"].includes(p.role)
+              ? "lover"
+              : "family",
+      })),
+    ...s.assets
+      .filter(
+        (a) =>
+          a.alive &&
+          assetById.get(a.catalogId)?.category === "pet" &&
+          a.condition > 0,
+      )
+      .map((a) => ({
+        id: a.instanceId,
+        name: assetById.get(a.catalogId)!.name,
+        kind: a.catalogId === "asset_thucung_02" ? "dog" : "pet",
+      })),
+  ];
+}
 
 export function apkFriend(s: GameState, r: ApkEventRequirements) {
   return s.relations.find(
@@ -15,10 +54,32 @@ export function apkFriend(s: GameState, r: ApkEventRequirements) {
         p.gender === r.friendGender),
   );
 }
-export function apkEventAllowed(s: GameState, e: LifeEvent) {
+export function apkEventAllowed(
+  s: GameState,
+  e: LifeEvent,
+  trip = s.pending?.trip,
+) {
   if (e.sourceKind !== "apk_translation") return true;
   const r = e.apkRequirements;
   if (!r || !s.flags.includes("apk_mode")) return false;
+  if (r.trip) {
+    if (!trip || APK_TRIPS[trip.activityId] !== r.trip || e.group !== "manual")
+      return false;
+    const companion = apkTripCompanions(s).find(
+      (p) => p.id === trip.companionId,
+    );
+    if (trip.companionId && !companion) return false;
+    if (
+      r.companions &&
+      (!companion ||
+        !r.companions.some(
+          (kind) =>
+            kind === companion.kind ||
+            (kind === "pet" && companion.kind === "dog"),
+        ))
+    )
+      return false;
+  } else if (trip) return false;
   const parents = s.relations.filter(
     (p) => p.alive && ["mother", "father", "parent"].includes(p.role),
   );
@@ -51,6 +112,9 @@ export function apkPresentation(s: GameState) {
     "Thiếu seed của nội dung Việt hóa.",
   );
   const rng = { rng: pending.templateSeed! };
+  const companion = apkTripCompanions(s).find(
+    (p) => p.id === pending.trip?.companionId,
+  );
   const parent = s.relations.find(
     (p) => p.alive && ["mother", "father", "parent"].includes(p.role),
   );
@@ -102,6 +166,16 @@ export function apkPresentation(s: GameState) {
     "drug-illegal": "một chất cấm",
     insult: "đồ ngốc",
     pronoun: "người ấy",
+    "outdoor-companion": companion?.name ?? "người đồng hành",
+    "outdoor-location":
+      pending.trip?.activityId === "act_dulich_04"
+        ? "đường mòn trên núi"
+        : "khu cắm trại",
+    "vacation-destination": "điểm đến của chuyến du lịch",
+    "vacation-cruise": "chuyến du lịch bằng tàu biển",
+    pet: companion?.name ?? "thú cưng",
+    " pet": companion?.name ?? "thú cưng",
+    alcohol: "đồ uống có cồn",
     rb: "",
     rb1: "",
     rb2: "",
@@ -139,7 +213,7 @@ export function apkPresentation(s: GameState) {
         const chosen = render(pick(rng, parts));
         alternatives++;
         if (alternatives === 1) values.rb = values.rb1 = chosen;
-        if (alternatives === 2) values.rb2 = chosen;
+        values[`rb${alternatives}`] = chosen;
         output += chosen;
         continue;
       }

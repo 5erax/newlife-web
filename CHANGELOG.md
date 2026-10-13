@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0 — 2026-10-13
+
+- Thêm 124 tình huống/468 lựa chọn từ bảng du lịch, cắm trại và leo núi; có hoạt động Du lịch tàu biển. Tổng 1.198 tình huống APK/4.416 lựa chọn.
+- Chọn đi một mình hoặc người đồng hành; kiểm loại quan hệ và thú cưng còn sống trong engine và file nhập. Ngữ cảnh, biến thể và kết quả giữ nguyên khi tải lại.
+- Chuyến đi trả về năm hiện tại, không tính thêm chi phí/thời gian hoặc một lần bốc tử vong. Bản lưu 1.2 được nâng cấp giữ RNG và dữ liệu.
+- Nút hoạt động cuộn tránh thanh tăng tuổi; thông báo trạng thái cho phép chạm các nút phía dưới và vẫn có nút đóng.
+- Ghi rõ hiệu ứng nguồn hiking dòng 27 bị lỗi `1-`: web dùng 0 cho tác động đó, chưa xác nhận giá trị native. Còn 180 dòng lõi và 45 bảng tình huống chưa chuyển.
+- Thêm cấu hình loại trừ tệp bí mật/binary khỏi upload Vercel; project kết nối GitHub.
+
 ## 1.2.0 — 2026-10-13
 
 - Thêm bộ Việt hóa từ APK cho đời mới: 1.074 tình huống/3.948 lựa chọn, 168 dòng nghề, 28 chuyên ngành, 5 chương trình chuyên môn và 21 coin.

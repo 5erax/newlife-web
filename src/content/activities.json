@@ -4271,5 +4271,32 @@
       }
     ],
     "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dulich_10",
+    "group": "dulich",
+    "name": "Du lịch tàu biển",
+    "description": "Khám phá những bến cảng trên một chuyến tàu biển.",
+    "minAge": 18,
+    "cost": 15000000,
+    "timeCost": 4,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn bắt đầu hành trình trên biển.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 6
+          },
+          {
+            "operation": "travel"
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
   }
 ]
