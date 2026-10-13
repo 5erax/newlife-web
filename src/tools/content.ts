@@ -160,7 +160,7 @@ export function validateContent() {
   assert.deepEqual(counts, {
     lifeEvents: 214,
     careerEvents: 144,
-    activities: 150,
+    activities: 151,
     assets: 24,
     education: 10,
     jobs: 48,
@@ -172,7 +172,8 @@ export function validateContent() {
   const branches = branchStats();
   assert.equal(apkEvents.length, apkCoverage.playableEvents);
   assert.equal(
-    apkEvents.length + apkCoverage.deferredCore.length,
+    apkEvents.filter((e) => !e.apkRequirements?.trip).length +
+      apkCoverage.deferredCore.length,
     apkCoverage.coreRows,
   );
   assert.equal(apkJobs.length, 168);

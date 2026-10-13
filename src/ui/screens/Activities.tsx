@@ -3,6 +3,7 @@ import type { Action, GameState } from "../../engine/types";
 import { activities } from "../../content/catalog";
 import { activityReason, activityTargets } from "../../engine/game";
 import { activityCost, costTier } from "../../engine/activity-pricing";
+import { APK_TRIPS, apkTripCompanions } from "../../engine/apk";
 import { Casino } from "./Casino";
 import ui from "../../i18n/vi.json" with { type: "json" };
 import { cash as displayCash, GROUP_LABELS } from "../format";
@@ -26,6 +27,7 @@ export function Activities({
       "male" | "female" | "any"
     >("any");
   const [casinoOpen, setCasinoOpen] = useState(false);
+  const [companions, setCompanions] = useState<Record<string, string>>({});
   const list = activities
     .filter(
       (a) =>
@@ -246,6 +248,32 @@ export function Activities({
                       </select>
                     )}
                     {reason && <small className="lock-reason">{reason}</small>}
+                    {s.flags.includes("apk_mode") && APK_TRIPS[a.id] && (
+                      <label>
+                        Người đồng hành
+                        <select
+                          aria-label={`Người đồng hành khi ${a.name}`}
+                          value={companions[a.id] ?? ""}
+                          onChange={(e) =>
+                            setCompanions((v) => ({
+                              ...v,
+                              [a.id]: e.target.value,
+                            }))
+                          }
+                        >
+                          <option value="">Đi một mình</option>
+                          {apkTripCompanions(s).map((p) => (
+                            <option key={p.id} value={p.id}>
+                              {p.name}
+                            </option>
+                          ))}
+                        </select>
+                        <small>
+                          Giải quyết tình huống trong chuyến đi; hiệu ứng được
+                          ghi vào nhật ký.
+                        </small>
+                      </label>
+                    )}
                   </div>
                   <button
                     className="button small"
@@ -255,6 +283,7 @@ export function Activities({
                         type: "activity",
                         id: a.id,
                         targetId: target,
+                        companionId: companions[a.id] || undefined,
                         optionId: option?.id,
                         genderPreference,
                       })

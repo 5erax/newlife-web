@@ -11,7 +11,7 @@ import balance from "../content/balance.json" with { type: "json" };
 import titleData from "../content/titles.json" with { type: "json" };
 import { eligible } from "./conditions";
 import { economicYear, studyYear } from "./economy";
-import { random } from "./rng";
+import { random, pick } from "./rng";
 import { closeYear, changeContext } from "./changes";
 import { annualStats } from "./aging";
 import { investmentYear } from "./investments";
@@ -127,12 +127,16 @@ export function eligibleEvents(s: GameState) {
       eventAllowed(s, e),
   );
 }
-export function eventAllowed(s: GameState, event: LifeEvent) {
+export function eventAllowed(
+  s: GameState,
+  event: LifeEvent,
+  trip?: NonNullable<GameState["pending"]>["trip"],
+) {
   const history = s.history[event.id];
   return (
     s.age >= event.minAge &&
     s.age <= event.maxAge &&
-    apkEventAllowed(s, event) &&
+    apkEventAllowed(s, event, trip) &&
     eligible(s, event.conditions) &&
     (!history ||
       (!event.once &&
@@ -140,6 +144,28 @@ export function eventAllowed(s: GameState, event: LifeEvent) {
         s.age - history.lastAge >= event.cooldownYears)) &&
     event.choices.some((c) => eligible(s, c.conditions))
   );
+}
+export function startApkTrip(
+  s: GameState,
+  activityId: string,
+  companionId?: string,
+) {
+  if (!s.flags.includes("apk_mode")) return;
+  const trip = { activityId, ...(companionId ? { companionId } : {}) };
+  const pool = apkEvents.filter(
+    (e) => e.apkRequirements?.trip && eventAllowed(s, e, trip),
+  );
+  if (!pool.length) return;
+  openEvent(s, pick(s, pool));
+  s.pending!.trip = trip;
+}
+function openEvent(s: GameState, event: LifeEvent) {
+  const history = s.history[event.id];
+  s.history[event.id] = { count: (history?.count ?? 0) + 1, lastAge: s.age };
+  s.pending = { instanceId: `${s.id}_event_${++s.actionSerial}`, event };
+  if (event.sourceKind === "apk_translation")
+    s.pending.templateSeed = Math.floor(random(s) * 4294967296);
+  s.phase = "awaiting_choice";
 }
 function randomEvent(s: GameState) {
   let pool = eligibleEvents(s);
@@ -174,12 +200,7 @@ export function advanceQueue(s: GameState) {
       }
       continue;
     }
-    const history = s.history[event.id];
-    s.history[event.id] = { count: (history?.count ?? 0) + 1, lastAge: s.age };
-    s.pending = { instanceId: `${s.id}_event_${++s.actionSerial}`, event };
-    if (event.sourceKind === "apk_translation")
-      s.pending.templateSeed = Math.floor(random(s) * 4294967296);
-    s.phase = "awaiting_choice";
+    openEvent(s, event);
     return;
   }
   s.pending = null;

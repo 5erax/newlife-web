@@ -244,6 +244,9 @@ const gameSchema = z.object({
   pending: z
     .object({
       templateSeed: integer.max(4294967295).optional(),
+      trip: z
+        .object({ activityId: idSchema, companionId: idSchema.optional() })
+        .optional(),
       instanceId: idSchema,
       event: eventSchema,
       node: z
@@ -625,7 +628,7 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0"].includes(String(value.contentVersion))
+    ["1.0.0", "1.1.0", "1.2.0"].includes(String(value.contentVersion))
   )
     value = { ...value, contentVersion: CONTENT_VERSION };
   const parsed = gameSchema.safeParse(value);

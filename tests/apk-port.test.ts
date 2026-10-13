@@ -129,12 +129,13 @@ describe("APK data adaptation", () => {
     expect(jobReason(s, accountant.id)).toBe(null);
   });
   it("accounts for every core row and resolves every playable template and choice without raw tags", () => {
-    expect(apkEvents.length + coverage.deferredCore.length).toBe(
-      coverage.coreRows,
-    );
+    expect(
+      apkEvents.filter((e) => !e.apkRequirements?.trip).length +
+        coverage.deferredCore.length,
+    ).toBe(coverage.coreRows);
     expect(new Set(apkEvents.map((e) => e.id)).size).toBe(apkEvents.length);
     let choices = 0;
-    for (const event of apkEvents) {
+    for (const event of apkEvents.filter((e) => !e.apkRequirements?.trip)) {
       const r = event.apkRequirements!,
         s = newLife({ ...options, contentMode: "apk" });
       s.age = event.minAge;

@@ -892,6 +892,9 @@ progress::-moz-progress-bar {
 .catalog-row:last-child {
   border-bottom: 0;
 }
+.catalog-row > .button {
+  scroll-margin-bottom: calc(var(--dock) + 100px);
+}
 .row-icon {
   display: flex;
   flex: none;
@@ -1456,6 +1459,7 @@ progress::-moz-progress-bar {
   margin-left: 14px;
 }
 .toast {
+  pointer-events: none;
   position: fixed;
   z-index: 80;
   bottom: 112px;
@@ -1478,6 +1482,7 @@ progress::-moz-progress-bar {
   flex: 1;
 }
 .toast > button {
+  pointer-events: auto;
   border: 0;
   background: transparent;
   color: inherit;

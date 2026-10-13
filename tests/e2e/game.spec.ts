@@ -47,13 +47,11 @@ test("APK source choices and career catalog survive reload in Vietnamese", async
   s.yearQueue = [event.id];
   advanceQueue(s);
   await nav(page, ui.saves).click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "apk-life.json",
-      mimeType: "application/json",
-      buffer: Buffer.from(serialize(s)),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "apk-life.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
   await page
     .getByRole("button", { name: ui.importNewSlot, exact: true })
     .click();
@@ -79,6 +77,58 @@ async function start(page: Page) {
   await expect(page.locator(".game-shell")).toBeVisible();
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
 }
+test("APK camping companion choices survive reload and return to activities", async ({
+  page,
+}) => {
+  await start(page);
+  const s = newLife({
+    name: "An dã ngoại",
+    gender: "female",
+    hometown: "Huế",
+    birthDate: "2000-01-01",
+    seed: 42,
+    contentMode: "apk",
+  });
+  s.age = 30;
+  s.money = 100000000;
+  createAsset(s, "asset_thucung_02");
+  await nav(page, ui.saves).click();
+  await page.locator("input[type=file]").setInputFiles({
+    name: "apk-trip.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
+  await page
+    .getByRole("button", { name: ui.importNewSlot, exact: true })
+    .click();
+  await nav(page, ui.activities).click();
+  await page.getByRole("searchbox", { name: "Tìm hoạt động" }).fill("Cắm trại");
+  await page
+    .getByLabel("Người đồng hành khi Cắm trại")
+    .selectOption({ label: "Chó" });
+  await page
+    .locator(".catalog-row")
+    .filter({
+      has: page.getByRole("heading", { name: "Cắm trại", exact: true }),
+    })
+    .getByRole("button")
+    .click();
+  await expect(page.locator("dialog .event-text")).toBeVisible();
+  const text = await page.locator("dialog .event-text").innerText();
+  expect(text).not.toMatch(/<[^>]+>/);
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await expect(page.locator("dialog .event-text")).toHaveText(text);
+  await page.locator("dialog .choice").first().click();
+  await expect(page.locator("dialog")).toHaveCount(0);
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await nav(page, ui.activities).click();
+  await page
+    .getByRole("searchbox", { name: "Tìm hoạt động" })
+    .fill("Du lịch tàu biển");
+  await expect(page.locator(".catalog-list")).toContainText("Du lịch tàu biển");
+  await expect(page.locator("body")).not.toContainText("undefined");
+});
 async function resolve(page: Page) {
   for (let i = 0; i < 32 && (await page.locator("dialog").count()); i++) {
     await page.locator("dialog .choice:not(:disabled)").first().click();
