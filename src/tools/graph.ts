@@ -8,6 +8,9 @@ import {
   assets,
   achievements,
   stories,
+  apkEvents,
+  apkJobs,
+  apkEducation,
 } from "../content/catalog";
 import titles from "../content/titles.json" with { type: "json" };
 import medals from "../content/medals.json" with { type: "json" };
@@ -17,6 +20,7 @@ import { branchStats } from "./branch-analysis";
 import { expandCases } from "../engine/branches";
 import type { Choice } from "../engine/types";
 import investments from "../content/investments.json" with { type: "json" };
+import apkCoins from "../content/apk/coins.json" with { type: "json" };
 const groups = {
   lifeEvents: events.filter((e) => e.group !== "career"),
   careerEvents: events.filter((e) => e.group === "career"),
@@ -30,22 +34,27 @@ const groups = {
   titles,
   medals,
   investments,
+  apkEvents,
+  apkJobs,
+  apkEducation,
+  apkCoins,
 };
 const manifest = {
   contentVersion: CONTENT_VERSION,
-  sourceKind: "original_web",
+  sourceKind: "mixed",
   counts: validateContent(),
   status: "verified",
-  note: "Nội dung tự viết; verified là schema, tham chiếu và fixture, không xác nhận dữ liệu Android hoặc QA điện thoại vật lý.",
+  note: "Tách nội dung tự viết và bản dịch APK. verified xác nhận schema, tham chiếu và fixture; chưa xác nhận toàn bộ runtime Android, công thức native hoặc QA điện thoại vật lý.",
   entries: Object.entries(groups).flatMap(([kind, list]) =>
     list.map((item) => ({
       id: item.id,
       kind,
-      sourceKind: "original_web",
+      sourceKind: kind.startsWith("apk") ? "apk_translation" : "original_web",
       version: CONTENT_VERSION,
       status: "verified",
-      verification:
-        kind === "stories"
+      verification: kind.startsWith("apk")
+        ? "tests/apk-port.test.ts"
+        : kind === "stories"
           ? "tests/systems.test.ts"
           : kind === "jobs"
             ? "tests/systems.test.ts"
@@ -61,7 +70,7 @@ writeFileSync(
 );
 mkdirSync("docs/content", { recursive: true });
 const graph = [
-  "# Đồ thị nội dung v1.1",
+  "# Đồ thị nội dung v1.2",
   "",
   `Có ${events.length} sự kiện trong pool, ${fallbacks.length} dự phòng và ${investments.length} sản phẩm đầu tư khởi đầu. Các nhánh khó đạt được kiểm bằng fixture; bot mô phỏng không bảo đảm gặp hết nghề.`,
   "",

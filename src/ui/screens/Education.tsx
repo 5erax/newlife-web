@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Action, GameState } from "../../engine/types";
-import { education, educationById } from "../../content/catalog";
+import { education, educationById, apkEducation } from "../../content/catalog";
+import apkMajors from "../../content/apk/majors.vi.json" with { type: "json" };
 import industryData from "../../content/industries.json" with { type: "json" };
 import { educationReason } from "../../engine/economy";
 import { tuitionQuote } from "../../engine/tuition";
@@ -100,7 +101,10 @@ export function Education({
             value={specialty}
             onChange={(e) => setSpecialty(e.target.value)}
           >
-            {industryData.map((i) => (
+            {[
+              ...industryData,
+              ...(s.flags.includes("apk_mode") ? apkMajors : []),
+            ].map((i) => (
               <option key={i.id} value={i.id}>
                 {i.name}
               </option>
@@ -117,7 +121,10 @@ export function Education({
         </label>
       </div>
       <div className="catalog-list">
-        {education.map((p) => {
+        {[
+          ...education,
+          ...(s.flags.includes("apk_mode") ? apkEducation : []),
+        ].map((p) => {
           const reason = educationReason(s, p.id);
           return (
             <article className="catalog-row" key={p.id}>

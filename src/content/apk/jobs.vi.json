@@ -1,0 +1,7782 @@
+[
+  {
+    "id": "apk_job_1",
+    "name": "Nhân viên phân loại giới tính gà tây",
+    "industry": "nongnghiep",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên phân loại mới",
+        "salary": 25000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên phân loại chính",
+        "salary": 47348000,
+        "minYears": 25
+      },
+      {
+        "name": "Trưởng bộ phận phân loại",
+        "salary": 69696000,
+        "minYears": 50
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_2",
+    "name": "Người thử bánh bí ngô",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người thử bánh",
+        "salary": 15500000,
+        "minYears": 0
+      },
+      {
+        "name": "Người nếm bánh",
+        "salary": 28760000,
+        "minYears": 25
+      },
+      {
+        "name": "Chuyên gia thưởng thức bánh",
+        "salary": 42020000,
+        "minYears": 50
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_3",
+    "name": "Thần tình yêu",
+    "industry": "giaoduc",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Thần tình yêu",
+        "salary": 10271000,
+        "minYears": 0
+      },
+      {
+        "name": "Thánh Valentine",
+        "salary": 20271000,
+        "minYears": 50
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 20,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_4",
+    "name": "Yêu tinh",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Yêu tinh",
+        "salary": 50555000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_5",
+    "name": "Thỏ Phục sinh",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Thỏ Phục sinh",
+        "salary": 10271000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_6",
+    "name": "Ma cà rồng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Ma cà rồng",
+        "salary": 16271000,
+        "minYears": 0
+      },
+      {
+        "name": "Dracula",
+        "salary": 66666000,
+        "minYears": 50
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_7",
+    "name": "Phù thủy",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Phù thủy",
+        "salary": 6666000,
+        "minYears": 0
+      },
+      {
+        "name": "Phù thủy hắc ám",
+        "salary": 66666000,
+        "minYears": 50
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "female",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_8",
+    "name": "Xác sống",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Xác sống tập sự",
+        "salary": 12271000,
+        "minYears": 0
+      },
+      {
+        "name": "Xác sống",
+        "salary": 30281000,
+        "minYears": 15
+      },
+      {
+        "name": "Xác sống cao cấp",
+        "salary": 48291000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_9",
+    "name": "Người hành hương",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người hành hương",
+        "salary": 1271000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_10",
+    "name": "Tiên rừng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Tiên rừng tập sự",
+        "salary": 16271000,
+        "minYears": 0
+      },
+      {
+        "name": "Tiên rừng",
+        "salary": 24761000,
+        "minYears": 15
+      },
+      {
+        "name": "Tiên rừng cao cấp",
+        "salary": 33251000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 20,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_11",
+    "name": "Ông già Noel",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Ông già Noel",
+        "salary": 50555000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "male",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_12",
+    "name": "Diễn viên",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 95,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Diễn viên lồng tiếng",
+        "salary": 18493000,
+        "minYears": 0
+      },
+      {
+        "name": "Diễn viên",
+        "salary": 1759246500,
+        "minYears": 10
+      },
+      {
+        "name": "Diễn viên chính",
+        "salary": 3500000000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_13",
+    "name": "Ca sĩ",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 70,
+    "minHealth": 50,
+    "minLooks": 95,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Ca sĩ hát bè",
+        "salary": 18493000,
+        "minYears": 0
+      },
+      {
+        "name": "Ca sĩ phòng trà",
+        "salary": 1678995333,
+        "minYears": 5
+      },
+      {
+        "name": "Ca sĩ",
+        "salary": 3339497667,
+        "minYears": 10
+      },
+      {
+        "name": "Ca sĩ chính",
+        "salary": 5000000000,
+        "minYears": 15
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_14",
+    "name": "DJ",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 30,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "DJ",
+        "salary": 20038000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_15",
+    "name": "Người mẫu",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 80,
+    "minLooks": 90,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người mẫu bàn chân",
+        "salary": 20000000,
+        "minYears": 0
+      },
+      {
+        "name": "Người mẫu bàn tay",
+        "salary": 77500000,
+        "minYears": 4
+      },
+      {
+        "name": "Người mẫu ảnh quảng cáo",
+        "salary": 135000000,
+        "minYears": 8
+      },
+      {
+        "name": "Người mẫu nội y",
+        "salary": 192500000,
+        "minYears": 11
+      },
+      {
+        "name": "Người mẫu sàn diễn",
+        "salary": 250000000,
+        "minYears": 15
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "female",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_16",
+    "name": "Diễn viên phim người lớn",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 80,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Biên kịch phim người lớn",
+        "salary": 30291000,
+        "minYears": 0
+      },
+      {
+        "name": "Quay phim viên phim người lớn",
+        "salary": 140145500,
+        "minYears": 5
+      },
+      {
+        "name": "Diễn viên phim người lớn",
+        "salary": 250000000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 50,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_17",
+    "name": "Nhà văn",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 90,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhà văn",
+        "salary": 19755000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_18",
+    "name": "Phóng viên",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 70,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Phóng viên tập sự",
+        "salary": 39370000,
+        "minYears": 0
+      },
+      {
+        "name": "Phóng viên",
+        "salary": 44291500,
+        "minYears": 3
+      },
+      {
+        "name": "Phóng viên cao cấp",
+        "salary": 49213000,
+        "minYears": 6
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_journalism"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_19",
+    "name": "Ảo thuật gia",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 50,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Ảo thuật gia",
+        "salary": 12000000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_20",
+    "name": "Đầu bếp",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_college",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Phụ bếp",
+        "salary": 16575000,
+        "minYears": 0
+      },
+      {
+        "name": "Đầu bếp món nhanh",
+        "salary": 24564222,
+        "minYears": 3
+      },
+      {
+        "name": "Đầu bếp tập sự",
+        "salary": 32553444,
+        "minYears": 7
+      },
+      {
+        "name": "Đầu bếp luân phiên",
+        "salary": 40542667,
+        "minYears": 10
+      },
+      {
+        "name": "Đầu bếp món nguội",
+        "salary": 48531889,
+        "minYears": 13
+      },
+      {
+        "name": "Bếp phó tập sự",
+        "salary": 56521111,
+        "minYears": 17
+      },
+      {
+        "name": "Đầu bếp nước sốt",
+        "salary": 64510333,
+        "minYears": 20
+      },
+      {
+        "name": "Bếp phó",
+        "salary": 72499556,
+        "minYears": 23
+      },
+      {
+        "name": "Bếp trưởng",
+        "salary": 80488778,
+        "minYears": 27
+      },
+      {
+        "name": "Bếp trưởng điều hành",
+        "salary": 88478000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 3,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_21",
+    "name": "Lập trình viên ứng dụng",
+    "industry": "congnghe",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Kiểm thử viên ứng dụng",
+        "salary": 17950000,
+        "minYears": 0
+      },
+      {
+        "name": "Lập trình viên ứng dụng tập sự",
+        "salary": 45310000,
+        "minYears": 8
+      },
+      {
+        "name": "Lập trình viên ứng dụng",
+        "salary": 72670000,
+        "minYears": 15
+      },
+      {
+        "name": "Lập trình viên ứng dụng cao cấp",
+        "salary": 100030000,
+        "minYears": 22
+      },
+      {
+        "name": "Nhà thiết kế ứng dụng",
+        "salary": 127390000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_computer_science",
+        "apk_major_information_systems"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_22",
+    "name": "Kế toán viên",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Kế toán viên tập sự",
+        "salary": 36722000,
+        "minYears": 0
+      },
+      {
+        "name": "Kế toán viên",
+        "salary": 53508500,
+        "minYears": 5
+      },
+      {
+        "name": "Kế toán viên cao cấp",
+        "salary": 70295000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_math",
+        "apk_major_finance",
+        "apk_major_accounting",
+        "apk_major_economics"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_23",
+    "name": "Họa sĩ hoạt hình",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Họa sĩ hoạt hình tập sự",
+        "salary": 31609000,
+        "minYears": 0
+      },
+      {
+        "name": "Họa sĩ hoạt hình",
+        "salary": 56824000,
+        "minYears": 5
+      },
+      {
+        "name": "Họa sĩ hoạt hình cao cấp",
+        "salary": 82039000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_computer_science",
+        "apk_major_graphic_design"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_24",
+    "name": "Nhà khảo cổ học",
+    "industry": "giaoduc",
+    "minAge": 16,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà khảo cổ học tập sự",
+        "salary": 31172000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà khảo cổ học",
+        "salary": 52290000,
+        "minYears": 5
+      },
+      {
+        "name": "Nhà khảo cổ học cao cấp",
+        "salary": 73408000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_archaeology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_25",
+    "name": "Kiến trúc sư",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Kiến trúc sư tập sự",
+        "salary": 45146000,
+        "minYears": 0
+      },
+      {
+        "name": "Kiến trúc sư",
+        "salary": 74597000,
+        "minYears": 5
+      },
+      {
+        "name": "Kiến trúc sư cao cấp",
+        "salary": 104048000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_architecture"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_26",
+    "name": "Nhân viên phòng tranh",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên phòng tranh",
+        "salary": 28851000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên bảo quản tranh",
+        "salary": 47170500,
+        "minYears": 8
+      },
+      {
+        "name": "Trợ lý giám tuyển",
+        "salary": 65490000,
+        "minYears": 15
+      },
+      {
+        "name": "Giám tuyển",
+        "salary": 83809500,
+        "minYears": 22
+      },
+      {
+        "name": "Giám đốc phòng tranh",
+        "salary": 102129000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_anthropology",
+        "apk_major_history",
+        "apk_major_art_history"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_27",
+    "name": "Thợ sửa ô tô",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ sửa ô tô tập sự",
+        "salary": 23281000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ sửa ô tô",
+        "salary": 42636000,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ sửa ô tô cao cấp",
+        "salary": 61991000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_28",
+    "name": "Nhân viên hành lý",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên hành lý",
+        "salary": 19586000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_29",
+    "name": "Nhân viên ngân hàng",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên ngân hàng tập sự",
+        "salary": 35871000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên ngân hàng",
+        "salary": 100060000,
+        "minYears": 10
+      },
+      {
+        "name": "Nhân viên ngân hàng cao cấp",
+        "salary": 164249000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_finance",
+        "apk_major_information_systems",
+        "apk_major_accounting",
+        "apk_major_economics"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_30",
+    "name": "Người nuôi ong",
+    "industry": "nongnghiep",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Người nuôi ong tập sự",
+        "salary": 24879000,
+        "minYears": 0
+      },
+      {
+        "name": "Người nuôi ong",
+        "salary": 36620500,
+        "minYears": 2
+      },
+      {
+        "name": "Người nuôi ong cao cấp",
+        "salary": 48362000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_31",
+    "name": "Chuyên viên công nghệ sinh học",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên công nghệ sinh học tập sự",
+        "salary": 39678000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên công nghệ sinh học",
+        "salary": 69287500,
+        "minYears": 10
+      },
+      {
+        "name": "Chuyên viên công nghệ sinh học cao cấp",
+        "salary": 98897000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_chemistry",
+        "apk_major_biology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_32",
+    "name": "Bác sĩ phẫu thuật não",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_medical",
+    "minIntelligence": 90,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Bác sĩ phẫu thuật não",
+        "salary": 102571000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_33",
+    "name": "Tài xế xe buýt",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tài xế xe buýt",
+        "salary": 20858000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_34",
+    "name": "Chuyên viên phân tích kinh doanh",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên phân tích kinh doanh tập sự",
+        "salary": 48281000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên phân tích kinh doanh",
+        "salary": 74933000,
+        "minYears": 15
+      },
+      {
+        "name": "Chuyên viên phân tích kinh doanh cao cấp",
+        "salary": 101585000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_finance",
+        "apk_major_math",
+        "apk_major_information_systems",
+        "apk_major_economics"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_35",
+    "name": "Thợ thịt",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ thịt tập sự",
+        "salary": 19851000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ thịt",
+        "salary": 33412000,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ thịt cao cấp",
+        "salary": 46973000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_36",
+    "name": "Thu ngân",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 30,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thu ngân",
+        "salary": 15626000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 95,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_37",
+    "name": "Kỹ sư hóa học",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Kỹ sư bậc I",
+        "salary": 52839000,
+        "minYears": 0
+      },
+      {
+        "name": "Kỹ sư bậc II",
+        "salary": 63023333,
+        "minYears": 5
+      },
+      {
+        "name": "Kỹ sư bậc III",
+        "salary": 73207667,
+        "minYears": 10
+      },
+      {
+        "name": "Phó quản lý kỹ thuật",
+        "salary": 83392000,
+        "minYears": 15
+      },
+      {
+        "name": "Quản lý kỹ thuật",
+        "salary": 93576333,
+        "minYears": 20
+      },
+      {
+        "name": "Giám đốc kỹ thuật",
+        "salary": 103760667,
+        "minYears": 25
+      },
+      {
+        "name": "Phó chủ tịch kỹ thuật",
+        "salary": 113945000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_engineering",
+        "apk_major_chemistry"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_38",
+    "name": "Thợ quét ống khói",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ quét ống khói tập sự",
+        "salary": 17833000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ quét ống khói",
+        "salary": 28502000,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ quét ống khói cao cấp",
+        "salary": 39171000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_39",
+    "name": "Chuyên viên trị liệu cột sống",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_medical",
+    "minIntelligence": 70,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên trị liệu cột sống tập sự",
+        "salary": 36178000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên trị liệu cột sống",
+        "salary": 77083500,
+        "minYears": 10
+      },
+      {
+        "name": "Chuyên viên trị liệu cột sống cao cấp",
+        "salary": 117989000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_40",
+    "name": "Lập trình viên",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Lập trình viên tập sự",
+        "salary": 39531000,
+        "minYears": 0
+      },
+      {
+        "name": "Lập trình viên",
+        "salary": 83460500,
+        "minYears": 10
+      },
+      {
+        "name": "Lập trình viên cao cấp",
+        "salary": 127390000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_computer_science",
+        "apk_major_information_systems"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_41",
+    "name": "Công nhân xây dựng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Công nhân xây dựng",
+        "salary": 20933000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_42",
+    "name": "Quản trị viên cơ sở dữ liệu",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Quản trị viên cơ sở dữ liệu tập sự",
+        "salary": 40172000,
+        "minYears": 0
+      },
+      {
+        "name": "Quản trị viên cơ sở dữ liệu",
+        "salary": 74900000,
+        "minYears": 15
+      },
+      {
+        "name": "Quản trị viên cơ sở dữ liệu cao cấp",
+        "salary": 109628000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_computer_science",
+        "apk_major_information_systems"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_43",
+    "name": "Chuyên viên vệ sinh răng miệng",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_college",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên vệ sinh răng miệng",
+        "salary": 61250000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_44",
+    "name": "Nha sĩ",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "apk_edu_dental",
+    "minIntelligence": 80,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nha sĩ",
+        "salary": 118789000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_45",
+    "name": "Thám tử",
+    "industry": "phapluat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thám tử tập sự",
+        "salary": 38260000,
+        "minYears": 0
+      },
+      {
+        "name": "Thám tử",
+        "salary": 68236000,
+        "minYears": 5
+      },
+      {
+        "name": "Thám tử cao cấp",
+        "salary": 98212000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 10,
+      "majors": [
+        "apk_major_criminal_justice"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_46",
+    "name": "Tài xế",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tài xế",
+        "salary": 25000000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_47",
+    "name": "Thợ điện",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 20,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ điện tập sự",
+        "salary": 29701000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ điện",
+        "salary": 56341500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ điện cao cấp",
+        "salary": 82982000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_48",
+    "name": "Nhà khoa học môi trường",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà khoa học môi trường tập sự",
+        "salary": 37431000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà khoa học môi trường",
+        "salary": 55702000,
+        "minYears": 10
+      },
+      {
+        "name": "Nhà khoa học môi trường cao cấp",
+        "salary": 73973000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_biology",
+        "apk_major_chemistry",
+        "apk_major_physics"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_49",
+    "name": "Công nhân nhà máy",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Công nhân nhà máy",
+        "salary": 19839000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_50",
+    "name": "Bác sĩ gia đình",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_medical",
+    "minIntelligence": 80,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Bác sĩ gia đình",
+        "salary": 100350000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_51",
+    "name": "Nông dân",
+    "industry": "nongnghiep",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nông dân",
+        "salary": 20176000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_52",
+    "name": "Nhân viên thức ăn nhanh",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên phục vụ",
+        "salary": 15189000,
+        "minYears": 0
+      },
+      {
+        "name": "Quản lý ca",
+        "salary": 17385667,
+        "minYears": 3
+      },
+      {
+        "name": "Quản lý nhà hàng",
+        "salary": 19582333,
+        "minYears": 7
+      },
+      {
+        "name": "Tổng quản lý",
+        "salary": 21779000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_53",
+    "name": "Cố vấn tài chính",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Cố vấn tài chính tập sự",
+        "salary": 33632000,
+        "minYears": 0
+      },
+      {
+        "name": "Cố vấn tài chính",
+        "salary": 80901000,
+        "minYears": 10
+      },
+      {
+        "name": "Cố vấn tài chính cao cấp",
+        "salary": 128170000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_finance",
+        "apk_major_economics",
+        "apk_major_accounting"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_54",
+    "name": "Chuyên viên phân tích tài chính",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên phân tích tài chính tập sự",
+        "salary": 43890000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên phân tích tài chính",
+        "salary": 63447000,
+        "minYears": 15
+      },
+      {
+        "name": "Chuyên viên phân tích tài chính cao cấp",
+        "salary": 83004000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_finance",
+        "apk_major_math",
+        "apk_major_economics",
+        "apk_major_accounting"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_55",
+    "name": "Lính cứu hỏa",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Lính cứu hỏa tập sự",
+        "salary": 37834000,
+        "minYears": 0
+      },
+      {
+        "name": "Lính cứu hỏa",
+        "salary": 44649571,
+        "minYears": 3
+      },
+      {
+        "name": "Nhân viên vận hành thiết bị chữa cháy",
+        "salary": 51465143,
+        "minYears": 6
+      },
+      {
+        "name": "Trung úy",
+        "salary": 58280714,
+        "minYears": 9
+      },
+      {
+        "name": "Đại úy",
+        "salary": 65096286,
+        "minYears": 11
+      },
+      {
+        "name": "Tiểu đoàn trưởng",
+        "salary": 71911857,
+        "minYears": 14
+      },
+      {
+        "name": "Phó chỉ huy",
+        "salary": 78727429,
+        "minYears": 17
+      },
+      {
+        "name": "Chỉ huy cứu hỏa",
+        "salary": 85543000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 35,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_56",
+    "name": "Ngư dân",
+    "industry": "nongnghiep",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Ngư dân",
+        "salary": 16393000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_57",
+    "name": "Tiếp viên hàng không",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 50,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tiếp viên tập sự",
+        "salary": 21277000,
+        "minYears": 0
+      },
+      {
+        "name": "Tiếp viên hàng không",
+        "salary": 38399667,
+        "minYears": 3
+      },
+      {
+        "name": "Tiếp viên cao cấp",
+        "salary": 55522333,
+        "minYears": 7
+      },
+      {
+        "name": "Trưởng tiếp viên",
+        "salary": 72645000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_58",
+    "name": "Chuyên viên pháp y",
+    "industry": "phapluat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên phân tích hiện trường",
+        "salary": 30264000,
+        "minYears": 0
+      },
+      {
+        "name": "Kỹ thuật viên hiện trường",
+        "salary": 50876500,
+        "minYears": 10
+      },
+      {
+        "name": "Điều tra viên pháp y",
+        "salary": 71489000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_chemistry",
+        "apk_major_biology",
+        "apk_major_criminal_justice",
+        "apk_major_physics"
+      ],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_59",
+    "name": "Nhà thiết kế đồ họa",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 20,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà thiết kế đồ họa tập sự",
+        "salary": 30376000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà thiết kế đồ họa",
+        "salary": 51463000,
+        "minYears": 5
+      },
+      {
+        "name": "Nhà thiết kế đồ họa cao cấp",
+        "salary": 72550000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_graphic_design"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_60",
+    "name": "Nhân viên tạp hóa",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên tạp hóa tập sự",
+        "salary": 16445000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên tạp hóa",
+        "salary": 25144500,
+        "minYears": 2
+      },
+      {
+        "name": "Nhân viên tạp hóa cao cấp",
+        "salary": 33844000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_61",
+    "name": "Giáo viên lịch sử",
+    "industry": "giaoduc",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo viên lịch sử",
+        "salary": 29026000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_history"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_62",
+    "name": "Nhân viên bảo hiểm",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên bảo hiểm tập sự",
+        "salary": 23286000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên bảo hiểm",
+        "salary": 43582000,
+        "minYears": 5
+      },
+      {
+        "name": "Nhân viên bảo hiểm cao cấp",
+        "salary": 63878000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_63",
+    "name": "Nhà thiết kế nội thất",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà thiết kế nội thất tập sự",
+        "salary": 32848000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà thiết kế nội thất",
+        "salary": 49960000,
+        "minYears": 2
+      },
+      {
+        "name": "Nhà thiết kế nội thất cao cấp",
+        "salary": 67072000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_graphic_design"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_64",
+    "name": "Kiểm toán viên nội bộ",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Kiểm toán viên nội bộ tập sự",
+        "salary": 51173000,
+        "minYears": 0
+      },
+      {
+        "name": "Kiểm toán viên nội bộ",
+        "salary": 65586500,
+        "minYears": 4
+      },
+      {
+        "name": "Kiểm toán viên nội bộ cao cấp",
+        "salary": 80000000,
+        "minYears": 8
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_information_systems",
+        "apk_major_computer_science",
+        "apk_major_finance",
+        "apk_major_accounting",
+        "apk_major_economics"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_65",
+    "name": "Thẩm phán",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "apk_edu_law",
+    "minIntelligence": 80,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thẩm phán cơ sở",
+        "salary": 154484000,
+        "minYears": 0
+      },
+      {
+        "name": "Thẩm phán tòa sơ thẩm",
+        "salary": 165068000,
+        "minYears": 8
+      },
+      {
+        "name": "Thẩm phán tòa khu vực",
+        "salary": 175652000,
+        "minYears": 15
+      },
+      {
+        "name": "Phó chánh án",
+        "salary": 186236000,
+        "minYears": 22
+      },
+      {
+        "name": "Chánh án",
+        "salary": 196820000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 100,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 30,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_66",
+    "name": "Luật sư",
+    "industry": "phapluat",
+    "minAge": 16,
+    "degree": "apk_edu_law",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thư ký pháp lý",
+        "salary": 49894000,
+        "minYears": 0
+      },
+      {
+        "name": "Luật sư cộng sự tập sự",
+        "salary": 83169250,
+        "minYears": 5
+      },
+      {
+        "name": "Luật sư cộng sự",
+        "salary": 116444500,
+        "minYears": 10
+      },
+      {
+        "name": "Thành viên góp vốn mới",
+        "salary": 149719750,
+        "minYears": 15
+      },
+      {
+        "name": "Thành viên góp vốn",
+        "salary": 182995000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_67",
+    "name": "Thủ thư",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên thư viện",
+        "salary": 28419000,
+        "minYears": 0
+      },
+      {
+        "name": "Trợ lý thư viện",
+        "salary": 42445333,
+        "minYears": 7
+      },
+      {
+        "name": "Thủ thư",
+        "salary": 56471667,
+        "minYears": 13
+      },
+      {
+        "name": "Thủ thư cao cấp",
+        "salary": 70498000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_68",
+    "name": "Người vận động hành lang",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Người vận động hành lang tập sự",
+        "salary": 42646000,
+        "minYears": 0
+      },
+      {
+        "name": "Người vận động hành lang",
+        "salary": 90715000,
+        "minYears": 5
+      },
+      {
+        "name": "Người vận động hành lang cao cấp",
+        "salary": 138784000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_political_science",
+        "apk_major_communications",
+        "apk_major_marketing",
+        "apk_major_economics",
+        "apk_major_philosophy"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_69",
+    "name": "Thợ rừng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 70,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ rừng tập sự",
+        "salary": 20258000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ rừng",
+        "salary": 42702500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ rừng cao cấp",
+        "salary": 65147000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_70",
+    "name": "Nhân viên bưu điện",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên bưu điện tập sự",
+        "salary": 30877000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên bưu điện",
+        "salary": 45645500,
+        "minYears": 5
+      },
+      {
+        "name": "Nhân viên bưu điện cao cấp",
+        "salary": 60414000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_71",
+    "name": "Nhà sinh học biển",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 60,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà sinh học biển tập sự",
+        "salary": 29600000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà sinh học biển",
+        "salary": 64870500,
+        "minYears": 5
+      },
+      {
+        "name": "Nhà sinh học biển cao cấp",
+        "salary": 100141000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_72",
+    "name": "Chuyên viên tư vấn hôn nhân",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên tư vấn hôn nhân",
+        "salary": 39518000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_psychology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_73",
+    "name": "Chuyên viên mát xa",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_college",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên mát xa",
+        "salary": 22942000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 70,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_74",
+    "name": "Kỹ sư cơ khí",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Kỹ sư bậc I",
+        "salary": 51369000,
+        "minYears": 0
+      },
+      {
+        "name": "Kỹ sư bậc II",
+        "salary": 58987833,
+        "minYears": 5
+      },
+      {
+        "name": "Kỹ sư bậc III",
+        "salary": 66606667,
+        "minYears": 10
+      },
+      {
+        "name": "Phó quản lý kỹ thuật",
+        "salary": 74225500,
+        "minYears": 15
+      },
+      {
+        "name": "Quản lý kỹ thuật",
+        "salary": 81844333,
+        "minYears": 20
+      },
+      {
+        "name": "Giám đốc kỹ thuật",
+        "salary": 89463167,
+        "minYears": 25
+      },
+      {
+        "name": "Phó chủ tịch kỹ thuật",
+        "salary": 97082000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_engineering",
+        "apk_major_physics",
+        "apk_major_chemistry"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_75",
+    "name": "Nhà vi sinh vật học",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 60,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà vi sinh vật học tập sự",
+        "salary": 36934000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà vi sinh vật học",
+        "salary": 59893500,
+        "minYears": 10
+      },
+      {
+        "name": "Nhà vi sinh vật học cao cấp",
+        "salary": 82853000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_biology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_76",
+    "name": "Hộ sinh",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Hộ sinh tập sự",
+        "salary": 77822000,
+        "minYears": 0
+      },
+      {
+        "name": "Hộ sinh",
+        "salary": 99183000,
+        "minYears": 2
+      },
+      {
+        "name": "Hộ sinh cao cấp",
+        "salary": 120544000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_nursing"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_77",
+    "name": "Tu sĩ",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tu sĩ",
+        "salary": 8000000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "male",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": true,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_78",
+    "name": "Nhân viên tang lễ",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 20,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên tang lễ",
+        "salary": 29760000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên bảo quản thi hài cao cấp",
+        "salary": 49843000,
+        "minYears": 5
+      },
+      {
+        "name": "Giám đốc nhà tang lễ",
+        "salary": 69926000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 100,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_biology",
+        "apk_major_chemistry"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_79",
+    "name": "Nhân viên bảo tàng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Hướng dẫn viên bảo tàng",
+        "salary": 28851000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên triển lãm",
+        "salary": 46626500,
+        "minYears": 8
+      },
+      {
+        "name": "Trợ lý giám tuyển",
+        "salary": 64402000,
+        "minYears": 15
+      },
+      {
+        "name": "Giám tuyển",
+        "salary": 82177500,
+        "minYears": 22
+      },
+      {
+        "name": "Giám đốc bảo tàng",
+        "salary": 99953000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_history",
+        "apk_major_art_history",
+        "apk_major_anthropology",
+        "apk_major_archaeology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_80",
+    "name": "Nữ tu",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nữ tu",
+        "salary": 8000000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "female",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": true,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_81",
+    "name": "Điều dưỡng viên",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "apk_edu_nursing",
+    "minIntelligence": 40,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Điều dưỡng viên cơ sở",
+        "salary": 47066000,
+        "minYears": 0
+      },
+      {
+        "name": "Điều dưỡng viên lâm sàng",
+        "salary": 61244000,
+        "minYears": 7
+      },
+      {
+        "name": "Điều dưỡng viên thực hành nâng cao",
+        "salary": 75422000,
+        "minYears": 13
+      },
+      {
+        "name": "Chuyên gia điều dưỡng lâm sàng",
+        "salary": 89600000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_82",
+    "name": "Chuyên viên phân tích vận hành",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên phân tích vận hành tập sự",
+        "salary": 43346000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên phân tích vận hành",
+        "salary": 70062000,
+        "minYears": 15
+      },
+      {
+        "name": "Chuyên viên phân tích vận hành cao cấp",
+        "salary": 96778000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_math",
+        "apk_major_information_systems",
+        "apk_major_finance"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_83",
+    "name": "Thợ sơn",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ sơn",
+        "salary": 23497000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 70,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_84",
+    "name": "Trợ lý pháp lý",
+    "industry": "phapluat",
+    "minAge": 16,
+    "degree": "edu_college",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thư ký pháp lý",
+        "salary": 29594000,
+        "minYears": 0
+      },
+      {
+        "name": "Quản lý hồ sơ pháp lý",
+        "salary": 48396500,
+        "minYears": 10
+      },
+      {
+        "name": "Trợ lý pháp lý",
+        "salary": 67199000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_85",
+    "name": "Người chăm sóc thú cưng",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Người chăm sóc thú cưng tập sự",
+        "salary": 18408000,
+        "minYears": 0
+      },
+      {
+        "name": "Người chăm sóc thú cưng",
+        "salary": 34136000,
+        "minYears": 2
+      },
+      {
+        "name": "Người chăm sóc thú cưng cao cấp",
+        "salary": 49864000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_86",
+    "name": "Dược sĩ",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "apk_edu_pharmacy",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Dược sĩ tập sự",
+        "salary": 74945000,
+        "minYears": 0
+      },
+      {
+        "name": "Dược sĩ",
+        "salary": 103827000,
+        "minYears": 10
+      },
+      {
+        "name": "Dược sĩ cao cấp",
+        "salary": 132709000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_87",
+    "name": "Chuyên viên vật lý trị liệu",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_medical",
+    "minIntelligence": 50,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên vật lý trị liệu tập sự",
+        "salary": 57565000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên vật lý trị liệu",
+        "salary": 77923000,
+        "minYears": 10
+      },
+      {
+        "name": "Chuyên viên vật lý trị liệu cao cấp",
+        "salary": 98281000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_88",
+    "name": "Phi công",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 80,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Phi công tập sự",
+        "salary": 41374000,
+        "minYears": 0
+      },
+      {
+        "name": "Cơ phó",
+        "salary": 101214250,
+        "minYears": 8
+      },
+      {
+        "name": "Phi công",
+        "salary": 161054500,
+        "minYears": 15
+      },
+      {
+        "name": "Cơ trưởng",
+        "salary": 220894750,
+        "minYears": 22
+      },
+      {
+        "name": "Phi công trưởng",
+        "salary": 280735000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_physics",
+        "apk_major_math",
+        "apk_major_chemistry",
+        "apk_major_biology",
+        "apk_major_engineering",
+        "apk_major_information_systems"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": true,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_89",
+    "name": "Thợ ống nước",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ ống nước tập sự",
+        "salary": 29358000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ ống nước",
+        "salary": 53924000,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ ống nước cao cấp",
+        "salary": 78490000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_90",
+    "name": "Cảnh sát",
+    "industry": "phapluat",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 40,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Học viên cảnh sát",
+        "salary": 31533000,
+        "minYears": 0
+      },
+      {
+        "name": "Cảnh sát tuần tra",
+        "salary": 39174286,
+        "minYears": 4
+      },
+      {
+        "name": "Cảnh sát giao thông",
+        "salary": 46815571,
+        "minYears": 9
+      },
+      {
+        "name": "Hạ sĩ",
+        "salary": 54456857,
+        "minYears": 13
+      },
+      {
+        "name": "Trung sĩ",
+        "salary": 62098143,
+        "minYears": 17
+      },
+      {
+        "name": "Thanh tra",
+        "salary": 69739429,
+        "minYears": 21
+      },
+      {
+        "name": "Trung úy",
+        "salary": 77380714,
+        "minYears": 26
+      },
+      {
+        "name": "Cảnh sát trưởng",
+        "salary": 85022000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 35,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_91",
+    "name": "Chuyên viên phân tích chính sách",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên phân tích chính sách tập sự",
+        "salary": 39607000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên phân tích chính sách",
+        "salary": 60370500,
+        "minYears": 5
+      },
+      {
+        "name": "Chuyên viên phân tích chính sách cao cấp",
+        "salary": 81134000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_political_science",
+        "apk_major_communications",
+        "apk_major_criminal_justice",
+        "apk_major_economics",
+        "apk_major_philosophy"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_92",
+    "name": "Linh mục",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Phó tế",
+        "salary": 17172000,
+        "minYears": 0
+      },
+      {
+        "name": "Linh mục",
+        "salary": 31629000,
+        "minYears": 22
+      },
+      {
+        "name": "Giám mục",
+        "salary": 46086000,
+        "minYears": 45
+      },
+      {
+        "name": "Tổng giám mục",
+        "salary": 60543000,
+        "minYears": 68
+      },
+      {
+        "name": "Hồng y",
+        "salary": 75000000,
+        "minYears": 90
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "male",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 50,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": true,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_93",
+    "name": "Bác sĩ tâm thần",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_medical",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Bác sĩ tâm thần tập sự",
+        "salary": 99370000,
+        "minYears": 0
+      },
+      {
+        "name": "Bác sĩ tâm thần",
+        "salary": 187700000,
+        "minYears": 10
+      },
+      {
+        "name": "Bác sĩ tâm thần cao cấp",
+        "salary": 276030000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_94",
+    "name": "Môi giới bất động sản",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 50,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Môi giới bất động sản",
+        "salary": 24402000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_95",
+    "name": "Lễ tân",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 50,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Lễ tân",
+        "salary": 19530000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_96",
+    "name": "Nhân viên bán lẻ",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 60,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên bán lẻ",
+        "salary": 15758000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_97",
+    "name": "Quản lý trường học",
+    "industry": "giaoduc",
+    "minAge": 16,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 80,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Phó hiệu trưởng",
+        "salary": 41158000,
+        "minYears": 0
+      },
+      {
+        "name": "Hiệu trưởng",
+        "salary": 63998000,
+        "minYears": 8
+      },
+      {
+        "name": "Phó giám đốc học khu",
+        "salary": 86838000,
+        "minYears": 17
+      },
+      {
+        "name": "Giám đốc học khu",
+        "salary": 109678000,
+        "minYears": 25
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 3,
+      "majors": [
+        "apk_major_education"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_98",
+    "name": "Chuyên viên tâm lý học đường",
+    "industry": "giaoduc",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên tâm lý học đường",
+        "salary": 34804000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_psychology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_99",
+    "name": "Giáo viên",
+    "industry": "giaoduc",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo viên",
+        "salary": 38180000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_education"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_100",
+    "name": "Nhân viên bảo vệ",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên bảo vệ",
+        "salary": 18641000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_101",
+    "name": "Môi giới chứng khoán",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Môi giới chứng khoán tập sự",
+        "salary": 39056000,
+        "minYears": 0
+      },
+      {
+        "name": "Môi giới chứng khoán",
+        "salary": 117414500,
+        "minYears": 5
+      },
+      {
+        "name": "Môi giới chứng khoán cao cấp",
+        "salary": 195773000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_finance",
+        "apk_major_economics",
+        "apk_major_accounting"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_102",
+    "name": "Thợ may",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ may tập sự",
+        "salary": 23348000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ may",
+        "salary": 37962500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ may cao cấp",
+        "salary": 52577000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_103",
+    "name": "Chuyên viên hỗ trợ kỹ thuật",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 40,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên hỗ trợ công nghệ tập sự",
+        "salary": 27122000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên hỗ trợ công nghệ",
+        "salary": 43474000,
+        "minYears": 5
+      },
+      {
+        "name": "Chuyên viên hỗ trợ công nghệ cao cấp",
+        "salary": 59826000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_computer_science",
+        "apk_major_information_systems",
+        "apk_major_communications"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_104",
+    "name": "Nhân viên tiếp thị qua điện thoại",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên tiếp thị qua điện thoại tập sự",
+        "salary": 18190000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên tiếp thị qua điện thoại",
+        "salary": 28332000,
+        "minYears": 2
+      },
+      {
+        "name": "Nhân viên tiếp thị qua điện thoại cao cấp",
+        "salary": 38474000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_105",
+    "name": "Biên dịch viên",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Biên dịch viên tập sự",
+        "salary": 25370000,
+        "minYears": 0
+      },
+      {
+        "name": "Biên dịch viên",
+        "salary": 54235000,
+        "minYears": 5
+      },
+      {
+        "name": "Biên dịch viên cao cấp",
+        "salary": 83100000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_communications",
+        "apk_major_english"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_106",
+    "name": "Nhân viên du lịch",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 30,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên du lịch",
+        "salary": 24303000,
+        "minYears": 0
+      },
+      {
+        "name": "Điều hành chuyến du lịch",
+        "salary": 31431500,
+        "minYears": 5
+      },
+      {
+        "name": "Tổng quản lý",
+        "salary": 38560000,
+        "minYears": 10
+      },
+      {
+        "name": "Quản lý vùng",
+        "salary": 45688500,
+        "minYears": 15
+      },
+      {
+        "name": "Người điều hành đại lý",
+        "salary": 52817000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_107",
+    "name": "Tài xế xe tải",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Tài xế xe tải tập sự",
+        "salary": 31418000,
+        "minYears": 0
+      },
+      {
+        "name": "Tài xế xe tải",
+        "salary": 49666500,
+        "minYears": 2
+      },
+      {
+        "name": "Tài xế xe tải cao cấp",
+        "salary": 67915000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_108",
+    "name": "Bác sĩ thú y",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "apk_edu_veterinary",
+    "minIntelligence": 80,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Bác sĩ thú y tập sự",
+        "salary": 52782000,
+        "minYears": 0
+      },
+      {
+        "name": "Bác sĩ thú y",
+        "salary": 84127000,
+        "minYears": 10
+      },
+      {
+        "name": "Bác sĩ thú y cao cấp",
+        "salary": 115472000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_109",
+    "name": "Nhân viên thu gom rác",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên thu gom rác tập sự",
+        "salary": 20329000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên thu gom rác",
+        "salary": 45019500,
+        "minYears": 2
+      },
+      {
+        "name": "Nhân viên thu gom rác cao cấp",
+        "salary": 69710000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 70,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_110",
+    "name": "Giáo sư",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "edu_postgraduate",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Giáo sư",
+        "salary": 61420000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 10,
+      "majors": [
+        "apk_major_education"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_111",
+    "name": "Trưởng khoa",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 70,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Trưởng khoa",
+        "salary": 151420000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 30,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_112",
+    "name": "Nhà thiết kế thời trang",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhà thiết kế thời trang tập sự",
+        "salary": 32500000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà thiết kế thời trang",
+        "salary": 81695000,
+        "minYears": 10
+      },
+      {
+        "name": "Nhà thiết kế thời trang cao cấp",
+        "salary": 130890000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_graphic_design"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_113",
+    "name": "Thợ kim hoàn",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên bán hàng",
+        "salary": 26200000,
+        "minYears": 0
+      },
+      {
+        "name": "Phó quản lý cửa hàng",
+        "salary": 51557500,
+        "minYears": 10
+      },
+      {
+        "name": "Quản lý cửa hàng",
+        "salary": 76915000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_114",
+    "name": "Thợ mộc",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ mộc tập sự",
+        "salary": 35820000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ mộc",
+        "salary": 54257500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ mộc cao cấp",
+        "salary": 72695000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_115",
+    "name": "Nhân viên sòng bạc",
+    "industry": "dichvu",
+    "minAge": 21,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 30,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên chia bài",
+        "salary": 21842000,
+        "minYears": 0
+      },
+      {
+        "name": "Giám sát sàn",
+        "salary": 118368750,
+        "minYears": 8
+      },
+      {
+        "name": "Quản lý bàn chơi",
+        "salary": 214895500,
+        "minYears": 15
+      },
+      {
+        "name": "Phó quản lý sòng bạc",
+        "salary": 311422250,
+        "minYears": 22
+      },
+      {
+        "name": "Quản lý sòng bạc",
+        "salary": 407949000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_116",
+    "name": "Thám tử tư",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "edu_university",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thám tử tư tập sự",
+        "salary": 30390000,
+        "minYears": 0
+      },
+      {
+        "name": "Thám tử tư",
+        "salary": 57170500,
+        "minYears": 10
+      },
+      {
+        "name": "Thám tử tư cao cấp",
+        "salary": 83951000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_criminal_justice"
+      ],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_117",
+    "name": "Thợ làm bánh",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 10,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ làm bánh tập sự",
+        "salary": 27636000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ làm bánh",
+        "salary": 32725500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ làm bánh cao cấp",
+        "salary": 37815000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_118",
+    "name": "Nài ngựa",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 50,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nài ngựa",
+        "salary": 14941000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_119",
+    "name": "Chuyên viên tổ chức đám cưới",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Chuyên viên tổ chức đám cưới tập sự",
+        "salary": 33101000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên tổ chức đám cưới",
+        "salary": 72971500,
+        "minYears": 5
+      },
+      {
+        "name": "Chuyên viên tổ chức đám cưới cao cấp",
+        "salary": 112842000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_120",
+    "name": "Thợ làm móng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Thợ làm móng tập sự",
+        "salary": 14831000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ làm móng",
+        "salary": 29156500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ làm móng cao cấp",
+        "salary": 43482000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_121",
+    "name": "Nhân viên pha chế",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 70,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên pha chế tập sự",
+        "salary": 17470000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên pha chế",
+        "salary": 52944000,
+        "minYears": 5
+      },
+      {
+        "name": "Nhân viên pha chế cao cấp",
+        "salary": 88418000,
+        "minYears": 10
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_122",
+    "name": "Bảo vệ hộp đêm",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 60,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Bảo vệ hộp đêm",
+        "salary": 17388000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 50,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "male",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_123",
+    "name": "Quay phim viên",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 20,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Quay phim viên tập sự",
+        "salary": 53832000,
+        "minYears": 0
+      },
+      {
+        "name": "Quay phim viên",
+        "salary": 76573000,
+        "minYears": 2
+      },
+      {
+        "name": "Quay phim viên cao cấp",
+        "salary": 99314000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_124",
+    "name": "Chuyên viên hành vi mèo",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Chuyên viên hành vi mèo",
+        "salary": 17831000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_125",
+    "name": "Biên đạo múa",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Biên đạo múa tập sự",
+        "salary": 20759000,
+        "minYears": 0
+      },
+      {
+        "name": "Biên đạo múa",
+        "salary": 64231000,
+        "minYears": 10
+      },
+      {
+        "name": "Biên đạo múa cao cấp",
+        "salary": 107703000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_dance"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_126",
+    "name": "Nghệ sĩ xiếc",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nghệ sĩ xiếc",
+        "salary": 23449000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 50,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_127",
+    "name": "Nghệ sĩ hề",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nghệ sĩ hề",
+        "salary": 16271000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "male",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_128",
+    "name": "Ngư dân đánh bắt cua",
+    "industry": "nongnghiep",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Thủy thủ tập sự",
+        "salary": 31732000,
+        "minYears": 0
+      },
+      {
+        "name": "Thủy thủ boong",
+        "salary": 148799000,
+        "minYears": 8
+      },
+      {
+        "name": "Trưởng boong",
+        "salary": 265866000,
+        "minYears": 15
+      },
+      {
+        "name": "Kỹ sư tàu",
+        "salary": 382933000,
+        "minYears": 22
+      },
+      {
+        "name": "Thuyền trưởng",
+        "salary": 500000000,
+        "minYears": 30
+      }
+    ],
+    "retireAge": 70,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_129",
+    "name": "Giáo viên khiêu vũ",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Trợ giảng khiêu vũ",
+        "salary": 22764000,
+        "minYears": 0
+      },
+      {
+        "name": "Giáo viên khiêu vũ",
+        "salary": 51295500,
+        "minYears": 10
+      },
+      {
+        "name": "Giám đốc khiêu vũ",
+        "salary": 79827000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 60,
+      "workYears": 0,
+      "majors": [
+        "apk_major_dance"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_130",
+    "name": "Vũ công",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 70,
+    "minLooks": 70,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Vũ công",
+        "salary": 15337000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 60,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 25,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_131",
+    "name": "Biên tập viên",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 50,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Biên tập viên tập sự",
+        "salary": 58770000,
+        "minYears": 0
+      },
+      {
+        "name": "Biên tập viên",
+        "salary": 67513333,
+        "minYears": 5
+      },
+      {
+        "name": "Biên tập viên cao cấp",
+        "salary": 76256667,
+        "minYears": 10
+      },
+      {
+        "name": "Tổng biên tập",
+        "salary": 85000000,
+        "minYears": 15
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 7,
+      "majors": [
+        "apk_major_english",
+        "apk_major_communications"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_132",
+    "name": "Người đồng hành dịch vụ",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 50,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người đồng hành dịch vụ",
+        "salary": 18730000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 50,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "female",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_133",
+    "name": "Người trừ tà",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người trừ tà",
+        "salary": 18656000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 100,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_134",
+    "name": "Vũ công biểu diễn người lớn",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 70,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Vũ công biểu diễn người lớn",
+        "salary": 19950000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 45,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "female",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_135",
+    "name": "Thợ làm tóc",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 30,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Thợ làm tóc tập sự",
+        "salary": 17358000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ làm tóc",
+        "salary": 38566000,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ làm tóc cao cấp",
+        "salary": 59774000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_136",
+    "name": "Nhân viên dọn phòng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên dọn phòng",
+        "salary": 16742000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_137",
+    "name": "Nhân viên vệ sinh",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên vệ sinh",
+        "salary": 17172000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_138",
+    "name": "Người làm cảnh quan",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người làm cảnh quan tập sự",
+        "salary": 18174000,
+        "minYears": 0
+      },
+      {
+        "name": "Người làm cảnh quan",
+        "salary": 23521000,
+        "minYears": 2
+      },
+      {
+        "name": "Người làm cảnh quan cao cấp",
+        "salary": 28868000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_139",
+    "name": "Chuyên viên trang điểm",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 30,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Chuyên viên trang điểm tập sự",
+        "salary": 20597000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên trang điểm",
+        "salary": 53866000,
+        "minYears": 2
+      },
+      {
+        "name": "Chuyên viên trang điểm cao cấp",
+        "salary": 87135000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_140",
+    "name": "Vũ công thoát y nam",
+    "industry": "dichvu",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 30,
+    "minLooks": 80,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Vũ công thoát y nam",
+        "salary": 19365000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 45,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "male",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_141",
+    "name": "Người nấu rượu lậu",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người nấu rượu lậu tập sự",
+        "salary": 11493000,
+        "minYears": 0
+      },
+      {
+        "name": "Người nấu rượu lậu",
+        "salary": 23850500,
+        "minYears": 2
+      },
+      {
+        "name": "Người nấu rượu lậu cao cấp",
+        "salary": 36208000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_142",
+    "name": "Nhà soạn nhạc",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhà soạn nhạc tập sự",
+        "salary": 20134000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhà soạn nhạc",
+        "salary": 610067000,
+        "minYears": 20
+      },
+      {
+        "name": "Nhà soạn nhạc cao cấp",
+        "salary": 1200000000,
+        "minYears": 40
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_music"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_143",
+    "name": "Người mẫu khỏa thân",
+    "industry": "giaoduc",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 90,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người mẫu khỏa thân",
+        "salary": 25458000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 40,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 30,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_144",
+    "name": "Nhạc công dàn nhạc",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhạc công kẻng tam giác",
+        "salary": 11920000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhạc công vĩ cầm",
+        "salary": 36915667,
+        "minYears": 8
+      },
+      {
+        "name": "Nhạc công vĩ cầm chính",
+        "salary": 61911333,
+        "minYears": 17
+      },
+      {
+        "name": "Ca sĩ nhạc kịch",
+        "salary": 86907000,
+        "minYears": 25
+      },
+      {
+        "name": "Nhạc trưởng",
+        "salary": 111902667,
+        "minYears": 33
+      },
+      {
+        "name": "Nhạc trưởng chính",
+        "salary": 136898333,
+        "minYears": 42
+      },
+      {
+        "name": "Bậc thầy chỉ huy",
+        "salary": 161894000,
+        "minYears": 50
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_music"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": true
+    }
+  },
+  {
+    "id": "apk_job_145",
+    "name": "Nhiếp ảnh gia",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 20,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhiếp ảnh gia tập sự",
+        "salary": 30000000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhiếp ảnh gia",
+        "salary": 31500000,
+        "minYears": 2
+      },
+      {
+        "name": "Nhiếp ảnh gia cao cấp",
+        "salary": 33000000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_146",
+    "name": "Nhân viên vệ sinh phim trường người lớn",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên vệ sinh phim trường người lớn",
+        "salary": 17172000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_147",
+    "name": "Nhà nghiên cứu phim người lớn",
+    "industry": "nghethuat",
+    "minAge": 18,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhà nghiên cứu phim người lớn",
+        "salary": 18418000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_148",
+    "name": "Nhân viên hút bể vệ sinh di động",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên hút bể vệ sinh di động",
+        "salary": 31391000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_149",
+    "name": "Nghệ sĩ múa rối",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nghệ sĩ múa rối",
+        "salary": 19371000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_150",
+    "name": "Nhân viên nhà hàng",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên rửa bát",
+        "salary": 9299000,
+        "minYears": 0
+      },
+      {
+        "name": "Nhân viên dọn bàn",
+        "salary": 13066000,
+        "minYears": 3
+      },
+      {
+        "name": "Nhân viên đón khách",
+        "salary": 16833000,
+        "minYears": 6
+      },
+      {
+        "name": "Nhân viên mang món",
+        "salary": 20600000,
+        "minYears": 9
+      },
+      {
+        "name": "Nhân viên phục vụ",
+        "salary": 24367000,
+        "minYears": 12
+      },
+      {
+        "name": "Trưởng phục vụ",
+        "salary": 28134000,
+        "minYears": 16
+      },
+      {
+        "name": "Điều phối ra món",
+        "salary": 31901000,
+        "minYears": 19
+      },
+      {
+        "name": "Phó quản lý",
+        "salary": 35668000,
+        "minYears": 22
+      },
+      {
+        "name": "Tổng quản lý",
+        "salary": 39435000,
+        "minYears": 25
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_151",
+    "name": "Nhân viên thu dọn xác động vật trên đường",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên thu dọn xác động vật trên đường",
+        "salary": 32482000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": true,
+      "pilot": false,
+      "vehicle": true,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_152",
+    "name": "Nhà điêu khắc",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhà điêu khắc",
+        "salary": 22192000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_153",
+    "name": "Diễn viên đóng thế",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 70,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Diễn viên đóng thế",
+        "salary": 24482000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 50,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 40,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_154",
+    "name": "Người thử cầu trượt nước",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người thử cầu trượt nước",
+        "salary": 17784000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_155",
+    "name": "Người thu gom giun",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người thu gom giun",
+        "salary": 16842000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_156",
+    "name": "Thợ rèn",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Thợ rèn tập sự",
+        "salary": 34070000,
+        "minYears": 0
+      },
+      {
+        "name": "Thợ rèn",
+        "salary": 45021500,
+        "minYears": 2
+      },
+      {
+        "name": "Thợ rèn cao cấp",
+        "salary": 55973000,
+        "minYears": 5
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_157",
+    "name": "Bác sĩ phẫu thuật thẩm mỹ",
+    "industry": "yte",
+    "minAge": 16,
+    "degree": "edu_medical",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Bác sĩ phẫu thuật thẩm mỹ",
+        "salary": 112571000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 75,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_158",
+    "name": "Nhà thiết kế bối cảnh",
+    "industry": "nghethuat",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Nhân viên trang trí bối cảnh",
+        "salary": 24376000,
+        "minYears": 0
+      },
+      {
+        "name": "Trợ lý thiết kế bối cảnh",
+        "salary": 56157000,
+        "minYears": 5
+      },
+      {
+        "name": "Nhà thiết kế bối cảnh",
+        "salary": 87938000,
+        "minYears": 10
+      },
+      {
+        "name": "Quản lý bối cảnh",
+        "salary": 119719000,
+        "minYears": 15
+      },
+      {
+        "name": "Giám đốc bối cảnh",
+        "salary": 151500000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_architecture",
+        "apk_major_art_history",
+        "apk_major_graphic_design"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_159",
+    "name": "Người khóc thuê",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người viếng thầm lặng",
+        "salary": 18376000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên khóc thuê",
+        "salary": 41254500,
+        "minYears": 4
+      },
+      {
+        "name": "Trưởng nhóm khóc thuê",
+        "salary": 64133000,
+        "minYears": 9
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_160",
+    "name": "Nhà ngoại cảm",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người xem chỉ tay",
+        "salary": 17172000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên bài tiên tri",
+        "salary": 317879000,
+        "minYears": 3
+      },
+      {
+        "name": "Người gọi hồn",
+        "salary": 618586000,
+        "minYears": 6
+      },
+      {
+        "name": "Chuyên viên tư vấn trực giác",
+        "salary": 919293000,
+        "minYears": 9
+      },
+      {
+        "name": "Nhà tiên tri",
+        "salary": 1220000000,
+        "minYears": 12
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_161",
+    "name": "Nhân viên thu hồi nợ",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Nhân viên thu hồi nợ",
+        "salary": 36934000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 85,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_162",
+    "name": "Ông già Noel ở trung tâm thương mại",
+    "industry": "kinhdoanh",
+    "minAge": 35,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Ông già Noel ở trung tâm thương mại",
+        "salary": 27000000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_163",
+    "name": "Người chăm sóc tuần lộc",
+    "industry": "nongnghiep",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Người chăm sóc tập sự",
+        "salary": 40000000,
+        "minYears": 0
+      },
+      {
+        "name": "Người chăm sóc có kinh nghiệm",
+        "salary": 59500000,
+        "minYears": 8
+      },
+      {
+        "name": "Trưởng nhóm chăm sóc",
+        "salary": 79000000,
+        "minYears": 15
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_164",
+    "name": "Huấn luyện viên cá nhân",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 70,
+    "minLooks": 50,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Huấn luyện viên cá nhân",
+        "salary": 39923000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_165",
+    "name": "Chuyên viên rượu vang",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "edu_upper_secondary",
+    "minIntelligence": 35,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Chuyên viên rượu vang nhập môn",
+        "salary": 28851000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên rượu vang được chứng nhận",
+        "salary": 112812333,
+        "minYears": 4
+      },
+      {
+        "name": "Chuyên viên rượu vang cao cấp",
+        "salary": 196773667,
+        "minYears": 8
+      },
+      {
+        "name": "Bậc thầy rượu vang",
+        "salary": 280735000,
+        "minYears": 12
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_166",
+    "name": "Khách hàng bí mật",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": false,
+    "ranks": [
+      {
+        "name": "Khách hàng bí mật",
+        "salary": 9299000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 90,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_167",
+    "name": "Quản lý quan hệ công chúng",
+    "industry": "kinhdoanh",
+    "minAge": 16,
+    "degree": "edu_university",
+    "minIntelligence": 30,
+    "minHealth": 0,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Trợ lý quan hệ công chúng",
+        "salary": 45163000,
+        "minYears": 0
+      },
+      {
+        "name": "Chuyên viên quan hệ công chúng",
+        "salary": 102054333,
+        "minYears": 7
+      },
+      {
+        "name": "Quản lý khách hàng truyền thông",
+        "salary": 158945667,
+        "minYears": 13
+      },
+      {
+        "name": "Giám đốc truyền thông",
+        "salary": 215837000,
+        "minYears": 20
+      }
+    ],
+    "retireAge": 65,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [
+        "apk_major_journalism",
+        "apk_major_communications",
+        "apk_major_english",
+        "apk_major_psychology"
+      ],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  },
+  {
+    "id": "apk_job_168",
+    "name": "Bảo vệ trung tâm thương mại",
+    "industry": "dichvu",
+    "minAge": 16,
+    "degree": "",
+    "minIntelligence": 0,
+    "minHealth": 20,
+    "minLooks": 0,
+    "noRecord": true,
+    "ranks": [
+      {
+        "name": "Bảo vệ trung tâm thương mại",
+        "salary": 13738000,
+        "minYears": 0
+      }
+    ],
+    "retireAge": 55,
+    "duties": [
+      "Hoàn thành nhiệm vụ",
+      "Trau dồi chuyên môn",
+      "Hợp tác cùng đồng nghiệp"
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "maxAge": 150,
+      "workYears": 0,
+      "majors": [],
+      "karma": 0,
+      "driving": false,
+      "pilot": false,
+      "vehicle": false,
+      "celibacy": false,
+      "unavailable": false
+    }
+  }
+]

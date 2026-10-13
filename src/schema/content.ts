@@ -32,6 +32,36 @@ export const idSchema = z
   .max(100);
 const number = z.number().finite();
 const money = number.int().min(0).max(1_000_000_000_000_000);
+const genderRequirement = z.enum(["any", "male", "female", "other"]);
+export const apkEventRequirementsSchema = z.object({
+  gender: genderRequirement,
+  student: z.boolean(),
+  job: z.boolean(),
+  parents: z.boolean(),
+  lover: z.boolean(),
+  noLover: z.boolean(),
+  loverGender: genderRequirement,
+  parent: z.boolean(),
+  friend: z.boolean(),
+  orphan: z.boolean(),
+  prison: z.boolean(),
+  careerId: z.string().max(100),
+  friendMinAge: number.int().min(0).max(200).optional(),
+  friendMaxAge: number.int().min(0).max(200).optional(),
+  friendGender: genderRequirement.optional(),
+});
+export const apkJobRequirementsSchema = z.object({
+  gender: genderRequirement,
+  maxAge: number.int().min(0).max(150),
+  workYears: number.int().min(0).max(150),
+  majors: z.array(idSchema).max(30),
+  karma: number.int().min(0).max(100),
+  driving: z.boolean(),
+  pilot: z.boolean(),
+  vehicle: z.boolean(),
+  celibacy: z.boolean(),
+  unavailable: z.boolean(),
+});
 export const conditionSchema: z.ZodType<Condition> = z.lazy(() =>
   z.union([
     z.object({ origin: idSchema }),
@@ -77,6 +107,17 @@ export const conditionSchema: z.ZodType<Condition> = z.lazy(() =>
   ]),
 );
 export const effectSchema: z.ZodType<Effect> = z.union([
+  z.object({
+    apkAttribute: z.enum([
+      "karma",
+      "discipline",
+      "behavior",
+      "respect",
+      "job",
+      "friend",
+    ]),
+    delta: number.int().min(-100).max(100),
+  }),
   z.object({
     modifier: z.object({
       id: idSchema,
@@ -183,7 +224,7 @@ export const choiceSchema: z.ZodType<Choice> = z.lazy(() =>
   z
     .object({
       id: idSchema,
-      label: z.string().min(1).max(200),
+      label: z.string().min(1).max(600),
       conditions: z.array(conditionSchema).max(30).optional(),
       outcomes: z
         .array(outcomeSchema)
@@ -215,7 +256,8 @@ export const eventSchema = z
     conditions: z.array(conditionSchema).max(30),
     text: z.string().min(1).max(2000),
     choices: z.array(choiceSchema).min(1).max(6),
-    sourceKind: z.literal("original_web"),
+    sourceKind: z.enum(["original_web", "apk_translation"]),
+    apkRequirements: apkEventRequirementsSchema.optional(),
     rare: z.boolean().optional(),
     chainId: idSchema.optional(),
     stage: number.int().min(1).max(8).optional(),
@@ -294,11 +336,12 @@ export const activitySchema = z.object({
   sourceKind: z.literal("original_web"),
 });
 export const jobSchema = z.object({
+  apkRequirements: apkJobRequirementsSchema.optional(),
   origins: z.array(idSchema).min(1).optional(),
   id: idSchema,
   name: z.string(),
   industry: z.string(),
-  minAge: number.int().min(18),
+  minAge: number.int().min(16),
   degree: z.string(),
   minIntelligence: number.min(0).max(100),
   minHealth: number.min(0).max(100),
@@ -315,7 +358,7 @@ export const jobSchema = z.object({
     .min(1),
   retireAge: number.int().min(40),
   duties: z.array(z.string()).length(3),
-  sourceKind: z.literal("original_web"),
+  sourceKind: z.enum(["original_web", "apk_translation"]),
 });
 export const educationSchema = z.object({
   id: idSchema,
@@ -326,7 +369,7 @@ export const educationSchema = z.object({
   requires: z.array(idSchema),
   minScore: number.min(0).max(100),
   specialty: z.boolean().optional(),
-  sourceKind: z.literal("original_web"),
+  sourceKind: z.enum(["original_web", "apk_translation"]),
 });
 export const assetSchema = z.object({
   id: idSchema,

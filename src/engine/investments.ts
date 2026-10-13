@@ -1,4 +1,5 @@
 import raw from "../content/investments.json" with { type: "json" };
+import apkCoins from "../content/apk/coins.json" with { type: "json" };
 import type {
   Action,
   GameState,
@@ -19,9 +20,12 @@ export const INVESTMENT_LABELS: Record<InvestmentGroup, string> = {
   crypto: "Tiền mã hoá",
 };
 export const MAX_MARKET_PRICE = 100_000_000_000;
-export function emptyInvestments(): InvestmentState {
+export function emptyInvestments(apk = false): InvestmentState {
   return {
-    instruments: raw.map((i) => ({
+    instruments: [
+      ...raw.filter((i) => !apk || i.group !== "crypto"),
+      ...(apk ? apkCoins : []),
+    ].map((i) => ({
       id: i.id,
       name: i.name,
       ticker: i.ticker,

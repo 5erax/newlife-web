@@ -1,0 +1,67 @@
+[
+  {
+    "id": "apk_edu_dental",
+    "name": "Nha khoa",
+    "minAge": 18,
+    "years": 6,
+    "cost": 28000000,
+    "requires": [
+      "edu_upper_secondary"
+    ],
+    "minScore": 75,
+    "specialty": true,
+    "sourceKind": "apk_translation"
+  },
+  {
+    "id": "apk_edu_law",
+    "name": "Luật",
+    "minAge": 18,
+    "years": 4,
+    "cost": 20000000,
+    "requires": [
+      "edu_upper_secondary"
+    ],
+    "minScore": 60,
+    "specialty": true,
+    "sourceKind": "apk_translation"
+  },
+  {
+    "id": "apk_edu_nursing",
+    "name": "Điều dưỡng",
+    "minAge": 18,
+    "years": 4,
+    "cost": 18000000,
+    "requires": [
+      "edu_upper_secondary"
+    ],
+    "minScore": 60,
+    "specialty": true,
+    "sourceKind": "apk_translation"
+  },
+  {
+    "id": "apk_edu_pharmacy",
+    "name": "Dược",
+    "minAge": 18,
+    "years": 5,
+    "cost": 24000000,
+    "requires": [
+      "edu_upper_secondary"
+    ],
+    "minScore": 70,
+    "specialty": true,
+    "sourceKind": "apk_translation"
+  },
+  {
+    "id": "apk_edu_veterinary",
+    "name": "Thú y",
+    "minAge": 18,
+    "years": 5,
+    "cost": 24000000,
+    "requires": [
+      "edu_upper_secondary"
+    ],
+    "minScore": 65,
+    "specialty": true,
+    "sourceKind": "apk_translation"
+  }
+]

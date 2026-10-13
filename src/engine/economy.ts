@@ -17,6 +17,7 @@ import {
   stat,
 } from "./helpers";
 import industries from "../content/industries.json" with { type: "json" };
+import apkMajors from "../content/apk/majors.vi.json" with { type: "json" };
 import { random } from "./rng";
 import { changeContext } from "./changes";
 import { localPrice, originById } from "./world";
@@ -33,7 +34,7 @@ export const sideJobs = [
 ];
 export function economicYear(s: GameState) {
   changeContext(s, "economy", "Công việc, sinh hoạt và tài sản trong năm.");
-  if (s.age < 18) {
+  if (s.age < 18 && !s.job) {
     if (s.age >= 6) money(s, localPrice(s, 240000), "Tiền tiêu vặt trong năm");
   } else {
     if (s.job && s.prisonYears === 0) {
@@ -268,6 +269,8 @@ export function studyYear(s: GameState) {
 export function educationReason(s: GameState, id: string): string | null {
   const p = educationById.get(id);
   if (!p) return "Không có chương trình này.";
+  if (p.sourceKind === "apk_translation" && !s.flags.includes("apk_mode"))
+    return "Chương trình thuộc bộ Việt hóa từ APK.";
   if (s.prisonYears > 0)
     return "Chương trình bên ngoài chưa mở khi đang thụ án.";
   if (s.education.current) return "Bạn đang có một chương trình học chính.";
@@ -283,12 +286,50 @@ export function educationReason(s: GameState, id: string): string | null {
 export function jobReason(s: GameState, id: string): string | null {
   const j = jobById.get(id);
   if (!j) return "Không có công việc này.";
+  if (j.sourceKind === "apk_translation" && !s.flags.includes("apk_mode"))
+    return "Nghề thuộc bộ Việt hóa từ APK.";
   if (j.origins && !j.origins.includes(s.origin))
     return "Vị trí này chỉ tuyển tại xuất thân phù hợp trong game.";
   if (s.prisonYears > 0) return "Bạn đang thụ án.";
   if (s.age < j.minAge) return `Mở từ ${j.minAge} tuổi.`;
-  if (!s.education.completed.includes(j.degree))
-    return `Cần hoàn thành ${education.find((p) => p.id === j.degree)?.name ?? j.degree}.`;
+  if (j.degree && !s.education.completed.includes(j.degree))
+    return `Cần hoàn thành ${educationById.get(j.degree)?.name ?? j.degree}.`;
+  if (j.apkRequirements) {
+    const r = j.apkRequirements;
+    if (r.unavailable)
+      return "Nghề này cần hệ đặc biệt của bản gốc; chưa mở trên web.";
+    if (s.age > r.maxAge) return `Nghề tuyển đến ${r.maxAge} tuổi.`;
+    if (r.gender !== "any" && r.gender !== s.gender)
+      return "Chưa phù hợp điều kiện giới tính của vị trí trong dữ liệu gốc.";
+    if ((s.counters.workYears ?? 0) < r.workYears)
+      return `Cần ${r.workYears} năm kinh nghiệm làm việc.`;
+    if (r.majors.length && !r.majors.includes(s.education.specialty))
+      return (
+        "Cần chuyên ngành: " +
+        r.majors
+          .map((id) => apkMajors.find((m) => m.id === id)?.name ?? id)
+          .join(", ") +
+        "."
+      );
+    if ((s.counters.apk_karma ?? 50) < r.karma)
+      return `Cần điểm thiện tâm ${r.karma}.`;
+    if (r.driving)
+      return "Cần bằng lái xe; hệ cấp bằng gốc chưa chuyển sang web.";
+    if (r.pilot)
+      return "Cần bằng lái máy bay; hệ đào tạo bay gốc chưa chuyển sang web.";
+    if (
+      r.vehicle &&
+      !s.assets.some(
+        (a) => a.alive && assetById.get(a.catalogId)?.category === "vehicle",
+      )
+    )
+      return "Cần sở hữu phương tiện.";
+    if (
+      r.celibacy &&
+      s.relations.some((p) => p.alive && ["lover", "spouse"].includes(p.role))
+    )
+      return "Vị trí yêu cầu độc thân.";
+  }
   if (
     [
       "edu_vocational",
@@ -296,6 +337,7 @@ export function jobReason(s: GameState, id: string): string | null {
       "edu_university",
       "edu_postgraduate",
     ].includes(j.degree) &&
+    !j.apkRequirements &&
     s.education.specialty !== j.industry
   )
     return `Cần chuyên ngành ${industries.find((i) => i.id === j.industry)?.name}.`;
@@ -400,7 +442,10 @@ export function economyAction(s: GameState, a: Action): boolean {
       flag(s, "scholarship", scholarship);
       requireGame(
         !p.specialty ||
-          industries.some((i) => i.id === (a.specialty ?? "congnghe")),
+          [
+            ...industries,
+            ...(s.flags.includes("apk_mode") ? apkMajors : []),
+          ].some((i) => i.id === (a.specialty ?? "congnghe")),
         "Chuyên ngành không hợp lệ.",
       );
       s.education.current = {

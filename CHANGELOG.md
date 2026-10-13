@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0 — 2026-10-13
+
+- Thêm bộ Việt hóa từ APK cho đời mới: 1.074 tình huống/3.948 lựa chọn, 168 dòng nghề, 28 chuyên ngành, 5 chương trình chuyên môn và 21 coin.
+- Lưu seed template, kiểm điều kiện nguồn, hiệu ứng Job/Friend và các chỉ số bổ sung; giữ bộ nội dung và RNG của các đời cũ.
+- Kiểm kê 180 dòng lõi và 48 bảng tình huống chưa chuyển; công khai các quy tắc viết lại, chất lượng bản dịch và giới hạn native.
+- Chưa coi bản này là bản sao BitLife 1:1; các nghề cần bằng lái/hệ đặc biệt vẫn khóa có lý do.
+
 ## 1.1.0 — 2026-10-13
 
 - Nhật ký delta/nguyên nhân, thẻ Năm nay, biến thiên chỉ số và lão hóa.
@@ -8,7 +15,6 @@
 - Danh mục đầu tư 5 nhóm/34 sản phẩm ban đầu, lịch sử, mua bán/phí/thanh khoản, lãi/đáo hạn, coin mới, tăng mạnh và mất sạch.
 - Blackjack/Ba cào có bộ bài lưu được và hậu quả cờ bạc; 20 chuỗi, modifier, weighted cases lồng, pools, graph và coverage.
 - Nâng cấp file lưu cũ và xuất bản gốc của file chưa được hỗ trợ.
-
 
 ## 1.0.0-rc.1 — 12/10/2026
 

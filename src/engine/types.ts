@@ -128,6 +128,16 @@ export type Operation =
   | "volunteer"
   | "travel";
 export type Effect =
+  | {
+      apkAttribute:
+        | "karma"
+        | "discipline"
+        | "behavior"
+        | "respect"
+        | "job"
+        | "friend";
+      delta: number;
+    }
   | { modifier: GameState["modifiers"][number] }
   | { stat: Stat; delta: number }
   | { money: number }
@@ -175,7 +185,8 @@ export interface LifeEvent {
   conditions: Condition[];
   text: string;
   choices: Choice[];
-  sourceKind: "original_web";
+  sourceKind: "original_web" | "apk_translation";
+  apkRequirements?: ApkEventRequirements;
   rare?: boolean;
   chainId?: string;
   stage?: number;
@@ -220,6 +231,7 @@ export interface Activity {
   sourceKind: "original_web";
 }
 export interface Job {
+  apkRequirements?: ApkJobRequirements;
   origins?: string[];
   id: string;
   name: string;
@@ -233,7 +245,36 @@ export interface Job {
   ranks: { name: string; salary: number; minYears: number }[];
   retireAge: number;
   duties: string[];
-  sourceKind: "original_web";
+  sourceKind: "original_web" | "apk_translation";
+}
+export interface ApkEventRequirements {
+  gender: "any" | "male" | "female" | "other";
+  student: boolean;
+  job: boolean;
+  parents: boolean;
+  lover: boolean;
+  noLover: boolean;
+  loverGender: "any" | "male" | "female" | "other";
+  parent: boolean;
+  friend: boolean;
+  orphan: boolean;
+  prison: boolean;
+  careerId: string;
+  friendMinAge?: number;
+  friendMaxAge?: number;
+  friendGender?: "any" | "male" | "female" | "other";
+}
+export interface ApkJobRequirements {
+  gender: "any" | "male" | "female" | "other";
+  maxAge: number;
+  workYears: number;
+  majors: string[];
+  karma: number;
+  driving: boolean;
+  pilot: boolean;
+  vehicle: boolean;
+  celibacy: boolean;
+  unavailable: boolean;
 }
 export interface Education {
   id: string;
@@ -244,7 +285,7 @@ export interface Education {
   requires: string[];
   minScore: number;
   specialty?: boolean;
-  sourceKind: "original_web";
+  sourceKind: "original_web" | "apk_translation";
 }
 export interface Asset {
   id: string;
@@ -428,6 +469,7 @@ export interface GameState {
     bannedUntil: number;
   };
   pending: {
+    templateSeed?: number;
     instanceId: string;
     event: LifeEvent;
     node?: {
@@ -514,6 +556,7 @@ export type Action =
   | { type: "storyChoice"; nodeId: string; choiceId: string }
   | { type: "storyClose" };
 export interface NewLifeOptions {
+  contentMode?: "web" | "apk";
   origin?: string;
   vietnamBias?: boolean;
   id?: string;
@@ -523,7 +566,7 @@ export interface NewLifeOptions {
   birthDate: string;
   seed: number;
 }
-export const CONTENT_VERSION = "1.1.0";
+export const CONTENT_VERSION = "1.2.0";
 export const STAT_LABELS: Record<Stat, string> = {
   health: "Sức khoẻ",
   happiness: "Hạnh phúc",

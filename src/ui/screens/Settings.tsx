@@ -27,7 +27,7 @@ export function Settings({
           <p className="eyebrow">CHƠI THEO NHỊP CỦA BẠN</p>
           <h2>{ui.settings}</h2>
         </div>
-        <span className="tag">v1.1.0</span>
+        <span className="tag">v1.2.0</span>
       </div>
       <div className="settings-grid">
         <form

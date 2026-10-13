@@ -1,7 +1,7 @@
 import { localPrice, origins } from "../../engine/world";
 import { useState } from "react";
 import type { Action, GameState } from "../../engine/types";
-import { jobs, jobById } from "../../content/catalog";
+import { jobs, jobById, apkJobs } from "../../content/catalog";
 import industries from "../../content/industries.json" with { type: "json" };
 import { jobReason, sideJobs } from "../../engine/economy";
 import ui from "../../i18n/vi.json" with { type: "json" };
@@ -23,7 +23,8 @@ export function Work({
     [side, setSide] = useState("Phụ quán");
   const [destination, setDestination] = useState("vn");
   const current = s.job ? jobById.get(s.job.id)! : null;
-  const offers = jobs.filter(
+  const catalog = s.flags.includes("apk_mode") ? apkJobs : jobs;
+  const offers = catalog.filter(
     (j) =>
       (industry === "all" || j.industry === industry) &&
       j.name
@@ -38,10 +39,18 @@ export function Work({
           <p className="eyebrow">TẠO MỘT HÀNH TRÌNH</p>
           <h2>{ui.work}</h2>
           <p className="muted">
-            48 nghề trong 12 ngành. Có thể thử lại khi bạn đã học thêm.
+            {catalog.length} nghề trong 12 ngành. Có thể thử lại khi bạn đã học
+            thêm.
           </p>
         </div>
       </div>
+      {s.flags.includes("apk_mode") && (
+        <p className="muted fine">
+          Danh mục và điều kiện từ APK. Tiền lương và thăng tiến dùng quy tắc mô
+          phỏng của bản web. Các nghề cần hệ đặc biệt chưa chuyển sẽ hiện lý do
+          khóa.
+        </p>
+      )}
       <div className="feature-panel">
         {current && s.job ? (
           <>
