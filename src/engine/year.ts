@@ -16,6 +16,7 @@ import { closeYear, changeContext } from "./changes";
 import { annualStats } from "./aging";
 import { investmentYear } from "./investments";
 import { apkEventAllowed } from "./apk";
+import { npcYear } from "./npc";
 import {
   addLog,
   count,
@@ -274,6 +275,7 @@ export function startYear(s: GameState) {
       stat(s, "happiness", -6);
       if (r.role === "spouse") flag(s, "married", false);
     }
+    npcYear(s, r);
   }
   if (s.relations.some((r) => r.alive && r.role === "spouse"))
     count(s, "marriageYears");

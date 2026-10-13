@@ -2,7 +2,18 @@
 
 Theo dõi phạm vi đầy đủ tại [issue #111](https://github.com/5erax/newlife-web/issues/111). Bản 1.2 là một bản chuyển nội dung có thể chơi; issue vẫn mở vì chưa chuyển toàn bộ cơ chế native.
 
-## Bằng chứng tệp đầu vào
+## Các đợt chuyển nội dung
+
+### Trạng thái bạn bè 1.4
+
+[Task #114](https://github.com/5erax/newlife-web/issues/114) bổ sung 29 dòng còn thiếu của bảng bạn bè: bảng này đã có đủ **37 tình huống/120 lựa chọn**, tăng 91 lựa chọn. Tổng hiện tại **1.227 tình huống/4.507 lựa chọn**; còn 151 dòng lõi (119 hoàng gia/ma cà rồng, 32 nghề đặc biệt) và 45 bảng/2.119 dòng khác. Đây là độ phủ dòng tình huống, không phải tỷ lệ hoàn thiện toàn bộ game.
+
+- Giữ sáu trường từ nguồn: Friend Min Craziness, Has Job, Is Student, Has Child, Is Married, Is Enemy; kiểm tuổi/giới tính/đang sống và toàn bộ điều kiện trên cùng một người bạn. Friend Impact tác động đúng người được chọn bởi bộ lọc, kể cả khi người khác đứng trước trong danh sách. `Friend Is Enemy` trống dùng nhóm bạn bình thường; đánh dấu x dùng nhóm thù địch theo chính sách lọc của web.
+- Hồ sơ NPC gồm tính bốc đồng 0–100, học/việc, hôn nhân, số con và thù địch. Với đời cũ chưa có hồ sơ, dùng hash ổn định của ID, không bốc RNG và không tự ghi hồ sơ khi render/import. Khi NPC qua năm hoặc quan hệ thay đổi, hồ sơ được lưu. File 1.3 nâng lên 1.4 giữ RNG/tiền/pending; 1.198 sự kiện đã phát hành giữ canonical.
+- **Mốc NPC là quy tắc viết lại của web:** học từ 6 tuổi, kết thúc tuổi 21–24; làm từ 16 tuổi, một số đi làm khi học, một số không có việc; nghỉ việc tuổi 65–69. Hash ID chọn mốc kết hôn 22–37, 1–2 con sau đó. Mốc gia đình chỉ diễn ra đúng năm vượt ngưỡng và khi phù hợp, không phát lại mốc cũ sau chia tay/ly hôn. Khi là người yêu/vợ chồng, học/việc vẫn cập nhật, hôn nhân theo vai trò và con theo lịch sử gia đình đã biết. Giới hạn số con NPC 250 theo giới hạn hồ sơ web.
+- **Quan hệ thù địch là quy tắc web:** từ 6 tuổi, còn thời gian, ngoài tù; mỗi thao tác mất 1 điểm thời gian, tối đa 2 lần đổi trạng thái/năm. Tuyên bố thù địch giảm gắn bó xuống tối đa 10 và hạnh phúc −3; làm hòa cần gắn bó 40+, hạnh phúc +3. Trò chuyện/tặng quà/xin lỗi có thể xây lại gắn bó; hỗ trợ/hẹn hò và đi cùng chuyến đi bị chặn khi thù địch. Người đã kết hôn không mở hẹn hò mới.
+- Không phục hồi lịch nghề/học, tuổi gia đình, xác suất chấp nhận hòa giải hoặc đầy đủ cây gia đình NPC native. Những thuộc tính này có trạng thái thực trong web, không phải cách đánh dấu mọi tình huống luôn đủ điều kiện. Không gọi đây là mô phỏng NPC BitLife 1:1.
+- Kiểm bằng `tests/npc-friends.test.ts`, toàn bộ lựa chọn trong `tests/apk-port.test.ts`, migration/bounds/đổi vai trò/mốc năm và E2E tuyên bố thù địch → reload → xây lại gắn bó → hòa giải. Đời dùng bộ web giữ cách vận hành/RNG cũ.
 
 Bản 1.3 hiện có **1.198 tình huống/4.416 lựa chọn**: giữ 1.074 tình huống lõi và thêm đủ 59 dòng du lịch (39 kỳ nghỉ, 20 tàu biển), 36 dòng cắm trại, 29 dòng leo núi. Các bảng mới chỉ bốc khi dùng hoạt động tương ứng; không vào pool tăng tuổi. 180 dòng lõi và 45 bảng/2.119 dòng khác vẫn chưa chuyển, không coi toàn bộ APK đã hợp nhất.
 
@@ -14,6 +25,8 @@ Bản 1.3 hiện có **1.198 tình huống/4.416 lựa chọn**: giữ 1.074 tì
 - Lưu activityId, companionId và templateSeed cùng pending. Reload/import kiểm lại ngữ cảnh; lựa chọn kết thúc trở về năm hiện tại, không bốc tử vong hoặc tính phí lần nữa. `<rb3>` và các biến thể thứ ba trở lên được ghi nhớ.
 - **Anomaly nguồn:** hiking bản ghi 27, `Enjoyment Impact 1` là `1-`, không phải số hợp lệ. Giữ tình huống và mọi lựa chọn, dùng **0 như override trung tính của web**, lưu raw/field/record trong `coverage.unverifiedEffects`. Chưa xác minh đây là +1 hay −1; không tính là hiệu ứng native đã phục hồi. Generator kiểm định dạng mọi hiệu ứng không rỗng và ghi anomaly thay vì đổi âm thầm.
 - `tests/apk-trips.test.ts` chạy cả 124 dòng, mọi lựa chọn, tác động chỉ số, roundtrip, đồng hành chết/không tồn tại và file giả mạo ngữ cảnh. E2E đi qua nhập đời trưởng thành → chọn chó → cắm trại → reload → lựa chọn → trở về hoạt động. Review chạy thêm 3.968 render (124×32 seeds).
+
+## Bằng chứng tệp đầu vào
 
 Tệp người dùng cung cấp: `BitLife-v3-25-mod.apk`, 262.640.127 byte. SHA-256: `8c1248cb94a7e8cfb4fa8cc6ca2f7886e7cbe8dd318d7ef2abc6b428ab469234`. Manifest nhị phân ghi package `com.candywriter.bitlife`, version `3.25`. UnityFS ghi `6000.3.9f1`; IL2CPP metadata version 39; thư viện máy ARM64. Đây là tệp mod được cung cấp, chưa xác minh nó giống bản phát hành chính thức.
 
@@ -57,3 +70,13 @@ Các hệ Fame/Love/Mind & Body/Salon, đầu tư và Blackjack/Ba cao trước 
 ## Kiểm tra
 
 `tests/apk-port.test.ts` chạy mỗi lựa chọn của 1.074 tình huống, roundtrip pending và kết quả, điều kiện student/job/prison/orphan, lương tuổi 16, yêu cầu chuyên ngành/bằng lái và migration đời cũ. Browser test kiểm nhập pending, reload giữ cùng văn bản, lựa chọn áp dụng đúng Job/Karma, danh mục nghề và tiếng Việt. Các kiểm tra này xác nhận adapter web, không chứng minh đầy đủ runtime Android. Chưa QA trên điện thoại vật lý hoặc đối chiếu toàn bộ xác suất native.
+
+### Checkpoint 14/10/2026 — bạn bè 1.4
+
+Nhánh `feature/apk-friend-states`, task #114. `d5c0337` lưu hồ sơ NPC và thao tác thù địch; lượt tích hợp tiếp theo mở cả bảng 37 dòng, nâng nội dung/file lưu lên 1.4. Tiến độ CI/merge/phát hành được cập nhật trong issue, không suy ra từ số version trong mã.
+
+- `npm test`: **86/86**, 15 file. `npm run build`: typecheck, kiểm nội dung và PWA qua. `npm run test:e2e`: **13/13** trên build cuối, gồm offline, nhập lỗi không ghi đè và xung đột hai tab.
+- Kiểm tất cả 37 dòng/120 lựa chọn, sáu thuộc tính trên cùng NPC, Friend Impact đúng người; so sánh canonical xác nhận toàn bộ 1.198 sự kiện đã phát hành không đổi.
+- Rà soát độc lập phát hiện học/việc bị đóng băng khi chuyển bạn thành người yêu/vợ chồng và mốc gia đình bị phát lại. Đã sửa và thêm hồi quy; thử đưa lỗi đóng băng trở lại làm kiểm thử thất bại, khôi phục mã đúng rồi chạy xanh. Tự rà soát tìm thêm lỗi mất số con có trước khi chia tay; kiểm thử đỏ trước sửa, xanh sau sửa và giữ qua roundtrip.
+- Đã xem ảnh giao diện Quan hệ tiếng Việt ở viewport điện thoại. Lượt rà soát độc lập cuối không hoàn tất do giới hạn sử dụng công cụ; không ghi nhận nó là một lượt duyệt thành công. CI và QA hosted cần hoàn tất trước khi đóng task.
+- Chưa kiểm trên điện thoại vật lý; bundle JS khoảng 4,25 MB (gzip 630 KB), cảnh báo chunk lớn còn tồn tại. 151 dòng lõi và 45 bảng/2.119 dòng vẫn chờ cơ chế phù hợp; epic #111 còn mở.

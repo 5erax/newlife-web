@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.0 — 2026-10-14
+
+- Mở đủ 37 tình huống bạn bè/120 lựa chọn trong bảng APK, bổ sung 29 tình huống/91 lựa chọn. Tổng 1.227 tình huống APK/4.507 lựa chọn; còn 151 dòng lõi và 45 bảng khác.
+- Hồ sơ NPC lưu tính bốc đồng, học/việc, hôn nhân/con và thù địch; cập nhật theo năm, kể cả khi đổi từ bạn bè sang người yêu/vợ chồng rồi trở lại bạn.
+- Thêm tuyên bố thù địch/làm hòa; cần xây lại gắn bó 40 để hòa giải. Hẹn hò/xin hỗ trợ và người đồng hành kiểm quan hệ trong engine.
+- Nâng file lưu 1.3 giữ RNG và pending cũ. Mốc gia đình đã qua không phát lại sau chia tay/ly hôn; dữ liệu NPC có kiểm giới hạn khi nhập.
+- Các mốc đời NPC và quy tắc hòa giải là mô hình web, chưa phục hồi công thức native; dữ liệu câu chuyện/điều kiện/hiệu ứng vẫn có provenance riêng.
+
 ## 1.3.0 — 2026-10-13
 
 - Thêm 124 tình huống/468 lựa chọn từ bảng du lịch, cắm trại và leo núi; có hoạt động Du lịch tàu biển. Tổng 1.198 tình huống APK/4.416 lựa chọn.

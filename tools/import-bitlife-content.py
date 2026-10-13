@@ -136,7 +136,10 @@ for group in core+list(trips):
    if tags & {'pet',' pet'} and not r.get('Requires Companion'):req['companions']=['pet']
   if r.get('Vampire') or r.get('Royal'):blocked.append('Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc')
   if group=='career' and not req['careerId']:blocked.append('Nghề đặc biệt chưa có trong engine web')
-  if group=='friend' and any(r.get(k) for k in ['Friend Min Craziness','Friend Has Job','Friend Is Student','Friend Has Child','Friend Is Married','Friend Is Enemy']):blocked.append('Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện')
+  if group=='friend':
+   if r.get('Friend Min Craziness'):req['friendMinCraziness']=num(r['Friend Min Craziness'])
+   for native,field in [('Friend Has Job','friendJob'),('Friend Is Student','friendStudent'),('Friend Has Child','friendChild'),('Friend Is Married','friendMarried'),('Friend Is Enemy','friendEnemy')]:
+    if r.get(native):req[field]=True
   if group=='friend':req.update(friendMinAge=num(r.get('Friend Min Age'),0),friendMaxAge=num(r.get('Friend Max Age'),200),friendGender=r.get('Friend Gender','') or 'any')
   if blocked:deferred.append({'id':eid,'table':t['name'],'row':index,'reasons':blocked});continue
   choices=[]
@@ -162,6 +165,7 @@ save('coins.json',coins)
 coverage={'apkSha256':'8c1248cb94a7e8cfb4fa8cc6ca2f7886e7cbe8dd318d7ef2abc6b428ab469234','package':'com.candywriter.bitlife','version':'3.25','decodedTables':len(tables),'rawRows':sum(len(t['rows']) for t in tables),'choiceTables':len([t for t in tables if 'Choice 1' in t['fields']]),'choiceRows':sum(len(t['rows']) for t in tables if 'Choice 1' in t['fields']),'coreRows':sum(len(get('a16_dumb-scenarios-'+g+'-enc')['rows']) for g in core),'playableEvents':len(events),'careerRows':len(jobs),'cryptoRows':len(coins),'deferredCore':deferred,'otherChoiceTables':[{'table':t['name'],'rows':len(t['rows']),'status':'native_logic_pending'} for t in tables if 'Choice 1' in t['fields'] and t['name'] not in ['a16_dumb-scenarios-'+g+'-enc' for g in core]]}
 save('coverage.json',coverage)
 coverage['tripRows']=sum(len(get(n)['rows']) for n in trips.values())
+coverage['friendRows']=len(get('a16_dumb-scenarios-friend-enc')['rows'])
 coverage['unverifiedEffects']=anomalies
 coverage['otherChoiceTables']=[row for row in coverage['otherChoiceTables'] if row['table'] not in trips.values()]
 save('event-sources.json',source_rows)

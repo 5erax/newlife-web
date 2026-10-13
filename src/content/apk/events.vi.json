@@ -91008,6 +91008,1644 @@
     }
   },
   {
+    "id": "apk_friend_14002",
+    "group": "apk_friend",
+    "minAge": 5,
+    "maxAge": 12,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Yểm trợ tôi\n\n<friend> hỏi nếu bạn sẽ nói <pronoun> mẹ đó <pronoun> Đã chơi với bạn cả buổi sáng, mặc dù nó không phải là sự thật.\n\nBạn sẽ nói gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14002_c1",
+        "label": "Được rồi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend-possessive> mẹ đó <pronoun> đã ở bên tôi cả buổi sáng.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14002_c2",
+        "label": "Không có cách nào",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi từ chối nói <friend-possessive> mẹ đó <pronoun> đã chơi với tôi cả buổi sáng.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14002_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là một tên ngốc ích kỷ vì đã yêu cầu tôi nói dối.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 20,
+      "friendMinAge": 5,
+      "friendMaxAge": 12,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14003",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Yểm trợ tôi\n\n<friend> đang bị điều tra vì nghi ngờ trộm cắp và yêu cầu bạn nói với chính quyền rằng <pronoun> đã ở với bạn trong đêm được đề cập, mặc dù <pronoun> không phải.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14003_c1",
+        "label": "bìa cho bạn của tôi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã nói dối chính quyền về <friend-possessive> nơi ở của một vụ trộm nghi ngờ.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14003_c2",
+        "label": "Xin lỗi, tôi sẽ không làm điều đó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi từ chối nói dối với chính quyền về <friend-possessive> nơi ở của một vụ trộm nghi ngờ.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14003_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là một tên ngốc ích kỷ vì đã yêu cầu tôi nói dối chính quyền.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 60,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14004",
+    "group": "apk_friend",
+    "minAge": 12,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Tài sản cá nhân?\n\n<friend> nói <pronoun> quên mất <pronoun> <thẻ tân binh jordan/cái bóp/cặp yeezys/PlayStation 4/điện thoại di động/Stradivarius Violin/Công tắc Nintendo/Hộp của Reese của Travis Scott> bên trong nhà hàng xóm và yêu cầu bạn lẻn vào khi họ không ở nhà và lấy nó cho <pronoun>.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14004_c1",
+        "label": "Giúp đỡ một người bạn đang gặp khó khăn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi lẻn vào nhà hàng xóm để lấy một <rb> cho <friend>.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14004_c2",
+        "label": "điều đó nghe có vẻ đáng ngờ",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> việc lẻn vào ngôi nhà không có người hàng xóm để lấy một <rb> Nghe có vẻ quá nghi ngờ để tôi giúp đỡ.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "discipline",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14004_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> việc lẻn vào ngôi nhà không có người hàng xóm để lấy một <rb> là một kế hoạch chỉ có một kẻ ngu ngốc mới đề xuất.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 50,
+      "friendMinAge": 12,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14005",
+    "group": "apk_friend",
+    "minAge": 5,
+    "maxAge": 14,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Yêu cầu sai\n\nTrong khi chơi ở khu phố, <friend> Yêu cầu bạn giả mạo một cú ngã trên đường lái xe của hàng xóm vì sau đó bạn có thể kiện họ vì rất nhiều tiền.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14005_c1",
+        "label": "Đó là một ý tưởng tuyệt vời",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã giả mạo một cú ngã vào <friend-possessive> Đường lái xe của hàng xóm, nhưng nó chỉ làm tổn thương rất nhiều, và tôi không nhận được bất kỳ khoản tiền nào.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": -1
+              },
+              {
+                "stat": "intelligence",
+                "delta": -3
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14005_c2",
+        "label": "Đó là một ý tưởng tồi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> Việc giả mạo ngã trên đường lái xe của người hàng xóm để kiện họ vì tiền mặt nghe có vẻ là một ý tưởng tồi.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14005_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> Việc giả mạo ngã trên đường lái xe của người hàng xóm để kiện họ vì tiền là ý tưởng ngu ngốc nhất mà tôi từng nghe.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 20,
+      "friendMinAge": 5,
+      "friendMaxAge": 14,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14006",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Ẩn ra\n\nbạn nghe thấy tiếng đập điên cuồng trên cửa trước của bạn và mở nó ra để khám phá <friend> Cầm một túi vải thô lớn và mồ hôi ướt đẫm. Với tiếng còi vang lên từ xa, <pronoun> hỏi nếu <pronoun> Có thể đi chơi ở chỗ của bạn trong một thời gian ngắn.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14006_c1",
+        "label": "Để cho <pronoun> ở trong",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "<friend> trông giống như <pronoun> cần một chút trợ giúp trong một tình huống điên cuồng, trong những trường hợp đáng ngờ, vì vậy tôi đã để <pronoun> Treo ở chỗ của tôi một lúc.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14006_c2",
+        "label": "Đóng sập cửa",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> xuất hiện tại chỗ của tôi, tất cả đều hoảng sợ và tìm kiếm một nơi để ẩn náu, tôi đóng sầm cửa lại <pronoun> mặt.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": -3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14006_c3",
+        "label": "Gọi cảnh sát",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> Xuất hiện trước cửa nhà tôi, tất cả đều hoảng sợ và tìm kiếm một nơi ẩn náu, tôi ngay lập tức gọi cảnh sát.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": -5
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 80,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14007",
+    "group": "apk_friend",
+    "minAge": 14,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "cuộc gọi chơi khăm\n\n<friend> cho bạn biết điều đó <pronoun> Có một người bạn \"cần phải học một chút bài học\" và đang yêu cầu bạn chơi khăm gọi anh ta giả vờ là cảnh sát.\n\nBạn sẽ nói gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14007_c1",
+        "label": "Nghe có vẻ vui",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi chơi khăm gọi <friend-possessive> bạn giả làm cảnh sát để \"dạy cho anh ta một bài học nhỏ\".",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14007_c2",
+        "label": "Không có cách nào",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã từ chối thực hiện một cuộc gọi chơi khăm thay mặt cho <friend> người muốn tôi hành động như cảnh sát và \"dạy một bài học nhỏ\" cho <pronoun> bạn bè.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14007_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là một kẻ ngu ngốc, một kẻ ngốc, và một tên ngốc vì cho rằng tôi sẽ thực hiện một cuộc gọi chơi khăm <pronoun> thay mặt.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 35,
+      "friendMinAge": 14,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14008",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "bỏ qua thị trấn\n\n<friend> nói <pronoun> cần phải ra khỏi thị trấn nhanh chóng và hỏi nếu <pronoun> Có thể mượn thẻ nhận dạng của bạn trong vài ngày.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14008_c1",
+        "label": "giao nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã cho mượn thẻ căn cước của mình để <friend> Ai cần ra khỏi thị trấn nhanh chóng.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14008_c2",
+        "label": "từ chối <pronoun> yêu cầu",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> phải ra khỏi thị trấn nhanh chóng, tôi từ chối để <pronoun> mượn thẻ căn cước của tôi trong vài ngày.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14008_c3",
+        "label": "Trợ giúp <pronoun> làm một cái giả",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã giúp <friend> làm một thẻ nhận dạng giả để <pronoun> có thể ra khỏi thị trấn nhanh chóng.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 25,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14009",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "lậu\n\n<friend> hỏi nếu bạn không phiền khi bỏ một gói hàng ở bưu điện cho <pronoun>, nhưng khi nào <pronoun> Đưa nó cho bạn, mùi khác biệt của chồi chìm trong khuôn mặt của bạn.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14009_c1",
+        "label": "Giúp đỡ một người bạn đang gặp khó khăn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Mặc dù nó có mùi cần sa, tôi đã đồng ý trả một gói hàng tại bưu điện để <friend>.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14009_c2",
+        "label": "từ chối giúp đỡ <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã từ chối gửi một gói hàng tại bưu điện cho <friend> Bởi vì nó có mùi cần sa, và tôi không muốn bị phá sản.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14009_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là kẻ ngốc nhất trong số tất cả những kẻ ngốc vì nghĩ rằng đó là một ý kiến hay khi gửi một gói cần sa qua bưu điện qua đường bưu điện.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14009_c4",
+        "label": "nói có, nhưng hãy giữ nó cho chính mình",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> Rằng tôi sẽ bỏ một gói cỏ dại ở bưu điện, nhưng thay vào đó, tôi giữ nó cho riêng mình.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 35,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14010",
+    "group": "apk_friend",
+    "minAge": 14,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "phim miễn phí\n\n<friend> vừa đưa cho bạn một bản sao lậu của bộ phim \"<đông lạnh 2/Ngày nghỉ của Ferris Bueller/Pulp Fiction/E.T./Titanic/Câu lạc bộ chiến đấu/Forrest Gump/ELF/tinh thần đi/Phỏng vấn/Nghiêm nghị/Casablanca/CÂU CHUYỆN ĐỒ CHƠI/mặt sẹo/nổi loạn mà không có nguyên nhân>\"Nói rằng bạn có thể giữ nó nếu bạn muốn.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14010_c1",
+        "label": "Lấy nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã chấp nhận và rất thích xem, một bản sao được tải xuống bất hợp pháp của \"<rb>\"Từ <friend>.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14010_c2",
+        "label": "Đừng lấy nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi từ chối nhận một bản sao lậu của bộ phim \"<rb>“Cái đó <friend> cung cấp cho tôi.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14010_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là một tên cặn bã đáng khinh khi kinh doanh trong các bộ phim vi phạm bản quyền.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 25,
+      "friendMinAge": 14,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14011",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "gián điệp cấp trên\n\n<friend> nói với bạn <pronoun> đang tìm kiếm một lợi thế cạnh tranh tại nơi làm việc và hỏi bạn có giúp được gì không <pronoun> Cài đặt một máy ảnh ẩn trong <pronoun> văn phòng của sếp vào cuối tuần.\n\nBạn sẽ nói gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14011_c1",
+        "label": "Hãy làm nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã giúp <friend> Cài đặt một máy ảnh ẩn trong <pronoun> văn phòng của sếp vào cuối tuần.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14011_c2",
+        "label": "không dành cho tôi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi từ chối giúp đỡ <friend> Cài đặt một máy ảnh ẩn trong <pronoun> văn phòng của sếp vào cuối tuần.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14011_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là một kẻ bất tài vì đã cố gắng đạt được lợi thế cạnh tranh bằng cách lắp đặt một máy ảnh ẩn trong <pronoun> Văn phòng của ông chủ.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 35,
+      "friendJob": true,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14012",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "bốc cháy\n\n<friend> đang tìm kiếm một số tiền bảo hiểm dễ dàng và hỏi liệu bạn có đặt gấp đôi <pronoun> xe. Khi bạn hỏi điều đó có nghĩa là gì, <pronoun> Yêu cầu bạn \"đặt nó trong một trường, sau đó đốt cháy nó\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14012_c1",
+        "label": "Đặt nó gấp đôi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã giúp <friend> yêu cầu bảo hiểm không có thật bằng cách đốt lửa <pronoun> xe trong một cánh đồng.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -2
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": -2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14012_c2",
+        "label": "Không có cách nào",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi từ chối đuốc <friend-possessive> xe hơi để yêu cầu bảo hiểm không có thật.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14012_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> rằng anh ta là một người vô chủ vì suy nghĩ <pronoun> có thể gian lận bảo hiểm bằng cách yêu cầu tôi đốt cháy xe của anh ta.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 50,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14013",
+    "group": "apk_friend",
+    "minAge": 13,
+    "maxAge": 18,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "bảng gian lận\n\n<friend> nói <pronoun> Quên học cho kỳ thi cuối kỳ sắp tới và đang hỏi liệu bạn có đánh lạc hướng không <pronoun> giáo viên đủ lâu để <pronoun> để ăn cắp một bản sao của bài kiểm tra.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14013_c1",
+        "label": "Giúp đỡ một người bạn đang gặp khó khăn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi mất tập trung <friend-possessive> giáo viên như vậy <pronoun> có thể ăn cắp một bản sao của kỳ thi sắp tới.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14013_c2",
+        "label": "từ chối tham gia",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi từ chối phân tâm <friend-possessive> giáo viên sao cho <pronoun> có thể ăn cắp một bản sao của kỳ thi sắp tới.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14013_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã thông báo <friend> điều đó <pronoun> là một tên ngốc ngu ngốc vì đã yêu cầu tôi giúp ăn cắp một bản sao của kỳ thi sắp tới.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14013_c4",
+        "label": "Trợ giúp <pronoun> nhồi nhét cho kỳ thi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã giúp <friend> nhồi nhét cho một kỳ thi sắp tới bởi vì <pronoun> được cho là \"quên\" để học.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 25,
+      "friendStudent": true,
+      "friendMinAge": 5,
+      "friendMaxAge": 18,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14014",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "nhẹ tay\n\nbạn đang mua sắm tại trung tâm mua sắm với <friend>, khi đột nhiên bạn chứng kiến <pronoun> trượt <iPhone 11 Pro mới/một đôi bông tai đính kim cương/Đồng hồ Rolex Daytona/một chiếc vòng cổ ngọc trai/Vỏ Nespresso/Một chai nước hoa Chanel # 5/một cây bút máy Montblanc> ở trong <pronoun> bỏ túi khi không ai nhìn.\n\nBạn sẽ nói gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14014_c1",
+        "label": "di chuyển tốt đẹp",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi khen <friend> trên <pronoun> Kỹ năng giảm giá năm ngón sau khi chứng kiến <pronoun> ăn cắp <rb> tại trung tâm mua sắm.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14014_c2",
+        "label": "Này, đó không phải của bạn!",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã gọi <friend> Sau khi chứng kiến <pronoun> ăn cắp <rb> tại trung tâm mua sắm.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14014_c3",
+        "label": "Tôi rất thất vọng",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bày tỏ sự thất vọng tột độ của mình về <friend> Sau khi chứng kiến <pronoun> ăn cắp <rb> tại trung tâm mua sắm.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 75,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14015",
+    "group": "apk_friend",
+    "minAge": 21,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "suy giảm khả năng phán đoán\n\nTrong khi thưởng thức một-quá nhiều đồ uống với <friend> Tại quán bar, <pronoun> đột nhiên đứng lên và loạng choạng về phía cửa, nói rằng đã đến lúc phải nhấc máy <pronoun> đứa trẻ.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14015_c1",
+        "label": "Kể lại <pronoun> để lái xe an toàn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> để \"lái xe an toàn\" sau <pronoun> Rời khỏi quán rượu để đi đón <pronoun> đứa trẻ.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -4
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": -4
+              },
+              {
+                "apkAttribute": "discipline",
+                "delta": -2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14015_c2",
+        "label": "giải quyết <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã giải quyết <friend> sau khi <pronoun> cố gắng rời khỏi quán bar say xỉn để đi đón <pronoun> đứa trẻ.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14015_c3",
+        "label": "Lấy <pronoun> các phím",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> đã cố gắng rời khỏi quán bar để đón <pronoun> nhóc, tôi đã lấy <pronoun> chìa khóa đi.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14015_c4",
+        "label": "Gọi cho một Uber",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> đã cố gắng rời khỏi quán bar để đón <pronoun> nhóc, tôi đã dừng lại <pronoun> và gọi là tài xế Uber.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 2
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 80,
+      "friendChild": true,
+      "friendMinAge": 21,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14016",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "cảnh sát trung tâm mua sắm\n\n<friend> vừa có một công việc bảo mật bán thời gian tại <Cửa hàng Apple/Tiffany & Co/Louis Vuitton/Dolce & Gabbana/Citibank> và nói <pronoun> Sẽ cho phép bạn vào sau khi đóng cửa để lấy bất cứ thứ gì bạn muốn mà không bị phá sản.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14016_c1",
+        "label": "gặp nhau sau khi đóng cửa",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> Có một công việc bảo mật tại <rb>, tôi đã gặp <pronoun> Sau khi đóng cửa để xem những gì tôi có thể lấy mà không bị phá sản.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14016_c2",
+        "label": "Biến hóa <pronoun> đề nghị",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã từ chối <friend-possessive> đề nghị ăn cắp bất cứ thứ gì tôi muốn <rb> sau khi <pronoun> Có một công việc bảo mật ở đó.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14016_c3",
+        "label": "xúc phạm <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> điều đó <pronoun> là một kẻ lừa đảo đáng trách, người không thích hợp để trở thành nhân viên bảo vệ tại <rb> sau khi <pronoun> Nói rằng tôi có thể ăn cắp bất cứ thứ gì tôi muốn và không bị bắt.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 65,
+      "friendJob": true,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14017",
+    "group": "apk_friend",
+    "minAge": 21,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "rượu miễn phí\n\nTrong khi đi tham quan theo nhóm tại một nhà máy rượu whisky, bạn bắt gặp một bảng các mẫu miễn phí có biển báo rõ ràng \"mỗi người một người\", nhưng khi bạn nhìn qua <friend>, bạn thấy đấy <pronoun> thực hiện các cú đánh.\n\nBạn sẽ nói gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14017_c1",
+        "label": "Bắn! Bắn! Bắn!",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã khuyến khích <friend> để tiếp tục thực hiện các buổi uống rượu whisky miễn phí tại một chuyến tham quan nhà máy chưng cất mặc dù tấm biển cho biết một người cho biết một người.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": -1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14017_c2",
+        "label": "Hãy đi bắn để bắn!",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã tham gia <friend> khi thực hiện các buổi chụp rượu whisky miễn phí tại một chuyến tham quan nhà máy chưng cất mặc dù tấm biển cho biết một người cho biết một người.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14017_c3",
+        "label": "Dừng lại!",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi khăng khăng rằng <friend> Ngừng uống rượu whisky miễn phí tại một chuyến tham quan nhà máy chưng cất vì tấm biển cho biết một người cho biết một người.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 35,
+      "friendMinAge": 21,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14018",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "nhìn trộm quần lót\n\n<friend> đang nghiền nát <pronoun> đồng nghiệp và hỏi bạn có giúp lắp đặt một máy ảnh ẩn dưới bàn làm việc của cô ấy sau nhiều giờ không.\n\nBạn sẽ nói gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14018_c1",
+        "label": "Đó là một ý tưởng tuyệt vời",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Để có được một góc nhìn đáng mong đợi hơn, tôi đã giúp <friend> Lắp camera ẩn dưới bàn của đồng nghiệp <pronoun> đã nghiền nát.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": -3
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14018_c2",
+        "label": "Bạn là một kẻ hư hỏng!",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã gọi <friend> một kẻ biến thái bẩn thỉu, ghê tởm sau <pronoun> Yêu cầu tôi giúp lắp đặt một camera ẩn dưới bàn của đồng nghiệp <pronoun> đã nghiền nát.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "karma",
+                "delta": 2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14018_c3",
+        "label": "Đừng làm thế",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> Không cài đặt camera ẩn dưới bàn của đồng nghiệp <pronoun> đã nghiền nát.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 75,
+      "friendJob": true,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "male"
+    }
+  },
+  {
     "id": "apk_friend_14019",
     "group": "apk_friend",
     "minAge": 18,
@@ -91363,6 +93001,86 @@
     }
   },
   {
+    "id": "apk_friend_14023",
+    "group": "apk_friend",
+    "minAge": 25,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "người nói chuyện rác rưởi\n\ntrong khi tham quan <friend-possessive> nhà, <pronoun> đứa trẻ gọi cho bạn <insult> khi nào <pronoun> là ra khỏi phòng.\n\nBạn sẽ phản ứng như thế nào?",
+    "choices": [
+      {
+        "id": "apk_friend_14023_c1",
+        "label": "Nói với bạn của bạn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã thông báo <friend> điều đó <pronoun> đứa trẻ đã gọi cho tôi <insult>.",
+            "effects": [
+              {
+                "apkAttribute": "friend",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14023_c2",
+        "label": "xúc phạm trở lại",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã gọi <friend-possessive> đứa trẻ <insult>.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": -2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14023_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi bỏ qua <friend-possessive> đứa trẻ đã gọi cho tôi <insult>.",
+            "effects": []
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendChild": true,
+      "friendMinAge": 25,
+      "friendMaxAge": 55,
+      "friendGender": "any"
+    }
+  },
+  {
     "id": "apk_friend_14024",
     "group": "apk_friend",
     "minAge": 25,
@@ -91458,6 +93176,767 @@
       "prison": false,
       "careerId": "",
       "friendMinAge": 55,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14025",
+    "group": "apk_friend",
+    "minAge": 14,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Con chim\n\n<friend> vừa nhắn cho bạn một bức ảnh hiển thị <pronoun> ngón giữa với chú thích \"<Bạn bú!/bạn là một thằng khốn nạn!/Bạn là số một!/bạn là một người thụt rửa!/Ngồi và quay!>\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14025_c1",
+        "label": "trả ơn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi nhận được một tin nhắn xúc phạm từ <friend>, tôi đã trả lời qua tin nhắn nói rằng <pronoun> là <insult>.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14025_c2",
+        "label": "Chòm nhà <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi nhận được một tin nhắn xúc phạm từ <friend>, tôi đã chặn <pronoun> số.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14025_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua một văn bản xúc phạm <friend> Đã gửi.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 20,
+      "friendEnemy": true,
+      "friendMinAge": 14,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14026",
+    "group": "apk_friend",
+    "minAge": 12,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Mẹ của bạn\n\n<friend> vừa nhắn cho bạn một bức ảnh của <một con chó/một con chuột chết/nước thải thô/nôn/chất phân/một nhà vệ sinh công cộng> Với chú thích hỏi \"Đây có phải là mẹ của bạn không?\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14026_c1",
+        "label": "trả ơn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi nhận được một tin nhắn xúc phạm từ <friend>, tôi đã trả lời qua tin nhắn nói rằng <pronoun> là <insult>.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14026_c2",
+        "label": "Chòm nhà <pronoun>",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi nhận được một tin nhắn xúc phạm từ <friend>, tôi đã chặn <pronoun> số.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14026_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua một văn bản xúc phạm <friend> Đã gửi.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 25,
+      "friendEnemy": true,
+      "friendMinAge": 12,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14027",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Ma thuật đen\n\nbạn nhận được một hộp trong thư từ <friend> và mở nó ra để khám phá một con búp bê voodoo giống bạn với một cây kim dài và sắc nhọn đâm vào <hộp sọ/đáy quần/thân/tim/mông/cơ quan sinh dục>.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14027_c1",
+        "label": "ném nó vào thùng rác",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi đã ném một con búp bê voodoo vào thùng rác <friend> gửi trong thư.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14027_c2",
+        "label": "Kéo kim",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi rút một cây kim từ <rb> của một con búp bê voodoo <friend> gửi trong thư.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14027_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> đã gửi một con búp bê voodoo qua thư bằng một cây kim qua <rb>.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 30,
+      "friendEnemy": true,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14028",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Banner quảng cáo\n\nbạn nghe thấy một chiếc máy bay vo ve phía trên ngôi nhà của bạn và đi ra ngoài để khám phá <friend> đã trả tiền cho một biểu ngữ máy bay có nội dung \"<hero-name> Là <insult>\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14028_c1",
+        "label": "Tắt phi công",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đưa ngón giữa cho phi công bay một biểu ngữ xúc phạm phía trên ngôi nhà của tôi đã được ủy quyền bởi <friend>.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14028_c2",
+        "label": "hét lên những lời tục tĩu",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "tôi hét lên những lời tục tĩu với phi công đang bay một biểu ngữ xúc phạm phía trên ngôi nhà của tôi được ủy quyền bởi <friend>.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14028_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> đã ủy quyền cho một phi công bay một biểu ngữ xúc phạm phía trên nhà tôi nói rằng tôi đã <insult>.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 20,
+      "friendEnemy": true,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14029",
+    "group": "apk_friend",
+    "minAge": 15,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Venti bị đánh cắp\n\nbạn đã tiết kiệm được tất cả phần thưởng Starbucks của mình cho một ly cà phê đặc biệt chỉ để khám phá ra rằng <friend> đã sử dụng tên của bạn và làm cạn kiệt tài khoản của bạn.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14029_c1",
+        "label": "yêu cầu phần thưởng của tôi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi biết rằng Starbucks đã sai lầm đã trao phần thưởng của tôi cho <friend>, tôi yêu cầu họ cho tôi một ly cà phê lớn nhất, đắt nhất trong thực đơn.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14029_c2",
+        "label": "Xúc phạm Barista",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi biết điều đó <friend> Đánh cắp điểm thưởng Starbucks của tôi, tôi đã thực hiện một cảnh tượng trong quán cà phê bằng cách hét vào mặt nhân viên pha chế.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": -1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14029_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> Đã đánh cắp tất cả các điểm thưởng Starbucks của tôi.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 20,
+      "friendEnemy": true,
+      "friendMinAge": 15,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14030",
+    "group": "apk_friend",
+    "minAge": 8,
+    "maxAge": 18,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "xúc phạm hướng dẫn\n\nbạn bước vào lớp học của mình và khám phá ra rằng <friend> vừa viết \"<hero-name> Là <insult>\"trên bảng trắng.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14030_c1",
+        "label": "xóa nó đi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi nhanh chóng xóa bảng trắng sau khi phát hiện ra <friend> đã viết rằng tôi đã <insult>.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14030_c2",
+        "label": "Thay đổi tên",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Sau khi phát hiện ra điều đó <friend> đã viết tôi đã <insult> Trên bảng trắng, tôi nhanh chóng xóa tên của mình và thay thế nó bằng <của anh ấy/của cô ấy>.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14030_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> đã viết rằng tôi đã <insult> trên bảng trắng.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 20,
+      "friendStudent": true,
+      "friendEnemy": true,
+      "friendMinAge": 8,
+      "friendMaxAge": 18,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14031",
+    "group": "apk_friend",
+    "minAge": 16,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "mất hoa\n\nbạn nghe thấy một tiếng ồn ào ở sân trước của bạn và đi ra ngoài để chứng kiến <friend> giẫm đạp của bạn <petunias/Vườn hồng/pansies/hoa tulip/Vườn thảo mộc/hoa thủy tiên/Hoa lan/Gardenias>.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14031_c1",
+        "label": "Xịt nước <pronoun> với vòi vườn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã xịt <friend> với một vòi vườn sau khi chứng kiến <pronoun> chà đạp của tôi <rb>.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14031_c2",
+        "label": "Gọi cảnh sát",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã gọi cảnh sát vào <friend> Sau khi chứng kiến <pronoun> chà đạp của tôi <rb>.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14031_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> Sau khi chứng kiến <pronoun> chà đạp của tôi <rb>.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 30,
+      "friendEnemy": true,
+      "friendMinAge": 16,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14032",
+    "group": "apk_friend",
+    "minAge": 16,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "Biển quảng cáo phạm thượng\n\nTrong khi dùng bữa ngoài trời với một số người bạn, bạn nhận thấy một bảng quảng cáo mới bên kia đường với dòng chữ lớn có dòng chữ, \"<hero-name> Là <insult>\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14032_c1",
+        "label": "Sơn lên nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã vẽ trên một bảng quảng cáo <friend> đã từng xúc phạm tôi.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14032_c2",
+        "label": "Thay đổi tên",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi tôi phát hiện ra điều đó <friend> đã sử dụng một bảng quảng cáo để xúc phạm tôi, tôi đã vẽ <pronoun> tên của tôi.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14032_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> Đã sử dụng một bảng quảng cáo để xúc phạm tôi bằng chữ rất lớn.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 30,
+      "friendEnemy": true,
+      "friendMinAge": 16,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14033",
+    "group": "apk_friend",
+    "minAge": 16,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "thiếu phẩm giá\n\n<friend> đã đăng những tờ rơi \"người mất tích\" xung quanh thị trấn với khuôn mặt của bạn và chú thích có nội dung \"Phản ứng với việc được gọi <insult>\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14033_c1",
+        "label": "Thay mặt",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> đã đăng tờ rơi người mất tích của tôi ở khắp mọi nơi, tôi đã dán <pronoun> đối mặt với khuôn mặt của tôi trên tất cả chúng.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14033_c2",
+        "label": "xé chúng ra",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> Đăng tờ rơi người mất tích của tôi ở khắp mọi nơi, tôi đi quanh thị trấn và xé tất cả chúng xuống.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14033_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> Đã đăng người mất tích tờ rơi của tôi trên khắp thị trấn.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 25,
+      "friendEnemy": true,
+      "friendMinAge": 16,
+      "friendMaxAge": 200,
+      "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14034",
+    "group": "apk_friend",
+    "minAge": 16,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "kẻ chạy trốn thiếu sót\n\n<friend> được phát các áp phích \"muốn\" xung quanh thị trấn với khuôn mặt của bạn và chú thích có nội dung \"tội lỗi của sự tồn tại <insult>\".\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14034_c1",
+        "label": "Thay mặt",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> phân phát áp phích truy nã của tôi ở khắp mọi nơi, tôi đã dán <pronoun> đối mặt với khuôn mặt của tôi trên tất cả chúng.",
+            "effects": [
+              {
+                "stat": "intelligence",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14034_c2",
+        "label": "xé chúng ra",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Khi nào <friend> Phát các tấm áp phích truy nã của tôi ở khắp mọi nơi, tôi đi quanh thị trấn và xé tất cả chúng xuống.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14034_c3",
+        "label": "Đừng để ý đến nó",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi chỉ đơn giản là bỏ qua những trò hề chưa trưởng thành của <friend> khi nào <pronoun> Phân phát áp phích truy nã của tôi trên khắp thị trấn.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMinCraziness": 25,
+      "friendEnemy": true,
+      "friendMinAge": 16,
       "friendMaxAge": 200,
       "friendGender": "any"
     }
@@ -91576,6 +94055,115 @@
       "friendMinAge": 18,
       "friendMaxAge": 200,
       "friendGender": "any"
+    }
+  },
+  {
+    "id": "apk_friend_14036",
+    "group": "apk_friend",
+    "minAge": 18,
+    "maxAge": 120,
+    "weight": 1,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 24,
+    "conditions": [],
+    "text": "không hài lòng\n\n<friend> thú nhận rằng cô ấy rất không hạnh phúc trong cuộc hôn nhân của mình vì cô ấy không hài lòng về tình dục.\n\nBạn sẽ làm gì?",
+    "choices": [
+      {
+        "id": "apk_friend_14036_c1",
+        "label": "Mua cho cô ấy một món đồ chơi tình dục",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã cho <friend> Một món đồ chơi tình dục sau khi cô ấy tâm sự với tôi rằng chồng cô ấy không đáp ứng được nhu cầu tình dục của cô ấy.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": 1
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14036_c2",
+        "label": "Đề nghị tư vấn",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> rằng cô ấy nên cân nhắc việc tư vấn cho các cặp vợ chồng vì chồng cô ấy không đáp ứng được nhu cầu tình dục của cô ấy.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": 2
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14036_c3",
+        "label": "Bảo cô ấy lừa dối",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã khuyến khích <friend> Để lừa dối chồng sau khi cô ấy tâm sự với tôi rằng nhu cầu tình dục của cô ấy không được đáp ứng.",
+            "effects": [
+              {
+                "apkAttribute": "karma",
+                "delta": -3
+              },
+              {
+                "apkAttribute": "friend",
+                "delta": -2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apk_friend_14036_c4",
+        "label": "Bảo cô ấy rời đi",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Tôi đã bảo <friend> Để kết thúc mối quan hệ của cô ấy sau khi cô ấy tâm sự với tôi rằng chồng cô ấy không đáp ứng nhu cầu tình dục của cô ấy.",
+            "effects": [
+              {
+                "apkAttribute": "discipline",
+                "delta": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "apk_translation",
+    "apkRequirements": {
+      "gender": "any",
+      "student": false,
+      "job": false,
+      "parents": false,
+      "lover": false,
+      "noLover": false,
+      "loverGender": "any",
+      "parent": false,
+      "friend": true,
+      "orphan": false,
+      "prison": false,
+      "careerId": "",
+      "friendMarried": true,
+      "friendMinAge": 18,
+      "friendMaxAge": 200,
+      "friendGender": "female"
     }
   },
   {

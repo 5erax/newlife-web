@@ -248,6 +248,12 @@ export interface Job {
   sourceKind: "original_web" | "apk_translation";
 }
 export interface ApkEventRequirements {
+  friendMinCraziness?: number;
+  friendJob?: boolean;
+  friendStudent?: boolean;
+  friendChild?: boolean;
+  friendMarried?: boolean;
+  friendEnemy?: boolean;
   trip?: "vacation" | "cruise" | "camp" | "hike";
   companions?: ("friend" | "family" | "lover" | "dog" | "pet")[];
   gender: "any" | "male" | "female" | "other";
@@ -331,7 +337,16 @@ export interface Story {
   start: string;
   sourceKind: "original_web";
 }
+export interface NpcProfile {
+  craziness: number;
+  employed: boolean;
+  student: boolean;
+  children: number;
+  married: boolean;
+  enemy: boolean;
+}
 export interface Relation {
+  npc?: NpcProfile;
   gender?: GameState["gender"];
   id: string;
   name: string;
@@ -509,6 +524,7 @@ export interface GameState {
   } | null;
 }
 export type Action =
+  | { type: "friendship"; id: string; action: "declareEnemy" | "reconcile" }
   | { type: "investmentBuy" | "investmentSell"; id: string; units: number }
   | { type: "marketResearch"; mode: "news" | "advisor" | "opinion" }
   | { type: "loveResolve"; id: string; accept: boolean }
@@ -570,7 +586,7 @@ export interface NewLifeOptions {
   birthDate: string;
   seed: number;
 }
-export const CONTENT_VERSION = "1.3.0";
+export const CONTENT_VERSION = "1.4.0";
 export const STAT_LABELS: Record<Stat, string> = {
   health: "Sức khoẻ",
   happiness: "Hạnh phúc",

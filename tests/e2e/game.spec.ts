@@ -129,6 +129,99 @@ test("APK camping companion choices survive reload and return to activities", as
   await expect(page.locator(".catalog-list")).toContainText("Du lịch tàu biển");
   await expect(page.locator("body")).not.toContainText("undefined");
 });
+test("APK friend profiles and hostility persist and reconciliation unlocks after rebuilding closeness", async ({
+  page,
+}) => {
+  await start(page);
+  const s = newLife({
+    name: "An bạn bè",
+    gender: "female",
+    hometown: "Huế",
+    birthDate: "2000-01-01",
+    seed: 42,
+    contentMode: "apk",
+  });
+  s.age = 30;
+  s.money = 10000000;
+  s.relations.push({
+    id: "browser_friend",
+    name: "Chi kiểm thử",
+    gender: "female",
+    role: "friend",
+    age: 30,
+    closeness: 50,
+    alive: true,
+    trait: "bình dị",
+    resources: 1000000,
+    parents: [],
+    npc: {
+      craziness: 80,
+      student: false,
+      employed: true,
+      married: false,
+      children: 1,
+      enemy: false,
+    },
+  });
+  await nav(page, ui.saves).click();
+  await page
+    .locator("input[type=file]")
+    .setInputFiles({
+      name: "npc-friend.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(serialize(s)),
+    });
+  await page
+    .getByRole("button", { name: ui.importNewSlot, exact: true })
+    .click();
+  await nav(page, ui.relationships).click();
+  await page.getByRole("button", { name: /Chi kiểm thử/ }).click();
+  await expect(page.locator(".relationship-detail")).toContainText(
+    "Tính bốc đồng 80/100",
+  );
+  await expect(page.locator(".relationship-detail")).toContainText(
+    "1 người con",
+  );
+  await page
+    .getByRole("button", { name: "Tuyên bố thù địch", exact: true })
+    .click();
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await nav(page, ui.relationships).click();
+  await page.getByRole("button", { name: /Chi kiểm thử/ }).click();
+  await expect(page.locator(".relationship-detail")).toContainText(
+    "Đang thù địch",
+  );
+  await expect(
+    page.getByRole("button", { name: "Xin hỗ trợ", exact: true }),
+  ).toBeDisabled();
+  await expect(
+    page.getByRole("button", { name: "Hẹn hò", exact: true }),
+  ).toBeDisabled();
+  await expect(
+    page.getByRole("button", { name: "Làm hòa · gắn bó 40+", exact: true }),
+  ).toBeDisabled();
+  for (let i = 0; i < 2; i++) {
+    await page
+      .getByRole("button", { name: "Tặng quà · 200 nghìn", exact: true })
+      .click();
+    await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  }
+  for (let i = 0; i < 2; i++) {
+    await page.getByRole("button", { name: "Trò chuyện", exact: true }).click();
+    await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  }
+  await page
+    .getByRole("button", { name: "Làm hòa · gắn bó 40+", exact: true })
+    .click();
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await expect(page.locator(".relationship-detail")).not.toContainText(
+    "Đang thù địch",
+  );
+  await expect(
+    page.getByRole("button", { name: "Hẹn hò", exact: true }),
+  ).toBeEnabled();
+});
 async function resolve(page: Page) {
   for (let i = 0; i < 32 && (await page.locator("dialog").count()); i++) {
     await page.locator("dialog .choice:not(:disabled)").first().click();

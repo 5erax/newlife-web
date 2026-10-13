@@ -177,6 +177,10 @@ export function validateContent() {
     apkCoverage.coreRows,
   );
   assert.equal(apkJobs.length, 168);
+  assert.equal(
+    apkEvents.filter((e) => e.group === "apk_friend").length,
+    apkCoverage.friendRows,
+  );
   assert.equal(apkCoins.length, 21);
   assert.equal(apkEducation.length, 5);
   assert.equal(

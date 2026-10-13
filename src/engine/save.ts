@@ -60,6 +60,16 @@ const handSchema = z.object({
 });
 const relationSchema = z
   .object({
+    npc: z
+      .object({
+        craziness: score,
+        employed: z.boolean(),
+        student: z.boolean(),
+        children: integer.max(250),
+        married: z.boolean(),
+        enemy: z.boolean(),
+      })
+      .optional(),
     gender: z.enum(["male", "female", "other"]).optional(),
     id: idSchema,
     name: z.string().min(1).max(100),
@@ -628,7 +638,7 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0", "1.2.0"].includes(String(value.contentVersion))
+    ["1.0.0", "1.1.0", "1.2.0", "1.3.0"].includes(String(value.contentVersion))
   )
     value = { ...value, contentVersion: CONTENT_VERSION };
   const parsed = gameSchema.safeParse(value);
