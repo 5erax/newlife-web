@@ -25,7 +25,7 @@ async function start(page: Page) {
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
 }
 async function resolve(page: Page) {
-  for (let i = 0; i < 5 && (await page.locator("dialog").count()); i++) {
+  for (let i = 0; i < 32 && (await page.locator("dialog").count()); i++) {
     await page.locator("dialog .choice:not(:disabled)").first().click();
     await expect(page.locator(".save-status")).toHaveText(ui.saved);
   }
@@ -67,6 +67,101 @@ async function importMature(page: Page) {
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
   return s;
 }
+test("Vietnamese lifestyle options persist and a love invitation survives reload", async ({
+  page,
+}) => {
+  await start(page);
+  await importMature(page);
+  await nav(page, ui.activities).click();
+  await page
+    .getByRole("button", { name: /Tâm trí và thể chất.*14 hoạt động/ })
+    .click();
+  const instrument = page
+    .locator("article")
+    .filter({
+      has: page.getByRole("heading", { name: "Luyện nhạc cụ", exact: true }),
+    });
+  await expect(instrument.locator("option")).toHaveCount(25);
+  await instrument.locator("select").selectOption("violin");
+  await instrument.getByRole("button", { name: ui.perform }).click();
+  await expect(instrument).not.toContainText("Kỹ năng: 0/100");
+  await page.getByRole("button", { name: /Salon và spa.*6 hoạt động/ }).click();
+  const dye = page
+    .locator("article")
+    .filter({
+      has: page.getByRole("heading", { name: "Nhuộm tóc", exact: true }),
+    });
+  await dye.locator("select").selectOption("purple");
+  await dye.getByRole("button", { name: ui.perform }).click();
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await expect(
+    page.locator('svg:visible path[fill="#8056a8"]').first(),
+  ).toBeVisible();
+  await nav(page, ui.activities).click();
+  await page.getByRole("button", { name: /Tình yêu.*6 hoạt động/ }).click();
+  const date = page
+    .locator("article")
+    .filter({
+      has: page.getByRole("heading", {
+        name: "Ứng dụng hẹn hò LGBTQ+",
+        exact: true,
+      }),
+    });
+  await date.getByRole("button", { name: ui.perform }).click();
+  const invitation = await page.locator("dialog").textContent();
+  await page.reload();
+  await expect(page.locator("dialog")).toHaveText(invitation!);
+  await page.getByRole("button", { name: "Từ chối", exact: true }).click();
+  await expect(page.locator("dialog")).toHaveCount(0);
+});
+test("investment purchases survive reload and show historical price changes", async ({
+  page,
+}) => {
+  await start(page);
+  await importMature(page);
+  await nav(page, ui.assets).click();
+  await page.getByRole("button", { name: /Đầu tư · trái phiếu/ }).click();
+  await expect(page.locator(".market-health button")).toHaveCount(5);
+  const product = page.locator(".investment-row").first();
+  await product.getByRole("button", { name: /^Mua ·/ }).click();
+  await expect(product).toContainText("Đang nắm: 1");
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await nav(page, ui.assets).click();
+  await page.getByRole("button", { name: /Đầu tư · trái phiếu/ }).click();
+  await expect(page.locator(".investment-row").first()).toContainText(
+    "Đang nắm: 1",
+  );
+  await page.locator(".age-button").click();
+  await resolve(page);
+  await expect(page.locator(".this-year:visible").first()).toBeVisible();
+  await expect(
+    page.getByRole("img", { name: /Lịch sử giá/ }).first(),
+  ).toBeVisible();
+});
+test("an unfinished blackjack hand survives reload and blocks aging", async ({
+  page,
+}) => {
+  await start(page);
+  await importMature(page);
+  await nav(page, ui.activities).click();
+  await page.getByRole("button", { name: /Sòng bạc ·/ }).click();
+  await page.getByRole("button", { name: "Chia bài", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Dừng", exact: true }),
+  ).toBeVisible();
+  const hand = await page.locator(".casino-table").textContent();
+  await expect(page.locator(".age-button")).toBeDisabled();
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await nav(page, ui.activities).click();
+  await page.getByRole("button", { name: /Sòng bạc ·/ }).click();
+  await expect(page.locator(".casino-table")).toHaveText(hand!);
+  await page.getByRole("button", { name: "Dừng", exact: true }).click();
+  await expect(page.locator(".hand-result")).toBeVisible();
+  await expect(page.locator(".age-button")).toBeEnabled();
+});
 test("pending choice survives reload, keyboard choice and rapid age clicks", async ({
   page,
 }) => {
@@ -221,11 +316,9 @@ test("failed autosave can be exported and renaming preserves the unsaved action"
   await page.reload();
   await nav(page, ui.activities).click();
   await expect(
-    page
-      .locator(".catalog-row")
-      .filter({
-        has: page.getByRole("heading", { name: "Đi bộ", exact: true }),
-      }),
+    page.locator(".catalog-row").filter({
+      has: page.getByRole("heading", { name: "Đi bộ", exact: true }),
+    }),
   ).toContainText("1/");
 });
 test("dark theme and largest text remain usable and persist", async ({
@@ -259,4 +352,3 @@ test("dark theme and largest text remain usable and persist", async ({
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 });
-

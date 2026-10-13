@@ -13,6 +13,7 @@ import { economicYear, studyYear } from "./economy";
 import { random } from "./rng";
 import { closeYear, changeContext } from "./changes";
 import { annualStats } from "./aging";
+import { investmentYear } from "./investments";
 import {
   addLog,
   count,
@@ -60,10 +61,18 @@ export function title(s: GameState) {
 }
 export function finishLife(s: GameState, cause: string) {
   if (s.phase === "dead" && s.estate.settled) return;
+  closeYear(s, false);
   s.phase = "dead";
   s.deathCause = cause;
   s.pending = null;
   s.yearQueue = [];
+  s.scheduled = [];
+  for (const active of s.flags.filter((f) => f.startsWith("chain_active_"))) {
+    const id = active.slice("chain_active_".length);
+    flag(s, active, false);
+    flag(s, `chain_done_${id}`);
+    addLog(s, `Chuỗi ${id} dừng khi cuộc đời này khép lại.`, "event");
+  }
   s.story = null;
   const worth = netWorth(s);
   const live = s.relations.filter((r) => r.alive);
@@ -109,7 +118,12 @@ export function finishLife(s: GameState, cause: string) {
   achievementCheck(s);
 }
 export function eligibleEvents(s: GameState) {
-  return events.filter((e) => eventAllowed(s, e));
+  return events.filter(
+    (e) =>
+      e.group !== "manual" &&
+      !(e.chainId && (e.stage ?? 1) > 1) &&
+      eventAllowed(s, e),
+  );
 }
 export function eventAllowed(s: GameState, event: LifeEvent) {
   const history = s.history[event.id];
@@ -142,6 +156,15 @@ export function advanceQueue(s: GameState) {
     requireGame(event, "Nhánh sự kiện không tồn tại.");
     if (id !== "@random" && !eventAllowed(s, event)) {
       addLog(s, "Một cuộc hẹn không còn phù hợp vì hoàn cảnh đã thay đổi.");
+      if (event.chainId) {
+        flag(s, `chain_done_${event.chainId}`);
+        flag(s, `chain_active_${event.chainId}`, false);
+        addLog(
+          s,
+          `Chuỗi ${event.chainId} kết thúc vì hoàn cảnh đã thay đổi.`,
+          "event",
+        );
+      }
       continue;
     }
     const history = s.history[event.id];
@@ -175,13 +198,33 @@ export function startYear(s: GameState) {
     "Hãy giải quyết lựa chọn đang chờ trước khi tăng tuổi.",
   );
   closeYear(s);
-  s.counters.looks_streak = s.counters.previous_looks === s.stats.looks ? (s.counters.looks_streak ?? 0) + 1 : 0;
+  s.counters.looks_streak =
+    s.counters.previous_looks === s.stats.looks
+      ? (s.counters.looks_streak ?? 0) + 1
+      : 0;
   s.counters.previous_looks = s.stats.looks;
   s.age++;
   changeContext(s, "aging", "Lớn lên, sức khoẻ và nhịp sống trong năm mới.");
   s.time = 12;
-  s.activityUses = {};
   s.sideJob = null;
+  s.casino.handsThisYear = 0;
+  s.casino.winStreak = 0;
+  const artsJob = s.job && jobById.get(s.job.id)?.industry === "nghethuat";
+  if (s.fame > 0 || artsJob)
+    s.fame = Math.max(0, Math.min(100, s.fame + (artsJob ? 2 : -2)));
+  s.reputation = Math.min(100, s.reputation + 1);
+  const addiction = s.counters.gambling_addiction ?? 0;
+  if (addiction > 0) {
+    changeContext(
+      s,
+      "casino",
+      "Thói quen cờ bạc ảnh hưởng tâm trạng và lòng tin trong năm.",
+    );
+    stat(s, "happiness", -Math.ceil(addiction / 15));
+    for (const r of s.relations.filter((r) => r.alive))
+      r.closeness = Math.max(0, r.closeness - Math.floor(addiction / 30));
+    s.counters.gambling_addiction = Math.max(0, addiction - 5);
+  }
   s.counters.chainSteps = 0;
   const wasPrison = s.prisonYears > 0;
   for (const r of s.relations.filter((r) => r.alive)) {
@@ -197,6 +240,7 @@ export function startYear(s: GameState) {
         `${r.name}, ${r.role === "mother" ? "mẹ" : r.role === "father" ? "cha" : "một người thân quen"} của bạn, đã qua đời.`,
         "relationship",
       );
+      changeContext(s, "relationship", `Bạn đau buồn khi ${r.name} qua đời.`);
       stat(s, "happiness", -6);
       if (r.role === "spouse") flag(s, "married", false);
     }
@@ -206,11 +250,14 @@ export function startYear(s: GameState) {
   if (s.relations.some((r) => r.alive && r.role === "friend"))
     count(s, "friend_years");
   annualStats(s);
+  s.activityUses = {};
   for (const disease of s.illnesses) {
+    changeContext(s, "illness", `Ảnh hưởng hằng năm của ${disease.type}.`);
     stat(s, "health", -Math.max(1, Math.round(disease.severity / 12)));
     disease.severity = Math.min(100, disease.severity + 2);
   }
   economicYear(s);
+  investmentYear(s);
   changeContext(s, "education", "Học tập trong năm.");
   if (!wasPrison) studyYear(s);
   if (wasPrison) {

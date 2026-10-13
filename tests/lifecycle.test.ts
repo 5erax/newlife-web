@@ -1,3 +1,4 @@
+import { pendingChoices } from "../src/engine/branches";
 import { describe, it, expect } from "vitest";
 import { newLife, reduce } from "../src/engine/game";
 import { education, events } from "../src/content/catalog";
@@ -10,8 +11,9 @@ const settle = (s: ReturnType<typeof newLife>) => {
     s = reduce(s, {
       type: "choose",
       instanceId: s.pending.instanceId,
-      optionId: s.pending.event.choices.find((c) => eligible(s, c.conditions))!
-        .id,
+      optionId: pendingChoices(s.pending).find((c) =>
+        eligible(s, c.conditions),
+      )!.id,
     });
   return s;
 };
@@ -60,7 +62,13 @@ describe("complete life traces and recovery", () => {
     const next = reduce(s, { type: "continueChild", id: child.id });
     expect(next.age).toBe(child.age);
     expect(next.money).toBe(s.estate.distributions[child.id]);
-    expect(next.relations.find((r) => r.id === friend.id)?.role).toBe("father");
+    expect(next.relations.find((r) => r.id === friend.id)?.role).toBe(
+      friend.gender === "female"
+        ? "mother"
+        : friend.gender === "male"
+          ? "father"
+          : "parent",
+    );
     expect(parseSave(serialize(next))).toEqual(next);
     next.age = 30;
     operate(next, "adoptChild");

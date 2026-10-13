@@ -1,3 +1,6 @@
+import legacyData from "../src/content/legacy-events.json" with { type: "json" };
+import { eventSchema } from "../src/schema/content";
+import { expandCases } from "../src/engine/branches";
 import { describe, it, expect } from "vitest";
 import {
   activities,
@@ -69,6 +72,10 @@ function fixture() {
   return s;
 }
 function satisfy(s: GameState, c: Condition, invert = false) {
+  if ("origin" in c) {
+    s.origin = c.origin;
+    return;
+  }
   if ("all" in c) {
     c.all.forEach((x) => satisfy(s, x, invert));
     return;
@@ -113,6 +120,7 @@ function satisfy(s: GameState, c: Condition, invert = false) {
   else if (c.field === "money") s.money = value;
   else if (c.field === "jobRank" && s.job) s.job.rank = value;
   else if (c.field === "schoolScore") s.education.score = value;
+  else if (c.field === "fame") s.fame = value;
   else s.counters[c.field] = value;
 }
 function seedFor(low: number, high: number) {
@@ -125,7 +133,9 @@ function seedFor(low: number, high: number) {
 describe("all authored content can execute and save", () => {
   it("executes every event choice and every probabilistic outcome", () => {
     let count = 0;
-    for (const event of [...events, ...fallbacks])
+    for (const event of legacyData
+      .filter((e) => e.group !== "manual")
+      .map((e) => eventSchema.parse(e)))
       for (const choice of event.choices) {
         let low = 0;
         for (const outcome of choice.outcomes) {
@@ -157,7 +167,81 @@ describe("all authored content can execute and save", () => {
       }
     expect(count).toBe(593);
   });
-  it("executes all 108 activities and their outcomes with valid targets", () => {
+  it("executes every expanded case and checks actual log deltas", () => {
+    let executions = 0;
+    for (const event of [...events, ...fallbacks]) {
+      function check(
+        choices: import("../src/engine/types").Choice[],
+        path: { choiceId: string; caseIndex: number }[] = [],
+        text = event.text,
+      ) {
+        for (const choice of choices)
+          for (const [index, outcome] of expandCases(choice).entries()) {
+            const s = fixture();
+            s.age = Math.max(event.minAge, Math.min(35, event.maxAge));
+            event.conditions.forEach((c) => satisfy(s, c));
+            choice.conditions?.forEach((c) => satisfy(s, c));
+            outcome.requires?.forEach((c) => satisfy(s, c));
+            const eligibleCases = expandCases(choice)
+              .map((o, i) => ({ o, i }))
+              .filter((x) => meets(s, { all: x.o.requires ?? [] }));
+            const total = eligibleCases.reduce((n, x) => n + x.o.weight, 0),
+              low =
+                eligibleCases
+                  .filter((x) => x.i < index)
+                  .reduce((n, x) => n + x.o.weight, 0) / total;
+            s.rng = seedFor(low, low + outcome.weight / total);
+            s.phase = "awaiting_choice";
+            s.pending = {
+              instanceId: "case_fixture",
+              event,
+              ...(path.length ? { node: { text, choices, path } } : {}),
+            };
+            s.yearQueue = [];
+            const result = reduce(s, {
+              type: "choose",
+              instanceId: "case_fixture",
+              optionId: choice.id,
+            });
+            const key = [
+              event.id,
+              ...path.map((p) => p.choiceId + "_" + p.caseIndex),
+              choice.id,
+              index,
+            ].join("_");
+            expect(result.caseHistory[key], key).toBe(1);
+            for (const key of [
+              "health",
+              "happiness",
+              "intelligence",
+              "looks",
+              "money",
+            ] as const) {
+              const before = key === "money" ? s.money : s.stats[key],
+                after = key === "money" ? result.money : result.stats[key];
+              const sum = result.log
+                .slice(s.log.length)
+                .filter((r) => r.source !== "summary")
+                .flatMap((r) => r.deltas)
+                .filter((d) => d.key === key)
+                .reduce((n, d) => n + d.after - d.before, 0);
+              expect(sum, key).toBe(after - before);
+            }
+            expect(() => parseSave(serialize(result)), key).not.toThrow();
+            executions++;
+            if (outcome.choices)
+              check(
+                outcome.choices,
+                [...path, { choiceId: choice.id, caseIndex: index }],
+                outcome.text,
+              );
+          }
+      }
+      check(event.choices);
+    }
+    expect(executions).toBeGreaterThan(3000);
+  }, 30000);
+  it("executes all 119 activities and their outcomes with valid targets", () => {
     for (const a of activities) {
       let low = 0;
       for (const outcome of a.outcomes) {

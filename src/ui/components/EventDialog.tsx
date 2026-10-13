@@ -3,6 +3,7 @@ import type { Action, GameState } from "../../engine/types";
 import { eligible } from "../../engine/conditions";
 import ui from "../../i18n/vi.json" with { type: "json" };
 import { Modal } from "./Modal";
+import { pendingChoices, pendingText } from "../../engine/branches";
 export function EventDialog({
   s,
   dispatch,
@@ -18,7 +19,7 @@ export function EventDialog({
       if (busy || (e.target as HTMLElement).closest("input,textarea,select"))
         return;
       const index = Number(e.key) - 1;
-      const choice = pending.event.choices[index];
+      const choice = pendingChoices(pending)[index];
       if (choice && eligible(s, choice.conditions)) {
         e.preventDefault();
         dispatch({
@@ -34,9 +35,9 @@ export function EventDialog({
   return (
     <Modal mandatory title={ui.chooseToContinue}>
       <p className="event-age">TUỔI {s.age} · MỘT NGÃ RẼ</p>
-      <p className="event-text">{pending.event.text}</p>
+      <p className="event-text">{pendingText(pending)}</p>
       <div className="choice-list">
-        {pending.event.choices.map((choice, i) => {
+        {pendingChoices(pending).map((choice, i) => {
           const allowed = eligible(s, choice.conditions);
           return (
             <button

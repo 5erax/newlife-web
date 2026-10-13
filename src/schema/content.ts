@@ -1,5 +1,11 @@
 import { z } from "zod";
-import type { Condition, Effect } from "../engine/types";
+import type {
+  Condition,
+  Effect,
+  Choice,
+  CaseOutcome,
+  EventCase,
+} from "../engine/types";
 export const statSchema = z.enum([
   "health",
   "happiness",
@@ -28,8 +34,10 @@ const number = z.number().finite();
 const money = number.int().min(0).max(1_000_000_000_000_000);
 export const conditionSchema: z.ZodType<Condition> = z.lazy(() =>
   z.union([
+    z.object({ origin: idSchema }),
     z.object({
       field: z.enum([
+        "fame",
         "health",
         "happiness",
         "intelligence",
@@ -69,6 +77,20 @@ export const conditionSchema: z.ZodType<Condition> = z.lazy(() =>
   ]),
 );
 export const effectSchema: z.ZodType<Effect> = z.union([
+  z.object({
+    modifier: z.object({
+      id: idSchema,
+      label: z.string().min(1).max(300),
+      remaining: number.int().min(1).max(120),
+      stats: z.object({
+        health: number.int().min(-25).max(25).optional(),
+        happiness: number.int().min(-25).max(25).optional(),
+        intelligence: number.int().min(-25).max(25).optional(),
+        looks: number.int().min(-25).max(25).optional(),
+      }),
+      happinessBaseline: number.int().min(-50).max(50).optional(),
+    }),
+  }),
   z.object({ stat: statSchema, delta: number.min(-100).max(100) }),
   z.object({ money: number.int().min(-1e15).max(1e15) }),
   z.object({ counter: idSchema, delta: number.int() }),
@@ -81,6 +103,10 @@ export const effectSchema: z.ZodType<Effect> = z.union([
   }),
   z.object({
     operation: z.enum([
+      "loseJob",
+      "recoverGambling",
+      "recoverIllness",
+      "migrate",
       "friend",
       "date",
       "propose",
@@ -132,12 +158,50 @@ const outcomes = z
       Math.abs(list.reduce((sum, item) => sum + item.chance, 0) - 1) < 1e-8,
     "Tổng xác suất phải bằng 1.",
   );
-export const choiceSchema = z.object({
-  id: idSchema,
-  label: z.string().min(1).max(200),
-  conditions: z.array(conditionSchema).max(30).optional(),
-  outcomes,
-});
+export const caseOutcomeSchema: z.ZodType<CaseOutcome> = z.lazy(() =>
+  z.object({
+    weight: number.positive().max(1000),
+    requires: z.array(conditionSchema).max(30).optional(),
+    text: z.string().min(1).max(2000),
+    effects: z.array(effectSchema).max(20).default([]),
+    variants: z.array(z.string().min(1).max(2000)).min(1).max(10).optional(),
+    setFlags: z.array(idSchema).max(20).optional(),
+    choices: z.array(choiceSchema).min(2).max(6).optional(),
+    nextEvent: idSchema.optional(),
+    schedule: z
+      .object({ eventId: idSchema, afterYears: number.int().min(1).max(120) })
+      .optional(),
+  }),
+);
+export const eventCaseSchema: z.ZodType<EventCase> = z.lazy(() =>
+  z.union([
+    caseOutcomeSchema,
+    z.object({ pool: idSchema, weight: number.positive().max(1000) }),
+  ]),
+);
+export const choiceSchema: z.ZodType<Choice> = z.lazy(() =>
+  z
+    .object({
+      id: idSchema,
+      label: z.string().min(1).max(200),
+      conditions: z.array(conditionSchema).max(30).optional(),
+      outcomes: z
+        .array(outcomeSchema)
+        .max(8)
+        .refine(
+          (list) =>
+            !list.length ||
+            Math.abs(list.reduce((n, o) => n + o.chance, 0) - 1) < 1e-8,
+          "Tổng xác suất phải bằng 1.",
+        )
+        .default([]),
+      cases: z.array(eventCaseSchema).min(2).max(8).optional(),
+    })
+    .refine(
+      (c) => !!c.cases?.length || !!c.outcomes.length,
+      "Lựa chọn cần ít nhất một đường ra.",
+    ),
+);
 export const eventSchema = z
   .object({
     id: idSchema,
@@ -153,6 +217,9 @@ export const eventSchema = z
     choices: z.array(choiceSchema).min(1).max(6),
     sourceKind: z.literal("original_web"),
     rare: z.boolean().optional(),
+    chainId: idSchema.optional(),
+    stage: number.int().min(1).max(8).optional(),
+    chainEnd: z.boolean().optional(),
   })
   .refine((e) => e.minAge <= e.maxAge, "Khoảng tuổi không hợp lệ.")
   .refine(
@@ -160,6 +227,57 @@ export const eventSchema = z
     "ID lựa chọn bị trùng.",
   );
 export const activitySchema = z.object({
+  feature: z
+    .discriminatedUnion("type", [
+      z.object({
+        type: z.literal("fame"),
+        action: z.enum([
+          "book",
+          "commercial",
+          "crashout",
+          "photoshoot",
+          "talkshow",
+        ]),
+      }),
+      z.object({
+        type: z.literal("love"),
+        mode: z.enum([
+          "date",
+          "app",
+          "lgbtq",
+          "celebrity",
+          "hookup",
+          "threesome",
+        ]),
+      }),
+      z.object({
+        type: z.literal("practice"),
+        skill: idSchema,
+        options: z
+          .array(z.object({ id: idSchema, label: z.string().min(1).max(100) }))
+          .min(1)
+          .max(30)
+          .optional(),
+      }),
+      z.object({
+        type: z.literal("style"),
+        field: z.enum(["hairColor", "hairStyle", "nails"]),
+        options: z
+          .array(z.object({ id: idSchema, label: z.string().min(1).max(100) }))
+          .min(1)
+          .max(30),
+      }),
+      z.object({ type: z.literal("memory") }),
+      z.object({ type: z.literal("tan") }),
+      z.object({
+        type: z.literal("diet"),
+        options: z
+          .array(z.object({ id: idSchema, label: z.string().min(1).max(100) }))
+          .min(1)
+          .max(20),
+      }),
+    ])
+    .optional(),
   id: idSchema,
   group: z.string(),
   name: z.string().min(1),
@@ -176,6 +294,7 @@ export const activitySchema = z.object({
   sourceKind: z.literal("original_web"),
 });
 export const jobSchema = z.object({
+  origins: z.array(idSchema).min(1).optional(),
   id: idSchema,
   name: z.string(),
   industry: z.string(),

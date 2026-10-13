@@ -157,3 +157,6 @@ Rủi ro lớn: chưa có dataset gốc; nhiều nội dung tự viết; sai ti�
 - [#105 — 13.12: Weighted cases lồng nhau, pools và text variants](https://github.com/5erax/newlife-web/issues/105)
 - [#106 — 13.12–13.13: Graph, branch coverage và mô phỏng 10k](https://github.com/5erax/newlife-web/issues/106)
 - [#107 — 13.13: Nghiệm thu browser, hướng dẫn, PR và phát hành riêng tư](https://github.com/5erax/newlife-web/issues/107)
+
+- [#108 — Hoạt động Danh vọng, Tình yêu, Tâm trí và thể chất, Salon và spa](https://github.com/5erax/newlife-web/issues/108)
+- [#109 — Thị trường đầu tư đa dạng, crypto biến động và coin mới](https://github.com/5erax/newlife-web/issues/109)

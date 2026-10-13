@@ -3,6 +3,7 @@ import { assetById } from "../content/catalog";
 import { metric, requireGame } from "./helpers";
 import { random } from "./rng";
 export function meets(s: GameState, c: Condition): boolean {
+  if ("origin" in c) return s.origin === c.origin;
   if ("all" in c) return c.all.every((x) => meets(s, x));
   if ("any" in c) return c.any.some((x) => meets(s, x));
   if ("not" in c) return !meets(s, c.not);

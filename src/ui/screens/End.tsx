@@ -1,6 +1,6 @@
 import type { Action, GameState } from "../../engine/types";
 import ui from "../../i18n/vi.json" with { type: "json" };
-import { cash } from "../format";
+import { cash as displayCash } from "../format";
 import { Avatar } from "../components/Avatar";
 export function End({
   s,
@@ -13,6 +13,8 @@ export function End({
   dispatch: (a: Action) => void;
   busy: boolean;
 }) {
+  const cash = (value: number, full = false) =>
+    displayCash(value, full, s.origin);
   const summary = s.profile.summaries.find((x) => x.lifeId === s.id);
   const children = s.relations.filter(
     (r) =>
@@ -25,7 +27,12 @@ export function End({
       <div className="end-decoration">✦</div>
       <p className="eyebrow">MỘT CÂU CHUYỆN ĐƯỢC GIỮ LẠI</p>
       <h2>{ui.lifeOver}</h2>
-      <Avatar age={s.age} happiness={s.stats.happiness} gender={s.gender} />
+      <Avatar
+        age={s.age}
+        happiness={s.stats.happiness}
+        gender={s.gender}
+        appearance={s.appearance}
+      />
       <h3>{s.name}</h3>
       <p>
         {s.age} tuổi · {s.deathCause}
@@ -67,7 +74,7 @@ export function End({
               disabled={busy}
               onClick={() => dispatch({ type: "continueChild", id: child.id })}
             >
-              <Avatar small age={child.age} />
+              <Avatar small age={child.age} gender={child.gender} />
               <span>
                 <strong>{child.name}</strong>
                 <small>

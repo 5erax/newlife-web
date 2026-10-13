@@ -1537,7 +1537,10 @@
       "Một ca trực dài đòi hỏi đội chia việc rõ.",
       "Bạn được mời hỗ trợ hoạt động cộng đồng."
     ],
-    "sourceKind": "original_web"
+    "sourceKind": "original_web",
+    "origins": [
+      "vn"
+    ]
   },
   {
     "id": "job_quandoi_01",

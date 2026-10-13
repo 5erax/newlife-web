@@ -77,7 +77,12 @@ export function Relations({
             key={r.id}
             onClick={() => setSelected(selected === r.id ? null : r.id)}
           >
-            <Avatar small age={r.age} happiness={r.closeness} gender={r.gender} />
+            <Avatar
+              small
+              age={r.age}
+              happiness={r.closeness}
+              gender={r.gender}
+            />
             <span>
               <strong>{r.name}</strong>
               <small>
@@ -233,4 +238,3 @@ export function Relations({
     </section>
   );
 }
-

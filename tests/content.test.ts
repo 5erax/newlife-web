@@ -44,7 +44,7 @@ describe("content and probability boundaries", () => {
     }
   });
   it("has all authored catalog entries and reachable story endings", () => {
-    expect(validateContent().lifeEvents).toBe(150);
+    expect(validateContent().lifeEvents).toBe(214);
   });
   it("never sets baseline death risk to zero at perfect health", () => {
     expect(deathChance(75, 100)).toBeCloseTo(deathChance(75, 50) * 0.5);

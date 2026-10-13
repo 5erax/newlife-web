@@ -3,7 +3,11 @@ import { stat, money, count, flag, relation, requireGame } from "./helpers";
 import { operate } from "./relations";
 export function applyEffects(s: GameState, list: Effect[], targetId?: string) {
   for (const e of list) {
-    if ("stat" in e) stat(s, e.stat, e.delta);
+    if ("modifier" in e) {
+      s.modifiers = s.modifiers.filter((m) => m.id !== e.modifier.id);
+      requireGame(s.modifiers.length < 40, "Đã có quá nhiều hậu quả kéo dài.");
+      s.modifiers.push(structuredClone(e.modifier));
+    } else if ("stat" in e) stat(s, e.stat, e.delta);
     else if ("money" in e) money(s, e.money, "Hậu quả lựa chọn", true);
     else if ("counter" in e) count(s, e.counter, e.delta);
     else if ("flag" in e) flag(s, e.flag, e.set);

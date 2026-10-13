@@ -536,5 +536,31 @@
       }
     ],
     "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_high_roller",
+    "name": "Tay chơi lớn",
+    "description": "Đặt tổng cược ít nhất 5 triệu đơn vị nội bộ qua những ván có rủi ro.",
+    "group": "finance",
+    "conditions": [
+      {
+        "flag": "high_roller",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "ach_gambling_addict",
+    "name": "Vòng xoáy đỏ đen",
+    "description": "Thói quen cờ bạc đạt 50/100; đây là dấu mốc cần tìm cách hồi phục.",
+    "group": "risk",
+    "conditions": [
+      {
+        "flag": "gambling_addict",
+        "is": true
+      }
+    ],
+    "sourceKind": "original_web"
   }
 ]

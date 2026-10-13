@@ -1,3 +1,4 @@
+import { pendingChoices } from "../src/engine/branches";
 import { describe, it, expect } from "vitest";
 import {
   newLife,
@@ -142,7 +143,7 @@ describe("whole systems and trust boundaries", () => {
       s = reduce(s, {
         type: "choose",
         instanceId: s.pending.instanceId,
-        optionId: s.pending.event.choices.find((c) => !c.conditions?.length)!
+        optionId: pendingChoices(s.pending).find((c) => !c.conditions?.length)!
           .id,
       });
     expect(parseSave(serialize(s))).toEqual(s);

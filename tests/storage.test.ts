@@ -2,6 +2,7 @@ import "fake-indexeddb/auto";
 import { describe, it, expect, beforeEach } from "vitest";
 import { newLife, reduce } from "../src/engine/game";
 import {
+  exportRawSlot,
   clearData,
   saveSlot,
   loadSlot,
@@ -53,4 +54,24 @@ describe("IndexedDB commit and stale tab protection", () => {
     await saveSlot("two", "Second", fixture(), null);
     expect(await listSlots()).toHaveLength(2);
   });
+});
+
+it("exports an unsupported stored version without changing it", async () => {
+  const { openDB } = await import("idb");
+  const game = newLife({
+    name: "An",
+    gender: "other",
+    hometown: "Huế",
+    birthDate: "2000-01-01",
+    seed: 42,
+  });
+  await saveSlot("future", "Future", game, null);
+  const db = await openDB("newlife-web", 1);
+  const slot = await db.get("slots", "future");
+  slot.game.contentVersion = "99.0.0";
+  await db.put("slots", slot);
+  await expect(loadSlot("future")).rejects.toThrow();
+  expect(JSON.parse(await exportRawSlot("future")).game).toEqual(slot.game);
+  expect(await db.get("slots", "future")).toEqual(slot);
+  db.close();
 });

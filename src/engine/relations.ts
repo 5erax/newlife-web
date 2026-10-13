@@ -13,27 +13,71 @@ import {
 } from "./helpers";
 import { assetById } from "../content/catalog";
 import { random } from "./rng";
+import { origins } from "./world";
+import { migrate } from "./migration";
 export function operate(
   s: GameState,
   operation: Operation,
   value = 1,
   targetId?: string,
 ) {
-  const person = relation(s, targetId, [
-    "friend",
-    "lover",
-    "spouse",
-    "child",
-    "mother",
-    "father",
-    "sibling",
-    "parent",
-    "grandmother",
-    "grandfather",
-    "grandparent",
-    "relative",
-  ]);
+  const person = relation(
+    s,
+    targetId,
+    relationRoleForAction(operation) ?? [
+      "friend",
+      "lover",
+      "spouse",
+      "child",
+      "mother",
+      "father",
+      "sibling",
+      "parent",
+      "grandmother",
+      "grandfather",
+      "grandparent",
+      "relative",
+    ],
+  );
   switch (operation) {
+    case "loseJob":
+      if (s.job) {
+        s.job = null;
+        addLog(
+          s,
+          "Hợp đồng công việc kết thúc. Bạn có thể tìm việc mới hoặc học thêm.",
+        );
+      }
+      flag(s, "unemployed");
+      break;
+    case "recoverGambling":
+      s.counters.gambling_addiction = 0;
+      flag(s, "gambling_addict", false);
+      flag(s, "gambling_recovered");
+      addLog(
+        s,
+        "Bạn hoàn thành một chặng cai nghiện và đặt lại giới hạn cho bản thân.",
+      );
+      break;
+    case "recoverIllness":
+      if (s.illnesses.length) {
+        s.illnesses.shift();
+        count(s, "recoveries");
+        addLog(
+          s,
+          "Một tình trạng sức khoẻ đã hồi phục; những tình trạng khác vẫn được theo dõi.",
+        );
+      }
+      break;
+    case "migrate": {
+      if (s.prisonYears) {
+        addLog(s, "Kế hoạch di cư khép lại vì bạn chưa thể rời nơi thụ án.");
+        break;
+      }
+      const choices = origins.filter((o) => o.id !== s.origin);
+      migrate(s, choices[Math.floor(random(s) * choices.length)].id, true);
+      break;
+    }
     case "friend": {
       let friend = s.relations.find(
         (r) => r.alive && r.role === "friend" && r.closeness < 90,

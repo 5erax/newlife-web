@@ -7,7 +7,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -39,7 +39,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -457,7 +457,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -605,7 +605,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -945,7 +945,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "any": [
@@ -1056,7 +1056,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 2,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -1145,7 +1145,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -1172,7 +1172,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "any": [
@@ -1256,7 +1256,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "any": [
@@ -1852,7 +1852,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 2,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "any": [
@@ -1936,7 +1936,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "any": [
@@ -2079,7 +2079,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -2588,7 +2588,7 @@
     "minAge": 13,
     "cost": 0,
     "timeCost": 2,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -2615,7 +2615,7 @@
     "minAge": 13,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 1,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -2729,7 +2729,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 2,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "has": "job",
@@ -2771,7 +2771,7 @@
     "minAge": 13,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -2874,7 +2874,7 @@
     "minAge": 13,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 1,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "any": [
@@ -2916,7 +2916,7 @@
     "minAge": 13,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -3228,7 +3228,7 @@
     "minAge": 6,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [
       {
         "has": "asset",
@@ -3638,7 +3638,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 2,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -3691,7 +3691,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 2,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -3793,7 +3793,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 1,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -3840,7 +3840,7 @@
     "minAge": 18,
     "cost": 0,
     "timeCost": 3,
-    "maxUsesPerYear": 2,
+    "maxUsesPerYear": 6,
     "conditions": [],
     "outcomes": [
       {
@@ -3923,6 +3923,349 @@
           {
             "stat": "happiness",
             "delta": -4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_stroll",
+    "group": "thechat",
+    "name": "Đi dạo cùng người chăm sóc",
+    "minAge": 0,
+    "cost": 0,
+    "description": "Một vòng chậm quanh nơi sống, phù hợp cả em bé và người già.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành đi dạo cùng người chăm sóc và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_library",
+    "group": "hoctap",
+    "name": "Đọc ở thư viện",
+    "minAge": 5,
+    "cost": 0,
+    "description": "Mượn sách, đọc từng trang theo nhịp của mình.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành đọc ở thư viện và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_run_free",
+    "group": "thechat",
+    "name": "Chạy bộ nhẹ",
+    "minAge": 6,
+    "cost": 0,
+    "description": "Chạy một quãng phù hợp sức khoẻ.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành chạy bộ nhẹ và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_housework",
+    "group": "giadinh",
+    "name": "Giúp việc nhà",
+    "minAge": 4,
+    "cost": 0,
+    "description": "Thu dọn đồ chơi và giúp một việc vừa sức.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành giúp việc nhà và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_meditate",
+    "group": "suckhoe",
+    "name": "Thiền và thở chậm",
+    "minAge": 6,
+    "cost": 0,
+    "description": "Dành một khoảng yên tĩnh để trở về nhịp thở.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành thiền và thở chậm và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_friends_free",
+    "group": "xahoi",
+    "name": "Chơi cùng bạn",
+    "minAge": 3,
+    "cost": 0,
+    "description": "Một trò chơi cùng những người bạn nhỏ hoặc hàng xóm.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành chơi cùng bạn và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_cook_free",
+    "group": "giadinh",
+    "name": "Nấu ăn ở nhà",
+    "minAge": 8,
+    "cost": 0,
+    "description": "Thực hành một món đơn giản, trẻ nhỏ có người lớn hướng dẫn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành nấu ăn ở nhà và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 1
+          },
+          {
+            "stat": "intelligence",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_skin",
+    "group": "suckhoe",
+    "name": "Chăm da cơ bản",
+    "minAge": 12,
+    "cost": 60000,
+    "description": "Chăm sóc nhẹ, dành thời gian cho chính mình.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành chăm da cơ bản và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_hair",
+    "group": "giaitri",
+    "name": "Đổi kiểu tóc",
+    "minAge": 12,
+    "cost": 100000,
+    "description": "Thử một kiểu tóc bạn thấy thoải mái.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành đổi kiểu tóc và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_clothes",
+    "group": "giaitri",
+    "name": "Chọn quần áo vừa vặn",
+    "minAge": 12,
+    "cost": 300000,
+    "description": "Một bộ phù hợp với vóc dáng và sở thích.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn hoàn thành chọn quần áo vừa vặn và thấy nhịp sống dễ chịu hơn.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_surgery",
+    "group": "suckhoe",
+    "name": "Phẫu thuật thẩm mỹ trong game",
+    "minAge": 18,
+    "cost": 30000000,
+    "description": "Thay đổi lớn một lần; có rủi ro biến chứng.",
+    "timeCost": 4,
+    "maxUsesPerYear": 1,
+    "conditions": [
+      {
+        "flag": "cosmetic_surgery",
+        "is": false
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 0.85,
+        "text": "Bạn hồi phục và hài lòng với thay đổi.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 18
+          },
+          {
+            "stat": "happiness",
+            "delta": 8
+          },
+          {
+            "stat": "health",
+            "delta": -6
+          },
+          {
+            "flag": "cosmetic_surgery",
+            "set": true
+          }
+        ]
+      },
+      {
+        "chance": 0.15,
+        "text": "Một biến chứng buộc bạn nghỉ ngơi lâu, kết quả chưa như mong muốn.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": -20
+          },
+          {
+            "stat": "happiness",
+            "delta": -12
+          },
+          {
+            "stat": "looks",
+            "delta": -6
+          },
+          {
+            "flag": "cosmetic_surgery",
+            "set": true
           }
         ]
       }

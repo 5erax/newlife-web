@@ -1,0 +1,462 @@
+[
+  {
+    "id": "tuition_support",
+    "group": "manual",
+    "minAge": 16,
+    "maxAge": 120,
+    "weight": 1,
+    "once": true,
+    "cooldownYears": 0,
+    "maxOccurrences": 1,
+    "conditions": [],
+    "text": "Bạn ngồi cùng cha mẹ để tính học phí. Nguồn trợ cấp phụ thuộc gia cảnh, sự gắn bó và khoản tiền gia đình còn có. Bạn muốn nhận hỗ trợ hay tự lập?",
+    "choices": [
+      {
+        "id": "accept",
+        "label": "Nhận hỗ trợ trong khả năng gia đình",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn thống nhất khoản hỗ trợ; mỗi kỳ học sẽ tính lại theo nguồn lực thực tế.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": true
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "happiness",
+                "delta": 4
+              }
+            ]
+          }
+        ],
+        "cases": [
+          {
+            "weight": 80,
+            "text": "Bạn thống nhất khoản hỗ trợ; mỗi kỳ học sẽ tính lại theo nguồn lực thực tế.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": true
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "happiness",
+                "delta": 5
+              }
+            ]
+          },
+          {
+            "weight": 15,
+            "text": "Bạn thống nhất khoản hỗ trợ; mỗi kỳ học sẽ tính lại theo nguồn lực thực tế. Bạn cùng gia đình ghi rõ giới hạn khoản hỗ trợ.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": true
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "happiness",
+                "delta": 5
+              }
+            ]
+          },
+          {
+            "weight": 5,
+            "text": "Bạn thống nhất khoản hỗ trợ; mỗi kỳ học sẽ tính lại theo nguồn lực thực tế. Một người thân gợi ý hỏi thêm về học bổng.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": true
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "happiness",
+                "delta": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "decline",
+        "label": "Tự lo bằng học bổng, vay hoặc làm thêm",
+        "outcomes": [
+          {
+            "chance": 1,
+            "text": "Bạn chọn tự lập. Học bổng và khoản vay vẫn mở theo điều kiện.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": false
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "intelligence",
+                "delta": 3
+              }
+            ]
+          }
+        ],
+        "cases": [
+          {
+            "weight": 80,
+            "text": "Bạn chọn tự lập. Học bổng và khoản vay vẫn mở theo điều kiện.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": false
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "intelligence",
+                "delta": 4
+              }
+            ]
+          },
+          {
+            "weight": 15,
+            "text": "Bạn chọn tự lập. Học bổng và khoản vay vẫn mở theo điều kiện. Bạn cùng gia đình ghi rõ giới hạn khoản hỗ trợ.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": false
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "intelligence",
+                "delta": 4
+              }
+            ]
+          },
+          {
+            "weight": 5,
+            "text": "Bạn chọn tự lập. Học bổng và khoản vay vẫn mở theo điều kiện. Một người thân gợi ý hỏi thêm về học bổng.",
+            "effects": [
+              {
+                "flag": "tuition_support",
+                "set": false
+              },
+              {
+                "flag": "tuition_discussed",
+                "set": true
+              },
+              {
+                "stat": "intelligence",
+                "delta": 4
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "festival_vn",
+    "group": "culture",
+    "minAge": 6,
+    "maxAge": 100,
+    "weight": 2,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 5,
+    "conditions": [
+      {
+        "origin": "vn"
+      }
+    ],
+    "text": "Gia đình chuẩn bị một bữa cơm Tết. Bạn muốn làm gì để giữ kỷ niệm năm nay?",
+    "choices": [
+      {
+        "id": "help",
+        "label": "Góp sức cùng mọi người",
+        "cases": [
+          {
+            "weight": 3,
+            "text": "Bạn làm được một việc hữu ích và kết nối với hàng xóm.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 6
+              },
+              {
+                "stat": "intelligence",
+                "delta": 2
+              }
+            ]
+          },
+          {
+            "weight": 2,
+            "text": "Một việc chuẩn bị trễ giờ làm bạn mệt, nhưng mọi người cùng giải quyết.",
+            "effects": [
+              {
+                "stat": "health",
+                "delta": -3
+              },
+              {
+                "stat": "happiness",
+                "delta": 3
+              }
+            ]
+          },
+          {
+            "pool": "rest_and_review",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "enjoy",
+        "label": "Tham gia vừa sức và giữ một kỷ niệm",
+        "cases": [
+          {
+            "weight": 3,
+            "text": "Bạn mang về một câu chuyện vui để kể lại.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 5
+              },
+              {
+                "stat": "looks",
+                "delta": 2
+              }
+            ]
+          },
+          {
+            "weight": 1,
+            "text": "Buổi tụ họp đông hơn dự tính; bạn chọn về sớm để nghỉ.",
+            "effects": [
+              {
+                "stat": "health",
+                "delta": 2
+              },
+              {
+                "stat": "happiness",
+                "delta": -2
+              }
+            ]
+          },
+          {
+            "pool": "ask_or_try",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "festival_jp",
+    "group": "culture",
+    "minAge": 6,
+    "maxAge": 100,
+    "weight": 2,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 5,
+    "conditions": [
+      {
+        "origin": "jp"
+      }
+    ],
+    "text": "Một lễ hội mùa hè ở khu phố mở gian hàng nhỏ. Bạn nhận lời giúp chuẩn bị.",
+    "choices": [
+      {
+        "id": "help",
+        "label": "Góp sức cùng mọi người",
+        "cases": [
+          {
+            "weight": 3,
+            "text": "Bạn làm được một việc hữu ích và kết nối với hàng xóm.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 6
+              },
+              {
+                "stat": "intelligence",
+                "delta": 2
+              }
+            ]
+          },
+          {
+            "weight": 2,
+            "text": "Một việc chuẩn bị trễ giờ làm bạn mệt, nhưng mọi người cùng giải quyết.",
+            "effects": [
+              {
+                "stat": "health",
+                "delta": -3
+              },
+              {
+                "stat": "happiness",
+                "delta": 3
+              }
+            ]
+          },
+          {
+            "pool": "rest_and_review",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "enjoy",
+        "label": "Tham gia vừa sức và giữ một kỷ niệm",
+        "cases": [
+          {
+            "weight": 3,
+            "text": "Bạn mang về một câu chuyện vui để kể lại.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 5
+              },
+              {
+                "stat": "looks",
+                "delta": 2
+              }
+            ]
+          },
+          {
+            "weight": 1,
+            "text": "Buổi tụ họp đông hơn dự tính; bạn chọn về sớm để nghỉ.",
+            "effects": [
+              {
+                "stat": "health",
+                "delta": 2
+              },
+              {
+                "stat": "happiness",
+                "delta": -2
+              }
+            ]
+          },
+          {
+            "pool": "ask_or_try",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "festival_latam",
+    "group": "culture",
+    "minAge": 6,
+    "maxAge": 100,
+    "weight": 2,
+    "once": false,
+    "cooldownYears": 5,
+    "maxOccurrences": 5,
+    "conditions": [
+      {
+        "origin": "latam"
+      }
+    ],
+    "text": "Khu phố tổ chức một buổi âm nhạc ngoài trời và mời mọi người cùng tham gia.",
+    "choices": [
+      {
+        "id": "help",
+        "label": "Góp sức cùng mọi người",
+        "cases": [
+          {
+            "weight": 3,
+            "text": "Bạn làm được một việc hữu ích và kết nối với hàng xóm.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 6
+              },
+              {
+                "stat": "intelligence",
+                "delta": 2
+              }
+            ]
+          },
+          {
+            "weight": 2,
+            "text": "Một việc chuẩn bị trễ giờ làm bạn mệt, nhưng mọi người cùng giải quyết.",
+            "effects": [
+              {
+                "stat": "health",
+                "delta": -3
+              },
+              {
+                "stat": "happiness",
+                "delta": 3
+              }
+            ]
+          },
+          {
+            "pool": "rest_and_review",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "enjoy",
+        "label": "Tham gia vừa sức và giữ một kỷ niệm",
+        "cases": [
+          {
+            "weight": 3,
+            "text": "Bạn mang về một câu chuyện vui để kể lại.",
+            "effects": [
+              {
+                "stat": "happiness",
+                "delta": 5
+              },
+              {
+                "stat": "looks",
+                "delta": 2
+              }
+            ]
+          },
+          {
+            "weight": 1,
+            "text": "Buổi tụ họp đông hơn dự tính; bạn chọn về sớm để nghỉ.",
+            "effects": [
+              {
+                "stat": "health",
+                "delta": 2
+              },
+              {
+                "stat": "happiness",
+                "delta": -2
+              }
+            ]
+          },
+          {
+            "pool": "ask_or_try",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  }
+]

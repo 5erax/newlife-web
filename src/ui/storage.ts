@@ -162,6 +162,19 @@ export async function removeSlot(id: string) {
   const db = await database();
   await db.delete("slots", id);
 }
+export async function exportRawSlot(id: string) {
+  const slot = await (await database()).get("slots", id);
+  if (!slot) throw Error("Ô lưu không còn tồn tại.");
+  return JSON.stringify(
+    {
+      format: "newlife-save",
+      schemaVersion: slot.game.schemaVersion,
+      game: slot.game,
+    },
+    null,
+    2,
+  );
+}
 export async function renameSlot(
   id: string,
   label: string,

@@ -1,9 +1,15 @@
 import { useState } from "react";
 import type { NewLifeOptions } from "../../engine/types";
-import type { Slot } from "../storage";
+import { type Slot, download, exportRawSlot } from "../storage";
 import names from "../../content/names.json" with { type: "json" };
 import ui from "../../i18n/vi.json" with { type: "json" };
 import { Avatar } from "../components/Avatar";
+import {
+  origins,
+  drawOrigin,
+  regionalName,
+  originById,
+} from "../../engine/world";
 export function Start({
   slots,
   onCreate,
@@ -19,14 +25,22 @@ export function Start({
     [gender, setGender] = useState<"male" | "female" | "other">("other"),
     [hometown, setHometown] = useState("Đà Nẵng"),
     [birthDate, setBirthDate] = useState("2000-06-15");
+  const [origin, setOrigin] = useState("random"),
+    [vietnamBias, setVietnamBias] = useState(false);
+  const [randomName, setRandomName] = useState(false),
+    [exportError, setExportError] = useState("");
   function randomize() {
     const ints = crypto.getRandomValues(new Uint32Array(4));
-    setGender(ints[0] % 2 ? "female" : "male");
-    const list = ints[0] % 2 ? names.female : names.male;
-    setName(
-      `${names.surnames[ints[1] % names.surnames.length]} ${list[ints[2] % list.length]}`,
+    const rng = { rng: ints[0] },
+      selected = origin === "random" ? drawOrigin(rng, vietnamBias) : origin;
+    setOrigin(selected);
+    setName(regionalName(rng, selected, gender));
+    setRandomName(true);
+    setHometown(
+      selected === "vn"
+        ? names.hometowns[ints[3] % names.hometowns.length]
+        : originById.get(selected)!.hometown,
     );
-    setHometown(names.hometowns[ints[3] % names.hometowns.length]);
   }
   return (
     <main className="start-page">
@@ -46,7 +60,7 @@ export function Start({
           <h2>{ui.firstLifeTitle}</h2>
           <p className="intro-copy">{ui.firstLifeText}</p>
           <div className="illustrated-life">
-            <Avatar age={0} />
+            <Avatar age={0} gender={gender} />
             <span className="dotted-line" />
             <Avatar age={22} gender={gender} />
             <span className="dotted-line" />
@@ -64,24 +78,48 @@ export function Start({
             <section className="recent-lives">
               <h3>{ui.recentLives}</h3>
               {slots.slice(0, 3).map((slot) => (
-                <button
-                  className="recent-life"
-                  key={slot.id}
-                  onClick={() => onLoad(slot.id)}
-                  disabled={busy}
-                >
-                  <Avatar small age={slot.game.age} gender={slot.game.gender} />
-                  <span>
-                    <strong>{slot.game.name}</strong>
-                    <small>
-                      {slot.game.age} {ui.years} · {slot.label}
-                    </small>
-                  </span>
-                  <span className="arrow">↗</span>
-                </button>
+                <div key={slot.id}>
+                  <button
+                    className="recent-life"
+                    key={slot.id}
+                    onClick={() => onLoad(slot.id)}
+                    disabled={busy}
+                  >
+                    <Avatar
+                      small
+                      age={slot.game.age}
+                      gender={slot.game.gender}
+                    />
+                    <span>
+                      <strong>{slot.game.name}</strong>
+                      <small>
+                        {slot.game.age} {ui.years} · {slot.label}
+                      </small>
+                    </span>
+                    <span className="arrow">↗</span>
+                  </button>
+                  <button
+                    className="button small subtle"
+                    disabled={busy}
+                    onClick={() =>
+                      void exportRawSlot(slot.id)
+                        .then((text) =>
+                          download(text, `newlife-raw-${slot.id}.json`),
+                        )
+                        .catch((e) =>
+                          setExportError(
+                            e instanceof Error ? e.message : String(e),
+                          ),
+                        )
+                    }
+                  >
+                    Xuất dữ liệu gốc
+                  </button>
+                </div>
               ))}
             </section>
           )}
+          {exportError && <p role="alert">{exportError}</p>}
         </section>
         <section className="create-card">
           <span className="small-number">01 / BẮT ĐẦU</span>
@@ -94,26 +132,65 @@ export function Start({
                 gender,
                 hometown,
                 birthDate,
+                origin,
+                vietnamBias,
                 seed: crypto.getRandomValues(new Uint32Array(1))[0],
               });
             }}
           >
             <label>
-              {ui.name}
+              Xuất thân
+              <select
+                value={origin}
+                onChange={(e) => {
+                  setOrigin(e.target.value);
+                  if (randomName && e.target.value !== "random")
+                    setName(
+                      regionalName(
+                        { rng: crypto.getRandomValues(new Uint32Array(1))[0] },
+                        e.target.value,
+                        gender,
+                      ),
+                    );
+                  if (e.target.value !== "random")
+                    setHometown(originById.get(e.target.value)!.hometown);
+                }}
+              >
+                <option value="random">Thế giới · theo trọng số dân số</option>
+                {origins.map((o) => (
+                  <option key={o.id} value={o.id}>
+                    {o.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="check">
               <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                maxLength={80}
-                autoComplete="off"
+                type="checkbox"
+                checked={vietnamBias}
+                onChange={(e) => setVietnamBias(e.target.checked)}
               />
+              Nghiêng về Việt Nam khi bốc xuất thân
             </label>
             <div className="form-row">
               <label>
                 {ui.gender}
                 <select
                   value={gender}
-                  onChange={(e) => setGender(e.target.value as typeof gender)}
+                  onChange={(e) => {
+                    const value = e.target.value as typeof gender;
+                    setGender(value);
+                    if (randomName)
+                      setName(
+                        regionalName(
+                          {
+                            rng: crypto.getRandomValues(new Uint32Array(1))[0],
+                          },
+                          origin === "random" ? "vn" : origin,
+                          value,
+                        ),
+                      );
+                  }}
                 >
                   <option value="other">{ui.other}</option>
                   <option value="female">{ui.female}</option>
@@ -133,6 +210,23 @@ export function Start({
               </label>
             </div>
             <label>
+              {ui.name}
+              <input
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setRandomName(false);
+                }}
+                required
+                maxLength={80}
+                autoComplete="off"
+              />
+            </label>
+            <small className="muted">
+              Tên ngẫu nhiên theo giới tính bạn chọn. “Khác” dùng danh sách tên
+              trung tính; tên tự nhập giữ nguyên.
+            </small>
+            <label>
               {ui.hometown}
               <input
                 value={hometown}
@@ -140,6 +234,7 @@ export function Start({
                 onChange={(e) => setHometown(e.target.value)}
                 required
                 maxLength={100}
+                disabled={origin === "random"}
               />
               <datalist id="hometowns">
                 {names.hometownCatalog.map((n) => (
@@ -164,7 +259,7 @@ export function Start({
         </section>
       </div>
       <footer className="start-footer">
-        <span>NewLife Web · 1.0.0</span>
+        <span>NewLife Web · 1.1.0</span>
         <span>Những cuộc đời nhỏ, những lựa chọn lớn.</span>
       </footer>
     </main>

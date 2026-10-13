@@ -3,8 +3,10 @@ import type { Action, GameState } from "../../engine/types";
 import { education, educationById } from "../../content/catalog";
 import industryData from "../../content/industries.json" with { type: "json" };
 import { educationReason } from "../../engine/economy";
+import { tuitionQuote } from "../../engine/tuition";
+import { FAMILY_LABELS } from "../../engine/world";
 import ui from "../../i18n/vi.json" with { type: "json" };
-import { cash } from "../format";
+import { cash as displayCash } from "../format";
 export function Education({
   s,
   dispatch,
@@ -14,6 +16,8 @@ export function Education({
   dispatch: (a: Action) => void;
   busy: boolean;
 }) {
+  const cash = (value: number, full = false) =>
+    displayCash(value, full, s.origin);
   const [specialty, setSpecialty] = useState("congnghe"),
     [loan, setLoan] = useState(false);
   const current = s.education.current;
@@ -32,6 +36,29 @@ export function Education({
         </span>
       </div>
       <div className="feature-panel">
+        <h3>Gia cảnh: {FAMILY_LABELS[s.familyWealth]}</h3>
+        <p>
+          {s.flags.includes("tuition_support")
+            ? "Đã thống nhất nhận trợ cấp, tính lại theo khả năng cha mẹ mỗi năm."
+            : s.flags.includes("tuition_discussed")
+              ? "Bạn đã chọn tự lập."
+              : "Có thể nói chuyện với cha mẹ về học phí từ 16 tuổi."}
+        </p>
+        <button
+          className="button subtle"
+          disabled={
+            busy ||
+            s.phase !== "ready" ||
+            s.age < 16 ||
+            s.flags.includes("tuition_discussed") ||
+            !s.relations.some(
+              (r) => r.alive && ["mother", "father", "parent"].includes(r.role),
+            )
+          }
+          onClick={() => dispatch({ type: "askTuition" })}
+        >
+          Nói chuyện về học phí
+        </button>
         <h3>{ui.currentStudy}</h3>
         {current ? (
           <>
@@ -100,7 +127,14 @@ export function Education({
                 <div className="row-meta">
                   <span>{p.years} năm</span>
                   <span>Từ {p.minAge} tuổi</span>
-                  <span>{p.cost ? cash(p.cost) + "/năm" : ui.free}</span>
+                  <span>
+                    {p.cost
+                      ? cash(
+                          tuitionQuote(s, p.cost, s.education.score >= 85)
+                            .total,
+                        ) + "/năm"
+                      : ui.free}
+                  </span>
                 </div>
                 <p>
                   {p.requires.length
@@ -110,6 +144,21 @@ export function Education({
                         .join(", ")
                     : "Có thể bắt đầu khi đủ tuổi."}
                 </p>
+                {p.cost > 0 && (
+                  <p>
+                    Học bổng:{" "}
+                    {cash(
+                      tuitionQuote(s, p.cost, s.education.score >= 85)
+                        .scholarship,
+                    )}{" "}
+                    · Cha mẹ:{" "}
+                    {cash(
+                      tuitionQuote(s, p.cost, s.education.score >= 85).support,
+                    )}{" "}
+                    · Tự lo:{" "}
+                    {cash(tuitionQuote(s, p.cost, s.education.score >= 85).due)}
+                  </p>
+                )}
                 {reason && <small className="lock-reason">{reason}</small>}
               </div>
               <button

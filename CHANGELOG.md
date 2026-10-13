@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0 — 2026-10-13
+
+- Nhật ký delta/nguyên nhân, thẻ Năm nay, biến thiên chỉ số và lão hóa.
+- 19 vùng xuất thân, tên/giới tính/avatar, tiền địa phương, chuyển vùng và trợ cấp học phí.
+- 31 hoạt động mới theo yêu cầu, 25 nhạc cụ và 6 môn võ; danh vọng, tình yêu, chăm sóc ngoại hình.
+- Danh mục đầu tư 5 nhóm/34 sản phẩm ban đầu, lịch sử, mua bán/phí/thanh khoản, lãi/đáo hạn, coin mới, tăng mạnh và mất sạch.
+- Blackjack/Ba cào có bộ bài lưu được và hậu quả cờ bạc; 20 chuỗi, modifier, weighted cases lồng, pools, graph và coverage.
+- Nâng cấp file lưu cũ và xuất bản gốc của file chưa được hỗ trợ.
+
+
 ## 1.0.0-rc.1 — 12/10/2026
 
 - Cuộc đời bằng tiếng Việt, sự kiện có lựa chọn, chỉ số và nhật ký.
