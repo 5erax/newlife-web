@@ -1,0 +1,10 @@
+{
+  "blackjack": {
+    "rounds": 500000,
+    "houseEdgePercent": 2.299
+  },
+  "bacao": {
+    "rounds": 500000,
+    "houseEdgePercent": 3.014
+  }
+}

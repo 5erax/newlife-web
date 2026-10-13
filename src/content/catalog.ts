@@ -1,7 +1,10 @@
 import eventData from "./events.json" with { type: "json" };
+import extraEventData from "./extra-events.json" with { type: "json" };
+import chainEventData from "./chain-events.json" with { type: "json" };
 import careerData from "./career-events.json" with { type: "json" };
 import fallbackData from "./fallback-events.json" with { type: "json" };
 import activityData from "./activities.json" with { type: "json" };
+import lifestyleData from "./lifestyle-activities.json" with { type: "json" };
 import jobData from "./jobs.json" with { type: "json" };
 import educationData from "./education.json" with { type: "json" };
 import assetData from "./assets.json" with { type: "json" };
@@ -25,14 +28,17 @@ import type {
   Achievement,
   Story,
 } from "../engine/types";
-export const events: LifeEvent[] = [...eventData, ...careerData].map((e) =>
-  eventSchema.parse(e),
-);
+export const events: LifeEvent[] = [
+  ...eventData,
+  ...careerData,
+  ...extraEventData,
+  ...chainEventData,
+].map((e) => eventSchema.parse(e));
 export const fallbacks: LifeEvent[] = fallbackData.map((e) =>
   eventSchema.parse(e),
 );
-export const activities: Activity[] = activityData.map((e) =>
-  activitySchema.parse(e),
+export const activities: Activity[] = [...activityData, ...lifestyleData].map(
+  (e) => activitySchema.parse(e),
 );
 export const jobs: Job[] = jobData.map((e) => jobSchema.parse(e));
 export const education: Education[] = educationData.map((e) =>

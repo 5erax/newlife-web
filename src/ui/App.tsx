@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRegisterSW } from "virtual:pwa-register/react";
 import type { Action, GameState, NewLifeOptions } from "../engine/types";
-import { STAT_LABELS } from "../engine/types";
+import { StatBars, ThisYear } from "./components/StatChanges";
 import { newLife, reduce } from "../engine/game";
 import { serialize } from "../engine/save";
 import { netWorth } from "../engine/helpers";
 import { jobById } from "../content/catalog";
+import { originById, FAMILY_LABELS } from "../engine/world";
 import ui from "../i18n/vi.json" with { type: "json" };
-import { cash, ageLabel } from "./format";
+import { cash as displayCash, ageLabel } from "./format";
 import { Avatar } from "./components/Avatar";
 import { EventDialog } from "./components/EventDialog";
+import { LoveDialog } from "./components/LoveDialog";
 import { Start } from "./screens/Start";
 import { Journal } from "./screens/Journal";
 import { Education } from "./screens/Education";
@@ -229,6 +231,8 @@ export default function App() {
       if (
         e.key === "Enter" &&
         gameRef.current?.phase === "ready" &&
+        !gameRef.current.casino.hand &&
+        !gameRef.current.loveOffer &&
         !creating
       ) {
         e.preventDefault();
@@ -292,6 +296,8 @@ export default function App() {
       setNotice("Đã lưu cài đặt.");
     });
   }
+  const cash = (value: number, full = false) =>
+    displayCash(value, full, game?.origin);
   const shared = game
     ? {
         s: game,
@@ -385,7 +391,13 @@ export default function App() {
             offlineReady={offlineReady || offlinePrepared}
             needRefresh={needRefresh}
             onUpdate={() => {
-              if (game.pending || busy || unsaved) {
+              if (
+                game.pending ||
+                game.loveOffer ||
+                game.casino.hand ||
+                busy ||
+                unsaved
+              ) {
                 setNotice(
                   "Hãy chọn xong sự kiện và lưu thành công hoặc xuất bản chưa lưu trước khi cập nhật.",
                 );
@@ -488,26 +500,13 @@ export default function App() {
                     ? ui.offlineReady
                     : ui.localNote}
                 </p>
-                <small>v1.0.0</small>
+                <small>v1.1.0</small>
               </div>
             </nav>
             <main className="game-main">
               <div className="mobile-stats">
-                {Object.entries(game.stats).map(([key, value]) => (
-                  <div className={"stat stat-" + key} key={key}>
-                    <div>
-                      <span>
-                        {STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                      </span>
-                      <strong>{value}</strong>
-                    </div>
-                    <progress
-                      value={value}
-                      max={100}
-                      aria-label={STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                    />
-                  </div>
-                ))}
+                <StatBars s={game} />
+                <ThisYear s={game} />
               </div>
               {readOnly && (
                 <div className="banner">
@@ -541,32 +540,22 @@ export default function App() {
                   age={game.age}
                   happiness={game.stats.happiness}
                   gender={game.gender}
+                  appearance={game.appearance}
                 />
                 <h2>{game.name}</h2>
                 <p>
                   {game.age} {ui.years} · {ageLabel(game.age)}
                 </p>
-                <small>{game.hometown}</small>
+                <small>
+                  {game.hometown} · {originById.get(game.origin)?.label}
+                </small>
+                <small>
+                  {FAMILY_LABELS[game.familyWealth]} · Danh vọng {game.fame}/100
+                </small>
               </div>
               <div className="stats-list">
-                {Object.entries(game.stats).map(([key, value]) => (
-                  <div className={"stat stat-" + key} key={key}>
-                    <div>
-                      <span>
-                        {STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                      </span>
-                      <strong>
-                        {value}
-                        <small>/100</small>
-                      </strong>
-                    </div>
-                    <progress
-                      value={value}
-                      max={100}
-                      aria-label={STAT_LABELS[key as keyof typeof STAT_LABELS]}
-                    />
-                  </div>
-                ))}
+                <StatBars s={game} />
+                <ThisYear s={game} />
               </div>
               <div className="balance-panel">
                 <span>{ui.balance}</span>
@@ -596,7 +585,13 @@ export default function App() {
           </div>
           <footer className="age-dock">
             <div className="dock-profile">
-              <Avatar small age={game.age} happiness={game.stats.happiness} />
+              <Avatar
+                small
+                age={game.age}
+                happiness={game.stats.happiness}
+                gender={game.gender}
+                appearance={game.appearance}
+              />
               <span>
                 <strong>{game.name}</strong>
                 <small>
@@ -609,7 +604,13 @@ export default function App() {
             </span>
             <button
               className="age-button"
-              disabled={busy || readOnly || game.phase !== "ready"}
+              disabled={
+                busy ||
+                readOnly ||
+                game.phase !== "ready" ||
+                !!game.casino.hand ||
+                !!game.loveOffer
+              }
               onClick={() => void dispatch({ type: "age" })}
             >
               <span className="plus">＋</span>
@@ -618,9 +619,13 @@ export default function App() {
                   ? "Câu chuyện đã khép lại"
                   : game.pending
                     ? "Chọn sự kiện trước"
-                    : busy
-                      ? ui.saving
-                      : ui.ageUp}
+                    : game.casino.hand
+                      ? "Kết thúc ván bài trước"
+                      : game.loveOffer
+                        ? "Trả lời lời mời trước"
+                        : busy
+                          ? ui.saving
+                          : ui.ageUp}
                 <small>
                   {game.phase === "ready"
                     ? `Sang tuổi ${game.age + 1}`
@@ -647,6 +652,9 @@ export default function App() {
           busy={busy}
           dispatch={(a) => void dispatch(a)}
         />
+      )}
+      {game?.loveOffer && !creating && !readOnly && (
+        <LoveDialog s={game} busy={busy} dispatch={(a) => void dispatch(a)} />
       )}
     </>
   );

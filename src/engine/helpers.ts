@@ -2,6 +2,9 @@ import type { GameState, Stat, Role, Relation, Metric } from "./types";
 import { assets, assetById } from "../content/catalog";
 import names from "../content/names.json" with { type: "json" };
 import { pick, random } from "./rng";
+import { recordChange } from "./changes";
+import { regionalName } from "./world";
+import { portfolioValue } from "./investments";
 export function identityDigest(text: string) {
   return Array.from({ length: 4 }, (_, lane) => {
     let h = (2166136261 ^ Math.imul(lane + 1, 2654435761)) >>> 0;
@@ -28,10 +31,14 @@ export function addLog(
     age: s.age,
     text,
     kind,
+    deltas: [],
+    source: kind,
   });
 }
 export function stat(s: GameState, key: Stat, delta: number) {
+  const before = s.stats[key];
   s.stats[key] = clamp(s.stats[key] + delta);
+  recordChange(s, key, before, s.stats[key]);
 }
 export function flag(s: GameState, key: string, value = true) {
   s.flags = s.flags.filter((x) => x !== key);
@@ -55,6 +62,7 @@ export function money(
   mandatory = false,
 ) {
   if (amount === 0) return;
+  const before = s.money;
   requireGame(
     Number.isSafeInteger(amount) && Math.abs(amount) <= MAX_MONEY,
     "Số tiền không hợp lệ.",
@@ -82,6 +90,7 @@ export function money(
     }
     s.money = 0;
   } else s.money = after;
+  recordChange(s, "money", before, s.money, label);
   s.ledger.push({
     id: `${s.id}_${s.actionSerial}_${s.ledger.length}`,
     age: s.age,
@@ -92,11 +101,14 @@ export function money(
   if (s.money > (s.counters.saved ?? 0)) s.counters.saved = s.money;
 }
 export function personName(s: GameState, gender: "male" | "female" = "female") {
-  const surname = pick(s, names.surnames),
-    given = pick(s, gender === "male" ? names.male : names.female);
-  return `${surname} ${names.middles[gender][s.rng % names.middles[gender].length]} ${given}`;
+  return regionalName(s, s.origin, gender);
 }
-export function makePerson(s: GameState, role: Role, age: number): Relation {
+export function makePerson(
+  s: GameState,
+  role: Role,
+  age: number,
+  forcedGender?: GameState["gender"],
+): Relation {
   requireGame(
     s.relations.length < 250,
     "Đã đạt giới hạn người trong hồ sơ cuộc đời.",
@@ -107,12 +119,17 @@ export function makePerson(s: GameState, role: Role, age: number): Relation {
         ? "female"
         : role === "father"
           ? "male"
-          : draw < 0.5
-            ? "male"
-            : "female";
+          : (forcedGender ?? (draw < 0.5 ? "male" : "female"));
   return {
     id: `${s.id}_person_${++s.actionSerial}`,
-    name: personName(s, gender),
+    name: regionalName(
+      s,
+      s.origin,
+      gender,
+      ["father", "sibling", "child"].includes(role)
+        ? s.familySurname || undefined
+        : undefined,
+    ),
     gender: role === "mother" ? "female" : role === "father" ? "male" : gender,
     role,
     age,
@@ -132,6 +149,7 @@ export function relation(s: GameState, id?: string, roles?: Role[]) {
 export function netWorth(s: GameState) {
   return (
     s.money +
+    portfolioValue(s) +
     s.assets
       .filter((a) => a.alive)
       .reduce((n, a) => n + a.value * a.quantity, 0) -
@@ -141,6 +159,7 @@ export function netWorth(s: GameState) {
 export function metric(s: GameState, key: Metric): number {
   if (key in s.stats) return s.stats[key as Stat];
   if (key === "age") return s.age;
+  if (key === "fame") return s.fame;
   if (key === "money") return s.money;
   if (key === "netWorth") return netWorth(s);
   if (key === "schoolScore")
@@ -170,6 +189,7 @@ export function createAsset(s: GameState, catalogId: string, quantity = 1) {
   const item = assetById.get(catalogId);
   requireGame(item, "Không tìm thấy tài sản.");
   const owned = {
+    origin: s.origin,
     instanceId: `${s.id}_asset_${++s.actionSerial}`,
     catalogId,
     age: 0,

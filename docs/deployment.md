@@ -7,3 +7,7 @@ Localhost 127.0.0.1 không tự mở LAN. HTTPS hosted thuận tiện trên đi�
 Save và cache nằm trên máy đã tải. Người dùng browser/profile đó có thể đọc dữ liệu cục bộ; logout cổng hosted không được mô tả là xoá cache/save. Đổi origin dùng export/import để chuyển.
 
 Artifact chứa hosting manifest và dist của đúng source SHA đã push tới Sites. Credential ngắn hạn không được lưu. Rollback qua version Sites đã lưu hoặc rebuild tag; xuất save trước thay contentVersion.
+
+## Trạng thái bản 1.1 — 13/10/2026
+
+Khi đọc lại trước cập nhật: access_mode=public, chỉ một owner/editor được liệt kê; anonymous GET trả game HTTP200. Danh sách owner không chứng minh audience private khi mode public. Bản cập nhật giữ audience hiện tại; không gọi update_site_access. Repo GitHub vẫn private. Các thông tin private ở phần v1 trên là lịch sử triển khai trước đó.

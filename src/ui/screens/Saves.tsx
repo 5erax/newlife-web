@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import type { GameState } from "../../engine/types";
 import type { Slot } from "../storage";
-import { download } from "../storage";
+import { download, exportRawSlot } from "../storage";
 import { parseSave, serialize } from "../../engine/save";
 import ui from "../../i18n/vi.json" with { type: "json" };
 import { cash } from "../format";
@@ -57,7 +57,7 @@ export function Saves({
       <div className="feature-panel">
         <h3>Bản đang mở · {s.name}</h3>
         <p>
-          {s.age} tuổi · {cash(s.money)} ·{" "}
+          {s.age} tuổi · {cash(s.money, false, s.origin)} ·{" "}
           {s.phase === "dead"
             ? "Đã kết thúc"
             : s.pending
@@ -112,11 +112,26 @@ export function Saves({
               <h3>{slot.label}</h3>
               <p>
                 {slot.game.name} · {slot.game.age} tuổi ·{" "}
-                {cash(slot.game.money)}
+                {cash(slot.game.money, false, slot.game.origin)}
               </p>
               <small>{new Date(slot.updatedAt).toLocaleString("vi-VN")}</small>
             </div>
             <div className="button-row">
+              <button
+                className="button small subtle"
+                disabled={busy}
+                onClick={() =>
+                  void exportRawSlot(slot.id)
+                    .then((text) =>
+                      download(text, `newlife-raw-${slot.id}.json`),
+                    )
+                    .catch((e) =>
+                      onError(e instanceof Error ? e.message : String(e)),
+                    )
+                }
+              >
+                Xuất dữ liệu gốc
+              </button>
               <button
                 className="button small"
                 disabled={busy}
@@ -175,7 +190,7 @@ export function Saves({
         <Modal title={ui.importPreview} onClose={() => setPreview(null)}>
           <p>
             <strong>{preview.name}</strong> · {preview.age} tuổi ·{" "}
-            {cash(preview.money)}
+            {cash(preview.money, false, preview.origin)}
           </p>
           <p className="muted">
             Ô đang có sẽ được giữ nguyên. Bản nhập tạo một ô riêng.

@@ -18,6 +18,9 @@ import {
 } from "./helpers";
 import industries from "../content/industries.json" with { type: "json" };
 import { random } from "./rng";
+import { changeContext } from "./changes";
+import { localPrice, originById } from "./world";
+import { tuitionQuote, chargeTuition, parentalPayment } from "./tuition";
 export const sideJobs = [
   { name: "Phụ quán", minAge: 13 },
   { name: "Gia sư nhỏ", minAge: 16 },
@@ -29,8 +32,9 @@ export const sideJobs = [
   { name: "Chăm thú cưng", minAge: 16 },
 ];
 export function economicYear(s: GameState) {
+  changeContext(s, "economy", "Công việc, sinh hoạt và tài sản trong năm.");
   if (s.age < 18) {
-    if (s.age >= 6) money(s, 240000, "Tiền tiêu vặt trong năm");
+    if (s.age >= 6) money(s, localPrice(s, 240000), "Tiền tiêu vặt trong năm");
   } else {
     if (s.job && s.prisonYears === 0) {
       money(s, s.job.salary, "Lương năm");
@@ -63,7 +67,7 @@ export function economicYear(s: GameState) {
         random(s) < 0.3
       ) {
         s.job.rank++;
-        s.job.salary = next.salary;
+        s.job.salary = localPrice(s, next.salary);
         count(s, "promotions");
         addLog(s, `Bạn được thăng lên ${next.name} trong nghề ${job.name}.`);
       }
@@ -79,21 +83,40 @@ export function economicYear(s: GameState) {
       }
     }
     if (s.pension > 0) money(s, s.pension, "Trợ cấp hưu trong game");
+    if (
+      s.education.current &&
+      s.familyWealth === "rich" &&
+      s.flags.includes("tuition_support")
+    )
+      parentalPayment(
+        s,
+        localPrice(s, 12000000),
+        "Cha mẹ trợ cấp sinh hoạt khi học",
+      );
     if (s.prisonYears === 0)
       money(
         s,
-        -(s.housing === "family"
-          ? 12_000_000
-          : s.housing === "rent"
-            ? 36_000_000
-            : 18_000_000),
+        -localPrice(
+          s,
+          s.housing === "family"
+            ? 12_000_000
+            : s.housing === "rent"
+              ? 36_000_000
+              : 18_000_000,
+        ),
         "Sinh hoạt và nơi ở",
         true,
       );
     const minors = s.relations.filter(
       (r) => r.alive && r.role === "child" && r.age < 18,
     ).length;
-    if (minors) money(s, -minors * 6000000, "Chăm người con phụ thuộc", true);
+    if (minors)
+      money(
+        s,
+        -localPrice(s, minors * 6000000),
+        "Chăm người con phụ thuộc",
+        true,
+      );
   }
   for (const debt of s.debts) {
     debt.balance = Math.min(
@@ -131,7 +154,11 @@ export function economicYear(s: GameState) {
       0,
       owned.condition - (item.category === "pet" ? 5 : 2),
     );
-    owned.value = s.market[item.id];
+    const ownedOrigin = owned.origin ?? s.origin;
+    owned.value = Math.round(
+      (s.market[item.id] * originById.get(ownedOrigin)!.wealthIndex) /
+        originById.get(s.origin)!.wealthIndex,
+    );
     if (item.category === "pet") {
       count(s, "petYears");
       if (owned.age >= (item.lifespan ?? 15) && random(s) < 0.4) {
@@ -146,7 +173,12 @@ export function economicYear(s: GameState) {
         continue;
       }
     }
-    money(s, -item.upkeep * owned.quantity, `Duy trì ${item.name}`, true);
+    money(
+      s,
+      -localPrice({ origin: ownedOrigin }, item.upkeep * owned.quantity),
+      `Duy trì ${item.name}`,
+      true,
+    );
     if (item.category !== "house" || owned.primary)
       for (const [key, value] of Object.entries(item.bonus))
         stat(s, key as keyof GameState["stats"], value!);
@@ -157,9 +189,7 @@ export function studyYear(s: GameState) {
     const current = s.education.current;
     const program = educationById.get(current.id)!;
     if (s.age >= 18 && program.cost > 0 && current.year + 1 < program.years) {
-      const fee = s.flags.includes("scholarship")
-        ? Math.round(program.cost * 0.5)
-        : program.cost;
+      const fee = tuitionQuote(s, program.cost).due;
       const room = 30_000_000 - s.debts.reduce((sum, d) => sum + d.balance, 0);
       if (s.money + room < fee) {
         addLog(
@@ -169,7 +199,14 @@ export function studyYear(s: GameState) {
         s.education.current = null;
         flag(s, "in_school", false);
         flag(s, "dropout");
-      } else money(s, -fee, "Học phí năm", true);
+      } else
+        chargeTuition(
+          s,
+          program.cost,
+          "Học phí năm",
+          true,
+          s.flags.includes("scholarship"),
+        );
     }
     if (s.education.current) {
       current.year++;
@@ -246,6 +283,8 @@ export function educationReason(s: GameState, id: string): string | null {
 export function jobReason(s: GameState, id: string): string | null {
   const j = jobById.get(id);
   if (!j) return "Không có công việc này.";
+  if (j.origins && !j.origins.includes(s.origin))
+    return "Vị trí này chỉ tuyển tại xuất thân phù hợp trong game.";
   if (s.prisonYears > 0) return "Bạn đang thụ án.";
   if (s.age < j.minAge) return `Mở từ ${j.minAge} tuổi.`;
   if (!s.education.completed.includes(j.degree))
@@ -335,7 +374,7 @@ export function economyAction(s: GameState, a: Action): boolean {
         s.age >= 18 && !s.prisonYears,
         "Chỗ ở riêng mở khi trưởng thành và không thụ án.",
       );
-      money(s, -2000000, "Đặt cọc phòng thuê");
+      money(s, -localPrice(s, 2000000), "Đặt cọc phòng thuê");
       s.housing = "rent";
       s.assets.forEach((x) => (x.primary = false));
       addLog(
@@ -348,7 +387,7 @@ export function economyAction(s: GameState, a: Action): boolean {
       requireGame(!reason, reason ?? "Chưa đủ điều kiện học.");
       const p = educationById.get(a.id)!;
       const scholarship = s.education.score >= 85 && p.cost > 0;
-      const fee = scholarship ? Math.round(p.cost * 0.5) : p.cost;
+      const fee = tuitionQuote(s, p.cost, scholarship).due;
       if (s.money < fee) {
         requireGame(
           a.loan &&
@@ -357,7 +396,7 @@ export function economyAction(s: GameState, a: Action): boolean {
           "Chưa đủ học phí. Bạn có thể chọn khoản vay trong hạn mức.",
         );
       }
-      money(s, -fee, "Học phí nhập học", !!a.loan);
+      chargeTuition(s, p.cost, "Học phí nhập học", !!a.loan, scholarship);
       flag(s, "scholarship", scholarship);
       requireGame(
         !p.specialty ||
@@ -395,7 +434,7 @@ export function economyAction(s: GameState, a: Action): boolean {
         rank: 0,
         years: 0,
         performance: 60,
-        salary: j.ranks[0].salary,
+        salary: localPrice(s, j.ranks[0].salary),
       };
       s.pension = 0;
       count(s, "jobs");
@@ -459,7 +498,7 @@ export function economyAction(s: GameState, a: Action): boolean {
       s.sideJob = a.id;
       s.activityUses[key] = (s.activityUses[key] ?? 0) + 1;
       s.time -= 2;
-      money(s, 250000 + Math.round(random(s) * 250000), a.id);
+      money(s, localPrice(s, 250000 + Math.round(random(s) * 250000)), a.id);
       count(s, "skills");
       addLog(
         s,

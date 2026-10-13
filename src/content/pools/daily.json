@@ -1,0 +1,43 @@
+{
+  "rest_and_review": [
+    {
+      "weight": 3,
+      "text": "Bạn dành thời gian nghỉ ngơi và nghĩ lại điều vừa trải qua. Một khoảng dừng giúp bạn lấy lại năng lượng.",
+      "variants": [
+        "Bạn nghỉ một buổi và viết vài dòng về chuyện vừa xảy ra. Nhịp thở chậm lại.",
+        "Một giấc ngủ đủ giúp bạn nhìn chuyện vừa qua bình tĩnh hơn."
+      ],
+      "effects": [
+        { "stat": "health", "delta": 3 },
+        { "stat": "happiness", "delta": 2 }
+      ]
+    },
+    {
+      "weight": 1,
+      "requires": [{ "field": "health", "op": "<", "value": 40 }],
+      "text": "Bạn nhận ra mình đã kiệt sức và xin trợ giúp sớm, thay vì cố làm tiếp.",
+      "effects": [
+        { "stat": "health", "delta": 5 },
+        { "stat": "happiness", "delta": -2 }
+      ]
+    }
+  ],
+  "ask_or_try": [
+    {
+      "weight": 3,
+      "text": "Bạn tìm được một lời khuyên cụ thể và thử lại với một kế hoạch nhỏ.",
+      "effects": [
+        { "stat": "intelligence", "delta": 4 },
+        { "stat": "happiness", "delta": 2 }
+      ]
+    },
+    {
+      "weight": 2,
+      "text": "Lời khuyên không hợp với tình huống của bạn. Bạn đổi cách và học từ lần thử chưa thành.",
+      "effects": [
+        { "stat": "intelligence", "delta": 2 },
+        { "stat": "happiness", "delta": -3 }
+      ]
+    }
+  ]
+}

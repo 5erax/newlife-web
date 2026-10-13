@@ -2,9 +2,11 @@
 
 Game mô phỏng cuộc đời bằng tiếng Việt. Có học/nghề, tiền/tài sản, hoạt động, bệnh, gia đình, thú cưng, tù, di chúc, nhiều đời và truyện. Giao diện ưu tiên điện thoại; tự lưu cục bộ và offline sau lần tải đủ đầu tiên.
 
-Bản chơi riêng tư: https://newlife-5erax.dha260803.chatgpt.site (tài khoản chủ sở hữu). GitHub private và audience Site là hai cơ chế riêng.
+Bản chơi web: https://newlife-5erax.dha260803.chatgpt.site. Site hiện có audience public theo trạng thái đọc ngày 13/10/2026; GitHub private và audience Site là hai cơ chế riêng.
 
-Nội dung tự viết: 150 sự kiện thường + 144 tình huống nghề, 48 nghề/12 ngành, 10 chương trình học, 108 hoạt động, 24 tài sản, 40 thành tích, 3 huy chương, 10 danh hiệu và 5 truyện/60 node/15 kết thúc. [Manifest](src/content/manifest.json), [đồ thị](docs/content/graph.md). Chưa phục hồi đủ dataset Android; không xác nhận tái tạo mọi nội dung gốc.
+Nội dung tự viết: 214 sự kiện thường/chuỗi + 144 tình huống nghề, 48 nghề/12 ngành, 10 chương trình học, 150 hoạt động, 24 tài sản, 42 thành tích, 3 huy chương, 10 danh hiệu và 5 truyện/60 node/15 kết thúc. [Manifest](src/content/manifest.json), [đồ thị](docs/content/graph.md). Chưa phục hồi đủ dataset Android; không xác nhận tái tạo mọi nội dung gốc.
+
+Bản 1.1 thêm Danh vọng, Tình yêu, Tâm trí và thể chất, Salon và spa; 25 nhạc cụ, 6 môn võ; 34 sản phẩm đầu tư khởi đầu thuộc 5 nhóm, coin mới, biến động mạnh và rủi ro mất toàn bộ. Có casino, 20 chuỗi sự kiện, xuất thân/tiền địa phương, trợ cấp học phí và nhật ký giải thích thay đổi.
 
 ## Chạy trên máy
 
@@ -29,7 +31,7 @@ Mở http://127.0.0.1:4173. PWA cần HTTPS hoặc localhost; file:// không ph�
 ```sh
 npm test
 npm run build
-npm run simulate -- 10000
+npm run simulate -- 10000 --report
 npm run content:graph
 npx tsx src/tools/benchmark.ts
 npm run test:e2e

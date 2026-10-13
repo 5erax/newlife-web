@@ -16,6 +16,8 @@ import type { Condition } from "../engine/types";
 import { conditionSchema } from "../schema/content";
 import assert from "node:assert/strict";
 import names from "../content/names.json" with { type: "json" };
+import { branchStats } from "./branch-analysis";
+import { originById } from "../engine/world";
 export function validateContent() {
   assert.equal(names.sourceKind, "original_web");
   assert.equal(names.version, "1.0.0");
@@ -60,6 +62,7 @@ export function validateContent() {
   }
   function condition(c: Condition) {
     conditionSchema.parse(c);
+    if ("origin" in c) assert(originById.has(c.origin));
     if ("all" in c) c.all.forEach(condition);
     if ("any" in c) c.any.forEach(condition);
     if ("not" in c) condition(c.not);
@@ -103,6 +106,7 @@ export function validateContent() {
     assert(a.timeCost >= 1);
   }
   for (const j of jobs) {
+    j.origins?.forEach((id) => assert(originById.has(id)));
     assert(educationById.has(j.degree), `${j.id}: missing degree`);
     assert(
       j.ranks.every((r, i) => i === 0 || r.salary >= j.ranks[i - 1].salary),
@@ -147,18 +151,24 @@ export function validateContent() {
     ),
   };
   assert.deepEqual(counts, {
-    lifeEvents: 150,
+    lifeEvents: 214,
     careerEvents: 144,
-    activities: 108,
+    activities: 150,
     assets: 24,
     education: 10,
     jobs: 48,
-    achievements: 40,
+    achievements: 42,
     stories: 5,
     nodes: 60,
     endings: 15,
   });
-  return counts;
+  const branches = branchStats();
+  return {
+    ...counts,
+    averageLeaves: branches.averageLeaves,
+    nestedPercent: branches.nestedPercent,
+    chains: branches.chains,
+  };
 }
 if (process.argv[1]?.replaceAll("\\", "/").endsWith("/content.ts"))
   console.log(JSON.stringify(validateContent(), null, 2));

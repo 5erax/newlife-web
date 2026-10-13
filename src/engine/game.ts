@@ -11,10 +11,19 @@ import {
   stories,
   educationById,
   assetById,
+  eventById,
 } from "../content/catalog";
 import { applyEffects } from "./effects";
 import { chooseOutcome, eligible } from "./conditions";
 import { random } from "./rng";
+import { changeContext } from "./changes";
+import { drawOrigin, originById, localPrice } from "./world";
+import { activityCost } from "./activity-pricing";
+import { pendingChoices, chooseCase } from "./branches";
+import { emptyCasino, casinoAction } from "./casino";
+import { migrate } from "./migration";
+import { emptyAppearance, specialActivity, resolveLove } from "./lifestyle";
+import { emptyInvestments, investmentAction } from "./investments";
 import { economyAction } from "./economy";
 import {
   achievementCheck,
@@ -85,6 +94,22 @@ export function newLife(
     "ID cuộc đời không hợp lệ.",
   );
   const identity = options.id ?? `life_${options.seed.toString(16)}`;
+  const origin =
+    options.origin === "random"
+      ? drawOrigin({ rng: options.seed ^ 0x762713 }, options.vietnamBias)
+      : (options.origin ?? "vn");
+  requireGame(originById.has(origin), "Xuất thân không hợp lệ.");
+  const region = originById.get(origin)!;
+  const wealthRoll = (options.seed % 1000) / 1000;
+  const richThreshold = Math.min(0.95, 0.93 - 0.02 * (region.wealthIndex - 1));
+  const familyWealth =
+    wealthRoll < Math.max(0.1, 0.25 / region.wealthIndex)
+      ? "poor"
+      : wealthRoll < 0.7
+        ? "middle"
+        : wealthRoll < richThreshold
+          ? "comfortable"
+          : "rich";
   const s: GameState = {
     schemaVersion: 1,
     contentVersion: CONTENT_VERSION,
@@ -95,9 +120,29 @@ export function newLife(
     age: 0,
     name: options.name.trim(),
     gender: options.gender,
-    hometown: options.hometown,
+    hometown: options.origin === "random" ? region.hometown : options.hometown,
+    origin,
+    familySurname:
+      region.surnames.find(
+        (n) =>
+          options.name.startsWith(n + " ") || options.name.endsWith(" " + n),
+      ) ?? region.surnames[options.seed % region.surnames.length],
+    familyWealth,
+    tuitionRatio: { poor: 0.05, middle: 0.4, comfortable: 0.8, rich: 1 }[
+      familyWealth
+    ],
+    fame: 0,
+    reputation: 50,
+    skills: {},
+    appearance: emptyAppearance(),
+    loveOffer: null,
+    investments: emptyInvestments(),
     birthDate: options.birthDate,
     stats: { health: 80, happiness: 50, intelligence: 50, looks: 50 },
+    lastDeltas: [],
+    lastYearDeltas: [],
+    happinessBaseline: 40 + (options.seed % 36),
+    modifiers: [],
     money: 0,
     education: { completed: [], current: null, score: 50, specialty: "" },
     job: null,
@@ -111,6 +156,8 @@ export function newLife(
     flags: [],
     counters: {},
     history: {},
+    caseHistory: {},
+    casino: emptyCasino(),
     pending: null,
     yearQueue: [],
     scheduled: [],
@@ -140,6 +187,8 @@ export function newLife(
     looks: Math.floor(10 + random(s) * 91),
   };
   s.education.score = s.stats.intelligence;
+  s.counters.birth_intelligence = s.stats.intelligence;
+  s.counters.birth_looks = s.stats.looks;
   s.relations.push(
     makePerson(s, "mother", 24 + Math.floor(random(s) * 15)),
     makePerson(s, "father", 25 + Math.floor(random(s) * 18)),
@@ -152,6 +201,21 @@ export function newLife(
   );
   if (random(s) < deathChance(0, s.stats.health))
     finishLife(s, "Một biến cố sức khoẻ rất sớm trong game");
+  for (const r of s.relations.filter((r) =>
+    ["mother", "father"].includes(r.role),
+  ))
+    r.resources = localPrice(
+      s,
+      {
+        poor: 2000000,
+        middle: 50000000,
+        comfortable: 180000000,
+        rich: 500000000,
+      }[familyWealth],
+    );
+  s.market = Object.fromEntries(
+    Object.entries(s.market).map(([id, value]) => [id, localPrice(s, value)]),
+  );
   return s;
 }
 export function activityTargets(s: GameState, a: Activity) {
@@ -201,7 +265,7 @@ export function activityReason(s: GameState, a: Activity) {
     return "Hoạt động bên ngoài chưa mở khi thụ án.";
   if (!eligible(s, a.conditions))
     return "Chưa có điều kiện, đối tượng hoặc tài sản phù hợp.";
-  if (s.money < a.cost) return "Chưa đủ tiền.";
+  if (s.money < activityCost(s, a)) return "Chưa đủ tiền.";
   if (s.time < a.timeCost) return "Chưa đủ điểm thời gian trong năm.";
   if ((s.activityUses[a.id] ?? 0) >= a.maxUsesPerYear)
     return "Đã đủ lượt trong năm.";
@@ -283,6 +347,7 @@ function childLife(s: GameState, id: string) {
       name: child.name,
       gender: child.gender ?? "other",
       hometown: s.hometown,
+      origin: s.origin,
       birthDate: s.birthDate,
       seed,
     },
@@ -387,35 +452,82 @@ export function reduce(input: GameState, a: Action): GameState {
     log: [],
     ledger: [],
     history: {},
+    pending: null,
+    investments: {
+      ...input.investments,
+      instruments: [],
+      news: [],
+      history: [],
+    },
     profile: { ...input.profile, summaries: [] },
   }) as GameState;
   s.log = [...input.log];
   s.ledger = [...input.ledger];
   s.history = { ...input.history };
+  s.pending = input.pending;
+  s.investments.instruments =
+    a.type === "age"
+      ? input.investments.instruments.map((i) => ({
+          ...i,
+          history: [...i.history],
+        }))
+      : input.investments.instruments;
+  s.investments.news = [...input.investments.news];
+  s.investments.history = [...input.investments.history];
   s.profile.summaries = [...input.profile.summaries];
   s.revision++;
   s.actionSerial++;
+  s.lastDeltas = [];
+  changeContext(
+    s,
+    a.type,
+    `Thay đổi từ ${{ age: "năm mới", activity: "hoạt động", choose: "lựa chọn", relation: "quan hệ", workHard: "làm thêm giờ" }[a.type as string] ?? "quyết định của bạn"}.`,
+  );
   if (storyAction(s, a)) return s;
   if (a.type === "continueChild") return childLife(s, a.id);
   requireGame(
     s.phase !== "dead",
     "Cuộc đời đã kết thúc. Hãy bắt đầu một đời khác.",
   );
+  requireGame(
+    !s.casino.hand || ["casinoHit", "casinoStand"].includes(a.type),
+    "Hãy kết thúc ván bài trước khi thực hiện quyết định khác.",
+  );
+  requireGame(
+    !s.loveOffer || a.type === "loveResolve",
+    "Hãy trả lời lời mời gặp mặt trước.",
+  );
   if (a.type === "choose") {
     requireGame(
       s.phase === "awaiting_choice" && s.pending?.instanceId === a.instanceId,
       "Sự kiện này đã được xử lý hoặc không còn ở đây.",
     );
-    const event = s.pending.event;
-    const choice = event.choices.find((c) => c.id === a.optionId);
+    const pending = s.pending;
+    const event = pending.event;
+    const choice = pendingChoices(pending).find((c) => c.id === a.optionId);
     requireGame(
       choice && eligible(s, choice.conditions),
       "Lựa chọn chưa đủ điều kiện.",
     );
-    const result = chooseOutcome(s, choice.outcomes);
-    addLog(s, event.text, "event");
-    addLog(s, `${choice.label}: ${result.text}`, "event");
+    const selected = choice.cases ? chooseCase(s, choice) : null;
+    const result = selected?.outcome ?? chooseOutcome(s, choice.outcomes);
+    const text = selected?.text ?? result.text;
+    addLog(s, pending.node?.text ?? event.text, "event");
+    addLog(s, `${choice.label}: ${text}`, "event");
+    changeContext(s, "event", `${choice.label}: ${text}`);
     applyEffects(s, result.effects);
+    if (selected) {
+      const key = [
+        event.id,
+        ...(pending.node?.path ?? []).map(
+          (p) => p.choiceId + "_" + p.caseIndex,
+        ),
+        choice.id,
+        selected.index,
+      ].join("_");
+      s.caseHistory[key] = (s.caseHistory[key] ?? 0) + 1;
+      for (const f of selected.outcome.setFlags ?? []) flag(s, f);
+    }
     s.pending = null;
     count(s, "chainSteps");
     requireGame(
@@ -430,7 +542,36 @@ export function reduce(input: GameState, a: Action): GameState {
           eventId: result.schedule.eventId,
           age: s.age + result.schedule.afterYears,
         });
-      advanceQueue(s);
+      if (selected?.outcome.choices) {
+        const path = [
+          ...(pending.node?.path ?? []),
+          { choiceId: choice.id, caseIndex: selected.index },
+        ];
+        requireGame(
+          path.length <= 32,
+          "Nhánh sự kiện vượt giới hạn an toàn 32 bước.",
+        );
+        s.pending = {
+          event,
+          instanceId: `${s.id}_event_${++s.actionSerial}`,
+          node: { text, choices: selected.outcome.choices, path },
+        };
+        s.phase = "awaiting_choice";
+      } else {
+        if (event.chainEnd && event.chainId) {
+          flag(s, `chain_done_${event.chainId}`);
+          flag(s, `chain_active_${event.chainId}`, false);
+          addLog(
+            s,
+            `Chuỗi ${event.chainId} đã khép lại. Hậu quả đang có sẽ hết theo thời hạn.`,
+            "event",
+          );
+        }
+        if (event.group === "manual") {
+          s.phase = "ready";
+          s.pending = null;
+        } else advanceQueue(s);
+      }
     }
     achievementCheck(s);
     return s;
@@ -440,10 +581,41 @@ export function reduce(input: GameState, a: Action): GameState {
     "Hãy giải quyết sự kiện trước khi làm việc khác.",
   );
   if (a.type === "age") {
+    requireGame(!s.casino.hand, "Hãy kết thúc ván bài trước khi tăng tuổi.");
     startYear(s);
     return s;
   }
-  if (a.type === "activity") {
+  if (casinoAction(s, a)) {
+    achievementCheck(s);
+    return s;
+  }
+  if (investmentAction(s, a)) {
+    achievementCheck(s);
+    return s;
+  }
+  if (a.type === "loveResolve") {
+    requireGame(typeof a.accept === "boolean", "Câu trả lời không hợp lệ.");
+    resolveLove(s, a.id, a.accept);
+  } else if (a.type === "askTuition") {
+    requireGame(
+      s.age >= 16 &&
+        s.relations.some(
+          (r) => r.alive && ["mother", "father", "parent"].includes(r.role),
+        ),
+      "Cần từ 16 tuổi và cha mẹ còn sống.",
+    );
+    requireGame(
+      !s.flags.includes("tuition_discussed"),
+      "Bạn đã nói chuyện về học phí; lựa chọn được giữ trong đời này.",
+    );
+    s.pending = {
+      instanceId: `${s.id}_event_${s.actionSerial}`,
+      event: eventById.get("tuition_support")!,
+    };
+    s.phase = "awaiting_choice";
+  } else if (a.type === "migrate") {
+    migrate(s, a.origin);
+  } else if (a.type === "activity") {
     const activity = activities.find((x) => x.id === a.id);
     requireGame(activity, "Không tìm thấy hoạt động.");
     const reason = activityReason(s, activity);
@@ -453,7 +625,12 @@ export function reduce(input: GameState, a: Action): GameState {
         activityTargets(s, activity).some((t) => t.id === a.targetId),
         "Hãy chọn đúng người hoặc tài sản cho hoạt động.",
       );
-    money(s, -activity.cost, activity.name);
+    changeContext(
+      s,
+      "activity",
+      `${activity.name}: chi phí và thời gian trong năm.`,
+    );
+    money(s, -activityCost(s, activity), activity.name);
     s.time -= activity.timeCost;
     s.activityUses[a.id] = (s.activityUses[a.id] ?? 0) + 1;
     count(s, `group_${activity.group}`);
@@ -461,7 +638,16 @@ export function reduce(input: GameState, a: Action): GameState {
       count(s, "healthy_activities");
     if (activity.crimeCategory) count(s, `crime_${activity.crimeCategory}`);
     const result = chooseOutcome(s, activity.outcomes);
-    applyEffects(s, result.effects, a.targetId);
+    changeContext(s, "activity", `${activity.name}: ${result.text}`);
+    const multiplier = 1 / s.activityUses[a.id];
+    applyEffects(
+      s,
+      result.effects.map((e) =>
+        "stat" in e ? { ...e, delta: Math.round(e.delta * multiplier) } : e,
+      ),
+      a.targetId,
+    );
+    specialActivity(s, activity, a);
     addLog(s, `${activity.name}: ${result.text}`, "event");
     if (s.deathCause) finishLife(s, s.deathCause);
   } else if (a.type === "relation") {

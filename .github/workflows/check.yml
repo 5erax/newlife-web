@@ -16,8 +16,13 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
-      - run: npm run simulate -- 10000 | tee simulation-report.txt
+      - run: npm run simulate -- 10000 --report | tee simulation-report.txt
+      - run: npx tsx src/tools/casino-simulation.ts
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: simulation-report
-          path: simulation-report.txt
+          path: |
+            simulation-report.txt
+            docs/qa/expansion-simulation.json
+            docs/qa/branch-coverage.json
+            docs/qa/casino-simulation.json

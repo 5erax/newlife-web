@@ -1,10 +1,11 @@
+import { localPrice, origins } from "../../engine/world";
 import { useState } from "react";
 import type { Action, GameState } from "../../engine/types";
 import { jobs, jobById } from "../../content/catalog";
 import industries from "../../content/industries.json" with { type: "json" };
 import { jobReason, sideJobs } from "../../engine/economy";
 import ui from "../../i18n/vi.json" with { type: "json" };
-import { cash } from "../format";
+import { cash as displayCash } from "../format";
 export function Work({
   s,
   dispatch,
@@ -14,10 +15,13 @@ export function Work({
   dispatch: (a: Action) => void;
   busy: boolean;
 }) {
+  const cash = (value: number, full = false) =>
+    displayCash(value, full, s.origin);
   const [industry, setIndustry] = useState("all"),
     [search, setSearch] = useState(""),
     [readyOnly, setReadyOnly] = useState(false),
     [side, setSide] = useState("Phụ quán");
+  const [destination, setDestination] = useState("vn");
   const current = s.job ? jobById.get(s.job.id)! : null;
   const offers = jobs.filter(
     (j) =>
@@ -168,7 +172,7 @@ export function Work({
                   {j.ranks.length} bậc nghề
                 </p>
                 <div className="row-meta">
-                  <strong>{cash(j.ranks[0].salary)}/năm</strong>
+                  <strong>{cash(localPrice(s, j.ranks[0].salary))}/năm</strong>
                   <span>{j.ranks.map((r) => r.name).join(" → ")}</span>
                 </div>
                 {reason && <small className="lock-reason">{reason}</small>}
@@ -185,6 +189,50 @@ export function Work({
         })}
       </div>
       {!offers.length && <p className="empty">{ui.noResults}</p>}
+      <details className="part-time">
+        <summary>Di cư và bắt đầu công việc ở nơi khác</summary>
+        <p>
+          Di cư làm bạn nghỉ công việc và chế độ hưu hiện tại. Tài sản đứng tên
+          vẫn giữ nơi mua; giá thị trường mua mới và chi phí sinh hoạt đổi theo
+          nơi sống.
+        </p>
+        <div className="toolbar">
+          <select
+            value={destination}
+            onChange={(e) => setDestination(e.target.value)}
+            aria-label="Nơi muốn di cư"
+          >
+            {origins
+              .filter((o) => o.id !== s.origin)
+              .map((o) => (
+                <option key={o.id} value={o.id}>
+                  {o.label}
+                </option>
+              ))}
+          </select>
+          <button
+            className="button subtle"
+            disabled={
+              busy ||
+              s.phase !== "ready" ||
+              s.age < 18 ||
+              !!s.prisonYears ||
+              destination === s.origin ||
+              s.money < localPrice(s, 5000000)
+            }
+            onClick={() => {
+              if (
+                confirm(
+                  `Chuyển đến ${origins.find((o) => o.id === destination)?.label} và bắt đầu tìm việc lại?`,
+                )
+              )
+                dispatch({ type: "migrate", origin: destination });
+            }}
+          >
+            Di cư · {cash(localPrice(s, 5000000))}
+          </button>
+        </div>
+      </details>
     </section>
   );
 }

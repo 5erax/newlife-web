@@ -1,0 +1,1213 @@
+[
+  {
+    "id": "act_fame_book",
+    "group": "danhvong",
+    "name": "Viết và xuất bản sách",
+    "minAge": 18,
+    "cost": 1000000,
+    "description": "Chăm sóc danh vọng, thù lao và uy tín của bạn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho viết và xuất bản sách. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 3
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "fame",
+      "action": "book"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_fame_commercial",
+    "group": "danhvong",
+    "name": "Đóng quảng cáo truyền hình",
+    "minAge": 18,
+    "cost": 0,
+    "description": "Chăm sóc danh vọng, thù lao và uy tín của bạn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [
+      {
+        "field": "fame",
+        "op": ">=",
+        "value": 20
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho đóng quảng cáo truyền hình. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "health",
+            "delta": -1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "fame",
+      "action": "commercial"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_fame_crashout",
+    "group": "danhvong",
+    "name": "Nổi loạn gây chú ý",
+    "minAge": 18,
+    "cost": 200000,
+    "description": "Chăm sóc danh vọng, thù lao và uy tín của bạn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho nổi loạn gây chú ý. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 3
+          },
+          {
+            "stat": "health",
+            "delta": -5
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "fame",
+      "action": "crashout"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_fame_photoshoot",
+    "group": "danhvong",
+    "name": "Chụp ảnh cho tạp chí",
+    "minAge": 18,
+    "cost": 100000,
+    "description": "Chăm sóc danh vọng, thù lao và uy tín của bạn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [
+      {
+        "field": "fame",
+        "op": ">=",
+        "value": 20
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho chụp ảnh cho tạp chí. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "fame",
+      "action": "photoshoot"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_fame_talkshow",
+    "group": "danhvong",
+    "name": "Tham gia chương trình trò chuyện",
+    "minAge": 18,
+    "cost": 0,
+    "description": "Chăm sóc danh vọng, thù lao và uy tín của bạn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [
+      {
+        "field": "fame",
+        "op": ">=",
+        "value": 40
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho tham gia chương trình trò chuyện. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "fame",
+      "action": "talkshow"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_love_celebrity",
+    "group": "tinhyeu",
+    "name": "Ứng dụng hẹn người nổi tiếng",
+    "minAge": 18,
+    "cost": 500000,
+    "description": "Nhận hồ sơ nhân vật trưởng thành, cân nhắc sự phù hợp và sự đồng thuận.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "not": {
+          "has": "role",
+          "id": "lover"
+        }
+      },
+      {
+        "not": {
+          "has": "role",
+          "id": "spouse"
+        }
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho ứng dụng hẹn người nổi tiếng. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "love",
+      "mode": "celebrity"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_love_date",
+    "group": "tinhyeu",
+    "name": "Tìm một cuộc hẹn",
+    "minAge": 18,
+    "cost": 0,
+    "description": "Nhận hồ sơ nhân vật trưởng thành, cân nhắc sự phù hợp và sự đồng thuận.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "not": {
+          "has": "role",
+          "id": "lover"
+        }
+      },
+      {
+        "not": {
+          "has": "role",
+          "id": "spouse"
+        }
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho tìm một cuộc hẹn. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "love",
+      "mode": "date"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_love_app",
+    "group": "tinhyeu",
+    "name": "Ứng dụng hẹn hò",
+    "minAge": 18,
+    "cost": 50000,
+    "description": "Nhận hồ sơ nhân vật trưởng thành, cân nhắc sự phù hợp và sự đồng thuận.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "not": {
+          "has": "role",
+          "id": "lover"
+        }
+      },
+      {
+        "not": {
+          "has": "role",
+          "id": "spouse"
+        }
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho ứng dụng hẹn hò. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "love",
+      "mode": "app"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_love_lgbtq",
+    "group": "tinhyeu",
+    "name": "Ứng dụng hẹn hò LGBTQ+",
+    "minAge": 18,
+    "cost": 50000,
+    "description": "Nhận hồ sơ nhân vật trưởng thành, cân nhắc sự phù hợp và sự đồng thuận.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [
+      {
+        "not": {
+          "has": "role",
+          "id": "lover"
+        }
+      },
+      {
+        "not": {
+          "has": "role",
+          "id": "spouse"
+        }
+      }
+    ],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho ứng dụng hẹn hò lgbtq+. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "love",
+      "mode": "lgbtq"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_love_hookup",
+    "group": "tinhyeu",
+    "name": "Cuộc gặp một đêm",
+    "minAge": 18,
+    "cost": 100000,
+    "description": "Nhận hồ sơ nhân vật trưởng thành, cân nhắc sự phù hợp và sự đồng thuận.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho cuộc gặp một đêm. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "love",
+      "mode": "hookup"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_love_threesome",
+    "group": "tinhyeu",
+    "name": "Cuộc gặp riêng tư ba người",
+    "minAge": 18,
+    "cost": 200000,
+    "description": "Nhận hồ sơ nhân vật trưởng thành, cân nhắc sự phù hợp và sự đồng thuận.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho cuộc gặp riêng tư ba người. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "love",
+      "mode": "threesome"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_acting_lessons",
+    "group": "tamtri",
+    "name": "Học diễn xuất",
+    "minAge": 6,
+    "cost": 100000,
+    "description": "Luyện lời thoại, cảm xúc và cách đứng trước khán giả.",
+    "timeCost": 1,
+    "maxUsesPerYear": 3,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho học diễn xuất. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "practice",
+      "skill": "acting"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_find_book",
+    "group": "tamtri",
+    "name": "Tìm một cuốn sách hay",
+    "minAge": 5,
+    "cost": 0,
+    "description": "Tìm sách phù hợp ở thư viện hoặc tủ sách dùng chung.",
+    "timeCost": 1,
+    "maxUsesPerYear": 6,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho tìm một cuốn sách hay. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_diet_plan",
+    "group": "tamtri",
+    "name": "Chọn thực đơn",
+    "minAge": 13,
+    "cost": 100000,
+    "description": "Đổi thói quen ăn uống trong mô phỏng; không phải tư vấn dinh dưỡng.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho chọn thực đơn. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "stat": "looks",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "diet",
+      "options": [
+        {
+          "id": "balanced",
+          "label": "Ăn uống cân bằng"
+        },
+        {
+          "id": "plant",
+          "label": "Ăn thiên về thực vật"
+        },
+        {
+          "id": "training",
+          "label": "Theo thực đơn tập luyện"
+        }
+      ]
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_garden",
+    "group": "tamtri",
+    "name": "Chăm vườn",
+    "minAge": 6,
+    "cost": 0,
+    "description": "Chăm vài chậu cây, chậm lại và quan sát điều đang lớn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 6,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho chăm vườn. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_gym_training",
+    "group": "tamtri",
+    "name": "Tập ở phòng gym",
+    "minAge": 13,
+    "cost": 100000,
+    "description": "Tập theo thể lực và nghỉ đủ giữa những buổi tập.",
+    "timeCost": 1,
+    "maxUsesPerYear": 3,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho tập ở phòng gym. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 3
+          },
+          {
+            "stat": "looks",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "practice",
+      "skill": "fitness"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_instrument",
+    "group": "tamtri",
+    "name": "Luyện nhạc cụ",
+    "minAge": 6,
+    "cost": 30000,
+    "description": "Chọn một trong 25 nhạc cụ, mượn phòng tập và giữ tiến trình riêng.",
+    "timeCost": 1,
+    "maxUsesPerYear": 3,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho luyện nhạc cụ. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "practice",
+      "skill": "instrument",
+      "options": [
+        {
+          "id": "accordion",
+          "label": "Đàn accordion"
+        },
+        {
+          "id": "banjo",
+          "label": "Đàn banjo"
+        },
+        {
+          "id": "bass_guitar",
+          "label": "Guitar bass"
+        },
+        {
+          "id": "cello",
+          "label": "Đàn cello"
+        },
+        {
+          "id": "didgeridoo",
+          "label": "Kèn didgeridoo"
+        },
+        {
+          "id": "drums",
+          "label": "Bộ trống"
+        },
+        {
+          "id": "flute",
+          "label": "Sáo ngang"
+        },
+        {
+          "id": "guitar",
+          "label": "Guitar"
+        },
+        {
+          "id": "harmonica",
+          "label": "Kèn harmonica"
+        },
+        {
+          "id": "harp",
+          "label": "Đàn hạc"
+        },
+        {
+          "id": "kazoo",
+          "label": "Kèn kazoo"
+        },
+        {
+          "id": "keyboard",
+          "label": "Đàn keyboard"
+        },
+        {
+          "id": "midi_keyboard",
+          "label": "Bàn phím MIDI"
+        },
+        {
+          "id": "organ",
+          "label": "Đàn organ"
+        },
+        {
+          "id": "pan_flute",
+          "label": "Sáo pan"
+        },
+        {
+          "id": "piano",
+          "label": "Piano"
+        },
+        {
+          "id": "recorder",
+          "label": "Sáo dọc"
+        },
+        {
+          "id": "saxophone",
+          "label": "Saxophone"
+        },
+        {
+          "id": "steel_drum",
+          "label": "Trống thép"
+        },
+        {
+          "id": "tambourine",
+          "label": "Trống lắc"
+        },
+        {
+          "id": "triangle",
+          "label": "Kẻng tam giác"
+        },
+        {
+          "id": "trombone",
+          "label": "Trombone"
+        },
+        {
+          "id": "trumpet",
+          "label": "Trumpet"
+        },
+        {
+          "id": "tuba",
+          "label": "Tuba"
+        },
+        {
+          "id": "violin",
+          "label": "Violin"
+        }
+      ]
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_public_library",
+    "group": "tamtri",
+    "name": "Đến thư viện công cộng",
+    "minAge": 5,
+    "cost": 0,
+    "description": "Mượn tài liệu, đọc và học một điều mới.",
+    "timeCost": 1,
+    "maxUsesPerYear": 6,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho đến thư viện công cộng. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_martial",
+    "group": "tamtri",
+    "name": "Luyện võ thuật",
+    "minAge": 6,
+    "cost": 80000,
+    "description": "Luyện kỹ thuật an toàn, sức bền và khả năng tự kiểm soát.",
+    "timeCost": 1,
+    "maxUsesPerYear": 3,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho luyện võ thuật. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "practice",
+      "skill": "martial",
+      "options": [
+        {
+          "id": "jiu_jitsu",
+          "label": "Jiu-jitsu"
+        },
+        {
+          "id": "judo",
+          "label": "Judo"
+        },
+        {
+          "id": "karate",
+          "label": "Karate"
+        },
+        {
+          "id": "krav_maga",
+          "label": "Krav Maga"
+        },
+        {
+          "id": "kung_fu",
+          "label": "Kung fu"
+        },
+        {
+          "id": "taekwondo",
+          "label": "Taekwondo"
+        }
+      ]
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_meditation",
+    "group": "tamtri",
+    "name": "Thiền",
+    "minAge": 6,
+    "cost": 0,
+    "description": "Ngồi yên một lúc và chú ý nhịp thở.",
+    "timeCost": 1,
+    "maxUsesPerYear": 6,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho thiền. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "stat": "health",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_memory_test",
+    "group": "tamtri",
+    "name": "Đánh giá trí nhớ",
+    "minAge": 6,
+    "cost": 0,
+    "description": "Một bài đánh giá hư cấu dựa trên khả năng hiện tại, có lưu kết quả.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho đánh giá trí nhớ. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "memory"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_modeling_lessons",
+    "group": "tamtri",
+    "name": "Học trình diễn người mẫu",
+    "minAge": 13,
+    "cost": 150000,
+    "description": "Luyện dáng đi, biểu cảm và sự tự tin trước máy ảnh.",
+    "timeCost": 1,
+    "maxUsesPerYear": 3,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho học trình diễn người mẫu. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "practice",
+      "skill": "modeling"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_space_camp",
+    "group": "tamtri",
+    "name": "Trại khám phá không gian",
+    "minAge": 8,
+    "cost": 2000000,
+    "description": "Thử một mô hình tên lửa và học về bầu trời trong game.",
+    "timeCost": 2,
+    "maxUsesPerYear": 1,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho trại khám phá không gian. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "intelligence",
+            "delta": 5
+          },
+          {
+            "stat": "happiness",
+            "delta": 4
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_mind_walk",
+    "group": "tamtri",
+    "name": "Đi bộ thư giãn",
+    "minAge": 0,
+    "cost": 0,
+    "description": "Một vòng phù hợp tuổi, có người chăm sóc khi cần.",
+    "timeCost": 1,
+    "maxUsesPerYear": 8,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho đi bộ thư giãn. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_voice_lessons",
+    "group": "tamtri",
+    "name": "Luyện giọng",
+    "minAge": 6,
+    "cost": 100000,
+    "description": "Tập hơi, cao độ và giọng nói rõ ràng.",
+    "timeCost": 1,
+    "maxUsesPerYear": 3,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho luyện giọng. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "happiness",
+            "delta": 2
+          },
+          {
+            "stat": "intelligence",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "practice",
+      "skill": "voice"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_dye",
+    "group": "salon",
+    "name": "Nhuộm tóc",
+    "minAge": 13,
+    "cost": 150000,
+    "description": "Chọn màu tóc và giữ trên hình đại diện.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho nhuộm tóc. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "style",
+      "field": "hairColor",
+      "options": [
+        {
+          "id": "black",
+          "label": "Đen"
+        },
+        {
+          "id": "brown",
+          "label": "Nâu"
+        },
+        {
+          "id": "blonde",
+          "label": "Vàng"
+        },
+        {
+          "id": "auburn",
+          "label": "Nâu đỏ"
+        },
+        {
+          "id": "blue",
+          "label": "Xanh"
+        },
+        {
+          "id": "purple",
+          "label": "Tím"
+        },
+        {
+          "id": "gray",
+          "label": "Bạc"
+        }
+      ]
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_stylist",
+    "group": "salon",
+    "name": "Đổi kiểu tóc tại salon",
+    "minAge": 6,
+    "cost": 100000,
+    "description": "Chọn kiểu tóc phù hợp với điều bạn thích.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho đổi kiểu tóc tại salon. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "style",
+      "field": "hairStyle",
+      "options": [
+        {
+          "id": "short",
+          "label": "Ngắn"
+        },
+        {
+          "id": "long",
+          "label": "Dài"
+        },
+        {
+          "id": "curly",
+          "label": "Xoăn"
+        },
+        {
+          "id": "bob",
+          "label": "Bob"
+        },
+        {
+          "id": "buzz",
+          "label": "Cắt sát"
+        }
+      ]
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_massage",
+    "group": "salon",
+    "name": "Massage thư giãn",
+    "minAge": 16,
+    "cost": 200000,
+    "description": "Một buổi thư giãn để nghỉ sau lịch làm việc hoặc học tập.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho massage thư giãn. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "health",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 3
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_nails",
+    "group": "salon",
+    "name": "Làm móng",
+    "minAge": 13,
+    "cost": 100000,
+    "description": "Chọn kiểu chăm móng; lựa chọn được giữ trong hồ sơ.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho làm móng. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 2
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "style",
+      "field": "nails",
+      "options": [
+        {
+          "id": "clear",
+          "label": "Trong suốt"
+        },
+        {
+          "id": "red",
+          "label": "Đỏ"
+        },
+        {
+          "id": "pastel",
+          "label": "Màu nhạt"
+        },
+        {
+          "id": "dark",
+          "label": "Màu trầm"
+        }
+      ]
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_tanning",
+    "group": "salon",
+    "name": "Làm rám da",
+    "minAge": 18,
+    "cost": 200000,
+    "description": "Thay đổi diện mạo trong game, có xác suất buổi chăm sóc không như mong muốn.",
+    "timeCost": 1,
+    "maxUsesPerYear": 1,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho làm rám da. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 1
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "feature": {
+      "type": "tan"
+    },
+    "sourceKind": "original_web"
+  },
+  {
+    "id": "act_waxing",
+    "group": "salon",
+    "name": "Waxing tại salon",
+    "minAge": 18,
+    "cost": 150000,
+    "description": "Một buổi chăm sóc cá nhân với mức hiệu quả nhỏ.",
+    "timeCost": 1,
+    "maxUsesPerYear": 2,
+    "conditions": [],
+    "outcomes": [
+      {
+        "chance": 1,
+        "text": "Bạn dành thời gian cho waxing tại salon. Kết quả và tiến trình được ghi vào nhật ký.",
+        "effects": [
+          {
+            "stat": "looks",
+            "delta": 2
+          },
+          {
+            "stat": "happiness",
+            "delta": 1
+          }
+        ]
+      }
+    ],
+    "sourceKind": "original_web"
+  }
+]

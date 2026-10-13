@@ -16,7 +16,12 @@ import { eligible } from "../engine/conditions";
 import { nextRandom } from "../engine/rng";
 import { serialize, parseSave } from "../engine/save";
 import type { Action, GameState } from "../engine/types";
+import { pendingChoices } from "../engine/branches";
 import assert from "node:assert/strict";
+import { branchStats } from "./branch-analysis";
+import { localPrice } from "../engine/world";
+import { casinoBetLimit, blackjackScore } from "../engine/casino";
+import { writeFileSync } from "node:fs";
 export function simulateLife(seed: number, strategy = 0) {
   let s = newLife({
     name: "An Mô Phỏng",
@@ -24,16 +29,39 @@ export function simulateLife(seed: number, strategy = 0) {
     hometown: "Đà Nẵng",
     birthDate: "2000-06-15",
     seed,
+    origin: "random",
   });
   let botRng = seed ^ 0x12345678;
   let steps = 0;
   const act = (action: Action) => {
+    const previous = s;
     s = reduce(s, action);
+    const deltas = s.log
+      .slice(previous.log.length)
+      .filter((r) => r.source !== "summary")
+      .flatMap((r) => r.deltas);
+    for (const key of [
+      "health",
+      "happiness",
+      "intelligence",
+      "looks",
+      "money",
+    ] as const) {
+      const before = key === "money" ? previous.money : previous.stats[key],
+        after = key === "money" ? s.money : s.stats[key];
+      assert.equal(
+        deltas
+          .filter((d) => d.key === key)
+          .reduce((n, d) => n + d.after - d.before, 0),
+        after - before,
+        `Missing delta: ${seed}/${s.age}/${action.type}/${key}`,
+      );
+    }
   };
   while (s.phase !== "dead") {
     assert(++steps < 1000, `Stuck: seed ${seed}, age ${s.age}`);
     if (s.pending) {
-      const choices = s.pending.event.choices.filter((c) =>
+      const choices = pendingChoices(s.pending).filter((c) =>
         eligible(s, c.conditions),
       );
       assert(choices.length);
@@ -54,7 +82,12 @@ export function simulateLife(seed: number, strategy = 0) {
       const offers = jobs
         .filter((j) => !jobReason(s, j.id))
         .sort((a, b) => b.ranks[0].salary - a.ranks[0].salary);
-      if (offers.length && (!s.job || offers[0].ranks[0].salary > s.job.salary))
+      if (
+        offers.length &&
+        (!s.job ||
+          (offers[0].id !== s.job.id &&
+            localPrice(s, offers[0].ranks[0].salary) > s.job.salary))
+      )
         act({ type: "job", id: offers[0].id });
       if (strategy === 1 && !s.education.current && s.age < 45) {
         const target = education.find(
@@ -110,6 +143,27 @@ export function simulateLife(seed: number, strategy = 0) {
       if (item && s.money >= Math.round(s.market[item.id] * 1.02))
         act({ type: "buy", id: item.id });
     }
+    if (
+      strategy === 3 &&
+      s.age >= 15 &&
+      s.age <= 35 &&
+      !s.prisonYears &&
+      s.age >= s.casino.bannedUntil &&
+      casinoBetLimit(s) >= 1000
+    ) {
+      act({
+        type: "casinoDeal",
+        game: s.age % 2 ? "blackjack" : "bacao",
+        bet: 1000,
+      });
+      while (s.casino.hand)
+        act({
+          type:
+            blackjackScore(s.casino.hand.player).value < 17
+              ? "casinoHit"
+              : "casinoStand",
+        });
+    }
     const aid = activities.find(
       (a) =>
         a.id ===
@@ -147,10 +201,62 @@ export function runSimulation(total: number) {
     repeatedOccurrences = 0,
     maxEventOccurrences = 0;
   const started = performance.now();
+  const statTotals = { health: 0, happiness: 0, intelligence: 0, looks: 0 };
+  let annualSamples = 0,
+    constantLooks20 = 0,
+    missingDeltas = 0;
+  const looksByAge: Record<
+    string,
+    { n: number; sum: number; squares: number }
+  > = {};
+  const branches: Record<string, number> = {};
   for (let i = 0; i < total; i++) {
     const seed = (i * 7919 + 42) >>> 0;
     try {
       const s = simulateLife(seed, i % 4);
+      for (const [key, n] of Object.entries(s.caseHistory))
+        branches[key] = (branches[key] ?? 0) + n;
+      let previousLooks =
+          s.log.flatMap((r) => r.deltas).find((d) => d.key === "looks")
+            ?.before ?? s.stats.looks,
+        streak = 0;
+      for (const row of s.log.filter(
+        (r) => r.source === "summary" && r.age > 0,
+      )) {
+        annualSamples++;
+        for (const key of Object.keys(
+          statTotals,
+        ) as (keyof typeof statTotals)[]) {
+          const d = row.deltas.find((d) => d.key === key);
+          statTotals[key] += d ? Math.abs(d.after - d.before) : 0;
+        }
+        const value =
+          row.deltas.find((d) => d.key === "looks")?.after ?? previousLooks;
+        streak = value === previousLooks ? streak + 1 : 0;
+        if (streak === 19) constantLooks20++;
+        previousLooks = value;
+        const band =
+          row.age < 6
+            ? "0–5"
+            : row.age < 12
+              ? "6–11"
+              : row.age < 18
+                ? "12–17"
+                : row.age < 30
+                  ? "18–29"
+                  : row.age < 45
+                    ? "30–44"
+                    : row.age < 60
+                      ? "45–59"
+                      : "60+";
+        const sample = (looksByAge[band] ??= { n: 0, sum: 0, squares: 0 });
+        sample.n++;
+        sample.sum += value;
+        sample.squares += value * value;
+      }
+      for (const row of s.log)
+        if (row.source !== "summary")
+          for (const d of row.deltas) if (!d.reasons.length) missingDeltas++;
       ageSum += s.age;
       deaths.push(s.age);
       if (
@@ -203,7 +309,67 @@ export function runSimulation(total: number) {
     ),
     maxEventOccurrences,
     durationSeconds: Number(((performance.now() - started) / 1000).toFixed(2)),
+    annualSamples,
+    meanAbsoluteAnnualStats: Object.fromEntries(
+      Object.entries(statTotals).map(([k, n]) => [
+        k,
+        Number((n / annualSamples).toFixed(3)),
+      ]),
+    ),
+    looksStandardDeviation: Object.fromEntries(
+      Object.entries(looksByAge).map(([k, b]) => [
+        k,
+        Number(
+          Math.sqrt(Math.max(0, b.squares / b.n - (b.sum / b.n) ** 2)).toFixed(
+            3,
+          ),
+        ),
+      ]),
+    ),
+    constantLooks20,
+    missingDeltas,
+    branchesSeen: Object.keys(branches).length,
   };
+  if (process.argv.includes("--report")) {
+    if (total >= 10000) {
+      assert(
+        Object.values(report.meanAbsoluteAnnualStats).every(
+          (n) => n >= 3 && n <= 6,
+        ),
+        "Annual stat changes outside 3–6 target",
+      );
+      assert(
+        Object.values(report.looksStandardDeviation).every((n) => n > 0),
+        "Constant appearance population",
+      );
+      assert(
+        report.constantLooks20 === 0,
+        "Appearance unchanged for twenty years",
+      );
+      assert(report.missingDeltas === 0, "Missing reasons for changes");
+    }
+    writeFileSync(
+      "docs/qa/expansion-simulation.json",
+      JSON.stringify(report, null, 2) + "\n",
+    );
+    const keys = branchStats().trees.flatMap((t) => t.caseKeys);
+    writeFileSync(
+      "docs/qa/branch-coverage.json",
+      JSON.stringify(
+        {
+          lives: total,
+          seen: keys.filter((k) => branches[k]).length,
+          seenIncludingFallbacks: Object.keys(branches).length,
+          total: keys.length,
+          unseen: keys.filter((k) => !branches[k]),
+          rare: keys.filter((k) => (branches[k] ?? 0) > 0 && branches[k] < 5),
+          counts: branches,
+        },
+        null,
+        2,
+      ) + "\n",
+    );
+  }
   return report;
 }
 if (process.argv[1]?.replaceAll("\\", "/").endsWith("/simulate.ts"))

@@ -13,6 +13,10 @@ import titles from "../content/titles.json" with { type: "json" };
 import medals from "../content/medals.json" with { type: "json" };
 import { CONTENT_VERSION } from "../engine/types";
 import { validateContent } from "./content";
+import { branchStats } from "./branch-analysis";
+import { expandCases } from "../engine/branches";
+import type { Choice } from "../engine/types";
+import investments from "../content/investments.json" with { type: "json" };
 const groups = {
   lifeEvents: events.filter((e) => e.group !== "career"),
   careerEvents: events.filter((e) => e.group === "career"),
@@ -25,6 +29,7 @@ const groups = {
   stories,
   titles,
   medals,
+  investments,
 };
 const manifest = {
   contentVersion: CONTENT_VERSION,
@@ -56,25 +61,58 @@ writeFileSync(
 );
 mkdirSync("docs/content", { recursive: true });
 const graph = [
-  "# Đồ thị nội dung v1",
+  "# Đồ thị nội dung v1.1",
   "",
-  `Có ${events.length} sự kiện trong pool: 150 thường + 144 nghề. Có ${fallbacks.length} dự phòng, được đếm riêng. Các nhánh khó đạt được kiểm bằng fixture; bot mô phỏng không bảo đảm gặp hết nghề.`,
+  `Có ${events.length} sự kiện trong pool, ${fallbacks.length} dự phòng và ${investments.length} sản phẩm đầu tư khởi đầu. Các nhánh khó đạt được kiểm bằng fixture; bot mô phỏng không bảo đảm gặp hết nghề.`,
   "",
   "## Chuỗi đời thường",
   "",
   "```mermaid",
   "flowchart LR",
 ];
-for (const e of events)
-  for (const c of e.choices)
-    for (const o of c.outcomes) {
-      if (o.nextEvent) graph.push(`  ${e.id} -->|cùng năm| ${o.nextEvent}`);
+function transitions(id: string, choices: Choice[]) {
+  for (const c of choices)
+    for (const o of expandCases(c)) {
+      if (o.nextEvent) graph.push(`  ${id} -->|cùng năm| ${o.nextEvent}`);
       if (o.schedule)
         graph.push(
-          `  ${e.id} -->|sau ${o.schedule.afterYears} năm| ${o.schedule.eventId}`,
+          `  ${id} -->|sau ${o.schedule.afterYears} năm| ${o.schedule.eventId}`,
         );
+      if (o.choices) transitions(id, o.choices);
     }
+}
+for (const e of events) transitions(e.id, e.choices);
 graph.push("```");
+const stats = branchStats();
+writeFileSync(
+  "docs/content/branch-trees.json",
+  JSON.stringify(stats, null, 2) + "\n",
+);
+graph.push(
+  "",
+  `Có ${stats.chains} chuỗi, trung bình ${stats.averageLeaves} lá/sự kiện, ${stats.nestedPercent}% sự kiện có lựa chọn lồng.`,
+  "",
+  "Kiểm tra điều kiện bất khả thi bao phủ mâu thuẫn cờ, xuất thân và khoảng số trực tiếp. Không phải chứng minh SAT cho mọi tổ hợp any/not. Báo cáo nhánh chưa gặp và nhánh hiếm nằm trong docs/qa/branch-coverage.json.",
+);
+for (const e of events) {
+  graph.push("", `## ${e.id}`, "", "```mermaid", "flowchart TD");
+  let serial = 0;
+  function tree(choices: Choice[], parent: string) {
+    for (const c of choices) {
+      const choice = `n${serial++}`;
+      graph.push(`  ${parent} --> ${choice}["${c.id}"]`);
+      expandCases(c).forEach((o, index) => {
+        const node = `n${serial++}`;
+        graph.push(
+          `  ${choice} --> ${node}["case ${index}; trọng số ${o.weight}${o.choices ? "" : "; kết thúc"}"]`,
+        );
+        if (o.choices) tree(o.choices, node);
+      });
+    }
+  }
+  tree(e.choices, "root");
+  graph.push("```");
+}
 for (const story of stories) {
   graph.push("", `## ${story.name}`, "", "```mermaid", "flowchart LR");
   for (const node of story.nodes) {

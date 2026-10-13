@@ -1,0 +1,254 @@
+13.1. Hiển thị biến động chỉ số ngay trên màn Chính
+Vấn đề: người chơi phải cuộn nhật ký mới biết chỉ số vừa đổi.
+• Engine trả thêm deltas sau mỗi hành động: với mỗi chỉ số và tiền có before, after, và danh sách reasons (nguồn thay đổi: lão hoá, sự kiện, hoạt động, nghề...).
+• Trên thanh chỉ số: hiện chip nhảy (ví dụ "+3", "−5") cạnh mỗi thanh trong vài giây sau khi đổi, và một đoạn bóng trên thanh cho thấy giá trị cũ.
+• Thẻ "Năm nay" cố định dưới thanh chỉ số: tổng thay đổi từng chỉ số và tiền kể từ lần tăng tuổi trước, bấm vào để xem lý do chi tiết.
+• Không chỉ dựa vào màu: luôn có dấu cộng/trừ và mũi tên lên/xuống, để người khó phân biệt màu vẫn đọc được.
+• Trạng thái lưu lastYearDeltas để mở lại game vẫn thấy.
+13.2. Nhật ký ghi rõ lượng thay đổi
+• Mỗi dòng nhật ký có cấu trúc { age, text, deltas[], source }, không còn chỉ là chuỗi văn bản.
+• Hiển thị dưới câu chữ một hàng chip nhỏ: ví dụ Sức khỏe −4 · Hạnh phúc +2 · Tiền −2.000.000 đ.
+• Cuối mỗi năm có một dòng tổng kết năm gộp các thay đổi; có tuỳ chọn thu gọn.
+• Lọc nhật ký theo loại (sức khỏe, tiền bạc, quan hệ, sự nghiệp) để dễ tìm.
+• Test: mọi sự kiện có effects thì dòng nhật ký tương ứng phải hiện đủ delta; không được có thay đổi chỉ số nào không có dòng giải thích.
+13.3. Ngoại hình thay đổi theo thời gian
+Nguyên nhân tester thấy ngoại hình đứng yên: bảng ở mục 5.3 đặt ngoại hình không đổi từ 0 đến 29 tuổi, và sau đó chỉ giảm rất chậm. Quy tắc mới thay thế bảng đó:
+Tuổi
+Thay đổi nền mỗi năm (gợi ý)
+Ghi chú
+0–5
+−1 đến +2
+Biến động nhỏ, tăng nhẹ theo dinh dưỡng
+6–11
+−2 đến +2
+Thay răng, lớn nhanh, dao động
+12–17
+−5 đến +5, hơi thiên về tăng
+Dậy thì, có thể nổi mụn; kéo dài vài năm
+18–29
+−1 đến +2, đỉnh quanh 22–28
+Phụ thuộc chăm sóc
+30–44
+−2 đến +0,5
+Bắt đầu xuống
+45–59
+−3 đến 0
+
+60+
+−4 đến −1
+
+Cộng thêm hệ số tác động theo năm:
+• Sức khỏe dưới 30: trừ thêm; sức khỏe trên 80: cộng nhẹ.
+• Hạnh phúc cao cộng nhẹ, trầm cảm kéo dài trừ.
+• Hoạt động chăm sóc (tập gym, chăm da, đổi kiểu tóc, mua quần áo): cộng 1–3, có chi phí (xem 13.9).
+• Sự kiện: bệnh, tai nạn, mụn, béo phì có thể trừ; phẫu thuật thẩm mỹ cộng mạnh một lần kèm rủi ro.
+• Cờ lối sống (hút thuốc, rượu, thức khuya) trừ dần.
+Phần thập phân dùng bốc xác suất như mục 5.3. Chỉ tiêu test: trong 10.000 đời, độ lệch chuẩn ngoại hình giữa các độ tuổi phải khác 0 rõ rệt, và không có đời nào ngoại hình giữ nguyên hằng số suốt 20 năm liên tục (trừ người chơi cố ý khoá).
+13.4. Mọi chỉ số đều biến thiên theo năm tháng
+Chỉ số
+Xu hướng nền
+Yếu tố điều chỉnh
+Sức khỏe
+Ổn định đến 30, giảm dần sau đó
+Thể dục, ăn uống, bệnh, nghề nguy hiểm, nghiện
+Hạnh phúc
+Trở về mức nền cá nhân (mỗi người có điểm cân bằng riêng, ví dụ 40–75)
+Tiền, quan hệ, công việc, sức khỏe, sự kiện; tác động mất dần theo vài năm
+Trí tuệ
+Tăng trong tuổi đi học, đi ngang ở tuổi trưởng thành, giảm chậm sau 60 nếu không học
+Đọc sách, học tập, bỏ học, bệnh
+Ngoại hình
+Theo 13.3
+Theo 13.3
+Mỗi chỉ số mỗi năm cộng thêm một nhiễu ngẫu nhiên nhỏ (−1 đến +1) để không có hai đời giống nhau. Hạnh phúc dùng cơ chế "quay về mức nền" thay vì cộng dồn mãi, để niềm vui hoặc nỗi buồn từ một sự kiện nhạt dần thay vì dính mãi.
+13.5. Học phí đại học có thể do bố mẹ trợ cấp
+• Mỗi nhân vật có familyWealth (nghèo, trung bình, khá giả, giàu) sinh lúc tạo nhân vật.
+• Khi vào đại học, bố mẹ còn sống có thể chi trả một phần học phí và đôi khi cả sinh hoạt phí:
+Mức gia đình
+Bố mẹ đóng (gợi ý)
+Phần còn lại
+Nghèo
+0–10%
+Học bổng, vay, đi làm thêm
+Trung bình
+30–50%
+Một phần tự lo
+Khá giả
+70–90%
+Có thể thêm trợ cấp sinh hoạt
+Giàu
+100% + sinh hoạt
+Không phải lo
+• Mức trợ cấp còn phụ thuộc điểm số, độ thân thiết với bố mẹ và việc bố mẹ còn sống; có sự kiện nói chuyện với bố mẹ về học phí, người chơi có thể nhận hoặc từ chối để tự lập.
+• Hết tiền trợ cấp (hoặc bố mẹ mất) thì chuyển sang học bổng, vay hoặc làm thêm.
+• Con số trên chỉ là điểm khởi đầu; chỉnh bằng mô phỏng.
+13.6. Giới tính, tên và hình đại diện luôn khớp
+• Khi tạo nhân vật, chọn giới tính trước, rồi tên được bốc từ danh sách tên của đúng giới tính đó, và hình đại diện lấy từ bộ SVG đúng giới tính. Hình đại diện suy ra từ trường gender, không đoán từ tên.
+• Tên tự gõ: người chơi chọn giới tính rõ ràng, hình đại diện theo giới tính đã chọn.
+• Tên trung tính được gắn nhãn riêng; khi bốc ngẫu nhiên vẫn gán theo giới tính đã chọn.
+• Người thân (cha, mẹ, con, vợ/chồng) cũng có giới tính rõ ràng và hình đại diện tương ứng; vai trò cha/mẹ đi với nam/nữ nhất quán.
+• Test tự động: với 10.000 nhân vật sinh ngẫu nhiên, số trường hợp avatar.gender khác gender hoặc tên không thuộc danh sách giới tính tương ứng phải bằng 0.
+13.7. Nhân vật có thể đến từ bất kỳ đâu trên thế giới
+• Mỗi nhân vật có origin (quốc gia hoặc vùng). Mặc định bốc theo tỉ lệ dân số thế giới; có tuỳ chọn "nghiêng về Việt Nam" nếu bạn thích.
+• names.json tổ chức theo vùng: họ, tên theo giới. Gợi ý nhóm vùng đủ đa dạng: Việt Nam, Trung Quốc, Nhật Bản, Hàn Quốc, Ấn Độ, Đông Nam Á, Trung Đông, Bắc Phi, châu Phi hạ Sahara, châu Âu (Anh, Đức, Pháp, Tây Ban Nha, Ý, Đông Âu, Bắc Âu), Nga, Bắc Mỹ, Mỹ Latinh. Các tên là dữ kiện đời sống, tự soạn danh sách, tránh tên gây xúc phạm.
+• Người thân cùng gia đình dùng chung hệ họ phù hợp (ví dụ họ giữ theo truyền thống từng nơi).
+• Chỉ số kinh tế theo quốc gia: mỗi nơi có wealthIndex ảnh hưởng gia cảnh, học phí, lương, giá tài sản. Tiền lưu nội bộ theo một đơn vị chung; hiển thị theo tiền địa phương hoặc quy đổi, chốt ở câu hỏi mở 13.12.
+• Một số sự kiện và nghề gắn với văn hoá hoặc quốc gia (lễ hội, hệ thống trường, nghĩa vụ quân sự); thêm điều kiện origin vào schema sự kiện.
+• Việc đổi quốc gia (di cư) là sự kiện lớn, buộc đổi nghề như bản gốc.
+13.8. Sự kiện mỗi năm tác động mạnh hơn lên bốn chỉ số
+Ghi đè quy tắc "±1 đến ±15" ở mục 5.2:
+Loại sự kiện
+Mức đổi mỗi chỉ số (gợi ý)
+Thường
+±2 đến ±6
+Quan trọng
+±6 đến ±12
+Lớn, hiếm
+±12 đến ±25
+• Mỗi sự kiện không phải "trung tính" phải đổi ít nhất một chỉ số; sự kiện lớn nên đổi 2–3 chỉ số.
+• Mục tiêu cân bằng: biến động trung bình mỗi năm của mỗi chỉ số, tính bằng giá trị tuyệt đối, khoảng 3–6 điểm. Mô phỏng sẽ đo và chỉnh.
+• Có thể có hậu quả kéo dài (xem 13.11), không chỉ một lần.
+13.9. Hoạt động: ưu tiên miễn phí, chi phí tăng dần
+• Sắp xếp danh sách theo chi phí tăng dần; hoạt động miễn phí luôn nằm trên cùng và luôn sẵn sàng (chỉ bị khoá bởi tuổi hợp lý).
+• Bậc chi phí so với thu nhập năm của nhân vật (để chạy được ở mọi nước, theo 13.7):
+Bậc
+Chi phí
+Ví dụ
+0
+Miễn phí
+Đi dạo, đọc ở thư viện, chạy bộ, giúp việc nhà, thiền, chơi với bạn, nấu ăn nhà
+1
+Dưới 1% thu nhập
+Xem phim, cà phê với bạn, mua sách, gym giá rẻ
+2
+1–5%
+Du lịch ngắn, khoá học, câu lạc bộ, đi spa
+3
+5–20%
+Du lịch nước ngoài, huấn luyện viên riêng, phẫu thuật nhỏ
+4
+Trên 20%
+Du lịch hạng sang, phẫu thuật lớn, tiệc xa xỉ
+• Hoạt động miễn phí cho hiệu quả nhỏ nhưng làm được nhiều lần hơn mỗi năm; hoạt động đắt cho hiệu quả lớn hơn nhưng giới hạn ít lần. Chống cày hoạt động vô hạn: mỗi hoạt động có hiệu quả giảm dần khi lặp lại trong năm.
+• Trẻ em chỉ thấy hoạt động hợp lứa tuổi, chủ yếu bậc 0–1.
+13.10. Casino cày tiền từ 15 tuổi (blackjack và ba cào với nhà cái)
+• Thêm màn "Sòng bạc" trong Hoạt động, mở từ 15 tuổi (hư cấu trong game; vẫn có hậu quả khi chưa đủ tuổi trưởng thành).
+• Blackjack: bộ bài nhiều cỗ (ví dụ 6), người chơi rút thêm hoặc dừng; nhà cái dừng ở 17; blackjack trả 3:2; có tuỳ chọn gấp cược và tách bài ở bản sau. Lợi thế nhà cái khi chơi đúng chiến thuật khoảng 0,5%.
+• Ba cào: mỗi bên ba lá; điểm là tổng điểm các lá lấy phần dư khi chia cho 10; các lá hình thường tính 0 điểm hoặc có luật ba lá hình thắng đặc biệt tuỳ biến thể. Cần chốt biến thể luật bạn muốn, và so điểm bằng nhau theo luật nhà cái (tuỳ chỉnh). Lợi thế nhà cái đặt khoảng 2–4% và kiểm bằng mô phỏng.
+• Dùng chung bộ bài và RNG có seed của engine để chơi lại được và test được.
+• Giới hạn để không phá kinh tế: mức cược tối đa theo tuổi, tiền hiện có và bậc sòng; giới hạn số ván mỗi năm game; thắng liên tục lớn kéo theo sự kiện (nhà cái nghi ngờ, bị mời ra).
+• Hậu quả: nghiện cờ bạc tăng theo số lần chơi và thua đuổi, kéo hạnh phúc và quan hệ xuống, nối với thành tích kiểu "High Roller"/"Addict" (mục 12.3); chơi khi chưa đủ tuổi trưởng thành có xác suất bị bố mẹ hoặc công an phát hiện.
+• Lưu ý kỹ thuật: vì lợi thế nhà cái dương, không có cách thắng vô hạn; "cày tiền" ở đây nghĩa là có thêm cách kiếm tiền sớm có rủi ro, không phải nguồn tiền chắc chắn. Nếu muốn dễ hơn, giảm lợi thế nhà cái hoặc cho thưởng người chơi mới.
+13.11. Chuỗi sự kiện dài và hậu quả xuyên đời
+Mở rộng schema (mục 4.4) để một sự kiện có thể để lại dấu vết lâu dài:
+• chainId và bước (stage): nhóm các sự kiện cùng một câu chuyện (ví dụ bị bắt nạt → tìm người giúp → hồi phục hoặc ám ảnh).
+• Sự kiện trì hoãn (schedule): hẹn một sự kiện xảy ra sau n năm (ví dụ vay nợ nặng năm nay, ba năm sau bị đòi nợ).
+• Hiệu ứng kéo dài (modifiers): một hiệu ứng có thời hạn tác động mỗi năm (ví dụ chấn thương mãn tính: sức khỏe −1 mỗi năm trong 5 năm; bệnh trầm cảm: hạnh phúc nền thấp hơn; được cố vấn tốt: trí tuệ +1 mỗi năm).
+• Cờ và bộ đếm giữ vai trò điều kiện cho sự kiện về sau, và làm đổi nguyên nhân tử vong, nghề nghiệp, quan hệ.
+• Mỗi chuỗi phải có điểm kết thúc rõ và được validate-content kiểm tra (không nhánh cụt, mọi schedule trỏ vào sự kiện có thật).
+• Ví dụ chuỗi cần có ở bản đầu: bắt nạt học đường; khởi nghiệp thành công hay phá sản; nghiện và cai nghiện (tái nghiện); mất việc dài hạn và nợ nần; bệnh nặng và phục hồi; hôn nhân rạn nứt và ly hôn; nuôi con và con trưởng thành; nhập ngũ và cựu binh.
+• Mục tiêu bản đầu: ít nhất 20 chuỗi, mỗi chuỗi 3–8 bước, tổng nằm trong 150 sự kiện hoặc cộng thêm.
+13.12. Cấu trúc rẽ nhánh nhiều tầng cho câu sự kiện
+Yêu cầu: một sự kiện phải tách ra được rất nhiều nhánh với kết quả khác nhau, để cùng một tình huống mỗi lần chơi cho một diễn biến khác. Ví dụ dưới đây do bạn đưa ra chỉ để minh hoạ cấu trúc; nó không thuộc nội dung game.
+Ví dụ minh hoạ: đang ở nhà, bạn nghe tiếng động lớn ngoài cửa.
+• Lựa chọn 1: ra ngoài kiểm tra → xảy ra ngẫu nhiên một trong nhiều trường hợp: có hộp quà lớn trước sân; một chiếc xe đâm vào cổng; và nhiều trường hợp khác. Mỗi trường hợp lại có thể mở ra lựa chọn tiếp theo.
+• Lựa chọn 2: phớt lờ → cũng có thể có hậu quả ngẫu nhiên (không có gì, hoặc chuyện đó quay lại ảnh hưởng sau).
+Bốn tầng của một sự kiện:
+Tầng
+Nội dung
+Ghi chú
+1. Tình huống
+Câu mở đầu và điều kiện xuất hiện
+Như hiện tại
+2. Lựa chọn
+Các hành động người chơi có thể làm
+Tối thiểu 2
+3. Trường hợp ngẫu nhiên
+Mỗi lựa chọn bốc ra một trường hợp theo trọng số và điều kiện
+Mỗi lựa chọn 2–5 trường hợp
+4. Hậu quả hoặc lựa chọn tiếp
+Trường hợp có thể kết thúc ngay, hoặc mở lựa chọn mới rồi lại bốc trường hợp
+Lồng tới tối đa 4 tầng
+Schema hiện tại (mục 4.4) chỉ có "lựa chọn → kết quả cuối". Cần chuyển sang nút lồng nhau: kết quả của một lựa chọn có thể chứa lựa chọn khác, không phải chỉ nối bằng nextEvent rời rạc.
+{
+  "id": "home_loud_noise_01",
+  "text": "Bạn đang ở nhà thì nghe một tiếng động lớn ngoài cửa.",
+  "choices": [
+    {
+      "id": "go_check",
+      "label": "Ra ngoài kiểm tra",
+      "cases": [
+        {
+          "weight": 3,
+          "requires": [],
+          "text": "Có một hộp quà lớn nằm trước sân.",
+          "choices": [
+            { "id": "open", "label": "Mở ra xem", "cases": [ { "weight": 1, "text": "...", "effects": [] } ] },
+            { "id": "report", "label": "Báo cho người khác", "cases": [ { "weight": 1, "text": "...", "effects": [] } ] }
+          ]
+        },
+        {
+          "weight": 2,
+          "text": "Một chiếc xe vừa đâm vào cổng nhà bạn.",
+          "choices": [ { "id": "help", "label": "Giúp người lái xe", "cases": [ { "weight": 1, "text": "..." } ] } ]
+        },
+        { "weight": 5, "requires": [{ "stat": "health", "op": "<", "value": 30 }], "text": "...", "effects": [] }
+      ]
+    },
+    {
+      "id": "ignore",
+      "label": "Phớt lờ",
+      "cases": [ { "weight": 6, "text": "..." }, { "weight": 1, "text": "...", "schedule": { "afterYears": 1, "event": "..." } } ]
+    }
+  ]
+}
+Quy tắc của cấu trúc này:
+• Mỗi case có weight và requires (điều kiện theo chỉ số, cờ, nghề, quan hệ, nơi sống...), nên cùng một lựa chọn cho ra các trường hợp khác nhau tuỳ hoàn cảnh nhân vật.
+• Một case có thể: kết thúc luôn (với effects, setFlags), mở tiếp choices, nối sang nextEvent, hoặc hẹn schedule (xem 13.11).
+• Độ sâu tối đa 4 tầng và số trường hợp mỗi lựa chọn 2–5 là mục tiêu thiết kế, kiểm bằng công cụ, không phải giới hạn cứng của engine.
+• Số đường đi nhân lên rất nhanh (2 lựa chọn × 4 trường hợp × 2 lựa chọn tiếp × 3 trường hợp đã là 48 đường). Để không phải viết tay hết, dùng hai kỹ thuật dưới đây.
+Kho trường hợp dùng chung (pools): các trường hợp hay lặp (có người lạ xuất hiện, tìm thấy tiền, bị thương nhẹ...) khai báo một lần trong pools/*.json, sự kiện tham chiếu { "pool": "unexpected_find", "weight": 2 }. Một sự kiện kết hợp vài pool với vài case riêng, nên viết nhanh mà vẫn đa dạng.
+Biến thể văn bản: cùng một case có vài variants của câu chữ, bốc ngẫu nhiên, để lần chơi sau không đọc lại cùng một đoạn.
+Công cụ kiểm:
+Công cụ
+Kiểm tra
+validate-content
+Mỗi nhánh có đường ra; pool và nextEvent trỏ vào chỗ có thật; trọng số hợp lệ; không có case nào mà điều kiện không bao giờ thoả
+graph
+Vẽ cây rẽ nhánh một sự kiện, đếm số lá, số đường đi và độ sâu
+coverage
+Với 10.000 đời mô phỏng, nhánh nào chưa từng được bốc, nhánh nào quá hiếm
+stats
+Số lá trung bình mỗi sự kiện; sự kiện nào chỉ có một đường
+Chỉ tiêu bản đầu: trung bình mỗi sự kiện có ít nhất 6 lá khác nhau; ít nhất 30% sự kiện có lựa chọn lồng tầng thứ hai; không sự kiện nào có nhánh cụt.
+Về tiền tệ (câu hỏi trước còn treo): tạm dùng đơn vị tiền nội bộ chung, hiển thị theo tiền địa phương. Bạn đổi ý lúc nào cũng được, vì chỉ ảnh hưởng phần hiển thị.
+13.13. Đầu việc và tiêu chí hoàn thành
+[ ] Thêm deltas vào kết quả của mọi hành động engine; lưu lastYearDeltas.
+[ ] Giao diện: chip nhảy, đoạn bóng, thẻ "Năm nay".
+[ ] Đổi cấu trúc nhật ký thành { age, text, deltas[], source } kèm tổng kết năm và bộ lọc.
+[ ] Viết lại lão hoá ngoại hình theo 13.3; cập nhật bảng mục 5.3.
+[ ] Biến thiên theo năm cho cả bốn chỉ số (13.4), đặc biệt hạnh phúc quay về mức nền.
+[ ] familyWealth và trợ cấp học phí (13.5), cùng sự kiện hỏi bố mẹ.
+[ ] Giới tính, tên, hình đại diện nhất quán (13.6) và test 10.000 nhân vật.
+[ ] origin, wealthIndex và names.json theo vùng (13.7).
+[ ] Nâng mức tác động sự kiện (13.8) và đo bằng mô phỏng.
+[ ] Sắp xếp hoạt động theo bậc chi phí; thêm hoạt động miễn phí (13.9).
+[ ] Màn Sòng bạc: blackjack, ba cào; hậu quả nghiện (13.10).
+[ ] Hệ chainId, schedule, modifiers; viết 20 chuỗi đầu (13.11).
+[ ] Cấu trúc rẽ nhánh nhiều tầng (13.12): schema cases lồng nhau, kho pools, biến thể văn bản, công cụ graph và coverage.
+Chỉ tiêu nghiệm thu
+Ngưỡng
+Nhật ký thiếu delta cho thay đổi chỉ số
+0 trường hợp
+Ngoại hình hằng số trong 20 năm liên tục (trừ khoá thủ công)
+0 đời
+Nhân vật sai khớp giới tính, tên, avatar trong 10.000
+0
+Biến động
+Trung bình mỗi chỉ số mỗi năm: 3–6 điểm (giá trị tuyệt đối)
+Hoạt động miễn phí có sẵn ở mọi độ tuổi hợp lệ
+Có
+Chuỗi sự kiện không nhánh cụt
+100%
+Tester xác nhận 3 điểm đầu (thấy delta, thấy nhật ký, thấy ngoại hình đổi)
+Đạt

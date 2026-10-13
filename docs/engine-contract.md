@@ -13,3 +13,13 @@ Tiền nguyên đơn vị đồng hư cấu, tối đa 10^15; net worth = tiền
 Tài sản bản này đứng tên nhân vật. Không có ownership chung được ghi nhận, nên ly hôn giữ tài sản riêng, không tự lấy một phần tiền của người khác. Di sản: trừ nợ qua net worth, phí kết toán hư cấu 2%, phân chia theo tỉ lệ sống hoặc mặc định các con sống. Kết toán idempotent theo trạng thái đời, summary được thay theo life ID khi người chơi phục hồi một snapshot trước đó. Claim di sản được kiểm thêm trong giao dịch với hồ sơ toàn cục, tránh hai tab nhận lại.
 
 Giới hạn chống dữ liệu quá lớn: 250 người trong đời, 200 tài sản sống/500 record, 20 bệnh, 10.000 log/ledger, 100 summary, 2.000 receipt. Nhập vượt hạn mức bị từ chối; không xoá dữ liệu đang có. Hồ sơ merge được validate trước commit. Không coi file JSON có thể chỉnh sửa là hệ chống gian lận trực tuyến.
+
+## Bổ sung 1.1
+
+Deltas ghi thay đổi thực sau clamp cho bốn chỉ số và tiền; log detail có nguyên nhân/source. Summary là bản tổng hợp, không cộng lại vào oracle. Annual aging dùng các khoảng theo tuổi, sức khỏe/tâm trạng/thói quen và stochastic rounding. Ngoài noise -1..1 có tác động bối cảnh sức khỏe/học tập/diện mạo ±6 để đạt mục tiêu biến động NET năm 3–6. Không gán tác động bối cảnh này vào bảng lão hóa nền.
+
+Người thân có giới tính và nguồn tiền; trợ cấp trừ nguồn thực trước khi cộng vào tiền nhân vật. Chỉ số giàu nghèo/tỷ giá địa phương là thông số trò chơi cố định, không phải GDP hay tỷ giá hiện tại. Tài sản vật lý giữ xuất thân lúc mua; chuyển vùng không định giá lại món đang giữ. Net worth gồm danh mục đầu tư.
+
+Đầu tư dùng số lượng nguyên phần nghìn và BigInt cho phép nhân giá; tổng tài sản tối đa 10^15, giá từng sản phẩm tối đa 10^11. Giới hạn số học được ghi log, không hứa tăng vô hạn. Tối đa 240 sản phẩm; sản phẩm ngừng không hồi sinh. Bộ luật/nhánh không nhằm khớp phân phối lợi nhuận tài chính thực.
+
+Log tối đa 10.000, ledger 30.000, file nhập 10MB. Cases giữ root/path/instance/variant; nhập kiểm khớp nội dung chuẩn. Chuỗi kết thúc khi nhân vật chết hoặc lịch hẹn mất điều kiện, có nhật ký giải thích. Hand casino và lời mời tình cảm chặn hành động đời sống khác cho tới giải quyết.

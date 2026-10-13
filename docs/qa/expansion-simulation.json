@@ -1,0 +1,38 @@
+{
+  "lives": 10000,
+  "crashes": 0,
+  "stuck": 0,
+  "meanAge": 76.22,
+  "medianAge": 79,
+  "earlyDeathPercent": 1.08,
+  "choiceDeaths": 0,
+  "careersSeen": 7,
+  "assetsSeen": 3,
+  "fallbacksSeen": 2,
+  "eventsSeen": 234,
+  "eventCount": 358,
+  "eventOccurrences": 1529926,
+  "repeatedOccurrences": 389629,
+  "repeatedPercent": 25.47,
+  "maxEventOccurrences": 61,
+  "durationSeconds": 1180.49,
+  "annualSamples": 762181,
+  "meanAbsoluteAnnualStats": {
+    "health": 5.369,
+    "happiness": 3.606,
+    "intelligence": 4.679,
+    "looks": 5.659
+  },
+  "looksStandardDeviation": {
+    "0–5": 26.456,
+    "6–11": 26.204,
+    "12–17": 25.43,
+    "18–29": 24.229,
+    "30–44": 25.631,
+    "45–59": 25.653,
+    "60+": 22.285
+  },
+  "constantLooks20": 0,
+  "missingDeltas": 0,
+  "branchesSeen": 2041
+}

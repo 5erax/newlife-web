@@ -1,4 +1,12 @@
-export function cash(value: number, full = false) {
+import { originById } from "../engine/world";
+export function cash(value: number, full = false, origin = "vn") {
+  const region = originById.get(origin);
+  if (region && region.currency !== "VND")
+    return new Intl.NumberFormat("vi-VN", {
+      style: "currency",
+      currency: region.currency,
+      maximumFractionDigits: full ? 2 : 0,
+    }).format(value / region.unitsPerLocal);
   if (full) return new Intl.NumberFormat("vi-VN").format(value) + " ₫";
   const abs = Math.abs(value);
   if (abs >= 1e9)
@@ -24,6 +32,10 @@ export const ageLabel = (age: number) =>
           ? "Trưởng thành"
           : "Những năm an nhiên";
 export const GROUP_LABELS: Record<string, string> = {
+  danhvong: "Danh vọng",
+  tinhyeu: "Tình yêu",
+  tamtri: "Tâm trí và thể chất",
+  salon: "Salon và spa",
   thechat: "Thể chất",
   suckhoe: "Sức khoẻ",
   hoctap: "Học tập",
