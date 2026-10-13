@@ -106,4 +106,23 @@ it("rejects imported bond face values that would overflow at maturity", () => {
     maturityAge: 28,
   });
   expect(() => serialize(s)).toThrow("Giá trị vị thế vượt giới hạn");
+  s.investments.positions = [];
+  expect(() =>
+    reduce(s, { type: "investmentBuy", id: bond.id, units: 1e10 }),
+  ).toThrow("Giá trị vị thế vượt giới hạn");
+});
+it("keeps valid cumulative accounting boundaries exportable after income and maturity", () => {
+  let s = reduce(fixture(), {
+    type: "investmentBuy",
+    id: "inv_bond_1",
+    units: 1000,
+  });
+  s.investments.dividends = 1e15;
+  s.investments.realized = -1e15;
+  s.age = 27;
+  expect(parseSave(serialize(s))).toEqual(s);
+  s = reduce(s, { type: "age" });
+  expect(s.investments.dividends).toBe(1e15);
+  expect(s.investments.realized).toBeGreaterThanOrEqual(-1e15);
+  expect(parseSave(serialize(s))).toEqual(s);
 });

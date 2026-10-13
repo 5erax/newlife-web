@@ -36,7 +36,7 @@ export const investmentSchema = z
           id: idSchema,
           units: z.number().int().min(1).max(1e12),
           costBasis: amount,
-          maturityAge: age.optional(),
+          maturityAge: z.number().int().min(0).max(160).optional(),
         }),
       )
       .max(240),

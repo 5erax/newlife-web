@@ -1,6 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { newLife, reduce } from "../src/engine/game";
 import { serialize, parseSave } from "../src/engine/save";
+import { createAsset } from "../src/engine/helpers";
+import { economicYear, jobReason } from "../src/engine/economy";
+import { jobs, assets } from "../src/content/catalog";
 
 const options = {
   name: "An",
@@ -10,6 +13,26 @@ const options = {
   seed: 42,
 };
 describe("visible and persisted changes", () => {
+  it("keeps a century of upkeep for 200 owned assets exportable", () => {
+    const s = newLife(options);
+    s.money = 100000000000;
+    const item = assets.find((a) => a.category === "equipment")!;
+    for (let n = 0; n < 200; n++) createAsset(s, item.id);
+    for (let year = 1; year <= 100; year++) {
+      s.age = year;
+      economicYear(s);
+    }
+    expect(s.ledger.length).toBeGreaterThan(10000);
+    const text = serialize(s);
+    expect(text.length).toBeLessThan(10000000);
+    expect(parseSave(text)).toEqual(s);
+  });
+  it("applies regional recruitment in the shared eligibility helper", () => {
+    const s = newLife(options),
+      police = jobs.find((j) => j.origins?.length)!;
+    s.origin = "jp";
+    expect(jobReason(s, police.id)).toContain("xuất thân phù hợp");
+  });
   it("explains every actual stat and cash change without mutating old logs", () => {
     const s = newLife(options),
       original = structuredClone(s);

@@ -634,6 +634,7 @@ progress::-moz-progress-bar {
   margin: 4px 0;
 }
 .profile-top small {
+  display: block;
   font-size: 0.7rem;
   color: var(--muted);
 }
@@ -1403,6 +1404,9 @@ progress::-moz-progress-bar {
   text-overflow: ellipsis;
 }
 .dock-profile small {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: var(--muted);
   font-size: 0.7rem;
 }

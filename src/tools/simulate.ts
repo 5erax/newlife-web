@@ -358,7 +358,8 @@ export function runSimulation(total: number) {
       JSON.stringify(
         {
           lives: total,
-          seen: Object.keys(branches).length,
+          seen: keys.filter((k) => branches[k]).length,
+          seenIncludingFallbacks: Object.keys(branches).length,
           total: keys.length,
           unseen: keys.filter((k) => !branches[k]),
           rare: keys.filter((k) => (branches[k] ?? 0) > 0 && branches[k] < 5),

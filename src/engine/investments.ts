@@ -107,6 +107,23 @@ function marketNews(s: GameState, text: string) {
   s.investments.news = s.investments.news.slice(-50);
   addLog(s, text, "money");
 }
+function accounting(
+  s: GameState,
+  key: "dividends" | "realized",
+  amount: number,
+) {
+  const total = s.investments[key] + amount;
+  s.investments[key] = clamp(
+    total,
+    key === "realized" ? -MAX_MONEY : 0,
+    MAX_MONEY,
+  );
+  if (total !== s.investments[key])
+    marketNews(
+      s,
+      "Thống kê đầu tư tích lũy chạm giới hạn số học; tiền thực nhận vẫn được ghi riêng trong sổ tiền.",
+    );
+}
 function addInstrument(s: GameState, group: InvestmentGroup) {
   if (s.investments.instruments.length >= 240) return;
   const serial = s.investments.instruments.length,
@@ -296,14 +313,14 @@ export function investmentYear(s: GameState) {
         Math.round(yieldValue * i.yieldRate),
         `Lãi/cổ tức ${i.name}`,
       );
-      s.investments.dividends += paid;
+      accounting(s, "dividends", paid);
       if (holding.maturityAge !== undefined && s.age >= holding.maturityAge) {
         const face = valueForUnits(i.initialPrice, holding.units);
         s.investments.positions = s.investments.positions.filter(
           (p) => p !== holding,
         );
         const principal = credit(s, face, `Đáo hạn ${i.name}`);
-        s.investments.realized += principal - holding.costBasis;
+        accounting(s, "realized", principal - holding.costBasis);
         marketNews(
           s,
           `${i.name} đã đáo hạn; khoản gốc và lãi thực nhận được ghi vào sổ tiền.`,
@@ -382,6 +399,11 @@ export function investmentAction(s: GameState, a: Action) {
       "Thanh khoản năm nay không đủ cho giao dịch này. Có thể giảm số lượng hoặc đợi năm sau.",
     );
   if (buy) {
+    if (i.group === "bond") valueForUnits(i.initialPrice, a.units);
+    requireGame(
+      s.investments.invested + quote.total <= MAX_MONEY,
+      "Tổng vốn giao dịch đã chạm giới hạn mô phỏng.",
+    );
     requireGame(
       i.status === "active" && i.price > 0,
       "Sản phẩm đã mất giá trị hoặc ngừng giao dịch.",
@@ -420,7 +442,7 @@ export function investmentAction(s: GameState, a: Action) {
     if (!p.units)
       s.investments.positions = s.investments.positions.filter((x) => x !== p);
     money(s, quote.total, `Bán ${i.name} · phí 1%`);
-    s.investments.realized += quote.total - basis;
+    accounting(s, "realized", quote.total - basis);
   }
   s.investments.traded[i.id] =
     (s.investments.traded[i.id] ?? 0) + quote.principal;

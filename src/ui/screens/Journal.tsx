@@ -24,7 +24,18 @@ export function Journal({ s }: { s: GameState }) {
                 "sideJob",
               ].includes(r.source)),
   );
-  const selected = filtered.slice(-limit);
+  const selected = filtered
+    .filter(
+      (row, index, rows) =>
+        row.deltas.length ||
+        ![rows[index - 1], rows[index + 1]].some(
+          (other) =>
+            other?.age === row.age &&
+            other.text === row.text &&
+            other.deltas.length,
+        ),
+    )
+    .slice(-limit);
   const groups = new Map<number, typeof selected>();
   for (const row of selected) {
     const list = groups.get(row.age) ?? [];
