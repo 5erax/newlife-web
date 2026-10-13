@@ -586,7 +586,7 @@ export interface NewLifeOptions {
   birthDate: string;
   seed: number;
 }
-export const CONTENT_VERSION = "1.3.0";
+export const CONTENT_VERSION = "1.4.0";
 export const STAT_LABELS: Record<Stat, string> = {
   health: "Sức khoẻ",
   happiness: "Hạnh phúc",

@@ -14,6 +14,8 @@ Bản 1.3 bổ sung đủ 124 dòng của ba bảng du lịch/cắm trại/leo n
 
 Vercel: https://newlife-web-gray.vercel.app. Project đã kết nối GitHub; nhánh chính triển khai production, nhánh tính năng tạo preview. Bản lưu thuộc từng địa chỉ web: xuất JSON trên địa chỉ cũ rồi nhập tại địa chỉ mới.
 
+Bản 1.4 bổ sung 29 tình huống bạn bè/91 lựa chọn: bảng bạn bè đã đủ 37 dòng/120 lựa chọn, tổng 1.227 tình huống APK/4.507 lựa chọn. NPC có học/việc, gia đình, tính bốc đồng và thù địch; xem trong Quan hệ, xây lại gắn bó để làm hòa. Tiến độ đầy đủ và trạng thái nghiệm thu nằm ở [task #114](https://github.com/5erax/newlife-web/issues/114); 151 dòng lõi và 45 bảng khác vẫn chưa chuyển.
+
 ## Chạy trên máy
 
 Node.js 24+, npm, dùng lockfile:

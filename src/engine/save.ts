@@ -65,7 +65,7 @@ const relationSchema = z
         craziness: score,
         employed: z.boolean(),
         student: z.boolean(),
-        children: integer.max(20),
+        children: integer.max(250),
         married: z.boolean(),
         enemy: z.boolean(),
       })
@@ -638,7 +638,7 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0", "1.2.0"].includes(String(value.contentVersion))
+    ["1.0.0", "1.1.0", "1.2.0", "1.3.0"].includes(String(value.contentVersion))
   )
     value = { ...value, contentVersion: CONTENT_VERSION };
   const parsed = gameSchema.safeParse(value);

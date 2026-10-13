@@ -4,6 +4,8 @@ import { npcProfile, npcYear } from "../src/engine/npc";
 import { apkFriend } from "../src/engine/apk";
 import { apkEvents } from "../src/content/catalog";
 import { parseSave, serialize } from "../src/engine/save";
+import { advanceQueue } from "../src/engine/year";
+import { apkPresentation } from "../src/engine/apk";
 import type { Relation } from "../src/engine/types";
 const options = {
   name: "An",
@@ -26,6 +28,172 @@ const friend = (): Relation => ({
   parents: [],
 });
 describe("NPC friends", () => {
+  it("keeps a full imported NPC family within the save limit through later milestones", () => {
+    const s = newLife(options),
+      p = friend();
+    p.age = 18;
+    p.npc = { ...npcProfile(p), married: true, children: 250 };
+    s.relations.push(p);
+    for (let age = 19; age <= 60; age++) {
+      p.age = age;
+      npcYear(s, p);
+    }
+    expect(p.npc.children).toBe(250);
+    expect(() => parseSave(serialize(s))).not.toThrow();
+  });
+  it("keeps school/work current during romance and does not replay past family milestones after separation", () => {
+    let s = newLife(options);
+    s.age = 30;
+    const p = friend();
+    p.age = 20;
+    p.npc = { ...npcProfile(p), married: false, children: 0 };
+    s.relations.push(p);
+    s = reduce(s, { type: "relation", id: p.id, action: "date" });
+    const love = s.relations.at(-1)!;
+    for (let age = 21; age <= 30; age++) {
+      love.age = age;
+      npcYear(s, love);
+    }
+    expect(love.npc!.student).toBe(false);
+    expect(love.npc!.employed).toBe(true);
+    expect(love.npc!.married).toBe(false);
+    expect(love.npc!.children).toBe(0);
+    s = reduce(s, { type: "relation", id: p.id, action: "breakup" });
+    const ex = s.relations.at(-1)!;
+    expect(npcProfile(parseSave(serialize(s)).relations.at(-1)!)).toEqual(
+      ex.npc,
+    );
+    ex.age = 75;
+    ex.npc!.married = false;
+    ex.npc!.children = 1;
+    npcYear(s, ex);
+    expect(ex.npc!.married).toBe(false);
+    expect(ex.npc!.children).toBe(1);
+  });
+  it("upgrades 1.3 pending content without changing RNG and rejects malformed NPC attributes", () => {
+    const s = newLife(options);
+    s.age = 30;
+    s.relations.push(friend());
+    const oldEvent = apkEvents.find(
+      (e) =>
+        e.group === "apk_friend" &&
+        !e.apkRequirements!.friendMinCraziness &&
+        !e.apkRequirements!.friendJob &&
+        !e.apkRequirements!.friendStudent &&
+        !e.apkRequirements!.friendChild &&
+        !e.apkRequirements!.friendMarried &&
+        !e.apkRequirements!.friendEnemy &&
+        e.minAge <= 30 &&
+        e.maxAge >= 30 &&
+        (e.apkRequirements!.friendMaxAge ?? 200) >= 30,
+    )!;
+    s.yearQueue = [oldEvent.id];
+    advanceQueue(s);
+    const data = JSON.parse(serialize(s));
+    data.game.contentVersion = "1.3.0";
+    const migrated = parseSave(JSON.stringify(data));
+    expect(migrated.rng).toBe(s.rng);
+    expect(migrated.money).toBe(s.money);
+    expect(apkPresentation(migrated)).toEqual(apkPresentation(s));
+    const valid = { ...npcProfile(friend()), children: 25 };
+    migrated.relations.at(-1)!.npc = valid;
+    expect(() => parseSave(serialize(migrated))).not.toThrow();
+    for (const patch of [
+      { craziness: -1 },
+      { craziness: 101 },
+      { children: -1 },
+      { children: 251 },
+      { enemy: 1 },
+      { student: "yes" },
+    ]) {
+      const bad = JSON.parse(serialize(migrated));
+      Object.assign(bad.game.relations.at(-1).npc, patch);
+      expect(() => parseSave(JSON.stringify(bad))).toThrow();
+    }
+  });
+  it("logs the first school milestone of a legacy friend without a saved NPC profile", () => {
+    const s = newLife(options),
+      p = friend();
+    p.age = 6;
+    npcYear(s, p);
+    expect(p.npc!.student).toBe(true);
+    expect(s.log.some((r) => r.text.includes("Chi bắt đầu học tập"))).toBe(
+      true,
+    );
+  });
+  it("ports all 37 source rows and binds Friend Impact to the matching person across reload", () => {
+    const list = apkEvents.filter((e) => e.group === "apk_friend");
+    expect(list).toHaveLength(37);
+    for (const event of list) {
+      const s = newLife(options),
+        r = event.apkRequirements!;
+      s.age = event.minAge;
+      s.gender = r.gender === "any" ? "female" : r.gender;
+      const matching = {
+        ...friend(),
+        id: "friend_matching",
+        age: r.friendMinAge ?? s.age,
+        gender:
+          r.friendGender === "any" || !r.friendGender
+            ? ("female" as const)
+            : r.friendGender,
+        npc: {
+          craziness: r.friendMinCraziness ?? 50,
+          employed: !!r.friendJob,
+          student: !!r.friendStudent,
+          children: r.friendChild ? 1 : 0,
+          married: !!r.friendMarried,
+          enemy: !!r.friendEnemy,
+        },
+      };
+      s.relations.push(
+        {
+          ...friend(),
+          id: "friend_other",
+          npc: { ...matching.npc, enemy: !matching.npc.enemy },
+        },
+        matching,
+      );
+      s.yearQueue = [event.id];
+      advanceQueue(s);
+      const view = apkPresentation(s);
+      expect(apkFriend(s, r)?.id, event.id).toBe(matching.id);
+      if (event.text.includes("<friend"))
+        expect(view.text, event.id).toContain(matching.name);
+      const saved = parseSave(serialize(s));
+      expect(apkPresentation(saved), event.id).toEqual(view);
+      for (const choice of view.choices) {
+        const result = reduce(saved, {
+          type: "choose",
+          instanceId: saved.pending!.instanceId,
+          optionId: choice.id,
+        });
+        const delta = choice.outcomes[0].effects
+          .filter((e) => "apkAttribute" in e && e.apkAttribute === "friend")
+          .reduce((sum, e) => sum + ("delta" in e ? e.delta : 0), 0);
+        expect(
+          result.relations.find((p) => p.id === "friend_matching")!.closeness,
+          choice.id,
+        ).toBe(Math.min(100, Math.max(0, 50 + delta)));
+        expect(
+          result.relations.find((p) => p.id === "friend_other")!.closeness,
+          choice.id,
+        ).toBe(50);
+        expect(() => parseSave(serialize(result)), choice.id).not.toThrow();
+      }
+    }
+  });
+  it("keeps an NPC's prior children after dating and separation", () => {
+    let s = newLife(options);
+    s.age = 30;
+    const p = friend();
+    p.npc = { ...npcProfile(p), married: false, children: 2 };
+    s.relations.push(p);
+    s = reduce(s, { type: "relation", id: p.id, action: "date" });
+    s = reduce(s, { type: "relation", id: p.id, action: "breakup" });
+    expect(npcProfile(s.relations.at(-1)!).children).toBe(2);
+    expect(npcProfile(parseSave(serialize(s)).relations.at(-1)!).children).toBe(2);
+  });
   it("preserves actual family history when an ex-spouse becomes a friend", () => {
     let s = newLife(options);
     s.age = 30;
@@ -70,6 +238,8 @@ describe("NPC friends", () => {
       p = friend(),
       req = {
         ...apkEvents.find((e) => e.group === "apk_friend")!.apkRequirements!,
+        friendMinAge: 18,
+        friendMaxAge: 100,
         friendMinCraziness: 60,
         friendJob: true,
         friendStudent: true,

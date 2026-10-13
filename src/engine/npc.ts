@@ -33,15 +33,39 @@ export function npcProfile(p: Relation): NpcProfile {
   return p.npc ?? baseline(p);
 }
 export function npcYear(s: GameState, p: Relation) {
-  if (!s.flags.includes("apk_mode") || !p.alive || p.role !== "friend") return;
-  const previous = npcProfile(p),
+  if (
+    !s.flags.includes("apk_mode") ||
+    !p.alive ||
+    !["friend", "lover", "spouse"].includes(p.role)
+  )
+    return;
+  const past = baseline({ ...p, age: Math.max(0, p.age - 1) }),
     next = baseline(p);
+  const knownChildren = s.relations.filter(
+    (r) => r.role === "child" && r.parents.includes(p.id),
+  ).length;
+  const previous =
+    p.npc ??
+    (p.role === "friend"
+      ? past
+      : { ...past, married: p.role === "spouse", children: knownChildren });
+  const married =
+    p.role === "friend"
+      ? previous.married || (next.married && !past.married)
+      : p.role === "spouse";
   p.npc = {
     ...next,
     craziness: previous.craziness,
     enemy: previous.enemy,
-    married: previous.married || next.married,
-    children: Math.max(previous.children, next.children),
+    married,
+    children:
+      p.role === "friend"
+        ? Math.min(
+            250,
+            previous.children +
+              (married ? Math.max(0, next.children - past.children) : 0),
+          )
+        : Math.max(previous.children, knownChildren),
   };
   if (previous.student !== p.npc.student)
     addLog(

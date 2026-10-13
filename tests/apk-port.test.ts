@@ -172,6 +172,14 @@ describe("APK data adaptation", () => {
         });
       if (r.friend)
         s.relations.push({
+          npc: {
+            craziness: r.friendMinCraziness ?? 50,
+            employed: !!r.friendJob,
+            student: !!r.friendStudent,
+            children: r.friendChild ? 1 : 0,
+            married: !!r.friendMarried,
+            enemy: !!r.friendEnemy,
+          },
           id: "friend_fixture",
           name: "Chi",
           gender:

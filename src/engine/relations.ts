@@ -198,9 +198,12 @@ export function operate(
         person.npc = {
           ...npcProfile(person),
           married: false,
-          children: s.relations.filter(
-            (r) => r.role === "child" && r.parents.includes(person.id),
-          ).length,
+          children: Math.max(
+            person.npc?.children ?? 0,
+            s.relations.filter(
+              (r) => r.role === "child" && r.parents.includes(person.id),
+            ).length,
+          ),
         };
       count(s, "separations");
       stat(s, "happiness", -8);
