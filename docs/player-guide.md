@@ -1,6 +1,6 @@
 # Chơi và giữ bản lưu
 
-Mở Site bằng tài khoản chủ sở hữu hoặc localhost theo README. Nhập tên/giới tính/ngày sinh/quê rồi Bắt đầu cuộc đời, hoặc dùng nhân vật ngẫu nhiên. Mỗi đời mới có ô riêng.
+Mở Site hoặc localhost theo README. Nhập tên/giới tính/ngày sinh/quê rồi Bắt đầu cuộc đời, hoặc dùng nhân vật ngẫu nhiên. Mỗi đời mới có ô riêng.
 
 Tăng tuổi chuyển sang năm tiếp theo. Sự kiện đang chờ cần chọn đáp án; kết quả vào nhật ký và tự lưu. Enter tăng tuổi khi sẵn sàng, số 1/2 chọn sự kiện; phím không kích hoạt khi nhập biểu mẫu. Mỗi năm có 12 điểm thời gian.
 

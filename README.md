@@ -2,7 +2,7 @@
 
 Game mô phỏng cuộc đời bằng tiếng Việt. Có học/nghề, tiền/tài sản, hoạt động, bệnh, gia đình, thú cưng, tù, di chúc, nhiều đời và truyện. Giao diện ưu tiên điện thoại; tự lưu cục bộ và offline sau lần tải đủ đầu tiên.
 
-Bản chơi riêng tư: https://newlife-5erax.dha260803.chatgpt.site (tài khoản chủ sở hữu). GitHub private và audience Site là hai cơ chế riêng.
+Bản chơi web: https://newlife-5erax.dha260803.chatgpt.site. Site hiện có audience public theo trạng thái đọc ngày 13/10/2026; GitHub private và audience Site là hai cơ chế riêng.
 
 Nội dung tự viết: 214 sự kiện thường/chuỗi + 144 tình huống nghề, 48 nghề/12 ngành, 10 chương trình học, 150 hoạt động, 24 tài sản, 42 thành tích, 3 huy chương, 10 danh hiệu và 5 truyện/60 node/15 kết thúc. [Manifest](src/content/manifest.json), [đồ thị](docs/content/graph.md). Chưa phục hồi đủ dataset Android; không xác nhận tái tạo mọi nội dung gốc.
 
