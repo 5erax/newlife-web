@@ -500,7 +500,7 @@ export default function App() {
                     ? ui.offlineReady
                     : ui.localNote}
                 </p>
-                <small>v1.1.0</small>
+                <small>v1.2.0</small>
               </div>
             </nav>
             <main className="game-main">

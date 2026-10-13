@@ -29,6 +29,7 @@ export function Start({
     [vietnamBias, setVietnamBias] = useState(false);
   const [randomName, setRandomName] = useState(false),
     [exportError, setExportError] = useState("");
+  const [apkMode, setApkMode] = useState(true);
   function randomize() {
     const ints = crypto.getRandomValues(new Uint32Array(4));
     const rng = { rng: ints[0] },
@@ -134,10 +135,23 @@ export function Start({
                 birthDate,
                 origin,
                 vietnamBias,
+                contentMode: apkMode ? "apk" : "web",
                 seed: crypto.getRandomValues(new Uint32Array(1))[0],
               });
             }}
           >
+            <label className="check">
+              <input
+                type="checkbox"
+                checked={apkMode}
+                onChange={(e) => setApkMode(e.target.checked)}
+              />
+              Chơi bộ Việt hóa từ APK
+            </label>
+            <p className="muted fine">
+              Thêm 1.074 tình huống, danh mục 168 nghề và 21 coin. Engine web
+              được viết lại; một số hệ đặc biệt của bản gốc chưa mở.
+            </p>
             <label>
               Xuất thân
               <select
@@ -259,7 +273,7 @@ export function Start({
         </section>
       </div>
       <footer className="start-footer">
-        <span>NewLife Web · 1.1.0</span>
+        <span>NewLife Web · 1.2.0</span>
         <span>Những cuộc đời nhỏ, những lựa chọn lớn.</span>
       </footer>
     </main>

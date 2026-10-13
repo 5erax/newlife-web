@@ -3,7 +3,28 @@ import { stat, money, count, flag, relation, requireGame } from "./helpers";
 import { operate } from "./relations";
 export function applyEffects(s: GameState, list: Effect[], targetId?: string) {
   for (const e of list) {
-    if ("modifier" in e) {
+    if ("apkAttribute" in e) {
+      if (e.apkAttribute === "job") {
+        requireGame(s.job, "Cần đang làm đúng nghề của tình huống.");
+        s.job.performance = Math.max(
+          0,
+          Math.min(100, s.job.performance + e.delta),
+        );
+      } else if (e.apkAttribute === "friend") {
+        const target = relation(s, targetId, ["friend"]);
+        requireGame(target, "Người bạn của tình huống không còn phù hợp.");
+        target.closeness = Math.max(
+          0,
+          Math.min(100, target.closeness + e.delta),
+        );
+      } else {
+        const key = "apk_" + e.apkAttribute;
+        s.counters[key] = Math.max(
+          0,
+          Math.min(100, (s.counters[key] ?? 50) + e.delta),
+        );
+      }
+    } else if ("modifier" in e) {
       s.modifiers = s.modifiers.filter((m) => m.id !== e.modifier.id);
       requireGame(s.modifiers.length < 40, "Đã có quá nhiều hậu quả kéo dài.");
       s.modifiers.push(structuredClone(e.modifier));

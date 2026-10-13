@@ -1,0 +1,1697 @@
+{
+  "apkSha256": "8c1248cb94a7e8cfb4fa8cc6ca2f7886e7cbe8dd318d7ef2abc6b428ab469234",
+  "package": "com.candywriter.bitlife",
+  "version": "3.25",
+  "decodedTables": 969,
+  "rawRows": 87145,
+  "choiceTables": 55,
+  "choiceRows": 3497,
+  "coreRows": 1254,
+  "playableEvents": 1074,
+  "careerRows": 168,
+  "cryptoRows": 21,
+  "deferredCore": [
+    {
+      "id": "apk_universal_200",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "200",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_201",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "201",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_202",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "202",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_203",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "203",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_204",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "204",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_205",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "205",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_206",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "206",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_207",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "207",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_208",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "208",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_209",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "209",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_210",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "210",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_211",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "211",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_212",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "212",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_213",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "213",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_214",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "214",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_215",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "215",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_216",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "216",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_217",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "217",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_218",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "218",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_219",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "219",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_220",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "220",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_221",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "221",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_222",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "222",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_223",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "223",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_224",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "224",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_225",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "225",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_226",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "226",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_227",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "227",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_228",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "228",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_229",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "229",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_230",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "230",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_231",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "231",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_232",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "232",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_233",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "233",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_234",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "234",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_235",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "235",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_236",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "236",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_237",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "237",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_238",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "238",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_239",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "239",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_240",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "240",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_241",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "241",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_242",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "242",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_243",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "243",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_244",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "244",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_245",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "245",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_246",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "246",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_247",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "247",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_248",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "248",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_249",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "249",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_250",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "250",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_251",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "251",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_252",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "252",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_253",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "253",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_254",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "254",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_255",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "255",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_256",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "256",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_257",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "257",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_258",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "258",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_259",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "259",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_260",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "260",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_261",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "261",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_262",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "262",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_263",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "263",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_264",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "264",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_265",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "265",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_266",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "266",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_267",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "267",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_268",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "268",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_226_record_226",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "226",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_227_record_227",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "227",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_228_record_228",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "228",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_229_record_229",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "229",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_230_record_230",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "230",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_231_record_231",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "231",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_232_record_232",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "232",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_233_record_233",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "233",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_234_record_234",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "234",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_235_record_235",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "235",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_236_record_236",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "236",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_237_record_237",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "237",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_238_record_238",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "238",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_239_record_239",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "239",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_240_record_240",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "240",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_241_record_241",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "241",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_242_record_242",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "242",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_243_record_243",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "243",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_244_record_244",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "244",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_245_record_245",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "245",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_246_record_246",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "246",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_247_record_247",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "247",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_248_record_248",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "248",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_249_record_249",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "249",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_250_record_250",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "250",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_251_record_251",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "251",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_252_record_252",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "252",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_253_record_253",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "253",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_254_record_254",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "254",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_255_record_255",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "255",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_256_record_256",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "256",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_257_record_257",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "257",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_universal_258_record_258",
+      "table": "a16_dumb-scenarios-universal-enc",
+      "row": "258",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_career_11276",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11276",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11277",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11277",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11278",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11278",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11279",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11279",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11280",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11280",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11281",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11281",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11282",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11282",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11283",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11283",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11284",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11284",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11285",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11285",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11286",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11286",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11287",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11287",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11288",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11288",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11289",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11289",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11290",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11290",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11291",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11291",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11292",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11292",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11293",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11293",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11294",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11294",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11295",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11295",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11296",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11296",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11297",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11297",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11298",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11298",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11299",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11299",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11300",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11300",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11301",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11301",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11302",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11302",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11303",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11303",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11304",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11304",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11305",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11305",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11410",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11410",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_career_11411",
+      "table": "a16_dumb-scenarios-career-enc",
+      "row": "11411",
+      "reasons": [
+        "Nghề đặc biệt chưa có trong engine web"
+      ]
+    },
+    {
+      "id": "apk_friend_14002",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14002",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14003",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14003",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14004",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14004",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14005",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14005",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14006",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14006",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14007",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14007",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14008",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14008",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14009",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14009",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14010",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14010",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14011",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14011",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14012",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14012",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14013",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14013",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14014",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14014",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14015",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14015",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14016",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14016",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14017",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14017",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14018",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14018",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14023",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14023",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14025",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14025",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14026",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14026",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14027",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14027",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14028",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14028",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14029",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14029",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14030",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14030",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14031",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14031",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14032",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14032",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14033",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14033",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14034",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14034",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_friend_14036",
+      "table": "a16_dumb-scenarios-friend-enc",
+      "row": "14036",
+      "reasons": [
+        "Bạn bè chưa có đủ thuộc tính gốc để kiểm điều kiện"
+      ]
+    },
+    {
+      "id": "apk_prison_12049",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12049",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12050",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12050",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12051",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12051",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12052",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12052",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12053",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12053",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12054",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12054",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12055",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12055",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12056",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12056",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12057",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12057",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12058",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12058",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12059",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12059",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12060",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12060",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12061",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12061",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12062",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12062",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12063",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12063",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12064",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12064",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    },
+    {
+      "id": "apk_prison_12065",
+      "table": "a16_dumb-scenarios-prison-enc",
+      "row": "12065",
+      "reasons": [
+        "Cần xác minh bộ lọc ma cà rồng/hoàng gia của engine gốc"
+      ]
+    }
+  ],
+  "otherChoiceTables": [
+    {
+      "table": "a16_dumb-scenarios-actor-enc",
+      "rows": 165,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_black-market-museum-dumb-scenarios-enc",
+      "rows": 15,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_black-market-exhibit-dumb-scenarios-enc",
+      "rows": 24,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-hustler-enc",
+      "rows": 121,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-vacation-enc",
+      "rows": 59,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-business-enc",
+      "rows": 168,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_vampire-dumb-scenario-enc",
+      "rows": 67,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-zoo-enc",
+      "rows": 18,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-sports-enc",
+      "rows": 85,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-album-enc",
+      "rows": 77,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-political-campaign-enc",
+      "rows": 64,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_model-photo-shoot-facial-expression-enc",
+      "rows": 34,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_clubupdateufldumb-enc",
+      "rows": 44,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_model-fashion-show-pivotal-moments-enc",
+      "rows": 16,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-casino-enc",
+      "rows": 24,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_fight-ufl-dumb-scenario-enc",
+      "rows": 44,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_model-go-see-interview-questions-enc",
+      "rows": 23,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_prison-parole-questions-enc",
+      "rows": 10,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-mafia-enc",
+      "rows": 50,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_astronaut-dumb-scenarios-enc",
+      "rows": 29,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_outdoor-cave-discoverie-enc",
+      "rows": 32,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-secret-agent-enc",
+      "rows": 10,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-dealer-enc",
+      "rows": 28,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-royal-enc",
+      "rows": 71,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_luxury-island-vacation-dumb-scenario-enc",
+      "rows": 18,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_racing-drive-traffic-incident-enc",
+      "rows": 34,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_cult-commune-dumb-scenarios-enc",
+      "rows": 38,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_sports-pivotal-moment-scenarios-enc",
+      "rows": 38,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_backtoschool-sleepover-invitation-dumb-enc",
+      "rows": 25,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_racing-drive-dumb-scenario-enc",
+      "rows": 38,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_black-market-vendor-dumb-scenarios-enc",
+      "rows": 12,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_school-frat-questions-enc",
+      "rows": 50,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_music-soundcloud-dumb-scenario-enc",
+      "rows": 39,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-music-enc",
+      "rows": 98,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_podcast-dumb-enc",
+      "rows": 110,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_outdoor-camping-dumb-scenario-enc",
+      "rows": 36,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-landlord-enc",
+      "rows": 43,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_outdoor-hiking-dumb-scenario-enc",
+      "rows": 29,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_interview-questions-enc",
+      "rows": 46,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dealer-drug-run-dumb-scenario-enc",
+      "rows": 10,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-political-office-enc",
+      "rows": 90,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_racing-street-race-cop-pivotal-moment-enc",
+      "rows": 13,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_astronaut-flight-scenario-enc",
+      "rows": 15,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_racing-race-pivotal-moment-enc",
+      "rows": 26,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_fight-press-conference-question-enc",
+      "rows": 29,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_dumb-scenarios-model-enc",
+      "rows": 27,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_employee-interview-questions-enc",
+      "rows": 76,
+      "status": "native_logic_pending"
+    },
+    {
+      "table": "a16_astronaut-mission-dumb-scenarios-enc",
+      "rows": 25,
+      "status": "native_logic_pending"
+    }
+  ]
+}

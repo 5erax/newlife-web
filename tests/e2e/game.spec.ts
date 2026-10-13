@@ -2,7 +2,8 @@ import { test, expect, type Page } from "@playwright/test";
 import { newLife } from "../../src/engine/game";
 import { serialize } from "../../src/engine/save";
 import { createAsset, addLog } from "../../src/engine/helpers";
-import { stories } from "../../src/content/catalog";
+import { stories, apkEvents } from "../../src/content/catalog";
+import { advanceQueue } from "../../src/engine/year";
 import ui from "../../src/i18n/vi.json" with { type: "json" };
 const nav = (page: Page, label: string) =>
   page.locator("nav").getByRole("button", { name: new RegExp(label + "$") });
@@ -17,6 +18,60 @@ test.beforeEach(async ({ page }) => {
       return original(array);
     }) as typeof crypto.getRandomValues;
   });
+});
+test("APK source choices and career catalog survive reload in Vietnamese", async ({
+  page,
+}) => {
+  await start(page);
+  const event = apkEvents.find((e) => e.id === "apk_career_11001")!;
+  const s = newLife({
+    name: "An Việt hóa",
+    gender: "female",
+    hometown: "Huế",
+    birthDate: "2000-01-01",
+    origin: "vn",
+    seed: 42,
+    contentMode: "apk",
+  });
+  s.age = 30;
+  s.stats = { health: 100, happiness: 80, intelligence: 100, looks: 100 };
+  s.education.completed = ["edu_upper_secondary", "edu_university"];
+  s.education.specialty = "apk_major_accounting";
+  s.job = {
+    id: event.apkRequirements!.careerId,
+    rank: 0,
+    years: 0,
+    performance: 60,
+    salary: 50000000,
+  };
+  s.yearQueue = [event.id];
+  advanceQueue(s);
+  await nav(page, ui.saves).click();
+  await page
+    .locator("input[type=file]")
+    .setInputFiles({
+      name: "apk-life.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(serialize(s)),
+    });
+  await page
+    .getByRole("button", { name: ui.importNewSlot, exact: true })
+    .click();
+  const text = await page.locator(".event-text").innerText();
+  expect(text).not.toMatch(/<[^>]+>/);
+  await page.reload();
+  await expect(page.locator(".event-text")).toHaveText(text);
+  await page.locator("dialog .choice").first().click();
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await expect(page.getByText("Thiện tâm:")).toContainText("47/100");
+  await nav(page, ui.work).click();
+  await expect(page.locator(".section-heading")).toContainText("168 nghề");
+  await expect(page.getByText("Hiệu suất 55/100")).toBeVisible();
+  await page.getByRole("searchbox", { name: "Tìm nghề" }).fill("gà tây");
+  await expect(page.locator(".catalog-list")).toContainText(
+    "Nhân viên phân loại giới tính gà tây",
+  );
+  await expect(page.locator("body")).not.toContainText("undefined");
 });
 async function start(page: Page) {
   await page.goto("/");
@@ -76,21 +131,17 @@ test("Vietnamese lifestyle options persist and a love invitation survives reload
   await page
     .getByRole("button", { name: /Tâm trí và thể chất.*14 hoạt động/ })
     .click();
-  const instrument = page
-    .locator("article")
-    .filter({
-      has: page.getByRole("heading", { name: "Luyện nhạc cụ", exact: true }),
-    });
+  const instrument = page.locator("article").filter({
+    has: page.getByRole("heading", { name: "Luyện nhạc cụ", exact: true }),
+  });
   await expect(instrument.locator("option")).toHaveCount(25);
   await instrument.locator("select").selectOption("violin");
   await instrument.getByRole("button", { name: ui.perform }).click();
   await expect(instrument).not.toContainText("Kỹ năng: 0/100");
   await page.getByRole("button", { name: /Salon và spa.*6 hoạt động/ }).click();
-  const dye = page
-    .locator("article")
-    .filter({
-      has: page.getByRole("heading", { name: "Nhuộm tóc", exact: true }),
-    });
+  const dye = page.locator("article").filter({
+    has: page.getByRole("heading", { name: "Nhuộm tóc", exact: true }),
+  });
   await dye.locator("select").selectOption("purple");
   await dye.getByRole("button", { name: ui.perform }).click();
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
@@ -100,14 +151,12 @@ test("Vietnamese lifestyle options persist and a love invitation survives reload
   ).toBeVisible();
   await nav(page, ui.activities).click();
   await page.getByRole("button", { name: /Tình yêu.*6 hoạt động/ }).click();
-  const date = page
-    .locator("article")
-    .filter({
-      has: page.getByRole("heading", {
-        name: "Ứng dụng hẹn hò LGBTQ+",
-        exact: true,
-      }),
-    });
+  const date = page.locator("article").filter({
+    has: page.getByRole("heading", {
+      name: "Ứng dụng hẹn hò LGBTQ+",
+      exact: true,
+    }),
+  });
   await date.getByRole("button", { name: ui.perform }).click();
   const invitation = await page.locator("dialog").textContent();
   await page.reload();

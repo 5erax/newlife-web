@@ -1,0 +1,114 @@
+[
+  {
+    "id": "apk_major_journalism",
+    "name": "Báo chí"
+  },
+  {
+    "id": "apk_major_computer_science",
+    "name": "Khoa học máy tính"
+  },
+  {
+    "id": "apk_major_information_systems",
+    "name": "Hệ thống thông tin"
+  },
+  {
+    "id": "apk_major_math",
+    "name": "Toán học"
+  },
+  {
+    "id": "apk_major_finance",
+    "name": "Tài chính"
+  },
+  {
+    "id": "apk_major_accounting",
+    "name": "Kế toán"
+  },
+  {
+    "id": "apk_major_economics",
+    "name": "Kinh tế"
+  },
+  {
+    "id": "apk_major_graphic_design",
+    "name": "Thiết kế đồ họa"
+  },
+  {
+    "id": "apk_major_archaeology",
+    "name": "Khảo cổ học"
+  },
+  {
+    "id": "apk_major_architecture",
+    "name": "Kiến trúc"
+  },
+  {
+    "id": "apk_major_anthropology",
+    "name": "Nhân học"
+  },
+  {
+    "id": "apk_major_history",
+    "name": "Lịch sử"
+  },
+  {
+    "id": "apk_major_art_history",
+    "name": "Lịch sử nghệ thuật"
+  },
+  {
+    "id": "apk_major_chemistry",
+    "name": "Hóa học"
+  },
+  {
+    "id": "apk_major_biology",
+    "name": "Sinh học"
+  },
+  {
+    "id": "apk_major_engineering",
+    "name": "Kỹ thuật"
+  },
+  {
+    "id": "apk_major_criminal_justice",
+    "name": "Tư pháp hình sự"
+  },
+  {
+    "id": "apk_major_physics",
+    "name": "Vật lý"
+  },
+  {
+    "id": "apk_major_political_science",
+    "name": "Khoa học chính trị"
+  },
+  {
+    "id": "apk_major_communications",
+    "name": "Truyền thông"
+  },
+  {
+    "id": "apk_major_marketing",
+    "name": "Tiếp thị"
+  },
+  {
+    "id": "apk_major_philosophy",
+    "name": "Triết học"
+  },
+  {
+    "id": "apk_major_psychology",
+    "name": "Tâm lý học"
+  },
+  {
+    "id": "apk_major_nursing",
+    "name": "Điều dưỡng"
+  },
+  {
+    "id": "apk_major_education",
+    "name": "Giáo dục"
+  },
+  {
+    "id": "apk_major_dance",
+    "name": "Múa"
+  },
+  {
+    "id": "apk_major_english",
+    "name": "Ngôn ngữ Anh"
+  },
+  {
+    "id": "apk_major_music",
+    "name": "Âm nhạc"
+  }
+]

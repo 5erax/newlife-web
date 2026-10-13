@@ -80,6 +80,12 @@ export function Investments({
         </div>
         <span className="budget">Tiền mặt {money(s.money)}</span>
       </div>
+      {s.flags.includes("apk_mode") && (
+        <p className="muted fine">
+          21 tên coin từ APK. Giá, thanh khoản và biến động dùng mô hình thị
+          trường hư cấu của bản web.
+        </p>
+      )}
       <div className="investment-summary">
         <div>
           <small>Giá trị đang nắm</small>

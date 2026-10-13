@@ -11,7 +11,14 @@ import {
   assetById,
   educationById,
   jobById,
+  apkEvents,
+  apkJobs,
+  apkEducation,
 } from "../content/catalog";
+import apkCoverage from "../content/apk/coverage.json" with { type: "json" };
+import apkSources from "../content/apk/event-sources.json" with { type: "json" };
+import apkMajors from "../content/apk/majors.vi.json" with { type: "json" };
+import apkCoins from "../content/apk/coins.json" with { type: "json" };
 import type { Condition } from "../engine/types";
 import { conditionSchema } from "../schema/content";
 import assert from "node:assert/strict";
@@ -163,11 +170,64 @@ export function validateContent() {
     endings: 15,
   });
   const branches = branchStats();
+  assert.equal(apkEvents.length, apkCoverage.playableEvents);
+  assert.equal(
+    apkEvents.length + apkCoverage.deferredCore.length,
+    apkCoverage.coreRows,
+  );
+  assert.equal(apkJobs.length, 168);
+  assert.equal(apkCoins.length, 21);
+  assert.equal(apkEducation.length, 5);
+  assert.equal(
+    new Set([...events, ...fallbacks, ...apkEvents].map((e) => e.id)).size,
+    events.length + fallbacks.length + apkEvents.length,
+  );
+  assert.equal(
+    new Set([...jobs, ...apkJobs].map((j) => j.id)).size,
+    jobs.length + apkJobs.length,
+  );
+  assert.equal(apkSources.length, apkEvents.length);
+  assert(
+    apkSources.every(
+      (r) =>
+        eventById.get(r.id)?.sourceKind === "apk_translation" && r.record > 0,
+    ),
+  );
+  for (const e of apkEvents) {
+    assert.equal(e.sourceKind, "apk_translation");
+    assert(e.apkRequirements);
+    if (e.apkRequirements.careerId)
+      assert(jobById.has(e.apkRequirements.careerId));
+    assert(
+      e.choices.every(
+        (c) => c.outcomes.length === 1 && c.outcomes[0].chance === 1,
+      ),
+      "Do not invent native outcome probabilities",
+    );
+  }
+  for (const j of apkJobs) {
+    assert(j.apkRequirements);
+    assert(!j.degree || educationById.has(j.degree));
+    assert(
+      j.apkRequirements.majors.every((id) =>
+        apkMajors.some((m) => m.id === id),
+      ),
+    );
+    assert(
+      j.ranks.every((r, i) => i === 0 || r.salary >= j.ranks[i - 1].salary),
+    );
+  }
   return {
     ...counts,
     averageLeaves: branches.averageLeaves,
     nestedPercent: branches.nestedPercent,
     chains: branches.chains,
+    apk: {
+      events: apkEvents.length,
+      deferredCore: apkCoverage.deferredCore.length,
+      jobs: apkJobs.length,
+      crypto: apkCoins.length,
+    },
   };
 }
 if (process.argv[1]?.replaceAll("\\", "/").endsWith("/content.ts"))

@@ -1,6 +1,7 @@
 import type { GameState, LifeEvent } from "./types";
 import {
   events,
+  apkEvents,
   eventById,
   fallbacks,
   achievements,
@@ -14,6 +15,7 @@ import { random } from "./rng";
 import { closeYear, changeContext } from "./changes";
 import { annualStats } from "./aging";
 import { investmentYear } from "./investments";
+import { apkEventAllowed } from "./apk";
 import {
   addLog,
   count,
@@ -118,7 +120,7 @@ export function finishLife(s: GameState, cause: string) {
   achievementCheck(s);
 }
 export function eligibleEvents(s: GameState) {
-  return events.filter(
+  return [...events, ...(s.flags.includes("apk_mode") ? apkEvents : [])].filter(
     (e) =>
       e.group !== "manual" &&
       !(e.chainId && (e.stage ?? 1) > 1) &&
@@ -130,6 +132,7 @@ export function eventAllowed(s: GameState, event: LifeEvent) {
   return (
     s.age >= event.minAge &&
     s.age <= event.maxAge &&
+    apkEventAllowed(s, event) &&
     eligible(s, event.conditions) &&
     (!history ||
       (!event.once &&
@@ -139,7 +142,11 @@ export function eventAllowed(s: GameState, event: LifeEvent) {
   );
 }
 function randomEvent(s: GameState) {
-  const pool = eligibleEvents(s);
+  let pool = eligibleEvents(s);
+  if (s.flags.includes("apk_mode")) {
+    const source = pool.filter((e) => e.sourceKind === "apk_translation");
+    if (source.length && random(s) < 0.75) pool = source;
+  }
   if (!pool.length)
     return fallbacks.find((e) => s.age >= e.minAge && s.age <= e.maxAge)!;
   let value = random(s) * pool.reduce((n, e) => n + e.weight, 0);
@@ -170,6 +177,8 @@ export function advanceQueue(s: GameState) {
     const history = s.history[event.id];
     s.history[event.id] = { count: (history?.count ?? 0) + 1, lastAge: s.age };
     s.pending = { instanceId: `${s.id}_event_${++s.actionSerial}`, event };
+    if (event.sourceKind === "apk_translation")
+      s.pending.templateSeed = Math.floor(random(s) * 4294967296);
     s.phase = "awaiting_choice";
     return;
   }

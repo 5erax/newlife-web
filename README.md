@@ -8,6 +8,8 @@ Nội dung tự viết: 214 sự kiện thường/chuỗi + 144 tình huống ng
 
 Bản 1.1 thêm Danh vọng, Tình yêu, Tâm trí và thể chất, Salon và spa; 25 nhạc cụ, 6 môn võ; 34 sản phẩm đầu tư khởi đầu thuộc 5 nhóm, coin mới, biến động mạnh và rủi ro mất toàn bộ. Có casino, 20 chuỗi sự kiện, xuất thân/tiền địa phương, trợ cấp học phí và nhật ký giải thích thay đổi.
 
+Bản 1.2 có bộ Việt hóa từ APK người dùng cung cấp: 1.074 tình huống/3.948 lựa chọn, danh mục 168 nghề, 28 chuyên ngành và 21 coin. Chọn bộ nội dung khi tạo đời mới; các đời cũ vẫn giữ bộ web. [Phạm vi và giới hạn chuyển đổi](docs/bitlife-apk-port.md) ghi rõ 180 dòng lõi và 48 bảng tình huống còn cần logic native. Chưa coi đây là BitLife 1:1 hoặc đủ toàn bộ nội dung gốc.
+
 ## Chạy trên máy
 
 Node.js 24+, npm, dùng lockfile:
@@ -48,4 +50,4 @@ E2E dùng Chrome đã cài trên Windows; CI cài Chromium của Playwright. Eng
 
 Code/nội dung web đã triển khai. Candidate giữ gate kiểm điện thoại vật lý, screen reader và hiệu năng điện thoại mở; không gọi là đã vượt mọi gate. GitHub Issues là nơi theo dõi task chính.
 
-SVG/icon và văn bản tự tạo. Không đóng gói APK, binary trích xuất, quảng cáo/thanh toán/xếp hạng trực tuyến. [Sổ nguồn](docs/asset-sources.md) phân biệt tên tham chiếu với tài nguyên tự tạo.
+SVG/icon tự tạo; nội dung tự viết và bản dịch APK được đánh dấu nguồn riêng. Không đóng gói APK, binary trích xuất, quảng cáo/thanh toán/xếp hạng trực tuyến. [Sổ nguồn](docs/asset-sources.md) phân biệt dữ liệu chuyển đổi với tài nguyên tự tạo.

@@ -55,6 +55,19 @@ export function Journal({ s }: { s: GameState }) {
           {new Date(s.birthDate + "T00:00:00Z").getUTCFullYear() + s.age}
         </span>
       </header>
+      {s.flags.includes("apk_mode") && (
+        <div className="row-meta" aria-label="Chỉ số bổ sung từ APK">
+          <span>Bộ Việt hóa</span>
+          <span>Thiện tâm: {s.counters.apk_karma ?? 50}/100</span>
+          <span>Kỷ luật: {s.counters.apk_discipline ?? 50}/100</span>
+          {s.prisonYears > 0 && (
+            <>
+              <span>Hành vi: {s.counters.apk_behavior ?? 50}/100</span>
+              <span>Uy tín trong tù: {s.counters.apk_respect ?? 50}/100</span>
+            </>
+          )}
+        </div>
+      )}
       <div className="toolbar">
         <label>
           Lọc nhật ký{" "}

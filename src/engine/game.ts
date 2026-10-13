@@ -19,7 +19,8 @@ import { random } from "./rng";
 import { changeContext } from "./changes";
 import { drawOrigin, originById, localPrice } from "./world";
 import { activityCost } from "./activity-pricing";
-import { pendingChoices, chooseCase } from "./branches";
+import { pendingChoices, pendingText, chooseCase } from "./branches";
+import { apkPresentation, apkFriend } from "./apk";
 import { emptyCasino, casinoAction } from "./casino";
 import { migrate } from "./migration";
 import { emptyAppearance, specialActivity, resolveLove } from "./lifestyle";
@@ -62,6 +63,10 @@ export function newLife(
   options: NewLifeOptions,
   profile: Profile = emptyProfile(),
 ): GameState {
+  requireGame(
+    !options.contentMode || ["web", "apk"].includes(options.contentMode),
+    "Bộ nội dung không hợp lệ.",
+  );
   requireGame(
     options.name.trim().length >= 1 && options.name.length <= 80,
     "Tên cần từ 1 đến 80 ký tự.",
@@ -136,7 +141,7 @@ export function newLife(
     skills: {},
     appearance: emptyAppearance(),
     loveOffer: null,
-    investments: emptyInvestments(),
+    investments: emptyInvestments(options.contentMode === "apk"),
     birthDate: options.birthDate,
     stats: { health: 80, happiness: 50, intelligence: 50, looks: 50 },
     lastDeltas: [],
@@ -153,7 +158,7 @@ export function newLife(
     housing: "family",
     relations: [],
     illnesses: [],
-    flags: [],
+    flags: options.contentMode === "apk" ? ["apk_mode"] : [],
     counters: {},
     history: {},
     caseHistory: {},
@@ -350,6 +355,7 @@ function childLife(s: GameState, id: string) {
       origin: s.origin,
       birthDate: s.birthDate,
       seed,
+      contentMode: s.flags.includes("apk_mode") ? "apk" : "web",
     },
     s.profile,
   );
@@ -504,7 +510,11 @@ export function reduce(input: GameState, a: Action): GameState {
     );
     const pending = s.pending;
     const event = pending.event;
-    const choice = pendingChoices(pending).find((c) => c.id === a.optionId);
+    const view =
+      event.sourceKind === "apk_translation" ? apkPresentation(s) : null;
+    const choice = (view?.choices ?? pendingChoices(pending)).find(
+      (c) => c.id === a.optionId,
+    );
     requireGame(
       choice && eligible(s, choice.conditions),
       "Lựa chọn chưa đủ điều kiện.",
@@ -512,10 +522,16 @@ export function reduce(input: GameState, a: Action): GameState {
     const selected = choice.cases ? chooseCase(s, choice) : null;
     const result = selected?.outcome ?? chooseOutcome(s, choice.outcomes);
     const text = selected?.text ?? result.text;
-    addLog(s, pending.node?.text ?? event.text, "event");
+    addLog(s, view?.text ?? pendingText(pending), "event");
     addLog(s, `${choice.label}: ${text}`, "event");
     changeContext(s, "event", `${choice.label}: ${text}`);
-    applyEffects(s, result.effects);
+    applyEffects(
+      s,
+      result.effects,
+      event.apkRequirements
+        ? apkFriend(s, event.apkRequirements)?.id
+        : undefined,
+    );
     if (selected) {
       const key = [
         event.id,

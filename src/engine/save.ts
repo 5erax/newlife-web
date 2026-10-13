@@ -9,6 +9,7 @@ import {
 } from "../schema/content";
 import legacyEvents from "../content/legacy-events.json" with { type: "json" };
 import { resolvedNode } from "./branches";
+import { apkEventAllowed, apkPresentation } from "./apk";
 import {
   assetById,
   educationById,
@@ -242,6 +243,7 @@ const gameSchema = z.object({
     .default(emptyCasino),
   pending: z
     .object({
+      templateSeed: integer.max(4294967295).optional(),
       instanceId: idSchema,
       event: eventSchema,
       node: z
@@ -501,6 +503,13 @@ function references(s: GameState) {
     "Trạng thái chờ lựa chọn không nhất quán.",
   );
   if (s.pending) {
+    requireGame(
+      s.pending.event.sourceKind !== "apk_translation" ||
+        (s.flags.includes("apk_mode") &&
+          Number.isInteger(s.pending.templateSeed) &&
+          !s.pending.node),
+      "Sự kiện Việt hóa thiếu seed hoặc không đúng bộ nội dung.",
+    );
     const known = eventById.get(s.pending.event.id);
     const legacy = legacyEvents.find((e) => e.id === s.pending!.event.id);
     requireGame(
@@ -521,6 +530,13 @@ function references(s: GameState) {
           [node.text, ...(node.variants ?? [])].includes(s.pending.node.text),
         "Lựa chọn lồng không khớp đường đi đã lưu.",
       );
+    }
+    if (s.pending.event.sourceKind === "apk_translation") {
+      requireGame(
+        apkEventAllowed(s, s.pending.event),
+        "Hoàn cảnh không phù hợp với sự kiện Việt hóa.",
+      );
+      apkPresentation(s);
     }
   }
   requireGame(
@@ -609,7 +625,7 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    value.contentVersion === "1.0.0"
+    ["1.0.0", "1.1.0"].includes(String(value.contentVersion))
   )
     value = { ...value, contentVersion: CONTENT_VERSION };
   const parsed = gameSchema.safeParse(value);
@@ -622,6 +638,14 @@ export function validateState(value: unknown): GameState {
         .join("; ") ?? ""),
   );
   const s: GameState = parsed.data;
+  requireGame(
+    ["karma", "discipline", "behavior", "respect"].every(
+      (key) =>
+        s.counters["apk_" + key] === undefined ||
+        s.counters["apk_" + key] <= 100,
+    ),
+    "Chỉ số bổ sung của bộ Việt hóa vượt 100.",
+  );
   references(s);
   return s;
 }

@@ -10,6 +10,7 @@ import {
   education,
   events,
   assets,
+  apkJobs,
 } from "../content/catalog";
 import { jobReason, educationReason } from "../engine/economy";
 import { eligible } from "../engine/conditions";
@@ -22,7 +23,11 @@ import { branchStats } from "./branch-analysis";
 import { localPrice } from "../engine/world";
 import { casinoBetLimit, blackjackScore } from "../engine/casino";
 import { writeFileSync } from "node:fs";
-export function simulateLife(seed: number, strategy = 0) {
+export function simulateLife(
+  seed: number,
+  strategy = 0,
+  contentMode: "web" | "apk" = "web",
+) {
   let s = newLife({
     name: "An Mô Phỏng",
     gender: seed % 2 ? "female" : "male",
@@ -30,6 +35,7 @@ export function simulateLife(seed: number, strategy = 0) {
     birthDate: "2000-06-15",
     seed,
     origin: "random",
+    contentMode,
   });
   let botRng = seed ^ 0x12345678;
   let steps = 0;
@@ -79,7 +85,7 @@ export function simulateLife(seed: number, strategy = 0) {
       continue;
     }
     if (s.age >= 18 && !s.prisonYears) {
-      const offers = jobs
+      const offers = (contentMode === "apk" ? apkJobs : jobs)
         .filter((j) => !jobReason(s, j.id))
         .sort((a, b) => b.ranks[0].salary - a.ranks[0].salary);
       if (
@@ -99,7 +105,12 @@ export function simulateLife(seed: number, strategy = 0) {
             s.money >= e.cost,
         );
         if (target)
-          act({ type: "enroll", id: target.id, specialty: "congnghe" });
+          act({
+            type: "enroll",
+            id: target.id,
+            specialty:
+              contentMode === "apk" ? "apk_major_computer_science" : "congnghe",
+          });
       }
       if (
         strategy === 2 &&

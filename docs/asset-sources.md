@@ -1,11 +1,12 @@
 # Sổ nguồn tài nguyên
 
-| Tài nguyên | Nguồn | Quyền đóng gói | Ghi chú |
-| --- | --- | --- | --- |
-| Logo N và PNG PWA | SVG/raster tạo riêng trong dự án | Tài nguyên dự án | Không trích APK |
-| Avatar nhóm tuổi | SVG trong source | Tài nguyên dự án | Có biểu cảm theo hạnh phúc |
-| Phông | Phông hệ thống | Không đóng gói phông | Không gọi CDN |
-| Nội dung | JSON tự viết | Nội dung dự án | sourceKind: original_web |
-| APK, binary, ảnh gốc, chuỗi trích xuất | Tài liệu nghiên cứu ở work ngoài repo | Không đóng gói | Chưa xác định quyền sử dụng |
+| Tài nguyên                                           | Nguồn                                                              | Quyền đóng gói                                                                        | Ghi chú                                                                |
+| ---------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Logo N và PNG PWA                                    | SVG/raster tạo riêng trong dự án                                   | Tài nguyên dự án                                                                      | Không trích APK                                                        |
+| Avatar nhóm tuổi                                     | SVG trong source                                                   | Tài nguyên dự án                                                                      | Có biểu cảm theo hạnh phúc                                             |
+| Phông                                                | Phông hệ thống                                                     | Không đóng gói phông                                                                  | Không gọi CDN                                                          |
+| Nội dung tự viết                                     | JSON trong content                                                 | Nội dung dự án                                                                        | sourceKind: original_web                                               |
+| Bộ dữ liệu Việt hóa                                  | APK BitLife 3.25 do người dùng cung cấp và yêu cầu chuyển sang web | Bản dịch/adapter phục vụ yêu cầu này; không tuyên bố sở hữu hoặc có giấy phép BitLife | sourceKind: apk_translation, hash và phạm vi trong bitlife-apk-port.md |
+| APK, DLL/SO/DEX, ảnh/icon native, SDK và dữ liệu thô | Tài liệu nghiên cứu ở work ngoài repo                              | Không đóng gói                                                                        | Không đưa binary/mod/asset native vào bản web                          |
 
-Giấy phép thư viện nằm trong bản phân phối từng gói; lockfile xác định phiên bản. Chưa tái sử dụng tài nguyên gốc khi không có bằng chứng phù hợp.
+Giấy phép thư viện nằm trong bản phân phối từng gói; lockfile xác định phiên bản. Bộ chuyển đổi được làm theo yêu cầu trực tiếp với tệp người dùng cung cấp; đây không phải bằng chứng người dùng sở hữu quyền đối với BitLife. Không thêm tài nguyên native vào web.

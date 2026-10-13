@@ -1,4 +1,4 @@
-# Đồ thị nội dung v1.1
+# Đồ thị nội dung v1.2
 
 Có 358 sự kiện trong pool, 5 dự phòng và 34 sản phẩm đầu tư khởi đầu. Các nhánh khó đạt được kiểm bằng fixture; bot mô phỏng không bảo đảm gặp hết nghề.
 
