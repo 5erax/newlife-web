@@ -34,6 +34,12 @@ const number = z.number().finite();
 const money = number.int().min(0).max(1_000_000_000_000_000);
 const genderRequirement = z.enum(["any", "male", "female", "other"]);
 export const apkEventRequirementsSchema = z.object({
+  friendMinCraziness: number.int().min(0).max(100).optional(),
+  friendJob: z.boolean().optional(),
+  friendStudent: z.boolean().optional(),
+  friendChild: z.boolean().optional(),
+  friendMarried: z.boolean().optional(),
+  friendEnemy: z.boolean().optional(),
   trip: z.enum(["vacation", "cruise", "camp", "hike"]).optional(),
   companions: z
     .array(z.enum(["friend", "family", "lover", "dog", "pet"]))

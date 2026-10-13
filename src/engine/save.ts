@@ -60,6 +60,16 @@ const handSchema = z.object({
 });
 const relationSchema = z
   .object({
+    npc: z
+      .object({
+        craziness: score,
+        employed: z.boolean(),
+        student: z.boolean(),
+        children: integer.max(20),
+        married: z.boolean(),
+        enemy: z.boolean(),
+      })
+      .optional(),
     gender: z.enum(["male", "female", "other"]).optional(),
     id: idSchema,
     name: z.string().min(1).max(100),

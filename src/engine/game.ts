@@ -31,6 +31,7 @@ import { migrate } from "./migration";
 import { emptyAppearance, specialActivity, resolveLove } from "./lifestyle";
 import { emptyInvestments, investmentAction } from "./investments";
 import { economyAction } from "./economy";
+import { manageFriendship } from "./npc";
 import {
   achievementCheck,
   advanceQueue,
@@ -602,6 +603,11 @@ export function reduce(input: GameState, a: Action): GameState {
     s.phase === "ready",
     "Hãy giải quyết sự kiện trước khi làm việc khác.",
   );
+  if (a.type === "friendship") {
+    manageFriendship(s, a.id, a.action);
+    achievementCheck(s);
+    return s;
+  }
   if (a.type === "age") {
     requireGame(!s.casino.hand, "Hãy kết thúc ván bài trước khi tăng tuổi.");
     startYear(s);

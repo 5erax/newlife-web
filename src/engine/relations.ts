@@ -15,6 +15,7 @@ import { assetById } from "../content/catalog";
 import { random } from "./rng";
 import { origins } from "./world";
 import { migrate } from "./migration";
+import { npcProfile } from "./npc";
 export function operate(
   s: GameState,
   operation: Operation,
@@ -80,7 +81,11 @@ export function operate(
     }
     case "friend": {
       let friend = s.relations.find(
-        (r) => r.alive && r.role === "friend" && r.closeness < 90,
+        (r) =>
+          r.alive &&
+          r.role === "friend" &&
+          r.closeness < 90 &&
+          (!s.flags.includes("apk_mode") || !npcProfile(r).enemy),
       );
       if (!friend && s.relations.length < 200) {
         friend = makePerson(
@@ -89,6 +94,7 @@ export function operate(
           Math.max(1, s.age + Math.floor(random(s) * 7) - 3),
         );
         s.relations.push(friend);
+        if (s.flags.includes("apk_mode")) friend.npc = npcProfile(friend);
         addLog(
           s,
           `Bạn quen ${friend.name}, một người ${friend.trait}.`,
@@ -104,6 +110,13 @@ export function operate(
       );
       let love = targetId ? relation(s, targetId, ["friend"]) : undefined;
       if (love) {
+        if (s.flags.includes("apk_mode")) {
+          requireGame(
+            !npcProfile(love).enemy,
+            "Người này đang thù địch với bạn.",
+          );
+          requireGame(!npcProfile(love).married, "Người này đã kết hôn.");
+        }
         requireGame(love.age >= 18, "Người này chưa đủ tuổi hẹn hò.");
         love.role = "lover";
         love.closeness = Math.max(55, love.closeness);
@@ -181,6 +194,14 @@ export function operate(
       }
       person.role = "friend";
       person.closeness = Math.max(0, person.closeness - 25);
+      if (s.flags.includes("apk_mode"))
+        person.npc = {
+          ...npcProfile(person),
+          married: false,
+          children: s.relations.filter(
+            (r) => r.role === "child" && r.parents.includes(person.id),
+          ).length,
+        };
       count(s, "separations");
       stat(s, "happiness", -8);
       addLog(
@@ -198,6 +219,12 @@ export function operate(
       requireGame(person, "Không còn người phù hợp cho tương tác này.");
       const before = person.closeness;
       if (operation === "support") {
+        requireGame(
+          !s.flags.includes("apk_mode") ||
+            person.role !== "friend" ||
+            !npcProfile(person).enemy,
+          "Người này đang thù địch với bạn.",
+        );
         const key = `support_${person.id}`;
         requireGame(
           (s.activityUses[key] ?? 0) < 1,

@@ -3,6 +3,7 @@ import type { Action, GameState, Relation } from "../../engine/types";
 import { ROLE_LABELS } from "../../engine/types";
 import ui from "../../i18n/vi.json" with { type: "json" };
 import { Avatar } from "../components/Avatar";
+import { npcProfile } from "../../engine/npc";
 const buttons: [Extract<Action, { type: "relation" }>["action"], string][] = [
   ["talk", "Trò chuyện"],
   ["gift", "Tặng quà · 200 nghìn"],
@@ -26,6 +27,10 @@ export function Relations({
     (r) => mode === "all" || (mode === "living" ? r.alive : !r.alive),
   );
   const person = s.relations.find((r) => r.id === selected);
+  const profile =
+    person?.role === "friend" && s.flags.includes("apk_mode")
+      ? npcProfile(person)
+      : undefined;
   const active = s.phase === "ready" && !s.prisonYears && s.time > 0;
   function act(
     r: Relation,
@@ -86,8 +91,12 @@ export function Relations({
             <span>
               <strong>{r.name}</strong>
               <small>
-                {ROLE_LABELS[r.role]} · {r.age} tuổi ·{" "}
-                {r.alive ? r.trait : "Được nhớ"}
+                {r.role === "friend" &&
+                s.flags.includes("apk_mode") &&
+                npcProfile(r).enemy
+                  ? "Thù địch"
+                  : ROLE_LABELS[r.role]}{" "}
+                · {r.age} tuổi · {r.alive ? r.trait : "Được nhớ"}
               </small>
               <progress
                 value={r.closeness}
@@ -114,13 +123,50 @@ export function Relations({
               <p>
                 Gắn bó {person.closeness}/100 · {person.trait}
               </p>
+              {profile && (
+                <div>
+                  <p>
+                    Tính bốc đồng {profile.craziness}/100 ·{" "}
+                    {profile.student ? "Đang học" : "Không đang học"} ·{" "}
+                    {profile.employed ? "Có việc làm" : "Không có việc làm"}
+                  </p>
+                  <p>
+                    {profile.married ? "Đã kết hôn" : "Chưa kết hôn"} ·{" "}
+                    {profile.children} người con ·{" "}
+                    {profile.enemy ? "Đang thù địch" : "Bạn bè"}
+                  </p>
+                  <button
+                    className="button small subtle"
+                    disabled={
+                      busy ||
+                      !active ||
+                      s.age < 6 ||
+                      (profile.enemy && person.closeness < 40)
+                    }
+                    onClick={() =>
+                      dispatch({
+                        type: "friendship",
+                        id: person.id,
+                        action: profile.enemy ? "reconcile" : "declareEnemy",
+                      })
+                    }
+                  >
+                    {profile.enemy
+                      ? "Làm hòa · gắn bó 40+"
+                      : "Tuyên bố thù địch"}
+                  </button>
+                </div>
+              )}
               <div className="button-row">
                 {buttons.map(([action, label]) => (
                   <button
                     className="button small subtle"
                     key={action}
                     disabled={
-                      busy || !active || (action === "gift" && s.money < 200000)
+                      busy ||
+                      !active ||
+                      (action === "gift" && s.money < 200000) ||
+                      (action === "support" && !!profile?.enemy)
                     }
                     onClick={() => act(person, action)}
                   >
@@ -135,6 +181,8 @@ export function Relations({
                       disabled={
                         busy ||
                         !active ||
+                        !!profile?.enemy ||
+                        !!profile?.married ||
                         s.relations.some(
                           (r) =>
                             r.alive && ["lover", "spouse"].includes(r.role),

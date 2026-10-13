@@ -3,6 +3,7 @@ import { random, pick } from "./rng";
 import { originById, origins, regionalName, localPrice } from "./world";
 import { requireGame } from "./helpers";
 import { assetById } from "../content/catalog";
+import { npcProfile } from "./npc";
 
 export const APK_TRIPS: Record<
   string,
@@ -16,7 +17,7 @@ export const APK_TRIPS: Record<
 export function apkTripCompanions(s: GameState) {
   return [
     ...s.relations
-      .filter((p) => p.alive)
+      .filter((p) => p.alive && (p.role !== "friend" || !npcProfile(p).enemy))
       .map((p) => ({
         id: p.id,
         name: p.name,
@@ -43,16 +44,27 @@ export function apkTripCompanions(s: GameState) {
 }
 
 export function apkFriend(s: GameState, r: ApkEventRequirements) {
-  return s.relations.find(
-    (p) =>
-      p.alive &&
-      p.role === "friend" &&
-      p.age >= (r.friendMinAge ?? 0) &&
-      p.age <= (r.friendMaxAge ?? 200) &&
-      (!r.friendGender ||
-        r.friendGender === "any" ||
-        p.gender === r.friendGender),
-  );
+  return s.relations.find((p) => {
+    if (
+      !p.alive ||
+      p.role !== "friend" ||
+      p.age < (r.friendMinAge ?? 0) ||
+      p.age > (r.friendMaxAge ?? 200) ||
+      (r.friendGender &&
+        r.friendGender !== "any" &&
+        p.gender !== r.friendGender)
+    )
+      return false;
+    const npc = npcProfile(p);
+    return (
+      npc.craziness >= (r.friendMinCraziness ?? 0) &&
+      (!r.friendJob || npc.employed) &&
+      (!r.friendStudent || npc.student) &&
+      (!r.friendChild || npc.children > 0) &&
+      (!r.friendMarried || npc.married) &&
+      npc.enemy === (r.friendEnemy ?? false)
+    );
+  });
 }
 export function apkEventAllowed(
   s: GameState,
