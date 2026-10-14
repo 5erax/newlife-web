@@ -63,3 +63,5 @@ E2E dùng Chrome đã cài trên Windows; CI cài Chromium của Playwright. Eng
 Code/nội dung web đã triển khai. Candidate giữ gate kiểm điện thoại vật lý, screen reader và hiệu năng điện thoại mở; không gọi là đã vượt mọi gate. GitHub Issues là nơi theo dõi task chính.
 
 SVG/icon tự tạo; nội dung tự viết và bản dịch APK được đánh dấu nguồn riêng. Không đóng gói APK, binary trích xuất, quảng cáo/thanh toán/xếp hạng trực tuyến. [Sổ nguồn](docs/asset-sources.md) phân biệt dữ liệu chuyển đổi với tài nguyên tự tạo.
+
+Bản1.8 mở rộng Keno và Craps với bảng kết toán đã đối chiếu APK, lưu/replayseed/nâng file1.7; lọc8ngành cổ phiếu và cơ cấu danh mục. [#128](https://github.com/5erax/newlife-web/issues/128) ghi kiểm thử/phát hành thực tế. HouseWinRate/RNG/tiền/UI dùng các chính sáchweb được công bố trong tài liệuport; chưa phải toànbộAPK1:1.

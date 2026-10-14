@@ -131,3 +131,13 @@ Phần 1.4 đã nghiệm thu sau checkpoint trên: PR #115 merge tại main `6ee
 ## Nghiên cứu Keno tiếp theo
 
 [Bằng chứng Keno](apk-keno-research.md) và [task #126](https://github.com/5erax/newlife-web/issues/126) xác minh khối payout, lưới5×4, sáu bóng và nhánh HouseWinRate. Đây là nghiên cứu, chưa có Keno chơi được trên web; RNG native, nguồn HouseWinRate và toàn bộ luồng tiền còn cần đối chiếu.
+
+## Đợt casino và đầu tư 1.8
+
+Theo [#128](https://github.com/5erax/newlife-web/issues/128), triển khai đồng thời Keno, Craps và phân tích danh mục/lọc8ngành cổ phiếu. Keno chọn đúng3số từ1–20, bốc6bóng không trùng, lãi−1/+1/+2/+3×cược theo0/1/2/3số trúng. Craps đọc bảng11tổng từ ARM64:7/11thắng,2/3/12thua,các tổng khác lắc tiếp; đây không phải luật giữ điểm của Craps phổ thông. `tools/inspect-bitlife-craps.py` pinhash và hiệu chuẩn ELF, xuất36fixture/6hàm vào `docs/qa/apk-craps-native.json`. Keno dùng proof12fixture/11hàm ở tài liệu nghiên cứu, input handler `HandleTouchDown` raw0x2E1C4A0 gọi AllNumbersPicked trước chọn ô mới nên giới hạn3số được xác minh tiếp.
+
+Engine kết toán nguyên tử, giữ100biên nhận mỗi trò và replayseed khi nhập; các bản1.7nâng được, không thay RNG/portfolio/lịch sử cũ. Giao diện tiếng Việt cho chọn số/bóng/lần lắc/lãi ròng và giữ qua reload. Craps tự lắc các tổng trung gian tới kết quả, thay cho thao tác bấm từng lần của native; đây là chính sách UIweb đã công bố. Trần1000lần tạo kết quả là giới hạn chống vòng lặp bất thường của web, không tuyên bố là trần native.
+
+Giới hạn: RNGseededweb và tiền integer hiện có; HouseWinRate dùng0cho casino web thường, chưa khớp các cấu hình casino native/casino sở hữu. Các nhánh điều chỉnh HouseWinRate củaKeno/Craps vẫn có trong proof, chưa được áp vào gameplay. Không tuyên bố toàncasino1:1, chưa phụ kiện thưởng đặc biệt hoặc sở hữu casino. High-Low/Poker/SportsBetting/ThreeCardShuffle/Blackjacknative vẫn cần theo luật đầy đủ. #118/#111còn mở.
+
+Đầu tư bổ sung lọc8ngành từ catalog107cổphiếu và cơ cấu vị thế theo5nhóm: giá trị hiện tại/tỷ trọng/lãi chưa chốt, dùng đúng hàm định giá đơn vị lẻ của engine; nhóm rỗng0%, không chia0. Chuyển loại đầu tư xóa bộ lọc ngành để không làm mất danh sách coin/trái phiếu. Đây là công cụ phân tích vị thế; giá/chu kỳ/phí/thuế vẫn mô hìnhweb, #122còn mở. Không gán luật giá native chưa xác minh.
