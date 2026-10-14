@@ -10,6 +10,7 @@ import { stories, apkEvents } from "../../src/content/catalog";
 import { advanceQueue } from "../../src/engine/year";
 import { nextRandom } from "../../src/engine/rng";
 import { drawSlots } from "../../src/engine/slots";
+import { drawKeno, drawCraps } from "../../src/engine/casino-native";
 import ui from "../../src/i18n/vi.json" with { type: "json" };
 const nav = (page: Page, label: string) =>
   page.locator("nav").getByRole("button", { name: new RegExp(label + "$") });
@@ -83,6 +84,135 @@ async function start(page: Page) {
   await expect(page.locator(".game-shell")).toBeVisible();
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
 }
+for (const game of ["keno", "craps"] as const)
+  test(`APK ${game} settles once and keeps native results after reload`, async ({
+    page,
+  }, testInfo) => {
+    await start(page);
+    const s = newLife({
+      name: "An casino",
+      gender: "female",
+      hometown: "Huế",
+      birthDate: "2000-01-01",
+      seed: 42,
+      contentMode: "apk",
+    });
+    s.age = 30;
+    s.money = 100000000;
+    const expected =
+      game === "keno"
+        ? drawKeno({ rng: s.rng }, [1, 2, 3])
+        : drawCraps({ rng: s.rng });
+    await nav(page, ui.saves).click();
+    await page.locator("input[type=file]").setInputFiles({
+      name: "casino.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(serialize(s)),
+    });
+    await page
+      .getByRole("button", { name: ui.importNewSlot, exact: true })
+      .click();
+    await nav(page, ui.activities).click();
+    await page.getByRole("button", { name: /Sòng bạc ·/ }).click();
+    await page.getByLabel("Trò chơi", { exact: true }).selectOption(game);
+    if (game === "keno") {
+      const choices = page.getByRole("group", { name: "Chọn số Keno" });
+      await expect(
+        choices.getByRole("button", { name: "4", exact: true }),
+      ).toBeDisabled();
+      await choices.getByRole("button", { name: "3", exact: true }).click();
+      await expect(
+        page.getByRole("button", { name: "Bốc bóng Keno", exact: true }),
+      ).toBeDisabled();
+      await choices.getByRole("button", { name: "3", exact: true }).click();
+    }
+    await page
+      .getByRole("button", {
+        name: game === "keno" ? "Bốc bóng Keno" : "Lắc xúc xắc",
+        exact: true,
+      })
+      .click();
+    const result = page.getByTestId(game + "-result");
+    if (game === "keno")
+      await expect(result).toContainText(
+        "Bóng: " + (expected as number[]).join(" · "),
+      );
+    else
+      for (const dice of expected as number[][])
+        await expect(result).toContainText(
+          `${dice[0]} + ${dice[1]} = ${dice[0] + dice[1]}`,
+        );
+    await expect(page.locator(".save-status")).toHaveText(ui.saved);
+    const receipt = await result.innerText();
+    await page.reload();
+    await nav(page, ui.activities).click();
+    await page.getByRole("button", { name: /Sòng bạc ·/ }).click();
+    await page.getByLabel("Trò chơi", { exact: true }).selectOption(game);
+    await expect(page.getByTestId(game + "-result")).toHaveText(receipt, {
+      useInnerText: true,
+    });
+    await expect(
+      page.getByText(
+        new RegExp(
+          "Lịch sử " + (game === "keno" ? "Keno" : "xúc xắc") + " · 1 lượt",
+        ),
+      ),
+    ).toBeVisible();
+    await page.locator(".casino-table").scrollIntoViewIfNeeded();
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    const path = testInfo.outputPath(game + ".png");
+    await page.screenshot({ path, fullPage: true });
+    await testInfo.attach(game, { path, contentType: "image/png" });
+  });
+test("APK investment sector filters reset and portfolio shows actual holdings", async ({
+  page,
+}) => {
+  await start(page);
+  const s = newLife({
+    name: "An danh mục",
+    gender: "female",
+    hometown: "Huế",
+    birthDate: "2000-01-01",
+    seed: 42,
+    contentMode: "apk",
+  });
+  s.age = 30;
+  s.money = 100000000;
+  await nav(page, ui.saves).click();
+  await page.locator("input[type=file]").setInputFiles({
+    name: "portfolio.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
+  await page
+    .getByRole("button", { name: ui.importNewSlot, exact: true })
+    .click();
+  await nav(page, ui.assets).click();
+  await page.getByRole("button", { name: /Đầu tư/ }).click();
+  await page
+    .getByLabel("Ngành cổ phiếu", { exact: true })
+    .selectOption("technology");
+  await expect(page.getByLabel("Loại đầu tư", { exact: true })).toHaveValue(
+    "stock",
+  );
+  await expect(
+    page.getByText("Ngành: Công nghệ", { exact: true }).first(),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Ngành: Năng lượng", { exact: true }),
+  ).toHaveCount(0);
+  await page.getByLabel("Loại đầu tư", { exact: true }).selectOption("crypto");
+  await expect(page.getByLabel("Ngành cổ phiếu", { exact: true })).toHaveValue(
+    "all",
+  );
+  await page.getByText("Cơ cấu danh mục đang nắm", { exact: true }).click();
+  await expect(page.getByRole("table").getByRole("row")).toHaveCount(6);
+  await expect(page.getByRole("table")).toContainText("0%");
+});
 test("APK slots pay native net winnings and preserve the settled reels after reload", async ({
   page,
 }, testInfo) => {
@@ -103,13 +233,11 @@ test("APK slots pay native net winnings and preserve the settled reels after rel
     result = drawSlots({ rng: s.rng });
   }
   await nav(page, ui.saves).click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "slots.json",
-      mimeType: "application/json",
-      buffer: Buffer.from(serialize(s)),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "slots.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
   await page
     .getByRole("button", { name: ui.importNewSlot, exact: true })
     .click();
@@ -155,13 +283,11 @@ test("APK roulette settles native net winnings and preserves its receipt after r
   s.money = 100000000;
   const outcome = Math.floor(nextRandom(s.rng).value * 13);
   await nav(page, ui.saves).click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "roulette.json",
-      mimeType: "application/json",
-      buffer: Buffer.from(serialize(s)),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "roulette.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
   await page
     .getByRole("button", { name: ui.importNewSlot, exact: true })
     .click();
@@ -212,13 +338,11 @@ test("all 107 APK stocks render with Vietnamese sectors and buying then selling 
   s.age = 30;
   s.money = 100000000;
   await nav(page, ui.saves).click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "stocks.json",
-      mimeType: "application/json",
-      buffer: Buffer.from(serialize(s)),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "stocks.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
   await page
     .getByRole("button", { name: ui.importNewSlot, exact: true })
     .click();

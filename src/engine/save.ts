@@ -1,6 +1,7 @@
 import { z } from "zod";
 import type { GameState } from "./types";
 import { CONTENT_VERSION } from "./types";
+import { drawKeno, kenoNet, drawCraps, crapsNet } from "./casino-native";
 import {
   eventSchema,
   idSchema,
@@ -293,6 +294,36 @@ const gameSchema = z.object({
         )
         .max(100)
         .default([]),
+      kenoHistory: z
+        .array(
+          z.object({
+            id: idSchema,
+            bet: integer.min(1000),
+            age: integer.max(150),
+            seedBefore: integer.max(4294967295),
+            numbers: z.array(integer.min(1).max(20)).length(3),
+            drawn: z.array(integer.min(1).max(20)).length(6),
+            net: z.number().int().min(-MAX_MONEY).max(MAX_MONEY),
+          }),
+        )
+        .max(100)
+        .default([]),
+      crapsHistory: z
+        .array(
+          z.object({
+            id: idSchema,
+            bet: integer.min(1000),
+            age: integer.max(150),
+            seedBefore: integer.max(4294967295),
+            rolls: z
+              .array(z.array(integer.min(1).max(6)).length(2))
+              .min(1)
+              .max(1000),
+            net: z.number().int().min(-MAX_MONEY).max(MAX_MONEY),
+          }),
+        )
+        .max(100)
+        .default([]),
       handsThisYear: integer.max(20),
       winStreak: integer.max(20),
       bannedUntil: integer.max(300),
@@ -541,6 +572,34 @@ function references(s: GameState) {
         s.casino.slotsHistory.length,
     "Lịch sử máy xèng không khớp cược, kết quả hoặc seed.",
   );
+  requireGame(
+    s.casino.kenoHistory.every(
+      (r) =>
+        s.flags.includes("apk_mode") &&
+        r.age >= 15 &&
+        r.age <= s.age &&
+        JSON.stringify(r.drawn) ===
+          JSON.stringify(drawKeno({ rng: r.seedBefore }, r.numbers)) &&
+        r.net === kenoNet(r.numbers, r.drawn, r.bet),
+    ) &&
+      new Set(s.casino.kenoHistory.map((r) => r.id)).size ===
+        s.casino.kenoHistory.length,
+    "Lịch sử Keno không khớp cược, kết quả hoặc seed.",
+  );
+  requireGame(
+    s.casino.crapsHistory.every(
+      (r) =>
+        s.flags.includes("apk_mode") &&
+        r.age >= 15 &&
+        r.age <= s.age &&
+        JSON.stringify(r.rolls) ===
+          JSON.stringify(drawCraps({ rng: r.seedBefore })) &&
+        r.net === crapsNet(r.rolls, r.bet),
+    ) &&
+      new Set(s.casino.crapsHistory.map((r) => r.id)).size ===
+        s.casino.crapsHistory.length,
+    "Lịch sử xúc xắc không khớp cược, kết quả hoặc seed.",
+  );
   const date = new Date(s.birthDate + "T00:00:00Z");
   requireGame(
     !Number.isNaN(date.valueOf()) &&
@@ -712,9 +771,16 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0", "1.5.0", "1.6.0"].includes(
-      String(value.contentVersion),
-    )
+    [
+      "1.0.0",
+      "1.1.0",
+      "1.2.0",
+      "1.3.0",
+      "1.4.0",
+      "1.5.0",
+      "1.6.0",
+      "1.7.0",
+    ].includes(String(value.contentVersion))
   )
     value = { ...value, contentVersion: CONTENT_VERSION };
   const parsed = gameSchema.safeParse(value);

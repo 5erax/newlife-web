@@ -7,6 +7,13 @@ import { localPrice } from "./world";
 import { annualIncome } from "./activity-pricing";
 import { rouletteNet } from "./roulette";
 import { drawSlots, slotsNet } from "./slots";
+import {
+  drawKeno,
+  kenoNet,
+  kenoNumbers,
+  drawCraps,
+  crapsNet,
+} from "./casino-native";
 
 export const emptyCasino = () => ({
   shoe: [] as number[],
@@ -14,6 +21,8 @@ export const emptyCasino = () => ({
   history: [] as CasinoHand[],
   rouletteHistory: [] as GameState["casino"]["rouletteHistory"],
   slotsHistory: [] as GameState["casino"]["slotsHistory"],
+  kenoHistory: [] as GameState["casino"]["kenoHistory"],
+  crapsHistory: [] as GameState["casino"]["crapsHistory"],
   handsThisYear: 0,
   winStreak: 0,
   bannedUntil: 0,
@@ -95,7 +104,13 @@ export function handReturn(hand: CasinoHand) {
 }
 export function casinoBetLimit(
   s: GameState,
-  game: "roulette" | "slots" | "blackjack" | "bacao" = "blackjack",
+  game:
+    | "roulette"
+    | "slots"
+    | "keno"
+    | "craps"
+    | "blackjack"
+    | "bacao" = "blackjack",
 ) {
   const headroom =
     MAX_MONEY -
@@ -111,7 +126,16 @@ export function casinoBetLimit(
         s.money / 10,
         localPrice(s, s.age < 18 ? 20000 : 5000000),
         annualIncome(s) * 0.02,
-        headroom / (game === "slots" ? 19 : game === "roulette" ? 13 : 1.5),
+        headroom /
+          (game === "slots"
+            ? 19
+            : game === "roulette"
+              ? 13
+              : game === "keno"
+                ? 3
+                : game === "craps"
+                  ? 1
+                  : 1.5),
       ) / 100,
     ) * 100,
   );
@@ -189,6 +213,8 @@ export function casinoAction(s: GameState, a: Action) {
       "casinoStand",
       "casinoRoulette",
       "casinoSlots",
+      "casinoKeno",
+      "casinoCraps",
     ].includes(a.type)
   )
     return false;
@@ -196,7 +222,71 @@ export function casinoAction(s: GameState, a: Action) {
     s.age >= 15 && !s.prisonYears && s.age >= s.casino.bannedUntil,
     "Sòng mở từ 15 tuổi, khi tự do và không bị mời ra.",
   );
-  if (a.type === "casinoSlots") {
+  if (a.type === "casinoKeno" || a.type === "casinoCraps") {
+    const game = a.type === "casinoKeno" ? "keno" : "craps";
+    requireGame(
+      s.flags.includes("apk_mode") &&
+        !s.casino.hand &&
+        s.casino.handsThisYear < 20,
+      "Trò chơi thuộc bộ APK; cần kết thúc ván hiện tại và còn lượt năm nay.",
+    );
+    requireGame(
+      Number.isSafeInteger(a.bet) &&
+        a.bet >= 1000 &&
+        a.bet % 100 === 0 &&
+        a.bet <= casinoBetLimit(s, game),
+      "Tiền cược vượt hạn mức hoặc không hợp lệ.",
+    );
+    const seedBefore = s.rng;
+    changeContext(
+      s,
+      "casino",
+      game === "keno" ? "Kết quả Keno." : "Kết quả xúc xắc.",
+    );
+    let net: number;
+    if (a.type === "casinoKeno") {
+      kenoNumbers(a.numbers);
+      const numbers = [...a.numbers],
+        drawn = drawKeno(s, numbers);
+      net = kenoNet(numbers, drawn, a.bet);
+      recordCasinoEffects(s, net, a.bet, s.casino.kenoHistory.at(-1)?.net ?? 0);
+      s.casino.kenoHistory.push({
+        id: `${s.id}_keno_${s.actionSerial}`,
+        numbers,
+        drawn,
+        bet: a.bet,
+        net,
+        age: s.age,
+        seedBefore,
+      });
+      s.casino.kenoHistory = s.casino.kenoHistory.slice(-100);
+    } else {
+      const rolls = drawCraps(s);
+      net = crapsNet(rolls, a.bet);
+      recordCasinoEffects(
+        s,
+        net,
+        a.bet,
+        s.casino.crapsHistory.at(-1)?.net ?? 0,
+      );
+      s.casino.crapsHistory.push({
+        id: `${s.id}_craps_${s.actionSerial}`,
+        rolls,
+        bet: a.bet,
+        net,
+        age: s.age,
+        seedBefore,
+      });
+      s.casino.crapsHistory = s.casino.crapsHistory.slice(-100);
+    }
+    money(s, net, game === "keno" ? "Kết quả Keno" : "Kết quả xúc xắc");
+    s.casino.handsThisYear++;
+    addLog(
+      s,
+      `${game === "keno" ? "Keno" : "Xúc xắc"}: ${net > 0 ? "thắng" : "thua"}.`,
+      "event",
+    );
+  } else if (a.type === "casinoSlots") {
     requireGame(
       s.flags.includes("apk_mode") &&
         !s.casino.hand &&

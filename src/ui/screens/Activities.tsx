@@ -48,7 +48,7 @@ export function Activities({
         {casinoOpen
           ? "← Trở về hoạt động"
           : s.flags.includes("apk_mode")
-            ? "♠ Sòng bạc · Blackjack, Ba cào, Roulette & Máy xèng"
+            ? "♠ Sòng bạc · Blackjack, Ba cào, Roulette, Máy xèng, Keno & Xúc xắc"
             : "♠ Sòng bạc · Blackjack & Ba cào"}
       </button>
       {casinoOpen ? (

@@ -7,6 +7,7 @@ import type {
 } from "../../engine/types";
 import { rouletteColor } from "../../engine/roulette";
 import { slotsMultiplier } from "../../engine/slots";
+import { CasinoNumbers } from "./CasinoNumbers";
 import {
   blackjackScore,
   bacaoScore,
@@ -46,13 +47,19 @@ export function Casino({
   dispatch: (a: Action) => void;
   busy: boolean;
 }) {
-  const [game, setGame] = useState<CasinoHand["game"] | "roulette" | "slots">(
+  const [game, setGame] = useState<
+      CasinoHand["game"] | "roulette" | "slots" | "keno" | "craps"
+    >(
       s.casino.hand?.game ??
-        (s.casino.slotsHistory.length
-          ? "slots"
-          : s.casino.rouletteHistory.length
-            ? "roulette"
-            : "blackjack"),
+        (s.casino.crapsHistory.length
+          ? "craps"
+          : s.casino.kenoHistory.length
+            ? "keno"
+            : s.casino.slotsHistory.length
+              ? "slots"
+              : s.casino.rouletteHistory.length
+                ? "roulette"
+                : "blackjack"),
     ),
     [bet, setBet] = useState(1000);
   const [rouletteSelection, setRouletteSelection] = useState<RouletteBet>({
@@ -113,6 +120,12 @@ export function Casino({
             {s.flags.includes("apk_mode") && (
               <option value="slots">Máy xèng</option>
             )}
+            {s.flags.includes("apk_mode") && (
+              <>
+                <option value="keno">Keno</option>
+                <option value="craps">Craps · xúc xắc</option>
+              </>
+            )}
           </select>
         </label>
         <label>
@@ -131,39 +144,59 @@ export function Casino({
             {cash(max, false, s.origin)})
           </small>
         </label>
-        <button
-          className="button"
+        {game !== "keno" && game !== "craps" && (
+          <button
+            className="button"
+            disabled={
+              busy ||
+              !ready ||
+              !!s.casino.hand ||
+              s.casino.handsThisYear >= 20 ||
+              bet > max ||
+              bet < 1000 ||
+              !Number.isSafeInteger(bet) ||
+              bet % 100 !== 0
+            }
+            onClick={() =>
+              dispatch(
+                game === "slots"
+                  ? { type: "casinoSlots", bet }
+                  : game === "roulette"
+                    ? {
+                        type: "casinoRoulette",
+                        bet,
+                        selection: rouletteSelection,
+                      }
+                    : { type: "casinoDeal", game, bet },
+              )
+            }
+          >
+            {game === "slots"
+              ? "Quay máy xèng"
+              : game === "roulette"
+                ? "Quay roulette"
+                : "Chia bài"}
+          </button>
+        )}
+      </div>
+      {(game === "keno" || game === "craps") && (
+        <CasinoNumbers
+          s={s}
+          game={game}
+          bet={bet}
+          dispatch={dispatch}
           disabled={
             busy ||
             !ready ||
             !!s.casino.hand ||
             s.casino.handsThisYear >= 20 ||
-            bet > max ||
-            bet < 1000 ||
             !Number.isSafeInteger(bet) ||
-            bet % 100 !== 0
+            bet < 1000 ||
+            bet % 100 !== 0 ||
+            bet > max
           }
-          onClick={() =>
-            dispatch(
-              game === "slots"
-                ? { type: "casinoSlots", bet }
-                : game === "roulette"
-                  ? {
-                      type: "casinoRoulette",
-                      bet,
-                      selection: rouletteSelection,
-                    }
-                  : { type: "casinoDeal", game, bet },
-            )
-          }
-        >
-          {game === "slots"
-            ? "Quay máy xèng"
-            : game === "roulette"
-              ? "Quay roulette"
-              : "Chia bài"}
-        </button>
-      </div>
+        />
+      )}
       {game === "slots" && (
         <div className="casino-table">
           <h3>Máy xèng · ba biểu tượng</h3>
@@ -321,90 +354,99 @@ export function Casino({
           </details>
         </div>
       )}
-      {h && game !== "roulette" && game !== "slots" && (
-        <div className="casino-table">
-          <h3>{h.game === "blackjack" ? "Blackjack" : "Ba cào"}</h3>
-          <p>
-            Nhà cái{" "}
-            {h.status === "settled"
-              ? `· ${h.game === "blackjack" ? blackjackScore(h.dealer).value : bacaoScore(h.dealer)} điểm`
-              : "· một lá úp"}
-          </p>
-          <Cards cards={h.dealer} hidden={h.status === "playing"} />
-          <p>
-            Bạn ·{" "}
-            {h.game === "blackjack"
-              ? blackjackScore(h.player).value
-              : bacaoScore(h.player)}{" "}
-            điểm
-          </p>
-          <Cards cards={h.player} />
-          {s.casino.hand ? (
-            <div className="button-row">
-              <button
-                className="button"
-                disabled={busy || !ready}
-                onClick={() => dispatch({ type: "casinoHit" })}
-              >
-                Rút thêm
-              </button>
-              <button
-                className="button primary"
-                disabled={busy || !ready}
-                onClick={() => dispatch({ type: "casinoStand" })}
-              >
-                Dừng
-              </button>
-            </div>
-          ) : (
-            <p className="hand-result">
-              {h.result} · {h.net >= 0 ? "+" : "−"}
-              {cash(Math.abs(h.net), true, s.origin)}
+      {h &&
+        game !== "roulette" &&
+        game !== "slots" &&
+        game !== "keno" &&
+        game !== "craps" && (
+          <div className="casino-table">
+            <h3>{h.game === "blackjack" ? "Blackjack" : "Ba cào"}</h3>
+            <p>
+              Nhà cái{" "}
+              {h.status === "settled"
+                ? `· ${h.game === "blackjack" ? blackjackScore(h.dealer).value : bacaoScore(h.dealer)} điểm`
+                : "· một lá úp"}
             </p>
-          )}
-        </div>
-      )}
-      <details className="part-time">
-        <summary>Luật bàn</summary>
-        <p>
-          Sáu bộ bài dùng chung. Blackjack: A tính 1 hoặc 11, hình tính 10; nhà
-          cái dừng ở mọi 17, kể cả 17 mềm. Blackjack tự nhiên trả lãi 3:2; thắng
-          thường 1:1, hoà trả cược. Bản này dùng rút/dừng, chưa có gấp cược hoặc
-          tách bài; không gán lợi thế 0,5% cho bộ luật này.
-        </p>
-        <p>
-          Ba cào: A=1, 2–9 theo số; 10/J/Q/K=0. Tổng lấy dư 10. Không có “ba
-          hình”. Hoà trả cược; thắng nhận lãi 94% cược, thua mất cược. Phí 6%
-          phần thắng tạo lợi thế nhà cái khoảng 2–4%, được kiểm bằng mô phỏng.
-        </p>
-        <p>
-          Cược tối đa bằng mức nhỏ nhất của 10% tiền hiện có, 2% thu nhập chuẩn
-          và trần theo tuổi. Tối đa 20 ván/năm. Bấm tăng tuổi sau khi kết thúc
-          ván.
-        </p>
-      </details>
-      <details className="part-time">
-        <summary>Lịch sử 100 ván gần nhất · xem lại lá bài</summary>
-        {s.casino.history
-          .slice()
-          .reverse()
-          .map((row) => (
-            <details key={row.id}>
-              <summary>
-                Tuổi {row.age} ·{" "}
-                {row.game === "blackjack" ? "Blackjack" : "Ba cào"} ·{" "}
-                {row.result} · {cash(row.net, true, s.origin)}
-              </summary>
-              <p>
-                Bạn: {row.player.map(cardLabel).join(" ")} · Nhà cái:{" "}
-                {row.dealer.map(cardLabel).join(" ")}
+            <Cards cards={h.dealer} hidden={h.status === "playing"} />
+            <p>
+              Bạn ·{" "}
+              {h.game === "blackjack"
+                ? blackjackScore(h.player).value
+                : bacaoScore(h.player)}{" "}
+              điểm
+            </p>
+            <Cards cards={h.player} />
+            {s.casino.hand ? (
+              <div className="button-row">
+                <button
+                  className="button"
+                  disabled={busy || !ready}
+                  onClick={() => dispatch({ type: "casinoHit" })}
+                >
+                  Rút thêm
+                </button>
+                <button
+                  className="button primary"
+                  disabled={busy || !ready}
+                  onClick={() => dispatch({ type: "casinoStand" })}
+                >
+                  Dừng
+                </button>
+              </div>
+            ) : (
+              <p className="hand-result">
+                {h.result} · {h.net >= 0 ? "+" : "−"}
+                {cash(Math.abs(h.net), true, s.origin)}
               </p>
-              <small>
-                Cược {row.bet} · seed trước ván {row.seedBefore}
-              </small>
-            </details>
-          ))}
-      </details>
+            )}
+          </div>
+        )}
+      {(game === "blackjack" || game === "bacao") && (
+        <>
+          <details className="part-time">
+            <summary>Luật bàn</summary>
+            <p>
+              Sáu bộ bài dùng chung. Blackjack: A tính 1 hoặc 11, hình tính 10;
+              nhà cái dừng ở mọi 17, kể cả 17 mềm. Blackjack tự nhiên trả lãi
+              3:2; thắng thường 1:1, hoà trả cược. Bản này dùng rút/dừng, chưa
+              có gấp cược hoặc tách bài; không gán lợi thế 0,5% cho bộ luật này.
+            </p>
+            <p>
+              Ba cào: A=1, 2–9 theo số; 10/J/Q/K=0. Tổng lấy dư 10. Không có “ba
+              hình”. Hoà trả cược; thắng nhận lãi 94% cược, thua mất cược. Phí
+              6% phần thắng tạo lợi thế nhà cái khoảng 2–4%, được kiểm bằng mô
+              phỏng.
+            </p>
+            <p>
+              Cược tối đa bằng mức nhỏ nhất của 10% tiền hiện có, 2% thu nhập
+              chuẩn và trần theo tuổi. Tối đa 20 ván/năm. Bấm tăng tuổi sau khi
+              kết thúc ván.
+            </p>
+          </details>
+          <details className="part-time">
+            <summary>Lịch sử 100 ván gần nhất · xem lại lá bài</summary>
+            {s.casino.history
+              .slice()
+              .reverse()
+              .map((row) => (
+                <details key={row.id}>
+                  <summary>
+                    Tuổi {row.age} ·{" "}
+                    {row.game === "blackjack" ? "Blackjack" : "Ba cào"} ·{" "}
+                    {row.result} · {cash(row.net, true, s.origin)}
+                  </summary>
+                  <p>
+                    Bạn: {row.player.map(cardLabel).join(" ")} · Nhà cái:{" "}
+                    {row.dealer.map(cardLabel).join(" ")}
+                  </p>
+                  <small>
+                    Cược {row.bet} · seed trước ván {row.seedBefore}
+                  </small>
+                </details>
+              ))}
+          </details>
+        </>
+      )}
     </section>
   );
 }

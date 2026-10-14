@@ -8,6 +8,7 @@ import {
   valueForUnits,
   apkStockById,
   APK_STOCK_SECTORS,
+  portfolioBreakdown,
 } from "../../engine/investments";
 import { cash } from "../format";
 function Sparkline({ values, label }: { values: number[]; label: string }) {
@@ -48,7 +49,8 @@ export function Investments({
   const [group, setGroup] = useState("all"),
     [search, setSearch] = useState(""),
     [amounts, setAmounts] = useState<Record<string, string>>({}),
-    [showClosed, setShowClosed] = useState(false);
+    [showClosed, setShowClosed] = useState(false),
+    [sector, setSector] = useState("all");
   const money = (value: number, full = false) => cash(value, full, s.origin),
     value = portfolioValue(s),
     cost = s.investments.positions.reduce((n, p) => n + p.costBasis, 0),
@@ -63,6 +65,7 @@ export function Investments({
   const list = s.investments.instruments.filter(
     (i) =>
       (group === "all" || i.group === group) &&
+      (sector === "all" || apkStockById.get(i.id)?.sector === sector) &&
       i.name
         .toLocaleLowerCase("vi-VN")
         .includes(search.toLocaleLowerCase("vi-VN")) &&
@@ -85,8 +88,8 @@ export function Investments({
       </div>
       {s.flags.includes("apk_mode") && (
         <p className="muted fine">
-          Danh mục coin và cổ phiếu từ APK. Giá, thanh khoản và biến động dùng mô hình thị
-          trường hư cấu của bản web.
+          Danh mục coin và cổ phiếu từ APK. Giá, thanh khoản và biến động dùng
+          mô hình thị trường hư cấu của bản web.
         </p>
       )}
       <div className="investment-summary">
@@ -119,6 +122,58 @@ export function Investments({
           </strong>
         </div>
       </div>
+      <details>
+        <summary>Cơ cấu danh mục đang nắm</summary>
+        <div
+          className="table-scroll"
+          role="region"
+          aria-label="Cơ cấu danh mục"
+          tabIndex={0}
+        >
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Nhóm</th>
+                <th scope="col">Giá trị</th>
+                <th scope="col">Tỷ trọng</th>
+                <th scope="col">Lãi/lỗ chưa chốt</th>
+              </tr>
+            </thead>
+            <tbody>
+              {portfolioBreakdown(s).map((g) => (
+                <tr key={g.group}>
+                  <th scope="row">{INVESTMENT_LABELS[g.group]}</th>
+                  <td>{money(g.value)}</td>
+                  <td>
+                    {(value ? (g.value / value) * 100 : 0).toLocaleString(
+                      "vi-VN",
+                      { maximumFractionDigits: 1 },
+                    )}
+                    %
+                  </td>
+                  <td>
+                    {money(g.profit)}
+                    {g.cost > 0 && (
+                      <small>
+                        {" "}
+                        (
+                        {((g.profit / g.cost) * 100).toLocaleString("vi-VN", {
+                          maximumFractionDigits: 2,
+                        })}
+                        %)
+                      </small>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="muted fine">
+          Tỷ trọng theo giá trị hiện tại; lãi/lỗ chưa chốt so với giá vốn vị
+          thế, chưa cộng cổ tức và phần đã bán.
+        </p>
+      </details>
       {s.investments.history.length > 1 && (
         <Sparkline
           values={s.investments.history.map((h) => h.value)}
@@ -130,7 +185,10 @@ export function Investments({
           <button
             key={g}
             aria-pressed={group === g}
-            onClick={() => setGroup(group === g ? "all" : g)}
+            onClick={() => {
+              setGroup(group === g ? "all" : g);
+              setSector("all");
+            }}
           >
             <strong>{INVESTMENT_LABELS[g]}</strong>
             <small>Tâm lý thị trường {s.investments.health[g]}/100</small>
@@ -181,6 +239,26 @@ export function Investments({
         </small>
       </details>
       <div className="toolbar">
+        {s.flags.includes("apk_mode") && (
+          <label>
+            Ngành cổ phiếu
+            <select
+              aria-label="Ngành cổ phiếu"
+              value={sector}
+              onChange={(e) => {
+                setSector(e.target.value);
+                if (e.target.value !== "all") setGroup("stock");
+              }}
+            >
+              <option value="all">Tất cả ngành</option>
+              {Object.entries(APK_STOCK_SECTORS).map(([id, label]) => (
+                <option key={id} value={id}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
         <input
           type="search"
           value={search}
@@ -190,7 +268,10 @@ export function Investments({
         />
         <select
           value={group}
-          onChange={(e) => setGroup(e.target.value)}
+          onChange={(e) => {
+            setGroup(e.target.value);
+            setSector("all");
+          }}
           aria-label="Loại đầu tư"
         >
           <option value="all">Tất cả</option>

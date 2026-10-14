@@ -38,6 +38,23 @@ export interface SlotsRound {
   age: number;
   seedBefore: number;
 }
+export interface KenoRound {
+  id: string;
+  bet: number;
+  numbers: number[];
+  drawn: number[];
+  net: number;
+  age: number;
+  seedBefore: number;
+}
+export interface CrapsRound {
+  id: string;
+  bet: number;
+  rolls: number[][];
+  net: number;
+  age: number;
+  seedBefore: number;
+}
 export type InvestmentGroup = "bond" | "stock" | "fund" | "penny" | "crypto";
 export interface MarketInstrument {
   id: string;
@@ -507,6 +524,8 @@ export interface GameState {
   casino: {
     rouletteHistory: RouletteRound[];
     slotsHistory: SlotsRound[];
+    kenoHistory: KenoRound[];
+    crapsHistory: CrapsRound[];
     shoe: number[];
     hand: CasinoHand | null;
     history: CasinoHand[];
@@ -562,6 +581,8 @@ export type Action =
   | { type: "casinoStand" }
   | { type: "casinoRoulette"; bet: number; selection: RouletteBet }
   | { type: "casinoSlots"; bet: number }
+  | { type: "casinoKeno"; bet: number; numbers: number[] }
+  | { type: "casinoCraps"; bet: number }
   | { type: "askTuition" }
   | { type: "migrate"; origin: string }
   | { type: "age" }
@@ -618,7 +639,7 @@ export interface NewLifeOptions {
   birthDate: string;
   seed: number;
 }
-export const CONTENT_VERSION = "1.7.0";
+export const CONTENT_VERSION = "1.8.0";
 export const STAT_LABELS: Record<Stat, string> = {
   health: "Sức khoẻ",
   happiness: "Hạnh phúc",

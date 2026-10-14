@@ -2170,6 +2170,7 @@ progress::-moz-progress-bar {
   animation: none;
 }
 .casino-table {
+  overflow-wrap: anywhere;
   background: #155952;
   color: #fff8e7;
   border: 5px solid #d7bc79;
@@ -2318,3 +2319,11 @@ progress::-moz-progress-bar {
 .investment-row strong {
   overflow-wrap: anywhere;
 }
+.table-scroll { overflow-x: auto; max-width: 100%; }
+.table-scroll table { width: 100%; min-width: 32rem; border-collapse: collapse; font-size: .9rem; text-align: left; }
+.table-scroll th, .table-scroll td { padding: .6rem; border-bottom: 1px solid var(--line); }
+.table-scroll td { white-space: nowrap; }
+.keno-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .5rem; }
+.keno-grid .button { min-height: 44px; }
+.keno-grid .button.subtle { color: #fff8e7; border-color: #fff8e7a0; }
+.keno-grid .button.subtle:hover:not(:disabled) { background: #236c63; }

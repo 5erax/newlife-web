@@ -96,6 +96,28 @@ export function portfolioValue(s: Pick<GameState, "investments">) {
   );
   return value;
 }
+export function portfolioBreakdown(s: Pick<GameState, "investments">) {
+  return (Object.keys(INVESTMENT_LABELS) as InvestmentGroup[]).map((group) => {
+    let value = 0,
+      cost = 0;
+    for (const p of s.investments.positions) {
+      const i = s.investments.instruments.find((i) => i.id === p.id);
+      requireGame(!!i, "Vị thế không có sản phẩm tương ứng.");
+      if (i!.group === group) {
+        value += valueForUnits(i!.price, p.units);
+        cost += p.costBasis;
+      }
+    }
+    requireGame(
+      Number.isSafeInteger(value) &&
+        value <= MAX_MONEY &&
+        Number.isSafeInteger(cost) &&
+        cost <= MAX_MONEY,
+      "Danh mục vượt giới hạn mô phỏng.",
+    );
+    return { group, value, cost, profit: value - cost };
+  });
+}
 const physicalValue = (s: GameState) =>
   s.assets.filter((a) => a.alive).reduce((n, a) => n + a.value * a.quantity, 0);
 export function marketCapacity(s: GameState, i: MarketInstrument) {
