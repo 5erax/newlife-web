@@ -6,12 +6,14 @@ import { changeContext } from "./changes";
 import { localPrice } from "./world";
 import { annualIncome } from "./activity-pricing";
 import { rouletteNet } from "./roulette";
+import { drawSlots, slotsNet } from "./slots";
 
 export const emptyCasino = () => ({
   shoe: [] as number[],
   hand: null as CasinoHand | null,
   history: [] as CasinoHand[],
   rouletteHistory: [] as GameState["casino"]["rouletteHistory"],
+  slotsHistory: [] as GameState["casino"]["slotsHistory"],
   handsThisYear: 0,
   winStreak: 0,
   bannedUntil: 0,
@@ -93,7 +95,7 @@ export function handReturn(hand: CasinoHand) {
 }
 export function casinoBetLimit(
   s: GameState,
-  game: "roulette" | "blackjack" | "bacao" = "blackjack",
+  game: "roulette" | "slots" | "blackjack" | "bacao" = "blackjack",
 ) {
   const headroom =
     MAX_MONEY -
@@ -109,7 +111,7 @@ export function casinoBetLimit(
         s.money / 10,
         localPrice(s, s.age < 18 ? 20000 : 5000000),
         annualIncome(s) * 0.02,
-        headroom / (game === "roulette" ? 13 : 1.5),
+        headroom / (game === "slots" ? 19 : game === "roulette" ? 13 : 1.5),
       ) / 100,
     ) * 100,
   );
@@ -181,16 +183,55 @@ function recordCasinoEffects(
 }
 export function casinoAction(s: GameState, a: Action) {
   if (
-    !["casinoDeal", "casinoHit", "casinoStand", "casinoRoulette"].includes(
-      a.type,
-    )
+    ![
+      "casinoDeal",
+      "casinoHit",
+      "casinoStand",
+      "casinoRoulette",
+      "casinoSlots",
+    ].includes(a.type)
   )
     return false;
   requireGame(
     s.age >= 15 && !s.prisonYears && s.age >= s.casino.bannedUntil,
     "Sòng mở từ 15 tuổi, khi tự do và không bị mời ra.",
   );
-  if (a.type === "casinoRoulette") {
+  if (a.type === "casinoSlots") {
+    requireGame(
+      s.flags.includes("apk_mode") &&
+        !s.casino.hand &&
+        s.casino.handsThisYear < 20,
+      "Máy xèng thuộc bộ APK; cần kết thúc ván hiện tại và còn lượt năm nay.",
+    );
+    requireGame(
+      Number.isSafeInteger(a.bet) &&
+        a.bet >= 1000 &&
+        a.bet % 100 === 0 &&
+        a.bet <= casinoBetLimit(s, "slots"),
+      "Cược máy xèng vượt hạn mức hoặc không hợp lệ.",
+    );
+    const seedBefore = s.rng,
+      result = drawSlots(s),
+      net = slotsNet(result.symbols, a.bet);
+    changeContext(s, "casino", `Máy xèng: ${result.symbols}.`);
+    money(s, net, "Kết quả máy xèng");
+    recordCasinoEffects(s, net, a.bet, s.casino.slotsHistory.at(-1)?.net ?? 0);
+    s.casino.slotsHistory.push({
+      id: `${s.id}_slots_${s.actionSerial}`,
+      bet: a.bet,
+      symbols: result.symbols,
+      net,
+      age: s.age,
+      seedBefore,
+    });
+    s.casino.slotsHistory = s.casino.slotsHistory.slice(-100);
+    s.casino.handsThisYear++;
+    addLog(
+      s,
+      `Máy xèng ra ${result.symbols}: ${net > 0 ? "thắng" : "thua"}.`,
+      "event",
+    );
+  } else if (a.type === "casinoRoulette") {
     requireGame(
       s.flags.includes("apk_mode") &&
         !s.casino.hand &&

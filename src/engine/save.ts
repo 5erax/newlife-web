@@ -38,6 +38,7 @@ import { portfolioValue, valueForUnits } from "./investments";
 import { interviewView } from "./interviews";
 import { rouletteNet } from "./roulette";
 import { nextRandom } from "./rng";
+import { drawSlots, slotsNet } from "./slots";
 const integer = z.number().int().min(0).max(MAX_MONEY);
 const score = z.number().int().min(0).max(100);
 const ids = z.array(idSchema).max(2000);
@@ -279,6 +280,19 @@ const gameSchema = z.object({
         )
         .max(100)
         .default([]),
+      slotsHistory: z
+        .array(
+          z.object({
+            id: idSchema,
+            bet: integer.min(1000),
+            age: integer.max(150),
+            seedBefore: integer.max(4294967295),
+            symbols: z.string().regex(/^[ABCDEF]{3}$/),
+            net: z.number().int().min(-MAX_MONEY).max(MAX_MONEY),
+          }),
+        )
+        .max(100)
+        .default([]),
       handsThisYear: integer.max(20),
       winStreak: integer.max(20),
       bannedUntil: integer.max(300),
@@ -514,6 +528,19 @@ function references(s: GameState) {
         s.casino.rouletteHistory.length,
     "Lịch sử roulette không khớp cược, kết quả hoặc seed.",
   );
+  requireGame(
+    s.casino.slotsHistory.every(
+      (r) =>
+        s.flags.includes("apk_mode") &&
+        r.age >= 15 &&
+        r.age <= s.age &&
+        r.symbols === drawSlots({ rng: r.seedBefore }).symbols &&
+        r.net === slotsNet(r.symbols, r.bet),
+    ) &&
+      new Set(s.casino.slotsHistory.map((r) => r.id)).size ===
+        s.casino.slotsHistory.length,
+    "Lịch sử máy xèng không khớp cược, kết quả hoặc seed.",
+  );
   const date = new Date(s.birthDate + "T00:00:00Z");
   requireGame(
     !Number.isNaN(date.valueOf()) &&
@@ -685,7 +712,7 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0", "1.5.0"].includes(
+    ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0", "1.5.0", "1.6.0"].includes(
       String(value.contentVersion),
     )
   )
