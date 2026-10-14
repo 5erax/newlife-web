@@ -45,7 +45,11 @@ export function Activities({
         className="button subtle"
         onClick={() => setCasinoOpen((v) => !v)}
       >
-        {casinoOpen ? "← Trở về hoạt động" : "♠ Sòng bạc · Blackjack & Ba cào"}
+        {casinoOpen
+          ? "← Trở về hoạt động"
+          : s.flags.includes("apk_mode")
+            ? "♠ Sòng bạc · Blackjack, Ba cào & Roulette"
+            : "♠ Sòng bạc · Blackjack & Ba cào"}
       </button>
       {casinoOpen ? (
         <Casino s={s} dispatch={dispatch} busy={busy} />

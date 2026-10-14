@@ -4,6 +4,29 @@ Theo dõi phạm vi đầy đủ tại [issue #111](https://github.com/5erax/new
 
 ## Các đợt chuyển nội dung
 
+### Đánh bạc và đầu tư 1.6
+
+[Epic #118](https://github.com/5erax/newlife-web/issues/118) giữ phạm vi 1:1 của hai hệ. Đợt này triển khai [roulette #119](https://github.com/5erax/newlife-web/issues/119) và [catalog cổ phiếu #120](https://github.com/5erax/newlife-web/issues/120); không nghiệm thu cả hai hệ chỉ vì các lát cắt này đã chạy.
+
+- **Luật roulette đã đối chiếu ARM64:** 13 ô từ 0 đến 12, số lẻ đỏ/số chẵn đen, 0 không màu. `MultiplierForBetType` đọc bảng `[13,1,13]`; `OnSpinDone` ghi số tiền cược nhân hệ số khi thắng, âm tiền cược khi thua, rồi cộng vào tổng kết quả phiên. Vì vậy thắng số (kể cả 0) **lãi ròng 13 lần**, thắng màu lãi ròng 1 lần; thua mất cược. Không nhầm hệ số này thành tổng trả 13 lần hoặc đổi sang luật roulette 37/38 ô. Luật cược số này có kỳ vọng dương nếu các ô đồng xác suất; đây là hành vi đã đọc từ bản APK được cung cấp, không phải lời hứa luôn thắng.
+- Bằng chứng tại `docs/qa/apk-roulette-native.json`: hash binary/metadata, offset raw, địa chỉ virtual, hash và disassembly sáu hàm; công cụ `tools/inspect-bitlife-roulette.py` đọc tĩnh, không chạy DLL/APK. Chạy bằng Python có `dnfile`, `capstone`, `pyelftools`, truyền thư mục phân tích có `libil2cpp.so`, `global-metadata.dat`, `cpp2il-addresses/Assembly-CSharp.dll`. Cpp2IL inject offset raw cho bản này: phải ánh xạ qua ELF PT_LOAD, không trừ nhầm virtual address. Tự kiểm bằng getter giá cổ phiếu `ldr d0,[x0,#0x30];ret`, lệnh truyền giới hạn 13, bảng hệ số và đủ hàm bằng chứng. Không commit binary trích xuất.
+- **Phần roulette viết lại trên web:** Mulberry32 seeded thay RNG Unity; lượt quay thanh toán nguyên tử và lưu biên nhận (cược/lựa chọn/kết quả/seed/tuổi/lãi ròng), giữ 100 lượt gần nhất. Import kiểm lại kết quả theo seed và hệ số, từ chối dữ liệu giả. Tuổi 15, 20 ván/năm, hạn mức tiền/thu nhập, nghiện/bị mời ra, số nguyên an toàn và trần tài sản là chính sách web hiện có; chưa chứng minh khớp native. Các ván Blackjack/Ba cào vẫn giữ cơ chế và thứ tự RNG trước đó.
+- **Đủ catalog cổ phiếu gốc:** 107 mã của `a16_financial-universal-stocks-enc`, 8 ngành; giữ Name/Symbol/Sector/Min Price/Max Price/Winner Score/Hero Ownership Cap và provenance dòng. Tên công ty/mã giữ như nguồn, nhãn ngành và thao tác bằng tiếng Việt. Đời APK mới dùng 107 cổ phiếu và 21 coin gốc; đời/file cũ giữ nguyên danh mục, giá, vị thế và RNG, không tự thay tài sản đang nắm. Muốn danh mục mới, tạo đời mới dùng bộ APK.
+- **Giá/lợi nhuận cổ phiếu chưa phải native:** giá khởi điểm trung điểm Min/Max nhân 1.000, rủi ro 50, thanh khoản 0,9, yield 1%, chu kỳ năm và phí mỗi chiều 1% dùng mô hình web. Winner Score không được suy ra thành xác suất thắng; Hero Ownership Cap được giữ trong dữ liệu nguồn nhưng chưa áp dụng khi công thức chưa được xác minh. Crypto lifecycle/tháng, tư vấn/tin/ý kiến, thuế, phí và giới hạn sở hữu native còn chờ phục hồi. Việc đủ 107 mã không đồng nghĩa đầu tư đã 1:1.
+- Kiểm tất cả **195 tổ hợp cược/kết quả**, thanh toán/lưu/reload, input không bị sửa và biên nhận không giữ tham chiếu tới action; boundary/headroom và migration 1.5. Mua/bán/roundtrip từng mã trong **107 cổ phiếu**, không tạo lời từ giao dịch tức thời sau phí. Đối chiếu canonical xác nhận sáu catalog sự kiện/provenance/nghề/chuyên ngành/coin/phỏng vấn cũ không đổi. Bài kiểm thử 810 đáp án vẫn kiểm đủ reducer/roundtrip, dùng fixture nền chung và timeout riêng 30 giây cho danh mục lớn hơn, không giảm số trường hợp.
+- Local: **97 unit/16 browser PASS**, typecheck/content/build/PWA PASS; **100 cuộc đời APK, 4 chiến lược, 0 lỗi** (báo cáo `docs/qa/apk-v16-simulation.json`). Thử thay hệ số cược số 13 thành 12 làm kiểm thử thất bại, khôi phục rồi chạy xanh. Xem ảnh 390px phát hiện số trên nền bàn khó đọc; đã sửa màu/độ tương phản và chạy lại hai luồng mới. Bundle JS 4,37 MB/gzip 652 KB; chưa QA điện thoại vật lý. CI/hosted QA và quyết định nghiệm thu ghi riêng trong issue, không coi kết quả local là bằng chứng đã deploy.
+
+| Phần còn phải đối chiếu trong #118 | Trạng thái sau 1.6 |
+| --- | --- |
+| Roulette | Luật số/màu/lãi ròng đã xác minh; luật phiên/hạn mức và RNG vẫn web |
+| Blackjack | Bàn web có rút/dừng; chưa xác minh toàn bộ luật native |
+| Craps, Cao–thấp, Keno, Máy xèng, Cá cược thể thao, Texas Hold’em, Đảo ba lá | Chưa triển khai các minigame native |
+| Xổ số, đua ngựa, cược đấu võ; sở hữu/quản lý casino | Phạm vi riêng còn mở, không thay bằng nút kết quả ngẫu nhiên |
+| Cổ phiếu | 107 mã/8 ngành và trường nguồn đủ; công thức native còn mở |
+| Crypto | 21 coin gốc có thể giao dịch; lifecycle/tháng và xác suất native còn mở |
+| Trái phiếu, quỹ, cổ phiếu giá thấp | Mô hình web; dữ liệu/đáo hạn/rủi ro native còn mở |
+| Cố vấn, tin tài chính, ý kiến, thống kê | Công cụ web; bộ nội dung và resolver native còn mở |
+
 ### Phỏng vấn tuyển dụng 1.5
 
 [Task #116](https://github.com/5erax/newlife-web/issues/116) chuyển `a16_interview-questions-enc`: **46 câu hỏi, 796 đáp án thường và 14 đáp án mặc định**, giữ Choice Score/Default Choice Score 1–5 và Commonness Score. ID theo vị trí bản ghi, mỗi câu có provenance bảng/record trong `interviews.vi.json`. Thêm 9 bản dịch mặc định thủ công; generator dừng trước ghi tệp nếu còn thiếu bản dịch. Không cộng 810 đáp án thành 810 sự kiện.

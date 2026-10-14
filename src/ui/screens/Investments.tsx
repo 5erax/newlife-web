@@ -6,6 +6,8 @@ import {
   marketCapacity,
   tradeQuote,
   valueForUnits,
+  apkStockById,
+  APK_STOCK_SECTORS,
 } from "../../engine/investments";
 import { cash } from "../format";
 function Sparkline({ values, label }: { values: number[]; label: string }) {
@@ -56,7 +58,8 @@ export function Investments({
       s.phase === "ready" &&
       !s.prisonYears &&
       !s.casino.hand &&
-      !s.loveOffer;
+      !s.loveOffer &&
+      !s.jobInterview;
   const list = s.investments.instruments.filter(
     (i) =>
       (group === "all" || i.group === group) &&
@@ -82,7 +85,7 @@ export function Investments({
       </div>
       {s.flags.includes("apk_mode") && (
         <p className="muted fine">
-          21 tên coin từ APK. Giá, thanh khoản và biến động dùng mô hình thị
+          Danh mục coin và cổ phiếu từ APK. Giá, thanh khoản và biến động dùng mô hình thị
           trường hư cấu của bản web.
         </p>
       )}
@@ -234,6 +237,11 @@ export function Investments({
                 </h3>
                 <span className="tag">{INVESTMENT_LABELS[i.group]}</span>
               </div>
+              {apkStockById.has(i.id) && (
+                <p>
+                  Ngành: {APK_STOCK_SECTORS[apkStockById.get(i.id)!.sector]}
+                </p>
+              )}
               <div className="investment-price">
                 <strong>{money(i.price, true)}</strong>
                 <span>

@@ -20,6 +20,7 @@ import apkCoverage from "../content/apk/coverage.json" with { type: "json" };
 import apkSources from "../content/apk/event-sources.json" with { type: "json" };
 import apkMajors from "../content/apk/majors.vi.json" with { type: "json" };
 import apkCoins from "../content/apk/coins.json" with { type: "json" };
+import apkStocks from "../content/apk/stocks.json" with { type: "json" };
 import type { Condition } from "../engine/types";
 import { conditionSchema } from "../schema/content";
 import assert from "node:assert/strict";
@@ -207,6 +208,23 @@ export function validateContent() {
     apkCoverage.friendRows,
   );
   assert.equal(apkCoins.length, 21);
+  assert.equal(apkStocks.length, apkCoverage.stockRows);
+  assert.equal(new Set(apkStocks.map((i) => i.id)).size, 107);
+  assert.equal(new Set(apkStocks.map((i) => i.sector)).size, 8);
+  for (const i of apkStocks) {
+    assert(
+      Number.isSafeInteger(i.initialPrice) &&
+        i.initialPrice >= i.minPriceUSD * 1000 &&
+        i.initialPrice <= i.maxPriceUSD * 1000,
+    );
+    assert(
+      i.winnerScore >= 1 &&
+        i.winnerScore <= 5 &&
+        (i.ownershipCap === null ||
+          (i.ownershipCap >= 1 && i.ownershipCap <= 100)),
+    );
+    assert.equal(i.source.table, "a16_financial-universal-stocks-enc");
+  }
   assert.equal(apkEducation.length, 5);
   assert.equal(
     new Set([...events, ...fallbacks, ...apkEvents].map((e) => e.id)).size,
@@ -259,6 +277,7 @@ export function validateContent() {
       crypto: apkCoins.length,
       interviews: apkInterviews.length,
       interviewAnswers: apkCoverage.interviewAnswers,
+      stocks: apkStocks.length,
     },
   };
 }

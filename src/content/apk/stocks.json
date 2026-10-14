@@ -1,0 +1,2142 @@
+[
+  {
+    "id": "apk_stock_tea",
+    "name": "Homebrewed Communication Solutions",
+    "ticker": "TEA",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 25,
+    "maxPriceUSD": 130,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 77500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 1
+    }
+  },
+  {
+    "id": "apk_stock_bbc",
+    "name": "Bitizen Broadcasting Corporation",
+    "ticker": "BBC",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 30,
+    "maxPriceUSD": 175,
+    "winnerScore": 5,
+    "ownershipCap": 100,
+    "initialPrice": 102500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 2
+    }
+  },
+  {
+    "id": "apk_stock_jif",
+    "name": "Graphics Interface Formatters",
+    "ticker": "JIF",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 15,
+    "maxPriceUSD": 85,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 50000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 3
+    }
+  },
+  {
+    "id": "apk_stock_omg",
+    "name": "Omnilateral Media Group",
+    "ticker": "OMG",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 140,
+    "maxPriceUSD": 700,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 420000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 4
+    }
+  },
+  {
+    "id": "apk_stock_psa",
+    "name": "Platonic Shade Assassins Inc",
+    "ticker": "PSA",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 90,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 50000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 5
+    }
+  },
+  {
+    "id": "apk_stock_mw",
+    "name": "Mandywriter Editorial Group",
+    "ticker": "MW",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 40,
+    "maxPriceUSD": 200,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 120000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 6
+    }
+  },
+  {
+    "id": "apk_stock_dldo",
+    "name": "Dynamic Learning Direct Org",
+    "ticker": "DLDO",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 180,
+    "maxPriceUSD": 900,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 540000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 7
+    }
+  },
+  {
+    "id": "apk_stock_krn",
+    "name": "KarenCorp",
+    "ticker": "KRN",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 2,
+    "maxPriceUSD": 15,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 8500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 8
+    }
+  },
+  {
+    "id": "apk_stock_rddt",
+    "name": "Trollbase Consolidated",
+    "ticker": "RDDT",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 2,
+    "maxPriceUSD": 10,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 6000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 9
+    }
+  },
+  {
+    "id": "apk_stock_ua",
+    "name": "Wildcat Communications",
+    "ticker": "UA",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 150,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 80000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 10
+    }
+  },
+  {
+    "id": "apk_stock_dglf",
+    "name": "DogLife Pet Corporation",
+    "ticker": "DGLF",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 25,
+    "maxPriceUSD": 350,
+    "winnerScore": 5,
+    "ownershipCap": 100,
+    "initialPrice": 187500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 11
+    }
+  },
+  {
+    "id": "apk_stock_ifx",
+    "name": "IggyFax",
+    "ticker": "IFX",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 150,
+    "maxPriceUSD": 750,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 450000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 12
+    }
+  },
+  {
+    "id": "apk_stock_ae",
+    "name": "Afro Emporium",
+    "ticker": "AE",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 55,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 32500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 13
+    }
+  },
+  {
+    "id": "apk_stock_yolo",
+    "name": "Cheap Thrills Enterprises",
+    "ticker": "YOLO",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 25,
+    "maxPriceUSD": 125,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 75000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 14
+    }
+  },
+  {
+    "id": "apk_stock_goat",
+    "name": "All-Star Entertainment",
+    "ticker": "GOAT",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 100,
+    "maxPriceUSD": 500,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 300000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 15
+    }
+  },
+  {
+    "id": "apk_stock_bdsm",
+    "name": "Brown Dog Security Management",
+    "ticker": "BDSM",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 20,
+    "maxPriceUSD": 145,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 82500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 16
+    }
+  },
+  {
+    "id": "apk_stock_lol",
+    "name": "Lots of Love Productions",
+    "ticker": "LOL",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 15,
+    "maxPriceUSD": 135,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 75000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 17
+    }
+  },
+  {
+    "id": "apk_stock_cndy",
+    "name": "Candykiller Entertainment Group",
+    "ticker": "CNDY",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 18,
+    "maxPriceUSD": 90,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 54000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 18
+    }
+  },
+  {
+    "id": "apk_stock_dof",
+    "name": "Dorado Futures Inc",
+    "ticker": "DOF",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 50,
+    "maxPriceUSD": 330,
+    "winnerScore": 5,
+    "ownershipCap": null,
+    "initialPrice": 190000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 19
+    }
+  },
+  {
+    "id": "apk_stock_ween",
+    "name": "Western Energy ",
+    "ticker": "WEEN",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 170,
+    "maxPriceUSD": 850,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 510000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 20
+    }
+  },
+  {
+    "id": "apk_stock_mj",
+    "name": "Maddie BaddieCorp",
+    "ticker": "MJ",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 115,
+    "maxPriceUSD": 575,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 345000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 21
+    }
+  },
+  {
+    "id": "apk_stock_smmr",
+    "name": "Supernova Energies",
+    "ticker": "SMMR",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 27,
+    "maxPriceUSD": 195,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 111000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 22
+    }
+  },
+  {
+    "id": "apk_stock_cool",
+    "name": "CoolBreez Technologies",
+    "ticker": "COOL",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 110,
+    "maxPriceUSD": 550,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 330000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 23
+    }
+  },
+  {
+    "id": "apk_stock_zoom",
+    "name": "Lightspeed Power & Electric",
+    "ticker": "ZOOM",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 112,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 61000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 24
+    }
+  },
+  {
+    "id": "apk_stock_sti",
+    "name": "SpaceTech Industries",
+    "ticker": "STI",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 5,
+    "maxPriceUSD": 45,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 25000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 25
+    }
+  },
+  {
+    "id": "apk_stock_npc",
+    "name": "NukePow Corp",
+    "ticker": "NPC",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 180,
+    "maxPriceUSD": 900,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 540000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 26
+    }
+  },
+  {
+    "id": "apk_stock_gt",
+    "name": "Greentooth Energy Corp",
+    "ticker": "GT",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 40,
+    "maxPriceUSD": 300,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 170000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 27
+    }
+  },
+  {
+    "id": "apk_stock_gbp",
+    "name": "Babby Electric Ltd",
+    "ticker": "GBP",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 75,
+    "maxPriceUSD": 375,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 225000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 28
+    }
+  },
+  {
+    "id": "apk_stock_sqrt",
+    "name": "SquareRoot Industries",
+    "ticker": "SQRT",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 95,
+    "maxPriceUSD": 475,
+    "winnerScore": 5,
+    "ownershipCap": null,
+    "initialPrice": 285000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 29
+    }
+  },
+  {
+    "id": "apk_stock_dum",
+    "name": "Diamond Utility Management",
+    "ticker": "DUM",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 130,
+    "maxPriceUSD": 650,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 390000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 30
+    }
+  },
+  {
+    "id": "apk_stock_weeb",
+    "name": "Wellington Enterprise Bureau",
+    "ticker": "WEEB",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 107,
+    "maxPriceUSD": 535,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 321000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 31
+    }
+  },
+  {
+    "id": "apk_stock_eua",
+    "name": "Equitable User Assets",
+    "ticker": "EUA",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 190,
+    "maxPriceUSD": 950,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 570000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 32
+    }
+  },
+  {
+    "id": "apk_stock_rivr",
+    "name": "Reality Investment Group",
+    "ticker": "RIVR",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 40,
+    "maxPriceUSD": 200,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 120000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 33
+    }
+  },
+  {
+    "id": "apk_stock_hole",
+    "name": "Black Hole Asset Management",
+    "ticker": "HOLE",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 15,
+    "maxPriceUSD": 85,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 50000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 34
+    }
+  },
+  {
+    "id": "apk_stock_ipa",
+    "name": "Intellectual Property Assessors",
+    "ticker": "IPA",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 112,
+    "maxPriceUSD": 560,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 336000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 35
+    }
+  },
+  {
+    "id": "apk_stock_bro",
+    "name": "Bureaucratic Rational Optimizers",
+    "ticker": "BRO",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 85,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 47500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 36
+    }
+  },
+  {
+    "id": "apk_stock_cf",
+    "name": "Countrywide Financial Corp",
+    "ticker": "CF",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 150,
+    "maxPriceUSD": 750,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 450000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 37
+    }
+  },
+  {
+    "id": "apk_stock_sus",
+    "name": "Special User Supplements",
+    "ticker": "SUS",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 25,
+    "maxPriceUSD": 115,
+    "winnerScore": 5,
+    "ownershipCap": 50,
+    "initialPrice": 70000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 38
+    }
+  },
+  {
+    "id": "apk_stock_vgna",
+    "name": "Vegna Pharmaceuticals",
+    "ticker": "VGNA",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 100,
+    "maxPriceUSD": 500,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 300000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 39
+    }
+  },
+  {
+    "id": "apk_stock_gnja",
+    "name": "Ganja Growers United",
+    "ticker": "GNJA",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 42,
+    "maxPriceUSD": 240,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 141000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 40
+    }
+  },
+  {
+    "id": "apk_stock_dylf",
+    "name": "DynaLife Inc",
+    "ticker": "DYLF",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 140,
+    "maxPriceUSD": 700,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 420000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 41
+    }
+  },
+  {
+    "id": "apk_stock_milf",
+    "name": "Medical Infolife Corp",
+    "ticker": "MILF",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 110,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 60000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 42
+    }
+  },
+  {
+    "id": "apk_stock_homi",
+    "name": "Humane Organics Manufacturers",
+    "ticker": "HOMI",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 33,
+    "maxPriceUSD": 165,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 99000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 43
+    }
+  },
+  {
+    "id": "apk_stock_std",
+    "name": "Speculative Testing Diagnostics",
+    "ticker": "STD",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 4,
+    "maxPriceUSD": 45,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 24500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 44
+    }
+  },
+  {
+    "id": "apk_stock_uti",
+    "name": "Uranus Testers Inc",
+    "ticker": "UTI",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 90,
+    "maxPriceUSD": 450,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 270000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 45
+    }
+  },
+  {
+    "id": "apk_stock_nico",
+    "name": "Nicolab Aeronautics",
+    "ticker": "NICO",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 75,
+    "maxPriceUSD": 375,
+    "winnerScore": 5,
+    "ownershipCap": null,
+    "initialPrice": 225000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 46
+    }
+  },
+  {
+    "id": "apk_stock_jizz",
+    "name": "Sticky Fluids Unlimited",
+    "ticker": "JIZZ",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 75,
+    "maxPriceUSD": 375,
+    "winnerScore": 5,
+    "ownershipCap": null,
+    "initialPrice": 225000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 47
+    }
+  },
+  {
+    "id": "apk_stock_ggi",
+    "name": "Gorgeous Girl Industries",
+    "ticker": "GGI",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 120,
+    "maxPriceUSD": 600,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 360000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 48
+    }
+  },
+  {
+    "id": "apk_stock_gad",
+    "name": "Gray Aerospace Defense",
+    "ticker": "GAD",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 35,
+    "maxPriceUSD": 190,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 112500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 49
+    }
+  },
+  {
+    "id": "apk_stock_mryj",
+    "name": "Blaze Up Industries",
+    "ticker": "MRYJ",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 114,
+    "maxPriceUSD": 570,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 342000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 50
+    }
+  },
+  {
+    "id": "apk_stock_hand",
+    "name": "HAND Jobsite Supply",
+    "ticker": "HAND",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 25,
+    "maxPriceUSD": 125,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 75000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 51
+    }
+  },
+  {
+    "id": "apk_stock_iap",
+    "name": "Industrial Aviation Partners",
+    "ticker": "IAP",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 40,
+    "maxPriceUSD": 200,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 120000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 52
+    }
+  },
+  {
+    "id": "apk_stock_bomb",
+    "name": "Dynamic Ballistics Inc",
+    "ticker": "BOMB",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 72,
+    "maxPriceUSD": 360,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 216000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 53
+    }
+  },
+  {
+    "id": "apk_stock_mi",
+    "name": "Miami Industrials Corp",
+    "ticker": "MI",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 20,
+    "maxPriceUSD": 200,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 110000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 54
+    }
+  },
+  {
+    "id": "apk_stock_tim",
+    "name": "Angus Canadian Co Ltd",
+    "ticker": "TIM",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 50,
+    "maxPriceUSD": 250,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 150000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 55
+    }
+  },
+  {
+    "id": "apk_stock_ynwa",
+    "name": "Red Defense Corp",
+    "ticker": "YNWA",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 200,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 105000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 56
+    }
+  },
+  {
+    "id": "apk_stock_dg",
+    "name": "Diego Garcia Corp",
+    "ticker": "DG",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 100,
+    "maxPriceUSD": 500,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 300000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 57
+    }
+  },
+  {
+    "id": "apk_stock_fwb",
+    "name": "Freshwater Beverage Company",
+    "ticker": "FWB",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 17,
+    "maxPriceUSD": 170,
+    "winnerScore": 5,
+    "ownershipCap": null,
+    "initialPrice": 93500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 58
+    }
+  },
+  {
+    "id": "apk_stock_brb",
+    "name": "Big Ranch Brands",
+    "ticker": "BRB",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 5,
+    "maxPriceUSD": 25,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 15000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 59
+    }
+  },
+  {
+    "id": "apk_stock_tmi",
+    "name": "Terrestrial Metals Inc",
+    "ticker": "TMI",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 50,
+    "maxPriceUSD": 250,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 150000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 60
+    }
+  },
+  {
+    "id": "apk_stock_grlz",
+    "name": "Material Girls Inc",
+    "ticker": "GRLZ",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 190,
+    "maxPriceUSD": 950,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 570000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 61
+    }
+  },
+  {
+    "id": "apk_stock_poop",
+    "name": "Pulp & Waste Paper Inc",
+    "ticker": "POOP",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 5,
+    "maxPriceUSD": 25,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 15000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 62
+    }
+  },
+  {
+    "id": "apk_stock_wtf",
+    "name": "WestTerra Fluids",
+    "ticker": "WTF",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 75,
+    "maxPriceUSD": 375,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 225000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 63
+    }
+  },
+  {
+    "id": "apk_stock_lmao",
+    "name": "Land Management Asset Org",
+    "ticker": "LMAO",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 15,
+    "maxPriceUSD": 90,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 52500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 64
+    }
+  },
+  {
+    "id": "apk_stock_dgf",
+    "name": "Admiral Solutions International",
+    "ticker": "DGF",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 5,
+    "maxPriceUSD": 50,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 27500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 65
+    }
+  },
+  {
+    "id": "apk_stock_cw",
+    "name": "Candywriter LLC",
+    "ticker": "CW",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 10,
+    "maxPriceUSD": 80,
+    "winnerScore": 5,
+    "ownershipCap": 50,
+    "initialPrice": 45000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 66
+    }
+  },
+  {
+    "id": "apk_stock_gld",
+    "name": "Groom Lake Development",
+    "ticker": "GLD",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 2,
+    "maxPriceUSD": 10,
+    "winnerScore": 5,
+    "ownershipCap": 50,
+    "initialPrice": 6000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 67
+    }
+  },
+  {
+    "id": "apk_stock_rlg",
+    "name": "Random Logic Games",
+    "ticker": "RLG",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 100,
+    "maxPriceUSD": 500,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 300000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 68
+    }
+  },
+  {
+    "id": "apk_stock_aita",
+    "name": "Artificial Intelligence Trade Association",
+    "ticker": "AITA",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 60,
+    "maxPriceUSD": 300,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 180000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 69
+    }
+  },
+  {
+    "id": "apk_stock_ct",
+    "name": "Carballo Technologies",
+    "ticker": "CT",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 30,
+    "maxPriceUSD": 175,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 102500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 70
+    }
+  },
+  {
+    "id": "apk_stock_sat",
+    "name": "Stone Age Technologies",
+    "ticker": "SAT",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 17,
+    "maxPriceUSD": 120,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 68500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 71
+    }
+  },
+  {
+    "id": "apk_stock_sf",
+    "name": "Stillfront Group",
+    "ticker": "SF",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 15,
+    "maxPriceUSD": 120,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 67500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 72
+    }
+  },
+  {
+    "id": "apk_stock_inst",
+    "name": "InstLife Inc",
+    "ticker": "INST",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 2,
+    "maxPriceUSD": 15,
+    "winnerScore": 2,
+    "ownershipCap": 10,
+    "initialPrice": 8500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 73
+    }
+  },
+  {
+    "id": "apk_stock_yay",
+    "name": "White Horse Labs",
+    "ticker": "YAY",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 100,
+    "maxPriceUSD": 500,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 300000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 74
+    }
+  },
+  {
+    "id": "apk_stock_il",
+    "name": "IronLoco Ltd",
+    "ticker": "IL",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 2,
+    "maxPriceUSD": 50,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 26000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 75
+    }
+  },
+  {
+    "id": "apk_stock_tldr",
+    "name": "Tulong Direct",
+    "ticker": "TLDR",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 5,
+    "maxPriceUSD": 55,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 30000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 76
+    }
+  },
+  {
+    "id": "apk_stock_ezpz",
+    "name": "Simple Solutions Technologies",
+    "ticker": "EZPZ",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 30,
+    "maxPriceUSD": 90,
+    "winnerScore": 5,
+    "ownershipCap": null,
+    "initialPrice": 60000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 77
+    }
+  },
+  {
+    "id": "apk_stock_bae",
+    "name": "Backend Asset Development",
+    "ticker": "BAE",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 250,
+    "maxPriceUSD": 350,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 300000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 78
+    }
+  },
+  {
+    "id": "apk_stock_oop",
+    "name": "Organic Optimization Processors Inc",
+    "ticker": "OOP",
+    "group": "stock",
+    "sector": "technology",
+    "minPriceUSD": 34,
+    "maxPriceUSD": 483,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 258500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 79
+    }
+  },
+  {
+    "id": "apk_stock_mons",
+    "name": "Monetary Networking Systems",
+    "ticker": "MONS",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 20,
+    "maxPriceUSD": 100,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 60000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 80
+    }
+  },
+  {
+    "id": "apk_stock_cash",
+    "name": "Currency Assets Management",
+    "ticker": "CASH",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 120,
+    "maxPriceUSD": 420,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 270000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 81
+    }
+  },
+  {
+    "id": "apk_stock_fomo",
+    "name": "Financial First Offerings Inc",
+    "ticker": "FOMO",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 400,
+    "maxPriceUSD": 500,
+    "winnerScore": 5,
+    "ownershipCap": 20,
+    "initialPrice": 450000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 82
+    }
+  },
+  {
+    "id": "apk_stock_dnro",
+    "name": "El Dorado Asset Management",
+    "ticker": "DNRO",
+    "group": "stock",
+    "sector": "financials",
+    "minPriceUSD": 101,
+    "maxPriceUSD": 490,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 295500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 83
+    }
+  },
+  {
+    "id": "apk_stock_wood",
+    "name": "Morningwood Lumber Supply",
+    "ticker": "WOOD",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 15,
+    "maxPriceUSD": 190,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 102500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 84
+    }
+  },
+  {
+    "id": "apk_stock_byob",
+    "name": "Liquor Hole Distillery Supply",
+    "ticker": "BYOB",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 90,
+    "maxPriceUSD": 180,
+    "winnerScore": 5,
+    "ownershipCap": 40,
+    "initialPrice": 135000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 85
+    }
+  },
+  {
+    "id": "apk_stock_faux",
+    "name": "Derivative Clothiers Inc",
+    "ticker": "FAUX",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 34,
+    "maxPriceUSD": 210,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 122000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 86
+    }
+  },
+  {
+    "id": "apk_stock_lthr",
+    "name": "Buffman Leather Corporation",
+    "ticker": "LTHR",
+    "group": "stock",
+    "sector": "materials",
+    "minPriceUSD": 22,
+    "maxPriceUSD": 430,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 226000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 87
+    }
+  },
+  {
+    "id": "apk_stock_sick",
+    "name": "Sickless Industries",
+    "ticker": "SICK",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 50,
+    "maxPriceUSD": 150,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 100000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 88
+    }
+  },
+  {
+    "id": "apk_stock_bud",
+    "name": "Delta-9 Kind Corp",
+    "ticker": "BUD",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 11,
+    "maxPriceUSD": 99,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 55000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 89
+    }
+  },
+  {
+    "id": "apk_stock_bonr",
+    "name": "Harddon Healthcare",
+    "ticker": "BONR",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 200,
+    "maxPriceUSD": 300,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 250000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 90
+    }
+  },
+  {
+    "id": "apk_stock_bung",
+    "name": "Holistics Inc",
+    "ticker": "BUNG",
+    "group": "stock",
+    "sector": "healthcare",
+    "minPriceUSD": 100,
+    "maxPriceUSD": 300,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 200000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 91
+    }
+  },
+  {
+    "id": "apk_stock_xoxo",
+    "name": "Xenon Occidental",
+    "ticker": "XOXO",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 150,
+    "maxPriceUSD": 350,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 250000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 92
+    }
+  },
+  {
+    "id": "apk_stock_firm",
+    "name": "Rockhard Concrete Supply",
+    "ticker": "FIRM",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 8,
+    "maxPriceUSD": 56,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 32000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 93
+    }
+  },
+  {
+    "id": "apk_stock_lube",
+    "name": "Slippit Inn Chemicals Incorporated",
+    "ticker": "LUBE",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 25,
+    "maxPriceUSD": 150,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 87500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 94
+    }
+  },
+  {
+    "id": "apk_stock_wig",
+    "name": "Westside Industrial Group",
+    "ticker": "WIG",
+    "group": "stock",
+    "sector": "industrials",
+    "minPriceUSD": 90,
+    "maxPriceUSD": 330,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 210000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 95
+    }
+  },
+  {
+    "id": "apk_stock_dino",
+    "name": "Fossil Fuels International",
+    "ticker": "DINO",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 350,
+    "maxPriceUSD": 500,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 425000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 96
+    }
+  },
+  {
+    "id": "apk_stock_asap",
+    "name": "Expedient Energy Management",
+    "ticker": "ASAP",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 17,
+    "maxPriceUSD": 210,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 113500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 97
+    }
+  },
+  {
+    "id": "apk_stock_lazr",
+    "name": "Death Ray Power & Electric",
+    "ticker": "LAZR",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 120,
+    "maxPriceUSD": 462,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 291000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 98
+    }
+  },
+  {
+    "id": "apk_stock_vibe",
+    "name": "Kinetic Aura Power Corp",
+    "ticker": "VIBE",
+    "group": "stock",
+    "sector": "energy",
+    "minPriceUSD": 28,
+    "maxPriceUSD": 310,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 169000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 99
+    }
+  },
+  {
+    "id": "apk_stock_wdyt",
+    "name": "Consumer Research Group",
+    "ticker": "WDYT",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 50,
+    "maxPriceUSD": 100,
+    "winnerScore": 4,
+    "ownershipCap": null,
+    "initialPrice": 75000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 100
+    }
+  },
+  {
+    "id": "apk_stock_drag",
+    "name": "Magic Dragon Tobacco Company",
+    "ticker": "DRAG",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 3,
+    "maxPriceUSD": 97,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 50000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 101
+    }
+  },
+  {
+    "id": "apk_stock_dnce",
+    "name": "Random Records Ltd",
+    "ticker": "DNCE",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 18,
+    "maxPriceUSD": 194,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 106000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 102
+    }
+  },
+  {
+    "id": "apk_stock_pron",
+    "name": "PrawnHub Group",
+    "ticker": "PRON",
+    "group": "stock",
+    "sector": "consumer",
+    "minPriceUSD": 69,
+    "maxPriceUSD": 230,
+    "winnerScore": 5,
+    "ownershipCap": 50,
+    "initialPrice": 149500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 103
+    }
+  },
+  {
+    "id": "apk_stock_ding",
+    "name": "Digital Networking Group",
+    "ticker": "DING",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 5,
+    "maxPriceUSD": 30,
+    "winnerScore": 3,
+    "ownershipCap": null,
+    "initialPrice": 17500,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 104
+    }
+  },
+  {
+    "id": "apk_stock_hllo",
+    "name": "Mynameis Telecom",
+    "ticker": "HLLO",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 30,
+    "maxPriceUSD": 90,
+    "winnerScore": 2,
+    "ownershipCap": null,
+    "initialPrice": 60000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 105
+    }
+  },
+  {
+    "id": "apk_stock_rsvp",
+    "name": "Fastback Labs",
+    "ticker": "RSVP",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 90,
+    "maxPriceUSD": 160,
+    "winnerScore": 1,
+    "ownershipCap": null,
+    "initialPrice": 125000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 106
+    }
+  },
+  {
+    "id": "apk_stock_bts",
+    "name": "Beyond the Signal Int",
+    "ticker": "BTS",
+    "group": "stock",
+    "sector": "communication",
+    "minPriceUSD": 220,
+    "maxPriceUSD": 300,
+    "winnerScore": 5,
+    "ownershipCap": 50,
+    "initialPrice": 260000,
+    "risk": 50,
+    "liquidity": 0.9,
+    "yieldRate": 0.01,
+    "termYears": 0,
+    "source": {
+      "table": "a16_financial-universal-stocks-enc",
+      "record": 107
+    }
+  }
+]

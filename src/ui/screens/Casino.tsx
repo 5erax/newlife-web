@@ -1,5 +1,11 @@
 import { useState } from "react";
-import type { Action, GameState, CasinoHand } from "../../engine/types";
+import type {
+  Action,
+  GameState,
+  CasinoHand,
+  RouletteBet,
+} from "../../engine/types";
+import { rouletteColor } from "../../engine/roulette";
 import {
   blackjackScore,
   bacaoScore,
@@ -39,10 +45,18 @@ export function Casino({
   dispatch: (a: Action) => void;
   busy: boolean;
 }) {
-  const [game, setGame] = useState<CasinoHand["game"]>("blackjack"),
+  const [game, setGame] = useState<CasinoHand["game"] | "roulette">(
+      s.casino.hand?.game ??
+        (s.casino.rouletteHistory.length ? "roulette" : "blackjack"),
+    ),
     [bet, setBet] = useState(1000);
+  const [rouletteSelection, setRouletteSelection] = useState<RouletteBet>({
+    kind: "number",
+    number: 0,
+  });
+  const round = s.casino.rouletteHistory.at(-1);
   const h = s.casino.hand ?? s.casino.history.at(-1),
-    max = casinoBetLimit(s),
+    max = casinoBetLimit(s, game),
     ready =
       s.phase === "ready" &&
       s.age >= 15 &&
@@ -80,12 +94,16 @@ export function Casino({
         <label>
           Trò chơi
           <select
+            aria-label="Trò chơi"
             value={game}
             disabled={!!s.casino.hand}
             onChange={(e) => setGame(e.target.value as typeof game)}
           >
             <option value="blackjack">Blackjack</option>
             <option value="bacao">Ba cào</option>
+            {s.flags.includes("apk_mode") && (
+              <option value="roulette">Roulette · 13 ô</option>
+            )}
           </select>
         </label>
         <label>
@@ -115,12 +133,118 @@ export function Casino({
             bet < 1000 ||
             bet % 100 !== 0
           }
-          onClick={() => dispatch({ type: "casinoDeal", game, bet })}
+          onClick={() =>
+            dispatch(
+              game === "roulette"
+                ? { type: "casinoRoulette", bet, selection: rouletteSelection }
+                : { type: "casinoDeal", game, bet },
+            )
+          }
         >
-          Chia bài
+          {game === "roulette" ? "Quay roulette" : "Chia bài"}
         </button>
       </div>
-      {h && (
+      {game === "roulette" && (
+        <div className="casino-table">
+          <h3>Roulette · số 0 đến 12</h3>
+          <div className="button-row" role="group" aria-label="Chọn ô roulette">
+            {Array.from({ length: 13 }, (_, number) => (
+              <button
+                className={
+                  "button small roulette-number " +
+                  (rouletteSelection.kind === "number" &&
+                  rouletteSelection.number === number
+                    ? "primary"
+                    : "subtle")
+                }
+                key={number}
+                data-color={rouletteColor(number)}
+                aria-label={`Cược số ${number}`}
+                aria-pressed={
+                  rouletteSelection.kind === "number" &&
+                  rouletteSelection.number === number
+                }
+                disabled={busy}
+                onClick={() => setRouletteSelection({ kind: "number", number })}
+              >
+                {number}
+              </button>
+            ))}
+            <button
+              className="button small"
+              aria-pressed={
+                rouletteSelection.kind === "color" &&
+                rouletteSelection.color === "red"
+              }
+              disabled={busy}
+              onClick={() =>
+                setRouletteSelection({ kind: "color", color: "red" })
+              }
+            >
+              Cược đỏ
+            </button>
+            <button
+              className="button small"
+              aria-pressed={
+                rouletteSelection.kind === "color" &&
+                rouletteSelection.color === "black"
+              }
+              disabled={busy}
+              onClick={() =>
+                setRouletteSelection({ kind: "color", color: "black" })
+              }
+            >
+              Cược đen
+            </button>
+          </div>
+          <p>
+            Đã chọn:{" "}
+            {rouletteSelection.kind === "number"
+              ? `số ${rouletteSelection.number}`
+              : rouletteSelection.color === "red"
+                ? "đỏ"
+                : "đen"}
+            .
+          </p>
+          <p>
+            Số lẻ đỏ, số chẵn đen; 0 không có màu. Thắng cược số lãi 13 lần
+            cược, thắng cược màu lãi 1 lần; thua mất cược.
+          </p>
+          {round && (
+            <p className="hand-result">
+              Kết quả: {round.resultNumber} ·{" "}
+              {rouletteColor(round.resultNumber) === "none"
+                ? "không màu"
+                : rouletteColor(round.resultNumber) === "red"
+                  ? "đỏ"
+                  : "đen"}{" "}
+              · {round.net > 0 ? "Thắng +" : "Thua −"}
+              {cash(Math.abs(round.net), true, s.origin)}
+            </p>
+          )}
+          <details>
+            <summary>
+              Lịch sử roulette · {s.casino.rouletteHistory.length} lượt
+            </summary>
+            {s.casino.rouletteHistory
+              .slice()
+              .reverse()
+              .map((r) => (
+                <p key={r.id}>
+                  Tuổi {r.age} · cược{" "}
+                  {r.selection.kind === "number"
+                    ? `số ${r.selection.number}`
+                    : r.selection.color === "red"
+                      ? "đỏ"
+                      : "đen"}{" "}
+                  · ra {r.resultNumber} · {r.net > 0 ? "+" : "−"}
+                  {cash(Math.abs(r.net), true, s.origin)}
+                </p>
+              ))}
+          </details>
+        </div>
+      )}
+      {h && game !== "roulette" && (
         <div className="casino-table">
           <h3>{h.game === "blackjack" ? "Blackjack" : "Ba cào"}</h3>
           <p>

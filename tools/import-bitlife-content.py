@@ -164,6 +164,15 @@ for e in events:
 save('events.vi.json',events)
 coins=[{'id':'apk_coin_'+r['Symbol'].lower(),'name':r['Name'],'ticker':r['Symbol'],'group':'crypto','initialPrice':1000*10**(num(r['Expense Score'])-1),'risk':95,'liquidity':0.25,'yieldRate':0,'termYears':0,'expenseScore':num(r['Expense Score']),'winnerScore':num(r['Winner Score'])} for r in get('a16_financial-cryptocurrencies-enc')['rows']]
 save('coins.json',coins)
+stock_table=get('a16_financial-universal-stocks-enc')
+stocks=[]
+# shortcut: stock pricing, risk and returns use the web model until native market formulas are verified.
+for row,r in enumerate(stock_table['rows'],1):
+ lo,hi=num(r['Min Price']),num(r['Max Price'])
+ assert 0<lo<=hi
+ stocks.append({'id':'apk_stock_'+r['Symbol'].lower(),'name':r['Name'],'ticker':r['Symbol'],'group':'stock','sector':r['Sector'],'minPriceUSD':lo,'maxPriceUSD':hi,'winnerScore':num(r['Winner Score']),'ownershipCap':num(r['Hero Ownership Cap']) if r['Hero Ownership Cap'] else None,'initialPrice':(lo+hi)*500,'risk':50,'liquidity':0.9,'yieldRate':0.01,'termYears':0,'source':{'table':stock_table['name'],'record':row}})
+assert len({s['id'] for s in stocks})==len(stocks)==107
+save('stocks.json',stocks)
 interview_table=get('a16_interview-questions-enc')
 interviews=[]
 for row,r in enumerate(interview_table['rows'],1):
@@ -183,6 +192,7 @@ coverage['tripRows']=sum(len(get(n)['rows']) for n in trips.values())
 coverage['friendRows']=len(get('a16_dumb-scenarios-friend-enc')['rows'])
 coverage['interviewRows']=len(interviews)
 coverage['interviewAnswers']=sum(len(q['answers'])+bool(q['defaultAnswer']) for q in interviews)
+coverage['stockRows']=len(stocks)
 coverage['unverifiedEffects']=anomalies
 coverage['otherChoiceTables']=[row for row in coverage['otherChoiceTables'] if row['table'] not in [*trips.values(),interview_table['name']]]
 save('event-sources.json',source_rows)

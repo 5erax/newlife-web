@@ -36,6 +36,8 @@ import {
 import { investmentSchema } from "../schema/investments";
 import { portfolioValue, valueForUnits } from "./investments";
 import { interviewView } from "./interviews";
+import { rouletteNet } from "./roulette";
+import { nextRandom } from "./rng";
 const integer = z.number().int().min(0).max(MAX_MONEY);
 const score = z.number().int().min(0).max(100);
 const ids = z.array(idSchema).max(2000);
@@ -257,6 +259,26 @@ const gameSchema = z.object({
       shoe: cards.max(312),
       hand: handSchema.nullable(),
       history: z.array(handSchema).max(100),
+      rouletteHistory: z
+        .array(
+          z.object({
+            id: idSchema,
+            bet: integer.min(1000),
+            age: integer.max(150),
+            seedBefore: integer.max(4294967295),
+            selection: z.union([
+              z.object({ kind: z.literal("number"), number: integer.max(12) }),
+              z.object({
+                kind: z.literal("color"),
+                color: z.enum(["red", "black"]),
+              }),
+            ]),
+            resultNumber: integer.max(12),
+            net: z.number().int().min(-MAX_MONEY).max(MAX_MONEY),
+          }),
+        )
+        .max(100)
+        .default([]),
       handsThisYear: integer.max(20),
       winStreak: integer.max(20),
       bannedUntil: integer.max(300),
@@ -479,6 +501,19 @@ function references(s: GameState) {
     ),
     "Lịch sử ván bài không khớp lá bài/cược.",
   );
+  requireGame(
+    s.casino.rouletteHistory.every(
+      (r) =>
+        s.flags.includes("apk_mode") &&
+        r.age >= 15 &&
+        r.age <= s.age &&
+        r.resultNumber === Math.floor(nextRandom(r.seedBefore).value * 13) &&
+        r.net === rouletteNet(r.selection, r.resultNumber, r.bet),
+    ) &&
+      new Set(s.casino.rouletteHistory.map((r) => r.id)).size ===
+        s.casino.rouletteHistory.length,
+    "Lịch sử roulette không khớp cược, kết quả hoặc seed.",
+  );
   const date = new Date(s.birthDate + "T00:00:00Z");
   requireGame(
     !Number.isNaN(date.valueOf()) &&
@@ -650,7 +685,7 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0"].includes(
+    ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0", "1.5.0"].includes(
       String(value.contentVersion),
     )
   )

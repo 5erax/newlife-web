@@ -8,6 +8,7 @@ import { serialize } from "../../src/engine/save";
 import { createAsset, addLog } from "../../src/engine/helpers";
 import { stories, apkEvents } from "../../src/content/catalog";
 import { advanceQueue } from "../../src/engine/year";
+import { nextRandom } from "../../src/engine/rng";
 import ui from "../../src/i18n/vi.json" with { type: "json" };
 const nav = (page: Page, label: string) =>
   page.locator("nav").getByRole("button", { name: new RegExp(label + "$") });
@@ -81,6 +82,65 @@ async function start(page: Page) {
   await expect(page.locator(".game-shell")).toBeVisible();
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
 }
+test("APK roulette settles native net winnings and preserves its receipt after reload", async ({ page }, testInfo) => {
+  await start(page);
+  const s = newLife({ name: "An roulette", gender: "female", hometown: "Huế", birthDate: "2000-01-01", seed: 42, contentMode: "apk" });
+  s.age = 30;
+  s.money = 100000000;
+  const outcome = Math.floor(nextRandom(s.rng).value * 13);
+  await nav(page, ui.saves).click();
+  await page.locator("input[type=file]").setInputFiles({ name: "roulette.json", mimeType: "application/json", buffer: Buffer.from(serialize(s)) });
+  await page.getByRole("button", { name: ui.importNewSlot, exact: true }).click();
+  await nav(page, ui.activities).click();
+  await page.getByRole("button", { name: /Sòng bạc ·/ }).click();
+  await page.getByLabel("Trò chơi", { exact: true }).selectOption("roulette");
+  await expect(page.getByRole("group", { name: "Chọn ô roulette" }).getByRole("button")).toHaveCount(15);
+  await page.getByRole("button", { name: `Cược số ${outcome}`, exact: true }).click();
+  await page.getByRole("button", { name: "Quay roulette", exact: true }).click();
+  await expect(page.locator(".hand-result")).toContainText(`Kết quả: ${outcome}`);
+  await expect(page.locator(".hand-result")).toContainText(`Thắng +${cash(13000, true, s.origin)}`);
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  const receipt = await page.locator(".hand-result").innerText();
+  await page.reload();
+  await nav(page, ui.activities).click();
+  await page.getByRole("button", { name: /Sòng bạc ·/ }).click();
+  await expect(page.locator(".hand-result")).toHaveText(receipt);
+  await expect(page.getByText("Lịch sử roulette · 1 lượt", { exact: true })).toBeVisible();
+  await page.locator(".casino-table").scrollIntoViewIfNeeded();
+  const path = testInfo.outputPath("roulette.png");
+  await page.screenshot({ path });
+  await testInfo.attach("roulette", { path, contentType: "image/png" });
+});
+test("all 107 APK stocks render with Vietnamese sectors and buying then selling survives reload", async ({ page }, testInfo) => {
+  await start(page);
+  const s = newLife({ name: "An cổ phiếu", gender: "female", hometown: "Huế", birthDate: "2000-01-01", seed: 42, contentMode: "apk" });
+  s.age = 30;
+  s.money = 100000000;
+  await nav(page, ui.saves).click();
+  await page.locator("input[type=file]").setInputFiles({ name: "stocks.json", mimeType: "application/json", buffer: Buffer.from(serialize(s)) });
+  await page.getByRole("button", { name: ui.importNewSlot, exact: true }).click();
+  await nav(page, ui.assets).click();
+  await page.getByRole("button", { name: /Đầu tư · trái phiếu/ }).click();
+  await page.getByLabel("Loại đầu tư", { exact: true }).selectOption("stock");
+  await expect(page.locator(".investment-row")).toHaveCount(107);
+  const product = page.locator(".investment-row").first();
+  await expect(product).toContainText("Ngành:");
+  await product.getByRole("button", { name: /^Mua ·/ }).click();
+  await expect(product).toContainText("Đang nắm: 1");
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await nav(page, ui.assets).click();
+  await page.getByRole("button", { name: /Đầu tư · trái phiếu/ }).click();
+  await page.getByLabel("Loại đầu tư", { exact: true }).selectOption("stock");
+  await expect(product).toContainText("Đang nắm: 1");
+  await product.scrollIntoViewIfNeeded();
+  const path = testInfo.outputPath("stocks.png");
+  await page.screenshot({ path });
+  await testInfo.attach("stocks", { path, contentType: "image/png" });
+  await product.getByRole("button", { name: /^Bán ·/ }).click();
+  await expect(product).not.toContainText("Đang nắm:");
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+});
 test("APK job interview survives reload and keyboard answer hires with the source salary", async ({
   page,
 }, testInfo) => {
