@@ -4,6 +4,17 @@ Theo dõi phạm vi đầy đủ tại [issue #111](https://github.com/5erax/new
 
 ## Các đợt chuyển nội dung
 
+### Phỏng vấn tuyển dụng 1.5
+
+[Task #116](https://github.com/5erax/newlife-web/issues/116) chuyển `a16_interview-questions-enc`: **46 câu hỏi, 796 đáp án thường và 14 đáp án mặc định**, giữ Choice Score/Default Choice Score 1–5 và Commonness Score. ID theo vị trí bản ghi, mỗi câu có provenance bảng/record trong `interviews.vi.json`. Thêm 9 bản dịch mặc định thủ công; generator dừng trước ghi tệp nếu còn thiếu bản dịch. Không cộng 810 đáp án thành 810 sự kiện.
+
+- Xin một nghề thuộc catalog APK kiểm điều kiện rồi mở phỏng vấn. Lưu ID lượt/vị trí/tuổi/câu hỏi và ba đáp án đã chọn; đáp án mặc định từ bảng được thêm khi có. Reload/render không bốc lại hoặc đổi RNG. UI hỗ trợ phím số và rút hồ sơ; tự lưu như lựa chọn khác.
+- Kiểm điều kiện nghề cả lúc mở và trả lời; chặn tăng tuổi, thay nghề, truyện và mọi hành động reducer khác trong lúc chờ. Import từ chối ID/đáp án lạ, đáp án trùng, sai tuổi, sai bộ nội dung, trạng thái đồng thời với sự kiện/lời mời/casino hoặc đang thụ án. Điểm đọc từ catalog, không nhận điểm do client gửi.
+- Trúng tuyển mới đổi nghề và xóa hưu; tiền/lương không trả ngay, thu nhập bắt đầu ở năm làm việc tiếp theo như engine hiện tại. Bị từ chối/rút giữ nghề, lương, hiệu suất và hưu cũ. Đời dùng bộ web vẫn nhận việc ngay và không thêm lượt RNG/thời gian.
+- **Quy tắc web chưa phải công thức native:** chọn câu theo trọng số Commonness Score, lấy ba đáp án thường ngẫu nhiên không lặp, thêm đáp án mặc định nếu có, nhận việc khi điểm ≥4/5, mất một điểm thời gian khi mở (không hoàn lại khi rút). Không bảo đảm ba đáp án lấy mẫu có đáp án đạt ngưỡng. Metadata có DataInterviewQuestion/Answer và ScenarioJobInterview, `_choice4IsDefault`, `_bestAnswerScore`; thân hàm chưa phục hồi nên không suy diễn chúng thành bằng chứng xác suất/tiêu chuẩn trúng tuyển gốc.
+- Tổng sự kiện vẫn 1.227/4.507 lựa chọn, riêng phỏng vấn thêm 46/810. Còn **151 dòng lõi và 44 bảng/2.073 dòng** chưa chuyển. Nội dung công việc/salary/coin và canonical 1.227 sự kiện cũ không đổi.
+- Local: **91 unit/14 browser PASS**, typecheck/content/build/PWA PASS; **100 cuộc đời APK, 4 chiến lược, 0 lỗi**. Tất cả 810 đáp án chạy qua reducer/roundtrip; boundary/ID giả/withdraw/refusal/giữ nghề cũ/migration1.4 có kiểm thử. Thử thay ngưỡng 4 thành 5 làm kiểm thử thất bại, khôi phục và chạy xanh. Đã xem ảnh dialog tiếng Việt ở viewport 390px; CI/hosted QA chưa xác nhận tại checkpoint này.
+
 ### Trạng thái bạn bè 1.4
 
 [Task #114](https://github.com/5erax/newlife-web/issues/114) bổ sung 29 dòng còn thiếu của bảng bạn bè: bảng này đã có đủ **37 tình huống/120 lựa chọn**, tăng 91 lựa chọn. Tổng hiện tại **1.227 tình huống/4.507 lựa chọn**; còn 151 dòng lõi (119 hoàng gia/ma cà rồng, 32 nghề đặc biệt) và 45 bảng/2.119 dòng khác. Đây là độ phủ dòng tình huống, không phải tỷ lệ hoàn thiện toàn bộ game.
@@ -80,3 +91,5 @@ Nhánh `feature/apk-friend-states`, task #114. `d5c0337` lưu hồ sơ NPC và t
 - Rà soát độc lập phát hiện học/việc bị đóng băng khi chuyển bạn thành người yêu/vợ chồng và mốc gia đình bị phát lại. Đã sửa và thêm hồi quy; thử đưa lỗi đóng băng trở lại làm kiểm thử thất bại, khôi phục mã đúng rồi chạy xanh. Tự rà soát tìm thêm lỗi mất số con có trước khi chia tay; kiểm thử đỏ trước sửa, xanh sau sửa và giữ qua roundtrip.
 - Đã xem ảnh giao diện Quan hệ tiếng Việt ở viewport điện thoại. Lượt rà soát độc lập cuối không hoàn tất do giới hạn sử dụng công cụ; không ghi nhận nó là một lượt duyệt thành công. CI và QA hosted cần hoàn tất trước khi đóng task.
 - Chưa kiểm trên điện thoại vật lý; bundle JS khoảng 4,25 MB (gzip 630 KB), cảnh báo chunk lớn còn tồn tại. 151 dòng lõi và 45 bảng/2.119 dòng vẫn chờ cơ chế phù hợp; epic #111 còn mở.
+
+Phần 1.4 đã nghiệm thu sau checkpoint trên: PR #115 merge tại main `6eeee01`, CI push38485333184/PR38485393155 SUCCESS, ba luồng APK hosted trên Site PASS. Vercel production READY từ main6eeee01; Sites public version7, sourceeb67645, deployment `appgdep_6acec37aef5c8191ab68618824b9948a` SUCCEEDED. #114 đã đóng; #111 còn mở. Bản 1.5 ở nhánh `feature/apk-job-interviews`, #116 vẫn cần CI/review/hosted QA trước nghiệm thu.

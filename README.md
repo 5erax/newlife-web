@@ -16,6 +16,8 @@ Vercel: https://newlife-web-gray.vercel.app. Project đã kết nối GitHub; nh
 
 Bản 1.4 bổ sung 29 tình huống bạn bè/91 lựa chọn: bảng bạn bè đã đủ 37 dòng/120 lựa chọn, tổng 1.227 tình huống APK/4.507 lựa chọn. NPC có học/việc, gia đình, tính bốc đồng và thù địch; xem trong Quan hệ, xây lại gắn bó để làm hòa. Tiến độ đầy đủ và trạng thái nghiệm thu nằm ở [task #114](https://github.com/5erax/newlife-web/issues/114); 151 dòng lõi và 45 bảng khác vẫn chưa chuyển.
 
+Bản 1.5 đang nghiệm thu tại [task #116](https://github.com/5erax/newlife-web/issues/116): thêm phỏng vấn xin việc từ APK, đủ 46 câu hỏi/810 đáp án (796 thường + 14 mặc định), giữ điểm từ nguồn. Câu hỏi không vào pool tăng tuổi; file 1.4 nâng được và giữ bộ nội dung/RNG. Còn 151 dòng lõi và 44 bảng/2.073 dòng; tiến độ deployment thực tế ghi trong issue, không suy ra từ version trong mã.
+
 ## Chạy trên máy
 
 Node.js 24+, npm, dùng lockfile:

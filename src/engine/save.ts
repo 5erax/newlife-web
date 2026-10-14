@@ -35,6 +35,7 @@ import {
 } from "./lifestyle";
 import { investmentSchema } from "../schema/investments";
 import { portfolioValue, valueForUnits } from "./investments";
+import { interviewView } from "./interviews";
 const integer = z.number().int().min(0).max(MAX_MONEY);
 const score = z.number().int().min(0).max(100);
 const ids = z.array(idSchema).max(2000);
@@ -137,6 +138,16 @@ const gameSchema = z.object({
       ]),
       people: z.array(relationSchema).min(1).max(2),
       consent: z.array(z.boolean()).min(1).max(2),
+    })
+    .nullable()
+    .default(null),
+  jobInterview: z
+    .object({
+      id: idSchema,
+      age: integer.max(150),
+      jobId: idSchema,
+      questionId: idSchema,
+      answerIds: z.array(idSchema).length(3),
     })
     .nullable()
     .default(null),
@@ -411,6 +422,7 @@ function references(s: GameState) {
       ),
     "Vai trò cha/mẹ không khớp giới tính.",
   );
+  if (s.jobInterview) interviewView(s);
   if (s.loveOffer) {
     const offer = s.loveOffer;
     requireGame(
@@ -638,7 +650,9 @@ export function validateState(value: unknown): GameState {
     value &&
     typeof value === "object" &&
     "contentVersion" in value &&
-    ["1.0.0", "1.1.0", "1.2.0", "1.3.0"].includes(String(value.contentVersion))
+    ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0"].includes(
+      String(value.contentVersion),
+    )
   )
     value = { ...value, contentVersion: CONTENT_VERSION };
   const parsed = gameSchema.safeParse(value);

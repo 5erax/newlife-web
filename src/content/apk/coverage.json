@@ -1397,11 +1397,6 @@
       "status": "native_logic_pending"
     },
     {
-      "table": "a16_interview-questions-enc",
-      "rows": 46,
-      "status": "native_logic_pending"
-    },
-    {
       "table": "a16_dealer-drug-run-dumb-scenario-enc",
       "rows": 10,
       "status": "native_logic_pending"
@@ -1449,6 +1444,8 @@
   ],
   "tripRows": 124,
   "friendRows": 37,
+  "interviewRows": 46,
+  "interviewAnswers": 810,
   "unverifiedEffects": [
     {
       "table": "a16_outdoor-hiking-dumb-scenario-enc",

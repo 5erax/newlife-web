@@ -1,5 +1,9 @@
 import { test, expect, type Page } from "@playwright/test";
-import { newLife } from "../../src/engine/game";
+import { newLife, reduce } from "../../src/engine/game";
+import { interviewView } from "../../src/engine/interviews";
+import { apkJobs } from "../../src/content/catalog";
+import { localPrice } from "../../src/engine/world";
+import { cash } from "../../src/ui/format";
 import { serialize } from "../../src/engine/save";
 import { createAsset, addLog } from "../../src/engine/helpers";
 import { stories, apkEvents } from "../../src/content/catalog";
@@ -77,6 +81,69 @@ async function start(page: Page) {
   await expect(page.locator(".game-shell")).toBeVisible();
   await expect(page.locator(".save-status")).toHaveText(ui.saved);
 }
+test("APK job interview survives reload and keyboard answer hires with the source salary", async ({
+  page,
+}, testInfo) => {
+  await start(page);
+  const s = newLife({
+    name: "An phỏng vấn",
+    gender: "female",
+    hometown: "Huế",
+    birthDate: "2000-01-01",
+    seed: 42,
+    contentMode: "apk",
+  });
+  s.age = 30;
+  s.stats = { health: 100, happiness: 100, intelligence: 100, looks: 100 };
+  const job = apkJobs[0];
+  // Use a reproducible seed with a passing reply among the sampled choices.
+  let preview = reduce(s, { type: "job", id: job.id });
+  while (!interviewView(preview).answers.some((a) => a.score >= 4)) {
+    s.rng = (s.rng + 1) >>> 0;
+    preview = reduce(s, { type: "job", id: job.id });
+  }
+  const view = interviewView(preview),
+    passing = view.answers.findIndex((a) => a.score >= 4);
+  await nav(page, ui.saves).click();
+  await page
+    .locator("input[type=file]")
+    .setInputFiles({
+      name: "apk-interview.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(serialize(s)),
+    });
+  await page
+    .getByRole("button", { name: ui.importNewSlot, exact: true })
+    .click();
+  await nav(page, ui.work).click();
+  await page.getByRole("searchbox", { name: "Tìm nghề" }).fill(job.name);
+  await page
+    .locator(".catalog-row")
+    .filter({ has: page.getByRole("heading", { name: job.name, exact: true }) })
+    .getByRole("button", { name: ui.apply, exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Phỏng vấn xin việc" }),
+  ).toBeVisible();
+  await expect(page.locator("dialog .event-text")).toHaveText(view.question);
+  await expect(page.locator("dialog .choice")).toHaveCount(view.answers.length);
+  await expect(page.locator(".age-button")).toBeDisabled();
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await page.reload();
+  await expect(page.locator("dialog .event-text")).toHaveText(view.question);
+  for (let i = 0; i < view.answers.length; i++)
+    await expect(page.locator("dialog .choice").nth(i)).toContainText(view.answers[i].label);
+  const interviewImage = testInfo.outputPath("interview.png");
+  await page.screenshot({ path: interviewImage });
+  await testInfo.attach("interview-dialog", { path: interviewImage, contentType: "image/png" });
+  await page.keyboard.press(String(passing + 1));
+  await expect(page.locator("dialog")).toHaveCount(0);
+  await expect(page.locator(".save-status")).toHaveText(ui.saved);
+  await nav(page, ui.work).click();
+  await expect(page.locator(".feature-panel")).toContainText(job.name);
+  await expect(page.locator(".feature-panel")).toContainText(cash(localPrice(s, job.ranks[0].salary)));
+  await expect(page.locator(".age-button")).toBeEnabled();
+});
 test("APK camping companion choices survive reload and return to activities", async ({
   page,
 }) => {
@@ -164,13 +231,11 @@ test("APK friend profiles and hostility persist and reconciliation unlocks after
     },
   });
   await nav(page, ui.saves).click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "npc-friend.json",
-      mimeType: "application/json",
-      buffer: Buffer.from(serialize(s)),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "npc-friend.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(serialize(s)),
+  });
   await page
     .getByRole("button", { name: ui.importNewSlot, exact: true })
     .click();

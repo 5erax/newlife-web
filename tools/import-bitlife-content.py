@@ -32,6 +32,8 @@ def translate(s):
  value=''.join(out)
  value=re.sub(r'\\u([0-9a-fA-F]{4})',lambda m:chr(int(m[1],16)),value)
  return value.replace('\\n','\n').strip()
+
+overrides.update({"I can't pick just one color":"Tôi không thể chọn chỉ một màu", "I don't know anything about that":"Tôi không biết gì về chuyện đó", "I don't watch that show":"Tôi không xem chương trình đó", "I'd rather not say":"Tôi xin phép không trả lời", "I've never watched 'Star Wars'":"Tôi chưa từng xem Chiến tranh giữa các vì sao", "I've never watched that show":"Tôi chưa từng xem chương trình đó", "None: superheroes are ridiculous":"Không ai cả: siêu anh hùng thật ngớ ngẩn", "There is nothing I can't live without":"Không có thứ gì mà tôi không thể sống thiếu", "What are you talking about?":"Bạn đang nói về chuyện gì vậy?"})
 def num(s,default=0):
  try:return int(float(s))
  except (ValueError,TypeError):return default
@@ -162,12 +164,27 @@ for e in events:
 save('events.vi.json',events)
 coins=[{'id':'apk_coin_'+r['Symbol'].lower(),'name':r['Name'],'ticker':r['Symbol'],'group':'crypto','initialPrice':1000*10**(num(r['Expense Score'])-1),'risk':95,'liquidity':0.25,'yieldRate':0,'termYears':0,'expenseScore':num(r['Expense Score']),'winnerScore':num(r['Winner Score'])} for r in get('a16_financial-cryptocurrencies-enc')['rows']]
 save('coins.json',coins)
+interview_table=get('a16_interview-questions-enc')
+interviews=[]
+for row,r in enumerate(interview_table['rows'],1):
+ iid='apk_interview_'+str(row)
+ def answer(field,score,aid):
+  value=num(r.get(score))
+  assert 1<=value<=5,(iid,field,score)
+  return {'id':aid,'label':translate(r[field]),'score':value}
+ answers=[answer('Choice '+str(n),'Choice '+str(n)+' Score',iid+'_a'+str(n)) for n in range(1,21) if r.get('Choice '+str(n))]
+ default=answer('Default Choice','Default Choice Score',iid+'_default') if r.get('Default Choice') else None
+ assert len(answers)>=3
+ interviews.append({'id':iid,'question':translate(r['Question']),'cta':translate(r['CTA']),'commonness':num(r['Commonness Score']),'answers':answers,'defaultAnswer':default,'source':{'table':interview_table['name'],'record':row}})
+save('interviews.vi.json',interviews)
 coverage={'apkSha256':'8c1248cb94a7e8cfb4fa8cc6ca2f7886e7cbe8dd318d7ef2abc6b428ab469234','package':'com.candywriter.bitlife','version':'3.25','decodedTables':len(tables),'rawRows':sum(len(t['rows']) for t in tables),'choiceTables':len([t for t in tables if 'Choice 1' in t['fields']]),'choiceRows':sum(len(t['rows']) for t in tables if 'Choice 1' in t['fields']),'coreRows':sum(len(get('a16_dumb-scenarios-'+g+'-enc')['rows']) for g in core),'playableEvents':len(events),'careerRows':len(jobs),'cryptoRows':len(coins),'deferredCore':deferred,'otherChoiceTables':[{'table':t['name'],'rows':len(t['rows']),'status':'native_logic_pending'} for t in tables if 'Choice 1' in t['fields'] and t['name'] not in ['a16_dumb-scenarios-'+g+'-enc' for g in core]]}
 save('coverage.json',coverage)
 coverage['tripRows']=sum(len(get(n)['rows']) for n in trips.values())
 coverage['friendRows']=len(get('a16_dumb-scenarios-friend-enc')['rows'])
+coverage['interviewRows']=len(interviews)
+coverage['interviewAnswers']=sum(len(q['answers'])+bool(q['defaultAnswer']) for q in interviews)
 coverage['unverifiedEffects']=anomalies
-coverage['otherChoiceTables']=[row for row in coverage['otherChoiceTables'] if row['table'] not in trips.values()]
+coverage['otherChoiceTables']=[row for row in coverage['otherChoiceTables'] if row['table'] not in [*trips.values(),interview_table['name']]]
 save('event-sources.json',source_rows)
 assert len(events)+len(deferred)==1254+coverage['tripRows']
 print({'events':len(events),'deferred':len(deferred),'jobs':len(jobs),'coins':len(coins),'missingTranslations':len(missing)})

@@ -11,6 +11,7 @@ import {
   apkEvents,
   apkJobs,
   apkEducation,
+  apkInterviews,
 } from "../content/catalog";
 import titles from "../content/titles.json" with { type: "json" };
 import medals from "../content/medals.json" with { type: "json" };
@@ -38,6 +39,7 @@ const groups = {
   apkJobs,
   apkEducation,
   apkCoins,
+  apkInterviews,
 };
 const manifest = {
   contentVersion: CONTENT_VERSION,
@@ -53,11 +55,15 @@ const manifest = {
       version: CONTENT_VERSION,
       status: "verified",
       verification: kind.startsWith("apk")
-        ? kind === "apkEvents" && "group" in item && item.group === "apk_friend"
-          ? "tests/npc-friends.test.ts"
-          : kind === "apkEvents" && "group" in item && item.group === "manual"
-            ? "tests/apk-trips.test.ts"
-            : "tests/apk-port.test.ts"
+        ? kind === "apkInterviews"
+          ? "tests/job-interviews.test.ts"
+          : kind === "apkEvents" &&
+              "group" in item &&
+              item.group === "apk_friend"
+            ? "tests/npc-friends.test.ts"
+            : kind === "apkEvents" && "group" in item && item.group === "manual"
+              ? "tests/apk-trips.test.ts"
+              : "tests/apk-port.test.ts"
         : kind === "stories"
           ? "tests/systems.test.ts"
           : kind === "jobs"

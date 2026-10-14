@@ -14,6 +14,7 @@ import {
   apkEvents,
   apkJobs,
   apkEducation,
+  apkInterviews,
 } from "../content/catalog";
 import apkCoverage from "../content/apk/coverage.json" with { type: "json" };
 import apkSources from "../content/apk/event-sources.json" with { type: "json" };
@@ -177,6 +178,30 @@ export function validateContent() {
     apkCoverage.coreRows,
   );
   assert.equal(apkJobs.length, 168);
+  assert.equal(apkInterviews.length, apkCoverage.interviewRows);
+  assert.equal(
+    apkInterviews.reduce(
+      (n, q) => n + q.answers.length + (q.defaultAnswer ? 1 : 0),
+      0,
+    ),
+    apkCoverage.interviewAnswers,
+  );
+  const interviewIds = apkInterviews.flatMap((q) => [
+    q.id,
+    ...q.answers.map((a) => a.id),
+    ...(q.defaultAnswer ? [q.defaultAnswer.id] : []),
+  ]);
+  assert.equal(new Set(interviewIds).size, interviewIds.length);
+  for (const q of apkInterviews) {
+    assert(
+      ![
+        q.question,
+        q.cta,
+        ...q.answers.map((a) => a.label),
+        q.defaultAnswer?.label ?? "",
+      ].some((t) => /<[^>]+>|undefined|\\u[0-9a-fA-F]{4}/.test(t)),
+    );
+  }
   assert.equal(
     apkEvents.filter((e) => e.group === "apk_friend").length,
     apkCoverage.friendRows,
@@ -232,6 +257,8 @@ export function validateContent() {
       deferredCore: apkCoverage.deferredCore.length,
       jobs: apkJobs.length,
       crypto: apkCoins.length,
+      interviews: apkInterviews.length,
+      interviewAnswers: apkCoverage.interviewAnswers,
     },
   };
 }

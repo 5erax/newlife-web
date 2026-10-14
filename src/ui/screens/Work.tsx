@@ -169,7 +169,11 @@ export function Work({
       </div>
       <div className="catalog-list">
         {offers.map((j) => {
-          const reason = jobReason(s, j.id);
+          const reason =
+            jobReason(s, j.id) ??
+            (j.sourceKind === "apk_translation" && s.time < 1
+              ? "Cần 1 điểm thời gian để phỏng vấn."
+              : null);
           const active = s.job?.id === j.id;
           return (
             <article className="catalog-row" key={j.id}>

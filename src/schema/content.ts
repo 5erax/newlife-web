@@ -33,6 +33,23 @@ export const idSchema = z
 const number = z.number().finite();
 const money = number.int().min(0).max(1_000_000_000_000_000);
 const genderRequirement = z.enum(["any", "male", "female", "other"]);
+const interviewAnswerSchema = z.object({
+  id: idSchema,
+  label: z.string().min(1).max(500),
+  score: z.number().int().min(1).max(5),
+});
+export const apkInterviewSchema = z.object({
+  id: idSchema,
+  question: z.string().min(1).max(500),
+  cta: z.string().min(1).max(500),
+  commonness: z.number().int().min(1).max(5),
+  answers: z.array(interviewAnswerSchema).min(3).max(20),
+  defaultAnswer: interviewAnswerSchema.nullable(),
+  source: z.object({
+    table: z.literal("a16_interview-questions-enc"),
+    record: z.number().int().min(1).max(46),
+  }),
+});
 export const apkEventRequirementsSchema = z.object({
   friendMinCraziness: number.int().min(0).max(100).optional(),
   friendJob: z.boolean().optional(),

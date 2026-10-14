@@ -13,6 +13,7 @@ import storyData from "./stories.json" with { type: "json" };
 import apkEventData from "./apk/events.vi.json" with { type: "json" };
 import apkJobData from "./apk/jobs.vi.json" with { type: "json" };
 import apkEducationData from "./apk/education.vi.json" with { type: "json" };
+import apkInterviewData from "./apk/interviews.vi.json" with { type: "json" };
 import {
   eventSchema,
   activitySchema,
@@ -21,6 +22,7 @@ import {
   assetSchema,
   achievementSchema,
   storySchema,
+  apkInterviewSchema,
 } from "../schema/content";
 import type {
   LifeEvent,
@@ -35,6 +37,9 @@ export const apkEvents: LifeEvent[] = apkEventData.map((e) =>
   eventSchema.parse(e),
 );
 export const apkJobs: Job[] = apkJobData.map((e) => jobSchema.parse(e));
+export const apkInterviews = apkInterviewData.map((e) =>
+  apkInterviewSchema.parse(e),
+);
 export const apkEducation: Education[] = apkEducationData.map((e) =>
   educationSchema.parse(e),
 );
