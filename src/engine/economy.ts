@@ -473,20 +473,7 @@ export function economyAction(s: GameState, a: Action): boolean {
       const reason = jobReason(s, a.id);
       requireGame(!reason, reason ?? "Chưa đủ điều kiện.");
       requireGame(s.job?.id !== a.id, "Bạn đã làm nghề này.");
-      const j = jobById.get(a.id)!;
-      s.job = {
-        id: j.id,
-        rank: 0,
-        years: 0,
-        performance: 60,
-        salary: localPrice(s, j.ranks[0].salary),
-      };
-      s.pension = 0;
-      count(s, "jobs");
-      addLog(
-        s,
-        `Bạn được nhận làm ${j.name}. Lương bắt đầu trong năm làm việc tiếp theo.`,
-      );
+      hireJob(s, a.id);
       return true;
     }
     case "quit":
@@ -554,4 +541,20 @@ export function economyAction(s: GameState, a: Action): boolean {
     default:
       return false;
   }
+}
+export function hireJob(s: GameState, id: string) {
+  const j = jobById.get(id)!;
+  s.job = {
+    id: j.id,
+    rank: 0,
+    years: 0,
+    performance: 60,
+    salary: localPrice(s, j.ranks[0].salary),
+  };
+  s.pension = 0;
+  count(s, "jobs");
+  addLog(
+    s,
+    `Bạn được nhận làm ${j.name}. Lương bắt đầu trong năm làm việc tiếp theo.`,
+  );
 }

@@ -12,6 +12,7 @@ import {
   educationById,
   assetById,
   eventById,
+  jobById,
 } from "../content/catalog";
 import { applyEffects } from "./effects";
 import { chooseOutcome, eligible } from "./conditions";
@@ -32,6 +33,7 @@ import { emptyAppearance, specialActivity, resolveLove } from "./lifestyle";
 import { emptyInvestments, investmentAction } from "./investments";
 import { economyAction } from "./economy";
 import { manageFriendship } from "./npc";
+import { startInterview, answerInterview } from "./interviews";
 import {
   achievementCheck,
   advanceQueue,
@@ -148,6 +150,7 @@ export function newLife(
     skills: {},
     appearance: emptyAppearance(),
     loveOffer: null,
+    jobInterview: null,
     investments: emptyInvestments(options.contentMode === "apk"),
     birthDate: options.birthDate,
     stats: { health: 80, happiness: 50, intelligence: 50, looks: 50 },
@@ -496,6 +499,15 @@ export function reduce(input: GameState, a: Action): GameState {
     a.type,
     `Thay đổi từ ${{ age: "năm mới", activity: "hoạt động", choose: "lựa chọn", relation: "quan hệ", workHard: "làm thêm giờ" }[a.type as string] ?? "quyết định của bạn"}.`,
   );
+  requireGame(
+    !s.jobInterview || a.type === "interviewAnswer",
+    "Hãy trả lời phỏng vấn trước.",
+  );
+  if (a.type === "interviewAnswer") {
+    answerInterview(s, a.id, a.answerId);
+    achievementCheck(s);
+    return s;
+  }
   if (storyAction(s, a)) return s;
   if (a.type === "continueChild") return childLife(s, a.id);
   requireGame(
@@ -606,6 +618,14 @@ export function reduce(input: GameState, a: Action): GameState {
   if (a.type === "friendship") {
     manageFriendship(s, a.id, a.action);
     achievementCheck(s);
+    return s;
+  }
+  if (
+    a.type === "job" &&
+    s.flags.includes("apk_mode") &&
+    jobById.get(a.id)?.sourceKind === "apk_translation"
+  ) {
+    startInterview(s, a.id);
     return s;
   }
   if (a.type === "age") {

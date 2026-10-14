@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0 — 2026-10-14 (đang nghiệm thu)
+
+- Xin nghề thuộc catalog APK mở phỏng vấn thay vì được nhận ngay: đủ 46 câu hỏi, 796 đáp án thường và 14 đáp án mặc định từ bảng nguồn, giữ điểm 1–5 và Commonness Score.
+- Câu hỏi/đáp án đã bốc giữ qua reload/import; chặn thao tác khác trong lúc phỏng vấn. Trả lời tốt nhận nghề/lương từ catalog; bị từ chối hoặc rút hồ sơ giữ việc/hưu hiện tại.
+- Nâng file 1.4 giữ RNG và pending cũ; bộ web giữ tuyển dụng tức thì. Mô phỏng APK biết giải quyết phỏng vấn.
+- Cách lấy mẫu ba đáp án, trọng số câu hỏi, ngưỡng nhận việc 4/5 và chi phí một điểm thời gian là quy tắc web được công bố, chưa phục hồi công thức native.
+
 ## 1.4.0 — 2026-10-14
 
 - Mở đủ 37 tình huống bạn bè/120 lựa chọn trong bảng APK, bổ sung 29 tình huống/91 lựa chọn. Tổng 1.227 tình huống APK/4.507 lựa chọn; còn 151 dòng lõi và 45 bảng khác.

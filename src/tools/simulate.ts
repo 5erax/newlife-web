@@ -18,6 +18,7 @@ import { nextRandom } from "../engine/rng";
 import { serialize, parseSave } from "../engine/save";
 import type { Action, GameState } from "../engine/types";
 import { pendingChoices } from "../engine/branches";
+import { interviewView } from "../engine/interviews";
 import assert from "node:assert/strict";
 import { branchStats } from "./branch-analysis";
 import { localPrice } from "../engine/world";
@@ -95,6 +96,16 @@ export function simulateLife(
             localPrice(s, offers[0].ranks[0].salary) > s.job.salary))
       )
         act({ type: "job", id: offers[0].id });
+      if (s.jobInterview) {
+        const answer = [...interviewView(s).answers].sort(
+          (a, b) => b.score - a.score,
+        )[0];
+        act({
+          type: "interviewAnswer",
+          id: s.jobInterview.id,
+          answerId: answer.id,
+        });
+      }
       if (strategy === 1 && !s.education.current && s.age < 45) {
         const target = education.find(
           (e) =>

@@ -435,6 +435,13 @@ export interface GameState {
     consent: boolean[];
   } | null;
   investments: InvestmentState;
+  jobInterview: {
+    id: string;
+    age: number;
+    jobId: string;
+    questionId: string;
+    answerIds: string[];
+  } | null;
   birthDate: string;
   stats: Stats;
   lastDeltas: Delta[];
@@ -550,6 +557,7 @@ export type Action =
   | { type: "enroll"; id: string; specialty?: string; loan?: boolean }
   | { type: "dropout" }
   | { type: "job"; id: string }
+  | { type: "interviewAnswer"; id: string; answerId: string | null }
   | { type: "quit" }
   | { type: "retire" }
   | { type: "workHard" }
@@ -586,7 +594,7 @@ export interface NewLifeOptions {
   birthDate: string;
   seed: number;
 }
-export const CONTENT_VERSION = "1.4.0";
+export const CONTENT_VERSION = "1.5.0";
 export const STAT_LABELS: Record<Stat, string> = {
   health: "Sức khoẻ",
   happiness: "Hạnh phúc",

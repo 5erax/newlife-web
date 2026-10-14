@@ -1,0 +1,4636 @@
+[
+  {
+    "id": "apk_interview_1",
+    "question": "Làm thế nào bạn biết về vị trí này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 4,
+    "answers": [
+      {
+        "id": "apk_interview_1_a1",
+        "label": "Một người bạn đã nói với tôi về nó",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_1_a2",
+        "label": "Tôi đã thấy một bài đăng trực tuyến",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a3",
+        "label": "Tôi đã thấy một dấu hiệu \"hiện đang tuyển dụng\"",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_1_a4",
+        "label": "tôi thấy ai đó đề cập đến nó trên facebook",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_1_a5",
+        "label": "Tôi luôn muốn làm việc ở đây",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_1_a6",
+        "label": "Tôi chỉ tình cờ đi ngang qua",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_1_a7",
+        "label": "tôi đã thấy nó trên ziprecruiter.com",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a8",
+        "label": "tôi đã thấy nó trên monster.com",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a9",
+        "label": "Tôi đã thấy nó trên CareerBuilder.com",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a10",
+        "label": "tôi đã thấy nó trên LinkedIn",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a11",
+        "label": "Một đồng nghiệp cũ đã nói với tôi về điều đó",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a12",
+        "label": "tôi đã được đề cập đến nó trong khi kết nối mạng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a13",
+        "label": "Tôi không thể nhớ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_1_a14",
+        "label": "Tôi không chắc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_1_a15",
+        "label": "Tôi đã nghe về nó từ đối thủ cạnh tranh của bạn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_1_a16",
+        "label": "Một nhà tuyển dụng đã đề xuất điều đó",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a17",
+        "label": "Tôi tình cờ vào trang web của bạn",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_1_a18",
+        "label": "tôi đã nghe nó qua cây nho",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_1_a19",
+        "label": "Vị trí nào?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_1_a20",
+        "label": "Nghiên cứu kỹ lưỡng đã dẫn tôi đến nó",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 1
+    }
+  },
+  {
+    "id": "apk_interview_2",
+    "question": "Tại sao bạn muốn công việc này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_2_a1",
+        "label": "Tôi sẽ phát triển mạnh mẽ trong đó",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_2_a2",
+        "label": "Tôi luôn muốn làm việc ở đây",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_2_a3",
+        "label": "Bởi vì bạn là người chiến thắng và tôi là người chiến thắng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_2_a4",
+        "label": "nó có vẻ vui",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_2_a5",
+        "label": "Đó là công việc mơ ước của tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_2_a6",
+        "label": "Đó là lựa chọn duy nhất của tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_2_a7",
+        "label": "Tôi thực sự không chắc mình còn làm nữa",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_2_a8",
+        "label": "Tôi nghe nói có một sơ hở",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_2_a9",
+        "label": "Tôi muốn tiền mặt đó",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_2_a10",
+        "label": "Tôi muốn trở thành một phần của nhóm của bạn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_2_a11",
+        "label": "Nó sẽ cho phép tôi phát triển trong nghề nghiệp của mình",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_2_a12",
+        "label": "Nó gần với nơi tôi sống",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_2_a13",
+        "label": "nó có vẻ dễ dàng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_2_a14",
+        "label": "Nó sẽ cho phép tôi đạt được mục tiêu của mình",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_2_a15",
+        "label": "tổ chức có một danh tiếng lớn",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_2_a16",
+        "label": "Tôi có thể phát triển ở vị trí",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_2_a17",
+        "label": "Tôi sẽ là một tài sản lớn cho công ty",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_2_a18",
+        "label": "bởi vì tôi cần một công việc",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_2_a19",
+        "label": "Tôi đã không nghĩ về nó quá nhiều",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_2_a20",
+        "label": "tôi tin rằng tôi hoàn toàn phù hợp",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 2
+    }
+  },
+  {
+    "id": "apk_interview_3",
+    "question": "Tại sao chúng tôi nên thuê bạn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_3_a1",
+        "label": "Hmmm, câu hỏi hay",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a2",
+        "label": "Tại sao bạn không nên thuê tôi?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a3",
+        "label": "Tôi phù hợp",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_3_a4",
+        "label": "Tôi là một nhân viên chăm chỉ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_3_a5",
+        "label": "nó sẽ là một nơi tốt hơn cho tất cả mọi người",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_3_a6",
+        "label": "Tôi sẽ là một sự bổ sung tuyệt vời cho đội",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_3_a7",
+        "label": "Nó sẽ làm cho bạn trông thông minh",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a8",
+        "label": "Tôi có kinh nghiệm phù hợp",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_3_a9",
+        "label": "Tôi có những kỹ năng cần thiết",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_3_a10",
+        "label": "bởi vì tôi sẽ làm bất cứ điều gì để có được nó",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a11",
+        "label": "Đó có phải là một câu hỏi tu từ?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a12",
+        "label": "Tôi không chắc bạn nên",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_3_a13",
+        "label": "Bạn không muốn tôi gặp đối thủ cạnh tranh",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a14",
+        "label": "Bạn nên cho phép tôi đạt được mục tiêu của mình",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a15",
+        "label": "Bởi vì tôi là một kẻ xấu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_3_a16",
+        "label": "bởi vì tôi cần nó rất tệ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_3_a17",
+        "label": "Tôi đã hy vọng bạn có thể nói với tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_3_a18",
+        "label": "Tôi là người phù hợp với công việc",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_3_a19",
+        "label": "Tôi sẽ cung cấp giá trị tuyệt vời cho bạn",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 3
+    }
+  },
+  {
+    "id": "apk_interview_4",
+    "question": "Sức mạnh nào trong số này là sức mạnh lớn nhất của bạn về mặt chuyên môn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_4_a1",
+        "label": "Tôi là một người giao tiếp tốt",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a2",
+        "label": "Tôi tuyệt vời với công nghệ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_4_a3",
+        "label": "Tôi rất siêng năng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a4",
+        "label": "Tôi xuất sắc trong việc giải quyết vấn đề",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a5",
+        "label": "Tôi định hướng chi tiết",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a6",
+        "label": "Tôi luôn chuẩn bị",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_4_a7",
+        "label": "Tôi đáng tin cậy",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a8",
+        "label": "Tôi có một đạo đức làm việc mạnh mẽ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a9",
+        "label": "Tôi là một cầu thủ của đội",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_4_a10",
+        "label": "Tôi nhiệt tình trong mọi thứ",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_4_a11",
+        "label": "Tôi thường đúng giờ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_4_a12",
+        "label": "Tôi không có điểm yếu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_4_a13",
+        "label": "Tôi không bao giờ ăn cắp của chủ nhân của tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_4_a14",
+        "label": "Tôi làm việc tốt với hầu hết mọi người",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_4_a15",
+        "label": "Tôi phải nghĩ về nó nhiều hơn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_4_a16",
+        "label": "Tôi không chắc mình có điểm mạnh",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_4_a17",
+        "label": "Tôi có phải chọn chỉ một cái không?",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_4_a18",
+        "label": "Tôi luôn học hỏi từ những sai lầm của mình",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_4_a19",
+        "label": "Tôi là một nhà lãnh đạo mạnh mẽ",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_4_a20",
+        "label": "Tôi có kỹ năng con người mạnh mẽ",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 4
+    }
+  },
+  {
+    "id": "apk_interview_5",
+    "question": "Bạn coi điều nào trong số này là lĩnh vực thử thách lớn nhất của mình?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_5_a1",
+        "label": "Đôi khi tôi không yêu cầu giúp đỡ",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_5_a2",
+        "label": "Tôi luôn cố gắng làm hài lòng tất cả mọi người",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_5_a3",
+        "label": "Tôi không giỏi về công nghệ",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_5_a4",
+        "label": "Tôi có thể nhút nhát",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_5_a5",
+        "label": "Tôi có một số lo lắng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_5_a6",
+        "label": "Tôi quá chỉ trích bản thân",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_5_a7",
+        "label": "Tôi là một người nghiện công việc",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_5_a8",
+        "label": "Tôi có thể mất kiên nhẫn đôi khi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_5_a9",
+        "label": "Tôi là một người trì hoãn thời gian lớn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_5_a10",
+        "label": "Tôi nứt dưới áp lực",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_5_a11",
+        "label": "Tôi thực sự không có bất kỳ điểm yếu nào",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_5_a12",
+        "label": "Tôi không có tổ chức như tôi có thể",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_5_a13",
+        "label": "Tôi quá nhạy cảm với những lời chỉ trích",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_5_a14",
+        "label": "Tôi có xu hướng tiếp nhận quá nhiều",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_5_a15",
+        "label": "tôi có thể được định hướng chi tiết hơn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_5_a16",
+        "label": "Đó không phải là việc của bạn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_5_a17",
+        "label": "Chỉ một?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_5_a18",
+        "label": "Trả lời các câu hỏi phỏng vấn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_5_a19",
+        "label": "Xác định lĩnh vực thách thức lớn nhất của tôi",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_5_a20",
+        "label": "Tôi muốn giỏi ngữ pháp hơn",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 5
+    }
+  },
+  {
+    "id": "apk_interview_6",
+    "question": "Bạn thấy mình ở đâu trong 5 năm nữa?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_6_a1",
+        "label": "trong vai trò lãnh đạo",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a2",
+        "label": "với tư cách là sếp của bạn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a3",
+        "label": "đã nghỉ hưu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a4",
+        "label": "ở đây, làm chủ nghề thủ công của tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a5",
+        "label": "Một ngày tại một thời điểm, bạn của tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_6_a6",
+        "label": "Tiến lên trên thế giới",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_6_a7",
+        "label": "hy vọng không phải trong trại cai nghiện",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a8",
+        "label": "Trong vai trò quan trọng ở đây",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a9",
+        "label": "Trong vai trò quản lý ở đây",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_6_a10",
+        "label": "đưa ra các quyết định quan trọng ở đây",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a11",
+        "label": "cộng tác với bạn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a12",
+        "label": "Làm việc với các nhà lãnh đạo ngành",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a13",
+        "label": "Chơi gôn và hút xì gà",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a14",
+        "label": "có lẽ trong gương",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a15",
+        "label": "Whishing Away trong một buồng nhỏ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a16",
+        "label": "tại cửa hàng mua kem chống nhăn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_6_a17",
+        "label": "hạnh phúc ly hôn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a18",
+        "label": "Tôi không thể hình dung 5 giờ kể từ bây giờ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_6_a19",
+        "label": "trong vai trò lãnh đạo trong công ty của bạn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_6_a20",
+        "label": "Là một chuyên gia hàng đầu trong lĩnh vực",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 6
+    }
+  },
+  {
+    "id": "apk_interview_7",
+    "question": "Bạn đang tìm kiếm điều gì ở một vị trí mới?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_7_a1",
+        "label": "một cơ hội để phát triển chuyên nghiệp",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_7_a2",
+        "label": "Bạn đang quấy rối tình dục tôi?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_7_a3",
+        "label": "một cơ hội để thăng tiến sự nghiệp của tôi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_7_a4",
+        "label": "một mức lương tuyệt vời",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_7_a5",
+        "label": "Một con đường hướng tới mục tiêu nghề nghiệp của tôi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_7_a6",
+        "label": "Một cách để có được kinh nghiệm làm việc",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_7_a7",
+        "label": "một cơ hội để làm cho thế giới tốt đẹp hơn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_7_a8",
+        "label": "Rất nhiều thời gian nghỉ phép",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_7_a9",
+        "label": "Một môi trường làm việc vui vẻ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_7_a10",
+        "label": "Tôi muốn trở thành một phần của một đội đặc biệt",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_7_a11",
+        "label": "cố vấn từ đồng nghiệp",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_7_a12",
+        "label": "một cơ hội để học các kỹ năng mới",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_7_a13",
+        "label": "một cái gì đó để có được tôi bây giờ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_7_a14",
+        "label": "một cái gì đó sẽ thanh toán các hóa đơn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_7_a15",
+        "label": "Tôi không chắc lắm",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_7_a16",
+        "label": "một cơ hội để phát triển",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_7_a17",
+        "label": "Đồng nghiệp dễ thương",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_7_a18",
+        "label": "một ông chủ khoan hồng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_7_a19",
+        "label": "Khả năng tạo lịch trình của riêng tôi",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_7_a20",
+        "label": "một cơ hội để gia tăng giá trị ở đâu đó",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 7
+    }
+  },
+  {
+    "id": "apk_interview_8",
+    "question": "Bạn thích loại môi trường làm việc nào hơn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_8_a1",
+        "label": "một cái có năng suất cao",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_8_a2",
+        "label": "một cái rất linh hoạt",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_8_a3",
+        "label": "một có cấu trúc công ty",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_8_a4",
+        "label": "Tôi thích làm việc một mình hơn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_8_a5",
+        "label": "Tôi thích làm việc từ xa tại nhà",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_8_a6",
+        "label": "một cái rất bình thường",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_8_a7",
+        "label": "một với rất nhiều sự hợp tác",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_8_a8",
+        "label": "một trong đó bao gồm tinh thần đồng đội",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_8_a9",
+        "label": "một thứ truyền cảm hứng hàng ngày",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_8_a10",
+        "label": "một cái có rất nhiều kẹo mắt",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_8_a11",
+        "label": "người trả nhiều tiền nhất",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_8_a12",
+        "label": "một trong những quản lý vi mô",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_8_a13",
+        "label": "một trong đó là công nghệ cao",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_8_a14",
+        "label": "một trong đó là căng thẳng thấp",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_8_a15",
+        "label": "một trong đó có nhịp độ nhanh và dữ dội",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_8_a16",
+        "label": "một trong đó cạnh tranh và thách thức",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_8_a17",
+        "label": "một người đầy đam mê",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_8_a18",
+        "label": "một với những lợi ích tuyệt vời",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_8_a19",
+        "label": "một người có khả năng lãnh đạo mạnh mẽ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_8_a20",
+        "label": "một cái nhìn ra đại dương",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 8
+    }
+  },
+  {
+    "id": "apk_interview_9",
+    "question": "Làm thế nào để bạn đối phó với những tình huống căng thẳng?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_9_a1",
+        "label": "Tôi bật một viên thuốc lo lắng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_9_a2",
+        "label": "Tôi thiền",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_9_a3",
+        "label": "Mỗi lần một hơi thở",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_9_a4",
+        "label": "Tôi quá may mắn khi bị căng thẳng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_9_a5",
+        "label": "Tôi không căng thẳng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_9_a6",
+        "label": "thường với một cuộc khủng hoảng hoành tráng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_9_a7",
+        "label": "Tôi loại bỏ cảm xúc khỏi tình huống",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_9_a8",
+        "label": "Với sự giúp đỡ của con chó trị liệu của tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_9_a9",
+        "label": "Làm chậm và tập trung",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_9_a10",
+        "label": "nghèo nàn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_9_a11",
+        "label": "tôi tự thu thập và sau đó sử dụng logic",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_9_a12",
+        "label": "Tôi phát triển mạnh nhờ căng thẳng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_9_a13",
+        "label": "với một ly cocktail",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_9_a14",
+        "label": "Tôi làm việc tốt dưới áp lực",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_9_a15",
+        "label": "Tôi tránh những tình huống căng thẳng",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_9_a16",
+        "label": "Tôi nghỉ tập yoga để tự sáng tác",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_9_a17",
+        "label": "Bằng cách tập trung vào nhiệm vụ trong tầm tay",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_9_a18",
+        "label": "Tôi không muốn đối phó với họ",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_9_a19",
+        "label": "bằng cách sở hữu chúng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_9_a20",
+        "label": "tôi trì hoãn với sếp của tôi càng nhiều càng tốt",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 9
+    }
+  },
+  {
+    "id": "apk_interview_10",
+    "question": "Kỳ vọng về mức lương của bạn là gì?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_10_a1",
+        "label": "Bạn có gì?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_10_a2",
+        "label": "Chúng phù hợp với kinh nghiệm của tôi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_10_a3",
+        "label": "Chúng phù hợp với trình độ của tôi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_10_a4",
+        "label": "Tôi mong đợi được trả công bằng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_10_a5",
+        "label": "gimme dat tiền mặt",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_10_a6",
+        "label": "Sự phù hợp phù hợp là quan trọng hơn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_10_a7",
+        "label": "một mức lương cạnh tranh cho thị trường",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_10_a8",
+        "label": "Tiền lương điển hình cho vai trò & trách nhiệm",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_10_a9",
+        "label": "một mức lương hợp lý",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_10_a10",
+        "label": "Tiền hàng đầu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_10_a11",
+        "label": "Bạn có thể trả cho tôi bằng tiền mặt không?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_10_a12",
+        "label": "Đủ để thanh toán các hóa đơn của tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_10_a13",
+        "label": "Phụ thuộc vào lợi ích",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_10_a14",
+        "label": "Càng nhiều càng tốt",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_10_a15",
+        "label": "Lương có thể thương lượng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_10_a16",
+        "label": "Bạn có thể trả cho tôi bất cứ điều gì",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_10_a17",
+        "label": "Tôi muốn được trả bằng đồng rúp Nga",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_10_a18",
+        "label": "Tôi có thể được trả bằng bitcoin không?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_10_a19",
+        "label": "tôi nghĩ đây là một kỳ thực tập không được trả lương",
+        "score": 1
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 10
+    }
+  },
+  {
+    "id": "apk_interview_11",
+    "question": "Bạn có bất kỳ câu hỏi cho chúng tôi?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_11_a1",
+        "label": "Tôi có phù hợp không?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a2",
+        "label": "Bạn có thể cho tôi biết thêm về công việc?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a3",
+        "label": "Bạn đang tìm kiếm những phẩm chất nào?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a4",
+        "label": "Kỳ vọng của bạn cho vai trò này là gì?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a5",
+        "label": "Bạn có thể cho tôi biết thêm về công ty?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a6",
+        "label": "Bạn có thể cho tôi biết thêm về văn hóa?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a7",
+        "label": "Bạn thấy công ty ở đâu trong 5 năm nữa?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a8",
+        "label": "Tại sao tôi nên muốn làm việc ở đây?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a9",
+        "label": "Bạn thích điều gì nhất ở công ty?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a10",
+        "label": "Làm thế nào để tôi so sánh với các ứng cử viên khác?",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_11_a11",
+        "label": "Phòng tắm ở đâu?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_11_a12",
+        "label": "Tôi có được thuê không?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_11_a13",
+        "label": "Khi nào tôi bắt đầu?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_11_a14",
+        "label": "Bạn kiếm được bao nhiêu?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_11_a15",
+        "label": "Bạn có thích tôi không?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_11_a16",
+        "label": "Bạn có đang mặc đồ lót nào không?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_11_a17",
+        "label": "Bạn có thể hình dung tôi làm việc ở đây không?",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_11_a18",
+        "label": "Bạn đã kết hôn chưa?",
+        "score": 1
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 11
+    }
+  },
+  {
+    "id": "apk_interview_12",
+    "question": "Bạn muốn sở hữu sức mạnh bí mật nào nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_12_a1",
+        "label": "Sức mạnh siêu phàm",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_12_a2",
+        "label": "thần giao cách cảm",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_12_a3",
+        "label": "Dịch chuyển",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_12_a4",
+        "label": "tàng hình",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_12_a5",
+        "label": "Giả kim thuật",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_12_a6",
+        "label": "Psychokinesis",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_12_a7",
+        "label": "Phép thuật",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_12_a8",
+        "label": "Chuyến bay",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_12_a9",
+        "label": "Du hành thời gian",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_12_a10",
+        "label": "biến hình",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_12_a11",
+        "label": "sự bất tử",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_12_a12",
+        "label": "Tầm nhìn tia X",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_12_a13",
+        "label": "Tốc độ siêu phàm",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_12_a14",
+        "label": "Điều chỉnh thời tiết",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_12_a15",
+        "label": "Kiểm soát hỏa hoạn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_12_a16",
+        "label": "Bắt chước điện",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_12_a17",
+        "label": "Chữa bệnh",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_12_a18",
+        "label": "sức chịu đựng siêu phàm",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_12_a19",
+        "label": "Sức chịu đựng tình dục không giới hạn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_12_a20",
+        "label": "Ăn đồ ngọt mà không tăng cân",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 12
+    }
+  },
+  {
+    "id": "apk_interview_13",
+    "question": "Nếu bạn 80 tuổi, bạn sẽ đưa ra lời khuyên nào cho một người 18 tuổi?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_13_a1",
+        "label": "Mọi thứ xảy ra đều có lý do",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a2",
+        "label": "Là chính mình",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a3",
+        "label": "Làm nước chanh khi cho chanh",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a4",
+        "label": "Carpe Diem",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a5",
+        "label": "Bình tĩnh và tiếp tục",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a6",
+        "label": "#yolo",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a7",
+        "label": "Đừng đặt tất cả trứng của bạn vào một giỏ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a8",
+        "label": "Những gì đi xung quanh đến xung quanh",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a9",
+        "label": "Tiếng cười là liều thuốc tốt nhất",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a10",
+        "label": "Không bao giờ nói không bao giờ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a11",
+        "label": "Những điều tốt đẹp sẽ đến với người biết chờ đợi",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a12",
+        "label": "Giữ bạn bè của bạn gần gũi và kẻ thù gần nhau hơn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a13",
+        "label": "Đừng kết hôn! bao giờ!",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_13_a14",
+        "label": "tiết kiệm cho bản thân cho hôn nhân",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_13_a15",
+        "label": "Không có gì đáng giá là dễ dàng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a16",
+        "label": "Tình yêu là tất cả những gì bạn cần",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_13_a17",
+        "label": "Là chính mình",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_13_a18",
+        "label": "Làm theo trái tim của bạn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_13_a19",
+        "label": "Hãy thực tế",
+        "score": 4
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 13
+    }
+  },
+  {
+    "id": "apk_interview_14",
+    "question": "Bạn thích màu nào trong số những màu này nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_14_a1",
+        "label": "màu đỏ",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a2",
+        "label": "Xanh lục",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a3",
+        "label": "Trái cam",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a4",
+        "label": "Vàng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a5",
+        "label": "Đen",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_14_a6",
+        "label": "Vàng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a7",
+        "label": "Chớp mắt",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a8",
+        "label": "Màu đỏ tía",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a9",
+        "label": "màu xám",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_14_a10",
+        "label": "Nâu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_14_a11",
+        "label": "Trắng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a12",
+        "label": "Cá hồi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a13",
+        "label": "San hô",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a14",
+        "label": "Rừng xanh",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a15",
+        "label": "Màu xanh lam",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a16",
+        "label": "Màu của tiền",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_14_a17",
+        "label": "Màu đỏ tươi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_14_a18",
+        "label": "Chắc chắn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_14_a19",
+        "label": "aquamarine",
+        "score": 4
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_14_default",
+      "label": "Tôi không thể chọn chỉ một màu",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 14
+    }
+  },
+  {
+    "id": "apk_interview_15",
+    "question": "Bạn thích cái nào nhất trong số những chiếc bánh quy này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_15_a1",
+        "label": "Butter Cookies",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_15_a2",
+        "label": "Bánh quy may mắn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_15_a3",
+        "label": "Bánh quy bơ lạc",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_15_a4",
+        "label": "Bánh quy đường băng giá",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_15_a5",
+        "label": "Bánh macaron",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_15_a6",
+        "label": "Snickerdoodle",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_15_a7",
+        "label": "Bánh gừng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_15_a8",
+        "label": "Bánh mì kiều mạch nho khô",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_15_a9",
+        "label": "bánh quy động vật",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_15_a10",
+        "label": "oreo",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_15_a11",
+        "label": "Gingernsnaps",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_15_a12",
+        "label": "Ngào Cookies",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_15_a13",
+        "label": "tấm wafer",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_15_a14",
+        "label": "Bánh quy sô cô la",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_15_a15",
+        "label": "Bút mỏng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_15_a16",
+        "label": "bất kỳ bánh quy hướng đạo sinh nào",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_15_a17",
+        "label": "Tôi không phải là một fan hâm mộ lớn của đồ ngọt",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_15_default",
+      "label": "Tôi không thể chọn chỉ một",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 15
+    }
+  },
+  {
+    "id": "apk_interview_16",
+    "question": "Bạn sẽ làm gì nếu bạn trúng số?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_16_a1",
+        "label": "Mua một chiếc ô tô mới",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_16_a2",
+        "label": "Mua thêm 100.000 vé số",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_16_a3",
+        "label": "Mua tổ chức này",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_16_a4",
+        "label": "Mua nhượng quyền thể thao chuyên nghiệp",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_16_a5",
+        "label": "Mua nhà hàng McDonald's",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_16_a6",
+        "label": "Mua một chiếc máy bay",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_16_a7",
+        "label": "Mua một chiếc du thuyền",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_16_a8",
+        "label": "Mua một chiếc trực thăng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_16_a9",
+        "label": "Về hưu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_16_a10",
+        "label": "Quyên góp cho nhà thờ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_16_a11",
+        "label": "Quyên góp cho tổ chức từ thiện",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_16_a12",
+        "label": "Đầu tư nó",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_16_a13",
+        "label": "Trả hết các khoản vay sinh viên của bạn bè tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_16_a14",
+        "label": "Mua một hòn đảo",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_16_a15",
+        "label": "Mua một quốc gia nhỏ",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_16_a16",
+        "label": "tổ chức một bữa tiệc lớn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_16_a17",
+        "label": "Dành nhiều thời gian hơn cho gia đình",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_16_a18",
+        "label": "Để dành nó cho một ngày mưa",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_16_a19",
+        "label": "Mua một biệt thự",
+        "score": 4
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 16
+    }
+  },
+  {
+    "id": "apk_interview_17",
+    "question": "Điều gì hoặc ai là người truyền cảm hứng cho bạn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_17_a1",
+        "label": "Những lời của Edgar Allan Poe",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a2",
+        "label": "Nelson Mandela's Fortitude",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a3",
+        "label": "Giấc mơ của Martin Luther King",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a4",
+        "label": "Lòng trắc ẩn của Mẹ Teresa",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a5",
+        "label": "Tài năng của Lionel Messi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_17_a6",
+        "label": "Các nhà phát triển BitLife",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a7",
+        "label": "những bà mẹ đơn thân thành công",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a8",
+        "label": "Lực lượng vũ trang của chúng tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a9",
+        "label": "Giáo viên",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a10",
+        "label": "Hành động tử tế của Keanu Reeve",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_17_a11",
+        "label": "Diễn xuất của Arnold Schwarzenegger",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_17_a12",
+        "label": "Đức Đạt Lai Lạt Ma",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a13",
+        "label": "Sự sáng tạo của Banksy",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a14",
+        "label": "Mick Jagger di chuyển",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_17_a15",
+        "label": "Thái độ tích cực của Tony Robbins",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_17_a16",
+        "label": "Đùi của Beyonce",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_17_a17",
+        "label": "Vòm miệng của Gordon Ramsay",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_17_a18",
+        "label": "âm nhạc của cupcakke",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_17_a19",
+        "label": "Giọng nói bơ của Bob Ross",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 17
+    }
+  },
+  {
+    "id": "apk_interview_18",
+    "question": "Điều gì hoặc ai là người thúc đẩy bạn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 4,
+    "answers": [
+      {
+        "id": "apk_interview_18_a1",
+        "label": "tiền",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_18_a2",
+        "label": "những thất bại trước đây của tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_18_a3",
+        "label": "Những lời khen ngợi từ những người tôi tôn trọng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_18_a4",
+        "label": "Mong muốn quyền lực",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_18_a5",
+        "label": "Niềm đam mê học hỏi những điều mới",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_18_a6",
+        "label": "Giúp đỡ người khác",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_18_a7",
+        "label": "Mong muốn trở thành người giỏi nhất",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_18_a8",
+        "label": "cần phải chứng minh những kẻ thù ghét của tôi sai",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_18_a9",
+        "label": "danh vọng & tài sản",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_18_a10",
+        "label": "Sợ thất bại",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_18_a11",
+        "label": "Mong muốn kiểm soát những người xung quanh tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_18_a12",
+        "label": "Được nhớ sau khi tôi đi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_18_a13",
+        "label": "hy vọng về một cuộc nghỉ hưu sớm",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_18_a14",
+        "label": "Mong muốn nhìn thấy kẻ thù của tôi thất bại",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_18_a15",
+        "label": "Niềm tin của tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_18_a16",
+        "label": "Sự trỗi dậy của âm nhạc bẫy",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_18_a17",
+        "label": "chứng minh rằng thế giới là phẳng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_18_a18",
+        "label": "Mong muốn cứu hành tinh",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_18_a19",
+        "label": "giày",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_18_a20",
+        "label": "Một động lực cháy bỏng để thành công",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 18
+    }
+  },
+  {
+    "id": "apk_interview_19",
+    "question": "Từ nào trong số những từ này mô tả tốt nhất về bạn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 4,
+    "answers": [
+      {
+        "id": "apk_interview_19_a1",
+        "label": "huyền thoại",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_19_a2",
+        "label": "hiệu quả",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a3",
+        "label": "tiền",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_19_a4",
+        "label": "Được phép",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_19_a5",
+        "label": "Lười biếng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_19_a6",
+        "label": "Vui lòng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_19_a7",
+        "label": "điều khiển",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a8",
+        "label": "tuyệt vời",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_19_a9",
+        "label": "Trung bình cộng",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_19_a10",
+        "label": "phi thường",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a11",
+        "label": "chuyên dụng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a12",
+        "label": "sôi nổi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_19_a13",
+        "label": "may mắn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a14",
+        "label": "tàu đắm",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_19_a15",
+        "label": "lãnh đạo",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a16",
+        "label": "Siêng năng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a17",
+        "label": "Phân tích",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a18",
+        "label": "Phiêu lưu",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_19_a19",
+        "label": "Thương xót",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_19_a20",
+        "label": "Đầy tham vọng",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 19
+    }
+  },
+  {
+    "id": "apk_interview_20",
+    "question": "Bạn đam mê cái nào nhất trong số này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 4,
+    "answers": [
+      {
+        "id": "apk_interview_20_a1",
+        "label": "Cứu hộ động vật",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_20_a2",
+        "label": "Âm nhạc",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_20_a3",
+        "label": "Quay phim",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_20_a4",
+        "label": "Ngủ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_20_a5",
+        "label": "chuẩn bị cho việc nghỉ hưu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_20_a6",
+        "label": "hack",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_20_a7",
+        "label": "Quyền con người",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_20_a8",
+        "label": "học những điều mới",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_20_a9",
+        "label": "tiền",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_20_a10",
+        "label": "Các môn thể thao",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_20_a11",
+        "label": "Ngực",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_20_a12",
+        "label": "Văn phạm",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_20_a13",
+        "label": "phù thủy",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_20_a14",
+        "label": "Dungeons & Dragons",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_20_a15",
+        "label": "Cosplay",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_20_a16",
+        "label": "khiêu dâm",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_20_a17",
+        "label": "Công nghệ mới",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_20_a18",
+        "label": "PIZZA",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_20_a19",
+        "label": "chim cánh cụt",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_20_a20",
+        "label": "tính kịp thời",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 20
+    }
+  },
+  {
+    "id": "apk_interview_21",
+    "question": "Bạn liên quan đến cây nào trong số những cây này nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_21_a1",
+        "label": "Cây cọ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_21_a2",
+        "label": "Cây dừa",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a3",
+        "label": "cây sồi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a4",
+        "label": "Cây sồi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_21_a5",
+        "label": "Cây tro",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_21_a6",
+        "label": "Liễu khóc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_21_a7",
+        "label": "Cây bạch dương",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a8",
+        "label": "Cây vân sam",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a9",
+        "label": "cây thông",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a10",
+        "label": "Cây óc chó",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a11",
+        "label": "Cây Sycamore",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a12",
+        "label": "Cây tuyết tùng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a13",
+        "label": "Cây chanh",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_21_a14",
+        "label": "một gốc cây",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_21_a15",
+        "label": "Cây táo",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_21_a16",
+        "label": "cây dâu tằm",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a17",
+        "label": "cây bông",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_21_a18",
+        "label": "Cây Sequoia khổng lồ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_21_a19",
+        "label": "một cây xương rồng",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_21_a20",
+        "label": "cây cho",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 21
+    }
+  },
+  {
+    "id": "apk_interview_22",
+    "question": "Nếu chúng tôi hỏi bạn bè của bạn, bạn sẽ là con vật nào, họ sẽ chọn con vật nào?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_22_a1",
+        "label": "Một con sư tử",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_22_a2",
+        "label": "một con đại bàng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_22_a3",
+        "label": "Một con gấu",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_22_a4",
+        "label": "Con chuột",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_22_a5",
+        "label": "Một con cá mập",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_22_a6",
+        "label": "Một con cáo",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_22_a7",
+        "label": "Con mèo",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_22_a8",
+        "label": "Con rắn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_22_a9",
+        "label": "một con gấu trúc",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_22_a10",
+        "label": "Một con heo",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_22_a11",
+        "label": "Con bò",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_22_a12",
+        "label": "Một con ngựa",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_22_a13",
+        "label": "Con chó",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_22_a14",
+        "label": "một con rồng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_22_a15",
+        "label": "một con kỳ lân",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_22_a16",
+        "label": "một con bò",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_22_a17",
+        "label": "một con muỗi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_22_a18",
+        "label": "Một con nai",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_22_a19",
+        "label": "Con chuột",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_22_a20",
+        "label": "Một con cá heo",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 22
+    }
+  },
+  {
+    "id": "apk_interview_23",
+    "question": "Bạn sẽ chọn món nào trong số này làm bữa ăn cuối cùng của mình?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_23_a1",
+        "label": "bánh mì kẹp phô mai",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a2",
+        "label": "Mì Ý Spaghetti",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a3",
+        "label": "Gà & Bánh quế",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_23_a4",
+        "label": "Jambalaya",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a5",
+        "label": "một hoagie",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_23_a6",
+        "label": "một con chó nóng",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_23_a7",
+        "label": "Sushi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a8",
+        "label": "Lát thịt",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a9",
+        "label": "tacos",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a10",
+        "label": "Pad Thái",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_23_a11",
+        "label": "Gà rán",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_23_a12",
+        "label": "Gỏi",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_23_a13",
+        "label": "Gà Parmesan",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_23_a14",
+        "label": "mac & pho mát",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_23_a15",
+        "label": "PIZZA",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_23_a16",
+        "label": "Phở gà",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_23_a17",
+        "label": "ngao chowder",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_23_a18",
+        "label": "Tôi muốn uống một cốc bia",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_23_a19",
+        "label": "Bánh mì thịt thuần chay",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_23_a20",
+        "label": "Cobb Salad",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 23
+    }
+  },
+  {
+    "id": "apk_interview_24",
+    "question": "Nếu bạn chỉ có thể ăn một trong những món tráng miệng này trong suốt phần đời còn lại của mình, thì đó sẽ là gì?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_24_a1",
+        "label": "Sữa chua đông lạnh",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_24_a2",
+        "label": "bánh rán",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a3",
+        "label": "Bánh cupcake sinh nhật",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a4",
+        "label": "Bánh táo",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a5",
+        "label": "bánh tart pop",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_24_a6",
+        "label": "Bánh nướng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_24_a7",
+        "label": "thanh snickers",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_24_a8",
+        "label": "Bánh flan",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_24_a9",
+        "label": "Sundaes nóng bỏng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a10",
+        "label": "bánh hạnh nhân ma thuật",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a11",
+        "label": "chuối chẻ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a12",
+        "label": "Bánh quy sô cô la",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_24_a13",
+        "label": "Pudding chuối",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_24_a14",
+        "label": "Bánh cà rốt",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_24_a15",
+        "label": "s'mores",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_24_a16",
+        "label": "Cuộn quế",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_24_a17",
+        "label": "bánh mì pudding",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_24_a18",
+        "label": "Bánh kem",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_24_a19",
+        "label": "Twinkies",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_24_a20",
+        "label": "Kẹo dẻo",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 24
+    }
+  },
+  {
+    "id": "apk_interview_25",
+    "question": "Cái nào trong số này là siêu anh hùng tốt nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_25_a1",
+        "label": "Người dơi",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_25_a2",
+        "label": "người nhện",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_25_a3",
+        "label": "Wonder Woman",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_25_a4",
+        "label": "Siêu nhân",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_25_a5",
+        "label": "Đội trưởng Mỹ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a6",
+        "label": "Thor",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a7",
+        "label": "Wolverine",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a8",
+        "label": "Con báo đen",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a9",
+        "label": "hulk",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a10",
+        "label": "aquaman",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a11",
+        "label": "Đèn lồng màu xanh lá cây",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a12",
+        "label": "Kẻ trừng phạt",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a13",
+        "label": "Bão",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a14",
+        "label": "Deadpool",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_25_a15",
+        "label": "Joker",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_25_a16",
+        "label": "Catwoman",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_25_a17",
+        "label": "Robin",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_25_a18",
+        "label": "Tôi là một fan hâm mộ của những kẻ phản diện",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_25_a19",
+        "label": "Ma nhê tô",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_25_a20",
+        "label": "Lex Luthor",
+        "score": 1
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_25_default",
+      "label": "Không ai cả: siêu anh hùng thật ngớ ngẩn",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 25
+    }
+  },
+  {
+    "id": "apk_interview_26",
+    "question": "Bạn đã bao giờ đánh cắp một cây bút từ nơi làm việc?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_26_a1",
+        "label": "Thành thật mà nói, tôi không biết",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_26_a2",
+        "label": "Ai chưa?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_26_a3",
+        "label": "Tôi chỉ sử dụng bút bị đánh cắp từ nơi làm việc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_26_a4",
+        "label": "Tôi chưa bao giờ đánh cắp một thứ trong đời",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_26_a5",
+        "label": "Không, chỉ mượn chúng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_26_a6",
+        "label": "Tôi đã đánh cắp hai cái ở đây hôm nay",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_26_a7",
+        "label": "Đây có phải là một lời buộc tội?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_26_a8",
+        "label": "Vẫn chưa",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_26_a9",
+        "label": "không, tôi luôn mua chúng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_26_a10",
+        "label": "Tôi sẽ không bao giờ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_26_a11",
+        "label": "không, tôi ăn cắp chúng từ những nơi khác",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_26_a12",
+        "label": "có tội như bị buộc tội",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_26_a13",
+        "label": "Tôi hy vọng là không, nhưng tôi không thể chắc chắn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_26_a14",
+        "label": "Bạn đã nói chuyện với ai?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_26_a15",
+        "label": "Bây giờ tôi đang để mắt đến cái trong tay bạn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_26_a16",
+        "label": "Tôi không lấy những thứ không phải của tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_26_a17",
+        "label": "có thể, nhưng không bao giờ cố ý",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_26_a18",
+        "label": "Tôi không thể làm điều đó",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_26_a19",
+        "label": "không đời nào!",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_26_a20",
+        "label": "Tôi hy vọng là không",
+        "score": 4
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 26
+    }
+  },
+  {
+    "id": "apk_interview_27",
+    "question": "Cái nào trong số này sẽ khó nhất đối với bạn để sống mà không có?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_27_a1",
+        "label": "Gia đình",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_27_a2",
+        "label": "Bạn bè",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_27_a3",
+        "label": "Rượu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_27_a4",
+        "label": "Cà phê",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_27_a5",
+        "label": "Điện thoại",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_27_a6",
+        "label": "PIZZA",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_27_a7",
+        "label": "tacos",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_27_a8",
+        "label": "Instagram",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_27_a9",
+        "label": "đáng kể khác",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_27_a10",
+        "label": "Âm nhạc",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_27_a11",
+        "label": "Phim",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_27_a12",
+        "label": "Các môn thể thao",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_27_a13",
+        "label": "Chính trị",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_27_a14",
+        "label": "Đi du lịch",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_27_a15",
+        "label": "tình dục",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_27_a16",
+        "label": "Ngủ",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_27_a17",
+        "label": "Máy vi tính",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_27_a18",
+        "label": "Tivi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_27_a19",
+        "label": "Quinoa",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_27_default",
+      "label": "Không có thứ gì mà tôi không thể sống thiếu",
+      "score": 3
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 27
+    }
+  },
+  {
+    "id": "apk_interview_28",
+    "question": "Bạn có khả năng đầu tư tiền của mình như thế nào nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_28_a1",
+        "label": "trái phiếu",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_28_a2",
+        "label": "Quỹ tương hỗ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_28_a3",
+        "label": "Địa ốc",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_28_a4",
+        "label": "Bitcoin",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_28_a5",
+        "label": "quỹ hưu trí",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_28_a6",
+        "label": "cổ phiếu",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_28_a7",
+        "label": "những bữa tiệc lớn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_28_a8",
+        "label": "Vàng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_28_a9",
+        "label": "Bạc",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_28_a10",
+        "label": "xe thể thao",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_28_a11",
+        "label": "Tôi muốn chi tiêu nó",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_28_a12",
+        "label": "Quần áo",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_28_a13",
+        "label": "Tài khoản tiết kiệm",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_28_a14",
+        "label": "Tôi sẽ cho bạn biết nếu bạn nói với tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_28_a15",
+        "label": "Tôi sẵn sàng đón nhận các đề xuất",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_28_a16",
+        "label": "không ai có tiền cho điều đó",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_28_a17",
+        "label": "Tôi sẽ đầu tư vào bạn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_28_a18",
+        "label": "Tôi sẽ đầu tư vào tổ chức này",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_28_a19",
+        "label": "Booze & Hookers",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_28_a20",
+        "label": "Quỹ chỉ số",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 28
+    }
+  },
+  {
+    "id": "apk_interview_29",
+    "question": "Bạn có coi mình là một người biết lắng nghe không?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 4,
+    "answers": [
+      {
+        "id": "apk_interview_29_a1",
+        "label": "vâng, tôi nghĩ vậy",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_29_a2",
+        "label": "Tôi đang làm việc để trở thành một người lắng nghe tốt hơn",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_29_a3",
+        "label": "Tôi nghe thấy bạn to và rõ ràng",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_29_a4",
+        "label": "Nó phụ thuộc vào ai đang nói",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_29_a5",
+        "label": "Vâng, tôi nghe nhạc mỗi ngày",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_29_a6",
+        "label": "Bạn có thể lặp lại câu hỏi?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_29_a7",
+        "label": "Tôi cần thêm thời gian để xử lý những gì bạn nói",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_29_a8",
+        "label": "Tuyệt đối!",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_29_a9",
+        "label": "bạn bè và gia đình của tôi nói với tôi rằng tôi là",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_29_a10",
+        "label": "Có, nhưng tôi đấu tranh với ngôn ngữ cơ thể",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_29_a11",
+        "label": "đến lần nữa?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_29_a12",
+        "label": "Tôi tự hào là một người lắng nghe tuyệt vời",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_29_a13",
+        "label": "Tôi lắng nghe bằng tai và đôi mắt của tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_29_a14",
+        "label": "Có, nhưng tôi hơi khó nghe",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_29_a15",
+        "label": "Bạn bè của tôi nói với tôi rằng tôi là",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_29_a16",
+        "label": "Vâng, tôi là một nhà văn tuyệt vời",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_29_a17",
+        "label": "Diễn giả hấp dẫn như thế nào?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_29_a18",
+        "label": "Tôi nói tốt hơn",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_29_a19",
+        "label": "Nếu tôi không có tai nghe trong",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 29
+    }
+  },
+  {
+    "id": "apk_interview_30",
+    "question": "Bạn có xử lý tốt xung đột không?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_30_a1",
+        "label": "tôi nghĩ rằng tôi xử lý xung đột với sự khéo léo",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_30_a2",
+        "label": "Tôi có xu hướng né tránh xung đột",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_30_a3",
+        "label": "Tôi tránh xung đột bằng mọi giá",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a4",
+        "label": "Tôi không thích đối đầu với mọi người",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_30_a5",
+        "label": "Tôi rất giỏi trong việc giải quyết xung đột",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_30_a6",
+        "label": "Vâng, tôi chỉ tập trung vào nhiệm vụ trước mắt",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_30_a7",
+        "label": "Xung đột là thách thức đối với tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_30_a8",
+        "label": "Bạn có đến với tôi không, anh bạn?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a9",
+        "label": "vâng, tôi đá đít và lấy tên",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a10",
+        "label": "Tôi điều hướng xung đột một cách bình tĩnh",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_30_a11",
+        "label": "Không, tôi bất ngờ",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a12",
+        "label": "Tôi là một chiến binh, không phải là một người yêu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a13",
+        "label": "Tôi giỏi xung đột",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_30_a14",
+        "label": "tôi xuất sắc trong các thay đổi về thể chất và lời nói",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a15",
+        "label": "Tôi thu mình lại khi đối mặt",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_30_a16",
+        "label": "thường thì tôi chỉ tránh đối đầu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_30_a17",
+        "label": "Tôi đang cố gắng trở nên quyết đoán hơn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_30_a18",
+        "label": "Tôi khá dễ hòa đồng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_30_a19",
+        "label": "vâng, tôi quyết đoán nhưng nhẹ nhàng",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_30_a20",
+        "label": "Tôi luôn sẵn sàng cho trận chiến",
+        "score": 1
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 30
+    }
+  },
+  {
+    "id": "apk_interview_31",
+    "question": "Bạn có phải là người hướng tới mục tiêu?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_31_a1",
+        "label": "Có, nhưng tôi có thể đặt quá nhiều mục tiêu",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_31_a2",
+        "label": "Đôi khi tôi quá tham vọng",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_31_a3",
+        "label": "Tôi không phải là một fan hâm mộ của bóng đá",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_31_a4",
+        "label": "Tôi cho rằng thành công của mình là thiết lập mục tiêu",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_31_a5",
+        "label": "S.M.A.R.T. Mục tiêu cả ngày!",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_31_a6",
+        "label": "Mục tiêu của tôi là đặt nhiều mục tiêu hơn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a7",
+        "label": "tôi đặt mục tiêu nhưng đạt được chúng là một thách thức",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a8",
+        "label": "Tôi thành công mà không có mục tiêu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a9",
+        "label": "Tôi không quan tâm đến mục tiêu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a10",
+        "label": "Tôi có xu hướng thiếu mục tiêu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a11",
+        "label": "Nghị quyết của năm mới có được tính không?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a12",
+        "label": "Tôi quá bận để đặt mục tiêu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_31_a13",
+        "label": "vâng, tôi luôn bắn cho các vì sao",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_31_a14",
+        "label": "mục tiêu dành cho troll nếu bạn hỏi tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_31_a15",
+        "label": "Mỗi ngày!",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_31_a16",
+        "label": "Tôi luôn có mục tiêu dài hạn và ngắn hạn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_31_a17",
+        "label": "không thực sự",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_31_a18",
+        "label": "Tôi thích làm việc hướng tới các mục tiêu của nhóm",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_31_a19",
+        "label": "Tôi đang làm việc để đặt ra các mục tiêu tốt hơn",
+        "score": 4
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 31
+    }
+  },
+  {
+    "id": "apk_interview_32",
+    "question": "Bạn có kế hoạch gì cho giáo dục trong tương lai không?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 5,
+    "answers": [
+      {
+        "id": "apk_interview_32_a1",
+        "label": "Tôi cam kết học tập suốt đời",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_32_a2",
+        "label": "Tôi sẽ không bao giờ ngừng học hỏi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_32_a3",
+        "label": "Giáo dục không bao giờ kết thúc",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_32_a4",
+        "label": "Tôi muốn tiếp tục tham gia các khóa học",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_32_a5",
+        "label": "Tôi muốn tiếp tục học chuyên nghiệp",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_32_a6",
+        "label": "Giáo dục là một sự lãng phí tiền bạc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_32_a7",
+        "label": "Tôi cố gắng học những điều mới mỗi ngày",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_32_a8",
+        "label": "Bạn đang trả tiền?",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_32_a9",
+        "label": "Chỉ khi công ty trả tiền",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_32_a10",
+        "label": "Tôi đã hoàn thành công việc đó",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_32_a11",
+        "label": "Tôi đã tham dự lớp học cuối cùng của mình",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_32_a12",
+        "label": "Theo quan điểm của tôi, trường học là dành cho những kẻ ngu ngốc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_32_a13",
+        "label": "không có khả năng đẫm máu",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_32_a14",
+        "label": "Tiến sĩ Harvard, tôi đến đây!",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_32_a15",
+        "label": "Tôi đăng ký vào trường học của Hard Knocks",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_32_a16",
+        "label": "Tôi sẽ không loại trừ nó",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_32_a17",
+        "label": "không phải hiện tại",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_32_a18",
+        "label": "Tôi đã không thực sự xem xét nó",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_32_a19",
+        "label": "Tôi chưa quyết định vào thời điểm này",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 32
+    }
+  },
+  {
+    "id": "apk_interview_33",
+    "question": "Điều tồi tệ nhất bạn từng làm là gì?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 1,
+    "answers": [
+      {
+        "id": "apk_interview_33_a1",
+        "label": "Tôi đã ăn cắp từ một người đàn ông vô gia cư",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_33_a2",
+        "label": "Tôi đã nói dối mẹ tôi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_33_a3",
+        "label": "Tôi đã nói với một đứa trẻ rằng mẹ nó không yêu nó",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_33_a4",
+        "label": "Tôi đã lấy trộm một cuốn sách từ thư viện",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_33_a5",
+        "label": "Tôi phóng uế trên bãi cỏ của kẻ thù của tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_33_a6",
+        "label": "Tôi đã chém lốp xe hàng xóm của tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_33_a7",
+        "label": "Tôi đâm một sinh viên khác bằng bút chì",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_33_a8",
+        "label": "Tôi đã gian lận trong một bài kiểm tra",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_33_a9",
+        "label": "Tôi đã nói dối trong một cuộc phỏng vấn",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_33_a10",
+        "label": "Tôi bắt nạt một nhân vật cosplay",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_33_a11",
+        "label": "Tôi đã không lao vào một nhà vệ sinh mà tôi bị tắc",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_33_a12",
+        "label": "Tôi đã giả mạo một phiếu cho phép",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_33_a13",
+        "label": "Tôi lấy một chiếc xe hơi để thưởng thức",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_33_a14",
+        "label": "Tôi đã lấy kẹo từ một đứa trẻ",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_33_a15",
+        "label": "Tôi đã giết cây xương rồng của mình bằng cách không tưới nó",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_33_a16",
+        "label": "Tôi đã sử dụng khăn tay trong phòng tắm để lau",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_33_a17",
+        "label": "Tôi đã đánh lừa một người mà tôi phải lòng",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_33_a18",
+        "label": "tôi đã đi bộ",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_33_a19",
+        "label": "Tôi chưa bao giờ làm bất cứ điều gì sai",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_33_default",
+      "label": "Tôi xin phép không trả lời",
+      "score": 3
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 33
+    }
+  },
+  {
+    "id": "apk_interview_34",
+    "question": "Đâu là nơi tốt nhất để thủ dâm?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 1,
+    "answers": [
+      {
+        "id": "apk_interview_34_a1",
+        "label": "Vòi hoa sen",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_34_a2",
+        "label": "Đi văng",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_34_a3",
+        "label": "Cái bàn của tôi",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a4",
+        "label": "bồn tắm",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_34_a5",
+        "label": "Giường của tôi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_34_a6",
+        "label": "Nhà bếp",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a7",
+        "label": "một bồn tắm nước nóng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_34_a8",
+        "label": "Công việc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a9",
+        "label": "ở bất cứ đâu",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_34_a10",
+        "label": "Mọi nơi",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_34_a11",
+        "label": "Tôi không làm điều đó",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_34_a12",
+        "label": "Đó không phải là việc của bạn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_34_a13",
+        "label": "trong một Uber",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a14",
+        "label": "Nhân sự, cây leo ở đâu?",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_34_a15",
+        "label": "Trong phòng tắm tại nơi làm việc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a16",
+        "label": "phòng nghỉ tại nơi làm việc",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a17",
+        "label": "Tôi không còn quan tâm đến vị trí này",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_34_a18",
+        "label": "Bạn đang đùa, phải không?",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_34_default",
+      "label": "Tôi xin phép không trả lời",
+      "score": 3
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 34
+    }
+  },
+  {
+    "id": "apk_interview_35",
+    "question": "Công chúa Disney nào trong số này là công chúa Disney đáng kính nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_35_a1",
+        "label": "Ariel",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a2",
+        "label": "Moana",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a3",
+        "label": "Belle",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_35_a4",
+        "label": "Tiana",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_35_a5",
+        "label": "Rapunzel",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a6",
+        "label": "Pocahontas",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a7",
+        "label": "Hoa Mộc Lan",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_35_a8",
+        "label": "Tuyết trắng",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_35_a9",
+        "label": "Rạng đông",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_35_a10",
+        "label": "Merida",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a11",
+        "label": "Anna",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_35_a12",
+        "label": "ELSA",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a13",
+        "label": "Rapunzel",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_35_a14",
+        "label": "Hoa nhài",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_35_a15",
+        "label": "Tinker Bell có tính không?",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_35_a16",
+        "label": "Công chúa đáng kính, nghiêm túc?",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_35_a17",
+        "label": "Lọ Lem",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_35_a18",
+        "label": "Tôi không phải là một người hâm mộ lớn của Disney",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_35_a19",
+        "label": "Giống như, ai là người nóng bỏng nhất?",
+        "score": 1
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_35_default",
+      "label": "Tôi không biết gì về chuyện đó",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 35
+    }
+  },
+  {
+    "id": "apk_interview_36",
+    "question": "Bạn liên quan đến nhân vật nào trong số những nhân vật \"Game of Thrones\" này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_36_a1",
+        "label": "Jon Snow",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a2",
+        "label": "Arya Stark",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a3",
+        "label": "Cersei Lannister",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_36_a4",
+        "label": "Sansa Stark",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_36_a5",
+        "label": "Tyrion Lannister",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a6",
+        "label": "Bran Stark",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a7",
+        "label": "Brienne của Tarth",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a8",
+        "label": "Chú chó",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a9",
+        "label": "Lord Varys",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_36_a10",
+        "label": "Khal Drogo",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a11",
+        "label": "Stannis Baratheon",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a12",
+        "label": "Peter Baelish",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_36_a13",
+        "label": "Daenerys Targaryen",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a14",
+        "label": "Jaime Lannister",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a15",
+        "label": "Samwell Tarly",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a16",
+        "label": "Melisandre",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a17",
+        "label": "Hodor",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_36_a18",
+        "label": "Robb Stark",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_36_a19",
+        "label": "Theon Greyjoy",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_36_default",
+      "label": "Tôi không xem chương trình đó",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 36
+    }
+  },
+  {
+    "id": "apk_interview_37",
+    "question": "Bạn liên quan đến nhân vật nào trong số những nhân vật \"Chiến tranh giữa các vì sao\" này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_37_a1",
+        "label": "Darth Vader",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_37_a2",
+        "label": "yoda",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a3",
+        "label": "Luke Skywalker",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a4",
+        "label": "Công chúa Leia",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a5",
+        "label": "Jabba the Hutt",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_37_a6",
+        "label": "R2-D2",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_37_a7",
+        "label": "REY",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a8",
+        "label": "một người lính bão",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_37_a9",
+        "label": "finn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a10",
+        "label": "nhaibacca",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_37_a11",
+        "label": "Obi-Wan Kenobi",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a12",
+        "label": "jar jar binks",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_37_a13",
+        "label": "Han Solo",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_37_a14",
+        "label": "C-3PO",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_37_a15",
+        "label": "Mace Windu",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a16",
+        "label": "Qui-Gon Jinn",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a17",
+        "label": "BB-8",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_37_a18",
+        "label": "Tôi thích nghĩ mình là George Lucas",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_37_a19",
+        "label": "Lực lượng không mạnh trong tôi",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_37_default",
+      "label": "Tôi chưa từng xem Chiến tranh giữa các vì sao",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 37
+    }
+  },
+  {
+    "id": "apk_interview_38",
+    "question": "Bạn liên quan đến nhân vật nào trong số những nhân vật \"The Office\" này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_38_a1",
+        "label": "Dwight",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a2",
+        "label": "Pam",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_38_a3",
+        "label": "Michael",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_38_a4",
+        "label": "Jim",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_38_a5",
+        "label": "Kevin",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_38_a6",
+        "label": "andy",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a7",
+        "label": "Angela",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_38_a8",
+        "label": "erin",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a9",
+        "label": "Tín điều",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_38_a10",
+        "label": "Toby",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_38_a11",
+        "label": "Stanley",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_38_a12",
+        "label": "ryan",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a13",
+        "label": "Meredith",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a14",
+        "label": "Kelly",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a15",
+        "label": "Darryl",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_38_a16",
+        "label": "Phyllis",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a17",
+        "label": "Oscar",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_38_a18",
+        "label": "Đó không phải là kiểu hài hước của tôi",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_38_default",
+      "label": "Tôi không xem chương trình đó",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 38
+    }
+  },
+  {
+    "id": "apk_interview_39",
+    "question": "Bạn liên quan đến nhân vật nào trong số những nhân vật \"Spongebob Squarepants\"?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_39_a1",
+        "label": "Patrick Star",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_39_a2",
+        "label": "Xúc tu mực",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_39_a3",
+        "label": "má cát",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_39_a4",
+        "label": "bọt biển",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_39_a5",
+        "label": "Ông Krabs",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_39_a6",
+        "label": "sinh vật phù du",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_39_a7",
+        "label": "Gary",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_39_a8",
+        "label": "Karen",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_39_a9",
+        "label": "Pearl krabs",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_39_a10",
+        "label": "Bà Puff",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_39_a11",
+        "label": "Vua sao Hải Vương",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_39_a12",
+        "label": "Larry con tôm hùm",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_39_a13",
+        "label": "Squilliam Fancyson",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_39_a14",
+        "label": "người đàn ông ray",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_39_a15",
+        "label": "Người Hà Lan bay",
+        "score": 2
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_39_default",
+      "label": "Tôi không biết gì về chuyện đó",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 39
+    }
+  },
+  {
+    "id": "apk_interview_40",
+    "question": "Bạn liên quan đến nhân vật nào trong số những nhân vật \"Harry Potter\" này?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_40_a1",
+        "label": "Chúa tể Voldemort",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_40_a2",
+        "label": "Giáo sư Albus Dumbledore",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_40_a3",
+        "label": "Hermione granger",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_40_a4",
+        "label": "Giáo sư Severus Snape",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a5",
+        "label": "Ron Weasley",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a6",
+        "label": "Draco Malfoy",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_40_a7",
+        "label": "Luna Lovegood",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a8",
+        "label": "Belltrix Lestrange",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_40_a9",
+        "label": "Giáo sư McGonagall",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a10",
+        "label": "dobby",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a11",
+        "label": "hagrid",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_40_a12",
+        "label": "Peter Pettigrew",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_40_a13",
+        "label": "Argus Filch",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_40_a14",
+        "label": "Myrtle rên rỉ",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_40_a15",
+        "label": "Dolores Umbridge",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_40_a16",
+        "label": "Neville Longbottom",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a17",
+        "label": "Harry Potter",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_40_a18",
+        "label": "Phép thuật không phải là thứ của tôi",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_40_a19",
+        "label": "Tôi là một J.K. Rowling",
+        "score": 4
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_40_default",
+      "label": "Tôi không biết gì về chuyện đó",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 40
+    }
+  },
+  {
+    "id": "apk_interview_41",
+    "question": "Bạn liên quan đến nhân vật \"Sex & the City\" nào nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 1,
+    "answers": [
+      {
+        "id": "apk_interview_41_a1",
+        "label": "Samantha",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_41_a2",
+        "label": "Charlotte",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_41_a3",
+        "label": "Miranda",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_41_a4",
+        "label": "Carrie",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_41_a5",
+        "label": "Ông Lớn",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_41_default",
+      "label": "Tôi chưa từng xem chương trình đó",
+      "score": 4
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 41
+    }
+  },
+  {
+    "id": "apk_interview_42",
+    "question": "Đội Edward hay Đội Jacob?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 1,
+    "answers": [
+      {
+        "id": "apk_interview_42_a1",
+        "label": "Cả hai",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_42_a2",
+        "label": "Đội Jacob",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_42_a3",
+        "label": "Đội Edward",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_42_a4",
+        "label": "Không",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": {
+      "id": "apk_interview_42_default",
+      "label": "Bạn đang nói về chuyện gì vậy?",
+      "score": 5
+    },
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 42
+    }
+  },
+  {
+    "id": "apk_interview_43",
+    "question": "Bạn xác định được yếu tố nào nhất?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 2,
+    "answers": [
+      {
+        "id": "apk_interview_43_a1",
+        "label": "Không khí",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_43_a2",
+        "label": "Ngọn lửa",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_43_a3",
+        "label": "Nước uống",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_43_a4",
+        "label": "Đất",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 43
+    }
+  },
+  {
+    "id": "apk_interview_44",
+    "question": "Cà phê hay trà?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_44_a1",
+        "label": "Cả hai",
+        "score": 2
+      },
+      {
+        "id": "apk_interview_44_a2",
+        "label": "Cà phê",
+        "score": 5
+      },
+      {
+        "id": "apk_interview_44_a3",
+        "label": "Trà",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_44_a4",
+        "label": "Không",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 44
+    }
+  },
+  {
+    "id": "apk_interview_45",
+    "question": "Bạn thích gọi điện hay nhắn tin hơn?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 4,
+    "answers": [
+      {
+        "id": "apk_interview_45_a1",
+        "label": "Bản văn",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_45_a2",
+        "label": "Tôi thích cả hai",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_45_a3",
+        "label": "Tôi thích nói chuyện trực tiếp hơn",
+        "score": 3
+      },
+      {
+        "id": "apk_interview_45_a4",
+        "label": "Cuộc gọi",
+        "score": 5
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 45
+    }
+  },
+  {
+    "id": "apk_interview_46",
+    "question": "Bạn thích được thích hay đúng?",
+    "cta": "Bạn sẽ trả lời như thế nào?",
+    "commonness": 3,
+    "answers": [
+      {
+        "id": "apk_interview_46_a1",
+        "label": "Không",
+        "score": 1
+      },
+      {
+        "id": "apk_interview_46_a2",
+        "label": "Tôi muốn được thích",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_46_a3",
+        "label": "Tôi muốn đúng hơn",
+        "score": 4
+      },
+      {
+        "id": "apk_interview_46_a4",
+        "label": "Cả hai",
+        "score": 3
+      }
+    ],
+    "defaultAnswer": null,
+    "source": {
+      "table": "a16_interview-questions-enc",
+      "record": 46
+    }
+  }
+]

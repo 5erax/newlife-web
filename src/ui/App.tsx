@@ -12,6 +12,7 @@ import { cash as displayCash, ageLabel } from "./format";
 import { Avatar } from "./components/Avatar";
 import { EventDialog } from "./components/EventDialog";
 import { LoveDialog } from "./components/LoveDialog";
+import { InterviewDialog } from "./components/InterviewDialog";
 import { Start } from "./screens/Start";
 import { Journal } from "./screens/Journal";
 import { Education } from "./screens/Education";
@@ -233,6 +234,7 @@ export default function App() {
         gameRef.current?.phase === "ready" &&
         !gameRef.current.casino.hand &&
         !gameRef.current.loveOffer &&
+        !gameRef.current.jobInterview &&
         !creating
       ) {
         e.preventDefault();
@@ -394,6 +396,7 @@ export default function App() {
               if (
                 game.pending ||
                 game.loveOffer ||
+                game.jobInterview ||
                 game.casino.hand ||
                 busy ||
                 unsaved
@@ -609,7 +612,8 @@ export default function App() {
                 readOnly ||
                 game.phase !== "ready" ||
                 !!game.casino.hand ||
-                !!game.loveOffer
+                !!game.loveOffer ||
+                !!game.jobInterview
               }
               onClick={() => void dispatch({ type: "age" })}
             >
@@ -623,9 +627,11 @@ export default function App() {
                       ? "Kết thúc ván bài trước"
                       : game.loveOffer
                         ? "Trả lời lời mời trước"
-                        : busy
-                          ? ui.saving
-                          : ui.ageUp}
+                        : game.jobInterview
+                          ? "Trả lời phỏng vấn trước"
+                          : busy
+                            ? ui.saving
+                            : ui.ageUp}
                 <small>
                   {game.phase === "ready"
                     ? `Sang tuổi ${game.age + 1}`
@@ -655,6 +661,13 @@ export default function App() {
       )}
       {game?.loveOffer && !creating && !readOnly && (
         <LoveDialog s={game} busy={busy} dispatch={(a) => void dispatch(a)} />
+      )}
+      {game?.jobInterview && !creating && !readOnly && (
+        <InterviewDialog
+          s={game}
+          busy={busy}
+          dispatch={(a) => void dispatch(a)}
+        />
       )}
     </>
   );
