@@ -128,3 +128,6 @@ Nhánh `feature/apk-friend-states`, task #114. `d5c0337` lưu hồ sơ NPC và t
 - Chưa kiểm trên điện thoại vật lý; bundle JS khoảng 4,25 MB (gzip 630 KB), cảnh báo chunk lớn còn tồn tại. 151 dòng lõi và 45 bảng/2.119 dòng vẫn chờ cơ chế phù hợp; epic #111 còn mở.
 
 Phần 1.4 đã nghiệm thu sau checkpoint trên: PR #115 merge tại main `6eeee01`, CI push38485333184/PR38485393155 SUCCESS, ba luồng APK hosted trên Site PASS. Vercel production READY từ main6eeee01; Sites public version7, sourceeb67645, deployment `appgdep_6acec37aef5c8191ab68618824b9948a` SUCCEEDED. #114 đã đóng; #111 còn mở. Bản 1.5 ở nhánh `feature/apk-job-interviews`, #116 vẫn cần CI/review/hosted QA trước nghiệm thu.
+## Nghiên cứu Keno tiếp theo
+
+[Bằng chứng Keno](apk-keno-research.md) và [task #126](https://github.com/5erax/newlife-web/issues/126) xác minh khối payout, lưới5×4, sáu bóng và nhánh HouseWinRate. Đây là nghiên cứu, chưa có Keno chơi được trên web; RNG native, nguồn HouseWinRate và toàn bộ luồng tiền còn cần đối chiếu.
