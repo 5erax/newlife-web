@@ -1,0 +1,5259 @@
+{
+  "binarySha256": "facc89b9e6dd241230e5e4d5cc32786a55a6330975556d663d0e16ef31e5e604",
+  "metadataSha256": "7bd1a0ddb9e1ac0b94bf23f43e5b821196a4eac25e968aaf01fec5b5e2409ac1",
+  "mapping": "Injected Offset is raw; map each call through ELF PT_LOAD. Calibrated SimStock price getter.",
+  "scope": "Verified stock pattern branch table only; complete price/lifecycle equations and virtual RNG dispatch remain unverified.",
+  "stockPatternFixtures": [
+    {
+      "winnerScore": 1,
+      "draw": 1,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 2,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 3,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 4,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 5,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 6,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 7,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 8,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 9,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 10,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 11,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 12,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 1,
+      "draw": 13,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 1,
+      "draw": 14,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 1,
+      "draw": 15,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 1,
+      "draw": 16,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 1,
+      "draw": 17,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 1,
+      "draw": 18,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 1,
+      "draw": 19,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 1,
+      "draw": 20,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 2,
+      "draw": 1,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 2,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 3,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 4,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 5,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 6,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 7,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 8,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 2,
+      "draw": 9,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 10,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 11,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 12,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 13,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 14,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 15,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 16,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 2,
+      "draw": 17,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 2,
+      "draw": 18,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 2,
+      "draw": 19,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 2,
+      "draw": 20,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 3,
+      "draw": 1,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 3,
+      "draw": 2,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 3,
+      "draw": 3,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 3,
+      "draw": 4,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 3,
+      "draw": 5,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 3,
+      "draw": 6,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 7,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 8,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 9,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 10,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 11,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 12,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 13,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 14,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 15,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 3,
+      "draw": 16,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 3,
+      "draw": 17,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 3,
+      "draw": 18,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 3,
+      "draw": 19,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 3,
+      "draw": 20,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 1,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 4,
+      "draw": 2,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 4,
+      "draw": 3,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 4,
+      "draw": 4,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 4,
+      "draw": 5,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 6,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 7,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 8,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 9,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 10,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 11,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 12,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 4,
+      "draw": 13,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 14,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 15,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 16,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 17,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 18,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 19,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 4,
+      "draw": 20,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 1,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 5,
+      "draw": 2,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 5,
+      "draw": 3,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 5,
+      "draw": 4,
+      "pattern": 2
+    },
+    {
+      "winnerScore": 5,
+      "draw": 5,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 5,
+      "draw": 6,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 5,
+      "draw": 7,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 5,
+      "draw": 8,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 5,
+      "draw": 9,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 5,
+      "draw": 10,
+      "pattern": 3
+    },
+    {
+      "winnerScore": 5,
+      "draw": 11,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 12,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 13,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 14,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 15,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 16,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 17,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 18,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 19,
+      "pattern": 1
+    },
+    {
+      "winnerScore": 5,
+      "draw": 20,
+      "pattern": 1
+    }
+  ],
+  "patternCountsPer20Draws": {
+    "1": {
+      "2": 12,
+      "3": 6,
+      "1": 2
+    },
+    "2": {
+      "2": 8,
+      "3": 8,
+      "1": 4
+    },
+    "3": {
+      "2": 5,
+      "3": 10,
+      "1": 5
+    },
+    "4": {
+      "2": 4,
+      "3": 8,
+      "1": 8
+    },
+    "5": {
+      "2": 4,
+      "3": 6,
+      "1": 10
+    }
+  },
+  "methods": [
+    {
+      "fileOffset": "0x2adabe8",
+      "virtualAddress": "0x2adebe8",
+      "sha256": "2594837cad53e8a1b3ab23dbcca4f9ed83b9ba7f68aae4e5aa5b9dc6ba57176c",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "get",
+          "length": 8
+        },
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "public double get_CurrentStockPrice()",
+          "length": 8
+        }
+      ],
+      "instructions": [
+        {
+          "address": "0x2adebe8",
+          "op": "ldr",
+          "args": "d0, [x0, #0x30]"
+        },
+        {
+          "address": "0x2adebec",
+          "op": "ret",
+          "args": ""
+        }
+      ],
+      "calls": []
+    },
+    {
+      "fileOffset": "0x2adac68",
+      "virtualAddress": "0x2adec68",
+      "sha256": "57c5c9f57f2cb8a262cd923332261fd54f0449eb2ed356a7eef6a86aaee6ecf0",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "private void SetupLifecyclePattern(int winnerScore)",
+          "length": 264
+        }
+      ],
+      "instructions": [
+        {
+          "address": "0x2adec68",
+          "op": "str",
+          "args": "x30, [sp, #-0x30]!"
+        },
+        {
+          "address": "0x2adec6c",
+          "op": "stp",
+          "args": "x22, x21, [sp, #0x10]"
+        },
+        {
+          "address": "0x2adec70",
+          "op": "stp",
+          "args": "x20, x19, [sp, #0x20]"
+        },
+        {
+          "address": "0x2adec74",
+          "op": "adrp",
+          "args": "x21, #0x60c2000"
+        },
+        {
+          "address": "0x2adec78",
+          "op": "adrp",
+          "args": "x22, #0x5c24000"
+        },
+        {
+          "address": "0x2adec7c",
+          "op": "mov",
+          "args": "w20, w1"
+        },
+        {
+          "address": "0x2adec80",
+          "op": "ldrb",
+          "args": "w8, [x21, #0x1da]"
+        },
+        {
+          "address": "0x2adec84",
+          "op": "ldr",
+          "args": "x22, [x22, #0x2f8]"
+        },
+        {
+          "address": "0x2adec88",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x2adec8c",
+          "op": "tbnz",
+          "args": "w8, #0, #0x2adeca4"
+        },
+        {
+          "address": "0x2adec90",
+          "op": "adrp",
+          "args": "x0, #0x5c24000"
+        },
+        {
+          "address": "0x2adec94",
+          "op": "ldr",
+          "args": "x0, [x0, #0x2f8]"
+        },
+        {
+          "address": "0x2adec98",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2adec9c",
+          "op": "mov",
+          "args": "w8, #1"
+        },
+        {
+          "address": "0x2adeca0",
+          "op": "strb",
+          "args": "w8, [x21, #0x1da]"
+        },
+        {
+          "address": "0x2adeca4",
+          "op": "ldr",
+          "args": "x0, [x22]"
+        },
+        {
+          "address": "0x2adeca8",
+          "op": "ldr",
+          "args": "w8, [x0, #0xe4]"
+        },
+        {
+          "address": "0x2adecac",
+          "op": "cbnz",
+          "args": "w8, #0x2adecb4"
+        },
+        {
+          "address": "0x2adecb0",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x2adecb4",
+          "op": "mov",
+          "args": "w0, #1"
+        },
+        {
+          "address": "0x2adecb8",
+          "op": "mov",
+          "args": "w1, #0x15"
+        },
+        {
+          "address": "0x2adecbc",
+          "op": "mov",
+          "args": "x2, xzr"
+        },
+        {
+          "address": "0x2adecc0",
+          "op": "bl",
+          "args": "#0x2e0b54c"
+        },
+        {
+          "address": "0x2adecc4",
+          "op": "cmp",
+          "args": "w20, #2"
+        },
+        {
+          "address": "0x2adecc8",
+          "op": "b.le",
+          "args": "#0x2adecf0"
+        },
+        {
+          "address": "0x2adeccc",
+          "op": "cmp",
+          "args": "w20, #3"
+        },
+        {
+          "address": "0x2adecd0",
+          "op": "b.eq",
+          "args": "#0x2aded14"
+        },
+        {
+          "address": "0x2adecd4",
+          "op": "cmp",
+          "args": "w20, #4"
+        },
+        {
+          "address": "0x2adecd8",
+          "op": "b.eq",
+          "args": "#0x2aded2c"
+        },
+        {
+          "address": "0x2adecdc",
+          "op": "cmp",
+          "args": "w20, #5"
+        },
+        {
+          "address": "0x2adece0",
+          "op": "b.ne",
+          "args": "#0x2aded60"
+        },
+        {
+          "address": "0x2adece4",
+          "op": "cmp",
+          "args": "w0, #0xb"
+        },
+        {
+          "address": "0x2adece8",
+          "op": "b.lt",
+          "args": "#0x2aded34"
+        },
+        {
+          "address": "0x2adecec",
+          "op": "b",
+          "args": "#0x2aded58"
+        },
+        {
+          "address": "0x2adecf0",
+          "op": "cmp",
+          "args": "w20, #1"
+        },
+        {
+          "address": "0x2adecf4",
+          "op": "b.eq",
+          "args": "#0x2aded44"
+        },
+        {
+          "address": "0x2adecf8",
+          "op": "cmp",
+          "args": "w20, #2"
+        },
+        {
+          "address": "0x2adecfc",
+          "op": "b.ne",
+          "args": "#0x2aded60"
+        },
+        {
+          "address": "0x2aded00",
+          "op": "cmp",
+          "args": "w0, #0x11"
+        },
+        {
+          "address": "0x2aded04",
+          "op": "b.ge",
+          "args": "#0x2aded58"
+        },
+        {
+          "address": "0x2aded08",
+          "op": "cmp",
+          "args": "w0, #9"
+        },
+        {
+          "address": "0x2aded0c",
+          "op": "b.ge",
+          "args": "#0x2aded24"
+        },
+        {
+          "address": "0x2aded10",
+          "op": "b",
+          "args": "#0x2aded3c"
+        },
+        {
+          "address": "0x2aded14",
+          "op": "cmp",
+          "args": "w0, #0x10"
+        },
+        {
+          "address": "0x2aded18",
+          "op": "b.ge",
+          "args": "#0x2aded58"
+        },
+        {
+          "address": "0x2aded1c",
+          "op": "cmp",
+          "args": "w0, #6"
+        },
+        {
+          "address": "0x2aded20",
+          "op": "b.lt",
+          "args": "#0x2aded3c"
+        },
+        {
+          "address": "0x2aded24",
+          "op": "mov",
+          "args": "w8, #3"
+        },
+        {
+          "address": "0x2aded28",
+          "op": "b",
+          "args": "#0x2aded5c"
+        },
+        {
+          "address": "0x2aded2c",
+          "op": "cmp",
+          "args": "w0, #0xd"
+        },
+        {
+          "address": "0x2aded30",
+          "op": "b.ge",
+          "args": "#0x2aded58"
+        },
+        {
+          "address": "0x2aded34",
+          "op": "cmp",
+          "args": "w0, #5"
+        },
+        {
+          "address": "0x2aded38",
+          "op": "b.ge",
+          "args": "#0x2aded24"
+        },
+        {
+          "address": "0x2aded3c",
+          "op": "mov",
+          "args": "w8, #2"
+        },
+        {
+          "address": "0x2aded40",
+          "op": "b",
+          "args": "#0x2aded5c"
+        },
+        {
+          "address": "0x2aded44",
+          "op": "cmp",
+          "args": "w0, #0x13"
+        },
+        {
+          "address": "0x2aded48",
+          "op": "b.ge",
+          "args": "#0x2aded58"
+        },
+        {
+          "address": "0x2aded4c",
+          "op": "cmp",
+          "args": "w0, #0xd"
+        },
+        {
+          "address": "0x2aded50",
+          "op": "b.ge",
+          "args": "#0x2aded24"
+        },
+        {
+          "address": "0x2aded54",
+          "op": "b",
+          "args": "#0x2aded3c"
+        },
+        {
+          "address": "0x2aded58",
+          "op": "mov",
+          "args": "w8, #1"
+        },
+        {
+          "address": "0x2aded5c",
+          "op": "str",
+          "args": "w8, [x19, #0x58]"
+        },
+        {
+          "address": "0x2aded60",
+          "op": "ldp",
+          "args": "x20, x19, [sp, #0x20]"
+        },
+        {
+          "address": "0x2aded64",
+          "op": "ldp",
+          "args": "x22, x21, [sp, #0x10]"
+        },
+        {
+          "address": "0x2aded68",
+          "op": "ldr",
+          "args": "x30, [sp], #0x30"
+        },
+        {
+          "address": "0x2aded6c",
+          "op": "ret",
+          "args": ""
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ad08f8",
+      "virtualAddress": "0x2ad48f8",
+      "sha256": "05e7d263a615889fe36ff8aee32ef94b596b1467cbac681564bfb96a9265ab48",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "public SimStock(DataFinancialUniversalStock stockData)",
+          "length": 432
+        }
+      ],
+      "instructions": [
+        {
+          "address": "0x2ad48f8",
+          "op": "str",
+          "args": "x30, [sp, #-0x40]!"
+        },
+        {
+          "address": "0x2ad48fc",
+          "op": "stp",
+          "args": "x24, x23, [sp, #0x10]"
+        },
+        {
+          "address": "0x2ad4900",
+          "op": "stp",
+          "args": "x22, x21, [sp, #0x20]"
+        },
+        {
+          "address": "0x2ad4904",
+          "op": "stp",
+          "args": "x20, x19, [sp, #0x30]"
+        },
+        {
+          "address": "0x2ad4908",
+          "op": "adrp",
+          "args": "x21, #0x60c2000"
+        },
+        {
+          "address": "0x2ad490c",
+          "op": "mov",
+          "args": "x20, x1"
+        },
+        {
+          "address": "0x2ad4910",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x2ad4914",
+          "op": "ldrb",
+          "args": "w8, [x21, #0x1d0]"
+        },
+        {
+          "address": "0x2ad4918",
+          "op": "tbnz",
+          "args": "w8, #0, #0x2ad4978"
+        },
+        {
+          "address": "0x2ad491c",
+          "op": "adrp",
+          "args": "x0, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad4920",
+          "op": "ldr",
+          "args": "x0, [x0, #0x318]"
+        },
+        {
+          "address": "0x2ad4924",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad4928",
+          "op": "adrp",
+          "args": "x0, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad492c",
+          "op": "ldr",
+          "args": "x0, [x0, #0x340]"
+        },
+        {
+          "address": "0x2ad4930",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad4934",
+          "op": "adrp",
+          "args": "x0, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad4938",
+          "op": "ldr",
+          "args": "x0, [x0, #0x320]"
+        },
+        {
+          "address": "0x2ad493c",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad4940",
+          "op": "adrp",
+          "args": "x0, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad4944",
+          "op": "ldr",
+          "args": "x0, [x0, #0x350]"
+        },
+        {
+          "address": "0x2ad4948",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad494c",
+          "op": "adrp",
+          "args": "x0, #0x5c23000"
+        },
+        {
+          "address": "0x2ad4950",
+          "op": "ldr",
+          "args": "x0, [x0, #0xc90]"
+        },
+        {
+          "address": "0x2ad4954",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad4958",
+          "op": "adrp",
+          "args": "x0, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad495c",
+          "op": "ldr",
+          "args": "x0, [x0, #0x740]"
+        },
+        {
+          "address": "0x2ad4960",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad4964",
+          "op": "adrp",
+          "args": "x0, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad4968",
+          "op": "ldr",
+          "args": "x0, [x0, #0x748]"
+        },
+        {
+          "address": "0x2ad496c",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2ad4970",
+          "op": "mov",
+          "args": "w8, #1"
+        },
+        {
+          "address": "0x2ad4974",
+          "op": "strb",
+          "args": "w8, [x21, #0x1d0]"
+        },
+        {
+          "address": "0x2ad4978",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2ad497c",
+          "op": "mov",
+          "args": "x1, xzr"
+        },
+        {
+          "address": "0x2ad4980",
+          "op": "bl",
+          "args": "#0x4f76cb4"
+        },
+        {
+          "address": "0x2ad4984",
+          "op": "cbz",
+          "args": "x20, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad4988",
+          "op": "adrp",
+          "args": "x8, #0x5c23000"
+        },
+        {
+          "address": "0x2ad498c",
+          "op": "ldr",
+          "args": "x8, [x8, #0xc90]"
+        },
+        {
+          "address": "0x2ad4990",
+          "op": "ldr",
+          "args": "x9, [x20, #0x10]"
+        },
+        {
+          "address": "0x2ad4994",
+          "op": "ldr",
+          "args": "x8, [x8]"
+        },
+        {
+          "address": "0x2ad4998",
+          "op": "str",
+          "args": "x9, [x19, #0x10]"
+        },
+        {
+          "address": "0x2ad499c",
+          "op": "ldr",
+          "args": "x8, [x8, #0xb8]"
+        },
+        {
+          "address": "0x2ad49a0",
+          "op": "ldr",
+          "args": "x8, [x8]"
+        },
+        {
+          "address": "0x2ad49a4",
+          "op": "cbz",
+          "args": "x8, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad49a8",
+          "op": "ldr",
+          "args": "x0, [x8, #0x28]"
+        },
+        {
+          "address": "0x2ad49ac",
+          "op": "cbz",
+          "args": "x0, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad49b0",
+          "op": "mov",
+          "args": "x1, xzr"
+        },
+        {
+          "address": "0x2ad49b4",
+          "op": "bl",
+          "args": "#0x2c38288"
+        },
+        {
+          "address": "0x2ad49b8",
+          "op": "cbz",
+          "args": "x0, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad49bc",
+          "op": "mov",
+          "args": "x1, xzr"
+        },
+        {
+          "address": "0x2ad49c0",
+          "op": "bl",
+          "args": "#0x2a27280"
+        },
+        {
+          "address": "0x2ad49c4",
+          "op": "cbz",
+          "args": "x0, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad49c8",
+          "op": "adrp",
+          "args": "x8, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad49cc",
+          "op": "adrp",
+          "args": "x20, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad49d0",
+          "op": "adrp",
+          "args": "x21, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad49d4",
+          "op": "ldr",
+          "args": "x8, [x8, #0x320]"
+        },
+        {
+          "address": "0x2ad49d8",
+          "op": "adrp",
+          "args": "x22, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad49dc",
+          "op": "adrp",
+          "args": "x23, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad49e0",
+          "op": "adrp",
+          "args": "x24, #0x5c5d000"
+        },
+        {
+          "address": "0x2ad49e4",
+          "op": "ldr",
+          "args": "x20, [x20, #0x318]"
+        },
+        {
+          "address": "0x2ad49e8",
+          "op": "ldr",
+          "args": "x21, [x21, #0x350]"
+        },
+        {
+          "address": "0x2ad49ec",
+          "op": "ldr",
+          "args": "x22, [x22, #0x340]"
+        },
+        {
+          "address": "0x2ad49f0",
+          "op": "ldr",
+          "args": "x23, [x23, #0x748]"
+        },
+        {
+          "address": "0x2ad49f4",
+          "op": "ldr",
+          "args": "x9, [x0, #0x20]"
+        },
+        {
+          "address": "0x2ad49f8",
+          "op": "ldr",
+          "args": "x24, [x24, #0x740]"
+        },
+        {
+          "address": "0x2ad49fc",
+          "op": "ldr",
+          "args": "x0, [x8]"
+        },
+        {
+          "address": "0x2ad4a00",
+          "op": "str",
+          "args": "x9, [x19, #0x60]"
+        },
+        {
+          "address": "0x2ad4a04",
+          "op": "bl",
+          "args": "#0x2237158"
+        },
+        {
+          "address": "0x2ad4a08",
+          "op": "ldr",
+          "args": "x1, [x20]"
+        },
+        {
+          "address": "0x2ad4a0c",
+          "op": "mov",
+          "args": "x20, x0"
+        },
+        {
+          "address": "0x2ad4a10",
+          "op": "bl",
+          "args": "#0x44965f0"
+        },
+        {
+          "address": "0x2ad4a14",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x2ad4a18",
+          "op": "str",
+          "args": "x20, [x19, #0x40]"
+        },
+        {
+          "address": "0x2ad4a1c",
+          "op": "bl",
+          "args": "#0x2237158"
+        },
+        {
+          "address": "0x2ad4a20",
+          "op": "ldr",
+          "args": "x1, [x22]"
+        },
+        {
+          "address": "0x2ad4a24",
+          "op": "mov",
+          "args": "x20, x0"
+        },
+        {
+          "address": "0x2ad4a28",
+          "op": "bl",
+          "args": "#0x44aa974"
+        },
+        {
+          "address": "0x2ad4a2c",
+          "op": "ldr",
+          "args": "x0, [x23]"
+        },
+        {
+          "address": "0x2ad4a30",
+          "op": "str",
+          "args": "x20, [x19, #0x48]"
+        },
+        {
+          "address": "0x2ad4a34",
+          "op": "bl",
+          "args": "#0x2237158"
+        },
+        {
+          "address": "0x2ad4a38",
+          "op": "ldr",
+          "args": "x1, [x24]"
+        },
+        {
+          "address": "0x2ad4a3c",
+          "op": "mov",
+          "args": "x20, x0"
+        },
+        {
+          "address": "0x2ad4a40",
+          "op": "bl",
+          "args": "#0x498f9a8"
+        },
+        {
+          "address": "0x2ad4a44",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2ad4a48",
+          "op": "str",
+          "args": "x20, [x19, #0x50]"
+        },
+        {
+          "address": "0x2ad4a4c",
+          "op": "bl",
+          "args": "#0x2adeb44"
+        },
+        {
+          "address": "0x2ad4a50",
+          "op": "cbz",
+          "args": "x0, #0x2ad4a7c"
+        },
+        {
+          "address": "0x2ad4a54",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2ad4a58",
+          "op": "bl",
+          "args": "#0x2adeb44"
+        },
+        {
+          "address": "0x2ad4a5c",
+          "op": "cbz",
+          "args": "x0, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad4a60",
+          "op": "ldr",
+          "args": "x8, [x0, #0x18]"
+        },
+        {
+          "address": "0x2ad4a64",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2ad4a68",
+          "op": "str",
+          "args": "x8, [x19, #0x18]"
+        },
+        {
+          "address": "0x2ad4a6c",
+          "op": "bl",
+          "args": "#0x2adeb44"
+        },
+        {
+          "address": "0x2ad4a70",
+          "op": "cbz",
+          "args": "x0, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad4a74",
+          "op": "ldr",
+          "args": "x8, [x0, #0x10]"
+        },
+        {
+          "address": "0x2ad4a78",
+          "op": "str",
+          "args": "x8, [x19, #0x20]"
+        },
+        {
+          "address": "0x2ad4a7c",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2ad4a80",
+          "op": "bl",
+          "args": "#0x2adeb44"
+        },
+        {
+          "address": "0x2ad4a84",
+          "op": "cbz",
+          "args": "x0, #0x2ad4aa4"
+        },
+        {
+          "address": "0x2ad4a88",
+          "op": "ldr",
+          "args": "w1, [x0, #0x2c]"
+        },
+        {
+          "address": "0x2ad4a8c",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2ad4a90",
+          "op": "ldp",
+          "args": "x20, x19, [sp, #0x30]"
+        },
+        {
+          "address": "0x2ad4a94",
+          "op": "ldp",
+          "args": "x22, x21, [sp, #0x20]"
+        },
+        {
+          "address": "0x2ad4a98",
+          "op": "ldp",
+          "args": "x24, x23, [sp, #0x10]"
+        },
+        {
+          "address": "0x2ad4a9c",
+          "op": "ldr",
+          "args": "x30, [sp], #0x40"
+        },
+        {
+          "address": "0x2ad4aa0",
+          "op": "b",
+          "args": "#0x2adec68"
+        },
+        {
+          "address": "0x2ad4aa4",
+          "op": "bl",
+          "args": "#0x2237168"
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x2c38288",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimPerson.cs",
+              "declaration": "get",
+              "length": 180
+            },
+            {
+              "file": "Assembly-CSharp/SimPerson.cs",
+              "declaration": "public SimPlace get_PlaceOfResidence()",
+              "length": 180
+            }
+          ]
+        },
+        {
+          "address": "0x2a27280",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimPlace.cs",
+              "declaration": "get",
+              "length": 132
+            },
+            {
+              "file": "Assembly-CSharp/SimPlace.cs",
+              "declaration": "public DataCountry get_Country()",
+              "length": 132
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x44965f0",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x44aa974",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x498f9a8",
+          "candidates": []
+        },
+        {
+          "address": "0x2adeb44",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "get",
+              "length": 92
+            },
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public DataFinancialUniversalStock get_StockData()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x2adeb44",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "get",
+              "length": 92
+            },
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public DataFinancialUniversalStock get_StockData()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x2adeb44",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "get",
+              "length": 92
+            },
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public DataFinancialUniversalStock get_StockData()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x2adeb44",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "get",
+              "length": 92
+            },
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public DataFinancialUniversalStock get_StockData()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2e0754c",
+      "virtualAddress": "0x2e0b54c",
+      "sha256": "505597807fe5d52b715ed47b5bd01027c703f39930f987148df8e5277ea57c93",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/GameReference.cs",
+          "declaration": "public static int GetRandomNumber(int min, int max)",
+          "length": 348
+        }
+      ],
+      "instructions": [
+        {
+          "address": "0x2e0b54c",
+          "op": "sub",
+          "args": "sp, sp, #0x50"
+        },
+        {
+          "address": "0x2e0b550",
+          "op": "str",
+          "args": "x30, [sp, #0x20]"
+        },
+        {
+          "address": "0x2e0b554",
+          "op": "stp",
+          "args": "x22, x21, [sp, #0x30]"
+        },
+        {
+          "address": "0x2e0b558",
+          "op": "stp",
+          "args": "x20, x19, [sp, #0x40]"
+        },
+        {
+          "address": "0x2e0b55c",
+          "op": "adrp",
+          "args": "x22, #0x60c3000"
+        },
+        {
+          "address": "0x2e0b560",
+          "op": "adrp",
+          "args": "x21, #0x5c24000"
+        },
+        {
+          "address": "0x2e0b564",
+          "op": "mov",
+          "args": "w20, w1"
+        },
+        {
+          "address": "0x2e0b568",
+          "op": "ldrb",
+          "args": "w8, [x22, #0x21a]"
+        },
+        {
+          "address": "0x2e0b56c",
+          "op": "ldr",
+          "args": "x21, [x21, #0x2f8]"
+        },
+        {
+          "address": "0x2e0b570",
+          "op": "mov",
+          "args": "w19, w0"
+        },
+        {
+          "address": "0x2e0b574",
+          "op": "tbnz",
+          "args": "w8, #0, #0x2e0b58c"
+        },
+        {
+          "address": "0x2e0b578",
+          "op": "adrp",
+          "args": "x0, #0x5c24000"
+        },
+        {
+          "address": "0x2e0b57c",
+          "op": "ldr",
+          "args": "x0, [x0, #0x2f8]"
+        },
+        {
+          "address": "0x2e0b580",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x2e0b584",
+          "op": "mov",
+          "args": "w8, #1"
+        },
+        {
+          "address": "0x2e0b588",
+          "op": "strb",
+          "args": "w8, [x22, #0x21a]"
+        },
+        {
+          "address": "0x2e0b58c",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x2e0b590",
+          "op": "cmp",
+          "args": "w20, #1"
+        },
+        {
+          "address": "0x2e0b594",
+          "op": "str",
+          "args": "xzr, [sp, #0x28]"
+        },
+        {
+          "address": "0x2e0b598",
+          "op": "csinc",
+          "args": "w20, w20, wzr, gt"
+        },
+        {
+          "address": "0x2e0b59c",
+          "op": "strb",
+          "args": "wzr, [sp, #0x1c]"
+        },
+        {
+          "address": "0x2e0b5a0",
+          "op": "ldr",
+          "args": "w8, [x0, #0xe4]"
+        },
+        {
+          "address": "0x2e0b5a4",
+          "op": "cbnz",
+          "args": "w8, #0x2e0b5b0"
+        },
+        {
+          "address": "0x2e0b5a8",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x2e0b5ac",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x2e0b5b0",
+          "op": "ldr",
+          "args": "x8, [x0, #0xb8]"
+        },
+        {
+          "address": "0x2e0b5b4",
+          "op": "add",
+          "args": "x9, sp, #0x1c"
+        },
+        {
+          "address": "0x2e0b5b8",
+          "op": "strb",
+          "args": "wzr, [sp, #0x1c]"
+        },
+        {
+          "address": "0x2e0b5bc",
+          "op": "stp",
+          "args": "xzr, x9, [sp]"
+        },
+        {
+          "address": "0x2e0b5c0",
+          "op": "ldr",
+          "args": "x0, [x8, #0x18]"
+        },
+        {
+          "address": "0x2e0b5c4",
+          "op": "add",
+          "args": "x8, sp, #0x28"
+        },
+        {
+          "address": "0x2e0b5c8",
+          "op": "str",
+          "args": "x8, [sp, #0x10]"
+        },
+        {
+          "address": "0x2e0b5cc",
+          "op": "str",
+          "args": "x0, [sp, #0x28]"
+        },
+        {
+          "address": "0x2e0b5d0",
+          "op": "add",
+          "args": "x1, sp, #0x1c"
+        },
+        {
+          "address": "0x2e0b5d4",
+          "op": "mov",
+          "args": "x2, xzr"
+        },
+        {
+          "address": "0x2e0b5d8",
+          "op": "bl",
+          "args": "#0x4f96c7c"
+        },
+        {
+          "address": "0x2e0b5dc",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x2e0b5e0",
+          "op": "ldr",
+          "args": "w8, [x0, #0xe4]"
+        },
+        {
+          "address": "0x2e0b5e4",
+          "op": "cbnz",
+          "args": "w8, #0x2e0b5f0"
+        },
+        {
+          "address": "0x2e0b5e8",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x2e0b5ec",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x2e0b5f0",
+          "op": "ldr",
+          "args": "x8, [x0, #0xb8]"
+        },
+        {
+          "address": "0x2e0b5f4",
+          "op": "ldr",
+          "args": "x0, [x8, #0x18]"
+        },
+        {
+          "address": "0x2e0b5f8",
+          "op": "cbz",
+          "args": "x0, #0x2e0b658"
+        },
+        {
+          "address": "0x2e0b5fc",
+          "op": "ldr",
+          "args": "x8, [x0]"
+        },
+        {
+          "address": "0x2e0b600",
+          "op": "ldp",
+          "args": "x9, x3, [x8, #0x198]"
+        },
+        {
+          "address": "0x2e0b604",
+          "op": "mov",
+          "args": "w1, w19"
+        },
+        {
+          "address": "0x2e0b608",
+          "op": "mov",
+          "args": "w2, w20"
+        },
+        {
+          "address": "0x2e0b60c",
+          "op": "blr",
+          "args": "x9"
+        },
+        {
+          "address": "0x2e0b610",
+          "op": "mov",
+          "args": "w20, w0"
+        },
+        {
+          "address": "0x2e0b614",
+          "op": "mov",
+          "args": "x19, xzr"
+        },
+        {
+          "address": "0x2e0b618",
+          "op": "add",
+          "args": "x8, sp, #0x1c"
+        },
+        {
+          "address": "0x2e0b61c",
+          "op": "ldrb",
+          "args": "w8, [x8]"
+        },
+        {
+          "address": "0x2e0b620",
+          "op": "cbz",
+          "args": "w8, #0x2e0b634"
+        },
+        {
+          "address": "0x2e0b624",
+          "op": "ldr",
+          "args": "x8, [sp, #0x10]"
+        },
+        {
+          "address": "0x2e0b628",
+          "op": "mov",
+          "args": "x1, xzr"
+        },
+        {
+          "address": "0x2e0b62c",
+          "op": "ldr",
+          "args": "x0, [x8]"
+        },
+        {
+          "address": "0x2e0b630",
+          "op": "bl",
+          "args": "#0x4f99cbc"
+        },
+        {
+          "address": "0x2e0b634",
+          "op": "cbnz",
+          "args": "x19, #0x2e0b650"
+        },
+        {
+          "address": "0x2e0b638",
+          "op": "mov",
+          "args": "w0, w20"
+        },
+        {
+          "address": "0x2e0b63c",
+          "op": "ldp",
+          "args": "x20, x19, [sp, #0x40]"
+        },
+        {
+          "address": "0x2e0b640",
+          "op": "ldp",
+          "args": "x22, x21, [sp, #0x30]"
+        },
+        {
+          "address": "0x2e0b644",
+          "op": "ldr",
+          "args": "x30, [sp, #0x20]"
+        },
+        {
+          "address": "0x2e0b648",
+          "op": "add",
+          "args": "sp, sp, #0x50"
+        },
+        {
+          "address": "0x2e0b64c",
+          "op": "ret",
+          "args": ""
+        },
+        {
+          "address": "0x2e0b650",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2e0b654",
+          "op": "bl",
+          "args": "#0x2237160"
+        },
+        {
+          "address": "0x2e0b658",
+          "op": "bl",
+          "args": "#0x2237168"
+        },
+        {
+          "address": "0x2e0b65c",
+          "op": "b",
+          "args": "#0x2e0b664"
+        },
+        {
+          "address": "0x2e0b660",
+          "op": "b",
+          "args": "#0x2e0b664"
+        },
+        {
+          "address": "0x2e0b664",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x2e0b668",
+          "op": "cmp",
+          "args": "w1, #1"
+        },
+        {
+          "address": "0x2e0b66c",
+          "op": "b.ne",
+          "args": "#0x2e0b694"
+        },
+        {
+          "address": "0x2e0b670",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2e0b674",
+          "op": "bl",
+          "args": "#0x59c6b70"
+        },
+        {
+          "address": "0x2e0b678",
+          "op": "ldr",
+          "args": "x19, [x0]"
+        },
+        {
+          "address": "0x2e0b67c",
+          "op": "str",
+          "args": "x19, [sp]"
+        },
+        {
+          "address": "0x2e0b680",
+          "op": "bl",
+          "args": "#0x59c6b80"
+        },
+        {
+          "address": "0x2e0b684",
+          "op": "ldr",
+          "args": "x8, [sp, #8]"
+        },
+        {
+          "address": "0x2e0b688",
+          "op": "mov",
+          "args": "w20, wzr"
+        },
+        {
+          "address": "0x2e0b68c",
+          "op": "b",
+          "args": "#0x2e0b61c"
+        },
+        {
+          "address": "0x2e0b690",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x2e0b694",
+          "op": "mov",
+          "args": "x0, sp"
+        },
+        {
+          "address": "0x2e0b698",
+          "op": "bl",
+          "args": "#0x202037c"
+        },
+        {
+          "address": "0x2e0b69c",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x2e0b6a0",
+          "op": "bl",
+          "args": "#0x23258ec"
+        },
+        {
+          "address": "0x2e0b6a4",
+          "op": "bl",
+          "args": "#0x201eb20"
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x4f96c7c",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Threading/Monitor.cs",
+              "declaration": "public static void Enter(object obj, ref bool lockTaken)",
+              "length": 28
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x4f99cbc",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Threading/Monitor.cs",
+              "declaration": "public static void Exit(object obj)",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x2237160",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x59c6b70",
+          "candidates": []
+        },
+        {
+          "address": "0x59c6b80",
+          "candidates": []
+        },
+        {
+          "address": "0x202037c",
+          "candidates": []
+        },
+        {
+          "address": "0x23258ec",
+          "candidates": []
+        },
+        {
+          "address": "0x201eb20",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x4f352fc",
+      "virtualAddress": "0x4f392fc",
+      "sha256": "75ce965a5267975e60f3c071f7f4ce53319b35fd129c81470841c2dd01b41860",
+      "declarations": [
+        {
+          "file": "mscorlib/System/Math.cs",
+          "declaration": "public static int Max(int val1, int val2)",
+          "length": 12
+        }
+      ],
+      "instructions": [
+        {
+          "address": "0x4f392fc",
+          "op": "cmp",
+          "args": "w0, w1"
+        },
+        {
+          "address": "0x4f39300",
+          "op": "csel",
+          "args": "w0, w0, w1, gt"
+        },
+        {
+          "address": "0x4f39304",
+          "op": "ret",
+          "args": ""
+        }
+      ],
+      "calls": []
+    },
+    {
+      "fileOffset": "0x4f35618",
+      "virtualAddress": "0x4f39618",
+      "sha256": "1722df63e7bc615607148c692bc8a41b8d0c35c88a62f097b96900cfc1c2fa08",
+      "declarations": [
+        {
+          "file": "mscorlib/System/Math.cs",
+          "declaration": "public static double Round(double value, int digits, MidpointRounding mode)",
+          "length": 684
+        }
+      ],
+      "instructions": [
+        {
+          "address": "0x4f39618",
+          "op": "sub",
+          "args": "sp, sp, #0x50"
+        },
+        {
+          "address": "0x4f3961c",
+          "op": "stp",
+          "args": "d0, d10, [sp, #8]"
+        },
+        {
+          "address": "0x4f39620",
+          "op": "stp",
+          "args": "d9, d8, [sp, #0x20]"
+        },
+        {
+          "address": "0x4f39624",
+          "op": "stp",
+          "args": "x30, x21, [sp, #0x30]"
+        },
+        {
+          "address": "0x4f39628",
+          "op": "stp",
+          "args": "x20, x19, [sp, #0x40]"
+        },
+        {
+          "address": "0x4f3962c",
+          "op": "fmov",
+          "args": "d8, d0"
+        },
+        {
+          "address": "0x4f39630",
+          "op": "adrp",
+          "args": "x21, #0x60cc000"
+        },
+        {
+          "address": "0x4f39634",
+          "op": "mov",
+          "args": "w19, w1"
+        },
+        {
+          "address": "0x4f39638",
+          "op": "ldrb",
+          "args": "w8, [x21, #0x15e]"
+        },
+        {
+          "address": "0x4f3963c",
+          "op": "mov",
+          "args": "w20, w0"
+        },
+        {
+          "address": "0x4f39640",
+          "op": "tbnz",
+          "args": "w8, #0, #0x4f39658"
+        },
+        {
+          "address": "0x4f39644",
+          "op": "adrp",
+          "args": "x0, #0x5c23000"
+        },
+        {
+          "address": "0x4f39648",
+          "op": "ldr",
+          "args": "x0, [x0, #0x68]"
+        },
+        {
+          "address": "0x4f3964c",
+          "op": "bl",
+          "args": "#0x2236f1c"
+        },
+        {
+          "address": "0x4f39650",
+          "op": "mov",
+          "args": "w8, #1"
+        },
+        {
+          "address": "0x4f39654",
+          "op": "strb",
+          "args": "w8, [x21, #0x15e]"
+        },
+        {
+          "address": "0x4f39658",
+          "op": "cmp",
+          "args": "w20, #0x10"
+        },
+        {
+          "address": "0x4f3965c",
+          "op": "b.hs",
+          "args": "#0x4f397c4"
+        },
+        {
+          "address": "0x4f39660",
+          "op": "cmp",
+          "args": "w19, #2"
+        },
+        {
+          "address": "0x4f39664",
+          "op": "b.hs",
+          "args": "#0x4f39820"
+        },
+        {
+          "address": "0x4f39668",
+          "op": "adrp",
+          "args": "x21, #0x5c23000"
+        },
+        {
+          "address": "0x4f3966c",
+          "op": "ldr",
+          "args": "x21, [x21, #0x68]"
+        },
+        {
+          "address": "0x4f39670",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x4f39674",
+          "op": "ldr",
+          "args": "w8, [x0, #0xe4]"
+        },
+        {
+          "address": "0x4f39678",
+          "op": "cbnz",
+          "args": "w8, #0x4f39684"
+        },
+        {
+          "address": "0x4f3967c",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x4f39680",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x4f39684",
+          "op": "fabs",
+          "args": "d0, d8"
+        },
+        {
+          "address": "0x4f39688",
+          "op": "ldr",
+          "args": "x8, [x0, #0xb8]"
+        },
+        {
+          "address": "0x4f3968c",
+          "op": "ldr",
+          "args": "d1, [x8]"
+        },
+        {
+          "address": "0x4f39690",
+          "op": "fcmp",
+          "args": "d0, d1"
+        },
+        {
+          "address": "0x4f39694",
+          "op": "b.pl",
+          "args": "#0x4f397a8"
+        },
+        {
+          "address": "0x4f39698",
+          "op": "ldr",
+          "args": "w9, [x0, #0xe4]"
+        },
+        {
+          "address": "0x4f3969c",
+          "op": "cbnz",
+          "args": "w9, #0x4f396ac"
+        },
+        {
+          "address": "0x4f396a0",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x4f396a4",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x4f396a8",
+          "op": "ldr",
+          "args": "x8, [x0, #0xb8]"
+        },
+        {
+          "address": "0x4f396ac",
+          "op": "ldr",
+          "args": "x8, [x8, #8]"
+        },
+        {
+          "address": "0x4f396b0",
+          "op": "cbz",
+          "args": "x8, #0x4f398bc"
+        },
+        {
+          "address": "0x4f396b4",
+          "op": "ldr",
+          "args": "w9, [x8, #0x18]"
+        },
+        {
+          "address": "0x4f396b8",
+          "op": "cmp",
+          "args": "w9, w20"
+        },
+        {
+          "address": "0x4f396bc",
+          "op": "b.ls",
+          "args": "#0x4f398c0"
+        },
+        {
+          "address": "0x4f396c0",
+          "op": "add",
+          "args": "x8, x8, w20, uxtw #3"
+        },
+        {
+          "address": "0x4f396c4",
+          "op": "cmp",
+          "args": "w19, #1"
+        },
+        {
+          "address": "0x4f396c8",
+          "op": "ldr",
+          "args": "d9, [x8, #0x20]"
+        },
+        {
+          "address": "0x4f396cc",
+          "op": "ldr",
+          "args": "w8, [x0, #0xe4]"
+        },
+        {
+          "address": "0x4f396d0",
+          "op": "fmul",
+          "args": "d8, d9, d8"
+        },
+        {
+          "address": "0x4f396d4",
+          "op": "str",
+          "args": "d8, [sp, #8]"
+        },
+        {
+          "address": "0x4f396d8",
+          "op": "b.ne",
+          "args": "#0x4f3972c"
+        },
+        {
+          "address": "0x4f396dc",
+          "op": "cbnz",
+          "args": "w8, #0x4f396e4"
+        },
+        {
+          "address": "0x4f396e0",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x4f396e4",
+          "op": "fmov",
+          "args": "d0, d8"
+        },
+        {
+          "address": "0x4f396e8",
+          "op": "add",
+          "args": "x0, sp, #8"
+        },
+        {
+          "address": "0x4f396ec",
+          "op": "bl",
+          "args": "#0x226f6c4"
+        },
+        {
+          "address": "0x4f396f0",
+          "op": "fmov",
+          "args": "d8, d0"
+        },
+        {
+          "address": "0x4f396f4",
+          "op": "fabs",
+          "args": "d0, d0"
+        },
+        {
+          "address": "0x4f396f8",
+          "op": "ldr",
+          "args": "d10, [sp, #8]"
+        },
+        {
+          "address": "0x4f396fc",
+          "op": "fmov",
+          "args": "d1, #0.50000000"
+        },
+        {
+          "address": "0x4f39700",
+          "op": "fcmp",
+          "args": "d0, d1"
+        },
+        {
+          "address": "0x4f39704",
+          "op": "b.lt",
+          "args": "#0x4f397a0"
+        },
+        {
+          "address": "0x4f39708",
+          "op": "ldr",
+          "args": "x0, [x21]"
+        },
+        {
+          "address": "0x4f3970c",
+          "op": "ldr",
+          "args": "w8, [x0, #0xe4]"
+        },
+        {
+          "address": "0x4f39710",
+          "op": "cbnz",
+          "args": "w8, #0x4f39718"
+        },
+        {
+          "address": "0x4f39714",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x4f39718",
+          "op": "fmov",
+          "args": "d0, d8"
+        },
+        {
+          "address": "0x4f3971c",
+          "op": "bl",
+          "args": "#0x4f39930"
+        },
+        {
+          "address": "0x4f39720",
+          "op": "scvtf",
+          "args": "d0, w0"
+        },
+        {
+          "address": "0x4f39724",
+          "op": "fadd",
+          "args": "d10, d10, d0"
+        },
+        {
+          "address": "0x4f39728",
+          "op": "b",
+          "args": "#0x4f3979c"
+        },
+        {
+          "address": "0x4f3972c",
+          "op": "cbnz",
+          "args": "w8, #0x4f39734"
+        },
+        {
+          "address": "0x4f39730",
+          "op": "bl",
+          "args": "#0x223703c"
+        },
+        {
+          "address": "0x4f39734",
+          "op": "fmov",
+          "args": "d0, d8"
+        },
+        {
+          "address": "0x4f39738",
+          "op": "add",
+          "args": "x0, sp, #0x18"
+        },
+        {
+          "address": "0x4f3973c",
+          "op": "bl",
+          "args": "#0x59c6be0"
+        },
+        {
+          "address": "0x4f39740",
+          "op": "fcmp",
+          "args": "d8, #0.0"
+        },
+        {
+          "address": "0x4f39744",
+          "op": "b.ge",
+          "args": "#0x4f39760"
+        },
+        {
+          "address": "0x4f39748",
+          "op": "fmov",
+          "args": "d1, #-0.50000000"
+        },
+        {
+          "address": "0x4f3974c",
+          "op": "fcmp",
+          "args": "d0, d1"
+        },
+        {
+          "address": "0x4f39750",
+          "op": "b.ne",
+          "args": "#0x4f39788"
+        },
+        {
+          "address": "0x4f39754",
+          "op": "ldr",
+          "args": "d0, [sp, #0x18]"
+        },
+        {
+          "address": "0x4f39758",
+          "op": "fmov",
+          "args": "d1, #-1.00000000"
+        },
+        {
+          "address": "0x4f3975c",
+          "op": "b",
+          "args": "#0x4f39774"
+        },
+        {
+          "address": "0x4f39760",
+          "op": "fmov",
+          "args": "d1, #0.50000000"
+        },
+        {
+          "address": "0x4f39764",
+          "op": "fcmp",
+          "args": "d0, d1"
+        },
+        {
+          "address": "0x4f39768",
+          "op": "b.ne",
+          "args": "#0x4f39794"
+        },
+        {
+          "address": "0x4f3976c",
+          "op": "fmov",
+          "args": "d1, #1.00000000"
+        },
+        {
+          "address": "0x4f39770",
+          "op": "ldr",
+          "args": "d0, [sp, #0x18]"
+        },
+        {
+          "address": "0x4f39774",
+          "op": "fcvtzs",
+          "args": "x8, d0"
+        },
+        {
+          "address": "0x4f39778",
+          "op": "fadd",
+          "args": "d1, d0, d1"
+        },
+        {
+          "address": "0x4f3977c",
+          "op": "tst",
+          "args": "x8, #1"
+        },
+        {
+          "address": "0x4f39780",
+          "op": "fcsel",
+          "args": "d10, d0, d1, eq"
+        },
+        {
+          "address": "0x4f39784",
+          "op": "b",
+          "args": "#0x4f3979c"
+        },
+        {
+          "address": "0x4f39788",
+          "op": "fadd",
+          "args": "d0, d8, d1"
+        },
+        {
+          "address": "0x4f3978c",
+          "op": "frintp",
+          "args": "d10, d0"
+        },
+        {
+          "address": "0x4f39790",
+          "op": "b",
+          "args": "#0x4f3979c"
+        },
+        {
+          "address": "0x4f39794",
+          "op": "fadd",
+          "args": "d0, d8, d1"
+        },
+        {
+          "address": "0x4f39798",
+          "op": "frintm",
+          "args": "d10, d0"
+        },
+        {
+          "address": "0x4f3979c",
+          "op": "str",
+          "args": "d10, [sp, #8]"
+        },
+        {
+          "address": "0x4f397a0",
+          "op": "fdiv",
+          "args": "d8, d10, d9"
+        },
+        {
+          "address": "0x4f397a4",
+          "op": "str",
+          "args": "d8, [sp, #8]"
+        },
+        {
+          "address": "0x4f397a8",
+          "op": "fmov",
+          "args": "d0, d8"
+        },
+        {
+          "address": "0x4f397ac",
+          "op": "ldp",
+          "args": "x20, x19, [sp, #0x40]"
+        },
+        {
+          "address": "0x4f397b0",
+          "op": "ldp",
+          "args": "x30, x21, [sp, #0x30]"
+        },
+        {
+          "address": "0x4f397b4",
+          "op": "ldr",
+          "args": "d10, [sp, #0x10]"
+        },
+        {
+          "address": "0x4f397b8",
+          "op": "ldp",
+          "args": "d9, d8, [sp, #0x20]"
+        },
+        {
+          "address": "0x4f397bc",
+          "op": "add",
+          "args": "sp, sp, #0x50"
+        },
+        {
+          "address": "0x4f397c0",
+          "op": "ret",
+          "args": ""
+        },
+        {
+          "address": "0x4f397c4",
+          "op": "adrp",
+          "args": "x0, #0x5c89000"
+        },
+        {
+          "address": "0x4f397c8",
+          "op": "ldr",
+          "args": "x0, [x0, #0xff8]"
+        },
+        {
+          "address": "0x4f397cc",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f397d0",
+          "op": "bl",
+          "args": "#0x2237158"
+        },
+        {
+          "address": "0x4f397d4",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x4f397d8",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f397dc",
+          "op": "ldr",
+          "args": "x0, [x0, #0xd8]"
+        },
+        {
+          "address": "0x4f397e0",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f397e4",
+          "op": "mov",
+          "args": "x20, x0"
+        },
+        {
+          "address": "0x4f397e8",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f397ec",
+          "op": "ldr",
+          "args": "x0, [x0, #0xe0]"
+        },
+        {
+          "address": "0x4f397f0",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f397f4",
+          "op": "mov",
+          "args": "x2, x0"
+        },
+        {
+          "address": "0x4f397f8",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x4f397fc",
+          "op": "mov",
+          "args": "x1, x20"
+        },
+        {
+          "address": "0x4f39800",
+          "op": "mov",
+          "args": "x3, xzr"
+        },
+        {
+          "address": "0x4f39804",
+          "op": "bl",
+          "args": "#0x4ec3b98"
+        },
+        {
+          "address": "0x4f39808",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f3980c",
+          "op": "ldr",
+          "args": "x0, [x0, #0xe8]"
+        },
+        {
+          "address": "0x4f39810",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f39814",
+          "op": "mov",
+          "args": "x1, x0"
+        },
+        {
+          "address": "0x4f39818",
+          "op": "mov",
+          "args": "x0, x19"
+        },
+        {
+          "address": "0x4f3981c",
+          "op": "bl",
+          "args": "#0x223702c"
+        },
+        {
+          "address": "0x4f39820",
+          "op": "str",
+          "args": "w19, [sp, #0x18]"
+        },
+        {
+          "address": "0x4f39824",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f39828",
+          "op": "ldr",
+          "args": "x0, [x0, #0xf0]"
+        },
+        {
+          "address": "0x4f3982c",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f39830",
+          "op": "add",
+          "args": "x1, sp, #0x18"
+        },
+        {
+          "address": "0x4f39834",
+          "op": "bl",
+          "args": "#0x2237044"
+        },
+        {
+          "address": "0x4f39838",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x4f3983c",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f39840",
+          "op": "ldr",
+          "args": "x0, [x0, #0xf8]"
+        },
+        {
+          "address": "0x4f39844",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f39848",
+          "op": "mov",
+          "args": "x20, x0"
+        },
+        {
+          "address": "0x4f3984c",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f39850",
+          "op": "ldr",
+          "args": "x0, [x0, #0x100]"
+        },
+        {
+          "address": "0x4f39854",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f39858",
+          "op": "mov",
+          "args": "x2, x0"
+        },
+        {
+          "address": "0x4f3985c",
+          "op": "mov",
+          "args": "x0, x20"
+        },
+        {
+          "address": "0x4f39860",
+          "op": "mov",
+          "args": "x1, x19"
+        },
+        {
+          "address": "0x4f39864",
+          "op": "mov",
+          "args": "x3, xzr"
+        },
+        {
+          "address": "0x4f39868",
+          "op": "bl",
+          "args": "#0x4ddfe40"
+        },
+        {
+          "address": "0x4f3986c",
+          "op": "mov",
+          "args": "x19, x0"
+        },
+        {
+          "address": "0x4f39870",
+          "op": "adrp",
+          "args": "x0, #0x5c22000"
+        },
+        {
+          "address": "0x4f39874",
+          "op": "ldr",
+          "args": "x0, [x0, #0x868]"
+        },
+        {
+          "address": "0x4f39878",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f3987c",
+          "op": "bl",
+          "args": "#0x2237158"
+        },
+        {
+          "address": "0x4f39880",
+          "op": "mov",
+          "args": "x20, x0"
+        },
+        {
+          "address": "0x4f39884",
+          "op": "adrp",
+          "args": "x0, #0x5cda000"
+        },
+        {
+          "address": "0x4f39888",
+          "op": "ldr",
+          "args": "x0, [x0, #0x490]"
+        },
+        {
+          "address": "0x4f3988c",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f39890",
+          "op": "mov",
+          "args": "x2, x0"
+        },
+        {
+          "address": "0x4f39894",
+          "op": "mov",
+          "args": "x0, x20"
+        },
+        {
+          "address": "0x4f39898",
+          "op": "mov",
+          "args": "x1, x19"
+        },
+        {
+          "address": "0x4f3989c",
+          "op": "mov",
+          "args": "x3, xzr"
+        },
+        {
+          "address": "0x4f398a0",
+          "op": "bl",
+          "args": "#0x4ec04f8"
+        },
+        {
+          "address": "0x4f398a4",
+          "op": "adrp",
+          "args": "x0, #0x5cdb000"
+        },
+        {
+          "address": "0x4f398a8",
+          "op": "ldr",
+          "args": "x0, [x0, #0xe8]"
+        },
+        {
+          "address": "0x4f398ac",
+          "op": "bl",
+          "args": "#0x2236f30"
+        },
+        {
+          "address": "0x4f398b0",
+          "op": "mov",
+          "args": "x1, x0"
+        },
+        {
+          "address": "0x4f398b4",
+          "op": "mov",
+          "args": "x0, x20"
+        },
+        {
+          "address": "0x4f398b8",
+          "op": "bl",
+          "args": "#0x223702c"
+        },
+        {
+          "address": "0x4f398bc",
+          "op": "bl",
+          "args": "#0x2237168"
+        },
+        {
+          "address": "0x4f398c0",
+          "op": "bl",
+          "args": "#0x2237170"
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x226f6c4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x4f39930",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Math.cs",
+              "declaration": "public static int Sign(double value)",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x59c6be0",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x4ec3b98",
+          "candidates": [
+            {
+              "file": "mscorlib/System/ArgumentOutOfRangeException.cs",
+              "declaration": "public ArgumentOutOfRangeException(string paramName, string message)",
+              "length": 56
+            }
+          ]
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x223702c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x2237044",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x4ddfe40",
+          "candidates": [
+            {
+              "file": "mscorlib/SR.cs",
+              "declaration": "internal static string Format(string resourceFormat, object p1, object p2)",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x4ec04f8",
+          "candidates": [
+            {
+              "file": "mscorlib/System/ArgumentException.cs",
+              "declaration": "public ArgumentException(string message, string paramName)",
+              "length": 52
+            }
+          ]
+        },
+        {
+          "address": "0x2236f30",
+          "candidates": []
+        },
+        {
+          "address": "0x223702c",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x2237170",
+          "candidates": []
+        }
+      ]
+    }
+  ],
+  "lifecycleCallSummaries": [
+    {
+      "fileOffset": "0x2ac8ea4",
+      "virtualAddress": "0x2accea4",
+      "sha256": "bef7c7a3b272354ec967aa00b1affe36fe163613fc0f1cb92e06ad2f8a54a8b3",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimCrypto.cs",
+          "declaration": "public void SetupCryptoLifecycle()",
+          "length": 2836
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x498f9a8",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4939298",
+          "candidates": []
+        },
+        {
+          "address": "0x2acdd94",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimCrypto.cs",
+              "declaration": "private List<Int32> GetPeakAgeList()",
+              "length": 548
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x4939e4c",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x477e9d8",
+          "candidates": []
+        },
+        {
+          "address": "0x3dd7654",
+          "candidates": []
+        },
+        {
+          "address": "0x3db9bdc",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x477eb18",
+          "candidates": []
+        },
+        {
+          "address": "0x3dc539c",
+          "candidates": [
+            {
+              "file": "System.Core/System/Linq/Enumerable.cs",
+              "declaration": "public static int Max(IEnumerable<TSource> source, Func<TSource, Int32> selector)",
+              "length": 72
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2adcefc",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "private static int ActualHeroAge()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x3db9f74",
+          "candidates": []
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x47806c8",
+          "candidates": []
+        },
+        {
+          "address": "0x3dbb350",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4f76cb4",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Object.cs",
+              "declaration": "public Object()",
+              "length": 4
+            }
+          ]
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ac99b8",
+      "virtualAddress": "0x2acd9b8",
+      "sha256": "0b5d3acd412cb4ba3fe4d00580c5e633598eb87c4517373cf7c8459d90a14f37",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimCrypto.cs",
+          "declaration": "private List<Double> GetMonthlyValueList(int index)",
+          "length": 716
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4920f9c",
+          "candidates": []
+        },
+        {
+          "address": "0x49214d8",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x4f39618",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Math.cs",
+              "declaration": "public static double Round(double value, int digits, MidpointRounding mode)",
+              "length": 684
+            }
+          ]
+        },
+        {
+          "address": "0x49217d4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ac9ff8",
+      "virtualAddress": "0x2acdff8",
+      "sha256": "4ba96a019ddfab42edee7732718081147567a91760fb25ddba4daebd88c98218",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimCrypto.cs",
+          "declaration": "public double GetCurrentPrice()",
+          "length": 120
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2adcefc",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "private static int ActualHeroAge()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ac9d94",
+      "virtualAddress": "0x2acdd94",
+      "sha256": "25670d4476327f9eada2e2a2d303caacf30eba418651ba2b665e4fb8b3c7f64b",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimCrypto.cs",
+          "declaration": "private List<Int32> GetPeakAgeList()",
+          "length": 548
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x4939298",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x49397d4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x4f392fc",
+          "candidates": [
+            {
+              "file": "mscorlib/System/Math.cs",
+              "declaration": "public static int Max(int val1, int val2)",
+              "length": 12
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x4939acc",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ad0f00",
+      "virtualAddress": "0x2ad4f00",
+      "sha256": "d8c78b35eb960006817e7f8adf8d0b148c1763b2a9fb1ce211a794a26676c80e",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "public void SetupStockLifecycle(SimInvestmentMarket market = null, bool isPennyStock = false)",
+          "length": 2604
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x327edd4",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "get",
+              "length": 120
+            },
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "public SimInvestmentMarket get_InvestmentMarket()",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2ad1708",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "get",
+              "length": 120
+            },
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "public List<SimMarketEvent> get_MarketEventsList()",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2adcefc",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "private static int ActualHeroAge()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adfb6c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStockEvent.cs",
+              "declaration": "public SimStockEvent(double price)",
+              "length": 176
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x327edd4",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "get",
+              "length": 120
+            },
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "public SimInvestmentMarket get_InvestmentMarket()",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2acf67c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "get",
+              "length": 120
+            },
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "public List<SimStockSector> get_SectorList()",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x47806c8",
+          "candidates": []
+        },
+        {
+          "address": "0x3dd1e64",
+          "candidates": []
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2adf570",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MinPrice()",
+              "length": 32
+            }
+          ]
+        },
+        {
+          "address": "0x2adf570",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MinPrice()",
+              "length": 32
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adfb6c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStockEvent.cs",
+              "declaration": "public SimStockEvent(double price)",
+              "length": 176
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2adf570",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MinPrice()",
+              "length": 32
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adfb6c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStockEvent.cs",
+              "declaration": "public SimStockEvent(double price)",
+              "length": 176
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x2adf590",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public bool WillGoBankrupt()",
+              "length": 168
+            }
+          ]
+        },
+        {
+          "address": "0x2adf638",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public List<Double> GetMonthlyValueList(int index)",
+              "length": 680
+            }
+          ]
+        },
+        {
+          "address": "0x44ab6a4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adfb6c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStockEvent.cs",
+              "declaration": "public SimStockEvent(double price)",
+              "length": 176
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adfb6c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStockEvent.cs",
+              "declaration": "public SimStockEvent(double price)",
+              "length": 176
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ad48a8",
+      "virtualAddress": "0x2ad88a8",
+      "sha256": "3495514381eca21a51e8f167d3f1cf23be4226716c2eea9064d0ac8f4ba7fc89",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "public void SetNextLiveValue()",
+          "length": 700
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2adcefc",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "private static int ActualHeroAge()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x2adcefc",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "private static int ActualHeroAge()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x2adf570",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MinPrice()",
+              "length": 32
+            }
+          ]
+        },
+        {
+          "address": "0x2adf8e0",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MaxPrice()",
+              "length": 36
+            }
+          ]
+        },
+        {
+          "address": "0x2adf570",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MinPrice()",
+              "length": 32
+            }
+          ]
+        },
+        {
+          "address": "0x2adf8e0",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double MaxPrice()",
+              "length": 36
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2ad4070",
+      "virtualAddress": "0x2ad8070",
+      "sha256": "ed4e185d26d898999628e0e0b7b1fa6d4e68d7f4e3f62827e04f175c58261d03",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "public void HandleBankruptcy()",
+          "length": 1776
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x327edd4",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "get",
+              "length": 120
+            },
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "public SimInvestmentMarket get_InvestmentMarket()",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2acf67c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "get",
+              "length": 120
+            },
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "public List<SimStockSector> get_SectorList()",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x47806c8",
+          "candidates": []
+        },
+        {
+          "address": "0x3dd1e64",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x274cf48",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/DataHub.cs",
+              "declaration": "public static ArrayList GetAllUniversalStocks()",
+              "length": 184
+            }
+          ]
+        },
+        {
+          "address": "0x3db33b4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x498f9a8",
+          "candidates": []
+        },
+        {
+          "address": "0x4990d18",
+          "candidates": []
+        },
+        {
+          "address": "0x46069f8",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adfb00",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public <>c__DisplayClass55_0()",
+              "length": 8
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x47806c8",
+          "candidates": []
+        },
+        {
+          "address": "0x3dbb350",
+          "candidates": []
+        },
+        {
+          "address": "0x2adeb44",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "get",
+              "length": 92
+            },
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public DataFinancialUniversalStock get_StockData()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x46069f4",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        },
+        {
+          "address": "0x498fee4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2adf2b8",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public SimStock(DataFinancialUniversalStock stockData, int overrideLifecyclePattern)",
+              "length": 368
+            }
+          ]
+        },
+        {
+          "address": "0x2adcefc",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimInvestmentMarket.cs",
+              "declaration": "private static int ActualHeroAge()",
+              "length": 92
+            }
+          ]
+        },
+        {
+          "address": "0x2add918",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public double GetPriceForStockAge(int age)",
+              "length": 128
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x2ad48f8",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public SimStock(DataFinancialUniversalStock stockData)",
+              "length": 432
+            }
+          ]
+        },
+        {
+          "address": "0x46069f4",
+          "candidates": []
+        },
+        {
+          "address": "0x327d4e8",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "get",
+              "length": 100
+            },
+            {
+              "file": "Assembly-CSharp/Life.cs",
+              "declaration": "public SimPortfolio get_Portfolio()",
+              "length": 100
+            }
+          ]
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x47806c8",
+          "candidates": []
+        },
+        {
+          "address": "0x3dc1f68",
+          "candidates": []
+        },
+        {
+          "address": "0x2237158",
+          "candidates": []
+        },
+        {
+          "address": "0x26a3b00",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/ScenarioFinancialAssetBankrupt.cs",
+              "declaration": "public ScenarioFinancialAssetBankrupt(SimInvestment investment, SimStockSector sector = null)",
+              "length": 48
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x2ad4f00",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/SimStock.cs",
+              "declaration": "public void SetupStockLifecycle(SimInvestmentMarket market = null, bool isPennyStock = false)",
+              "length": 2604
+            }
+          ]
+        },
+        {
+          "address": "0x49901a4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x2237168",
+          "candidates": []
+        },
+        {
+          "address": "0x59c6b70",
+          "candidates": []
+        },
+        {
+          "address": "0x59c6b80",
+          "candidates": []
+        },
+        {
+          "address": "0x46069f4",
+          "candidates": []
+        },
+        {
+          "address": "0x2237160",
+          "candidates": []
+        },
+        {
+          "address": "0x2022d54",
+          "candidates": []
+        },
+        {
+          "address": "0x23258ec",
+          "candidates": []
+        },
+        {
+          "address": "0x201eb20",
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "fileOffset": "0x2adb590",
+      "virtualAddress": "0x2adf590",
+      "sha256": "9dd5473996dd3a2b214b88328f437e577608a6601231e5db7383f50fe7bf5bf1",
+      "declarations": [
+        {
+          "file": "Assembly-CSharp/SimStock.cs",
+          "declaration": "public bool WillGoBankrupt()",
+          "length": 168
+        }
+      ],
+      "calls": [
+        {
+          "address": "0x2236f1c",
+          "candidates": []
+        },
+        {
+          "address": "0x223703c",
+          "candidates": []
+        },
+        {
+          "address": "0x2e0b54c",
+          "candidates": [
+            {
+              "file": "Assembly-CSharp/GameReference.cs",
+              "declaration": "public static int GetRandomNumber(int min, int max)",
+              "length": 348
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
