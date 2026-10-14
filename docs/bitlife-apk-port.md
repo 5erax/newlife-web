@@ -6,6 +6,8 @@ Theo dõi phạm vi đầy đủ tại [issue #111](https://github.com/5erax/new
 
 ### Đánh bạc và đầu tư 1.6
 
+Đã nghiệm thu các lát cắt #119/#120 sau PR #121, hai CI đầy đủ và sáu luồng hosted PASS; Vercel production đã lên main `c692955`. Công thức thị trường còn mở tại #122. [Bằng chứng nghiên cứu vòng đời](apk-market-research.md) ghi riêng những nhánh native đã xác minh và phần còn thiếu.
+
 [Epic #118](https://github.com/5erax/newlife-web/issues/118) giữ phạm vi 1:1 của hai hệ. Đợt này triển khai [roulette #119](https://github.com/5erax/newlife-web/issues/119) và [catalog cổ phiếu #120](https://github.com/5erax/newlife-web/issues/120); không nghiệm thu cả hai hệ chỉ vì các lát cắt này đã chạy.
 
 - **Luật roulette đã đối chiếu ARM64:** 13 ô từ 0 đến 12, số lẻ đỏ/số chẵn đen, 0 không màu. `MultiplierForBetType` đọc bảng `[13,1,13]`; `OnSpinDone` ghi số tiền cược nhân hệ số khi thắng, âm tiền cược khi thua, rồi cộng vào tổng kết quả phiên. Vì vậy thắng số (kể cả 0) **lãi ròng 13 lần**, thắng màu lãi ròng 1 lần; thua mất cược. Không nhầm hệ số này thành tổng trả 13 lần hoặc đổi sang luật roulette 37/38 ô. Luật cược số này có kỳ vọng dương nếu các ô đồng xác suất; đây là hành vi đã đọc từ bản APK được cung cấp, không phải lời hứa luôn thắng.
