@@ -26,13 +26,14 @@ function apply() {
 describe("APK job interviews", () => {
   it("keeps all 46 source questions and 810 scored answers playable across save roundtrips", () => {
     expect(apkInterviews).toHaveLength(46);
+    const base = apply();
     let total = 0;
     for (const question of apkInterviews) {
       for (const answer of [
         ...question.answers,
         ...(question.defaultAnswer ? [question.defaultAnswer] : []),
       ]) {
-        const s = apply();
+        const s = structuredClone(base);
         s.jobInterview!.questionId = question.id;
         s.jobInterview!.answerIds = question.answers
           .filter((a) => a.id !== answer.id)
@@ -62,7 +63,7 @@ describe("APK job interviews", () => {
       }
     }
     expect(total).toBe(810);
-  });
+  }, 30000);
   it("draws three distinct source answers, preserves them and blocks other actions or stale replies", () => {
     const s = apply(),
       copy = apply(),

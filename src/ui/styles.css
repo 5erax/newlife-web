@@ -2177,6 +2177,15 @@ progress::-moz-progress-bar {
   padding: 25px;
   margin: 20px 0;
 }
+.roulette-number:not([aria-pressed="true"]) {
+  color: #fff8e7;
+}
+.roulette-number[data-color="red"]:not([aria-pressed="true"]) {
+  background: #8f2636;
+}
+.roulette-number[data-color="black"]:not([aria-pressed="true"]) {
+  background: #1e262a;
+}
 .playing-cards {
   display: flex;
   gap: 8px;

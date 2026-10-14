@@ -5,11 +5,13 @@ import { portfolioValue } from "./investments";
 import { changeContext } from "./changes";
 import { localPrice } from "./world";
 import { annualIncome } from "./activity-pricing";
+import { rouletteNet } from "./roulette";
 
 export const emptyCasino = () => ({
   shoe: [] as number[],
   hand: null as CasinoHand | null,
   history: [] as CasinoHand[],
+  rouletteHistory: [] as GameState["casino"]["rouletteHistory"],
   handsThisYear: 0,
   winStreak: 0,
   bannedUntil: 0,
@@ -89,7 +91,10 @@ export function handReturn(hand: CasinoHand) {
   if (p > 21) return 0;
   return d > 21 || p > d ? hand.bet * 2 : p === d ? hand.bet : 0;
 }
-export function casinoBetLimit(s: GameState) {
+export function casinoBetLimit(
+  s: GameState,
+  game: "roulette" | "blackjack" | "bacao" = "blackjack",
+) {
   const headroom =
     MAX_MONEY -
     s.money -
@@ -104,7 +109,7 @@ export function casinoBetLimit(s: GameState) {
         s.money / 10,
         localPrice(s, s.age < 18 ? 20000 : 5000000),
         annualIncome(s) * 0.02,
-        headroom / 1.5,
+        headroom / (game === "roulette" ? 13 : 1.5),
       ) / 100,
     ) * 100,
   );
@@ -124,16 +129,35 @@ function settle(s: GameState) {
     `${hand.game === "blackjack" ? "Blackjack" : "Ba cào"}: ${hand.result}.`,
   );
   money(s, returned, "Sòng bạc hoàn trả cược và tiền thắng");
-  stat(s, "happiness", hand.net > 0 ? 2 : hand.net < 0 ? -3 : 0);
-  const chasing = hand.net < 0 && (s.casino.history.at(-1)?.net ?? 0) < 0;
+  recordCasinoEffects(s, hand.net, hand.bet, s.casino.history.at(-1)?.net ?? 0);
+  addLog(
+    s,
+    `${hand.game === "blackjack" ? "Blackjack" : "Ba cào"}: ${hand.result}. Lịch sử giữ lá bài, cược và seed để xem lại.`,
+    "event",
+  );
+  s.casino.history.push(hand);
+  s.casino.history = s.casino.history.slice(-100);
+  s.casino.hand = null;
+}
+function recordCasinoEffects(
+  s: GameState,
+  net: number,
+  bet: number,
+  previousNet: number,
+) {
+  stat(s, "happiness", net > 0 ? 2 : net < 0 ? -3 : 0);
+  const chasing = net < 0 && previousNet < 0;
   s.counters.gambling_addiction = Math.min(
     100,
     (s.counters.gambling_addiction ?? 0) + 1 + (chasing ? 2 : 0),
   );
-  s.counters.gambling_wagered = (s.counters.gambling_wagered ?? 0) + hand.bet;
+  s.counters.gambling_wagered = Math.min(
+    MAX_MONEY,
+    (s.counters.gambling_wagered ?? 0) + bet,
+  );
   if ((s.counters.gambling_wagered ?? 0) >= 5000000) flag(s, "high_roller");
   if ((s.counters.gambling_addiction ?? 0) >= 50) flag(s, "gambling_addict");
-  s.casino.winStreak = hand.net > 0 ? s.casino.winStreak + 1 : 0;
+  s.casino.winStreak = net > 0 ? s.casino.winStreak + 1 : 0;
   if (s.casino.winStreak >= 5) {
     s.casino.bannedUntil = s.age + 2;
     addLog(
@@ -154,23 +178,61 @@ function settle(s: GameState) {
       "relationship",
     );
   }
-  addLog(
-    s,
-    `${hand.game === "blackjack" ? "Blackjack" : "Ba cào"}: ${hand.result}. Lịch sử giữ lá bài, cược và seed để xem lại.`,
-    "event",
-  );
-  s.casino.history.push(hand);
-  s.casino.history = s.casino.history.slice(-100);
-  s.casino.hand = null;
 }
 export function casinoAction(s: GameState, a: Action) {
-  if (!["casinoDeal", "casinoHit", "casinoStand"].includes(a.type))
+  if (
+    !["casinoDeal", "casinoHit", "casinoStand", "casinoRoulette"].includes(
+      a.type,
+    )
+  )
     return false;
   requireGame(
     s.age >= 15 && !s.prisonYears && s.age >= s.casino.bannedUntil,
     "Sòng mở từ 15 tuổi, khi tự do và không bị mời ra.",
   );
-  if (a.type === "casinoDeal") {
+  if (a.type === "casinoRoulette") {
+    requireGame(
+      s.flags.includes("apk_mode") &&
+        !s.casino.hand &&
+        s.casino.handsThisYear < 20,
+      "Roulette thuộc bộ APK; cần kết thúc ván đang chơi và còn lượt năm nay.",
+    );
+    requireGame(
+      Number.isSafeInteger(a.bet) &&
+        a.bet >= 1000 &&
+        a.bet % 100 === 0 &&
+        a.bet <= casinoBetLimit(s, "roulette"),
+      "Cược roulette vượt hạn mức hoặc không hợp lệ.",
+    );
+    rouletteNet(a.selection, 0, a.bet);
+    const seedBefore = s.rng,
+      resultNumber = Math.floor(random(s) * 13),
+      net = rouletteNet(a.selection, resultNumber, a.bet);
+    changeContext(s, "casino", `Roulette ra số ${resultNumber}.`);
+    money(s, net, "Kết quả roulette");
+    recordCasinoEffects(
+      s,
+      net,
+      a.bet,
+      s.casino.rouletteHistory.at(-1)?.net ?? 0,
+    );
+    s.casino.rouletteHistory.push({
+      id: `${s.id}_roulette_${s.actionSerial}`,
+      bet: a.bet,
+      selection: { ...a.selection },
+      resultNumber,
+      net,
+      age: s.age,
+      seedBefore,
+    });
+    s.casino.rouletteHistory = s.casino.rouletteHistory.slice(-100);
+    s.casino.handsThisYear++;
+    addLog(
+      s,
+      `Roulette ra số ${resultNumber}: ${net > 0 ? "thắng" : "thua"}.`,
+      "event",
+    );
+  } else if (a.type === "casinoDeal") {
     requireGame(
       !s.casino.hand && s.casino.handsThisYear < 20,
       "Kết thúc ván đang chơi hoặc đợi năm mới (tối đa 20 ván/năm).",

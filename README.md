@@ -18,6 +18,8 @@ Bản 1.4 bổ sung 29 tình huống bạn bè/91 lựa chọn: bảng bạn bè
 
 Bản 1.5 đang nghiệm thu tại [task #116](https://github.com/5erax/newlife-web/issues/116): thêm phỏng vấn xin việc từ APK, đủ 46 câu hỏi/810 đáp án (796 thường + 14 mặc định), giữ điểm từ nguồn. Câu hỏi không vào pool tăng tuổi; file 1.4 nâng được và giữ bộ nội dung/RNG. Còn 151 dòng lõi và 44 bảng/2.073 dòng; tiến độ deployment thực tế ghi trong issue, không suy ra từ version trong mã.
 
+Bản 1.6 bổ sung roulette 0–12 với luật màu/lãi ròng đã đọc từ ARM64 và đủ 107 cổ phiếu APK theo 8 ngành. Đời mới dùng bộ APK nhận danh mục mới; file cũ giữ giá/vị thế/RNG. Giá và biến động đầu tư vẫn là mô hình web, chưa đạt 1:1. Phạm vi còn lại và tiến độ nghiệm thu nằm ở [#118](https://github.com/5erax/newlife-web/issues/118); bằng chứng và giới hạn trong [tài liệu port](docs/bitlife-apk-port.md).
+
 ## Chạy trên máy
 
 Node.js 24+, npm, dùng lockfile:

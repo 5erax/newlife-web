@@ -22,6 +22,7 @@ import { expandCases } from "../engine/branches";
 import type { Choice } from "../engine/types";
 import investments from "../content/investments.json" with { type: "json" };
 import apkCoins from "../content/apk/coins.json" with { type: "json" };
+import apkStocks from "../content/apk/stocks.json" with { type: "json" };
 const groups = {
   lifeEvents: events.filter((e) => e.group !== "career"),
   careerEvents: events.filter((e) => e.group === "career"),
@@ -40,6 +41,7 @@ const groups = {
   apkEducation,
   apkCoins,
   apkInterviews,
+  apkStocks,
 };
 const manifest = {
   contentVersion: CONTENT_VERSION,
@@ -55,15 +57,19 @@ const manifest = {
       version: CONTENT_VERSION,
       status: "verified",
       verification: kind.startsWith("apk")
-        ? kind === "apkInterviews"
-          ? "tests/job-interviews.test.ts"
-          : kind === "apkEvents" &&
-              "group" in item &&
-              item.group === "apk_friend"
-            ? "tests/npc-friends.test.ts"
-            : kind === "apkEvents" && "group" in item && item.group === "manual"
-              ? "tests/apk-trips.test.ts"
-              : "tests/apk-port.test.ts"
+        ? kind === "apkStocks"
+          ? "tests/apk-stocks.test.ts"
+          : kind === "apkInterviews"
+            ? "tests/job-interviews.test.ts"
+            : kind === "apkEvents" &&
+                "group" in item &&
+                item.group === "apk_friend"
+              ? "tests/npc-friends.test.ts"
+              : kind === "apkEvents" &&
+                  "group" in item &&
+                  item.group === "manual"
+                ? "tests/apk-trips.test.ts"
+                : "tests/apk-port.test.ts"
         : kind === "stories"
           ? "tests/systems.test.ts"
           : kind === "jobs"

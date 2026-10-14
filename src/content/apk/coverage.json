@@ -1446,6 +1446,7 @@
   "friendRows": 37,
   "interviewRows": 46,
   "interviewAnswers": 810,
+  "stockRows": 107,
   "unverifiedEffects": [
     {
       "table": "a16_outdoor-hiking-dumb-scenario-enc",

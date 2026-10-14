@@ -1,5 +1,6 @@
 import raw from "../content/investments.json" with { type: "json" };
 import apkCoins from "../content/apk/coins.json" with { type: "json" };
+import apkStocks from "../content/apk/stocks.json" with { type: "json" };
 import type {
   Action,
   GameState,
@@ -20,11 +21,23 @@ export const INVESTMENT_LABELS: Record<InvestmentGroup, string> = {
   crypto: "Tiền mã hoá",
 };
 export const MAX_MARKET_PRICE = 100_000_000_000;
+export const APK_STOCK_SECTORS: Record<string, string> = {
+  communication: "Truyền thông",
+  consumer: "Hàng tiêu dùng",
+  energy: "Năng lượng",
+  financials: "Tài chính",
+  healthcare: "Y tế",
+  industrials: "Công nghiệp",
+  materials: "Vật liệu",
+  technology: "Công nghệ",
+};
+export const apkStockById = new Map(apkStocks.map((i) => [i.id, i]));
 export function emptyInvestments(apk = false): InvestmentState {
   return {
     instruments: [
-      ...raw.filter((i) => !apk || i.group !== "crypto"),
+      ...raw.filter((i) => !apk || !["crypto", "stock"].includes(i.group)),
       ...(apk ? apkCoins : []),
+      ...(apk ? apkStocks : []),
     ].map((i) => ({
       id: i.id,
       name: i.name,
