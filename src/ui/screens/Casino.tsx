@@ -6,6 +6,7 @@ import type {
   RouletteBet,
 } from "../../engine/types";
 import { rouletteColor } from "../../engine/roulette";
+import { slotsMultiplier } from "../../engine/slots";
 import {
   blackjackScore,
   bacaoScore,
@@ -45,9 +46,13 @@ export function Casino({
   dispatch: (a: Action) => void;
   busy: boolean;
 }) {
-  const [game, setGame] = useState<CasinoHand["game"] | "roulette">(
+  const [game, setGame] = useState<CasinoHand["game"] | "roulette" | "slots">(
       s.casino.hand?.game ??
-        (s.casino.rouletteHistory.length ? "roulette" : "blackjack"),
+        (s.casino.slotsHistory.length
+          ? "slots"
+          : s.casino.rouletteHistory.length
+            ? "roulette"
+            : "blackjack"),
     ),
     [bet, setBet] = useState(1000);
   const [rouletteSelection, setRouletteSelection] = useState<RouletteBet>({
@@ -55,6 +60,7 @@ export function Casino({
     number: 0,
   });
   const round = s.casino.rouletteHistory.at(-1);
+  const slotRound = s.casino.slotsHistory.at(-1);
   const h = s.casino.hand ?? s.casino.history.at(-1),
     max = casinoBetLimit(s, game),
     ready =
@@ -104,6 +110,9 @@ export function Casino({
             {s.flags.includes("apk_mode") && (
               <option value="roulette">Roulette · 13 ô</option>
             )}
+            {s.flags.includes("apk_mode") && (
+              <option value="slots">Máy xèng</option>
+            )}
           </select>
         </label>
         <label>
@@ -131,19 +140,87 @@ export function Casino({
             s.casino.handsThisYear >= 20 ||
             bet > max ||
             bet < 1000 ||
+            !Number.isSafeInteger(bet) ||
             bet % 100 !== 0
           }
           onClick={() =>
             dispatch(
-              game === "roulette"
-                ? { type: "casinoRoulette", bet, selection: rouletteSelection }
-                : { type: "casinoDeal", game, bet },
+              game === "slots"
+                ? { type: "casinoSlots", bet }
+                : game === "roulette"
+                  ? {
+                      type: "casinoRoulette",
+                      bet,
+                      selection: rouletteSelection,
+                    }
+                  : { type: "casinoDeal", game, bet },
             )
           }
         >
-          {game === "roulette" ? "Quay roulette" : "Chia bài"}
+          {game === "slots"
+            ? "Quay máy xèng"
+            : game === "roulette"
+              ? "Quay roulette"
+              : "Chia bài"}
         </button>
       </div>
+      {game === "slots" && (
+        <div className="casino-table">
+          <h3>Máy xèng · ba biểu tượng</h3>
+          <div
+            className="playing-cards"
+            role="group"
+            aria-label="Kết quả máy xèng"
+          >
+            {[...(slotRound?.symbols ?? "···")].map((symbol, i) => (
+              <span key={i} aria-label={`Biểu tượng ${i + 1}: ${symbol}`}>
+                {symbol}
+              </span>
+            ))}
+          </div>
+          {slotRound && (
+            <p className="hand-result">
+              {slotRound.net > 0 ? "Thắng +" : "Thua −"}
+              {cash(Math.abs(slotRound.net), true, s.origin)} · trả thưởng tổng{" "}
+              {slotsMultiplier(slotRound.symbols)} lần cược
+            </p>
+          )}
+          <p>
+            Cơ hội ra tổ hợp thắng khoảng 15%. Kết quả được chọn theo nhóm có
+            trọng số; các ô không quay độc lập.
+          </p>
+          <details>
+            <summary>Bảng thưởng · tổng trả gồm tiền cược</summary>
+            <p>
+              AAA: 20 lần · BBB: 18 · CCC: 15 · DDD: 12 · EEE: 10 · FFF: 8 ·
+              ABC: 6 · FED: 3.
+            </p>
+            <p>
+              Đúng hai A: 5 lần · đúng hai B: 4 · đúng hai C: 3, ở bất kỳ vị trí
+              nào. Các tổ hợp khác không trả thưởng.
+            </p>
+            <p>
+              Lãi/lỗ ròng = tiền cược × (hệ số trả − 1). Ví dụ cược 1.000, ra
+              AAA nhận tổng 20.000 và lãi 19.000; thua mất 1.000.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Lịch sử máy xèng · {s.casino.slotsHistory.length} lượt
+            </summary>
+            {s.casino.slotsHistory
+              .slice()
+              .reverse()
+              .map((r) => (
+                <p key={r.id}>
+                  Tuổi {r.age} · {r.symbols} · cược{" "}
+                  {cash(r.bet, true, s.origin)} · {r.net > 0 ? "+" : "−"}
+                  {cash(Math.abs(r.net), true, s.origin)}
+                </p>
+              ))}
+          </details>
+        </div>
+      )}
       {game === "roulette" && (
         <div className="casino-table">
           <h3>Roulette · số 0 đến 12</h3>
@@ -244,7 +321,7 @@ export function Casino({
           </details>
         </div>
       )}
-      {h && game !== "roulette" && (
+      {h && game !== "roulette" && game !== "slots" && (
         <div className="casino-table">
           <h3>{h.game === "blackjack" ? "Blackjack" : "Ba cào"}</h3>
           <p>

@@ -4,6 +4,16 @@ Theo dõi phạm vi đầy đủ tại [issue #111](https://github.com/5erax/new
 
 ## Các đợt chuyển nội dung
 
+### Máy xèng 1.7
+
+[Task #124](https://github.com/5erax/newlife-web/issues/124) bổ sung minigame Máy xèng trong bộ APK. Bảng thưởng đã đọc từ ARM64 và giải chuỗi qua ELF relocations/metadata39: AAA20, BBB18, CCC15, DDD12, EEE10, FFF8, ABC6, FED3; đúng hai A/B/C ở bất kỳ vị trí nào lần lượt trả5/4/3. Đây là **tổng trả gồm cược**; native OnSpinDone cộng cược×hệ số rồi trừ cược, nên AAA lãi19lần, thua mất cược.
+
+- Native không quay ba ô độc lập: ngưỡng thắng float32≈15%, trọng số nhóm ba giống cao4%, ba giống thấp6%, hai giống60%, đặc biệt30%. Chọn tổ hợp trong nhóm tương ứng; 216tổhợp gồm53thắng/163thua. `tools/inspect-bitlife-slots.py` pin hash binary/metadata, hiệu chuẩn getter giá, giải literal qua relocations và kiểm bảng/float constants; bằng chứng disassembly tại `docs/qa/apk-slots-native.json`. Không chạy APK/DLL.
+- Web dùng Mulberry32 thay RNG Unity/GameReference, số nguyên an toàn thay float32 cho tiền, biểu tượng chữ A–F và quay nguyên tử thay coroutine/animation Android. Không khẳng định giống từng bit hoặc toàn bộ native runtime. Luật phiên tuổi15/20ván/năm, hạn mức/ban/nghiện giữ chính sách web; bảo vệ headroom theo lãi tối đa19lần. Các ván bài/roulette cũ giữ logic riêng.
+- Lưu100biênnhận seed/cược/biểu tượng/net/tuổi; import bốc lại trên RNG tạm để kiểm kết quả và tính lại net, không đổi RNG đời. File1.6 nâng1.7 giữ tiền/danh mục/vị thế/RNG và lịch sử bài/roulette cũ. Renderer/reload không quay lại.
+- Local100unit/17browser, typecheck/content/build/PWA PASS; 216bảngthưởng,50.000lượt kiểm trọng số/reproducibility, input/tuổi/phạm vi/cược/filegiả và migration. Đã xem ảnh máy xèng390px và chạy lại luồng mới sau format. Lượt full Vitest mặc định trên Windows gặp8worker exit0xC0000409, không ghi là PASS; chạy lại đầy đủ với `--maxWorkers=2` qua100test. Nguyên nhân sâu trong worker native chưa xác định; CI Linux dùng cấu hình hiện có để kiểm riêng. Chưa QA điện thoại thật.
+- #118/#111 vẫn mở: Craps, Cao–thấp, Keno, Cá cược thể thao, Texas Hold’em, Đảo ba lá và các hệ khác còn thiếu; Blackjack chưa đối chiếu đủ native. #122côngthứcgiá vẫn mở. CI/hosted/phát hành được cập nhật riêng trong issue trước nghiệm thu #124.
+
 ### Đánh bạc và đầu tư 1.6
 
 Đã nghiệm thu các lát cắt #119/#120 sau PR #121, hai CI đầy đủ và sáu luồng hosted PASS; Vercel production đã lên main `c692955`. Công thức thị trường còn mở tại #122. [Bằng chứng nghiên cứu vòng đời](apk-market-research.md) ghi riêng những nhánh native đã xác minh và phần còn thiếu.

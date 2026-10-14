@@ -22,6 +22,8 @@ Bản 1.6 bổ sung roulette 0–12 với luật màu/lãi ròng đã đọc t�
 
 ## Chạy trên máy
 
+Bản 1.7 thêm Máy xèng trong bộ APK với bảng thưởng/trọng số đã đối chiếu native, giữ kết quả qua reload và nâng file1.6 không đổi portfolio/RNG. [#124](https://github.com/5erax/newlife-web/issues/124) ghi tiến độ nghiệm thu; đây chưa phải toàn bộ casino/đầu tư1:1.
+
 Node.js 24+, npm, dùng lockfile:
 
 ```sh
